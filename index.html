@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NBA Alt-Over Dashboard</title>
 <meta name="description" content="Daily stepped-down alt OVER prop picks with prices, edge and projected totals.">
 <style>
 :root{--bg:#f6f7f9;--card:#fff;--text:#14171c;--muted:#5f6b7a;--line:#e3e7ec;--accent:#1d4ed8;--good:#0f7b3f;--warn:#b45309;--chip:#eef2f7}
-@media (prefers-color-scheme:dark){:root{--bg:#0e1116;--card:#171b22;--text:#e8ebf0;--muted:#97a3b3;--line:#262c36;--accent:#6ea0ff;--good:#4ade80;--warn:#fbbf24;--chip:#202632}}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1116;--card:#171b22;--text:#e8ebf0;--muted:#97a3b3;--line:#262c36;--accent:#6ea0ff;--good:#4ade80;--warn:#fbbf24;--chip:#202632}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-.wrap{max-width:720px;margin:0 auto;padding:16px}
+.wrap{max-width:720px;margin:0 auto;padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 h1{font-size:1.25rem;margin:0}
 .sub{color:var(--muted);font-size:.85rem;margin:2px 0 14px}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
@@ -56,13 +56,25 @@ tr:last-child td{border-bottom:0}
 .legend{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--muted);font-size:.8rem}
 .legend summary{cursor:pointer;color:var(--text);font-weight:600}
 
-.rec{margin-bottom:14px}
+.rec{margin:20px 0 14px}
+.kv{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:.8rem;font-variant-numeric:tabular-nums}
+.kv span{color:var(--muted)}
+.kv b{font-weight:700;text-align:right}
 .rec h3{margin:0 0 8px}
 .rec h4{font-size:.85rem;margin:14px 0 4px}
 .rec .muted{color:var(--muted);font-size:.75rem;margin:6px 0 0}
 .rec .it{font-style:italic}
-.tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start}
 .tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;min-width:0}
+.tile summary{display:flex;flex-direction:column;gap:2px;cursor:pointer;list-style:none;position:relative;padding-right:16px;min-height:44px;justify-content:center}
+.tile summary::-webkit-details-marker{display:none}
+.tile summary::after{content:"";position:absolute;right:2px;top:50%;width:7px;height:7px;margin-top:-6px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .15s}
+.tile[open] summary::after{transform:rotate(-135deg);margin-top:-1px}
+.tile summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.tp{font-size:1.5rem;line-height:1.2}
+.tm.tn{white-space:normal;overflow-wrap:anywhere;margin-top:2px;line-height:1.35}
+.td{display:flex;flex-direction:column;gap:4px;margin-top:6px;padding-top:6px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){.tile summary::after{transition:none}}
 .tl{color:var(--muted);font-size:.75rem;font-weight:600;overflow-wrap:anywhere}
 .hr{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 8px;margin-top:2px}
 .hr b{font-size:1.5rem;line-height:1.2;white-space:nowrap}
@@ -79,15 +91,24 @@ tr:last-child td{border-bottom:0}
 .lgb[aria-pressed=false]{opacity:.55;text-decoration:line-through}
 .lgb[aria-pressed=true]{border-color:var(--accent)}
 .lgs{font-size:.72rem;color:var(--muted)}
+.gx{margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:0 10px}
+.gx[open]{padding-bottom:8px}
+.gx summary{display:flex;align-items:center;gap:8px;min-height:44px;cursor:pointer;list-style:none;font-size:.85rem}
+.gx summary::-webkit-details-marker{display:none}
+.gx summary::before{content:"";width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s;flex:none;margin:0 3px 0 1px}
+.gx[open] summary::before{transform:rotate(45deg)}
+.gx summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.gt{font-weight:700}
+.gs{margin-left:auto;color:var(--muted);font-size:.75rem;white-space:nowrap}
+.gx .cc{border:0;padding:0}
+@media (prefers-reduced-motion:reduce){.gx summary::before{transition:none}}
 </style>
 </head>
-<body>
-<div class="wrap">
+<body><div class="wrap">
   <h1>NBA Alt-Over Dashboard</h1>
   <p class="sub" id="sub"></p>
   <div class="stale" id="stale" role="status" hidden></div>
   <div class="stats" id="stats"></div>
-  <section class="rec" id="rec" aria-label="Record" hidden></section>
   <div class="bar">
     <button class="cbtn main" id="copyAll" type="button">Copy all picks</button>
     <button class="cbtn main" id="copyTotals" type="button">Copy totals</button>
@@ -102,6 +123,8 @@ tr:last-child td{border-bottom:0}
     <summary>How to read this</summary>
     <p><b>Alt</b>: the stepped-down OVER line chosen from the book's ladder. <b>Hit%</b>: how often the player cleared it over a recent sample (shown as hits/games). <b>Edge</b>: hit% minus the book's implied probability (1 ÷ odds), in percentage points; a pick must be at least +5. <b>Stars</b> are capped early in the season because samples are small. <b>Opp</b> is the opponent's allowance of that stat per 100 possessions and its league rank; it is shown for context and never changes a pick. <b>Projected totals</b> are a pace-and-rating model shown for interest only.</p>
   </details>
+
+  <section class="rec" id="rec" aria-label="Record" hidden></section>
 
   <p class="foot"><b>Not betting advice.</b> Hit rate is not profit; prices move and players sit. Past results do not predict future ones. Only bet what you can afford to lose. If gambling is a problem for you or someone you know, contact your local support service (Australia: 1800 858 858, gamblinghelponline.org.au).</p>
 </div>
@@ -268,14 +291,18 @@ tr:last-child td{border-bottom:0}
       var hit=num(w.hit),W=num(w.w),L=num(w.l),u=num(w.units),be=num(w.breakeven),n=num(w.n),vd=num(w.void),dw=num(w.days_in_window);
       if(hit===null||W===null||L===null||u===null) throw 0;
       var label=name;
-      if(dw!==null&&dw<len) label=len+'d ('+dw+(dw===1?' day':' days')+' of data — since season start)';
+      var clipNote=(dw!==null&&dw<len)?'('+dw+(dw===1?' day':' days')+' of data — since season start)':'';
       var cmp='';
-      if(be!==null) cmp='<span class="tw '+(hit>be?'pos':'neg')+'">'+(hit>be?'above':'below')+' break-even</span>';
-      return {clip:(dw!==null&&dw<len),html:'<div class="tile"><div class="tl">'+esc(label)+'</div>'+
-        '<div class="hr"><b>'+hit.toFixed(1)+'%</b>'+(be!==null?'<span>break-even '+be.toFixed(1)+'%</span>':'')+'</div>'+
-        (cmp?'<div>'+cmp+'</div>':'')+
-        '<div class="tr"><span>'+W+'-'+L+'</span><span class="'+sc(u)+'">'+sg(u,2)+'u</span></div>'+
-        '<div class="tm">'+(n!==null?'n='+n:'')+(n!==null&&vd!==null?' · ':'')+(vd!==null?vd+' void':'')+'</div></div>'};
+      if(be!==null) cmp='<b class="'+(hit>be?'pos':'neg')+'">'+(hit>be?'Above':'Below')+'</b>';
+      return {clip:(dw!==null&&dw<len),html:'<details class="tile"><summary><span class="tl">'+esc(label)+'</span><b class="tp">'+hit.toFixed(1)+'%</b></summary>'+
+        '<div class="td">'+
+        '<div class="kv"><span>Record</span><b>'+W+'-'+L+'</b></div>'+
+        '<div class="kv"><span>Units</span><b class="'+sc(u)+'">'+sg(u,2)+'u</b></div>'+
+        (be!==null?'<div class="kv"><span>Break-even</span><b>'+be.toFixed(1)+'%</b></div>':'')+
+        (cmp?'<div class="kv"><span>vs break-even</span>'+cmp+'</div>':'')+
+        (n!==null?'<div class="kv"><span>Bets</span><b>'+n+(vd!==null&&vd>0?' ('+vd+' void)':'')+'</b></div>':'')+
+        (clipNote?'<div class="tm tn">'+esc(clipNote)+'</div>':'')+
+        '</div></details>'};
     }catch(e){return {clip:false,html:'<div class="tile"><div class="tl">'+esc(name)+'</div><div class="tm">unavailable</div></div>'}}
   }
 
@@ -375,14 +402,15 @@ tr:last-child td{border-bottom:0}
       rows.forEach(function(r){r.off=Math.round((r.t-st)/864e5)});
       R={rows:rows,s0:st,span:Math.max(0,rows[rows.length-1].off)};
       try{
-        out+='<h4>Rolling hit %</h4><div class="lg" role="group" aria-label="Show or hide lines">'+
+        var lr=rows[rows.length-1];
+        out+='<details class="gx"><summary><span class="gt">Rolling hit %</span><span class="gs">7d '+fix(lr.h7,1)+'% · 30d '+fix(lr.h30,1)+'%</span></summary><div class="lg" role="group" aria-label="Show or hide lines">'+
           '<button type="button" class="lgb" data-k="a" aria-pressed="true"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="var(--accent)" stroke-width="2"/></svg>7d</button>'+
           '<button type="button" class="lgb" data-k="b" aria-pressed="true"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="var(--text)" stroke-width="2" stroke-dasharray="6 4"/></svg>30d</button>'+
           '<span class="lgs">dotted: break-even</span></div>'+
           '<div class="cc" id="hitbox">'+hitChart()+'</div>'+
-          '<p class="muted">Early in the season the 7d and 30d lines overlap because both windows are clipped at the season start.</p>';
+          '<p class="muted">Early in the season the 7d and 30d lines overlap because both windows are clipped at the season start.</p></details>';
       }catch(e){}
-      try{ out+='<h4>Cumulative units</h4><div class="cc">'+cumChart()+'</div>'; }catch(e){}
+      try{ out+='<details class="gx"><summary><span class="gt">Cumulative units</span><span class="gs">'+sg(rows[rows.length-1].cu,2)+'u</span></summary><div class="cc">'+cumChart()+'</div></details>'; }catch(e){}
     }
     /* CLV */
     try{
@@ -419,5 +447,7 @@ tr:last-child td{border-bottom:0}
     .catch(fail);
 })();
 </script>
+
+
 </body>
 </html>
