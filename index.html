@@ -55,6 +55,30 @@ tr:last-child td{border-bottom:0}
 .err{border-color:var(--warn);color:var(--warn)}
 .legend{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--muted);font-size:.8rem}
 .legend summary{cursor:pointer;color:var(--text);font-weight:600}
+
+.rec{margin-bottom:14px}
+.rec h3{margin:0 0 8px}
+.rec h4{font-size:.85rem;margin:14px 0 4px}
+.rec .muted{color:var(--muted);font-size:.75rem;margin:6px 0 0}
+.rec .it{font-style:italic}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;min-width:0}
+.tl{color:var(--muted);font-size:.75rem;font-weight:600;overflow-wrap:anywhere}
+.hr{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 8px;margin-top:2px}
+.hr b{font-size:1.5rem;line-height:1.2;white-space:nowrap}
+.hr span,.tm{font-size:.72rem;color:var(--muted);white-space:nowrap}
+.tw{font-size:.72rem;font-weight:600}
+.tr{display:flex;flex-wrap:wrap;gap:0 10px;margin-top:4px;font-weight:700;font-size:.95rem}
+.tr span{white-space:nowrap}
+.cc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 6px 4px}
+.cc svg{display:block;width:100%;height:auto}
+.cc .ax{fill:var(--muted);font-size:10px}
+.cc .gl{stroke:var(--line);stroke-width:1}
+.lg{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px 4px;align-items:center}
+.lgb{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--chip);color:var(--text);border-radius:8px;font:inherit;font-size:.78rem;padding:6px 11px;min-height:36px;cursor:pointer}
+.lgb[aria-pressed=false]{opacity:.55;text-decoration:line-through}
+.lgb[aria-pressed=true]{border-color:var(--accent)}
+.lgs{font-size:.72rem;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -63,6 +87,7 @@ tr:last-child td{border-bottom:0}
   <p class="sub" id="sub"></p>
   <div class="stale" id="stale" role="status" hidden></div>
   <div class="stats" id="stats"></div>
+  <section class="rec" id="rec" aria-label="Record" hidden></section>
   <div class="bar">
     <button class="cbtn main" id="copyAll" type="button">Copy all picks</button>
     <button class="cbtn main" id="copyTotals" type="button">Copy totals</button>
@@ -227,6 +252,166 @@ tr:last-child td{border-bottom:0}
   function fail(){
     $('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>';
   }
+
+
+  /* ---- Record section (independent of data.json) ---- */
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function pd(s){var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(s==null?'':s));if(!m)return null;var t=Date.UTC(+m[1],+m[2]-1,+m[3]);return isFinite(t)?t:null}
+  function fd(t,y){var d=new Date(t);return d.getUTCDate()+' '+MON[d.getUTCMonth()]+(y?' '+d.getUTCFullYear():'')}
+  function sg(n,d){var v=Number(n.toFixed(d));return (v>0?'+':v<0?'-':'')+Math.abs(v).toFixed(d)}
+  function sc(n){return n>0?'pos':n<0?'neg':''}
+  var R=null, vis={a:true,b:true};
+
+  function tile(w,len,name){
+    try{
+      if(!w||typeof w!=='object') throw 0;
+      var hit=num(w.hit),W=num(w.w),L=num(w.l),u=num(w.units),be=num(w.breakeven),n=num(w.n),vd=num(w.void),dw=num(w.days_in_window);
+      if(hit===null||W===null||L===null||u===null) throw 0;
+      var label=name;
+      if(dw!==null&&dw<len) label=len+'d ('+dw+(dw===1?' day':' days')+' of data — since season start)';
+      var cmp='';
+      if(be!==null) cmp='<span class="tw '+(hit>be?'pos':'neg')+'">'+(hit>be?'above':'below')+' break-even</span>';
+      return {clip:(dw!==null&&dw<len),html:'<div class="tile"><div class="tl">'+esc(label)+'</div>'+
+        '<div class="hr"><b>'+hit.toFixed(1)+'%</b>'+(be!==null?'<span>break-even '+be.toFixed(1)+'%</span>':'')+'</div>'+
+        (cmp?'<div>'+cmp+'</div>':'')+
+        '<div class="tr"><span>'+W+'-'+L+'</span><span class="'+sc(u)+'">'+sg(u,2)+'u</span></div>'+
+        '<div class="tm">'+(n!==null?'n='+n:'')+(n!==null&&vd!==null?' · ':'')+(vd!==null?vd+' void':'')+'</div></div>'};
+    }catch(e){return {clip:false,html:'<div class="tile"><div class="tl">'+esc(name)+'</div><div class="tm">unavailable</div></div>'}}
+  }
+
+  var VW=360,VL=30,VR=46,VT=10,VB=170,PW=VW-VL-VR;
+  function xAxis(s0,span){
+    var step=Math.max(1,Math.ceil(46/(span>0?PW/span:PW))),o='';
+    for(var d=0;d<=span;d+=step){
+      var x=VL+(span>0?d/span*PW:PW/2);
+      o+='<line class="gl" x1="'+x.toFixed(1)+'" x2="'+x.toFixed(1)+'" y1="'+VB+'" y2="'+(VB+3)+'"/><text class="ax" x="'+x.toFixed(1)+'" y="'+(VB+15)+'" text-anchor="middle">'+fd(s0+d*864e5,false)+'</text>';
+    }
+    return o;
+  }
+  function hitChart(){
+    var rows=R.rows,s0=R.s0,span=R.span;
+    var yy=function(v){return VB-Math.max(0,Math.min(100,v))/100*(VB-VT)};
+    var xx=function(r){return VL+(span>0?r.off/span*PW:PW/2)};
+    var o='';
+    [25,50,75].forEach(function(g){o+='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+yy(g)+'" y2="'+yy(g)+'"/>'});
+    [0,25,50,75,100].forEach(function(g){o+='<text class="ax" x="'+(VL-4)+'" y="'+(yy(g)+3.5)+'" text-anchor="end">'+g+'</text>'});
+    o+='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+VB+'" y2="'+VB+'"/>'+xAxis(s0,span);
+    var beRows=rows.filter(function(r){return r.be!==null});
+    if(beRows.length){
+      o+='<polyline class="be" fill="none" stroke="var(--muted)" stroke-width="1" stroke-dasharray="1 3" stroke-linecap="round" points="'+beRows.map(function(r){return xx(r).toFixed(1)+','+yy(r.be).toFixed(1)}).join(' ')+'"/>';
+      var b0=beRows[0];
+      o+='<text class="ax" x="'+(xx(b0)+2).toFixed(1)+'" y="'+(yy(b0.be)-3).toFixed(1)+'">break-even</text>';
+    }
+    var last=rows[rows.length-1],lab=[];
+    function line(cls,key,dash,stroke,on){
+      if(!on) return '';
+      var pts=rows.map(function(r){return xx(r).toFixed(1)+','+yy(r[key]).toFixed(1)}).join(' ');
+      lab.push({y:yy(last[key]),t:last[key].toFixed(1)+'%',c:stroke});
+      return '<polyline class="'+cls+'" fill="none" stroke="'+stroke+'" stroke-width="2" stroke-linejoin="round"'+(dash?' stroke-dasharray="6 4"':'')+' points="'+pts+'"/>'+
+        '<circle cx="'+xx(last).toFixed(1)+'" cy="'+yy(last[key]).toFixed(1)+'" r="3" fill="'+stroke+'"/>';
+    }
+    o+=line('l30','h30',true,'var(--text)',vis.b)+line('l7','h7',false,'var(--accent)',vis.a);
+    if(lab.length===2){
+      lab.sort(function(p,q){return p.y-q.y});
+      var gap=12-(lab[1].y-lab[0].y);
+      if(gap>0){lab[0].y-=gap/2;lab[1].y+=gap/2}
+    }
+    lab.forEach(function(l){o+='<text x="'+(xx(last)+6).toFixed(1)+'" y="'+(l.y+3.5).toFixed(1)+'" font-size="11" font-weight="700" fill="'+l.c+'">'+l.t+'</text>'});
+    var al='Rolling hit percentage. Latest: 7-day '+last.h7.toFixed(1)+'%, 30-day '+last.h30.toFixed(1)+'%'+(last.be!==null?', break-even '+last.be.toFixed(1)+'%':'')+'.';
+    return '<svg id="hitsvg" viewBox="0 0 '+VW+' 190" role="img" aria-label="'+esc(al)+'">'+o+'</svg>';
+  }
+  function cumChart(){
+    var rows=R.rows,span=R.span,u=rows.map(function(r){return r.cu});
+    var lo=Math.min(0,Math.min.apply(null,u)),hi=Math.max(0,Math.max.apply(null,u));
+    if(hi-lo<1){hi+=1;lo-=1}
+    var pad=(hi-lo)*.1;hi+=pad;lo-=pad;
+    var yy=function(v){return VB-(v-lo)/(hi-lo)*(VB-VT)};
+    var xx=function(r){return VL+(span>0?r.off/span*PW:PW/2)};
+    var o='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+VB+'" y2="'+VB+'"/>'+xAxis(R.s0,span);
+    var z=yy(0);
+    o+='<line x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+z.toFixed(1)+'" y2="'+z.toFixed(1)+'" stroke="var(--muted)" stroke-width="1"/>';
+    var shown=[0];
+    var mx=Math.max.apply(null,u),mn=Math.min.apply(null,u);
+    if(mx>0&&yy(mx)<z-12) shown.push(mx);
+    if(mn<0&&yy(mn)>z+12) shown.push(mn);
+    shown.forEach(function(v){o+='<text class="ax" x="'+(VL-4)+'" y="'+(yy(v)+3.5).toFixed(1)+'" text-anchor="end">'+(v===0?'0':sg(v,1))+'</text>'});
+    var last=rows[rows.length-1],endv=last.cu,col=endv>0?'var(--good)':endv<0?'var(--warn)':'var(--muted)';
+    o+='<polyline fill="none" stroke="'+col+'" stroke-width="2" stroke-linejoin="round" points="'+rows.map(function(r){return xx(r).toFixed(1)+','+yy(r.cu).toFixed(1)}).join(' ')+'"/>'+
+      '<circle cx="'+xx(last).toFixed(1)+'" cy="'+yy(endv).toFixed(1)+'" r="3" fill="'+col+'"/>'+
+      '<text id="cumend" x="'+(xx(last)+6).toFixed(1)+'" y="'+(yy(endv)+3.5).toFixed(1)+'" font-size="11" font-weight="700" fill="'+col+'">'+sg(endv,2)+'u</text>';
+    return '<svg id="cumsvg" viewBox="0 0 '+VW+' 190" role="img" aria-label="'+esc('Cumulative units at flat 1u stake. Latest: '+sg(endv,2)+'u.')+'">'+o+'</svg>';
+  }
+  function renderHit(){
+    try{ var b=document.getElementById('hitbox'); if(b) b.innerHTML=hitChart(); }catch(e){}
+  }
+
+  function renderRecord(rec){
+    var box=$('rec'),out='',clip=false;
+    box.hidden=false;
+    if(!rec||typeof rec!=='object'||Array.isArray(rec)) throw new Error('bad record');
+    var asT=pd(rec.as_of),s0=pd(rec.season_start);
+    try{
+      out+='<h3>'+(asT===null?'Record':'As of '+esc(fd(asT,true)))+'</h3>';
+      var a=tile(rec.rolling_7d,7,'7-day'),b=tile(rec.rolling_30d,30,'30-day');
+      clip=a.clip||b.clip;
+      out+='<div class="tiles">'+a.html+b.html+'</div>';
+      if(clip) out+='<p class="muted">Windows start at season start'+(s0!==null?' ('+esc(fd(s0,true))+')':'')+', so early in the season the 30-day figure equals season to date.</p>';
+    }catch(e){}
+    /* daily rows */
+    var rows=[];
+    try{
+      (Array.isArray(rec.daily)?rec.daily:[]).forEach(function(r){
+        try{
+          var t=pd(r&&r.date),cu=num(r&&r.cum_units),h7=num(r&&r.roll7&&r.roll7.hit),h30=num(r&&r.roll30&&r.roll30.hit);
+          if(t===null||cu===null||h7===null||h30===null) return;
+          if(s0!==null&&t<s0) return;
+          rows.push({t:t,cu:cu,h7:h7,h30:h30,be:num(r.roll7.breakeven)});
+        }catch(e){}
+      });
+      rows.sort(function(p,q){return p.t-q.t});
+    }catch(e){rows=[]}
+    if(rows.length){
+      var st=s0!==null?s0:rows[0].t;
+      rows.forEach(function(r){r.off=Math.round((r.t-st)/864e5)});
+      R={rows:rows,s0:st,span:Math.max(0,rows[rows.length-1].off)};
+      try{
+        out+='<h4>Rolling hit %</h4><div class="lg" role="group" aria-label="Show or hide lines">'+
+          '<button type="button" class="lgb" data-k="a" aria-pressed="true"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="var(--accent)" stroke-width="2"/></svg>7d</button>'+
+          '<button type="button" class="lgb" data-k="b" aria-pressed="true"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="var(--text)" stroke-width="2" stroke-dasharray="6 4"/></svg>30d</button>'+
+          '<span class="lgs">dotted: break-even</span></div>'+
+          '<div class="cc" id="hitbox">'+hitChart()+'</div>'+
+          '<p class="muted">Early in the season the 7d and 30d lines overlap because both windows are clipped at the season start.</p>';
+      }catch(e){}
+      try{ out+='<h4>Cumulative units</h4><div class="cc">'+cumChart()+'</div>'; }catch(e){}
+    }
+    /* CLV */
+    try{
+      var c=rec.clv,m=c&&num(c.mean_pct),cn=c&&num(c.n),sw=c&&num(c.settled_without_close);
+      if(c&&typeof c==='object'&&m!==null&&cn!==null){
+        out+='<p class="muted" style="font-size:.82rem;color:var(--text)">Closing-line value: mean '+sg(m,2)+'% over '+cn+' picks'+(sw!==null?'; '+sw+' settled picks have no closing price':'')+'.</p>'+
+          '<p class="muted it">CLV is only measured on picks with a captured closing price, so n is small.</p>';
+      }
+    }catch(e){}
+    /* footer */
+    try{
+      var nt=str(rec.note,''),fs=/^[\s\S]*?[.!?](\s|$)/.exec(nt),ft=(fs?fs[0]:nt).trim(),up=rec.updated?new Date(rec.updated):null;
+      var ts=(up&&!isNaN(up.getTime()))?'Updated '+up.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}):'';
+      if(ft||ts) out+='<p class="muted">'+esc(ft)+(ft&&ts?' ':'')+esc(ts)+'</p>';
+    }catch(e){}
+    box.innerHTML=out;
+    Array.prototype.forEach.call(box.querySelectorAll('.lgb'),function(bt){
+      bt.onclick=function(){var k=bt.getAttribute('data-k');vis[k]=!vis[k];bt.setAttribute('aria-pressed',String(vis[k]));renderHit()};
+    });
+  }
+  function recFail(){
+    try{var box=$('rec');box.hidden=false;box.innerHTML='<p class="muted">Record unavailable</p>'}catch(e){}
+  }
+  try{
+    fetch('record.json?v='+Date.now(),{cache:'no-store'})
+      .then(function(r){if(!r.ok) throw new Error('HTTP '+r.status);return r.json()})
+      .then(function(j){try{renderRecord(j)}catch(e){recFail()}})
+      .catch(recFail);
+  }catch(e){recFail()}
 
   fetch('data.json?v='+Date.now(),{cache:'no-store'})
     .then(function(r){if(!r.ok) throw new Error('HTTP '+r.status);return r.json()})
