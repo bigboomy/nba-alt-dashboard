@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NBA Alt-Over Dashboard</title>
+<meta name="description" content="Daily stepped-down alt OVER prop picks with prices, edge and projected totals.">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#14171c;--muted:#5f6b7a;--line:#e3e7ec;--accent:#1d4ed8;--good:#0f7b3f;--warn:#b45309;--chip:#eef2f7}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1116;--card:#171b22;--text:#e8ebf0;--muted:#97a3b3;--line:#262c36;--accent:#6ea0ff;--good:#4ade80;--warn:#fbbf24;--chip:#202632}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:16px}
+h1{font-size:1.25rem;margin:0}
+.sub{color:var(--muted);font-size:.85rem;margin:2px 0 14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.stat b{display:block;font-size:1.15rem}
+.stat span{color:var(--muted);font-size:.75rem}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px;-webkit-overflow-scrolling:touch}
+.tab{flex:none;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:7px 13px;font:inherit;font-size:.85rem;cursor:pointer}
+.tab[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.game{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.gh{padding:12px 14px;border-bottom:1px solid var(--line)}
+.gh h2{font-size:1rem;margin:0}
+.gh p{margin:3px 0 0;color:var(--muted);font-size:.8rem}
+.pick{padding:11px 14px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:2px 10px}
+.pick:last-child{border-bottom:0}
+.who{font-weight:600}
+.line{font-size:1.05rem;font-weight:700;text-align:right;white-space:nowrap}
+.meta{color:var(--muted);font-size:.8rem}
+.edge{color:var(--good);font-weight:600;text-align:right;font-size:.85rem}
+.chips{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+.chip{background:var(--chip);border-radius:6px;padding:2px 7px;font-size:.72rem;color:var(--muted)}
+.chip.w{color:var(--warn)}
+.none{padding:14px;color:var(--muted);font-size:.9rem}
+h3{font-size:.95rem;margin:20px 0 8px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:.82rem}
+th,td{padding:8px 7px;text-align:right;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--muted);font-weight:600;font-size:.72rem}
+tr:last-child td{border-bottom:0}
+.pos{color:var(--good)}.neg{color:var(--warn)}
+.foot{color:var(--muted);font-size:.75rem;margin:18px 0 6px}
+.cbtn{border:1px solid var(--line);background:var(--chip);color:var(--text);border-radius:8px;font:inherit;font-size:.78rem;padding:7px 11px;min-height:36px;cursor:pointer;white-space:nowrap}
+.cbtn:active{transform:scale(.97)}
+.cbtn.done{color:var(--good);border-color:var(--good)}
+.cbtn.main{background:var(--accent);border-color:var(--accent);color:#fff;font-size:.85rem;min-height:40px;padding:8px 14px}
+.cbtn.main.done{background:var(--good);border-color:var(--good)}
+.bar{display:flex;gap:8px;margin-bottom:12px}
+.bar .cbtn{flex:1}
+.gh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.pick .cbtn{grid-column:1/-1;justify-self:end;margin-top:6px}
+.legend{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--muted);font-size:.8rem}
+.legend summary{cursor:pointer;color:var(--text);font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>NBA Alt-Over Dashboard</h1>
+  <p class="sub" id="sub"></p>
+  <div class="stats" id="stats"></div>
+  <div class="bar">
+    <button class="cbtn main" id="copyAll" type="button">Copy all picks</button>
+    <button class="cbtn main" id="copyTotals" type="button">Copy totals</button>
+  </div>
+  <div class="tabs" id="tabs" role="group" aria-label="Filter by game"></div>
+  <div id="games"></div>
+
+  <h3>Projected totals <span class="meta">(interest only, not a bet)</span></h3>
+  <table id="totals"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table>
+
+  <details class="legend" style="margin-top:16px">
+    <summary>How to read this</summary>
+    <p><b>Alt</b>: the stepped-down OVER line chosen from the book's ladder. <b>Hit%</b>: how often the player cleared it over a recent sample (shown as hits/games). <b>Edge</b>: hit% minus the book's implied probability (1 ÷ odds), in percentage points; a pick must be at least +5. <b>Stars</b> are capped early in the season because samples are small. <b>Opp</b> is the opponent's allowance of that stat per 100 possessions and its league rank; it is shown for context and never changes a pick. <b>Projected totals</b> are a pace-and-rating model shown for interest only.</p>
+  </details>
+
+  <p class="foot" id="foot"></p>
+  <p class="foot"><b>Not betting advice.</b> Hit rate is not profit; prices move and players sit. Past results do not predict future ones. Only bet what you can afford to lose. If gambling is a problem for you or someone you know, contact your local support service (Australia: 1800 858 858, gamblinghelponline.org.au).</p>
+</div>
+
+<!-- UPDATE ONLY THIS BLOCK EACH DAY -->
+<script id="data" type="application/json">
+{
+  "date": "Thu 29 Oct 2026",
+  "tz": "Melbourne time (AEDT)",
+  "book": "Pointsbet AU, decimal odds",
+  "quota": "Odds API: 291/500 remaining",
+  "games": [
+    {"id":"LAL@LAC","tip":"13:40","proj":243.1,"mkt":228.5,"ctx":"LAL back-to-back; LAC 6 players out",
+     "picks":[
+      {"p":"Austin Reaves","s":"AST","alt":5.5,"o":1.69,"h":"80% (8/10)","e":20.8,"st":"2.5","opp":"26.96 (13/25 –)","f":["EARLY","B2B"]},
+      {"p":"Luka Doncic","s":"PTS","alt":31.5,"o":1.69,"h":"70% (7/10)","e":10.8,"st":"2.5","opp":"116.13 (15/26 –)","f":["EARLY","B2B"]},
+      {"p":"Austin Reaves","s":"PTS","alt":21.5,"o":1.65,"h":"70% (7/10)","e":9.4,"st":"2.5","opp":"116.13 (15/26 –)","f":["EARLY","B2B"]}]},
+    {"id":"GSW@MIN","tip":"11:10","proj":231.5,"mkt":227.5,"ctx":"Edwards out (MIN); Butler, Porzingis, Moody out (GSW)",
+     "picks":[
+      {"p":"Draymond Green","s":"AST","alt":5.5,"o":1.83,"h":"90% (9/10)","e":35.4,"st":"2","opp":"—","f":["EARLY","DEPLETED"]},
+      {"p":"Brandin Podziemski","s":"PTS","alt":16.5,"o":1.90,"h":"80% (8/10)","e":27.4,"st":"2","opp":"113.47 (7/26 ⬇)","f":["EARLY","DEPLETED"]},
+      {"p":"Stephen Curry","s":"PTS","alt":22.5,"o":1.67,"h":"70% (7/10)","e":10.1,"st":"2","opp":"113.47 (7/26 ⬇)","f":["EARLY","DEPLETED"]}]},
+    {"id":"HOU@MIL","tip":"11:10","proj":240.5,"mkt":226.5,"ctx":"Sengun and Adams out (HOU)",
+     "picks":[
+      {"p":"Ryan Rollins","s":"AST","alt":3.5,"o":1.50,"h":"80% (8/10)","e":13.3,"st":"3","opp":"25.23 (3/25 ⬇)","f":["EARLY"]},
+      {"p":"Ryan Rollins","s":"PTS","alt":11.5,"o":1.44,"h":"80% (8/10)","e":10.6,"st":"3","opp":"113.19 (5/26 ⬇)","f":["EARLY","OUT","SURGE"]},
+      {"p":"Amen Thompson","s":"PTS","alt":15.5,"o":1.42,"h":"80% (8/10)","e":9.6,"st":"3","opp":"119.26 (23/26 ⬆)","f":["EARLY"]},
+      {"p":"Kevin Durant","s":"AST","alt":3.5,"o":1.56,"h":"70% (7/10)","e":5.9,"st":"3","opp":"28.43 (23/25 ⬆)","f":["EARLY"]}]},
+    {"id":"OKC@DAL","tip":"12:40","proj":221.8,"mkt":228.5,"ctx":"OKC 6 players out; Irving questionable","picks":[]}
+  ],
+  "totals":[
+    ["MIA@ATL",235.9,241.5],["CHA@DET",225.1,212.5],["WAS@CLE",243.6,240.5],["PHI@IND",233.7,234.5],
+    ["ORL@TOR",233.4,224.5],["NYK@CHI",235.6,231.5],["DEN@NOP",246.1,240.5],["GSW@MIN",231.5,227.5],
+    ["HOU@MIL",240.5,226.5],["SAS@UTA",237.9,234.5],["OKC@DAL",221.8,228.5],["LAL@LAC",243.1,228.5]
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var D = JSON.parse(document.getElementById('data').textContent);
+  var $ = function(id){return document.getElementById(id)};
+  var esc = function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+  var stars = function(v){var n=parseFloat(v),f=Math.floor(n);return '★'.repeat(f)+(n%1?'½':'')};
+  var all = D.games.reduce(function(a,g){return a.concat(g.picks)},[]);
+  var avg = all.length ? (all.reduce(function(a,p){return a+p.e},0)/all.length).toFixed(1) : '0';
+
+  $('sub').textContent = D.date + ' · ' + D.tz + ' · ' + D.book;
+  $('stats').innerHTML =
+    '<div class="stat"><b>'+all.length+'</b><span>picks</span></div>'+
+    '<div class="stat"><b>+'+avg+'pp</b><span>avg edge</span></div>'+
+    '<div class="stat"><b>'+D.games.length+'</b><span>games analysed</span></div>';
+  $('foot').textContent = D.quota;
+
+  /* ---- plain-text builders (what the copy buttons produce) ---- */
+  var starTxt = function(v){var n=parseFloat(v);return '⭐'.repeat(Math.floor(n))+(n%1?'½':'')};
+  var pickTxt = function(p){
+    return p.p+' '+p.s+' O'+p.alt+' @'+p.o.toFixed(2)+' | '+p.h+' | +'+p.e.toFixed(1)+'pp | '+starTxt(p.st)+
+      (p.f.length?' ['+p.f.join(', ')+']':'');
+  };
+  var gameTxt = function(g){
+    var head = g.id+' | tip '+g.tip+' | proj '+g.proj+' (mkt '+g.mkt+')';
+    return head+'\n'+(g.picks.length?g.picks.map(pickTxt).join('\n'):'No pick cleared the gates');
+  };
+  var allTxt = function(){
+    return 'NBA ALT-OVERS | '+D.date+' | '+D.tz+' | '+D.book+'\n\n'+
+      D.games.map(gameTxt).join('\n\n')+'\n\n'+D.quota+'\nNot betting advice.';
+  };
+  var totalsTxt = function(){
+    return 'PROJECTED TOTALS (interest only) | '+D.date+'\n'+
+      D.totals.map(function(t){var g=t[1]-t[2];return t[0]+' proj '+t[1].toFixed(1)+' | mkt '+t[2].toFixed(1)+' | gap '+(g>=0?'+':'')+g.toFixed(1)}).join('\n');
+  };
+
+  /* ---- clipboard with fallback for older/in-app browsers ---- */
+  function copyText(text, btn, label){
+    var ok = function(){
+      var old = label; btn.textContent='Copied ✓'; btn.classList.add('done');
+      setTimeout(function(){btn.textContent=old;btn.classList.remove('done')},1400);
+    };
+    var fallback = function(){
+      var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');
+      ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
+      try{document.execCommand('copy')?ok():(btn.textContent='Copy failed')}catch(e){btn.textContent='Copy failed'}
+      document.body.removeChild(ta);
+    };
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fallback)}else{fallback()}
+  }
+  $('copyAll').onclick=function(){copyText(allTxt(),this,'Copy all picks')};
+  $('copyTotals').onclick=function(){copyText(totalsTxt(),this,'Copy totals')};
+
+  var sel = 'ALL';
+  function tabs(){
+    var ids = ['ALL'].concat(D.games.map(function(g){return g.id}));
+    $('tabs').innerHTML = ids.map(function(id){
+      return '<button class="tab" data-id="'+esc(id)+'" aria-pressed="'+(id===sel)+'">'+(id==='ALL'?'All games':esc(id))+'</button>';
+    }).join('');
+    Array.prototype.forEach.call($('tabs').children,function(b){
+      b.onclick=function(){sel=b.getAttribute('data-id');tabs();games();};
+    });
+  }
+  function games(){
+    $('games').innerHTML = D.games.filter(function(g){return sel==='ALL'||g.id===sel}).map(function(g){
+      var gap = (g.proj-g.mkt);
+      var head = '<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+'</h2><p>'+esc(g.ctx)+' · proj total '+g.proj+' (mkt '+g.mkt+')</p></div>'+
+        '<button class="cbtn" type="button" data-copy="game" data-id="'+esc(g.id)+'">Copy game</button></div>';
+      var body = g.picks.length ? g.picks.map(function(p,i){
+        return '<div class="pick"><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+p.alt+' @ '+p.o.toFixed(2)+'</div>'+
+          '<div class="meta">Hit '+esc(p.h)+' · '+stars(p.st)+' · Opp '+esc(p.opp)+'</div><div class="edge">+'+p.e.toFixed(1)+'pp edge</div>'+
+          '<div class="chips">'+p.f.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'?' w':'')+'">'+esc(f)+'</span>'}).join('')+'</div>'+
+          '<button class="cbtn" type="button" data-copy="pick" data-id="'+esc(g.id)+'" data-i="'+i+'">Copy pick</button></div>';
+      }).join('') : '<div class="none">No pick cleared the gates.</div>';
+      return '<section class="game">'+head+body+'</section>';
+    }).join('');
+    Array.prototype.forEach.call($('games').querySelectorAll('[data-copy]'),function(b){
+      b.onclick=function(){
+        var g=D.games.filter(function(x){return x.id===b.getAttribute('data-id')})[0];
+        if(b.getAttribute('data-copy')==='game') copyText(gameTxt(g),b,'Copy game');
+        else copyText(g.id+' | '+pickTxt(g.picks[+b.getAttribute('data-i')]),b,'Copy pick');
+      };
+    });
+  }
+  $('totals').querySelector('tbody').innerHTML = D.totals.map(function(t){
+    var g=(t[1]-t[2]);
+    return '<tr><td>'+esc(t[0])+'</td><td>'+t[1].toFixed(1)+'</td><td>'+t[2].toFixed(1)+'</td><td class="'+(g>=0?'pos':'neg')+'">'+(g>=0?'+':'')+g.toFixed(1)+'</td></tr>';
+  }).join('');
+  tabs();games();
+})();
+</script>
+</body>
+</html>
