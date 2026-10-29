@@ -1,0 +1,243 @@
+{
+  "generated": "2026-10-29T06:00:00+11:00",
+  "date": "Thu 29 Oct 2026",
+  "tz": "Melbourne time (AEDT)",
+  "book": "Pointsbet AU, decimal odds",
+  "games": [
+    {
+      "id": "LAL@LAC",
+      "tip": "13:40",
+      "proj": 243.1,
+      "mkt": 228.5,
+      "ctx": "LAL back-to-back; LAC 6 players out",
+      "picks": [
+        {
+          "p": "Austin Reaves",
+          "s": "AST",
+          "alt": 5.5,
+          "o": 1.69,
+          "h": "80% (8/10)",
+          "e": 20.8,
+          "st": "2.5",
+          "opp": "26.96 (13/25 –)",
+          "f": [
+            "EARLY",
+            "B2B"
+          ]
+        },
+        {
+          "p": "Luka Doncic",
+          "s": "PTS",
+          "alt": 31.5,
+          "o": 1.69,
+          "h": "70% (7/10)",
+          "e": 10.8,
+          "st": "2.5",
+          "opp": "116.13 (15/26 –)",
+          "f": [
+            "EARLY",
+            "B2B"
+          ]
+        },
+        {
+          "p": "Austin Reaves",
+          "s": "PTS",
+          "alt": 21.5,
+          "o": 1.65,
+          "h": "70% (7/10)",
+          "e": 9.4,
+          "st": "2.5",
+          "opp": "116.13 (15/26 –)",
+          "f": [
+            "EARLY",
+            "B2B"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "GSW@MIN",
+      "tip": "11:10",
+      "proj": 231.5,
+      "mkt": 227.5,
+      "ctx": "Edwards out (MIN); Butler, Porzingis, Moody out (GSW)",
+      "picks": [
+        {
+          "p": "Draymond Green",
+          "s": "AST",
+          "alt": 5.5,
+          "o": 1.83,
+          "h": "90% (9/10)",
+          "e": 35.4,
+          "st": "2",
+          "opp": "—",
+          "f": [
+            "EARLY",
+            "DEPLETED"
+          ]
+        },
+        {
+          "p": "Brandin Podziemski",
+          "s": "PTS",
+          "alt": 16.5,
+          "o": 1.9,
+          "h": "80% (8/10)",
+          "e": 27.4,
+          "st": "2",
+          "opp": "113.47 (7/26 ⬇)",
+          "f": [
+            "EARLY",
+            "DEPLETED"
+          ]
+        },
+        {
+          "p": "Stephen Curry",
+          "s": "PTS",
+          "alt": 22.5,
+          "o": 1.67,
+          "h": "70% (7/10)",
+          "e": 10.1,
+          "st": "2",
+          "opp": "113.47 (7/26 ⬇)",
+          "f": [
+            "EARLY",
+            "DEPLETED"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HOU@MIL",
+      "tip": "11:10",
+      "proj": 240.5,
+      "mkt": 226.5,
+      "ctx": "Sengun and Adams out (HOU)",
+      "picks": [
+        {
+          "p": "Ryan Rollins",
+          "s": "AST",
+          "alt": 3.5,
+          "o": 1.5,
+          "h": "80% (8/10)",
+          "e": 13.3,
+          "st": "3",
+          "opp": "25.23 (3/25 ⬇)",
+          "f": [
+            "EARLY"
+          ]
+        },
+        {
+          "p": "Ryan Rollins",
+          "s": "PTS",
+          "alt": 11.5,
+          "o": 1.44,
+          "h": "80% (8/10)",
+          "e": 10.6,
+          "st": "3",
+          "opp": "113.19 (5/26 ⬇)",
+          "f": [
+            "EARLY",
+            "OUT",
+            "SURGE"
+          ]
+        },
+        {
+          "p": "Amen Thompson",
+          "s": "PTS",
+          "alt": 15.5,
+          "o": 1.42,
+          "h": "80% (8/10)",
+          "e": 9.6,
+          "st": "3",
+          "opp": "119.26 (23/26 ⬆)",
+          "f": [
+            "EARLY"
+          ]
+        },
+        {
+          "p": "Kevin Durant",
+          "s": "AST",
+          "alt": 3.5,
+          "o": 1.56,
+          "h": "70% (7/10)",
+          "e": 5.9,
+          "st": "3",
+          "opp": "28.43 (23/25 ⬆)",
+          "f": [
+            "EARLY"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "OKC@DAL",
+      "tip": "12:40",
+      "proj": 221.8,
+      "mkt": 228.5,
+      "ctx": "OKC 6 players out; Irving questionable",
+      "picks": []
+    }
+  ],
+  "totals": [
+    [
+      "MIA@ATL",
+      235.9,
+      241.5
+    ],
+    [
+      "CHA@DET",
+      225.1,
+      212.5
+    ],
+    [
+      "WAS@CLE",
+      243.6,
+      240.5
+    ],
+    [
+      "PHI@IND",
+      233.7,
+      234.5
+    ],
+    [
+      "ORL@TOR",
+      233.4,
+      224.5
+    ],
+    [
+      "NYK@CHI",
+      235.6,
+      231.5
+    ],
+    [
+      "DEN@NOP",
+      246.1,
+      240.5
+    ],
+    [
+      "GSW@MIN",
+      231.5,
+      227.5
+    ],
+    [
+      "HOU@MIL",
+      240.5,
+      226.5
+    ],
+    [
+      "SAS@UTA",
+      237.9,
+      234.5
+    ],
+    [
+      "OKC@DAL",
+      221.8,
+      228.5
+    ],
+    [
+      "LAL@LAC",
+      243.1,
+      228.5
+    ]
+  ]
+}

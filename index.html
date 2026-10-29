@@ -51,6 +51,8 @@ tr:last-child td{border-bottom:0}
 .bar .cbtn{flex:1}
 .gh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .pick .cbtn{grid-column:1/-1;justify-self:end;margin-top:6px}
+.stale{background:var(--card);border:1px solid var(--warn);color:var(--warn);border-radius:10px;padding:9px 12px;margin-bottom:12px;font-size:.85rem;font-weight:600}
+.err{border-color:var(--warn);color:var(--warn)}
 .legend{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--muted);font-size:.8rem}
 .legend summary{cursor:pointer;color:var(--text);font-weight:600}
 </style>
@@ -59,6 +61,7 @@ tr:last-child td{border-bottom:0}
 <div class="wrap">
   <h1>NBA Alt-Over Dashboard</h1>
   <p class="sub" id="sub"></p>
+  <div class="stale" id="stale" role="status" hidden></div>
   <div class="stats" id="stats"></div>
   <div class="bar">
     <button class="cbtn main" id="copyAll" type="button">Copy all picks</button>
@@ -75,84 +78,65 @@ tr:last-child td{border-bottom:0}
     <p><b>Alt</b>: the stepped-down OVER line chosen from the book's ladder. <b>Hit%</b>: how often the player cleared it over a recent sample (shown as hits/games). <b>Edge</b>: hit% minus the book's implied probability (1 ÷ odds), in percentage points; a pick must be at least +5. <b>Stars</b> are capped early in the season because samples are small. <b>Opp</b> is the opponent's allowance of that stat per 100 possessions and its league rank; it is shown for context and never changes a pick. <b>Projected totals</b> are a pace-and-rating model shown for interest only.</p>
   </details>
 
-  <p class="foot" id="foot"></p>
   <p class="foot"><b>Not betting advice.</b> Hit rate is not profit; prices move and players sit. Past results do not predict future ones. Only bet what you can afford to lose. If gambling is a problem for you or someone you know, contact your local support service (Australia: 1800 858 858, gamblinghelponline.org.au).</p>
 </div>
 
-<!-- UPDATE ONLY THIS BLOCK EACH DAY -->
-<script id="data" type="application/json">
-{
-  "date": "Thu 29 Oct 2026",
-  "tz": "Melbourne time (AEDT)",
-  "book": "Pointsbet AU, decimal odds",
-  "quota": "Odds API: 291/500 remaining",
-  "games": [
-    {"id":"LAL@LAC","tip":"13:40","proj":243.1,"mkt":228.5,"ctx":"LAL back-to-back; LAC 6 players out",
-     "picks":[
-      {"p":"Austin Reaves","s":"AST","alt":5.5,"o":1.69,"h":"80% (8/10)","e":20.8,"st":"2.5","opp":"26.96 (13/25 –)","f":["EARLY","B2B"]},
-      {"p":"Luka Doncic","s":"PTS","alt":31.5,"o":1.69,"h":"70% (7/10)","e":10.8,"st":"2.5","opp":"116.13 (15/26 –)","f":["EARLY","B2B"]},
-      {"p":"Austin Reaves","s":"PTS","alt":21.5,"o":1.65,"h":"70% (7/10)","e":9.4,"st":"2.5","opp":"116.13 (15/26 –)","f":["EARLY","B2B"]}]},
-    {"id":"GSW@MIN","tip":"11:10","proj":231.5,"mkt":227.5,"ctx":"Edwards out (MIN); Butler, Porzingis, Moody out (GSW)",
-     "picks":[
-      {"p":"Draymond Green","s":"AST","alt":5.5,"o":1.83,"h":"90% (9/10)","e":35.4,"st":"2","opp":"—","f":["EARLY","DEPLETED"]},
-      {"p":"Brandin Podziemski","s":"PTS","alt":16.5,"o":1.90,"h":"80% (8/10)","e":27.4,"st":"2","opp":"113.47 (7/26 ⬇)","f":["EARLY","DEPLETED"]},
-      {"p":"Stephen Curry","s":"PTS","alt":22.5,"o":1.67,"h":"70% (7/10)","e":10.1,"st":"2","opp":"113.47 (7/26 ⬇)","f":["EARLY","DEPLETED"]}]},
-    {"id":"HOU@MIL","tip":"11:10","proj":240.5,"mkt":226.5,"ctx":"Sengun and Adams out (HOU)",
-     "picks":[
-      {"p":"Ryan Rollins","s":"AST","alt":3.5,"o":1.50,"h":"80% (8/10)","e":13.3,"st":"3","opp":"25.23 (3/25 ⬇)","f":["EARLY"]},
-      {"p":"Ryan Rollins","s":"PTS","alt":11.5,"o":1.44,"h":"80% (8/10)","e":10.6,"st":"3","opp":"113.19 (5/26 ⬇)","f":["EARLY","OUT","SURGE"]},
-      {"p":"Amen Thompson","s":"PTS","alt":15.5,"o":1.42,"h":"80% (8/10)","e":9.6,"st":"3","opp":"119.26 (23/26 ⬆)","f":["EARLY"]},
-      {"p":"Kevin Durant","s":"AST","alt":3.5,"o":1.56,"h":"70% (7/10)","e":5.9,"st":"3","opp":"28.43 (23/25 ⬆)","f":["EARLY"]}]},
-    {"id":"OKC@DAL","tip":"12:40","proj":221.8,"mkt":228.5,"ctx":"OKC 6 players out; Irving questionable","picks":[]}
-  ],
-  "totals":[
-    ["MIA@ATL",235.9,241.5],["CHA@DET",225.1,212.5],["WAS@CLE",243.6,240.5],["PHI@IND",233.7,234.5],
-    ["ORL@TOR",233.4,224.5],["NYK@CHI",235.6,231.5],["DEN@NOP",246.1,240.5],["GSW@MIN",231.5,227.5],
-    ["HOU@MIL",240.5,226.5],["SAS@UTA",237.9,234.5],["OKC@DAL",221.8,228.5],["LAL@LAC",243.1,228.5]
-  ]
-}
-</script>
-
 <script>
 (function(){
-  var D = JSON.parse(document.getElementById('data').textContent);
   var $ = function(id){return document.getElementById(id)};
-  var esc = function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
-  var stars = function(v){var n=parseFloat(v),f=Math.floor(n);return '★'.repeat(f)+(n%1?'½':'')};
-  var all = D.games.reduce(function(a,g){return a.concat(g.picks)},[]);
-  var avg = all.length ? (all.reduce(function(a,p){return a+p.e},0)/all.length).toFixed(1) : '0';
+  var esc = function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+  var num = function(v){if(v===null||v===undefined||v===''||typeof v==='boolean')return null;var n=Number(v);return isFinite(n)?n:null};
+  var fix = function(v,d){var n=num(v);return n===null?'—':n.toFixed(d)};
+  var str = function(v,dflt){return (v===null||v===undefined||v==='')?dflt:String(v)};
+  var stars = function(n){n=n||0;var f=Math.floor(n);return '★'.repeat(f)+(n%1?'½':'')};
+  var starTxt = function(n){n=n||0;return '⭐'.repeat(Math.floor(n))+(n%1?'½':'')};
 
-  $('sub').textContent = D.date + ' · ' + D.tz + ' · ' + D.book;
-  $('stats').innerHTML =
-    '<div class="stat"><b>'+all.length+'</b><span>picks</span></div>'+
-    '<div class="stat"><b>+'+avg+'pp</b><span>avg edge</span></div>'+
-    '<div class="stat"><b>'+D.games.length+'</b><span>games analysed</span></div>';
-  $('foot').textContent = D.quota;
+  var D = null, G = [], T = [], sel = 'ALL';
+
+  function normPick(p){
+    if(!p||typeof p!=='object') return null;
+    var alt=num(p.alt),o=num(p.o),e=num(p.e);
+    if(!str(p.p,'')||!str(p.s,'')||alt===null||o===null||o<=0||e===null) return null;
+    var st=num(p.st);
+    return {p:String(p.p),s:String(p.s),alt:alt,o:o,e:e,h:str(p.h,'—'),stN:st===null?0:st,
+      opp:str(p.opp,'—'),f:Array.isArray(p.f)?p.f.map(String):[]};
+  }
+  function normGame(g){
+    if(!g||typeof g!=='object'||!str(g.id,'')) return null;
+    var picks=[];
+    (Array.isArray(g.picks)?g.picks:[]).forEach(function(p){try{var n=normPick(p);if(n)picks.push(n)}catch(e){}});
+    return {id:String(g.id),tip:str(g.tip,'—'),proj:num(g.proj),mkt:num(g.mkt),ctx:str(g.ctx,''),picks:picks};
+  }
+  function normTotal(t){
+    if(!Array.isArray(t)||t.length<2||!str(t[0],'')) return null;
+    var proj=num(t[1]); if(proj===null) return null;
+    return {id:String(t[0]),proj:proj,mkt:num(t[2])};
+  }
 
   /* ---- plain-text builders (what the copy buttons produce) ---- */
-  var starTxt = function(v){var n=parseFloat(v);return '⭐'.repeat(Math.floor(n))+(n%1?'½':'')};
   var pickTxt = function(p){
-    return p.p+' '+p.s+' O'+p.alt+' @'+p.o.toFixed(2)+' | '+p.h+' | +'+p.e.toFixed(1)+'pp | '+starTxt(p.st)+
+    return p.p+' '+p.s+' O'+p.alt+' @'+p.o.toFixed(2)+' | '+p.h+' | +'+p.e.toFixed(1)+'pp | '+starTxt(p.stN)+
       (p.f.length?' ['+p.f.join(', ')+']':'');
   };
+  var projMkt = function(g){return 'proj '+fix(g.proj,1)+' (mkt '+fix(g.mkt,1)+')'};
   var gameTxt = function(g){
-    var head = g.id+' | tip '+g.tip+' | proj '+g.proj+' (mkt '+g.mkt+')';
-    return head+'\n'+(g.picks.length?g.picks.map(pickTxt).join('\n'):'No pick cleared the gates');
+    return g.id+' | tip '+g.tip+' | '+projMkt(g)+'\n'+(g.picks.length?g.picks.map(pickTxt).join('\n'):'No pick cleared the gates');
   };
   var allTxt = function(){
-    return 'NBA ALT-OVERS | '+D.date+' | '+D.tz+' | '+D.book+'\n\n'+
-      D.games.map(gameTxt).join('\n\n')+'\n\n'+D.quota+'\nNot betting advice.';
+    return 'NBA ALT-OVERS | '+D.date+' | '+D.tz+' | '+D.book+'\n\n'+G.map(gameTxt).join('\n\n')+'\n\nNot betting advice.';
   };
   var totalsTxt = function(){
-    return 'PROJECTED TOTALS (interest only) | '+D.date+'\n'+
-      D.totals.map(function(t){var g=t[1]-t[2];return t[0]+' proj '+t[1].toFixed(1)+' | mkt '+t[2].toFixed(1)+' | gap '+(g>=0?'+':'')+g.toFixed(1)}).join('\n');
+    return 'PROJECTED TOTALS (interest only) | '+D.date+'\n'+T.map(function(t){
+      var g=t.mkt===null?null:t.proj-t.mkt;
+      return t.id+' proj '+t.proj.toFixed(1)+' | mkt '+fix(t.mkt,1)+' | gap '+(g===null?'—':(g>=0?'+':'')+g.toFixed(1));
+    }).join('\n');
   };
 
   /* ---- clipboard with fallback for older/in-app browsers ---- */
   function copyText(text, btn, label){
     var ok = function(){
-      var old = label; btn.textContent='Copied ✓'; btn.classList.add('done');
-      setTimeout(function(){btn.textContent=old;btn.classList.remove('done')},1400);
+      btn.textContent='Copied ✓'; btn.classList.add('done');
+      setTimeout(function(){btn.textContent=label;btn.classList.remove('done')},1400);
     };
     var fallback = function(){
       var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');
@@ -162,12 +146,9 @@ tr:last-child td{border-bottom:0}
     };
     if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fallback)}else{fallback()}
   }
-  $('copyAll').onclick=function(){copyText(allTxt(),this,'Copy all picks')};
-  $('copyTotals').onclick=function(){copyText(totalsTxt(),this,'Copy totals')};
 
-  var sel = 'ALL';
   function tabs(){
-    var ids = ['ALL'].concat(D.games.map(function(g){return g.id}));
+    var ids = ['ALL'].concat(G.map(function(g){return g.id}));
     $('tabs').innerHTML = ids.map(function(id){
       return '<button class="tab" data-id="'+esc(id)+'" aria-pressed="'+(id===sel)+'">'+(id==='ALL'?'All games':esc(id))+'</button>';
     }).join('');
@@ -175,32 +156,82 @@ tr:last-child td{border-bottom:0}
       b.onclick=function(){sel=b.getAttribute('data-id');tabs();games();};
     });
   }
+  function pickHtml(p,gi,i){
+    return '<div class="pick"><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' @ '+p.o.toFixed(2)+'</div>'+
+      '<div class="meta">Hit '+esc(p.h)+' · '+stars(p.stN)+' · Opp '+esc(p.opp)+'</div><div class="edge">+'+p.e.toFixed(1)+'pp edge</div>'+
+      '<div class="chips">'+p.f.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'?' w':'')+'">'+esc(f)+'</span>'}).join('')+'</div>'+
+      '<button class="cbtn" type="button" data-copy="pick" data-g="'+gi+'" data-i="'+i+'">Copy pick</button></div>';
+  }
+  function gameHtml(g,gi){
+    var head = '<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+'</h2><p>'+esc(g.ctx)+(g.ctx?' · ':'')+'proj total '+esc(fix(g.proj,1))+' (mkt '+esc(fix(g.mkt,1))+')</p></div>'+
+      '<button class="cbtn" type="button" data-copy="game" data-g="'+gi+'">Copy game</button></div>';
+    var body = '';
+    if(g.picks.length){
+      g.picks.forEach(function(p,i){try{body+=pickHtml(p,gi,i)}catch(e){}});
+    }
+    if(!body) body='<div class="none">No pick cleared the gates.</div>';
+    return '<section class="game">'+head+body+'</section>';
+  }
   function games(){
-    $('games').innerHTML = D.games.filter(function(g){return sel==='ALL'||g.id===sel}).map(function(g){
-      var gap = (g.proj-g.mkt);
-      var head = '<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+'</h2><p>'+esc(g.ctx)+' · proj total '+g.proj+' (mkt '+g.mkt+')</p></div>'+
-        '<button class="cbtn" type="button" data-copy="game" data-id="'+esc(g.id)+'">Copy game</button></div>';
-      var body = g.picks.length ? g.picks.map(function(p,i){
-        return '<div class="pick"><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+p.alt+' @ '+p.o.toFixed(2)+'</div>'+
-          '<div class="meta">Hit '+esc(p.h)+' · '+stars(p.st)+' · Opp '+esc(p.opp)+'</div><div class="edge">+'+p.e.toFixed(1)+'pp edge</div>'+
-          '<div class="chips">'+p.f.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'?' w':'')+'">'+esc(f)+'</span>'}).join('')+'</div>'+
-          '<button class="cbtn" type="button" data-copy="pick" data-id="'+esc(g.id)+'" data-i="'+i+'">Copy pick</button></div>';
-      }).join('') : '<div class="none">No pick cleared the gates.</div>';
-      return '<section class="game">'+head+body+'</section>';
-    }).join('');
+    var html='';
+    G.forEach(function(g,gi){
+      if(sel!=='ALL'&&g.id!==sel) return;
+      try{html+=gameHtml(g,gi)}catch(e){}
+    });
+    $('games').innerHTML = html;
     Array.prototype.forEach.call($('games').querySelectorAll('[data-copy]'),function(b){
       b.onclick=function(){
-        var g=D.games.filter(function(x){return x.id===b.getAttribute('data-id')})[0];
+        var g=G[+b.getAttribute('data-g')]; if(!g) return;
         if(b.getAttribute('data-copy')==='game') copyText(gameTxt(g),b,'Copy game');
-        else copyText(g.id+' | '+pickTxt(g.picks[+b.getAttribute('data-i')]),b,'Copy pick');
+        else{var p=g.picks[+b.getAttribute('data-i')]; if(p) copyText(g.id+' | '+pickTxt(p),b,'Copy pick');}
       };
     });
   }
-  $('totals').querySelector('tbody').innerHTML = D.totals.map(function(t){
-    var g=(t[1]-t[2]);
-    return '<tr><td>'+esc(t[0])+'</td><td>'+t[1].toFixed(1)+'</td><td>'+t[2].toFixed(1)+'</td><td class="'+(g>=0?'pos':'neg')+'">'+(g>=0?'+':'')+g.toFixed(1)+'</td></tr>';
-  }).join('');
-  tabs();games();
+  function totals(){
+    var html='';
+    T.forEach(function(t){
+      try{
+        var g=t.mkt===null?null:t.proj-t.mkt;
+        html+='<tr><td>'+esc(t.id)+'</td><td>'+t.proj.toFixed(1)+'</td><td>'+esc(fix(t.mkt,1))+'</td>'+
+          '<td class="'+(g===null?'':(g>=0?'pos':'neg'))+'">'+(g===null?'—':(g>=0?'+':'')+g.toFixed(1))+'</td></tr>';
+      }catch(e){}
+    });
+    $('totals').querySelector('tbody').innerHTML = html;
+  }
+
+  function init(data){
+    if(!data||typeof data!=='object'||Array.isArray(data)) throw new Error('bad data');
+    D = {date:str(data.date,''),tz:str(data.tz,''),book:str(data.book,'')};
+    G=[]; (Array.isArray(data.games)?data.games:[]).forEach(function(g){try{var n=normGame(g);if(n)G.push(n)}catch(e){}});
+    T=[]; (Array.isArray(data.totals)?data.totals:[]).forEach(function(t){try{var n=normTotal(t);if(n)T.push(n)}catch(e){}});
+    var all = G.reduce(function(a,g){return a.concat(g.picks)},[]);
+    var avg = all.length ? (all.reduce(function(a,p){return a+Number(p.e)},0)/all.length).toFixed(1) : '0.0';
+
+    var gen = data.generated ? new Date(data.generated) : null;
+    var genOk = gen && !isNaN(gen.getTime());
+    var parts = [D.date,D.tz,D.book].filter(Boolean);
+    if(genOk) parts.push('updated '+gen.toLocaleString([], {dateStyle:'medium',timeStyle:'short'}));
+    $('sub').textContent = parts.join(' · ');
+    if(genOk && Date.now()-gen.getTime() > 20*3600*1000){
+      $('stale').textContent = 'Picks last updated '+gen.toLocaleString([], {dateStyle:'medium',timeStyle:'short'})+' — may be out of date';
+      $('stale').hidden = false;
+    }
+    $('stats').innerHTML =
+      '<div class="stat"><b>'+all.length+'</b><span>picks</span></div>'+
+      '<div class="stat"><b>+'+esc(avg)+'pp</b><span>avg edge</span></div>'+
+      '<div class="stat"><b>'+G.length+'</b><span>target games</span></div>';
+    $('copyAll').onclick=function(){copyText(allTxt(),this,'Copy all picks')};
+    $('copyTotals').onclick=function(){copyText(totalsTxt(),this,'Copy totals')};
+    totals(); tabs(); games();
+  }
+  function fail(){
+    $('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>';
+  }
+
+  fetch('data.json?v='+Date.now(),{cache:'no-store'})
+    .then(function(r){if(!r.ok) throw new Error('HTTP '+r.status);return r.json()})
+    .then(init)
+    .catch(fail);
 })();
 </script>
 </body>
