@@ -33,6 +33,12 @@ h1{font-size:1.25rem;margin:0}
 .chips{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
 .chip{background:var(--chip);border-radius:6px;padding:2px 7px;font-size:.72rem;color:var(--muted)}
 .chip.w{color:var(--warn)}
+.pick.rw{box-shadow:inset 3px 0 0 var(--good)}
+.pick.rl{box-shadow:inset 3px 0 0 var(--warn)}
+.pick.rv{box-shadow:inset 3px 0 0 var(--muted)}
+.res{border-radius:6px;padding:2px 8px;font-size:.72rem;font-weight:700;font-variant-numeric:tabular-nums;border:1px solid currentColor}
+.res.W{color:var(--good)}.res.L{color:var(--warn)}.res.P,.res.V{color:var(--muted)}
+.gres{display:inline-block;margin-left:6px;font-size:.75rem;font-weight:700;font-variant-numeric:tabular-nums}
 .none{padding:14px;color:var(--muted);font-size:.9rem}
 h3{font-size:.95rem;margin:20px 0 8px}
 table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:.82rem}
@@ -65,6 +71,9 @@ tr:last-child td{border-bottom:0}
 .rec .muted{color:var(--muted);font-size:.75rem;margin:6px 0 0}
 .rec .it{font-style:italic}
 .tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start}
+.tiles.t3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tiles.t3 .kv{flex-wrap:wrap;gap:0 6px}
+.tiles.t3 .tp{font-size:1.3rem}
 .tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;min-width:0}
 .tile summary{display:flex;flex-direction:column;gap:2px;cursor:pointer;list-style:none;position:relative;padding-right:16px;min-height:44px;justify-content:center}
 .tile summary::-webkit-details-marker{display:none}
@@ -139,7 +148,38 @@ tr:last-child td{border-bottom:0}
   var stars = function(n){n=n||0;var f=Math.floor(n);return '★'.repeat(f)+(n%1?'½':'')};
   var starTxt = function(n){n=n||0;return '⭐'.repeat(Math.floor(n))+(n%1?'½':'')};
 
-  var D = null, G = [], T = [], sel = 'ALL';
+  var D = null, G = [], T = [], sel = 'ALL', RES = null;
+  var MONI={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
+  var nk = function(n){return String(n||'').toLowerCase().replace(/[^a-z]/g,'')};
+  var rkey = function(p,s,alt){return nk(p)+'|'+String(s).toUpperCase()+'|'+Number(alt).toFixed(1)};
+  function slateIso(){
+    var m=/(\d{1,2})\s+([A-Za-z]{3})\w*\s+(\d{4})/.exec(D&&D.date||'');
+    if(!m||!MONI[m[2]]) return null;
+    return m[3]+'-'+('0'+MONI[m[2]]).slice(-2)+'-'+('0'+m[1]).slice(-2);
+  }
+  function setResults(rec){
+    try{
+      var r=rec&&rec.results; if(!r||typeof r!=='object'||!Array.isArray(r.picks)) return;
+      var map={};
+      r.picks.forEach(function(x){
+        try{
+          var res=String(x.r||'').toUpperCase(); if(['W','L','PUSH','VOID'].indexOf(res)<0) return;
+          map[rkey(x.p,x.s,x.alt)]={r:res,act:x.act,u:num(x.u)};
+        }catch(e){}
+      });
+      RES={date:String(r.date||''),map:map};
+    }catch(e){RES=null}
+  }
+  function resFor(p){
+    if(!RES||!D||RES.date!==slateIso()) return null;
+    return RES.map[rkey(p.p,p.s,p.alt)]||null;
+  }
+  var RLBL={W:'WON',L:'LOST',PUSH:'PUSH',VOID:'VOID'};
+  var RCLS={W:'W',L:'L',PUSH:'P',VOID:'V'};
+  function resTxt(x){
+    var a=(x.act===null||x.act===undefined||x.act==='')?'':String(x.act);
+    return RLBL[x.r]+(a?' · '+a:'')+(x.u!==null&&x.r!=='VOID'?' · '+(x.u>0?'+':x.u<0?'−':'')+Math.abs(x.u).toFixed(2)+'u':'');
+  }
 
   function normPick(p){
     if(!p||typeof p!=='object') return null;
@@ -164,7 +204,8 @@ tr:last-child td{border-bottom:0}
   /* ---- plain-text builders (what the copy buttons produce) ---- */
   var pickTxt = function(p){
     return p.p+' '+p.s+' O'+p.alt+' @'+p.o.toFixed(2)+' | '+p.h+' | +'+p.e.toFixed(1)+'pp | '+starTxt(p.stN)+
-      (p.f.length?' ['+p.f.join(', ')+']':'');
+      (p.f.length?' ['+p.f.join(', ')+']':'')+
+      (function(){var x=resFor(p);return x?' → '+resTxt(x):''})();
   };
   var projMkt = function(g){return 'proj '+fix(g.proj,1)+' (mkt '+fix(g.mkt,1)+')'};
   var gameTxt = function(g){
@@ -205,13 +246,21 @@ tr:last-child td{border-bottom:0}
     });
   }
   function pickHtml(p,gi,i){
-    return '<div class="pick"><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' @ '+p.o.toFixed(2)+'</div>'+
+    var x=resFor(p);
+    var rc=x?{W:' rw',L:' rl',PUSH:' rv',VOID:' rv'}[x.r]:'';
+    var pill=x?'<span class="res '+RCLS[x.r]+'">'+esc(resTxt(x))+'</span>':'';
+    return '<div class="pick'+rc+'"><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' @ '+p.o.toFixed(2)+'</div>'+
       '<div class="meta">Hit '+esc(p.h)+' · '+stars(p.stN)+' · Opp '+esc(p.opp)+'</div><div class="edge">+'+p.e.toFixed(1)+'pp edge</div>'+
-      '<div class="chips">'+p.f.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'?' w':'')+'">'+esc(f)+'</span>'}).join('')+'</div>'+
+      '<div class="chips">'+pill+p.f.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'?' w':'')+'">'+esc(f)+'</span>'}).join('')+'</div>'+
       '<button class="cbtn" type="button" data-copy="pick" data-g="'+gi+'" data-i="'+i+'">Copy pick</button></div>';
   }
   function gameHtml(g,gi){
-    var head = '<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+'</h2><p>'+esc(g.ctx)+(g.ctx?' · ':'')+'proj total '+esc(fix(g.proj,1))+' (mkt '+esc(fix(g.mkt,1))+')</p></div>'+
+    var gw=0,gl=0,gu=0,gn=0;
+    g.picks.forEach(function(p){var x=resFor(p);if(!x)return;gn++;if(x.r==='W')gw++;if(x.r==='L')gl++;if(x.u!==null)gu+=x.u});
+    var gsum='';
+    if(gn&&gn===g.picks.length){gsum='<span class="gres '+(gu>0?'pos':gu<0?'neg':'')+'">'+gw+'-'+gl+' · '+(gu>0?'+':gu<0?'−':'')+Math.abs(gu).toFixed(2)+'u</span>'}
+    else if(gn){gsum='<span class="gres" style="color:var(--muted)">'+gn+'/'+g.picks.length+' settled</span>'}
+    var head = '<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+gsum+'</h2><p>'+esc(g.ctx)+(g.ctx?' · ':'')+'proj total '+esc(fix(g.proj,1))+' (mkt '+esc(fix(g.mkt,1))+')</p></div>'+
       '<button class="cbtn" type="button" data-copy="game" data-g="'+gi+'">Copy game</button></div>';
     var body = '';
     if(g.picks.length){
@@ -306,6 +355,30 @@ tr:last-child td{border-bottom:0}
     }catch(e){return {clip:false,html:'<div class="tile"><div class="tl">'+esc(name)+'</div><div class="tm">unavailable</div></div>'}}
   }
 
+  function melToday(){
+    try{return pd(new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Melbourne',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()))}catch(e){return null}
+  }
+  function dayTile(rec){
+    var name='Latest day';
+    try{
+      var r=null,t=null;
+      (Array.isArray(rec.daily)?rec.daily:[]).forEach(function(x){var tx=pd(x&&x.date);if(tx!==null&&(t===null||tx>t)){t=tx;r=x}});
+      if(!r) throw 0;
+      var tod=melToday();
+      name=(tod!==null&&t===tod)?'Today':fd(t,false);
+      var W=num(r.w),L=num(r.l),u=num(r.units),vd=num(r.void);
+      if(W===null||L===null||u===null) throw 0;
+      var n=W+L,hit=n?100*W/n:null;
+      return '<details class="tile"><summary><span class="tl">'+esc(name)+'</span><b class="tp">'+(hit===null?'—':hit.toFixed(1)+'%')+'</b></summary>'+
+        '<div class="td">'+
+        '<div class="kv"><span>Record</span><b>'+W+'-'+L+'</b></div>'+
+        '<div class="kv"><span>Units</span><b class="'+sc(u)+'">'+sg(u,2)+'u</b></div>'+
+        '<div class="kv"><span>Bets</span><b>'+n+(vd!==null&&vd>0?' ('+vd+' void)':'')+'</b></div>'+
+        '<div class="tm tn">Games of '+esc(fd(t,true))+'</div>'+
+        '</div></details>';
+    }catch(e){return '<div class="tile"><div class="tl">'+esc(name)+'</div><div class="tm">unavailable</div></div>'}
+  }
+
   var VW=360,VL=30,VR=46,VT=10,VB=170,PW=VW-VL-VR;
   function xAxis(s0,span){
     var step=Math.max(1,Math.ceil(46/(span>0?PW/span:PW))),o='';
@@ -381,7 +454,7 @@ tr:last-child td{border-bottom:0}
       out+='<h3>'+(asT===null?'Record':'As of '+esc(fd(asT,true)))+'</h3>';
       var a=tile(rec.rolling_7d,7,'7-day'),b=tile(rec.rolling_30d,30,'30-day');
       clip=a.clip||b.clip;
-      out+='<div class="tiles">'+a.html+b.html+'</div>';
+      out+='<div class="tiles t3">'+dayTile(rec)+a.html+b.html+'</div>';
       if(clip) out+='<p class="muted">Windows start at season start'+(s0!==null?' ('+esc(fd(s0,true))+')':'')+', so early in the season the 30-day figure equals season to date.</p>';
     }catch(e){}
     /* daily rows */
@@ -437,7 +510,7 @@ tr:last-child td{border-bottom:0}
   try{
     fetch('record.json?v='+Date.now(),{cache:'no-store'})
       .then(function(r){if(!r.ok) throw new Error('HTTP '+r.status);return r.json()})
-      .then(function(j){try{renderRecord(j)}catch(e){recFail()}})
+      .then(function(j){try{setResults(j);if(D){games()}}catch(e){}try{renderRecord(j)}catch(e){recFail()}})
       .catch(recFail);
   }catch(e){recFail()}
 
