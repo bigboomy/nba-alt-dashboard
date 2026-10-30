@@ -1,129 +1,178 @@
 {
-  "generated": "2026-10-29T19:22:08.371558+00:00",
-  "date": "Fri 30 Oct 2026",
+  "generated": "2026-10-30T22:13:15.023525+00:00",
+  "date": "Sat 31 Oct 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
   "games": [
     {
-      "id": "CLE@ATL",
-      "tip": "11:10",
-      "proj": 229.6,
-      "mkt": 238.5,
-      "ctx": "Early season; injury report unverified",
-      "picks": [
-        {
-          "p": "Donovan Mitchell",
-          "s": "PTS",
-          "alt": 25.5,
-          "o": 1.9,
-          "h": "70% (7/10 LS)",
-          "e": 17.4,
-          "st": "3",
-          "opp": "106.64 (4/25 ⬇)",
-          "f": [
-            "EARLY"
-          ]
-        },
-        {
-          "p": "C.J. McCollum",
-          "s": "PTS",
-          "alt": 16.5,
-          "o": 1.95,
-          "h": "70% (7/10 LS)",
-          "e": 18.7,
-          "st": "3",
-          "opp": "108.71 (6/25 ⬇)",
-          "f": [
-            "EARLY"
-          ]
-        },
-        {
-          "p": "Jarrett Allen",
-          "s": "PTS",
-          "alt": 12.5,
-          "o": 1.8,
-          "h": "70% (7/10 LS)",
-          "e": 14.4,
-          "st": "3",
-          "opp": "106.64 (4/25 ⬇)",
-          "f": [
-            "EARLY"
-          ]
-        }
-      ]
-    },
-    {
-      "id": "SAC@NOP",
-      "tip": "11:10",
-      "proj": 245.3,
-      "mkt": 235.5,
-      "ctx": "No qualifying picks",
-      "picks": []
-    },
-    {
-      "id": "MEM@POR",
+      "id": "LAL@GSW",
       "tip": "13:10",
-      "proj": 235.9,
-      "mkt": 232.5,
-      "ctx": "MEM allowance table unavailable",
+      "proj": 248.7,
+      "mkt": 233.5,
+      "ctx": "Butler, Porzingis, Moody, Thiero, Z. Williams OUT (GSW); Carr OUT (LAL)",
       "picks": [
         {
-          "p": "Jrue Holiday",
-          "s": "AST",
-          "alt": 3.5,
-          "o": 1.71,
-          "h": "90% (9/10 LS)",
-          "e": 31.5,
-          "st": "3",
-          "opp": "—",
+          "p": "Austin Reaves",
+          "s": "PTS",
+          "alt": 22.5,
+          "o": 1.74,
+          "h": "80% (4/5 CS)",
+          "e": 11.5,
+          "st": "1",
+          "opp": "124.04 (24/25 ⬆)",
           "f": [
-            "EARLY"
+            "EARLY",
+            "U1"
           ]
         },
         {
-          "p": "Deni Avdija",
+          "p": "Stephen Curry",
           "s": "PTS",
-          "alt": 21.5,
-          "o": 1.63,
-          "h": "80% (8/10 LS)",
-          "e": 18.7,
-          "st": "3",
-          "opp": "—",
+          "alt": 22.5,
+          "o": 1.48,
+          "h": "100% (3/3 CS)",
+          "e": 11.9,
+          "st": "0.5",
+          "opp": "109.33 (8/25 ⬇)",
           "f": [
-            "EARLY"
+            "EARLY",
+            "OUT",
+            "n=3",
+            "DEPLETED",
+            "U0.5"
           ]
         },
         {
-          "p": "Jrue Holiday",
+          "p": "Yaxel Lendeborg",
           "s": "PTS",
-          "alt": 12.5,
-          "o": 1.9,
-          "h": "70% (7/10 LS)",
-          "e": 17.4,
-          "st": "3",
-          "opp": "—",
+          "alt": 17.5,
+          "o": 1.56,
+          "h": "80% (4/5 CS)",
+          "e": 8.6,
+          "st": "0.5",
+          "opp": "109.33 (8/25 ⬇)",
           "f": [
-            "EARLY"
+            "EARLY",
+            "DEPLETED",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "Yaxel Lendeborg",
+          "s": "REB",
+          "alt": 7.5,
+          "o": 2.05,
+          "h": "80% (4/5 CS)",
+          "e": 15.2,
+          "st": "0.25",
+          "opp": "40.43 (3/25 ⬇)",
+          "f": [
+            "EARLY",
+            "Std?",
+            "DEPLETED",
+            "U0.25"
           ]
         }
       ]
+    },
+    {
+      "id": "IND@MIA",
+      "tip": "11:10",
+      "proj": 232.5,
+      "mkt": 236.5,
+      "ctx": "Haliburton, Zubac, McConnell OUT (IND); Toppin Q",
+      "picks": [
+        {
+          "p": "Pascal Siakam",
+          "s": "PTS",
+          "alt": 20.5,
+          "o": 1.5,
+          "h": "80% (4/5 CS)",
+          "e": 7.5,
+          "st": "0.5",
+          "opp": "121.06 (21/25 ⬆)",
+          "f": [
+            "EARLY",
+            "DEPLETED",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "Andrew Nembhard",
+          "s": "PTS",
+          "alt": 15.5,
+          "o": 1.63,
+          "h": "75% (3/4 CS)",
+          "e": 6.6,
+          "st": "0.5",
+          "opp": "121.06 (21/25 ⬆)",
+          "f": [
+            "EARLY",
+            "DEPLETED",
+            "U0.5"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "LAC@MIN",
+      "tip": "11:10",
+      "proj": 210.2,
+      "mkt": 222.5,
+      "ctx": "Edwards OUT (MIN); Beal, Ingram, Strus OUT (LAC)",
+      "picks": []
     }
   ],
   "totals": [
     [
-      "CLE@ATL",
-      229.6,
-      238.5
+      "CHA@WAS",
+      215.2,
+      219.5
     ],
     [
-      "SAC@NOP",
-      245.3,
-      235.5
+      "CHI@BOS",
+      239.1,
+      236.5
     ],
     [
-      "MEM@POR",
-      235.9,
-      232.5
+      "DET@BKN",
+      220.5,
+      221.5
+    ],
+    [
+      "NYK@PHI",
+      211.4,
+      225.5
+    ],
+    [
+      "ORL@TOR",
+      215.6,
+      227.5
+    ],
+    [
+      "HOU@DAL",
+      233.9,
+      224.5
+    ],
+    [
+      "IND@MIA",
+      232.5,
+      236.5
+    ],
+    [
+      "LAC@MIN",
+      210.2,
+      222.5
+    ],
+    [
+      "DEN@PHX",
+      230.6,
+      231.5
+    ],
+    [
+      "LAL@GSW",
+      248.7,
+      233.5
     ]
   ]
 }
