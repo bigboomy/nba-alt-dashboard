@@ -3,6 +3,14 @@
   "changes": [
     {
       "date": "2026-11-01",
+      "version": "nba-session v3.7",
+      "component": "09:00 slate",
+      "title": "Every game on the slate is analysed",
+      "change": "The 4-game limit is removed, so the slate prices every game and cuts games only when the Odds API quota can't cover them plus a 50-request reserve for closing-odds capture.",
+      "aim": "Stop missing qualifying picks on big nights now that the stricter v3.5 test filters for quality instead of a game limit."
+    },
+    {
+      "date": "2026-11-01",
       "version": "nba-session v3.6",
       "component": "09:00 slate",
       "title": "Max 3 picks per game, no session cap",
