@@ -3,6 +3,14 @@
   "changes": [
     {
       "date": "2026-11-01",
+      "version": "sheet I/O v1.1",
+      "component": "slate, capture",
+      "title": "Ready for hourly per-game slate runs",
+      "change": "Each slate run now merges its games into the day's dashboard file instead of replacing it, reports which games are already done today, and capture prices each pick once in its last 2–70 minutes before tip.",
+      "aim": "Let picks be made closer to tip, game by game, without losing earlier games or pricing the close twice."
+    },
+    {
+      "date": "2026-11-01",
       "version": "nba-session v3.7",
       "component": "09:00 slate",
       "title": "Every game on the slate is analysed",
