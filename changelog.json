@@ -3,6 +3,14 @@
   "changes": [
     {
       "date": "2026-11-01",
+      "version": "slate task 1-Nov",
+      "component": "slate (hourly 08:07–13:07), capture (08:48–14:48)",
+      "title": "Each game analysed once, 30–150 minutes before its own tip",
+      "change": "The slate now runs hourly from 08:07 to 13:07 and analyses only games that tip within 150 minutes, at least 30 minutes away and not yet done today, with one totals call per run that has games, and capture now runs hourly at :48 from 08:48 to 14:48.",
+      "aim": "Catch early tips and fresher injury news game by game, while skipping games before 08:37 when Mitch can't bet them."
+    },
+    {
+      "date": "2026-11-01",
       "version": "sheet I/O v1.1",
       "component": "slate, capture",
       "title": "Ready for hourly per-game slate runs",
