@@ -58,6 +58,13 @@ tr:last-child td{border-bottom:0}
 .gh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .pick .cbtn{grid-column:1/-1;justify-self:end;margin-top:6px}
 .stale{background:var(--card);border:1px solid var(--warn);color:var(--warn);border-radius:10px;padding:9px 12px;margin-bottom:12px;font-size:.85rem;font-weight:600}
+.stale.info{border-color:var(--line,#334);color:inherit;font-weight:500}
+.stale.info b{font-weight:700}
+.stale .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px;background:var(--warn)}
+.stale.live .dot{background:#3fb950;animation:pulse 2s ease-in-out infinite}
+.stale.done .dot{background:var(--muted,#888)}
+@keyframes pulse{50%{opacity:.35}}
+@media (prefers-reduced-motion:reduce){.stale.live .dot{animation:none}}
 .err{border-color:var(--warn);color:var(--warn)}
 .legend{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--muted);font-size:.8rem}
 .legend summary{cursor:pointer;color:var(--text);font-weight:600}
@@ -617,7 +624,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var parts=[D.date,D.tz,D.book].filter(Boolean);
     if(genOk)parts.push('updated '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}));
     $('sub').textContent=parts.join(' · ');
-    if(genOk&&Date.now()-gen.getTime()>20*3600*1000){$('stale').textContent='Picks last updated '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'})+' — may be out of date';$('stale').hidden=false}
+    runStatus();
     $('stats').innerHTML=tile(all.length,'picks','Picks that cleared every gate today')+
       tile('+'+esc(avg)+'pp','avg edge','Model hit % minus the price\'s implied %, averaged')+
       tile(G.length,'games','Games analysed so far today');
@@ -656,6 +663,67 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     }
     box.innerHTML=h+'</div>';
   }
+  /* ---------- run status ----------
+     Must match the slate / resolve schedules (architecture doc §4). Melbourne time. */
+  var RUNS={first:8*60+7,last:13*60+7,every:60,ahead:150,grace:20,resolve:17*60+7};
+  var REFRESH=null,REFRESH_AT=0;
+  function melNow(){
+    var f=new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Melbourne',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
+    var o={};f.formatToParts(new Date()).forEach(function(x){o[x.type]=x.value});
+    return {iso:o.year+'-'+o.month+'-'+o.day,min:(+o.hour)*60+(+o.minute)};
+  }
+  function hm(m){m=((m%1440)+1440)%1440;var h=Math.floor(m/60),mm=m%60;return (h%12||12)+':'+('0'+mm).slice(-2)+(h<12?'am':'pm')}
+  function nextRun(min){
+    if(min<RUNS.first) return RUNS.first;
+    var k=Math.ceil((min-RUNS.first)/RUNS.every),t=RUNS.first+k*RUNS.every;
+    return t>RUNS.last?null:t;
+  }
+  function runStatus(){
+    var box=$('stale');if(!box||!D) return;
+    var n=melNow(),iso=slateIso(),today=iso===n.iso,cls='info',msg='';
+    var ng=G.length,np=G.reduce(function(a,g){return a+g.picks.length},0);
+    var nr=nextRun(n.min),inWindow=n.min<RUNS.last+RUNS.grace;
+    var lr=n.min>=RUNS.first?Math.min(RUNS.last,RUNS.first+Math.floor((n.min-RUNS.first)/RUNS.every)*RUNS.every):null;
+    var busy=lr!==null&&n.min-lr<RUNS.grace?'A run started at '+hm(lr)+' and may still be posting. ':'';
+    if(!today){
+      if(n.min<RUNS.first){cls='info';msg='<b>Today\'s picks start at '+hm(RUNS.first)+'.</b> Showing '+esc(D.date)+' until then.'}
+      else if(inWindow){cls='info live';msg='<b>Waiting for today\'s first picks.</b> '+busy+(nr?'Next run '+hm(nr)+'. ':'')+(busy?'':'No game has been due yet. ')+'Games are picked about 1.5–2.5 h before tip. Showing '+esc(D.date)+'.'}
+      else {cls='';msg='No picks were posted today: no games, or a run had a problem. Showing '+esc(D.date)+'.'}
+    } else if(inWindow){
+      cls='info live';
+      msg='<b>Picks still coming in.</b> '+busy+ng+' game'+(ng===1?'':'s')+' so far ('+np+' pick'+(np===1?'':'s')+'). '+
+        (nr?'Next run '+hm(nr)+': adds games tipping before ~'+hm(nr+RUNS.ahead)+', if any.':'Last run under way.')+
+        ' This page updates itself.';
+    } else {
+      var settled=ROWS&&ROWS.some(function(r){return r.date===iso&&(r.result==='W'||r.result==='L')});
+      cls='info done';
+      msg='<b>Today\'s picks are complete.</b> '+ng+' game'+(ng===1?'':'s')+', '+np+' pick'+(np===1?'':'s')+'. '+
+        (settled?'Results are in (tiles above).':'Results settle around '+hm(RUNS.resolve+3)+'.');
+    }
+    box.className='stale '+cls;box.innerHTML='<span class="dot" aria-hidden="true"></span>'+msg;box.hidden=false;
+    schedule(n,nr,lr,today,inWindow);
+  }
+  function schedule(n,nr,lr,today,inWindow){
+    if(REFRESH&&REFRESH_AT>Date.now()) return;      // a reload is already booked; don't push it back
+    var target=null;
+    if(lr!==null&&n.min<lr+8) target=lr+8;          // run time + push + Pages/CSV cache
+    else if(lr!==null&&n.min<lr+18) target=lr+18;   // second look for a slow run
+    else if(inWindow&&nr!==null) target=nr+8;
+    else if(inWindow) target=RUNS.last+RUNS.grace;
+    else if(today&&n.min<RUNS.resolve+30) target=RUNS.resolve+12;
+    var wait=target===null?null:(target-n.min)*60000;
+    if(wait===null||wait<60000) wait=wait===null?null:60000;
+    if(wait!==null&&wait<=3*3600000){REFRESH_AT=Date.now()+wait;REFRESH=setTimeout(reloadData,wait)}
+  }
+  function reloadData(){
+    REFRESH=null;REFRESH_AT=0;
+    fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(init).catch(function(){runStatus()});
+    fetch(CSV_URL,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){
+      var rows=CORE.normRows(CORE.parseCSV(t));if(rows.length){ROWS=rows;FETCHED=new Date();foot();renderRecord();if(D){games();runStatus()}}
+    }).catch(function(){});
+  }
+  setInterval(function(){if(D)runStatus()},60000);
+  document.addEventListener('visibilitychange',function(){if(!document.hidden&&D){var n=melNow();if(n.min>=RUNS.first)reloadData()}});
   function slateFail(){$('slate').hidden=false;$('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>'}
   function foot(){
     var t=FETCHED?FETCHED.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}):'not loaded';
