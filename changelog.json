@@ -3,6 +3,14 @@
   "changes": [
     {
       "date": "2026-11-01",
+      "version": "nba-session v3.6",
+      "component": "09:00 slate",
+      "title": "Max 3 picks per game, no session cap",
+      "change": "Each game now allows at most 3 picks (was 5), the 8u session cap is removed because the per-game caps already limit a session to 12 picks, and any pick a cap trims is dropped instead of being logged.",
+      "aim": "Cut stacked exposure to one game's pace and blowout risk, and keep the record to picks the engine actually stands behind."
+    },
+    {
+      "date": "2026-11-01",
       "version": "nba-session v3.5",
       "component": "09:00 slate",
       "title": "Hit rates recalibrated toward the market price",
