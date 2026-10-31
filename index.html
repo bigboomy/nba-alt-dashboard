@@ -607,7 +607,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   function init(data){
     if(!data||typeof data!=='object'||Array.isArray(data)) throw new Error('bad data');
-    D={date:str(data.date,''),tz:str(data.tz,''),book:str(data.book,''),engine:str(data.engine,'')};
+    D={date:str(data.date,''),tz:str(data.tz,''),book:str(data.book,''),engine:str(data.engine,''),engines:{}};
+    (Array.isArray(data.games)?data.games:[]).forEach(function(g){var e=g&&typeof g.engine==='string'&&g.engine?g.engine:'';if(e)D.engines[e]=(D.engines[e]||0)+1});
     G=[];(Array.isArray(data.games)?data.games:[]).forEach(function(g){try{var n=normGame(g);if(n)G.push(n)}catch(e){}});
     T=[];(Array.isArray(data.totals)?data.totals:[]).forEach(function(t){try{var n=normTotal(t);if(n)T.push(n)}catch(e){}});
     var all=G.reduce(function(a,g){return a.concat(g.picks)},[]);
@@ -619,7 +620,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(genOk&&Date.now()-gen.getTime()>20*3600*1000){$('stale').textContent='Picks last updated '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'})+' — may be out of date';$('stale').hidden=false}
     $('stats').innerHTML=tile(all.length,'picks','Picks that cleared every gate today')+
       tile('+'+esc(avg)+'pp','avg edge','Model hit % minus the price\'s implied %, averaged')+
-      tile(G.length,'games','Games analysed within today\'s quota');
+      tile(G.length,'games','Games analysed so far today');
     todayTiles();renderVer();
     $('copyAll').onclick=function(){copyText(allTxt(),this,'Copy all picks')};
     $('copyTotals').onclick=function(){copyText(totalsTxt(),this,'Copy totals')};
@@ -646,6 +647,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var items=(LOG&&Array.isArray(LOG.changes))?LOG.changes.slice(0,6):[];
     if(!eng&&!items.length){box.innerHTML='';return}
     var last=items[0];
+    var ek=D&&D.engines?Object.keys(D.engines):[];
+    if(ek.length>1) eng=(eng||'')+' (mixed today: '+ek.map(function(k){return k+' ×'+D.engines[k]+' games'}).join(', ')+')';
     var h='<div class="ver"><b>Run by:</b> '+(eng?esc(eng):'engine not stated')+(last?' · <b>last change</b> '+esc(fdate(last.date))+' — '+esc(last.title):'');
     if(items.length){
       h+='<details class="fold inner" style="margin:8px 0 0"><summary><span>What changed <span class="meta">'+items.length+' recent</span></span></summary><ul>'+
