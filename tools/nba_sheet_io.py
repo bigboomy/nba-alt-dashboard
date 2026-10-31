@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-nba_sheet_io.py v1 - the only way scheduled tasks write the NBA cohort Sheet.
+nba_sheet_io.py v1.1 - the only way scheduled tasks write the NBA cohort Sheet.
 Deterministic: the model never computes or formats a value; it copies plan
 blocks into Google Sheets update_values calls and passes the stats readback
 to `verify`.
@@ -12,6 +12,8 @@ Commands (sheet.csv = fresh curl of the published cohort CSV):
   resolve sheet.csv actuals.json            -> plan.json  (settle picks; actuals = {pick_id: number|"DNP"})
   verify  plan.json <8 values from stats!B2:B9>   -> exit 0 match, 1 mismatch
   report  sheet.csv [plan.json]             -> rolling 7d/30d/season block (plan applied in memory)
+  done    current.json sheet.csv            -> {"date", "games_done": [...]} games already analysed today
+  merge-data run.json [current.json]        -> data.json: this run's games merged into today's file
 
 plan.json = {"blocks": [{"range": "cohort!A5:AA7", "values": [[...]]}], "expect": [8 values],
              "summary": "...", "notes": [...]}
@@ -30,7 +32,7 @@ LETTER = {c: (chr(65 + i) if i < 26 else "A" + chr(65 + i - 26)) for i, c in enu
 NUMERIC = {"std", "alt", "odds", "hit_pct", "edge", "stars", "stake_u", "close_odds", "clv_pct",
            "actual", "safe_alt", "safe_odds"}
 BASE = "https://api.the-odds-api.com/v4/sports/basketball_nba"
-WINDOW_MIN = 90
+MIN_LEAD, MAX_LEAD = 2, 70   # capture a pick once, 2-70 min before its tip (hourly runs at :48)
 MARKET = {"PTS": "player_points_alternate", "REB": "player_rebounds_alternate", "AST": "player_assists_alternate"}
 TEAMS = {
     "ATL": "Atlanta Hawks", "BOS": "Boston Celtics", "BKN": "Brooklyn Nets", "BRK": "Brooklyn Nets",
@@ -229,8 +231,11 @@ def cmd_capture(a):
                 due.append((n, r, None, "tipped_pre_capture"))
             continue
         ev, t = hit
-        if t - now > timedelta(minutes=WINDOW_MIN):
-            continue
+        lead = t - now
+        if lead > timedelta(minutes=MAX_LEAD):
+            continue          # not closing yet - a later hourly run takes it
+        if lead < timedelta(minutes=MIN_LEAD):
+            continue          # too close to tip to price reliably; treated as tipped next run
         due.append((n, r, ev, None))
     if not due:
         print(json.dumps({"message": "No picks due for a close in this window - 0 requests", "pending": len(pend)}))
@@ -405,12 +410,71 @@ def cmd_report(a):
     print("\n".join(out))
 
 
+def slate_iso(datestr):
+    m = re.search(r"(\d{1,2})\s+([A-Za-z]{3})\w*\s+(\d{4})", datestr or "")
+    if not m:
+        return None
+    return datetime.strptime(f"{m.group(1)} {m.group(2)} {m.group(3)}", "%d %b %Y").date().isoformat()
+
+
+def load_json(path):
+    try:
+        return json.load(open(path, encoding="utf-8"))
+    except Exception:
+        return None
+
+
+def cmd_done(a):
+    cur = load_json(a[0]) if a else None
+    today = today_mel().isoformat()
+    done = set()
+    if isinstance(cur, dict) and slate_iso(cur.get("date")) == today:
+        done |= {g.get("id") for g in cur.get("games", []) if g.get("id")}
+    if len(a) > 1 and os.path.exists(a[1]):
+        try:
+            done |= {r["game"] for r in load_sheet(a[1]) if r["date"] == today}
+        except SystemExit:
+            pass
+    print(json.dumps({"date": today, "games_done": sorted(done)}))
+
+
+def tip_key(g):
+    m = re.fullmatch(r"(\d{1,2}):(\d{2})", str(g.get("tip", "")).strip())
+    return (int(m.group(1)), int(m.group(2))) if m else (99, 99)
+
+
+def cmd_merge(a):
+    run = load_json(a[0])
+    if not isinstance(run, dict) or not isinstance(run.get("games"), list):
+        die("run.json missing or has no games list")
+    for g in run.get("games", []):
+        g.setdefault("engine", run.get("engine", ""))
+    cur = load_json(a[1]) if len(a) > 1 else None
+    if isinstance(cur, dict) and slate_iso(cur.get("date")) and slate_iso(cur.get("date")) == slate_iso(run.get("date")):
+        ids = {g["id"] for g in run["games"]}
+        keep = [g for g in cur.get("games", []) if g.get("id") not in ids]
+        for g in keep:
+            g.setdefault("engine", cur.get("engine", ""))
+        games = sorted(keep + run["games"], key=tip_key)
+        tot = {t[0]: t for t in cur.get("totals", []) if isinstance(t, list) and t}
+        for t in run.get("totals", []):
+            tot[t[0]] = t
+        order = [g["id"] for g in games]
+        totals = sorted(tot.values(), key=lambda t: order.index(t[0]) if t[0] in order else 999)
+        out = dict(cur); out.update({k: v for k, v in run.items() if k not in ("games", "totals")})
+        out["games"], out["totals"] = games, totals
+    else:
+        out = dict(run); out["games"] = sorted(run["games"], key=tip_key)
+    print(json.dumps(out, indent=2, ensure_ascii=False))
+
+
 def main():
     a = sys.argv[1:]
     if not a:
         die(__doc__)
     cmd = {"slate": cmd_slate, "capture": cmd_capture, "pending": cmd_pending, "resolve": cmd_resolve,
-           "verify": cmd_verify, "report": cmd_report}.get(a[0]) or die("unknown command " + a[0])
+           "verify": cmd_verify, "report": cmd_report,
+           "done": cmd_done, "merge-data": cmd_merge}.get(a[0]) or die("unknown command " + a[0])
     cmd(a[1:])
 
 
