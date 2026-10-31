@@ -2,6 +2,14 @@
   "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
   "changes": [
     {
+      "date": "2026-11-01",
+      "version": "nba-session v3.5",
+      "component": "09:00 slate",
+      "title": "Hit rates recalibrated toward the market price",
+      "change": "Each rung's probability now leans 75% on a price-adjusted market estimate (bookmaker margin assumed to rise from 0% at 1.50 to about 22% at 1.95), and a pick needs at least +3pp over the break-even price instead of +5pp over a margin-free price.",
+      "aim": "Close the gap between the 81% hit rate the model claimed and the 56% it delivered, which should mean fewer, shorter-priced picks and 1.80+ only on near-perfect samples."
+    },
+    {
       "date": "2026-10-31",
       "version": "sheet I/O v1",
       "component": "slate, capture, resolve",
