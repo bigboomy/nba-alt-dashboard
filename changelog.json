@@ -1,0 +1,29 @@
+{
+  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
+  "changes": [
+    {
+      "date": "2026-10-31",
+      "version": "slate task 31-Oct",
+      "component": "09:00 slate",
+      "title": "Safer rung on 1.80+ picks",
+      "change": "Every pick priced 1.80 or longer now shows the next rung down priced 1.40–1.79, with its own hit rate; display only, not logged as a pick.",
+      "aim": "Make a higher-hit-rate alternative visible on long prices, and track whether stepping down would have paid."
+    },
+    {
+      "date": "2026-10-31",
+      "version": "resolve task 31-Oct",
+      "component": "17:07 resolve",
+      "title": "Resolve no longer overwrites closing prices",
+      "change": "Close odds and CLV are now owned by the capture task; resolve only marks a still-blank close as 'no close', and runs on Melbourne time.",
+      "aim": "Protect the closing-line data needed to judge whether picks beat the market."
+    },
+    {
+      "date": "2026-10-31",
+      "version": "capture script v2",
+      "component": "hourly close capture",
+      "title": "Closing-odds capture fixed",
+      "change": "A parsing bug had blanked every odds response, so 91% of picks had no closing price; capture now runs hourly before tip and asks only for markets with picks.",
+      "aim": "Get closing-line value (CLV) on every pick — the fastest honest signal of whether the model has an edge."
+    }
+  ]
+}

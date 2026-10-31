@@ -153,17 +153,33 @@ tr.allrow td{font-weight:700;border-top:2px solid var(--line)}
 body{overflow-x:hidden}
 
 h2.sec{font-size:1.05rem;margin:22px 0 8px}
+details.fold{border:1px solid var(--line);border-radius:12px;background:var(--card);margin:14px 0;padding:0 12px}
+details.fold>summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary::after{content:'▸';color:var(--muted);transition:transform .15s}
+details.fold[open]>summary::after{transform:rotate(90deg)}
+details.fold>summary .meta{font-weight:400}
+details.fold.inner{background:transparent;margin:10px 0}
+.stat em{display:block;font-style:normal;color:var(--muted);font-size:.68rem;line-height:1.25;margin-top:3px}
+.stats.today{margin-top:-6px}
+.stats.today .stat{border-style:dashed}
+.ver{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0 4px;font-size:.85rem}
+.ver b{font-weight:600}
+.ver ul{margin:8px 0 0;padding-left:18px}
+.ver li{margin:0 0 6px}
+.ver li span{color:var(--muted)}
 </style>
 </head>
 <body><div class="wrap">
   <h1>NBA Alt-Over Dashboard <span style="font-weight:400;color:var(--muted);font-size:.8rem">v2</span></h1>
   <p class="sub" id="sub">Loading slate…</p>
-  <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
+  <div id="ver"></div>
 
   <section id="slate" aria-label="Today's slate" hidden>
     <h2 class="sec">Today's slate</h2>
     <div class="stale" id="stale" role="status" hidden></div>
     <div class="stats" id="stats"></div>
+    <div class="stats today" id="today" hidden></div>
     <div class="bar">
       <button class="cbtn main" id="copyAll" type="button">Copy all picks</button>
       <button class="cbtn main" id="copyTotals" type="button">Copy totals</button>
@@ -173,6 +189,8 @@ h2.sec{font-size:1.05rem;margin:22px 0 8px}
     <h3>Projected totals <span class="meta">(interest only, not a bet)</span></h3>
     <div class="ts"><table id="totals" style="min-width:0;border:0"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table></div>
   </section>
+
+  <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
 
   <div id="results"></div>
 
@@ -325,7 +343,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   var nk=function(n){return String(n||'').toLowerCase().replace(/[^a-z]/g,'')};
   var rkey=function(p,s,alt){return nk(p)+'|'+String(s).toUpperCase()+'|'+Number(alt).toFixed(1)};
 
-  var ROWS=null,CSVFAIL=false,FETCHED=null,WIN='season';
+  var ROWS=null,CSVFAIL=false,FETCHED=null,WIN='season',REC_OPEN=false,GR_OPEN=false,LOG=null;
   var D=null,G=[],T=[],sel='ALL';
 
   /* ---------- band helpers ---------- */
@@ -468,7 +486,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   function resultsHtml(all,asOf){
     var day=all.filter(function(r){return r.date===asOf});
-    var h='<h3>Latest results <span class="meta">('+fdateY(asOf)+')</span></h3><div class="rl">';
+    var h='<details class="fold"><summary><span>Latest results <span class="meta">'+fdateY(asOf)+'</span></span></summary><div class="rl">';
     if(!day.length) h+='<div class="none">No rows.</div>';
     day.forEach(function(r){
       var pc=r.result==='W'?'W':r.result==='L'?'L':r.result==='VOID'?'V':r.result==='PUSH'?'P':'';
@@ -477,16 +495,16 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       h+='<div class="rr"><div><b>'+esc(r.player)+'</b> '+esc(r.stat)+' O'+esc(r.alt)+'</div><div class="rt">'+oddsSpan(r.odds)+pill+'</div>'+
         '<div class="m">'+esc(r.game)+' · actual '+esc(r.actual||'—')+' vs '+esc(r.alt)+clv+safeTxt(r)+'</div></div>';
     });
-    h+='</div>';
+    h+='</div></details>';
     var rc=CORE.recent(all,1.8,20);
-    h+='<h3>Recent 1.80+ picks <span class="meta">(last '+rc.length+' settled)</span></h3><div class="rl">';
+    h+='<details class="fold"><summary><span>Recent 1.80+ picks <span class="meta">last '+rc.length+' settled</span></span></summary><div class="rl">';
     if(!rc.length) h+='<div class="none">None yet.</div>';
     rc.forEach(function(r){
       var pill='<span class="pill '+r.result+'">'+r.result+'</span>';
       h+='<div class="rr"><div><b>'+esc(r.player)+'</b> '+esc(r.stat)+' O'+esc(r.alt)+'</div><div class="rt">'+oddsSpan(r.odds)+pill+'</div>'+
         '<div class="m">'+fdate(r.date)+' · '+esc(r.game)+' · actual '+esc(r.actual||'—')+'</div></div>';
     });
-    return h+'</div>';
+    return h+'</div></details>';
   }
   function renderRecord(){
     var box=$('rec');
@@ -496,15 +514,19 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(!asOf){box.innerHTML='<p class="load">No settled picks yet.</p>';return}
     var rg=winRange(asOf),rows=CORE.inRange(ROWS,rg);
     var seg='<div class="seg" role="group" aria-label="Window">'+[['season','Season'],['30d','30d'],['7d','7d']].map(function(x){return '<button type="button" class="tab" data-w="'+x[0]+'" aria-pressed="'+(WIN===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
-    var h='<h2 class="sec">Record</h2>'+seg+'<p class="range">'+fdateY(rg.from)+' → '+fdateY(rg.to)+' · as of latest settled day</p>'+
-      kpis(rows,rg)+
+    var h='<details class="fold" id="recFold"'+(REC_OPEN?' open':'')+'><summary><span>Record <span class="meta">'+fdate(rg.from)+' → '+fdate(rg.to)+'</span></span></summary>'+seg+
+      '<p class="range">'+fdateY(rg.from)+' → '+fdateY(rg.to)+' · as of latest settled day</p>'+
       '<h3>By odds band</h3>'+bandTable(rows)+shadowBlock(rows)+'<p class="cap">Green: hit rate above break-even; red: below. Intensity scales with the gap (capped at 15 pp); grey when n&lt;10.</p>'+
-      '<h3>Over time</h3>'+overTime(ROWS,rg)+
+      '<h3>By stat</h3>'+stTable(rows)+
       '<h3>Calibration</h3>'+calTable(rows)+
-      '<h3>By stat</h3>'+stTable(rows);
+      '<details class="fold inner" id="grFold"'+(GR_OPEN?' open':'')+'><summary><span>Over time <span class="meta">charts</span></span></summary>'+overTime(ROWS,rg)+'</details>'+
+      '</details>';
     box.innerHTML=h;
+    $('recFold').addEventListener('toggle',function(){REC_OPEN=this.open});
+    $('grFold').addEventListener('toggle',function(){GR_OPEN=this.open});
     Array.prototype.forEach.call(box.querySelectorAll('[data-w]'),function(b){b.onclick=function(){WIN=b.getAttribute('data-w');renderRecord()}});
     $('results').innerHTML=resultsHtml(ROWS,asOf);
+    todayTiles();
   }
 
   /* ---------- slate ---------- */
@@ -587,7 +609,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   function init(data){
     if(!data||typeof data!=='object'||Array.isArray(data)) throw new Error('bad data');
-    D={date:str(data.date,''),tz:str(data.tz,''),book:str(data.book,'')};
+    D={date:str(data.date,''),tz:str(data.tz,''),book:str(data.book,''),engine:str(data.engine,'')};
     G=[];(Array.isArray(data.games)?data.games:[]).forEach(function(g){try{var n=normGame(g);if(n)G.push(n)}catch(e){}});
     T=[];(Array.isArray(data.totals)?data.totals:[]).forEach(function(t){try{var n=normTotal(t);if(n)T.push(n)}catch(e){}});
     var all=G.reduce(function(a,g){return a.concat(g.picks)},[]);
@@ -597,11 +619,41 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(genOk)parts.push('updated '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}));
     $('sub').textContent=parts.join(' · ');
     if(genOk&&Date.now()-gen.getTime()>20*3600*1000){$('stale').textContent='Picks last updated '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'})+' — may be out of date';$('stale').hidden=false}
-    $('stats').innerHTML='<div class="stat"><b>'+all.length+'</b><span>picks</span></div><div class="stat"><b>+'+esc(avg)+'pp</b><span>avg edge</span></div><div class="stat"><b>'+G.length+'</b><span>target games</span></div>';
+    $('stats').innerHTML=tile(all.length,'picks','Picks that cleared every gate today')+
+      tile('+'+esc(avg)+'pp','avg edge','Model hit % minus the price\'s implied %, averaged')+
+      tile(G.length,'games','Games analysed within today\'s quota');
+    todayTiles();renderVer();
     $('copyAll').onclick=function(){copyText(allTxt(),this,'Copy all picks')};
     $('copyTotals').onclick=function(){copyText(totalsTxt(),this,'Copy totals')};
     $('slate').hidden=false;
     totals();tabs();games();
+  }
+  function tile(v,l,def,c){return '<div class="stat" title="'+esc(def)+'"><b class="'+(c||'')+'">'+v+'</b><span>'+l+'</span><em>'+def+'</em></div>'}
+  function todayTiles(){
+    var box=$('today');if(!box) return;
+    var iso=D&&slateIso();
+    if(!iso||!ROWS){box.hidden=true;return}
+    var day=ROWS.filter(function(r){return r.date===iso});
+    var settled=day.filter(function(r){return r.result==='W'||r.result==='L'});
+    if(!settled.length){box.hidden=true;return}
+    var s=CORE.summarize(day),pend=day.filter(function(r){return !r.result}).length;
+    box.innerHTML=tile(s.w+'-'+s.l,'today','Settled result'+(s.voids?' · '+s.voids+' void':'')+(pend?' · '+pend+' pending':''))+
+      tile(sg(s.units,2)+'u','units','Flat 1 unit per pick at pick-time odds',cls(s.units))+
+      tile(s.hit===null?'—':s.hit.toFixed(0)+'%','hit','Break-even at today\'s odds: '+fix(s.be,1)+'%',s.gap===null?'':(s.gap>=0?'pos':'neg'));
+    box.hidden=false;
+  }
+  function renderVer(){
+    var box=$('ver');if(!box) return;
+    var eng=D&&D.engine?D.engine:null;
+    var items=(LOG&&Array.isArray(LOG.changes))?LOG.changes.slice(0,6):[];
+    if(!eng&&!items.length){box.innerHTML='';return}
+    var last=items[0];
+    var h='<div class="ver"><b>Run by:</b> '+(eng?esc(eng):'engine not stated')+(last?' · <b>last change</b> '+esc(fdate(last.date))+' — '+esc(last.title):'');
+    if(items.length){
+      h+='<details class="fold inner" style="margin:8px 0 0"><summary><span>What changed <span class="meta">'+items.length+' recent</span></span></summary><ul>'+
+        items.map(function(c){return '<li><b>'+esc(c.title)+'</b> <span>('+esc(fdate(c.date))+(c.version?' · '+esc(c.version):'')+(c.component?' · '+esc(c.component):'')+')</span><br>'+esc(c.change)+(c.aim?'<br><span>Aim: '+esc(c.aim)+'</span>':'')+'</li>'}).join('')+'</ul></details>';
+    }
+    box.innerHTML=h+'</div>';
   }
   function slateFail(){$('slate').hidden=false;$('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>'}
   function foot(){
@@ -619,6 +671,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       FETCHED=new Date();foot();renderRecord();if(D)games();
     })
     .catch(function(){CSVFAIL=true;renderRecord()});
+  fetch('changelog.json?v='+Date.now(),{cache:'no-store'})
+    .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+    .then(function(j){LOG=j;renderVer()}).catch(function(){});
   fetch('data.json?v='+Date.now(),{cache:'no-store'})
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
     .then(init).catch(slateFail);
