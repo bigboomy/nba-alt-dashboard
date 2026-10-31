@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31T22:11:12.891246+00:00",
+  "generated": "2026-10-31T23:09:38.600134+00:00",
   "date": "Sun 1 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -152,6 +152,31 @@
         }
       ],
       "engine": "nba-session v3.7"
+    },
+    {
+      "id": "OKC@HOU",
+      "tip": "11:40",
+      "proj": 220.4,
+      "mkt": 219.5,
+      "ctx": "OKC short-handed (Holmgren, J.Williams, Wallace, Caruso out); Sengun day-to-day",
+      "picks": [
+        {
+          "p": "Amen Thompson",
+          "t": "HOU",
+          "s": "PTS",
+          "std": 16.5,
+          "alt": 14.5,
+          "o": 1.53,
+          "h": "100% (6/6)",
+          "e": 5.0,
+          "st": "4",
+          "opp": "106.21 (3/25 ⬇)",
+          "f": [
+            "U1"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.7"
     }
   ],
   "totals": [
@@ -179,6 +204,11 @@
       "MIN@SAS",
       219.1,
       227.5
+    ],
+    [
+      "OKC@HOU",
+      220.4,
+      219.5
     ]
   ]
 }
