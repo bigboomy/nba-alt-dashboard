@@ -3,6 +3,14 @@
   "changes": [
     {
       "date": "2026-10-31",
+      "version": "sheet I/O v1",
+      "component": "slate, capture, resolve",
+      "title": "Picks, closes and results now recorded straight to the Google Sheet",
+      "change": "All three tasks write the Sheet through one hash-pinned script and check the Sheet's own totals after every write; Notion and record.json are no longer written.",
+      "aim": "One reliable record that the dashboard and the weekly analyst review read directly, with no copying between systems."
+    },
+    {
+      "date": "2026-10-31",
       "version": "slate task 31-Oct",
       "component": "09:00 slate",
       "title": "Safer rung on 1.80+ picks",
