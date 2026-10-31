@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>NBA Alt-Over Dashboard</title>
-<meta name="description" content="Daily stepped-down alt OVER prop picks with prices, edge and projected totals.">
+<title>NBA Alt-Over Dashboard v2</title>
+<meta name="description" content="Alt-over picks, results by odds band, calibration and today's slate.">
 <style>
 :root{--bg:#f6f7f9;--card:#fff;--text:#14171c;--muted:#5f6b7a;--line:#e3e7ec;--accent:#1d4ed8;--good:#0f7b3f;--warn:#b45309;--chip:#eef2f7}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1116;--card:#171b22;--text:#e8ebf0;--muted:#97a3b3;--line:#262c36;--accent:#6ea0ff;--good:#4ade80;--warn:#fbbf24;--chip:#202632}}
@@ -111,416 +111,573 @@ tr:last-child td{border-bottom:0}
 .gs{margin-left:auto;color:var(--muted);font-size:.75rem;white-space:nowrap}
 .gx .cc{border:0;padding:0}
 @media (prefers-reduced-motion:reduce){.gx summary::before{transition:none}}
+
+:root{--ca:#0072b2;--cb:#d98a00;--cc:#b83a8a;--up:22,163,74;--dn:220,38,38}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ca:#56b4e9;--cb:#f0b429;--cc:#e58ac0;--up:74,222,128;--dn:248,113,113}}
+.seg{display:flex;gap:6px;margin:0 0 6px}
+.range{color:var(--muted);font-size:.75rem;margin:0 0 10px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(104px,1fr));gap:8px;margin-bottom:6px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 10px;min-width:0}
+.kpi .kl{color:var(--muted);font-size:.72rem}
+.kpi b{display:block;font-size:1.2rem;line-height:1.25;font-variant-numeric:tabular-nums}
+.kpi .ks{color:var(--muted);font-size:.72rem;font-variant-numeric:tabular-nums}
+.ts{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+.ts table{border:0;border-radius:0;min-width:560px;font-variant-numeric:tabular-nums}
+.ts td:first-child,.ts th:first-child{position:sticky;left:0;background:var(--card);z-index:1}
+.bl{display:inline-flex;align-items:center;gap:6px;font-weight:600;white-space:nowrap}
+.sw{width:10px;height:10px;border-radius:3px;flex:none}
+.cA{--c:var(--ca)}.cB{--c:var(--cb)}.cC{--c:var(--cc)}
+.sw{background:var(--c,var(--muted))}
+.oc{color:var(--c);font-weight:700}
+.lowN{color:var(--muted);font-size:.66rem;display:block;line-height:1}
+tr.allrow td{font-weight:700;border-top:2px solid var(--line)}
+.cap{color:var(--muted);font-size:.78rem;margin:6px 0 0}
+.cc2{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 6px 4px;margin-bottom:10px}
+.cc2 svg{display:block;width:100%;height:auto}
+.cc2 .ax{fill:var(--muted);font-size:10px}
+.cc2 .gl{stroke:var(--line);stroke-width:1}
+.cc2 h4{margin:0 0 2px 4px;font-size:.8rem}
+.lg2{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 6px 4px;font-size:.75rem;color:var(--muted)}
+.lg2 span{display:inline-flex;align-items:center;gap:5px}
+.rl{background:var(--card);border:1px solid var(--line);border-radius:10px}
+.rr{display:grid;grid-template-columns:1fr auto;gap:1px 10px;padding:9px 12px;border-bottom:1px solid var(--line);font-size:.85rem}
+.rr:last-child{border-bottom:0}
+.rr .m{color:var(--muted);font-size:.75rem}
+.rr .rt{text-align:right;white-space:nowrap}
+.pill{display:inline-block;border-radius:6px;padding:1px 7px;font-size:.7rem;font-weight:700;border:1px solid currentColor;margin-left:4px}
+.pill.W{color:var(--good)}.pill.L{color:var(--warn)}.pill.V,.pill.P{color:var(--muted)}
+.safe{grid-column:1/-1;color:var(--muted);font-size:.78rem}
+.load{color:var(--muted);padding:10px 0;font-size:.9rem}
+.msg{background:var(--card);border:1px solid var(--warn);color:var(--warn);border-radius:10px;padding:10px 12px;font-size:.9rem}
+.pos{color:var(--good)}.neg{color:var(--warn)}
+body{overflow-x:hidden}
+
+h2.sec{font-size:1.05rem;margin:22px 0 8px}
+details.fold{border:1px solid var(--line);border-radius:12px;background:var(--card);margin:14px 0;padding:0 12px}
+details.fold>summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary::after{content:'▸';color:var(--muted);transition:transform .15s}
+details.fold[open]>summary::after{transform:rotate(90deg)}
+details.fold>summary .meta{font-weight:400}
+details.fold.inner{background:transparent;margin:10px 0}
+.stat em{display:block;font-style:normal;color:var(--muted);font-size:.68rem;line-height:1.25;margin-top:3px}
+.stats.today{margin-top:-6px}
+.stats.today .stat{border-style:dashed}
+.ver{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0 4px;font-size:.85rem}
+.ver b{font-weight:600}
+.ver ul{margin:8px 0 0;padding-left:18px}
+.ver li{margin:0 0 6px}
+.ver li span{color:var(--muted)}
 </style>
 </head>
 <body><div class="wrap">
-  <h1>NBA Alt-Over Dashboard</h1>
-  <p class="sub" id="sub"></p>
-  <div class="stale" id="stale" role="status" hidden></div>
-  <div class="stats" id="stats"></div>
-  <div class="bar">
-    <button class="cbtn main" id="copyAll" type="button">Copy all picks</button>
-    <button class="cbtn main" id="copyTotals" type="button">Copy totals</button>
-  </div>
-  <div class="tabs" id="tabs" role="group" aria-label="Filter by game"></div>
-  <div id="games"></div>
+  <h1>NBA Alt-Over Dashboard </h1>
+  <p class="sub" id="sub">Loading slate…</p>
+  <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
+  <div id="ver"></div>
 
-  <h3>Projected totals <span class="meta">(interest only, not a bet)</span></h3>
-  <table id="totals"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table>
+  <section id="slate" aria-label="Today's slate" hidden>
+    <h2 class="sec">Today's slate</h2>
+    <div class="stale" id="stale" role="status" hidden></div>
+    <div class="stats" id="stats"></div>
+    <div class="stats today" id="today" hidden></div>
+    <div class="bar">
+      <button class="cbtn main" id="copyAll" type="button">Copy all picks</button>
+      <button class="cbtn main" id="copyTotals" type="button">Copy totals</button>
+    </div>
+    <div class="tabs" id="tabs" role="group" aria-label="Filter by game"></div>
+    <div id="games"></div>
+    <h3>Projected totals <span class="meta">(interest only, not a bet)</span></h3>
+    <div class="ts"><table id="totals" style="min-width:0;border:0"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <div id="results"></div>
 
   <details class="legend" style="margin-top:16px">
     <summary>How to read this</summary>
-    <p><b>Alt</b>: the stepped-down OVER line chosen from the book's ladder. <b>Hit%</b>: how often the player cleared it over a recent sample (shown as hits/games). <b>Edge</b>: hit% minus the book's implied probability (1 ÷ odds), in percentage points; a pick must be at least +5. <b>Stars</b> are capped early in the season because samples are small. <b>Opp</b> is the opponent's allowance of that stat per 100 possessions and its league rank; it is shown for context and never changes a pick. <b>Projected totals</b> are a pace-and-rating model shown for interest only.</p>
+    <p><b>Settled</b> = W or L; void and push are excluded. <b>Units</b> are flat 1u (win = odds − 1, loss = −1). <b>Break-even</b> = 100 ÷ mean odds. <b>Gap</b> = hit% minus break-even, in percentage points. <b>CLV</b> is measured only on picks with a captured closing price. Windows are calendar days ending on the latest settled day, clipped at the season start. Band colours: blue &lt; 1.55, orange 1.55–1.79, magenta 1.80+.</p>
   </details>
-
-  <section class="rec" id="rec" aria-label="Record" hidden></section>
-
   <p class="foot"><b>Not betting advice.</b> Hit rate is not profit; prices move and players sit. Past results do not predict future ones. Only bet what you can afford to lose. If gambling is a problem for you or someone you know, contact your local support service (Australia: 1800 858 858, gamblinghelponline.org.au).</p>
+  <p class="foot" id="src" style="margin-top:0"></p>
 </div>
 
 <script>
-(function(){
-  var $ = function(id){return document.getElementById(id)};
-  var esc = function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
-  var num = function(v){if(v===null||v===undefined||v===''||typeof v==='boolean')return null;var n=Number(v);return isFinite(n)?n:null};
-  var fix = function(v,d){var n=num(v);return n===null?'—':n.toFixed(d)};
-  var str = function(v,dflt){return (v===null||v===undefined||v==='')?dflt:String(v)};
-  var stars = function(n){n=n||0;var f=Math.floor(n);return '★'.repeat(f)+(n%1?'½':'')};
-  var starTxt = function(n){n=n||0;return '⭐'.repeat(Math.floor(n))+(n%1?'½':'')};
+/*CORE-START*/
+var SEASON_START='2026-10-21';
+var BANDS=[{k:'A',label:'< 1.55'},{k:'B',label:'1.55–1.79'},{k:'C',label:'1.80+'}];
+var PBANDS=[{k:'p1',label:'<80'},{k:'p2',label:'80–89'},{k:'p3',label:'90–100'}];
+function parseCSV(text){
+  text=String(text==null?'':text).replace(/^﻿/,'');
+  var rows=[],row=[],f='',q=false,i=0,n=text.length,c;
+  while(i<n){
+    c=text[i];
+    if(q){
+      if(c==='"'){ if(text[i+1]==='"'){f+='"';i+=2;continue} q=false;i++;continue }
+      f+=c;i++;continue;
+    }
+    if(c==='"'){q=true;i++;continue}
+    if(c===','){row.push(f);f='';i++;continue}
+    if(c==='\r'){ if(text[i+1]==='\n')i++; row.push(f);f='';rows.push(row);row=[];i++;continue}
+    if(c==='\n'){row.push(f);f='';rows.push(row);row=[];i++;continue}
+    f+=c;i++;
+  }
+  if(f!==''||row.length){row.push(f);rows.push(row)}
+  rows=rows.filter(function(r){return !(r.length===1&&r[0]==='')});
+  if(!rows.length) return [];
+  var hdr=rows[0].map(function(h){return String(h).trim()});
+  return rows.slice(1).map(function(r){var o={};hdr.forEach(function(h,j){if(h)o[h]=r[j]===undefined?'':r[j]});return o});
+}
+function numOrNull(v){if(v===null||v===undefined)return null;v=String(v).trim();if(v==='')return null;var n=Number(v);return isFinite(n)?n:null}
+function normRows(objs){
+  var out=[];
+  objs.forEach(function(o,idx){
+    var d=String(o.date||'').trim().slice(0,10);
+    if(!/^\d{4}-\d{2}-\d{2}$/.test(d)) return;
+    out.push({idx:idx,id:o.pick_id||'',date:d,game:o.game||'',player:o.player||'',stat:String(o.stat||'').trim().toUpperCase(),
+      alt:numOrNull(o.alt),odds:numOrNull(o.odds),hit:numOrNull(o.hit_pct),edge:numOrNull(o.edge),
+      closeStatus:String(o.close_status||'').trim(),clv:numOrNull(o.clv_pct),actual:String(o.actual||'').trim(),
+      result:String(o.result||'').trim().toUpperCase(),safeAlt:numOrNull(o.safe_alt),safeOdds:numOrNull(o.safe_odds),safeSample:String(o.safe_hit_sample||'').trim()});
+  });
+  return out;
+}
+function isSettled(r){return r.result==='W'||r.result==='L'}
+function bandOf(odds){if(odds===null)return null;return odds<1.55?'A':(odds<1.80?'B':'C')}
+function pbandOf(h){if(h===null)return null;return h<80?'p1':(h<90?'p2':'p3')}
+function dayMs(s){var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(s);return Date.UTC(+m[1],+m[2]-1,+m[3])}
+function msDay(t){return new Date(t).toISOString().slice(0,10)}
+function addDays(s,k){return msDay(dayMs(s)+k*864e5)}
+function asOfDate(rows){var m=null;rows.forEach(function(r){if(isSettled(r)&&(m===null||r.date>m))m=r.date});return m}
+function windowRange(asOf,days){
+  if(!asOf) return null;
+  if(!days) return {from:SEASON_START,to:asOf};
+  var f=addDays(asOf,-(days-1));
+  return {from:f<SEASON_START?SEASON_START:f,to:asOf};
+}
+function inRange(rows,rg){return rg?rows.filter(function(r){return r.date>=rg.from&&r.date<=rg.to}):[]}
+function summarize(rows){
+  var s={w:0,l:0,voids:0,pushes:0,pending:0,units:0,oddsSum:0,n:0,clvSum:0,clvN:0,predSum:0};
+  rows.forEach(function(r){
+    if(r.result==='VOID'){s.voids++;return}
+    if(r.result==='PUSH'){s.pushes++;return}
+    if(!isSettled(r)){s.pending++;return}
+    s.n++;
+    if(r.result==='W'){s.w++;s.units+=(r.odds||0)-1}else{s.l++;s.units-=1}
+    s.oddsSum+=r.odds||0;
+    if(r.hit!==null)s.predSum+=r.hit;
+    if(r.closeStatus==='ok'&&r.clv!==null){s.clvSum+=r.clv;s.clvN++}
+  });
+  s.hit=s.n?100*s.w/s.n:null;
+  s.roi=s.n?100*s.units/s.n:null;
+  s.meanOdds=s.n?s.oddsSum/s.n:null;
+  s.be=s.meanOdds?100/s.meanOdds:null;
+  s.gap=(s.hit!==null&&s.be!==null)?s.hit-s.be:null;
+  s.clv=s.clvN?s.clvSum/s.clvN:null;
+  s.coverage=s.n?100*s.clvN/s.n:null;
+  s.pred=s.n?s.predSum/s.n:null;
+  return s;
+}
+function groupBy(rows,keyFn,keys){
+  var g={};keys.forEach(function(k){g[k]=[]});
+  rows.forEach(function(r){var k=keyFn(r);if(k!==null&&g[k])g[k].push(r)});
+  var o={};keys.forEach(function(k){o[k]=summarize(g[k])});return o;
+}
+function byBand(rows){return groupBy(rows,function(r){return bandOf(r.odds)},['A','B','C'])}
+function byPBand(rows){return groupBy(rows,function(r){return pbandOf(r.hit)},['p1','p2','p3'])}
+function byStat(rows){return groupBy(rows,function(r){return r.stat},['PTS','REB','AST'])}
+function dayList(from,to){var o=[],d=from;while(d<=to){o.push(d);d=addDays(d,1)}return o}
+/* cumulative units per day for rows subset (All or a band) */
+function cumSeries(rows,from,to){
+  var by={};rows.forEach(function(r){if(!isSettled(r))return;by[r.date]=(by[r.date]||0)+(r.result==='W'?(r.odds||0)-1:-1)});
+  var c=0,out=[];
+  dayList(from,to).forEach(function(d){c+=by[d]||0;out.push({d:d,v:c})});
+  return out;
+}
+/* rolling 7-day hit% (window [d-6,d] clipped at season start); null when no settled rows */
+function rollSeries(rows,from,to){
+  return dayList(from,to).map(function(d){
+    var f=addDays(d,-6);if(f<SEASON_START)f=SEASON_START;
+    var w=0,n=0;
+    rows.forEach(function(r){if(isSettled(r)&&r.date>=f&&r.date<=d){n++;if(r.result==='W')w++}});
+    return {d:d,v:n?100*w/n:null,n:n};
+  });
+}
+function recent(rows,minOdds,k){
+  return rows.filter(function(r){return isSettled(r)&&r.odds!==null&&r.odds>=minOdds})
+    .sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:b.idx-a.idx}).slice(0,k);
+}
+function shadow(rows){
+  var sel=rows.filter(function(r){var a=numOrNull(r.actual);return isSettled(r)&&r.safeAlt!==null&&r.safeOdds!==null&&a!==null});
+  var o={n:sel.length,sw:0,su:0,ssum:0,ow:0,ou:0,osum:0};
+  sel.forEach(function(r){
+    var a=numOrNull(r.actual);
+    if(a>r.safeAlt){o.sw++;o.su+=r.safeOdds-1}else o.su-=1;
+    o.ssum+=r.safeOdds;
+    if(r.result==='W'){o.ow++;o.ou+=(r.odds||0)-1}else o.ou-=1;
+    o.osum+=r.odds||0;
+  });
+  o.sl=o.n-o.sw;o.ol=o.n-o.ow;
+  o.shit=o.n?100*o.sw/o.n:null;o.ohit=o.n?100*o.ow/o.n:null;
+  o.sbe=o.n?100/(o.ssum/o.n):null;o.obe=o.n?100/(o.osum/o.n):null;
+  return o;
+}
+var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,byBand:byBand,byPBand:byPBand,byStat:byStat,asOfDate:asOfDate,
+  windowRange:windowRange,inRange:inRange,cumSeries:cumSeries,rollSeries:rollSeries,recent:recent,bandOf:bandOf,pbandOf:pbandOf,isSettled:isSettled};
+/*CORE-END*/
 
-  var D = null, G = [], T = [], sel = 'ALL', RES = null;
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+  var num=function(v){if(v===null||v===undefined||v===''||typeof v==='boolean')return null;var n=Number(v);return isFinite(n)?n:null};
+  var fix=function(v,d){var n=num(v);return n===null?'—':n.toFixed(d)};
+  var str=function(v,dflt){return (v===null||v===undefined||v==='')?dflt:String(v)};
+  var stars=function(n){n=n||0;var f=Math.floor(n);return '★'.repeat(f)+(n%1?'½':'')};
+  var starTxt=function(n){n=n||0;return '⭐'.repeat(Math.floor(n))+(n%1?'½':'')};
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var fdate=function(s){return (+s.slice(8,10))+' '+MON[+s.slice(5,7)-1]};
+  var fdateY=function(s){return fdate(s)+' '+s.slice(0,4)};
+  function sg(n,d){if(n===null||n===undefined||!isFinite(n))return '—';var v=Number(n.toFixed(d));return (v>0?'+':v<0?'−':'')+Math.abs(v).toFixed(d)}
+  var cls=function(n){return n>0?'pos':n<0?'neg':''};
+  var BCOL={A:'var(--ca)',B:'var(--cb)',C:'var(--cc)',All:'var(--text)'};
   var MONI={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
-  var nk = function(n){return String(n||'').toLowerCase().replace(/[^a-z]/g,'')};
-  var rkey = function(p,s,alt){return nk(p)+'|'+String(s).toUpperCase()+'|'+Number(alt).toFixed(1)};
+  var nk=function(n){return String(n||'').toLowerCase().replace(/[^a-z]/g,'')};
+  var rkey=function(p,s,alt){return nk(p)+'|'+String(s).toUpperCase()+'|'+Number(alt).toFixed(1)};
+
+  var ROWS=null,CSVFAIL=false,FETCHED=null,WIN='7d',REC_OPEN=false,GR_OPEN=false,LOG=null;
+  var D=null,G=[],T=[],sel='ALL';
+
+  /* ---------- band helpers ---------- */
+  function bandCls(o){var b=CORE.bandOf(o);return b?'c'+b:''}
+  function oddsSpan(o){return '<span class="oc '+bandCls(o)+'">'+(o===null?'—':o.toFixed(2))+'</span>'}
+  function cellBg(s){
+    if(!s||s.n<10||s.gap===null) return {st:'background:rgba(127,127,127,.12);color:var(--muted)',low:s&&s.n<10};
+    var a=Math.min(Math.abs(s.gap),15)/15;
+    var rgb=s.gap>=0?'var(--up)':'var(--dn)';
+    return {st:'background:rgba('+rgb+','+(0.10+0.42*a).toFixed(3)+')',low:false};
+  }
+
+  /* ---------- tables ---------- */
+  function statTable(items,withSwatch){
+    var h='<div class="ts"><table><thead><tr><th>'+(withSwatch?'Odds':'Stat')+'</th><th>n</th><th>W-L</th><th>Hit%</th><th>B/E%</th><th>Gap pp</th><th>Units</th><th>ROI</th><th>CLV (n)</th></tr></thead><tbody>';
+    items.forEach(function(it){
+      var s=it.s,bg=cellBg(s),empty=!s.n;
+      var lab='<span class="bl '+(it.c?'c'+it.c:'')+'">'+(withSwatch&&it.c?'<span class="sw"></span>':'')+esc(it.label)+'</span>';
+      var low=bg.low?'<span class="lowN">n&lt;10</span>':'';
+      h+='<tr'+(it.all?' class="allrow"':'')+'><td>'+lab+'</td><td>'+s.n+'</td><td>'+s.w+'-'+s.l+'</td>'+
+        '<td style="'+bg.st+'">'+(empty?'—':s.hit.toFixed(1))+low+'</td>'+
+        '<td>'+(empty?'—':s.be.toFixed(1))+'</td>'+
+        '<td style="'+bg.st+'">'+(empty?'—':sg(s.gap,1))+'</td>'+
+        '<td style="'+bg.st+'">'+(empty?'—':sg(s.units,2))+'</td>'+
+        '<td>'+(empty?'—':sg(s.roi,1)+'%')+'</td>'+
+        '<td>'+(s.clvN?sg(s.clv,2)+' ('+s.clvN+')':'—')+'</td></tr>';
+    });
+    return h+'</tbody></table></div>';
+  }
+  function bandTable(rows){
+    var b=CORE.byBand(rows),items=BANDS.map(function(x){return {label:x.label,c:x.k,s:b[x.k]}});
+    items.push({label:'All',s:CORE.summarize(rows),all:true});
+    return statTable(items,true);
+  }
+  function stTable(rows){
+    var b=CORE.byStat(rows),items=['PTS','REB','AST'].map(function(k){return {label:k,s:b[k]}});
+    items.push({label:'All',s:CORE.summarize(rows),all:true});
+    return statTable(items,false);
+  }
+  function calTable(rows){
+    var b=CORE.byPBand(rows);
+    var h='<div class="ts"><table style="min-width:0"><thead><tr><th>Predicted hit%</th><th>n</th><th>Predicted</th><th>Actual</th><th>Diff pp</th></tr></thead><tbody>';
+    PBANDS.forEach(function(x){
+      var s=b[x.k],e=!s.n,d=e?null:s.hit-s.pred;
+      var style=(!e&&d<0)?'background:rgba(var(--dn),'+(0.10+0.42*Math.min(Math.abs(d),15)/15).toFixed(3)+')':'';
+      h+='<tr><td><b>'+esc(x.label)+'</b></td><td>'+s.n+'</td><td>'+(e?'—':s.pred.toFixed(1)+'%')+'</td><td>'+(e?'—':s.hit.toFixed(1)+'%')+'</td><td style="'+style+'">'+(e?'—':sg(d,1))+(s.n<10&&!e?'<span class="lowN">n&lt;10</span>':'')+'</td></tr>';
+    });
+    return h+'</tbody></table></div><p class="cap">When the model says a pick lands ~X% of the time, how often did it actually land? Red means the model was over-confident.</p>';
+  }
+
+  function shadowBlock(rows){
+    var s=CORE.shadow(rows);
+    if(!s.n) return '<p class="cap">Safer-rung tracking starts with the next slate.</p>';
+    function row(l,w,lo,h,be,un){return '<tr><td><b>'+l+'</b></td><td>'+s.n+'</td><td>'+w+'-'+lo+'</td><td>'+h.toFixed(1)+'</td><td>'+be.toFixed(1)+'</td><td class="'+cls(un)+'">'+sg(un,2)+'</td></tr>'}
+    return '<h4 style="font-size:.85rem;margin:14px 0 6px">Safer-rung shadow <span class="meta">(1.80+ picks with a safer rung)</span></h4><div class="ts"><table style="min-width:0"><thead><tr><th>Price</th><th>n</th><th>W-L</th><th>Hit%</th><th>B/E%</th><th>Units</th></tr></thead><tbody>'+
+      row('Safer rung',s.sw,s.sl,s.shit,s.sbe,s.su)+row('Original',s.ow,s.ol,s.ohit,s.obe,s.ou)+'</tbody></table></div>';
+  }
+  function safeTxt(r){return r.safeAlt!==null&&r.safeOdds!==null?' \u00b7 Safer rung: O '+esc(r.safeAlt)+' @ '+r.safeOdds.toFixed(2):''}
+
+  /* ---------- charts ---------- */
+  var VW=360,VL=34,VR=44,PW=VW-VL-VR;
+  function xticks(from,to,yb){
+    var days=CORE_days(from,to),span=Math.max(1,days.length-1),step=Math.max(1,Math.ceil(46/(PW/span))),o='';
+    for(var i=0;i<days.length;i+=step){
+      var x=VL+i/span*PW;
+      o+='<line class="gl" x1="'+x.toFixed(1)+'" x2="'+x.toFixed(1)+'" y1="'+yb+'" y2="'+(yb+3)+'"/><text class="ax" x="'+x.toFixed(1)+'" y="'+(yb+14)+'" text-anchor="middle">'+fdate(days[i])+'</text>';
+    }
+    return o;
+  }
+  function CORE_days(f,t){var o=[],d=f;while(d<=t){o.push(d);d=nextDay(d)}return o}
+  function nextDay(s){var t=Date.UTC(+s.slice(0,4),+s.slice(5,7)-1,+s.slice(8,10))+864e5;return new Date(t).toISOString().slice(0,10)}
+  function xAt(i,len){return VL+(len>1?i/(len-1)*PW:PW/2)}
+  function spread(labs,minGap){
+    labs.sort(function(a,b){return a.y-b.y});
+    for(var i=1;i<labs.length;i++){if(labs[i].y-labs[i-1].y<minGap)labs[i].y=labs[i-1].y+minGap}
+  }
+  function cumChart(rows,rg){
+    var VT=12,VB=190,H=210;
+    var sets=BANDS.map(function(b){return {k:b.k,col:BCOL[b.k],pts:CORE.cumSeries(rows.filter(function(r){return CORE.bandOf(r.odds)===b.k}),rg.from,rg.to)}});
+    sets.push({k:'All',col:BCOL.All,dash:true,pts:CORE.cumSeries(rows,rg.from,rg.to)});
+    var all=[0];sets.forEach(function(s){s.pts.forEach(function(p){all.push(p.v)})});
+    var lo=Math.min.apply(null,all),hi=Math.max.apply(null,all);if(hi-lo<1){hi+=1;lo-=1}
+    var pad=(hi-lo)*.08;hi+=pad;lo-=pad;
+    var yy=function(v){return VB-(v-lo)/(hi-lo)*(VB-VT)};
+    var len=sets[0].pts.length,o='';
+    var step=(hi-lo)>20?5:(hi-lo)>8?2:1;
+    for(var g=Math.ceil(lo/step)*step;g<=hi;g+=step){o+='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+yy(g).toFixed(1)+'" y2="'+yy(g).toFixed(1)+'"/><text class="ax" x="'+(VL-4)+'" y="'+(yy(g)+3.5).toFixed(1)+'" text-anchor="end">'+g+'</text>'}
+    o+='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+VB+'" y2="'+VB+'"/>'+xticks(rg.from,rg.to,VB);
+    o+='<line x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+yy(0).toFixed(1)+'" y2="'+yy(0).toFixed(1)+'" stroke="var(--text)" stroke-width="1.2" opacity=".7"/>';
+    var labs=[];
+    sets.forEach(function(s){
+      o+='<polyline fill="none" stroke="'+s.col+'" stroke-width="'+(s.dash?1.6:2.2)+'" stroke-linejoin="round"'+(s.dash?' stroke-dasharray="5 4"':'')+' points="'+s.pts.map(function(p,i){return xAt(i,len).toFixed(1)+','+yy(p.v).toFixed(1)}).join(' ')+'"/>';
+      var lp=s.pts[s.pts.length-1];
+      o+='<circle cx="'+xAt(len-1,len).toFixed(1)+'" cy="'+yy(lp.v).toFixed(1)+'" r="3" fill="'+s.col+'"/>';
+      labs.push({y:yy(lp.v),t:sg(lp.v,2),c:s.col});
+    });
+    spread(labs,11);
+    labs.forEach(function(l){o+='<text x="'+(xAt(len-1,len)+6).toFixed(1)+'" y="'+(l.y+3.5).toFixed(1)+'" font-size="10.5" font-weight="700" fill="'+l.c+'">'+l.t+'</text>'});
+    return '<svg viewBox="0 0 '+VW+' '+H+'" role="img" aria-label="Cumulative units by date for each odds band and all picks">'+o+'</svg>';
+  }
+  function hitPanel(rows,rg,all,bk,label){
+    var VT=8,VB=96,H=116;
+    var sub=rows.filter(function(r){return CORE.bandOf(r.odds)===bk});
+    var s=CORE.summarize(CORE.inRange(sub,{from:SEASON_START,to:rg.to}));
+    var ser=CORE.rollSeries(sub,rg.from,rg.to),len=ser.length,col=BCOL[bk];
+    var yy=function(v){return VB-Math.max(0,Math.min(100,v))/100*(VB-VT)};
+    var o='';
+    [0,50,100].forEach(function(g){o+='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+yy(g)+'" y2="'+yy(g)+'"/><text class="ax" x="'+(VL-4)+'" y="'+(yy(g)+3.5)+'" text-anchor="end">'+g+'</text>'});
+    o+=xticks(rg.from,rg.to,VB);
+    if(s.be!==null) o+='<line x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+yy(s.be).toFixed(1)+'" y2="'+yy(s.be).toFixed(1)+'" stroke="'+col+'" stroke-width="1.4" stroke-dasharray="4 3"/>';
+    var segs=[],cur=[];
+    ser.forEach(function(p,i){if(p.v===null){if(cur.length)segs.push(cur);cur=[]}else cur.push(xAt(i,len).toFixed(1)+','+yy(p.v).toFixed(1))});
+    if(cur.length)segs.push(cur);
+    segs.forEach(function(sg2){o+=sg2.length>1?'<polyline fill="none" stroke="'+col+'" stroke-width="2.2" stroke-linejoin="round" points="'+sg2.join(' ')+'"/>':'<circle cx="'+sg2[0].split(',')[0]+'" cy="'+sg2[0].split(',')[1]+'" r="2" fill="'+col+'"/>'});
+    var li=-1;ser.forEach(function(p,i){if(p.v!==null)li=i});
+    if(li>=0){var lp=ser[li];o+='<circle cx="'+xAt(li,len).toFixed(1)+'" cy="'+yy(lp.v).toFixed(1)+'" r="3" fill="'+col+'"/><text x="'+(xAt(li,len)+6).toFixed(1)+'" y="'+(yy(lp.v)+3.5).toFixed(1)+'" font-size="10.5" font-weight="700" fill="'+col+'">'+lp.v.toFixed(0)+'%</text>'}
+    return '<div class="cc2"><h4 class="c'+bk+'"><span class="oc c'+bk+'">'+esc(label)+'</span> <span style="color:var(--muted);font-weight:400">rolling 7d hit% · dashed = break-even '+(s.be===null?'—':s.be.toFixed(1)+'%')+'</span></h4><svg viewBox="0 0 '+VW+' '+H+'" role="img" aria-label="Rolling 7-day hit rate, '+esc(label)+' band">'+o+'</svg></div>';
+  }
+  function overTime(all,rg){
+    var rows=all; // rolling uses full history, clipped at season start
+    var inw=CORE.inRange(all,rg);
+    var h='<div class="lg2"><span><svg width="20" height="8"><line x1="0" x2="20" y1="4" y2="4" stroke="var(--ca)" stroke-width="2.2"/></svg>&lt; 1.55</span><span><svg width="20" height="8"><line x1="0" x2="20" y1="4" y2="4" stroke="var(--cb)" stroke-width="2.2"/></svg>1.55–1.79</span><span><svg width="20" height="8"><line x1="0" x2="20" y1="4" y2="4" stroke="var(--cc)" stroke-width="2.2"/></svg>1.80+</span><span><svg width="20" height="8"><line x1="0" x2="20" y1="4" y2="4" stroke="var(--text)" stroke-width="1.6" stroke-dasharray="5 4"/></svg>All</span></div>';
+    h+='<div class="cc2"><h4>Cumulative units (flat 1u)</h4>'+cumChart(inw,rg)+'</div>';
+    BANDS.forEach(function(b){h+=hitPanel(rows,rg,all,b.k,b.label)});
+    return h;
+  }
+
+  /* ---------- record rendering ---------- */
+  function winRange(asOf){return CORE.windowRange(asOf,WIN==='7d'?7:WIN==='30d'?30:0)}
+  function kpis(rows,rg){
+    var s=CORE.summarize(rows),gc=s.gap===null?'':(s.gap>=0?'pos':'neg');
+    function k(l,v,sub,c){return '<div class="kpi"><span class="kl">'+l+'</span><b class="'+(c||'')+'">'+v+'</b><span class="ks">'+sub+'</span></div>'}
+    return '<div class="kpis">'+
+      k('Record',s.w+'-'+s.l,s.voids+' void'+(s.voids===1?'':'s')+(s.pushes?' · '+s.pushes+' push':'')+' · n '+s.n)+
+      k('Units',sg(s.units,2)+'u','flat 1u',cls(s.units))+
+      k('ROI',s.roi===null?'—':sg(s.roi,1)+'%','units / n',cls(s.roi))+
+      k('Hit vs B/E',s.hit===null?'—':s.hit.toFixed(1)+'%','B/E '+fix(s.be,1)+'% · <span class="'+gc+'">'+sg(s.gap,1)+' pp</span> · odds '+fix(s.meanOdds,3))+
+      k('CLV mean',s.clvN?sg(s.clv,2)+'%':'—','n '+s.clvN+' · coverage '+fix(s.coverage,0)+'%')+
+      '</div>';
+  }
+  function resultsHtml(all,asOf){
+    var day=all.filter(function(r){return r.date===asOf});
+    var h='<details class="fold"><summary><span>Latest results <span class="meta">'+fdateY(asOf)+'</span></span></summary><div class="rl">';
+    if(!day.length) h+='<div class="none">No rows.</div>';
+    day.forEach(function(r){
+      var pc=r.result==='W'?'W':r.result==='L'?'L':r.result==='VOID'?'V':r.result==='PUSH'?'P':'';
+      var pill=pc?'<span class="pill '+pc+'">'+esc(r.result)+'</span>':'<span class="pill P">PENDING</span>';
+      var clv=(r.closeStatus==='ok'&&r.clv!==null)?' · CLV '+sg(r.clv,2)+'%':'';
+      h+='<div class="rr"><div><b>'+esc(r.player)+'</b> '+esc(r.stat)+' O'+esc(r.alt)+'</div><div class="rt">'+oddsSpan(r.odds)+pill+'</div>'+
+        '<div class="m">'+esc(r.game)+' · actual '+esc(r.actual||'—')+' vs '+esc(r.alt)+clv+safeTxt(r)+'</div></div>';
+    });
+    h+='</div></details>';
+    var rc=CORE.recent(all,1.8,20);
+    h+='<details class="fold"><summary><span>Recent 1.80+ picks <span class="meta">last '+rc.length+' settled</span></span></summary><div class="rl">';
+    if(!rc.length) h+='<div class="none">None yet.</div>';
+    rc.forEach(function(r){
+      var pill='<span class="pill '+r.result+'">'+r.result+'</span>';
+      h+='<div class="rr"><div><b>'+esc(r.player)+'</b> '+esc(r.stat)+' O'+esc(r.alt)+'</div><div class="rt">'+oddsSpan(r.odds)+pill+'</div>'+
+        '<div class="m">'+fdate(r.date)+' · '+esc(r.game)+' · actual '+esc(r.actual||'—')+'</div></div>';
+    });
+    return h+'</div></details>';
+  }
+  function renderRecord(){
+    var box=$('rec');
+    if(CSVFAIL){box.innerHTML='<div class="msg">Record unavailable — the Sheet couldn\'t be read</div>';return}
+    if(!ROWS){box.innerHTML='<p class="load">Loading record…</p>';return}
+    var asOf=CORE.asOfDate(ROWS);
+    if(!asOf){box.innerHTML='<p class="load">No settled picks yet.</p>';return}
+    var rg=winRange(asOf),rows=CORE.inRange(ROWS,rg);
+    var seg='<div class="seg" role="group" aria-label="Window">'+[['7d','7d'],['30d','30d'],['season','Season']].map(function(x){return '<button type="button" class="tab" data-w="'+x[0]+'" aria-pressed="'+(WIN===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
+    var h='<details class="fold" id="recFold"'+(REC_OPEN?' open':'')+'><summary><span>Record <span class="meta">'+fdate(rg.from)+' → '+fdate(rg.to)+'</span></span></summary>'+seg+
+      '<p class="range">'+fdateY(rg.from)+' → '+fdateY(rg.to)+' · as of latest settled day</p>'+
+      '<h3>By odds band</h3>'+bandTable(rows)+shadowBlock(rows)+'<p class="cap">Green: hit rate above break-even; red: below. Intensity scales with the gap (capped at 15 pp); grey when n&lt;10.</p>'+
+      '<h3>By stat</h3>'+stTable(rows)+
+      '<details class="fold inner" id="grFold"'+(GR_OPEN?' open':'')+'><summary><span>Over time <span class="meta">charts</span></span></summary>'+overTime(ROWS,rg)+'</details>'+
+      '</details>';
+    box.innerHTML=h;
+    $('recFold').addEventListener('toggle',function(){REC_OPEN=this.open});
+    $('grFold').addEventListener('toggle',function(){GR_OPEN=this.open});
+    Array.prototype.forEach.call(box.querySelectorAll('[data-w]'),function(b){b.onclick=function(){WIN=b.getAttribute('data-w');renderRecord()}});
+    $('results').innerHTML=resultsHtml(ROWS,asOf);
+    todayTiles();
+  }
+
+  /* ---------- slate ---------- */
   function slateIso(){
     var m=/(\d{1,2})\s+([A-Za-z]{3})\w*\s+(\d{4})/.exec(D&&D.date||'');
     if(!m||!MONI[m[2]]) return null;
     return m[3]+'-'+('0'+MONI[m[2]]).slice(-2)+'-'+('0'+m[1]).slice(-2);
   }
-  function setResults(rec){
-    try{
-      var r=rec&&rec.results; if(!r||typeof r!=='object'||!Array.isArray(r.picks)) return;
-      var map={};
-      r.picks.forEach(function(x){
-        try{
-          var res=String(x.r||'').toUpperCase(); if(['W','L','PUSH','VOID'].indexOf(res)<0) return;
-          map[rkey(x.p,x.s,x.alt)]={r:res,act:x.act,u:num(x.u)};
-        }catch(e){}
-      });
-      RES={date:String(r.date||''),map:map};
-    }catch(e){RES=null}
-  }
   function resFor(p){
-    if(!RES||!D||RES.date!==slateIso()) return null;
-    return RES.map[rkey(p.p,p.s,p.alt)]||null;
+    if(!ROWS||!D) return null;
+    var iso=slateIso(),k=rkey(p.p,p.s,p.alt),hit=null;
+    if(!iso) return null;
+    ROWS.forEach(function(r){if(r.date===iso&&r.alt!==null&&rkey(r.player,r.stat,r.alt)===k&&r.result)hit=r});
+    return hit;
   }
-  var RLBL={W:'WON',L:'LOST',PUSH:'PUSH',VOID:'VOID'};
-  var RCLS={W:'W',L:'L',PUSH:'P',VOID:'V'};
-  function resTxt(x){
-    var a=(x.act===null||x.act===undefined||x.act==='')?'':String(x.act);
-    return RLBL[x.r]+(a?' · '+a:'')+(x.u!==null&&x.r!=='VOID'?' · '+(x.u>0?'+':x.u<0?'−':'')+Math.abs(x.u).toFixed(2)+'u':'');
-  }
-
   function normPick(p){
     if(!p||typeof p!=='object') return null;
     var alt=num(p.alt),o=num(p.o),e=num(p.e);
     if(!str(p.p,'')||!str(p.s,'')||alt===null||o===null||o<=0||e===null) return null;
-    var st=num(p.st);
-    return {p:String(p.p),s:String(p.s),alt:alt,o:o,e:e,h:str(p.h,'—'),stN:st===null?0:st,
-      opp:str(p.opp,'—'),f:Array.isArray(p.f)?p.f.map(String):[]};
+    var st=num(p.st),sa=num(p.safe_alt),so=num(p.safe_o);
+    return {p:String(p.p),s:String(p.s),alt:alt,o:o,e:e,h:str(p.h,'—'),stN:st===null?0:st,opp:str(p.opp,'—'),f:Array.isArray(p.f)?p.f.map(String):[],
+      sa:(sa!==null&&so!==null)?sa:null,so:(sa!==null&&so!==null)?so:null};
   }
   function normGame(g){
     if(!g||typeof g!=='object'||!str(g.id,'')) return null;
-    var picks=[];
-    (Array.isArray(g.picks)?g.picks:[]).forEach(function(p){try{var n=normPick(p);if(n)picks.push(n)}catch(e){}});
+    var picks=[];(Array.isArray(g.picks)?g.picks:[]).forEach(function(p){try{var n=normPick(p);if(n)picks.push(n)}catch(e){}});
     return {id:String(g.id),tip:str(g.tip,'—'),proj:num(g.proj),mkt:num(g.mkt),ctx:str(g.ctx,''),picks:picks};
   }
   function normTotal(t){
     if(!Array.isArray(t)||t.length<2||!str(t[0],'')) return null;
-    var proj=num(t[1]); if(proj===null) return null;
+    var proj=num(t[1]);if(proj===null) return null;
     return {id:String(t[0]),proj:proj,mkt:num(t[2])};
   }
-
-  /* ---- plain-text builders (what the copy buttons produce) ---- */
-  var pickTxt = function(p){
-    return p.p+' '+p.s+' O'+p.alt+' @'+p.o.toFixed(2)+' | '+p.h+' | +'+p.e.toFixed(1)+'pp | '+starTxt(p.stN)+
-      (p.f.length?' ['+p.f.join(', ')+']':'')+
-      (function(){var x=resFor(p);return x?' → '+resTxt(x):''})();
-  };
-  var projMkt = function(g){return 'proj '+fix(g.proj,1)+' (mkt '+fix(g.mkt,1)+')'};
-  var gameTxt = function(g){
-    return g.id+' | tip '+g.tip+' | '+projMkt(g)+'\n'+(g.picks.length?g.picks.map(pickTxt).join('\n'):'No pick cleared the gates');
-  };
-  var allTxt = function(){
-    return 'NBA ALT-OVERS | '+D.date+' | '+D.tz+' | '+D.book+'\n\n'+G.map(gameTxt).join('\n\n')+'\n\nNot betting advice.';
-  };
-  var totalsTxt = function(){
-    return 'PROJECTED TOTALS (interest only) | '+D.date+'\n'+T.map(function(t){
-      var g=t.mkt===null?null:t.proj-t.mkt;
-      return t.id+' proj '+t.proj.toFixed(1)+' | mkt '+fix(t.mkt,1)+' | gap '+(g===null?'—':(g>=0?'+':'')+g.toFixed(1));
-    }).join('\n');
-  };
-
-  /* ---- clipboard with fallback for older/in-app browsers ---- */
-  function copyText(text, btn, label){
-    var ok = function(){
-      btn.textContent='Copied ✓'; btn.classList.add('done');
-      setTimeout(function(){btn.textContent=label;btn.classList.remove('done')},1400);
-    };
-    var fallback = function(){
-      var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');
-      ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
-      try{document.execCommand('copy')?ok():(btn.textContent='Copy failed')}catch(e){btn.textContent='Copy failed'}
-      document.body.removeChild(ta);
-    };
-    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fallback)}else{fallback()}
+  var pickTxt=function(p){return p.p+' '+p.s+' O'+p.alt+' @'+p.o.toFixed(2)+' | '+p.h+' | +'+p.e.toFixed(1)+'pp | '+starTxt(p.stN)+(p.f.length?' ['+p.f.join(', ')+']':'')+(p.sa!==null?' | safer O'+p.sa+' @'+p.so.toFixed(2):'')};
+  var projMkt=function(g){return 'proj '+fix(g.proj,1)+' (mkt '+fix(g.mkt,1)+')'};
+  var gameTxt=function(g){return g.id+' | tip '+g.tip+' | '+projMkt(g)+'\n'+(g.picks.length?g.picks.map(pickTxt).join('\n'):'No pick cleared the gates')};
+  var allTxt=function(){return 'NBA ALT-OVERS | '+D.date+' | '+D.tz+' | '+D.book+'\n\n'+G.map(gameTxt).join('\n\n')+'\n\nNot betting advice.'};
+  var totalsTxt=function(){return 'PROJECTED TOTALS (interest only) | '+D.date+'\n'+T.map(function(t){var g=t.mkt===null?null:t.proj-t.mkt;return t.id+' proj '+t.proj.toFixed(1)+' | mkt '+fix(t.mkt,1)+' | gap '+(g===null?'—':(g>=0?'+':'')+g.toFixed(1))}).join('\n')};
+  function copyText(text,btn,label){
+    var ok=function(){btn.textContent='Copied ✓';btn.classList.add('done');setTimeout(function(){btn.textContent=label;btn.classList.remove('done')},1400)};
+    var fb=function(){var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')?ok():(btn.textContent='Copy failed')}catch(e){btn.textContent='Copy failed'}document.body.removeChild(ta)};
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fb)}else{fb()}
   }
-
   function tabs(){
-    var ids = ['ALL'].concat(G.map(function(g){return g.id}));
-    $('tabs').innerHTML = ids.map(function(id){
-      return '<button class="tab" data-id="'+esc(id)+'" aria-pressed="'+(id===sel)+'">'+(id==='ALL'?'All games':esc(id))+'</button>';
-    }).join('');
-    Array.prototype.forEach.call($('tabs').children,function(b){
-      b.onclick=function(){sel=b.getAttribute('data-id');tabs();games();};
-    });
+    var ids=['ALL'].concat(G.map(function(g){return g.id}));
+    $('tabs').innerHTML=ids.map(function(id){return '<button class="tab" data-id="'+esc(id)+'" aria-pressed="'+(id===sel)+'">'+(id==='ALL'?'All games':esc(id))+'</button>'}).join('');
+    Array.prototype.forEach.call($('tabs').children,function(b){b.onclick=function(){sel=b.getAttribute('data-id');tabs();games()}});
   }
   function pickHtml(p,gi,i){
-    var x=resFor(p);
-    var rc=x?{W:' rw',L:' rl',PUSH:' rv',VOID:' rv'}[x.r]:'';
-    var pill=x?'<span class="res '+RCLS[x.r]+'">'+esc(resTxt(x))+'</span>':'';
-    return '<div class="pick'+rc+'"><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' @ '+p.o.toFixed(2)+'</div>'+
+    var x=resFor(p),rc='',pill='';
+    if(x){var rcm={W:' rw',L:' rl',PUSH:' rv',VOID:' rv'};rc=rcm[x.result]||'';
+      pill='<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span>'}
+    return '<div class="pick'+rc+'"><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' @ '+oddsSpan(p.o)+'</div>'+
       '<div class="meta">Hit '+esc(p.h)+' · '+stars(p.stN)+' · Opp '+esc(p.opp)+'</div><div class="edge">+'+p.e.toFixed(1)+'pp edge</div>'+
+      (p.sa!==null?'<div class="safe">Safer rung: O '+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
       '<div class="chips">'+pill+p.f.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'?' w':'')+'">'+esc(f)+'</span>'}).join('')+'</div>'+
       '<button class="cbtn" type="button" data-copy="pick" data-g="'+gi+'" data-i="'+i+'">Copy pick</button></div>';
   }
   function gameHtml(g,gi){
-    var gw=0,gl=0,gu=0,gn=0;
-    g.picks.forEach(function(p){var x=resFor(p);if(!x)return;gn++;if(x.r==='W')gw++;if(x.r==='L')gl++;if(x.u!==null)gu+=x.u});
-    var gsum='';
-    if(gn&&gn===g.picks.length){gsum='<span class="gres '+(gu>0?'pos':gu<0?'neg':'')+'">'+gw+'-'+gl+' · '+(gu>0?'+':gu<0?'−':'')+Math.abs(gu).toFixed(2)+'u</span>'}
-    else if(gn){gsum='<span class="gres" style="color:var(--muted)">'+gn+'/'+g.picks.length+' settled</span>'}
-    var head = '<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+gsum+'</h2><p>'+esc(g.ctx)+(g.ctx?' · ':'')+'proj total '+esc(fix(g.proj,1))+' (mkt '+esc(fix(g.mkt,1))+')</p></div>'+
-      '<button class="cbtn" type="button" data-copy="game" data-g="'+gi+'">Copy game</button></div>';
-    var body = '';
-    if(g.picks.length){
-      g.picks.forEach(function(p,i){try{body+=pickHtml(p,gi,i)}catch(e){}});
-    }
+    var head='<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+'</h2><p>'+esc(g.ctx)+(g.ctx?' · ':'')+'proj total '+esc(fix(g.proj,1))+' (mkt '+esc(fix(g.mkt,1))+')</p></div><button class="cbtn" type="button" data-copy="game" data-g="'+gi+'">Copy game</button></div>';
+    var body='';g.picks.forEach(function(p,i){try{body+=pickHtml(p,gi,i)}catch(e){}});
     if(!body) body='<div class="none">No pick cleared the gates.</div>';
     return '<section class="game">'+head+body+'</section>';
   }
   function games(){
     var html='';
-    G.forEach(function(g,gi){
-      if(sel!=='ALL'&&g.id!==sel) return;
-      try{html+=gameHtml(g,gi)}catch(e){}
-    });
-    $('games').innerHTML = html;
+    G.forEach(function(g,gi){if(sel!=='ALL'&&g.id!==sel)return;try{html+=gameHtml(g,gi)}catch(e){}});
+    $('games').innerHTML=html;
     Array.prototype.forEach.call($('games').querySelectorAll('[data-copy]'),function(b){
-      b.onclick=function(){
-        var g=G[+b.getAttribute('data-g')]; if(!g) return;
-        if(b.getAttribute('data-copy')==='game') copyText(gameTxt(g),b,'Copy game');
-        else{var p=g.picks[+b.getAttribute('data-i')]; if(p) copyText(g.id+' | '+pickTxt(p),b,'Copy pick');}
-      };
+      b.onclick=function(){var g=G[+b.getAttribute('data-g')];if(!g)return;
+        if(b.getAttribute('data-copy')==='game')copyText(gameTxt(g),b,'Copy game');
+        else{var p=g.picks[+b.getAttribute('data-i')];if(p)copyText(g.id+' | '+pickTxt(p),b,'Copy pick')}};
     });
   }
   function totals(){
     var html='';
-    T.forEach(function(t){
-      try{
-        var g=t.mkt===null?null:t.proj-t.mkt;
-        html+='<tr><td>'+esc(t.id)+'</td><td>'+t.proj.toFixed(1)+'</td><td>'+esc(fix(t.mkt,1))+'</td>'+
-          '<td class="'+(g===null?'':(g>=0?'pos':'neg'))+'">'+(g===null?'—':(g>=0?'+':'')+g.toFixed(1))+'</td></tr>';
-      }catch(e){}
-    });
-    $('totals').querySelector('tbody').innerHTML = html;
+    T.forEach(function(t){try{var g=t.mkt===null?null:t.proj-t.mkt;
+      html+='<tr><td>'+esc(t.id)+'</td><td>'+t.proj.toFixed(1)+'</td><td>'+esc(fix(t.mkt,1))+'</td><td class="'+(g===null?'':(g>=0?'pos':'neg'))+'">'+(g===null?'—':(g>=0?'+':'')+g.toFixed(1))+'</td></tr>'}catch(e){}});
+    $('totals').querySelector('tbody').innerHTML=html;
   }
-
   function init(data){
     if(!data||typeof data!=='object'||Array.isArray(data)) throw new Error('bad data');
-    D = {date:str(data.date,''),tz:str(data.tz,''),book:str(data.book,'')};
-    G=[]; (Array.isArray(data.games)?data.games:[]).forEach(function(g){try{var n=normGame(g);if(n)G.push(n)}catch(e){}});
-    T=[]; (Array.isArray(data.totals)?data.totals:[]).forEach(function(t){try{var n=normTotal(t);if(n)T.push(n)}catch(e){}});
-    var all = G.reduce(function(a,g){return a.concat(g.picks)},[]);
-    var avg = all.length ? (all.reduce(function(a,p){return a+Number(p.e)},0)/all.length).toFixed(1) : '0.0';
-
-    var gen = data.generated ? new Date(data.generated) : null;
-    var genOk = gen && !isNaN(gen.getTime());
-    var parts = [D.date,D.tz,D.book].filter(Boolean);
-    if(genOk) parts.push('updated '+gen.toLocaleString([], {dateStyle:'medium',timeStyle:'short'}));
-    $('sub').textContent = parts.join(' · ');
-    if(genOk && Date.now()-gen.getTime() > 20*3600*1000){
-      $('stale').textContent = 'Picks last updated '+gen.toLocaleString([], {dateStyle:'medium',timeStyle:'short'})+' — may be out of date';
-      $('stale').hidden = false;
-    }
-    $('stats').innerHTML =
-      '<div class="stat"><b>'+all.length+'</b><span>picks</span></div>'+
-      '<div class="stat"><b>+'+esc(avg)+'pp</b><span>avg edge</span></div>'+
-      '<div class="stat"><b>'+G.length+'</b><span>target games</span></div>';
+    D={date:str(data.date,''),tz:str(data.tz,''),book:str(data.book,''),engine:str(data.engine,'')};
+    G=[];(Array.isArray(data.games)?data.games:[]).forEach(function(g){try{var n=normGame(g);if(n)G.push(n)}catch(e){}});
+    T=[];(Array.isArray(data.totals)?data.totals:[]).forEach(function(t){try{var n=normTotal(t);if(n)T.push(n)}catch(e){}});
+    var all=G.reduce(function(a,g){return a.concat(g.picks)},[]);
+    var avg=all.length?(all.reduce(function(a,p){return a+Number(p.e)},0)/all.length).toFixed(1):'0.0';
+    var gen=data.generated?new Date(data.generated):null,genOk=gen&&!isNaN(gen.getTime());
+    var parts=[D.date,D.tz,D.book].filter(Boolean);
+    if(genOk)parts.push('updated '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}));
+    $('sub').textContent=parts.join(' · ');
+    if(genOk&&Date.now()-gen.getTime()>20*3600*1000){$('stale').textContent='Picks last updated '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'})+' — may be out of date';$('stale').hidden=false}
+    $('stats').innerHTML=tile(all.length,'picks','Picks that cleared every gate today')+
+      tile('+'+esc(avg)+'pp','avg edge','Model hit % minus the price\'s implied %, averaged')+
+      tile(G.length,'games','Games analysed within today\'s quota');
+    todayTiles();renderVer();
     $('copyAll').onclick=function(){copyText(allTxt(),this,'Copy all picks')};
     $('copyTotals').onclick=function(){copyText(totalsTxt(),this,'Copy totals')};
-    totals(); tabs(); games();
+    $('slate').hidden=false;
+    totals();tabs();games();
   }
-  function fail(){
-    $('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>';
-  }
-
-
-  /* ---- Record section (independent of data.json) ---- */
-  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  function pd(s){var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(s==null?'':s));if(!m)return null;var t=Date.UTC(+m[1],+m[2]-1,+m[3]);return isFinite(t)?t:null}
-  function fd(t,y){var d=new Date(t);return d.getUTCDate()+' '+MON[d.getUTCMonth()]+(y?' '+d.getUTCFullYear():'')}
-  function sg(n,d){var v=Number(n.toFixed(d));return (v>0?'+':v<0?'-':'')+Math.abs(v).toFixed(d)}
-  function sc(n){return n>0?'pos':n<0?'neg':''}
-  var R=null, vis={a:true,b:true};
-
-  function tile(w,len,name){
-    try{
-      if(!w||typeof w!=='object') throw 0;
-      var hit=num(w.hit),W=num(w.w),L=num(w.l),u=num(w.units),be=num(w.breakeven),n=num(w.n),vd=num(w.void),dw=num(w.days_in_window);
-      if(hit===null||W===null||L===null||u===null) throw 0;
-      var label=name;
-      var clipNote=(dw!==null&&dw<len)?'('+dw+(dw===1?' day':' days')+' of data — since season start)':'';
-      var cmp='';
-      if(be!==null) cmp='<b class="'+(hit>be?'pos':'neg')+'">'+(hit>be?'Above':'Below')+'</b>';
-      return {clip:(dw!==null&&dw<len),html:'<details class="tile"><summary><span class="tl">'+esc(label)+'</span><b class="tp">'+hit.toFixed(1)+'%</b></summary>'+
-        '<div class="td">'+
-        '<div class="kv"><span>Record</span><b>'+W+'-'+L+'</b></div>'+
-        '<div class="kv"><span>Units</span><b class="'+sc(u)+'">'+sg(u,2)+'u</b></div>'+
-        (be!==null?'<div class="kv"><span>Break-even</span><b>'+be.toFixed(1)+'%</b></div>':'')+
-        (cmp?'<div class="kv"><span>vs break-even</span>'+cmp+'</div>':'')+
-        (n!==null?'<div class="kv"><span>Bets</span><b>'+n+(vd!==null&&vd>0?' ('+vd+' void)':'')+'</b></div>':'')+
-        (clipNote?'<div class="tm tn">'+esc(clipNote)+'</div>':'')+
-        '</div></details>'};
-    }catch(e){return {clip:false,html:'<div class="tile"><div class="tl">'+esc(name)+'</div><div class="tm">unavailable</div></div>'}}
-  }
-
-  function melToday(){
-    try{return pd(new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Melbourne',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()))}catch(e){return null}
-  }
-  function dayTile(rec){
-    var name='Latest day';
-    try{
-      var r=null,t=null;
-      (Array.isArray(rec.daily)?rec.daily:[]).forEach(function(x){var tx=pd(x&&x.date);if(tx!==null&&(t===null||tx>t)){t=tx;r=x}});
-      if(!r) throw 0;
-      var tod=melToday();
-      name=(tod!==null&&t===tod)?'Today':fd(t,false);
-      var W=num(r.w),L=num(r.l),u=num(r.units),vd=num(r.void);
-      if(W===null||L===null||u===null) throw 0;
-      var n=W+L,hit=n?100*W/n:null;
-      return '<details class="tile"><summary><span class="tl">'+esc(name)+'</span><b class="tp">'+(hit===null?'—':hit.toFixed(1)+'%')+'</b></summary>'+
-        '<div class="td">'+
-        '<div class="kv"><span>Record</span><b>'+W+'-'+L+'</b></div>'+
-        '<div class="kv"><span>Units</span><b class="'+sc(u)+'">'+sg(u,2)+'u</b></div>'+
-        '<div class="kv"><span>Bets</span><b>'+n+(vd!==null&&vd>0?' ('+vd+' void)':'')+'</b></div>'+
-        '<div class="tm tn">Games of '+esc(fd(t,true))+'</div>'+
-        '</div></details>';
-    }catch(e){return '<div class="tile"><div class="tl">'+esc(name)+'</div><div class="tm">unavailable</div></div>'}
-  }
-
-  var VW=360,VL=30,VR=46,VT=10,VB=170,PW=VW-VL-VR;
-  function xAxis(s0,span){
-    var step=Math.max(1,Math.ceil(46/(span>0?PW/span:PW))),o='';
-    for(var d=0;d<=span;d+=step){
-      var x=VL+(span>0?d/span*PW:PW/2);
-      o+='<line class="gl" x1="'+x.toFixed(1)+'" x2="'+x.toFixed(1)+'" y1="'+VB+'" y2="'+(VB+3)+'"/><text class="ax" x="'+x.toFixed(1)+'" y="'+(VB+15)+'" text-anchor="middle">'+fd(s0+d*864e5,false)+'</text>';
-    }
-    return o;
-  }
-  function hitChart(){
-    var rows=R.rows,s0=R.s0,span=R.span;
-    var yy=function(v){return VB-Math.max(0,Math.min(100,v))/100*(VB-VT)};
-    var xx=function(r){return VL+(span>0?r.off/span*PW:PW/2)};
-    var o='';
-    [25,50,75].forEach(function(g){o+='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+yy(g)+'" y2="'+yy(g)+'"/>'});
-    [0,25,50,75,100].forEach(function(g){o+='<text class="ax" x="'+(VL-4)+'" y="'+(yy(g)+3.5)+'" text-anchor="end">'+g+'</text>'});
-    o+='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+VB+'" y2="'+VB+'"/>'+xAxis(s0,span);
-    var beRows=rows.filter(function(r){return r.be!==null});
-    if(beRows.length){
-      o+='<polyline class="be" fill="none" stroke="var(--muted)" stroke-width="1" stroke-dasharray="1 3" stroke-linecap="round" points="'+beRows.map(function(r){return xx(r).toFixed(1)+','+yy(r.be).toFixed(1)}).join(' ')+'"/>';
-      var b0=beRows[0];
-      o+='<text class="ax" x="'+(xx(b0)+2).toFixed(1)+'" y="'+(yy(b0.be)-3).toFixed(1)+'">break-even</text>';
-    }
-    var last=rows[rows.length-1],lab=[];
-    function line(cls,key,dash,stroke,on){
-      if(!on) return '';
-      var pts=rows.map(function(r){return xx(r).toFixed(1)+','+yy(r[key]).toFixed(1)}).join(' ');
-      lab.push({y:yy(last[key]),t:last[key].toFixed(1)+'%',c:stroke});
-      return '<polyline class="'+cls+'" fill="none" stroke="'+stroke+'" stroke-width="2" stroke-linejoin="round"'+(dash?' stroke-dasharray="6 4"':'')+' points="'+pts+'"/>'+
-        '<circle cx="'+xx(last).toFixed(1)+'" cy="'+yy(last[key]).toFixed(1)+'" r="3" fill="'+stroke+'"/>';
-    }
-    o+=line('l30','h30',true,'var(--text)',vis.b)+line('l7','h7',false,'var(--accent)',vis.a);
-    if(lab.length===2){
-      lab.sort(function(p,q){return p.y-q.y});
-      var gap=12-(lab[1].y-lab[0].y);
-      if(gap>0){lab[0].y-=gap/2;lab[1].y+=gap/2}
-    }
-    lab.forEach(function(l){o+='<text x="'+(xx(last)+6).toFixed(1)+'" y="'+(l.y+3.5).toFixed(1)+'" font-size="11" font-weight="700" fill="'+l.c+'">'+l.t+'</text>'});
-    var al='Rolling hit percentage. Latest: 7-day '+last.h7.toFixed(1)+'%, 30-day '+last.h30.toFixed(1)+'%'+(last.be!==null?', break-even '+last.be.toFixed(1)+'%':'')+'.';
-    return '<svg id="hitsvg" viewBox="0 0 '+VW+' 190" role="img" aria-label="'+esc(al)+'">'+o+'</svg>';
-  }
-  function cumChart(){
-    var rows=R.rows,span=R.span,u=rows.map(function(r){return r.cu});
-    var lo=Math.min(0,Math.min.apply(null,u)),hi=Math.max(0,Math.max.apply(null,u));
-    if(hi-lo<1){hi+=1;lo-=1}
-    var pad=(hi-lo)*.1;hi+=pad;lo-=pad;
-    var yy=function(v){return VB-(v-lo)/(hi-lo)*(VB-VT)};
-    var xx=function(r){return VL+(span>0?r.off/span*PW:PW/2)};
-    var o='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+VB+'" y2="'+VB+'"/>'+xAxis(R.s0,span);
-    var z=yy(0);
-    o+='<line x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+z.toFixed(1)+'" y2="'+z.toFixed(1)+'" stroke="var(--muted)" stroke-width="1"/>';
-    var shown=[0];
-    var mx=Math.max.apply(null,u),mn=Math.min.apply(null,u);
-    if(mx>0&&yy(mx)<z-12) shown.push(mx);
-    if(mn<0&&yy(mn)>z+12) shown.push(mn);
-    shown.forEach(function(v){o+='<text class="ax" x="'+(VL-4)+'" y="'+(yy(v)+3.5).toFixed(1)+'" text-anchor="end">'+(v===0?'0':sg(v,1))+'</text>'});
-    var last=rows[rows.length-1],endv=last.cu,col=endv>0?'var(--good)':endv<0?'var(--warn)':'var(--muted)';
-    o+='<polyline fill="none" stroke="'+col+'" stroke-width="2" stroke-linejoin="round" points="'+rows.map(function(r){return xx(r).toFixed(1)+','+yy(r.cu).toFixed(1)}).join(' ')+'"/>'+
-      '<circle cx="'+xx(last).toFixed(1)+'" cy="'+yy(endv).toFixed(1)+'" r="3" fill="'+col+'"/>'+
-      '<text id="cumend" x="'+(xx(last)+6).toFixed(1)+'" y="'+(yy(endv)+3.5).toFixed(1)+'" font-size="11" font-weight="700" fill="'+col+'">'+sg(endv,2)+'u</text>';
-    return '<svg id="cumsvg" viewBox="0 0 '+VW+' 190" role="img" aria-label="'+esc('Cumulative units at flat 1u stake. Latest: '+sg(endv,2)+'u.')+'">'+o+'</svg>';
-  }
-  function renderHit(){
-    try{ var b=document.getElementById('hitbox'); if(b) b.innerHTML=hitChart(); }catch(e){}
-  }
-
-  function renderRecord(rec){
-    var box=$('rec'),out='',clip=false;
+  function tile(v,l,def,c){return '<div class="stat" title="'+esc(def)+'"><b class="'+(c||'')+'">'+v+'</b><span>'+l+'</span><em>'+def+'</em></div>'}
+  function todayTiles(){
+    var box=$('today');if(!box) return;
+    var iso=D&&slateIso();
+    if(!iso||!ROWS){box.hidden=true;return}
+    var day=ROWS.filter(function(r){return r.date===iso});
+    var settled=day.filter(function(r){return r.result==='W'||r.result==='L'});
+    if(!settled.length){box.hidden=true;return}
+    var s=CORE.summarize(day),pend=day.filter(function(r){return !r.result}).length;
+    box.innerHTML=tile(s.w+'-'+s.l,'today','Settled result'+(s.voids?' · '+s.voids+' void':'')+(pend?' · '+pend+' pending':''))+
+      tile(sg(s.units,2)+'u','units','Flat 1 unit per pick at pick-time odds',cls(s.units))+
+      tile(s.hit===null?'—':s.hit.toFixed(0)+'%','hit','Break-even at today\'s odds: '+fix(s.be,1)+'%',s.gap===null?'':(s.gap>=0?'pos':'neg'));
     box.hidden=false;
-    if(!rec||typeof rec!=='object'||Array.isArray(rec)) throw new Error('bad record');
-    var asT=pd(rec.as_of),s0=pd(rec.season_start);
-    try{
-      out+='<h3>'+(asT===null?'Record':'As of '+esc(fd(asT,true)))+'</h3>';
-      var a=tile(rec.rolling_7d,7,'7-day'),b=tile(rec.rolling_30d,30,'30-day');
-      clip=a.clip||b.clip;
-      out+='<div class="tiles t3">'+dayTile(rec)+a.html+b.html+'</div>';
-      if(clip) out+='<p class="muted">Windows start at season start'+(s0!==null?' ('+esc(fd(s0,true))+')':'')+', so early in the season the 30-day figure equals season to date.</p>';
-    }catch(e){}
-    /* daily rows */
-    var rows=[];
-    try{
-      (Array.isArray(rec.daily)?rec.daily:[]).forEach(function(r){
-        try{
-          var t=pd(r&&r.date),cu=num(r&&r.cum_units),h7=num(r&&r.roll7&&r.roll7.hit),h30=num(r&&r.roll30&&r.roll30.hit);
-          if(t===null||cu===null||h7===null||h30===null) return;
-          if(s0!==null&&t<s0) return;
-          rows.push({t:t,cu:cu,h7:h7,h30:h30,be:num(r.roll7.breakeven)});
-        }catch(e){}
-      });
-      rows.sort(function(p,q){return p.t-q.t});
-    }catch(e){rows=[]}
-    if(rows.length){
-      var st=s0!==null?s0:rows[0].t;
-      rows.forEach(function(r){r.off=Math.round((r.t-st)/864e5)});
-      R={rows:rows,s0:st,span:Math.max(0,rows[rows.length-1].off)};
-      try{
-        var lr=rows[rows.length-1];
-        out+='<details class="gx"><summary><span class="gt">Rolling hit %</span><span class="gs">7d '+fix(lr.h7,1)+'% · 30d '+fix(lr.h30,1)+'%</span></summary><div class="lg" role="group" aria-label="Show or hide lines">'+
-          '<button type="button" class="lgb" data-k="a" aria-pressed="true"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="var(--accent)" stroke-width="2"/></svg>7d</button>'+
-          '<button type="button" class="lgb" data-k="b" aria-pressed="true"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="var(--text)" stroke-width="2" stroke-dasharray="6 4"/></svg>30d</button>'+
-          '<span class="lgs">dotted: break-even</span></div>'+
-          '<div class="cc" id="hitbox">'+hitChart()+'</div>'+
-          '<p class="muted">Early in the season the 7d and 30d lines overlap because both windows are clipped at the season start.</p></details>';
-      }catch(e){}
-      try{ out+='<details class="gx"><summary><span class="gt">Cumulative units</span><span class="gs">'+sg(rows[rows.length-1].cu,2)+'u</span></summary><div class="cc">'+cumChart()+'</div></details>'; }catch(e){}
+  }
+  function renderVer(){
+    var box=$('ver');if(!box) return;
+    var eng=D&&D.engine?D.engine:null;
+    var items=(LOG&&Array.isArray(LOG.changes))?LOG.changes.slice(0,6):[];
+    if(!eng&&!items.length){box.innerHTML='';return}
+    var last=items[0];
+    var h='<div class="ver"><b>Run by:</b> '+(eng?esc(eng):'engine not stated')+(last?' · <b>last change</b> '+esc(fdate(last.date))+' — '+esc(last.title):'');
+    if(items.length){
+      h+='<details class="fold inner" style="margin:8px 0 0"><summary><span>What changed <span class="meta">'+items.length+' recent</span></span></summary><ul>'+
+        items.map(function(c){return '<li><b>'+esc(c.title)+'</b> <span>('+esc(fdate(c.date))+(c.version?' · '+esc(c.version):'')+(c.component?' · '+esc(c.component):'')+')</span><br>'+esc(c.change)+(c.aim?'<br><span>Aim: '+esc(c.aim)+'</span>':'')+'</li>'}).join('')+'</ul></details>';
     }
-    /* CLV */
-    try{
-      var c=rec.clv,m=c&&num(c.mean_pct),cn=c&&num(c.n),sw=c&&num(c.settled_without_close);
-      if(c&&typeof c==='object'&&m!==null&&cn!==null){
-        out+='<p class="muted" style="font-size:.82rem;color:var(--text)">Closing-line value: mean '+sg(m,2)+'% over '+cn+' picks'+(sw!==null?'; '+sw+' settled picks have no closing price':'')+'.</p>'+
-          '<p class="muted it">CLV is only measured on picks with a captured closing price, so n is small.</p>';
-      }
-    }catch(e){}
-    /* footer */
-    try{
-      var nt=str(rec.note,''),fs=/^[\s\S]*?[.!?](\s|$)/.exec(nt),ft=(fs?fs[0]:nt).trim(),up=rec.updated?new Date(rec.updated):null;
-      var ts=(up&&!isNaN(up.getTime()))?'Updated '+up.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}):'';
-      if(ft||ts) out+='<p class="muted">'+esc(ft)+(ft&&ts?' ':'')+esc(ts)+'</p>';
-    }catch(e){}
-    box.innerHTML=out;
-    Array.prototype.forEach.call(box.querySelectorAll('.lgb'),function(bt){
-      bt.onclick=function(){var k=bt.getAttribute('data-k');vis[k]=!vis[k];bt.setAttribute('aria-pressed',String(vis[k]));renderHit()};
-    });
+    box.innerHTML=h+'</div>';
   }
-  function recFail(){
-    try{var box=$('rec');box.hidden=false;box.innerHTML='<p class="muted">Record unavailable</p>'}catch(e){}
+  function slateFail(){$('slate').hidden=false;$('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>'}
+  function foot(){
+    var t=FETCHED?FETCHED.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}):'not loaded';
+    $('src').textContent='Source: Google Sheet (cohort tab) · updated '+t;
   }
-  try{
-    fetch('record.json?v='+Date.now(),{cache:'no-store'})
-      .then(function(r){if(!r.ok) throw new Error('HTTP '+r.status);return r.json()})
-      .then(function(j){try{setResults(j);if(D){games()}}catch(e){}try{renderRecord(j)}catch(e){recFail()}})
-      .catch(recFail);
-  }catch(e){recFail()}
 
+  var CSV_URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vRk37gFqBJkXc1gzISmNg3mHtoYKWgw1976R-8Pe3Imo66e5r09-2aC5M5jvHBjlAbqpzATPX4HCaRL/pub?gid=0&single=true&output=csv";
+  renderRecord();
+  fetch(CSV_URL,{cache:'no-store'})
+    .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.text()})
+    .then(function(t){
+      ROWS=CORE.normRows(CORE.parseCSV(t));
+      if(!ROWS.length)throw new Error('empty');
+      FETCHED=new Date();foot();renderRecord();if(D)games();
+    })
+    .catch(function(){CSVFAIL=true;renderRecord()});
+  fetch('changelog.json?v='+Date.now(),{cache:'no-store'})
+    .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+    .then(function(j){LOG=j;renderVer()}).catch(function(){});
   fetch('data.json?v='+Date.now(),{cache:'no-store'})
-    .then(function(r){if(!r.ok) throw new Error('HTTP '+r.status);return r.json()})
-    .then(init)
-    .catch(fail);
+    .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
+    .then(init).catch(slateFail);
+  foot();
 })();
+
 </script>
-
-
 </body>
 </html>

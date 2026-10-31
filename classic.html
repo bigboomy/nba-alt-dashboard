@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NBA Alt-Over Dashboard</title>
+<meta name="description" content="Daily stepped-down alt OVER prop picks with prices, edge and projected totals.">
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--text:#14171c;--muted:#5f6b7a;--line:#e3e7ec;--accent:#1d4ed8;--good:#0f7b3f;--warn:#b45309;--chip:#eef2f7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1116;--card:#171b22;--text:#e8ebf0;--muted:#97a3b3;--line:#262c36;--accent:#6ea0ff;--good:#4ade80;--warn:#fbbf24;--chip:#202632}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-size:1.25rem;margin:0}
+.sub{color:var(--muted);font-size:.85rem;margin:2px 0 14px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
+.stat b{display:block;font-size:1.15rem}
+.stat span{color:var(--muted);font-size:.75rem}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px;-webkit-overflow-scrolling:touch}
+.tab{flex:none;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:7px 13px;font:inherit;font-size:.85rem;cursor:pointer}
+.tab[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
+.game{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.gh{padding:12px 14px;border-bottom:1px solid var(--line)}
+.gh h2{font-size:1rem;margin:0}
+.gh p{margin:3px 0 0;color:var(--muted);font-size:.8rem}
+.pick{padding:11px 14px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:2px 10px}
+.pick:last-child{border-bottom:0}
+.who{font-weight:600}
+.line{font-size:1.05rem;font-weight:700;text-align:right;white-space:nowrap}
+.meta{color:var(--muted);font-size:.8rem}
+.edge{color:var(--good);font-weight:600;text-align:right;font-size:.85rem}
+.chips{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:5px;margin-top:5px}
+.chip{background:var(--chip);border-radius:6px;padding:2px 7px;font-size:.72rem;color:var(--muted)}
+.chip.w{color:var(--warn)}
+.pick.rw{box-shadow:inset 3px 0 0 var(--good)}
+.pick.rl{box-shadow:inset 3px 0 0 var(--warn)}
+.pick.rv{box-shadow:inset 3px 0 0 var(--muted)}
+.res{border-radius:6px;padding:2px 8px;font-size:.72rem;font-weight:700;font-variant-numeric:tabular-nums;border:1px solid currentColor}
+.res.W{color:var(--good)}.res.L{color:var(--warn)}.res.P,.res.V{color:var(--muted)}
+.gres{display:inline-block;margin-left:6px;font-size:.75rem;font-weight:700;font-variant-numeric:tabular-nums}
+.none{padding:14px;color:var(--muted);font-size:.9rem}
+h3{font-size:.95rem;margin:20px 0 8px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;font-size:.82rem}
+th,td{padding:8px 7px;text-align:right;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--muted);font-weight:600;font-size:.72rem}
+tr:last-child td{border-bottom:0}
+.pos{color:var(--good)}.neg{color:var(--warn)}
+.foot{color:var(--muted);font-size:.75rem;margin:18px 0 6px}
+.cbtn{border:1px solid var(--line);background:var(--chip);color:var(--text);border-radius:8px;font:inherit;font-size:.78rem;padding:7px 11px;min-height:36px;cursor:pointer;white-space:nowrap}
+.cbtn:active{transform:scale(.97)}
+.cbtn.done{color:var(--good);border-color:var(--good)}
+.cbtn.main{background:var(--accent);border-color:var(--accent);color:#fff;font-size:.85rem;min-height:40px;padding:8px 14px}
+.cbtn.main.done{background:var(--good);border-color:var(--good)}
+.bar{display:flex;gap:8px;margin-bottom:12px}
+.bar .cbtn{flex:1}
+.gh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.pick .cbtn{grid-column:1/-1;justify-self:end;margin-top:6px}
+.stale{background:var(--card);border:1px solid var(--warn);color:var(--warn);border-radius:10px;padding:9px 12px;margin-bottom:12px;font-size:.85rem;font-weight:600}
+.err{border-color:var(--warn);color:var(--warn)}
+.legend{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;color:var(--muted);font-size:.8rem}
+.legend summary{cursor:pointer;color:var(--text);font-weight:600}
+
+.rec{margin:20px 0 14px}
+.kv{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:.8rem;font-variant-numeric:tabular-nums}
+.kv span{color:var(--muted)}
+.kv b{font-weight:700;text-align:right}
+.rec h3{margin:0 0 8px}
+.rec h4{font-size:.85rem;margin:14px 0 4px}
+.rec .muted{color:var(--muted);font-size:.75rem;margin:6px 0 0}
+.rec .it{font-style:italic}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start}
+.tiles.t3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.tiles.t3 .kv{flex-wrap:wrap;gap:0 6px}
+.tiles.t3 .tp{font-size:1.3rem}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;min-width:0}
+.tile summary{display:flex;flex-direction:column;gap:2px;cursor:pointer;list-style:none;position:relative;padding-right:16px;min-height:44px;justify-content:center}
+.tile summary::-webkit-details-marker{display:none}
+.tile summary::after{content:"";position:absolute;right:2px;top:50%;width:7px;height:7px;margin-top:-6px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(45deg);transition:transform .15s}
+.tile[open] summary::after{transform:rotate(-135deg);margin-top:-1px}
+.tile summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.tp{font-size:1.5rem;line-height:1.2}
+.tm.tn{white-space:normal;overflow-wrap:anywhere;margin-top:2px;line-height:1.35}
+.td{display:flex;flex-direction:column;gap:4px;margin-top:6px;padding-top:6px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){.tile summary::after{transition:none}}
+.tl{color:var(--muted);font-size:.75rem;font-weight:600;overflow-wrap:anywhere}
+.hr{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 8px;margin-top:2px}
+.hr b{font-size:1.5rem;line-height:1.2;white-space:nowrap}
+.hr span,.tm{font-size:.72rem;color:var(--muted);white-space:nowrap}
+.tw{font-size:.72rem;font-weight:600}
+.tr{display:flex;flex-wrap:wrap;gap:0 10px;margin-top:4px;font-weight:700;font-size:.95rem}
+.tr span{white-space:nowrap}
+.cc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 6px 4px}
+.cc svg{display:block;width:100%;height:auto}
+.cc .ax{fill:var(--muted);font-size:10px}
+.cc .gl{stroke:var(--line);stroke-width:1}
+.lg{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 6px 4px;align-items:center}
+.lgb{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--chip);color:var(--text);border-radius:8px;font:inherit;font-size:.78rem;padding:6px 11px;min-height:36px;cursor:pointer}
+.lgb[aria-pressed=false]{opacity:.55;text-decoration:line-through}
+.lgb[aria-pressed=true]{border-color:var(--accent)}
+.lgs{font-size:.72rem;color:var(--muted)}
+.gx{margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:0 10px}
+.gx[open]{padding-bottom:8px}
+.gx summary{display:flex;align-items:center;gap:8px;min-height:44px;cursor:pointer;list-style:none;font-size:.85rem}
+.gx summary::-webkit-details-marker{display:none}
+.gx summary::before{content:"";width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s;flex:none;margin:0 3px 0 1px}
+.gx[open] summary::before{transform:rotate(45deg)}
+.gx summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+.gt{font-weight:700}
+.gs{margin-left:auto;color:var(--muted);font-size:.75rem;white-space:nowrap}
+.gx .cc{border:0;padding:0}
+@media (prefers-reduced-motion:reduce){.gx summary::before{transition:none}}
+</style>
+</head>
+<body><div class="wrap">
+  <h1>NBA Alt-Over Dashboard</h1>
+  <p class="sub" id="sub"></p>
+  <div class="stale" id="stale" role="status" hidden></div>
+  <div class="stats" id="stats"></div>
+  <div class="bar">
+    <button class="cbtn main" id="copyAll" type="button">Copy all picks</button>
+    <button class="cbtn main" id="copyTotals" type="button">Copy totals</button>
+  </div>
+  <div class="tabs" id="tabs" role="group" aria-label="Filter by game"></div>
+  <div id="games"></div>
+
+  <h3>Projected totals <span class="meta">(interest only, not a bet)</span></h3>
+  <table id="totals"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table>
+
+  <details class="legend" style="margin-top:16px">
+    <summary>How to read this</summary>
+    <p><b>Alt</b>: the stepped-down OVER line chosen from the book's ladder. <b>Hit%</b>: how often the player cleared it over a recent sample (shown as hits/games). <b>Edge</b>: hit% minus the book's implied probability (1 ÷ odds), in percentage points; a pick must be at least +5. <b>Stars</b> are capped early in the season because samples are small. <b>Opp</b> is the opponent's allowance of that stat per 100 possessions and its league rank; it is shown for context and never changes a pick. <b>Projected totals</b> are a pace-and-rating model shown for interest only.</p>
+  </details>
+
+  <section class="rec" id="rec" aria-label="Record" hidden></section>
+
+  <p class="foot"><b>Not betting advice.</b> Hit rate is not profit; prices move and players sit. Past results do not predict future ones. Only bet what you can afford to lose. If gambling is a problem for you or someone you know, contact your local support service (Australia: 1800 858 858, gamblinghelponline.org.au).</p>
+</div>
+
+<script>
+(function(){
+  var $ = function(id){return document.getElementById(id)};
+  var esc = function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})};
+  var num = function(v){if(v===null||v===undefined||v===''||typeof v==='boolean')return null;var n=Number(v);return isFinite(n)?n:null};
+  var fix = function(v,d){var n=num(v);return n===null?'—':n.toFixed(d)};
+  var str = function(v,dflt){return (v===null||v===undefined||v==='')?dflt:String(v)};
+  var stars = function(n){n=n||0;var f=Math.floor(n);return '★'.repeat(f)+(n%1?'½':'')};
+  var starTxt = function(n){n=n||0;return '⭐'.repeat(Math.floor(n))+(n%1?'½':'')};
+
+  var D = null, G = [], T = [], sel = 'ALL', RES = null;
+  var MONI={Jan:1,Feb:2,Mar:3,Apr:4,May:5,Jun:6,Jul:7,Aug:8,Sep:9,Oct:10,Nov:11,Dec:12};
+  var nk = function(n){return String(n||'').toLowerCase().replace(/[^a-z]/g,'')};
+  var rkey = function(p,s,alt){return nk(p)+'|'+String(s).toUpperCase()+'|'+Number(alt).toFixed(1)};
+  function slateIso(){
+    var m=/(\d{1,2})\s+([A-Za-z]{3})\w*\s+(\d{4})/.exec(D&&D.date||'');
+    if(!m||!MONI[m[2]]) return null;
+    return m[3]+'-'+('0'+MONI[m[2]]).slice(-2)+'-'+('0'+m[1]).slice(-2);
+  }
+  function setResults(rec){
+    try{
+      var r=rec&&rec.results; if(!r||typeof r!=='object'||!Array.isArray(r.picks)) return;
+      var map={};
+      r.picks.forEach(function(x){
+        try{
+          var res=String(x.r||'').toUpperCase(); if(['W','L','PUSH','VOID'].indexOf(res)<0) return;
+          map[rkey(x.p,x.s,x.alt)]={r:res,act:x.act,u:num(x.u)};
+        }catch(e){}
+      });
+      RES={date:String(r.date||''),map:map};
+    }catch(e){RES=null}
+  }
+  function resFor(p){
+    if(!RES||!D||RES.date!==slateIso()) return null;
+    return RES.map[rkey(p.p,p.s,p.alt)]||null;
+  }
+  var RLBL={W:'WON',L:'LOST',PUSH:'PUSH',VOID:'VOID'};
+  var RCLS={W:'W',L:'L',PUSH:'P',VOID:'V'};
+  function resTxt(x){
+    var a=(x.act===null||x.act===undefined||x.act==='')?'':String(x.act);
+    return RLBL[x.r]+(a?' · '+a:'')+(x.u!==null&&x.r!=='VOID'?' · '+(x.u>0?'+':x.u<0?'−':'')+Math.abs(x.u).toFixed(2)+'u':'');
+  }
+
+  function normPick(p){
+    if(!p||typeof p!=='object') return null;
+    var alt=num(p.alt),o=num(p.o),e=num(p.e);
+    if(!str(p.p,'')||!str(p.s,'')||alt===null||o===null||o<=0||e===null) return null;
+    var st=num(p.st);
+    return {p:String(p.p),s:String(p.s),alt:alt,o:o,e:e,h:str(p.h,'—'),stN:st===null?0:st,
+      opp:str(p.opp,'—'),f:Array.isArray(p.f)?p.f.map(String):[]};
+  }
+  function normGame(g){
+    if(!g||typeof g!=='object'||!str(g.id,'')) return null;
+    var picks=[];
+    (Array.isArray(g.picks)?g.picks:[]).forEach(function(p){try{var n=normPick(p);if(n)picks.push(n)}catch(e){}});
+    return {id:String(g.id),tip:str(g.tip,'—'),proj:num(g.proj),mkt:num(g.mkt),ctx:str(g.ctx,''),picks:picks};
+  }
+  function normTotal(t){
+    if(!Array.isArray(t)||t.length<2||!str(t[0],'')) return null;
+    var proj=num(t[1]); if(proj===null) return null;
+    return {id:String(t[0]),proj:proj,mkt:num(t[2])};
+  }
+
+  /* ---- plain-text builders (what the copy buttons produce) ---- */
+  var pickTxt = function(p){
+    return p.p+' '+p.s+' O'+p.alt+' @'+p.o.toFixed(2)+' | '+p.h+' | +'+p.e.toFixed(1)+'pp | '+starTxt(p.stN)+
+      (p.f.length?' ['+p.f.join(', ')+']':'')+
+      (function(){var x=resFor(p);return x?' → '+resTxt(x):''})();
+  };
+  var projMkt = function(g){return 'proj '+fix(g.proj,1)+' (mkt '+fix(g.mkt,1)+')'};
+  var gameTxt = function(g){
+    return g.id+' | tip '+g.tip+' | '+projMkt(g)+'\n'+(g.picks.length?g.picks.map(pickTxt).join('\n'):'No pick cleared the gates');
+  };
+  var allTxt = function(){
+    return 'NBA ALT-OVERS | '+D.date+' | '+D.tz+' | '+D.book+'\n\n'+G.map(gameTxt).join('\n\n')+'\n\nNot betting advice.';
+  };
+  var totalsTxt = function(){
+    return 'PROJECTED TOTALS (interest only) | '+D.date+'\n'+T.map(function(t){
+      var g=t.mkt===null?null:t.proj-t.mkt;
+      return t.id+' proj '+t.proj.toFixed(1)+' | mkt '+fix(t.mkt,1)+' | gap '+(g===null?'—':(g>=0?'+':'')+g.toFixed(1));
+    }).join('\n');
+  };
+
+  /* ---- clipboard with fallback for older/in-app browsers ---- */
+  function copyText(text, btn, label){
+    var ok = function(){
+      btn.textContent='Copied ✓'; btn.classList.add('done');
+      setTimeout(function(){btn.textContent=label;btn.classList.remove('done')},1400);
+    };
+    var fallback = function(){
+      var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');
+      ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
+      try{document.execCommand('copy')?ok():(btn.textContent='Copy failed')}catch(e){btn.textContent='Copy failed'}
+      document.body.removeChild(ta);
+    };
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fallback)}else{fallback()}
+  }
+
+  function tabs(){
+    var ids = ['ALL'].concat(G.map(function(g){return g.id}));
+    $('tabs').innerHTML = ids.map(function(id){
+      return '<button class="tab" data-id="'+esc(id)+'" aria-pressed="'+(id===sel)+'">'+(id==='ALL'?'All games':esc(id))+'</button>';
+    }).join('');
+    Array.prototype.forEach.call($('tabs').children,function(b){
+      b.onclick=function(){sel=b.getAttribute('data-id');tabs();games();};
+    });
+  }
+  function pickHtml(p,gi,i){
+    var x=resFor(p);
+    var rc=x?{W:' rw',L:' rl',PUSH:' rv',VOID:' rv'}[x.r]:'';
+    var pill=x?'<span class="res '+RCLS[x.r]+'">'+esc(resTxt(x))+'</span>':'';
+    return '<div class="pick'+rc+'"><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' @ '+p.o.toFixed(2)+'</div>'+
+      '<div class="meta">Hit '+esc(p.h)+' · '+stars(p.stN)+' · Opp '+esc(p.opp)+'</div><div class="edge">+'+p.e.toFixed(1)+'pp edge</div>'+
+      '<div class="chips">'+pill+p.f.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'?' w':'')+'">'+esc(f)+'</span>'}).join('')+'</div>'+
+      '<button class="cbtn" type="button" data-copy="pick" data-g="'+gi+'" data-i="'+i+'">Copy pick</button></div>';
+  }
+  function gameHtml(g,gi){
+    var gw=0,gl=0,gu=0,gn=0;
+    g.picks.forEach(function(p){var x=resFor(p);if(!x)return;gn++;if(x.r==='W')gw++;if(x.r==='L')gl++;if(x.u!==null)gu+=x.u});
+    var gsum='';
+    if(gn&&gn===g.picks.length){gsum='<span class="gres '+(gu>0?'pos':gu<0?'neg':'')+'">'+gw+'-'+gl+' · '+(gu>0?'+':gu<0?'−':'')+Math.abs(gu).toFixed(2)+'u</span>'}
+    else if(gn){gsum='<span class="gres" style="color:var(--muted)">'+gn+'/'+g.picks.length+' settled</span>'}
+    var head = '<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+gsum+'</h2><p>'+esc(g.ctx)+(g.ctx?' · ':'')+'proj total '+esc(fix(g.proj,1))+' (mkt '+esc(fix(g.mkt,1))+')</p></div>'+
+      '<button class="cbtn" type="button" data-copy="game" data-g="'+gi+'">Copy game</button></div>';
+    var body = '';
+    if(g.picks.length){
+      g.picks.forEach(function(p,i){try{body+=pickHtml(p,gi,i)}catch(e){}});
+    }
+    if(!body) body='<div class="none">No pick cleared the gates.</div>';
+    return '<section class="game">'+head+body+'</section>';
+  }
+  function games(){
+    var html='';
+    G.forEach(function(g,gi){
+      if(sel!=='ALL'&&g.id!==sel) return;
+      try{html+=gameHtml(g,gi)}catch(e){}
+    });
+    $('games').innerHTML = html;
+    Array.prototype.forEach.call($('games').querySelectorAll('[data-copy]'),function(b){
+      b.onclick=function(){
+        var g=G[+b.getAttribute('data-g')]; if(!g) return;
+        if(b.getAttribute('data-copy')==='game') copyText(gameTxt(g),b,'Copy game');
+        else{var p=g.picks[+b.getAttribute('data-i')]; if(p) copyText(g.id+' | '+pickTxt(p),b,'Copy pick');}
+      };
+    });
+  }
+  function totals(){
+    var html='';
+    T.forEach(function(t){
+      try{
+        var g=t.mkt===null?null:t.proj-t.mkt;
+        html+='<tr><td>'+esc(t.id)+'</td><td>'+t.proj.toFixed(1)+'</td><td>'+esc(fix(t.mkt,1))+'</td>'+
+          '<td class="'+(g===null?'':(g>=0?'pos':'neg'))+'">'+(g===null?'—':(g>=0?'+':'')+g.toFixed(1))+'</td></tr>';
+      }catch(e){}
+    });
+    $('totals').querySelector('tbody').innerHTML = html;
+  }
+
+  function init(data){
+    if(!data||typeof data!=='object'||Array.isArray(data)) throw new Error('bad data');
+    D = {date:str(data.date,''),tz:str(data.tz,''),book:str(data.book,'')};
+    G=[]; (Array.isArray(data.games)?data.games:[]).forEach(function(g){try{var n=normGame(g);if(n)G.push(n)}catch(e){}});
+    T=[]; (Array.isArray(data.totals)?data.totals:[]).forEach(function(t){try{var n=normTotal(t);if(n)T.push(n)}catch(e){}});
+    var all = G.reduce(function(a,g){return a.concat(g.picks)},[]);
+    var avg = all.length ? (all.reduce(function(a,p){return a+Number(p.e)},0)/all.length).toFixed(1) : '0.0';
+
+    var gen = data.generated ? new Date(data.generated) : null;
+    var genOk = gen && !isNaN(gen.getTime());
+    var parts = [D.date,D.tz,D.book].filter(Boolean);
+    if(genOk) parts.push('updated '+gen.toLocaleString([], {dateStyle:'medium',timeStyle:'short'}));
+    $('sub').textContent = parts.join(' · ');
+    if(genOk && Date.now()-gen.getTime() > 20*3600*1000){
+      $('stale').textContent = 'Picks last updated '+gen.toLocaleString([], {dateStyle:'medium',timeStyle:'short'})+' — may be out of date';
+      $('stale').hidden = false;
+    }
+    $('stats').innerHTML =
+      '<div class="stat"><b>'+all.length+'</b><span>picks</span></div>'+
+      '<div class="stat"><b>+'+esc(avg)+'pp</b><span>avg edge</span></div>'+
+      '<div class="stat"><b>'+G.length+'</b><span>target games</span></div>';
+    $('copyAll').onclick=function(){copyText(allTxt(),this,'Copy all picks')};
+    $('copyTotals').onclick=function(){copyText(totalsTxt(),this,'Copy totals')};
+    totals(); tabs(); games();
+  }
+  function fail(){
+    $('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>';
+  }
+
+
+  /* ---- Record section (independent of data.json) ---- */
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  function pd(s){var m=/^(\d{4})-(\d{2})-(\d{2})/.exec(String(s==null?'':s));if(!m)return null;var t=Date.UTC(+m[1],+m[2]-1,+m[3]);return isFinite(t)?t:null}
+  function fd(t,y){var d=new Date(t);return d.getUTCDate()+' '+MON[d.getUTCMonth()]+(y?' '+d.getUTCFullYear():'')}
+  function sg(n,d){var v=Number(n.toFixed(d));return (v>0?'+':v<0?'-':'')+Math.abs(v).toFixed(d)}
+  function sc(n){return n>0?'pos':n<0?'neg':''}
+  var R=null, vis={a:true,b:true};
+
+  function tile(w,len,name){
+    try{
+      if(!w||typeof w!=='object') throw 0;
+      var hit=num(w.hit),W=num(w.w),L=num(w.l),u=num(w.units),be=num(w.breakeven),n=num(w.n),vd=num(w.void),dw=num(w.days_in_window);
+      if(hit===null||W===null||L===null||u===null) throw 0;
+      var label=name;
+      var clipNote=(dw!==null&&dw<len)?'('+dw+(dw===1?' day':' days')+' of data — since season start)':'';
+      var cmp='';
+      if(be!==null) cmp='<b class="'+(hit>be?'pos':'neg')+'">'+(hit>be?'Above':'Below')+'</b>';
+      return {clip:(dw!==null&&dw<len),html:'<details class="tile"><summary><span class="tl">'+esc(label)+'</span><b class="tp">'+hit.toFixed(1)+'%</b></summary>'+
+        '<div class="td">'+
+        '<div class="kv"><span>Record</span><b>'+W+'-'+L+'</b></div>'+
+        '<div class="kv"><span>Units</span><b class="'+sc(u)+'">'+sg(u,2)+'u</b></div>'+
+        (be!==null?'<div class="kv"><span>Break-even</span><b>'+be.toFixed(1)+'%</b></div>':'')+
+        (cmp?'<div class="kv"><span>vs break-even</span>'+cmp+'</div>':'')+
+        (n!==null?'<div class="kv"><span>Bets</span><b>'+n+(vd!==null&&vd>0?' ('+vd+' void)':'')+'</b></div>':'')+
+        (clipNote?'<div class="tm tn">'+esc(clipNote)+'</div>':'')+
+        '</div></details>'};
+    }catch(e){return {clip:false,html:'<div class="tile"><div class="tl">'+esc(name)+'</div><div class="tm">unavailable</div></div>'}}
+  }
+
+  function melToday(){
+    try{return pd(new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Melbourne',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date()))}catch(e){return null}
+  }
+  function dayTile(rec){
+    var name='Latest day';
+    try{
+      var r=null,t=null;
+      (Array.isArray(rec.daily)?rec.daily:[]).forEach(function(x){var tx=pd(x&&x.date);if(tx!==null&&(t===null||tx>t)){t=tx;r=x}});
+      if(!r) throw 0;
+      var tod=melToday();
+      name=(tod!==null&&t===tod)?'Today':fd(t,false);
+      var W=num(r.w),L=num(r.l),u=num(r.units),vd=num(r.void);
+      if(W===null||L===null||u===null) throw 0;
+      var n=W+L,hit=n?100*W/n:null;
+      return '<details class="tile"><summary><span class="tl">'+esc(name)+'</span><b class="tp">'+(hit===null?'—':hit.toFixed(1)+'%')+'</b></summary>'+
+        '<div class="td">'+
+        '<div class="kv"><span>Record</span><b>'+W+'-'+L+'</b></div>'+
+        '<div class="kv"><span>Units</span><b class="'+sc(u)+'">'+sg(u,2)+'u</b></div>'+
+        '<div class="kv"><span>Bets</span><b>'+n+(vd!==null&&vd>0?' ('+vd+' void)':'')+'</b></div>'+
+        '<div class="tm tn">Games of '+esc(fd(t,true))+'</div>'+
+        '</div></details>';
+    }catch(e){return '<div class="tile"><div class="tl">'+esc(name)+'</div><div class="tm">unavailable</div></div>'}
+  }
+
+  var VW=360,VL=30,VR=46,VT=10,VB=170,PW=VW-VL-VR;
+  function xAxis(s0,span){
+    var step=Math.max(1,Math.ceil(46/(span>0?PW/span:PW))),o='';
+    for(var d=0;d<=span;d+=step){
+      var x=VL+(span>0?d/span*PW:PW/2);
+      o+='<line class="gl" x1="'+x.toFixed(1)+'" x2="'+x.toFixed(1)+'" y1="'+VB+'" y2="'+(VB+3)+'"/><text class="ax" x="'+x.toFixed(1)+'" y="'+(VB+15)+'" text-anchor="middle">'+fd(s0+d*864e5,false)+'</text>';
+    }
+    return o;
+  }
+  function hitChart(){
+    var rows=R.rows,s0=R.s0,span=R.span;
+    var yy=function(v){return VB-Math.max(0,Math.min(100,v))/100*(VB-VT)};
+    var xx=function(r){return VL+(span>0?r.off/span*PW:PW/2)};
+    var o='';
+    [25,50,75].forEach(function(g){o+='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+yy(g)+'" y2="'+yy(g)+'"/>'});
+    [0,25,50,75,100].forEach(function(g){o+='<text class="ax" x="'+(VL-4)+'" y="'+(yy(g)+3.5)+'" text-anchor="end">'+g+'</text>'});
+    o+='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+VB+'" y2="'+VB+'"/>'+xAxis(s0,span);
+    var beRows=rows.filter(function(r){return r.be!==null});
+    if(beRows.length){
+      o+='<polyline class="be" fill="none" stroke="var(--muted)" stroke-width="1" stroke-dasharray="1 3" stroke-linecap="round" points="'+beRows.map(function(r){return xx(r).toFixed(1)+','+yy(r.be).toFixed(1)}).join(' ')+'"/>';
+      var b0=beRows[0];
+      o+='<text class="ax" x="'+(xx(b0)+2).toFixed(1)+'" y="'+(yy(b0.be)-3).toFixed(1)+'">break-even</text>';
+    }
+    var last=rows[rows.length-1],lab=[];
+    function line(cls,key,dash,stroke,on){
+      if(!on) return '';
+      var pts=rows.map(function(r){return xx(r).toFixed(1)+','+yy(r[key]).toFixed(1)}).join(' ');
+      lab.push({y:yy(last[key]),t:last[key].toFixed(1)+'%',c:stroke});
+      return '<polyline class="'+cls+'" fill="none" stroke="'+stroke+'" stroke-width="2" stroke-linejoin="round"'+(dash?' stroke-dasharray="6 4"':'')+' points="'+pts+'"/>'+
+        '<circle cx="'+xx(last).toFixed(1)+'" cy="'+yy(last[key]).toFixed(1)+'" r="3" fill="'+stroke+'"/>';
+    }
+    o+=line('l30','h30',true,'var(--text)',vis.b)+line('l7','h7',false,'var(--accent)',vis.a);
+    if(lab.length===2){
+      lab.sort(function(p,q){return p.y-q.y});
+      var gap=12-(lab[1].y-lab[0].y);
+      if(gap>0){lab[0].y-=gap/2;lab[1].y+=gap/2}
+    }
+    lab.forEach(function(l){o+='<text x="'+(xx(last)+6).toFixed(1)+'" y="'+(l.y+3.5).toFixed(1)+'" font-size="11" font-weight="700" fill="'+l.c+'">'+l.t+'</text>'});
+    var al='Rolling hit percentage. Latest: 7-day '+last.h7.toFixed(1)+'%, 30-day '+last.h30.toFixed(1)+'%'+(last.be!==null?', break-even '+last.be.toFixed(1)+'%':'')+'.';
+    return '<svg id="hitsvg" viewBox="0 0 '+VW+' 190" role="img" aria-label="'+esc(al)+'">'+o+'</svg>';
+  }
+  function cumChart(){
+    var rows=R.rows,span=R.span,u=rows.map(function(r){return r.cu});
+    var lo=Math.min(0,Math.min.apply(null,u)),hi=Math.max(0,Math.max.apply(null,u));
+    if(hi-lo<1){hi+=1;lo-=1}
+    var pad=(hi-lo)*.1;hi+=pad;lo-=pad;
+    var yy=function(v){return VB-(v-lo)/(hi-lo)*(VB-VT)};
+    var xx=function(r){return VL+(span>0?r.off/span*PW:PW/2)};
+    var o='<line class="gl" x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+VB+'" y2="'+VB+'"/>'+xAxis(R.s0,span);
+    var z=yy(0);
+    o+='<line x1="'+VL+'" x2="'+(VL+PW)+'" y1="'+z.toFixed(1)+'" y2="'+z.toFixed(1)+'" stroke="var(--muted)" stroke-width="1"/>';
+    var shown=[0];
+    var mx=Math.max.apply(null,u),mn=Math.min.apply(null,u);
+    if(mx>0&&yy(mx)<z-12) shown.push(mx);
+    if(mn<0&&yy(mn)>z+12) shown.push(mn);
+    shown.forEach(function(v){o+='<text class="ax" x="'+(VL-4)+'" y="'+(yy(v)+3.5).toFixed(1)+'" text-anchor="end">'+(v===0?'0':sg(v,1))+'</text>'});
+    var last=rows[rows.length-1],endv=last.cu,col=endv>0?'var(--good)':endv<0?'var(--warn)':'var(--muted)';
+    o+='<polyline fill="none" stroke="'+col+'" stroke-width="2" stroke-linejoin="round" points="'+rows.map(function(r){return xx(r).toFixed(1)+','+yy(r.cu).toFixed(1)}).join(' ')+'"/>'+
+      '<circle cx="'+xx(last).toFixed(1)+'" cy="'+yy(endv).toFixed(1)+'" r="3" fill="'+col+'"/>'+
+      '<text id="cumend" x="'+(xx(last)+6).toFixed(1)+'" y="'+(yy(endv)+3.5).toFixed(1)+'" font-size="11" font-weight="700" fill="'+col+'">'+sg(endv,2)+'u</text>';
+    return '<svg id="cumsvg" viewBox="0 0 '+VW+' 190" role="img" aria-label="'+esc('Cumulative units at flat 1u stake. Latest: '+sg(endv,2)+'u.')+'">'+o+'</svg>';
+  }
+  function renderHit(){
+    try{ var b=document.getElementById('hitbox'); if(b) b.innerHTML=hitChart(); }catch(e){}
+  }
+
+  function renderRecord(rec){
+    var box=$('rec'),out='',clip=false;
+    box.hidden=false;
+    if(!rec||typeof rec!=='object'||Array.isArray(rec)) throw new Error('bad record');
+    var asT=pd(rec.as_of),s0=pd(rec.season_start);
+    try{
+      out+='<h3>'+(asT===null?'Record':'As of '+esc(fd(asT,true)))+'</h3>';
+      var a=tile(rec.rolling_7d,7,'7-day'),b=tile(rec.rolling_30d,30,'30-day');
+      clip=a.clip||b.clip;
+      out+='<div class="tiles t3">'+dayTile(rec)+a.html+b.html+'</div>';
+      if(clip) out+='<p class="muted">Windows start at season start'+(s0!==null?' ('+esc(fd(s0,true))+')':'')+', so early in the season the 30-day figure equals season to date.</p>';
+    }catch(e){}
+    /* daily rows */
+    var rows=[];
+    try{
+      (Array.isArray(rec.daily)?rec.daily:[]).forEach(function(r){
+        try{
+          var t=pd(r&&r.date),cu=num(r&&r.cum_units),h7=num(r&&r.roll7&&r.roll7.hit),h30=num(r&&r.roll30&&r.roll30.hit);
+          if(t===null||cu===null||h7===null||h30===null) return;
+          if(s0!==null&&t<s0) return;
+          rows.push({t:t,cu:cu,h7:h7,h30:h30,be:num(r.roll7.breakeven)});
+        }catch(e){}
+      });
+      rows.sort(function(p,q){return p.t-q.t});
+    }catch(e){rows=[]}
+    if(rows.length){
+      var st=s0!==null?s0:rows[0].t;
+      rows.forEach(function(r){r.off=Math.round((r.t-st)/864e5)});
+      R={rows:rows,s0:st,span:Math.max(0,rows[rows.length-1].off)};
+      try{
+        var lr=rows[rows.length-1];
+        out+='<details class="gx"><summary><span class="gt">Rolling hit %</span><span class="gs">7d '+fix(lr.h7,1)+'% · 30d '+fix(lr.h30,1)+'%</span></summary><div class="lg" role="group" aria-label="Show or hide lines">'+
+          '<button type="button" class="lgb" data-k="a" aria-pressed="true"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="var(--accent)" stroke-width="2"/></svg>7d</button>'+
+          '<button type="button" class="lgb" data-k="b" aria-pressed="true"><svg width="22" height="8" aria-hidden="true"><line x1="0" x2="22" y1="4" y2="4" stroke="var(--text)" stroke-width="2" stroke-dasharray="6 4"/></svg>30d</button>'+
+          '<span class="lgs">dotted: break-even</span></div>'+
+          '<div class="cc" id="hitbox">'+hitChart()+'</div>'+
+          '<p class="muted">Early in the season the 7d and 30d lines overlap because both windows are clipped at the season start.</p></details>';
+      }catch(e){}
+      try{ out+='<details class="gx"><summary><span class="gt">Cumulative units</span><span class="gs">'+sg(rows[rows.length-1].cu,2)+'u</span></summary><div class="cc">'+cumChart()+'</div></details>'; }catch(e){}
+    }
+    /* CLV */
+    try{
+      var c=rec.clv,m=c&&num(c.mean_pct),cn=c&&num(c.n),sw=c&&num(c.settled_without_close);
+      if(c&&typeof c==='object'&&m!==null&&cn!==null){
+        out+='<p class="muted" style="font-size:.82rem;color:var(--text)">Closing-line value: mean '+sg(m,2)+'% over '+cn+' picks'+(sw!==null?'; '+sw+' settled picks have no closing price':'')+'.</p>'+
+          '<p class="muted it">CLV is only measured on picks with a captured closing price, so n is small.</p>';
+      }
+    }catch(e){}
+    /* footer */
+    try{
+      var nt=str(rec.note,''),fs=/^[\s\S]*?[.!?](\s|$)/.exec(nt),ft=(fs?fs[0]:nt).trim(),up=rec.updated?new Date(rec.updated):null;
+      var ts=(up&&!isNaN(up.getTime()))?'Updated '+up.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}):'';
+      if(ft||ts) out+='<p class="muted">'+esc(ft)+(ft&&ts?' ':'')+esc(ts)+'</p>';
+    }catch(e){}
+    box.innerHTML=out;
+    Array.prototype.forEach.call(box.querySelectorAll('.lgb'),function(bt){
+      bt.onclick=function(){var k=bt.getAttribute('data-k');vis[k]=!vis[k];bt.setAttribute('aria-pressed',String(vis[k]));renderHit()};
+    });
+  }
+  function recFail(){
+    try{var box=$('rec');box.hidden=false;box.innerHTML='<p class="muted">Record unavailable</p>'}catch(e){}
+  }
+  try{
+    fetch('record.json?v='+Date.now(),{cache:'no-store'})
+      .then(function(r){if(!r.ok) throw new Error('HTTP '+r.status);return r.json()})
+      .then(function(j){try{setResults(j);if(D){games()}}catch(e){}try{renderRecord(j)}catch(e){recFail()}})
+      .catch(recFail);
+  }catch(e){recFail()}
+
+  fetch('data.json?v='+Date.now(),{cache:'no-store'})
+    .then(function(r){if(!r.ok) throw new Error('HTTP '+r.status);return r.json()})
+    .then(init)
+    .catch(fail);
+})();
+</script>
+
+
+</body>
+</html>
