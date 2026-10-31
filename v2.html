@@ -173,6 +173,7 @@ details.fold.inner{background:transparent;margin:10px 0}
 <body><div class="wrap">
   <h1>NBA Alt-Over Dashboard <span style="font-weight:400;color:var(--muted);font-size:.8rem">v2</span></h1>
   <p class="sub" id="sub">Loading slate…</p>
+  <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
   <div id="ver"></div>
 
   <section id="slate" aria-label="Today's slate" hidden>
@@ -189,8 +190,6 @@ details.fold.inner{background:transparent;margin:10px 0}
     <h3>Projected totals <span class="meta">(interest only, not a bet)</span></h3>
     <div class="ts"><table id="totals" style="min-width:0;border:0"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table></div>
   </section>
-
-  <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
 
   <div id="results"></div>
 
@@ -518,7 +517,6 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       '<p class="range">'+fdateY(rg.from)+' → '+fdateY(rg.to)+' · as of latest settled day</p>'+
       '<h3>By odds band</h3>'+bandTable(rows)+shadowBlock(rows)+'<p class="cap">Green: hit rate above break-even; red: below. Intensity scales with the gap (capped at 15 pp); grey when n&lt;10.</p>'+
       '<h3>By stat</h3>'+stTable(rows)+
-      '<h3>Calibration</h3>'+calTable(rows)+
       '<details class="fold inner" id="grFold"'+(GR_OPEN?' open':'')+'><summary><span>Over time <span class="meta">charts</span></span></summary>'+overTime(ROWS,rg)+'</details>'+
       '</details>';
     box.innerHTML=h;
