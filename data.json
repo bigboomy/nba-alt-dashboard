@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-31T21:11:26.930796+00:00",
+  "generated": "2026-10-31T22:11:12.891246+00:00",
   "date": "Sun 1 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -71,6 +71,87 @@
         }
       ],
       "engine": "nba-session v3.7"
+    },
+    {
+      "id": "CLE@MIL",
+      "tip": "11:10",
+      "proj": 235.8,
+      "mkt": 235.5,
+      "ctx": "CLE: Tyson, Tomlin out, Thomas Q. MIL injuries not found",
+      "picks": [],
+      "engine": "nba-session v3.7"
+    },
+    {
+      "id": "SAC@MEM",
+      "tip": "11:10",
+      "proj": 232.9,
+      "mkt": 229.5,
+      "ctx": "Small samples; MEM Morant reported out",
+      "picks": [],
+      "engine": "nba-session v3.7"
+    },
+    {
+      "id": "MIN@SAS",
+      "tip": "11:10",
+      "proj": 219.1,
+      "mkt": 227.5,
+      "ctx": "MIN B2B, Edwards/DiVincenzo out, Gobert Q; SAS Harris/Quaintance out",
+      "picks": [
+        {
+          "p": "Stephon Castle",
+          "t": "SAS",
+          "s": "PTS",
+          "std": 16.5,
+          "alt": 13.5,
+          "o": 1.48,
+          "h": "100% (4/4)",
+          "e": 3.8,
+          "st": "3",
+          "opp": "103.26 (4/26 ⬇)",
+          "f": [
+            "n=4",
+            "EARLY",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "Keldon Johnson",
+          "t": "SAS",
+          "s": "REB",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.4,
+          "h": "100% (4/4)",
+          "e": 3.4,
+          "st": "3",
+          "opp": "41.3 (6/26 ⬇)",
+          "f": [
+            "n=4",
+            "EARLY",
+            "Std?",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "De'Aaron Fox",
+          "t": "SAS",
+          "s": "AST",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.53,
+          "h": "100% (4/4)",
+          "e": 3.2,
+          "st": "3",
+          "opp": "24.04 (6/26 ⬇)",
+          "f": [
+            "n=4",
+            "EARLY",
+            "Std?",
+            "U0.5"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.7"
     }
   ],
   "totals": [
@@ -83,6 +164,21 @@
       "ATL@NOP",
       237.6,
       241.5
+    ],
+    [
+      "CLE@MIL",
+      235.8,
+      235.5
+    ],
+    [
+      "SAC@MEM",
+      232.9,
+      229.5
+    ],
+    [
+      "MIN@SAS",
+      219.1,
+      227.5
     ]
   ]
 }
