@@ -3,6 +3,14 @@
   "changes": [
     {
       "date": "2026-11-02",
+      "version": "totals tracker v1",
+      "component": "dashboard, 17:07 resolve, Sheet `totals` tab",
+      "title": "Model totals tracked as notional 1u bets",
+      "change": "Every analysed game's projected and market total (with Pointsbet over/under prices from 2 Nov) is recorded in a separate `totals` tab, settled from free final scores including overtime, and shown in a collapsed Model totals section with record, units, ROI and hit rate by window, gap bucket and side; the 22 Oct–1 Nov Notion log is shown separately at an assumed 1.91.",
+      "aim": "See whether the projected-total lean beats the market, kept apart from the prop record."
+    },
+    {
+      "date": "2026-11-02",
       "version": "slate task 2-Nov (c)",
       "component": "slate (hourly 02:07–13:07)",
       "title": "Market total prices kept for the totals tracker",

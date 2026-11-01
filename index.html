@@ -202,6 +202,7 @@ details.fold.inner{background:transparent;margin:10px 0}
   </section>
 
   <div id="results"></div>
+  <div id="totalsSec"></div>
 
   <details class="legend" style="margin-top:16px">
     <summary>How to read this</summary>
@@ -774,6 +775,86 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     fetch('schedule.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
       .then(function(j){SCHED=j;nextLine()}).catch(function(){});
   }
+  /* ---------- model totals (spec: claude/NBA_Totals_Tracker_Spec.md rev b, §B rules) ---------- */
+  var TOT_URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vRk37gFqBJkXc1gzISmNg3mHtoYKWgw1976R-8Pe3Imo66e5r09-2aC5M5jvHBjlAbqpzATPX4HCaRL/pub?gid=849274921&single=true&output=csv";
+  var TOT=null,TOTFAIL=false,TWIN='season',TSRC='slate',TOT_OPEN=false,TASSUME=1.91;
+  function totBets(objs){
+    return objs.map(function(o){
+      var d=String(o.date||'').slice(0,10);if(!/^\d{4}-\d{2}-\d{2}$/.test(d))return null;
+      var proj=numOrNull(o.proj),mkt=numOrNull(o.mkt),act=numOrNull(o.actual),st=String(o.status||'').trim();
+      var r={date:d,game:o.game||'',tip:o.tip||'',proj:proj,mkt:mkt,actual:act,src:String(o.source||'').trim()||'slate',status:st};
+      if(proj===null||mkt===null){r.nobet=true;return r}
+      r.gap=proj-mkt;
+      if(Math.abs(r.gap)<1){r.nobet=true;return r}
+      r.side=r.gap>0?'O':'U';
+      var p=numOrNull(r.side==='O'?o.mkt_o:o.mkt_u);
+      r.assumed=p===null;r.price=p===null?TASSUME:p;
+      if(st==='void'){r.result='VOID';r.pl=0}
+      else if(st==='final'&&act!==null){
+        r.result=act===mkt?'PUSH':((act>mkt)===(r.side==='O')?'W':'L');
+        r.pl=r.result==='W'?r.price-1:r.result==='L'?-1:0;
+      }
+      return r;
+    }).filter(Boolean);
+  }
+  function totSum(rows){
+    var s={w:0,l:0,p:0,v:0,u:0,pr:0,a:0};
+    rows.forEach(function(r){if(r.result==='W'){s.w++;s.u+=r.pl;s.pr+=r.price}else if(r.result==='L'){s.l++;s.u+=r.pl;s.pr+=r.price}else if(r.result==='PUSH')s.p++;else if(r.result==='VOID')s.v++;if(r.result&&r.assumed&&r.src==='slate')s.a++});
+    s.n=s.w+s.l;s.hit=s.n?100*s.w/s.n:null;s.roi=s.n?100*s.u/s.n:null;s.be=s.n?100/(s.pr/s.n):null;return s;
+  }
+  function totRow(label,s){
+    return '<tr><td>'+label+'</td><td>'+s.n+'</td><td>'+s.w+'-'+s.l+(s.p?'-'+s.p:'')+'</td><td>'+(s.hit===null?'—':s.hit.toFixed(1)+'%')+'</td><td class="'+cls(s.u)+'">'+sg(s.u,2)+'u</td><td class="'+cls(s.roi)+'">'+(s.roi===null?'—':sg(s.roi,1)+'%')+'</td></tr>';
+  }
+  function totTable(items){
+    return '<div class="ts"><table style="min-width:0"><thead><tr><th></th><th>n</th><th>W-L</th><th>Hit</th><th>Units</th><th>ROI</th></tr></thead><tbody>'+
+      items.map(function(x){return totRow(x[0],totSum(x[1]))}).join('')+'</tbody></table></div>';
+  }
+  function renderTotals(){
+    var box=$('totalsSec');if(!box) return;
+    var head='<details class="fold" id="totFold"'+(TOT_OPEN?' open':'')+'><summary><span>Model totals <span class="meta">notional 1u on every lean</span></span></summary>';
+    if(TOTFAIL||!TOT){box.innerHTML=head+'<div class="none">'+(TOTFAIL?'Totals data isn\'t available yet (the Sheet\'s totals tab isn\'t published).':'Loading…')+'</div></details>';bindTot();return}
+    var src=TOT.filter(function(r){return TSRC==='slate'?r.src==='slate':r.src!=='slate'});
+    var bets=src.filter(function(r){return !r.nobet}),settled=bets.filter(function(r){return r.result});
+    var asOf=null;settled.forEach(function(r){if(!asOf||r.date>asOf)asOf=r.date});
+    var segS='<div class="seg" role="group" aria-label="Source">'+[['slate','Priced (from 2 Nov)'],['hist','History @1.91']].map(function(x){return '<button type="button" class="tab" data-ts="'+x[0]+'" aria-pressed="'+(TSRC===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
+    var segW='<div class="seg" role="group" aria-label="Window">'+[['7d','7d'],['30d','30d'],['season','Season']].map(function(x){return '<button type="button" class="tab" data-tw="'+x[0]+'" aria-pressed="'+(TWIN===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
+    var h=head+segS;
+    if(TSRC==='hist') h+='<p class="cap" style="margin:0 0 8px">Notion log 22 Oct–1 Nov: no prices were recorded, so every bet is scored at an assumed 1.91. Treat units as indicative; hit rate is exact.</p>';
+    if(!asOf){h+='<div class="none">No settled '+(TSRC==='slate'?'priced ':'')+'totals yet.'+(TSRC==='slate'?' Priced rows start with games analysed from 2 Nov.':'')+'</div></details>';box.innerHTML=h;bindTot();return}
+    var rg=CORE.windowRange(asOf,TWIN==='7d'?7:TWIN==='30d'?30:0),w=CORE.inRange(settled,rg),s=totSum(w);
+    var nob=CORE.inRange(src.filter(function(r){return r.nobet&&r.status==='final'}),rg).length;
+    function k(l,v,sub,c){return '<div class="kpi"><span class="kl">'+l+'</span><b class="'+(c||'')+'">'+v+'</b><span class="ks">'+sub+'</span></div>'}
+    h+=segW+'<p class="range">'+fdateY(rg.from)+' → '+fdateY(rg.to)+' · as of latest settled game</p>'+
+      '<div class="kpis">'+k('Record',s.w+'-'+s.l+(s.p?'-'+s.p:''),'n '+s.n+(s.v?' · '+s.v+' void':'')+(nob?' · '+nob+' no bet':''))+
+      k('Units',sg(s.u,2)+'u','hit '+(s.hit===null?'—':s.hit.toFixed(1)+'%'),cls(s.u))+
+      k('ROI',s.roi===null?'—':sg(s.roi,1)+'%','units / n',cls(s.roi))+
+      k('Hit vs B/E',s.hit===null?'—':s.hit.toFixed(1)+'%','B/E '+(s.be===null?'—':s.be.toFixed(1)+'%'))+'</div>'+
+      '<p class="cap" style="margin:0 0 4px">Break-even ≈ 52.4% at 1.91.'+(s.a?' '+s.a+' bet'+(s.a===1?'':'s')+' had no Pointsbet price and use an assumed 1.91.':'')+'</p>';
+    var g=function(lo,hi){return w.filter(function(r){var a=Math.abs(r.gap);return a>=lo&&a<hi})};
+    h+='<h3>By gap (|proj − market|)</h3>'+totTable([['1–2.9',g(1,3)],['3–4.9',g(3,5)],['5+',g(5,1e9)],['All',w]]);
+    h+='<h3>By side</h3>'+totTable([['Over',w.filter(function(r){return r.side==='O'})],['Under',w.filter(function(r){return r.side==='U'})]]);
+    var last=settled.slice().sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:(b.tip||'').localeCompare(a.tip||'')}).slice(0,10);
+    h+='<h3>Last 10 settled</h3><div class="rl">'+last.map(function(r){
+      var pc=r.result==='W'?'W':r.result==='L'?'L':'P';
+      return '<div class="rr"><div><b>'+esc(r.game)+'</b> '+(r.side==='O'?'Over':'Under')+' '+r.mkt+'</div><div class="rt">@'+r.price.toFixed(2)+(r.assumed?'*':'')+'<span class="pill '+pc+'">'+r.result+'</span></div>'+
+        '<div class="m">'+fdate(r.date)+' · proj '+r.proj.toFixed(1)+' · actual '+(r.actual===null?'—':r.actual)+'</div><div class="m rt '+cls(r.pl)+'">'+sg(r.pl,2)+'u</div></div>';
+    }).join('')+'</div><p class="cap">Lean = Over if proj &gt; market, Under if below; no bet when the gap is under 1 point. 1u at the main-line price; * = price assumed 1.91. Actual includes overtime.</p></details>';
+    box.innerHTML=h;bindTot();
+  }
+  function bindTot(){
+    var f=$('totFold');if(f)f.addEventListener('toggle',function(){TOT_OPEN=this.open});
+    Array.prototype.forEach.call(document.querySelectorAll('#totalsSec [data-tw]'),function(b){b.onclick=function(){TWIN=b.getAttribute('data-tw');renderTotals()}});
+    Array.prototype.forEach.call(document.querySelectorAll('#totalsSec [data-ts]'),function(b){b.onclick=function(){TSRC=b.getAttribute('data-ts');renderTotals()}});
+  }
+  function loadTotals(){
+    fetch(TOT_URL,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){
+      if(/^\s*</.test(t))throw 0;
+      var objs=CORE.parseCSV(t);if(objs.length&&!('game_key' in objs[0]))throw 0;
+      TOT=totBets(objs);TOTFAIL=false;
+      if(!TOT.some(function(r){return r.src==='slate'&&r.result})&&TSRC==='slate'&&TOT.some(function(r){return r.result}))TSRC='hist';
+      renderTotals();
+    }).catch(function(){TOTFAIL=true;renderTotals()});
+  }
   function slateFail(){$('slate').hidden=false;$('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>'}
   function foot(){
     var t=FETCHED?FETCHED.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}):'not loaded';
@@ -797,6 +878,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
     .then(init).catch(slateFail);
   loadSched();
+  renderTotals();loadTotals();
   foot();
 })();
 
