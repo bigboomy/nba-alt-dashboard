@@ -3,6 +3,14 @@
   "changes": [
     {
       "date": "2026-11-02",
+      "version": "resolve task 2-Nov",
+      "component": "17:07 resolve",
+      "title": "Evening heads-up for tomorrow's games",
+      "change": "Every 17:07 run now sends one notification that ends with tomorrow's first tip, game count, last tip and the time of the first slate run, even when nothing needed settling.",
+      "aim": "Let Mitch know each evening when the first picks will arrive."
+    },
+    {
+      "date": "2026-11-02",
       "version": "nba-session v3.8",
       "component": "slate",
       "title": "Five-game samples can now qualify",
