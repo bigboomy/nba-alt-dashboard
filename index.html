@@ -668,7 +668,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   /* ---------- run status ----------
      Must match the slate / resolve schedules (architecture doc §4). Melbourne time. */
-  var RUNS={first:6*60+7,last:13*60+7,every:60,ahead:150,grace:20,resolve:17*60+7};
+  var RUNS={first:2*60+7,last:13*60+7,every:60,ahead:150,grace:20,resolve:17*60+7};
   var REFRESH=null,REFRESH_AT=0;
   function melNow(){
     var f=new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Melbourne',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
@@ -730,9 +730,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   setInterval(function(){if(D)runStatus()},60000);
   document.addEventListener('visibilitychange',function(){if(!document.hidden&&D){var n=melNow();if(n.min>=RUNS.first)reloadData()}});
   /* ---------- next slate line ----------
-     Rule owned by the Analyst (matches the slate task): games tipping before 06:37 are never analysed;
-     first slate run = earliest HH:07 (HH 06–13) with tip−150 ≤ run ≤ tip−30. schedule.json is written by the 17:07 resolve. */
-  var SCHED=null,EARLY=6*60+37;
+     Rule owned by the Analyst (matches the slate task, 2 Nov b): every game is analysed;
+     first slate run = earliest HH:07 (HH 02–13) with tip−150 ≤ run ≤ tip−30. schedule.json is written by the 17:07 resolve. */
+  var SCHED=null,FIRST_H=2,LAST_H=13;
   var TEAMC={'Atlanta Hawks':'ATL','Boston Celtics':'BOS','Brooklyn Nets':'BKN','Charlotte Hornets':'CHA','Chicago Bulls':'CHI','Cleveland Cavaliers':'CLE','Dallas Mavericks':'DAL','Denver Nuggets':'DEN','Detroit Pistons':'DET','Golden State Warriors':'GSW','Houston Rockets':'HOU','Indiana Pacers':'IND','Los Angeles Clippers':'LAC','Los Angeles Lakers':'LAL','Memphis Grizzlies':'MEM','Miami Heat':'MIA','Milwaukee Bucks':'MIL','Minnesota Timberwolves':'MIN','New Orleans Pelicans':'NOP','New York Knicks':'NYK','Oklahoma City Thunder':'OKC','Orlando Magic':'ORL','Philadelphia 76ers':'PHI','Phoenix Suns':'PHX','Portland Trail Blazers':'POR','Sacramento Kings':'SAC','San Antonio Spurs':'SAS','Toronto Raptors':'TOR','Utah Jazz':'UTA','Washington Wizards':'WAS'};
   function melOf(d){
     var f=new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Melbourne',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23',weekday:'short'});
@@ -740,7 +740,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return {iso:o.year+'-'+o.month+'-'+o.day,min:(+o.hour)*60+(+o.minute),wd:o.weekday};
   }
   function hhmm(m){return ('0'+Math.floor(m/60)).slice(-2)+':'+('0'+m%60).slice(-2)}
-  function firstRun(tip){for(var h=6;h<=13;h++){var t=h*60+7;if(t>=tip-150&&t<=tip-30)return t}return null}
+  function firstRun(tip){for(var h=FIRST_H;h<=LAST_H;h++){var t=h*60+7;if(t>=tip-150&&t<=tip-30)return t}return null}
   function addDays(iso,k){var d=new Date(iso+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+k);return d.toISOString().slice(0,10)}
   function nextLine(){
     var el=$('nextl');if(!el) return;
@@ -754,14 +754,13 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       (byDay[m.iso]=byDay[m.iso]||[]).push({id:a+'@'+h,min:m.min,wd:m.wd});
     });
     function describe(iso,list,label){
-      var ok=list.filter(function(g){return g.min>=EARLY}).sort(function(a,b){return a.min-b.min});
+      var ok=list.slice().sort(function(a,b){return a.min-b.min});
       var f=ok[0],fr=firstRun(f.min);
       return '<b>Next — '+label+':</b> first tip '+hhmm(f.min)+' '+esc(f.id)+' ('+ok.length+' game'+(ok.length===1?'':'s')+', last tip '+hhmm(ok[ok.length-1].min)+')'+
         ' · first slate run '+(fr===null?'—':hhmm(fr));
     }
     var html='';
-    Object.keys(byDay).forEach(function(k){byDay[k]=byDay[k].filter(function(g){return g.min>=EARLY});if(!byDay[k].length)delete byDay[k]});
-    var todayLeft=(byDay[now.iso]||[]).filter(function(g){return g.min>=EARLY&&!done[g.id]&&g.min-30>now.min});
+    var todayLeft=(byDay[now.iso]||[]).filter(function(g){return !done[g.id]&&g.min-30>now.min});
     if(todayLeft.length) html=describe(now.iso,todayLeft,'today');
     else{
       var tom=addDays(now.iso,1),days=Object.keys(byDay).filter(function(k){return k>now.iso}).sort();

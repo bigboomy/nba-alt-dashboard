@@ -6,7 +6,7 @@
       "version": "dashboard 2-Nov",
       "component": "dashboard, 17:07 resolve",
       "title": "Next slate line on the dashboard",
-      "change": "Today's slate now shows the next game day's first tip, game count, last tip and first slate run, from a schedule.json the 17:07 resolve refreshes each evening via the free events call; the status banner now reflects the 06:07 start.",
+      "change": "Today's slate now shows the next game day's first tip, game count, last tip and first slate run, from a schedule.json the 17:07 resolve refreshes each evening via the free events call; the status banner now follows the 02:07 start.",
       "aim": "Know at a glance when tomorrow's picks will start arriving without waiting for the evening notification."
     },
     {
