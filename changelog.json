@@ -3,6 +3,22 @@
   "changes": [
     {
       "date": "2026-11-02",
+      "version": "nba-session v3.8",
+      "component": "slate",
+      "title": "Five-game samples can now qualify",
+      "change": "The shrink weight drops from 30 to 15 pseudo-games, so a player's 5 current-season games count for 25% of the estimate instead of 14% and a 4/5 or 5/5 record can pass the +3pp test.",
+      "aim": "Stop early-season slates going blank (2 Nov had none) while keeping the price as the main anchor; the review watches whether predicted hit rate drifts above actual."
+    },
+    {
+      "date": "2026-11-02",
+      "version": "nba-session v3.8",
+      "component": "slate",
+      "title": "Player logs now come from the right season",
+      "change": "StatMuse names seasons by the year they end, so current-season logs now use 2027 and a 2026 table is treated as last season.",
+      "aim": "Make sure picks are judged on this season's games, not last season's."
+    },
+    {
+      "date": "2026-11-02",
       "version": "slate task 2-Nov",
       "component": "slate (hourly 06:07–13:07), capture (06:48–14:48)",
       "title": "Slate and capture start two hours earlier",
