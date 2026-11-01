@@ -3,6 +3,14 @@
   "changes": [
     {
       "date": "2026-11-02",
+      "version": "slate task 2-Nov (c)",
+      "component": "slate (hourly 02:07–13:07)",
+      "title": "Market total prices kept for the totals tracker",
+      "change": "Each analysed game now also records the Pointsbet Over and Under prices at the market total (mkt_o, mkt_u) from the totals call the slate already makes, at no extra Odds API cost; picks and the totals row are unchanged.",
+      "aim": "Score every model totals lean as a notional 1u bet at the real price, so the separate totals tracker shows what the model would have done."
+    },
+    {
+      "date": "2026-11-02",
       "version": "dashboard 2-Nov",
       "component": "dashboard, 17:07 resolve",
       "title": "Next slate line on the dashboard",
