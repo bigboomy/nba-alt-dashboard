@@ -58,6 +58,8 @@ tr:last-child td{border-bottom:0}
 .gh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .pick .cbtn{grid-column:1/-1;justify-self:end;margin-top:6px}
 .stale{background:var(--card);border:1px solid var(--warn);color:var(--warn);border-radius:10px;padding:9px 12px;margin-bottom:12px;font-size:.85rem;font-weight:600}
+.nextl{margin:-4px 0 12px;font-size:.82rem;color:var(--muted);line-height:1.45;overflow-wrap:anywhere}
+.nextl b{color:var(--text);font-weight:600}
 .stale.info{border-color:var(--line,#334);color:inherit;font-weight:500}
 .stale.info b{font-weight:700}
 .stale .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px;background:var(--warn)}
@@ -186,6 +188,7 @@ details.fold.inner{background:transparent;margin:10px 0}
   <section id="slate" aria-label="Today's slate" hidden>
     <h2 class="sec">Today's slate</h2>
     <div class="stale" id="stale" role="status" hidden></div>
+    <p class="nextl" id="nextl" hidden></p>
     <div class="stats" id="stats"></div>
     <div class="stats today" id="today" hidden></div>
     <div class="bar">
@@ -665,7 +668,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   /* ---------- run status ----------
      Must match the slate / resolve schedules (architecture doc §4). Melbourne time. */
-  var RUNS={first:8*60+7,last:13*60+7,every:60,ahead:150,grace:20,resolve:17*60+7};
+  var RUNS={first:6*60+7,last:13*60+7,every:60,ahead:150,grace:20,resolve:17*60+7};
   var REFRESH=null,REFRESH_AT=0;
   function melNow(){
     var f=new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Melbourne',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
@@ -702,6 +705,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     }
     box.className='stale '+cls;box.innerHTML='<span class="dot" aria-hidden="true"></span>'+msg;box.hidden=false;
     schedule(n,nr,lr,today,inWindow);
+    nextLine();
   }
   function schedule(n,nr,lr,today,inWindow){
     if(REFRESH&&REFRESH_AT>Date.now()) return;      // a reload is already booked; don't push it back
@@ -717,6 +721,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   function reloadData(){
     REFRESH=null;REFRESH_AT=0;
+    loadSched();
     fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(init).catch(function(){runStatus()});
     fetch(CSV_URL,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){
       var rows=CORE.normRows(CORE.parseCSV(t));if(rows.length){ROWS=rows;FETCHED=new Date();foot();renderRecord();if(D){games();runStatus()}}
@@ -724,6 +729,52 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   setInterval(function(){if(D)runStatus()},60000);
   document.addEventListener('visibilitychange',function(){if(!document.hidden&&D){var n=melNow();if(n.min>=RUNS.first)reloadData()}});
+  /* ---------- next slate line ----------
+     Rule owned by the Analyst (matches the slate task): games tipping before 06:37 are never analysed;
+     first slate run = earliest HH:07 (HH 06–13) with tip−150 ≤ run ≤ tip−30. schedule.json is written by the 17:07 resolve. */
+  var SCHED=null,EARLY=6*60+37;
+  var TEAMC={'Atlanta Hawks':'ATL','Boston Celtics':'BOS','Brooklyn Nets':'BKN','Charlotte Hornets':'CHA','Chicago Bulls':'CHI','Cleveland Cavaliers':'CLE','Dallas Mavericks':'DAL','Denver Nuggets':'DEN','Detroit Pistons':'DET','Golden State Warriors':'GSW','Houston Rockets':'HOU','Indiana Pacers':'IND','Los Angeles Clippers':'LAC','Los Angeles Lakers':'LAL','Memphis Grizzlies':'MEM','Miami Heat':'MIA','Milwaukee Bucks':'MIL','Minnesota Timberwolves':'MIN','New Orleans Pelicans':'NOP','New York Knicks':'NYK','Oklahoma City Thunder':'OKC','Orlando Magic':'ORL','Philadelphia 76ers':'PHI','Phoenix Suns':'PHX','Portland Trail Blazers':'POR','Sacramento Kings':'SAC','San Antonio Spurs':'SAS','Toronto Raptors':'TOR','Utah Jazz':'UTA','Washington Wizards':'WAS'};
+  function melOf(d){
+    var f=new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Melbourne',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23',weekday:'short'});
+    var o={};f.formatToParts(d).forEach(function(x){o[x.type]=x.value});
+    return {iso:o.year+'-'+o.month+'-'+o.day,min:(+o.hour)*60+(+o.minute),wd:o.weekday};
+  }
+  function hhmm(m){return ('0'+Math.floor(m/60)).slice(-2)+':'+('0'+m%60).slice(-2)}
+  function firstRun(tip){for(var h=6;h<=13;h++){var t=h*60+7;if(t>=tip-150&&t<=tip-30)return t}return null}
+  function addDays(iso,k){var d=new Date(iso+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+k);return d.toISOString().slice(0,10)}
+  function nextLine(){
+    var el=$('nextl');if(!el) return;
+    if(!SCHED||!Array.isArray(SCHED.games)){el.hidden=true;return}
+    var now=melNow(),done={};
+    if(D&&slateIso()===now.iso) G.forEach(function(g){done[g.id]=1});
+    var byDay={};
+    SCHED.games.forEach(function(x){
+      var d=new Date(x.tip_utc);if(isNaN(d)) return;
+      var a=TEAMC[x.away]||x.away,h=TEAMC[x.home]||x.home,m=melOf(d);
+      (byDay[m.iso]=byDay[m.iso]||[]).push({id:a+'@'+h,min:m.min,wd:m.wd});
+    });
+    function describe(iso,list,label){
+      var ok=list.filter(function(g){return g.min>=EARLY}).sort(function(a,b){return a.min-b.min});
+      var f=ok[0],fr=firstRun(f.min);
+      return '<b>Next — '+label+':</b> first tip '+hhmm(f.min)+' '+esc(f.id)+' ('+ok.length+' game'+(ok.length===1?'':'s')+', last tip '+hhmm(ok[ok.length-1].min)+')'+
+        ' · first slate run '+(fr===null?'—':hhmm(fr));
+    }
+    var html='';
+    Object.keys(byDay).forEach(function(k){byDay[k]=byDay[k].filter(function(g){return g.min>=EARLY});if(!byDay[k].length)delete byDay[k]});
+    var todayLeft=(byDay[now.iso]||[]).filter(function(g){return g.min>=EARLY&&!done[g.id]&&g.min-30>now.min});
+    if(todayLeft.length) html=describe(now.iso,todayLeft,'today');
+    else{
+      var tom=addDays(now.iso,1),days=Object.keys(byDay).filter(function(k){return k>now.iso}).sort();
+      if(byDay[tom]) html=describe(tom,byDay[tom],'tomorrow');
+      else if(days.length&&days[0]<=addDays(now.iso,3)) html='No NBA games tomorrow. '+describe(days[0],byDay[days[0]],byDay[days[0]][0].wd);
+      else html='No NBA games listed for tomorrow yet.';
+    }
+    el.innerHTML=html;el.hidden=false;
+  }
+  function loadSched(){
+    fetch('schedule.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
+      .then(function(j){SCHED=j;nextLine()}).catch(function(){});
+  }
   function slateFail(){$('slate').hidden=false;$('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>'}
   function foot(){
     var t=FETCHED?FETCHED.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}):'not loaded';
@@ -746,6 +797,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   fetch('data.json?v='+Date.now(),{cache:'no-store'})
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
     .then(init).catch(slateFail);
+  loadSched();
   foot();
 })();
 

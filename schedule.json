@@ -1,0 +1,50 @@
+{
+ "generated": "2026-11-01T21:41:41+00:00",
+ "games": [
+  {
+   "away": "Boston Celtics",
+   "home": "Orlando Magic",
+   "tip_utc": "2026-11-01T20:40:56Z"
+  },
+  {
+   "away": "Brooklyn Nets",
+   "home": "Indiana Pacers",
+   "tip_utc": "2026-11-01T22:10:00Z"
+  },
+  {
+   "away": "Los Angeles Clippers",
+   "home": "Golden State Warriors",
+   "tip_utc": "2026-11-02T01:40:00Z"
+  },
+  {
+   "away": "Toronto Raptors",
+   "home": "Los Angeles Lakers",
+   "tip_utc": "2026-11-02T02:10:00Z"
+  },
+  {
+   "away": "San Antonio Spurs",
+   "home": "New York Knicks",
+   "tip_utc": "2026-12-25T17:10:00Z"
+  },
+  {
+   "away": "Miami Heat",
+   "home": "Boston Celtics",
+   "tip_utc": "2026-12-25T19:40:00Z"
+  },
+  {
+   "away": "Philadelphia 76ers",
+   "home": "Los Angeles Lakers",
+   "tip_utc": "2026-12-25T22:10:00Z"
+  },
+  {
+   "away": "Oklahoma City Thunder",
+   "home": "Minnesota Timberwolves",
+   "tip_utc": "2026-12-26T01:10:00Z"
+  },
+  {
+   "away": "Denver Nuggets",
+   "home": "Golden State Warriors",
+   "tip_utc": "2026-12-26T03:40:00Z"
+  }
+ ]
+}
