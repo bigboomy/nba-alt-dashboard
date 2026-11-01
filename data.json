@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-01T20:19:40.510738+00:00",
+  "generated": "2026-11-01T21:36:40.739749+00:00",
   "date": "Mon 2 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
-  "engine": "nba-session v3.7",
+  "engine": "nba-session v3.8",
   "games": [
     {
       "id": "BOS@ORL",
@@ -18,10 +18,27 @@
       "id": "BKN@IND",
       "tip": "09:10",
       "proj": 231.8,
-      "mkt": 230.5,
-      "ctx": "IND missing Haliburton/Zubac/McConnell; Toppin, Nesmith DTD",
-      "picks": [],
-      "engine": "nba-session v3.7"
+      "mkt": 229.5,
+      "ctx": "Re-run; injury report not confirmed",
+      "picks": [
+        {
+          "p": "Obi Toppin",
+          "t": "IND",
+          "s": "PTS",
+          "std": 12.5,
+          "alt": 10.5,
+          "o": 1.53,
+          "h": "100% (5/5 CS)",
+          "e": 7.9,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "U1",
+            "EARLY"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
     }
   ],
   "totals": [
@@ -33,7 +50,7 @@
     [
       "BKN@IND",
       231.8,
-      230.5
+      229.5
     ]
   ]
 }
