@@ -1,214 +1,39 @@
 {
-  "generated": "2026-10-31T23:09:38.600134+00:00",
-  "date": "Sun 1 Nov 2026",
+  "generated": "2026-11-01T20:19:40.510738+00:00",
+  "date": "Mon 2 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
   "engine": "nba-session v3.7",
   "games": [
     {
-      "id": "PHI@CHA",
+      "id": "BOS@ORL",
+      "tip": "07:40",
+      "proj": 230.8,
+      "mkt": 222.5,
+      "ctx": "ORL missing Banchero/Suggs/Isaac/Penda",
+      "picks": [],
+      "engine": "nba-session v3.7"
+    },
+    {
+      "id": "BKN@IND",
       "tip": "09:10",
-      "proj": 202.0,
-      "mkt": 211.5,
-      "ctx": "PHI B2B, LeBron/Embiid out, Brown Q; CHA White/Knueppel out",
-      "picks": [
-        {
-          "p": "Tyrese Maxey",
-          "t": "PHI",
-          "s": "PTS",
-          "std": 28.5,
-          "alt": 25.5,
-          "o": 1.5,
-          "h": "100% (6/6 CS)",
-          "e": 5.6,
-          "st": "2.5",
-          "opp": "111.68 (12/26 -)",
-          "f": [
-            "B2B",
-            "DEPLETED",
-            "U0.25"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.7"
-    },
-    {
-      "id": "ATL@NOP",
-      "tip": "10:10",
-      "proj": 237.6,
-      "mkt": 241.5,
-      "ctx": "Murray/Poole Q, Missi out",
-      "picks": [
-        {
-          "p": "Aaron Wiggins",
-          "t": "ATL",
-          "s": "PTS",
-          "std": 12.5,
-          "alt": 9.5,
-          "o": 1.42,
-          "h": "100% (6/6 CS)",
-          "e": 4.9,
-          "st": "4",
-          "opp": "120.85 (20/25 ⬆)",
-          "f": [
-            "U1"
-          ]
-        },
-        {
-          "p": "Luguentz Dort",
-          "t": "ATL",
-          "s": "PTS",
-          "std": 7.5,
-          "alt": 5.5,
-          "o": 1.4,
-          "h": "100% (6/6 CS)",
-          "e": 4.8,
-          "st": "4",
-          "opp": "120.85 (20/25 ⬆)",
-          "f": [
-            "U1"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.7"
-    },
-    {
-      "id": "CLE@MIL",
-      "tip": "11:10",
-      "proj": 235.8,
-      "mkt": 235.5,
-      "ctx": "CLE: Tyson, Tomlin out, Thomas Q. MIL injuries not found",
+      "proj": 231.8,
+      "mkt": 230.5,
+      "ctx": "IND missing Haliburton/Zubac/McConnell; Toppin, Nesmith DTD",
       "picks": [],
-      "engine": "nba-session v3.7"
-    },
-    {
-      "id": "SAC@MEM",
-      "tip": "11:10",
-      "proj": 232.9,
-      "mkt": 229.5,
-      "ctx": "Small samples; MEM Morant reported out",
-      "picks": [],
-      "engine": "nba-session v3.7"
-    },
-    {
-      "id": "MIN@SAS",
-      "tip": "11:10",
-      "proj": 219.1,
-      "mkt": 227.5,
-      "ctx": "MIN B2B, Edwards/DiVincenzo out, Gobert Q; SAS Harris/Quaintance out",
-      "picks": [
-        {
-          "p": "Stephon Castle",
-          "t": "SAS",
-          "s": "PTS",
-          "std": 16.5,
-          "alt": 13.5,
-          "o": 1.48,
-          "h": "100% (4/4)",
-          "e": 3.8,
-          "st": "3",
-          "opp": "103.26 (4/26 ⬇)",
-          "f": [
-            "n=4",
-            "EARLY",
-            "U0.5"
-          ]
-        },
-        {
-          "p": "Keldon Johnson",
-          "t": "SAS",
-          "s": "REB",
-          "std": 3.5,
-          "alt": 3.5,
-          "o": 1.4,
-          "h": "100% (4/4)",
-          "e": 3.4,
-          "st": "3",
-          "opp": "41.3 (6/26 ⬇)",
-          "f": [
-            "n=4",
-            "EARLY",
-            "Std?",
-            "U0.5"
-          ]
-        },
-        {
-          "p": "De'Aaron Fox",
-          "t": "SAS",
-          "s": "AST",
-          "std": 5.5,
-          "alt": 5.5,
-          "o": 1.53,
-          "h": "100% (4/4)",
-          "e": 3.2,
-          "st": "3",
-          "opp": "24.04 (6/26 ⬇)",
-          "f": [
-            "n=4",
-            "EARLY",
-            "Std?",
-            "U0.5"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.7"
-    },
-    {
-      "id": "OKC@HOU",
-      "tip": "11:40",
-      "proj": 220.4,
-      "mkt": 219.5,
-      "ctx": "OKC short-handed (Holmgren, J.Williams, Wallace, Caruso out); Sengun day-to-day",
-      "picks": [
-        {
-          "p": "Amen Thompson",
-          "t": "HOU",
-          "s": "PTS",
-          "std": 16.5,
-          "alt": 14.5,
-          "o": 1.53,
-          "h": "100% (6/6)",
-          "e": 5.0,
-          "st": "4",
-          "opp": "106.21 (3/25 ⬇)",
-          "f": [
-            "U1"
-          ]
-        }
-      ],
       "engine": "nba-session v3.7"
     }
   ],
   "totals": [
     [
-      "PHI@CHA",
-      202.0,
-      211.5
+      "BOS@ORL",
+      230.8,
+      222.5
     ],
     [
-      "ATL@NOP",
-      237.6,
-      241.5
-    ],
-    [
-      "CLE@MIL",
-      235.8,
-      235.5
-    ],
-    [
-      "SAC@MEM",
-      232.9,
-      229.5
-    ],
-    [
-      "MIN@SAS",
-      219.1,
-      227.5
-    ],
-    [
-      "OKC@HOU",
-      220.4,
-      219.5
+      "BKN@IND",
+      231.8,
+      230.5
     ]
   ]
 }
