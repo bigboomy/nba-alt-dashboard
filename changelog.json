@@ -2,6 +2,14 @@
   "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
   "changes": [
     {
+      "date": "2026-11-02",
+      "version": "slate task 2-Nov",
+      "component": "slate (hourly 06:07–13:07), capture (06:48–14:48)",
+      "title": "Slate and capture start two hours earlier",
+      "change": "The slate now runs hourly from 06:07 (was 08:07) and analyses games tipping from 06:37, and capture runs from 06:48 (was 08:48), still at minute :48.",
+      "aim": "Cover early tips such as 07:40 games, which the 08:07 start skipped."
+    },
+    {
       "date": "2026-11-01",
       "version": "slate task 1-Nov",
       "component": "slate (hourly 08:07–13:07), capture (08:48–14:48)",
