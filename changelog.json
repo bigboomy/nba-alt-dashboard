@@ -3,6 +3,14 @@
   "changes": [
     {
       "date": "2026-11-02",
+      "version": "slate task 2-Nov (b)",
+      "component": "slate (hourly 02:07–13:07), capture (03:48–14:48), resolve",
+      "title": "Every game included, whatever the tip time",
+      "change": "The early-morning cut-off is removed: the slate now runs hourly from 02:07 and capture from 03:48, so games tipping as early as about 04:00 Melbourne time get picks and a closing price, and the evening heads-up counts every game.",
+      "aim": "Stop skipping early weekend and holiday tips now that Mitch wants all games covered."
+    },
+    {
+      "date": "2026-11-02",
       "version": "resolve task 2-Nov",
       "component": "17:07 resolve",
       "title": "Evening heads-up for tomorrow's games",
