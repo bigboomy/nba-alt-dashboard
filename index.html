@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NBA Alt-Over Dashboard v2</title>
 <meta name="description" content="Alt-over picks, results by odds band, calibration and today's slate.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NBA Alts">
+<meta name="theme-color" content="#0e1116">
 <style>
 :root{--bg:#f6f7f9;--card:#fff;--text:#14171c;--muted:#5f6b7a;--line:#e3e7ec;--accent:#1d4ed8;--good:#0f7b3f;--warn:#b45309;--chip:#eef2f7}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1116;--card:#171b22;--text:#e8ebf0;--muted:#97a3b3;--line:#262c36;--accent:#6ea0ff;--good:#4ade80;--warn:#fbbf24;--chip:#202632}}
@@ -204,6 +209,10 @@ details.fold.inner{background:transparent;margin:10px 0}
   <div id="results"></div>
   <div id="totalsSec"></div>
 
+  <details class="legend" id="alerts" style="margin-top:16px">
+    <summary>Pick alerts on this phone</summary>
+    <div id="alertBody"><p>Checking…</p></div>
+  </details>
   <details class="legend" style="margin-top:16px">
     <summary>How to read this</summary>
     <p><b>Settled</b> = W or L; void and push are excluded. <b>Units</b> are flat 1u (win = odds − 1, loss = −1). <b>Break-even</b> = 100 ÷ mean odds. <b>Gap</b> = hit% minus break-even, in percentage points. <b>CLV</b> is measured only on picks with a captured closing price. Windows are calendar days ending on the latest settled day, clipped at the season start. Band colours: blue &lt; 1.55, orange 1.55–1.79, magenta 1.80+.</p>
@@ -855,6 +864,41 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       renderTotals();
     }).catch(function(){TOTFAIL=true;renderTotals()});
   }
+  /* ---------- web-push alerts (sender: tools/nba_push.py in the slate task) ---------- */
+  var VAPID_PUB='BAz_aD_630fWpE5YorIANph4tGZ4JUfxDRHYaX_2ljyWtFdlPUW7nxMeR_QDMbV1rJvCuM1BQQamnBDwg8gq444';
+  function b64u(s){s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';var r=atob(s),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a}
+  function standalone(){return (window.matchMedia&&matchMedia('(display-mode: standalone)').matches)||navigator.standalone===true}
+  function alertUI(){
+    var box=$('alertBody');if(!box) return;
+    var ok='serviceWorker' in navigator&&'PushManager' in window&&'Notification' in window;
+    if(!ok){
+      var ios=/iPhone|iPad|iPod/.test(navigator.userAgent);
+      box.innerHTML='<p>'+(ios&&!standalone()?'Alerts work only from the home-screen app. In Safari tap Share → <b>Add to Home Screen</b> (if the icon already exists, delete it and add it again so it picks up the new app settings), then open the dashboard from that icon.':'This browser can\'t receive web-push alerts. On iPhone you need iOS 16.4 or later and the home-screen app.')+'</p>';return;
+    }
+    navigator.serviceWorker.register('sw.js').then(function(reg){return navigator.serviceWorker.ready}).then(function(reg){
+      return reg.pushManager.getSubscription().then(function(sub){
+        if(sub&&Notification.permission==='granted'){
+          box.innerHTML='<p><b>Alerts are on for this phone.</b> The slate sends one alert per run that makes picks, and the icon badge shows today\'s pick count.</p>'+
+            '<p><button class="cbtn" id="copySub" type="button">Copy device code</button> <button class="cbtn" id="sample" type="button">Show a sample</button></p>'+
+            '<p class="cap">Send the device code to the Architect once; it goes into the slate task, not the public site.</p>';
+          $('copySub').onclick=function(){copyText(JSON.stringify(sub),this,'Copy device code')};
+          $('sample').onclick=function(){reg.showNotification('NBA picks: 2 new',{body:'BOS@ORL 07:40 · Tatum PTS O24.5 @1.83',tag:'nba-sample',icon:'icon-192.png'});if(navigator.setAppBadge)navigator.setAppBadge(2)};
+        } else if(Notification.permission==='denied'){
+          box.innerHTML='<p>Notifications are blocked for this app. Turn them on in iPhone Settings → Notifications → NBA Alts, then reopen.</p>';
+        } else {
+          box.innerHTML='<p>Get an alert and an icon badge when a slate run makes picks.</p><p><button class="cbtn main" id="enableAlerts" type="button">Enable alerts</button></p>';
+          $('enableAlerts').onclick=function(){
+            Notification.requestPermission().then(function(p){
+              if(p!=='granted'){alertUI();return}
+              return reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:b64u(VAPID_PUB)}).then(function(){alertUI()});
+            }).catch(function(e){box.insertAdjacentHTML('beforeend','<p class="cap">Could not enable: '+esc(e&&e.message||e)+'</p>')});
+          };
+        }
+      });
+    }).catch(function(e){box.innerHTML='<p class="cap">Alerts unavailable: '+esc(e&&e.message||e)+'</p>'});
+  }
+  function clearBadge(){try{if(navigator.clearAppBadge)navigator.clearAppBadge()}catch(e){}}
+  document.addEventListener('visibilitychange',function(){if(!document.hidden)clearBadge()});
   function slateFail(){$('slate').hidden=false;$('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>'}
   function foot(){
     var t=FETCHED?FETCHED.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}):'not loaded';
@@ -879,6 +923,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     .then(init).catch(slateFail);
   loadSched();
   renderTotals();loadTotals();
+  alertUI();clearBadge();
   foot();
 })();
 
