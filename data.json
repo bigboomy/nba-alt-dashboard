@@ -1,94 +1,50 @@
 {
-  "generated": "2026-11-02T00:15:38.881450+00:00",
-  "date": "Mon 2 Nov 2026",
+  "generated": "2026-11-02T22:09:46.875235+00:00",
+  "date": "Tue 3 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
   "engine": "nba-session v3.8",
   "games": [
     {
-      "id": "BOS@ORL",
-      "tip": "07:40",
-      "proj": 230.8,
-      "mkt": 222.5,
-      "ctx": "ORL missing Banchero/Suggs/Isaac/Penda",
-      "picks": [],
-      "engine": "nba-session v3.7"
-    },
-    {
-      "id": "BKN@IND",
-      "tip": "09:10",
-      "proj": 231.8,
+      "id": "OKC@CLE",
+      "tip": "11:10",
+      "proj": 222.0,
       "mkt": 229.5,
-      "ctx": "Re-run; injury report not confirmed",
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "OKC missing Holmgren, J.Williams, Caruso, Wallace, Topic, Sorber; CLE missing Tyson, Tomlin, Watson DTD",
       "picks": [
         {
-          "p": "Obi Toppin",
-          "t": "IND",
+          "p": "Evan Mobley",
+          "t": "CLE",
           "s": "PTS",
-          "std": 12.5,
-          "alt": 10.5,
+          "std": 17.5,
+          "alt": 15.5,
           "o": 1.53,
-          "h": "100% (5/5 CS)",
-          "e": 7.9,
+          "h": "83% (5/6)",
+          "e": 4.4,
           "st": "4",
-          "opp": "—",
+          "opp": "106.21 (3/25 ⬇)",
           "f": [
             "U1",
-            "EARLY"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "LAC@GSW",
-      "tip": "12:40",
-      "proj": 223.8,
-      "mkt": 220.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "Curry, Draymond, Butler, Moody, Porzingis OUT (GSW); Ingram, Strus, Beal OUT (LAC)",
-      "picks": [],
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "TOR@LAL",
-      "tip": "13:10",
-      "proj": 228.8,
-      "mkt": 224.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "Kawhi OUT (TOR); Doncic/Reaves listed available",
-      "picks": [
-        {
-          "p": "Austin Reaves",
-          "t": "LAL",
-          "s": "PTS",
-          "std": 23.5,
-          "alt": 20.5,
-          "o": 1.48,
-          "h": "80% (4/5)",
-          "e": 3.1,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "U1"
+            "OPP⬇3"
           ]
         },
         {
-          "p": "R.J. Barrett",
-          "t": "TOR",
-          "s": "PTS",
-          "std": 21.5,
-          "alt": 18.5,
-          "o": 1.48,
-          "h": "100% (4/4)",
-          "e": 6.8,
-          "st": "3",
-          "opp": "114.43 (14/25 –)",
+          "p": "Jarrett Allen",
+          "t": "CLE",
+          "s": "REB",
+          "std": 7.5,
+          "alt": 7.5,
+          "o": 1.5,
+          "h": "83% (5/6)",
+          "e": 4.8,
+          "st": "4",
+          "opp": "45.29 (17/25 –)",
           "f": [
-            "EARLY",
-            "U0.5"
+            "U1",
+            "OPP–17",
+            "[Std?]"
           ]
         }
       ],
@@ -97,24 +53,9 @@
   ],
   "totals": [
     [
-      "BOS@ORL",
-      230.8,
-      222.5
-    ],
-    [
-      "BKN@IND",
-      231.8,
+      "OKC@CLE",
+      222.0,
       229.5
-    ],
-    [
-      "LAC@GSW",
-      223.8,
-      220.5
-    ],
-    [
-      "TOR@LAL",
-      228.8,
-      224.5
     ]
   ]
 }
