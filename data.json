@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T22:09:46.875235+00:00",
+  "generated": "2026-11-02T23:12:32.968335+00:00",
   "date": "Tue 3 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -49,6 +49,269 @@
         }
       ],
       "engine": "nba-session v3.8"
+    },
+    {
+      "id": "ATL@IND",
+      "tip": "11:40",
+      "proj": 236.6,
+      "mkt": 228.5,
+      "ctx": "IND short-handed: Haliburton, Siakam, Zubac out; IND on B2B",
+      "picks": [],
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "BKN@NYK",
+      "tip": "11:40",
+      "proj": 217.0,
+      "mkt": 219.5,
+      "ctx": "BKN 0-5; Randle/MPJ missed BKN's last 2 games, not on report",
+      "picks": [
+        {
+          "p": "Karl-Anthony Towns",
+          "t": "NYK",
+          "s": "PTS",
+          "std": 20.5,
+          "alt": 18.5,
+          "o": 1.53,
+          "h": "100% (5/5)",
+          "e": 7.9,
+          "st": "4",
+          "opp": "116.11 (19/27 -)",
+          "f": [
+            "U1"
+          ]
+        }
+      ],
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "DET@CHA",
+      "tip": "11:40",
+      "proj": 198.2,
+      "mkt": 209.5,
+      "ctx": "DET 5-1, top defence; low-pace game",
+      "picks": [
+        {
+          "p": "Duncan Robinson",
+          "t": "DET",
+          "s": "PTS",
+          "std": 13.5,
+          "alt": 11.5,
+          "o": 1.5,
+          "h": "100% (6/6)",
+          "e": 9.5,
+          "st": "4",
+          "opp": "111.66 (11/27 -)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Duncan Robinson",
+          "t": "DET",
+          "s": "AST",
+          "std": 1.5,
+          "alt": 1.5,
+          "o": 1.4,
+          "h": "100% (6/6)",
+          "e": 8.2,
+          "st": "4",
+          "opp": "25.93 (16/27 -)",
+          "f": [
+            "Std?",
+            "U1"
+          ]
+        },
+        {
+          "p": "Cade Cunningham",
+          "t": "DET",
+          "s": "AST",
+          "std": 7.5,
+          "alt": 7.5,
+          "o": 1.48,
+          "h": "80% (4/5)",
+          "e": 3.1,
+          "st": "4",
+          "opp": "25.93 (16/27 -)",
+          "f": [
+            "Std?",
+            "U1"
+          ]
+        }
+      ],
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "CHI@PHI",
+      "tip": "11:40",
+      "proj": 224.8,
+      "mkt": 239.5,
+      "ctx": "Embiid questionable; CHI worst DRtg, fastest pace",
+      "picks": [
+        {
+          "p": "Tyrese Maxey",
+          "t": "PHI",
+          "s": "PTS",
+          "std": 26.5,
+          "alt": 23.5,
+          "o": 1.44,
+          "h": "100% (5/5)",
+          "e": 7.6,
+          "st": "4",
+          "opp": "121.77 (25/27 ⬆)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Caleb Wilson",
+          "t": "CHI",
+          "s": "PTS",
+          "std": 19.5,
+          "alt": 16.5,
+          "o": 1.42,
+          "h": "83% (5/6)",
+          "e": 3.7,
+          "st": "4",
+          "opp": "103.62 (1/27 ⬇)",
+          "f": [
+            "U1"
+          ]
+        }
+      ],
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "WAS@ORL",
+      "tip": "11:40",
+      "proj": 223.6,
+      "mkt": 225.5,
+      "ctx": "ORL: Banchero, Black, Isaac out; ORL on B2B",
+      "picks": [],
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "SAC@DAL",
+      "tip": "12:10",
+      "proj": 234.8,
+      "mkt": 231.5,
+      "ctx": "LaVine questionable; Irving doubtful; SAC 0-6",
+      "picks": [
+        {
+          "p": "Domantas Sabonis",
+          "t": "SAC",
+          "s": "REB",
+          "std": 13.5,
+          "alt": 13.5,
+          "o": 1.74,
+          "h": "100% (6/6)",
+          "e": 7.8,
+          "st": "4",
+          "opp": "42.27 (7/25 ⬇)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Domantas Sabonis",
+          "t": "SAC",
+          "s": "AST",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.53,
+          "h": "83% (5/6)",
+          "e": 4.4,
+          "st": "4",
+          "opp": "30.67 (27/27 ⬆)",
+          "f": [
+            "Std?",
+            "U1"
+          ]
+        }
+      ],
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "NOP@MEM",
+      "tip": "12:10",
+      "proj": 229.0,
+      "mkt": 232.5,
+      "ctx": "MEM 6-0; Pippen doubtful, D.Murray questionable",
+      "picks": [
+        {
+          "p": "Zion Williamson",
+          "t": "NOP",
+          "s": "PTS",
+          "std": 20.5,
+          "alt": 18.5,
+          "o": 1.5,
+          "h": "80% (4/5)",
+          "e": 3.3,
+          "st": "4",
+          "opp": "105.44 (3/27 ⬇)",
+          "f": [
+            "U1"
+          ]
+        }
+      ],
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "MIL@MIN",
+      "tip": "12:10",
+      "proj": 232.6,
+      "mkt": 230.5,
+      "ctx": "Edwards out; LaMelo questionable",
+      "picks": [
+        {
+          "p": "Ryan Rollins",
+          "t": "MIL",
+          "s": "AST",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.44,
+          "h": "83% (5/6)",
+          "e": 4.0,
+          "st": "4",
+          "opp": "24.07 (6/27 ⬇)",
+          "f": [
+            "Std?",
+            "U1"
+          ]
+        },
+        {
+          "p": "Jaden McDaniels",
+          "t": "MIN",
+          "s": "REB",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.87,
+          "h": "86% (6/7)",
+          "e": 4.6,
+          "st": "3",
+          "opp": "42.57 (8/25 ⬇)",
+          "f": [
+            "U0.5"
+          ]
+        }
+      ],
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "engine": "nba-session v3.8"
     }
   ],
   "totals": [
@@ -56,6 +319,46 @@
       "OKC@CLE",
       222.0,
       229.5
+    ],
+    [
+      "ATL@IND",
+      236.6,
+      228.5
+    ],
+    [
+      "BKN@NYK",
+      217.0,
+      219.5
+    ],
+    [
+      "DET@CHA",
+      198.2,
+      209.5
+    ],
+    [
+      "CHI@PHI",
+      224.8,
+      239.5
+    ],
+    [
+      "WAS@ORL",
+      223.6,
+      225.5
+    ],
+    [
+      "SAC@DAL",
+      234.8,
+      231.5
+    ],
+    [
+      "NOP@MEM",
+      229.0,
+      232.5
+    ],
+    [
+      "MIL@MIN",
+      232.6,
+      230.5
     ]
   ]
 }
