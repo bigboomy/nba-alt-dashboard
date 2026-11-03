@@ -2,6 +2,14 @@
   "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
   "changes": [
     {
+      "date": "2026-11-03",
+      "version": "slate task 3-Nov (alerts)",
+      "component": "slate (hourly)",
+      "title": "Pick alerts now go to Telegram",
+      "change": "Each slate run that makes picks sends one Telegram message to @NBAboomybot with every game, tip and pick (line, odds, hit rate, stars, stake, safer rung), built by a hash-pinned script; Claude push is now only the fallback if Telegram fails.",
+      "aim": "Get the full pick list on the phone the moment it's made, without opening the dashboard."
+    },
+    {
       "date": "2026-11-02",
       "version": "totals tracker v1",
       "component": "dashboard, 17:07 resolve, Sheet `totals` tab",
