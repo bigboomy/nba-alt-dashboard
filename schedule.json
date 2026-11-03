@@ -1,80 +1,30 @@
 {
- "generated": "2026-11-02T06:13:45+00:00",
+ "generated": "2026-11-03T06:09:16+00:00",
  "games": [
-  {
-   "away": "Oklahoma City Thunder",
-   "home": "Cleveland Cavaliers",
-   "tip_utc": "2026-11-03T00:10:00Z"
-  },
-  {
-   "away": "Atlanta Hawks",
-   "home": "Indiana Pacers",
-   "tip_utc": "2026-11-03T00:40:00Z"
-  },
-  {
-   "away": "Brooklyn Nets",
-   "home": "New York Knicks",
-   "tip_utc": "2026-11-03T00:40:00Z"
-  },
-  {
-   "away": "Detroit Pistons",
-   "home": "Charlotte Hornets",
-   "tip_utc": "2026-11-03T00:40:00Z"
-  },
-  {
-   "away": "Chicago Bulls",
-   "home": "Philadelphia 76ers",
-   "tip_utc": "2026-11-03T00:40:00Z"
-  },
-  {
-   "away": "Washington Wizards",
-   "home": "Orlando Magic",
-   "tip_utc": "2026-11-03T00:40:00Z"
-  },
-  {
-   "away": "Sacramento Kings",
-   "home": "Dallas Mavericks",
-   "tip_utc": "2026-11-03T01:10:00Z"
-  },
-  {
-   "away": "New Orleans Pelicans",
-   "home": "Memphis Grizzlies",
-   "tip_utc": "2026-11-03T01:10:00Z"
-  },
-  {
-   "away": "Milwaukee Bucks",
-   "home": "Minnesota Timberwolves",
-   "tip_utc": "2026-11-03T01:10:00Z"
-  },
-  {
-   "away": "Boston Celtics",
-   "home": "Houston Rockets",
-   "tip_utc": "2026-11-03T01:40:00Z"
-  },
-  {
-   "away": "Utah Jazz",
-   "home": "San Antonio Spurs",
-   "tip_utc": "2026-11-03T01:40:00Z"
-  },
-  {
-   "away": "Portland Trail Blazers",
-   "home": "Denver Nuggets",
-   "tip_utc": "2026-11-03T02:10:00Z"
-  },
-  {
-   "away": "Phoenix Suns",
-   "home": "Golden State Warriors",
-   "tip_utc": "2026-11-03T03:10:00Z"
-  },
   {
    "away": "Toronto Raptors",
    "home": "Los Angeles Clippers",
-   "tip_utc": "2026-11-03T03:10:00Z"
+   "tip_utc": "2026-11-03T03:13:00Z"
   },
   {
-   "away": "Miami Heat",
-   "home": "Los Angeles Lakers",
-   "tip_utc": "2026-11-03T03:10:00Z"
+   "away": "Philadelphia 76ers",
+   "home": "Detroit Pistons",
+   "tip_utc": "2026-11-05T00:10:00Z"
+  },
+  {
+   "away": "Charlotte Hornets",
+   "home": "Brooklyn Nets",
+   "tip_utc": "2026-11-05T00:40:00Z"
+  },
+  {
+   "away": "Minnesota Timberwolves",
+   "home": "Houston Rockets",
+   "tip_utc": "2026-11-05T01:40:00Z"
+  },
+  {
+   "away": "Dallas Mavericks",
+   "home": "San Antonio Spurs",
+   "tip_utc": "2026-11-05T02:40:00Z"
   },
   {
    "away": "San Antonio Spurs",
