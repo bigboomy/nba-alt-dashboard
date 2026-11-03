@@ -62,6 +62,14 @@ tr:last-child td{border-bottom:0}
 .bar .cbtn{flex:1}
 .gh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .pick .cbtn{grid-column:1/-1;justify-self:end;margin-top:6px}
+.pick .cbar{grid-column:1/-1;display:flex;gap:6px;justify-content:flex-end;align-items:center;margin-top:6px;flex-wrap:wrap}
+.pick .cbar .cbtn{grid-column:auto;margin:0}
+.cbtn.on{border-color:var(--good);color:var(--good);font-weight:700}
+.cbtn.onp{border-color:var(--warn);color:var(--warn);font-weight:700}
+.cbtn:disabled{opacity:.45;cursor:default}
+.chip.took{border-color:var(--good);color:var(--good)}.chip.pass{border-color:var(--warn);color:var(--warn)}
+.lockbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 10px;font-size:.82rem;color:var(--muted)}
+.lockbar input{font:inherit;font-size:16px;width:7em;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text)}
 .stale{background:var(--card);border:1px solid var(--warn);color:var(--warn);border-radius:10px;padding:9px 12px;margin-bottom:12px;font-size:.85rem;font-weight:600}
 .nextl{margin:-4px 0 12px;font-size:.82rem;color:var(--muted);line-height:1.45;overflow-wrap:anywhere}
 .nextl b{color:var(--text);font-weight:600}
@@ -193,6 +201,7 @@ details.fold.inner{background:transparent;margin:10px 0}
   <section id="slate" aria-label="Today's slate" hidden>
     <h2 class="sec">Today's slate</h2>
     <div class="stale" id="stale" role="status" hidden></div>
+    <div class="lockbar" id="lockbar" hidden></div>
     <p class="nextl" id="nextl" hidden></p>
     <div class="stats" id="stats"></div>
     <div class="stats today" id="today" hidden></div>
@@ -529,20 +538,24 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var box=$('rec');
     if(CSVFAIL){box.innerHTML='<div class="msg">Record unavailable — the Sheet couldn\'t be read</div>';return}
     if(!ROWS){box.innerHTML='<p class="load">Loading record…</p>';return}
+    var VR=viewRows(ROWS);
     var asOf=CORE.asOfDate(ROWS);
     if(!asOf){box.innerHTML='<p class="load">No settled picks yet.</p>';return}
-    var rg=winRange(asOf),rows=CORE.inRange(ROWS,rg);
+    var rg=winRange(asOf),rows=CORE.inRange(VR,rg),allw=CORE.inRange(ROWS,rg);
+    var vseg=CHOICES_OK?'<div class="seg" role="group" aria-label="View">'+[['model','Model'],['mine','My bets'],['nopass','Model − passes']].map(function(x){return '<button type="button" class="tab" data-v="'+x[0]+'" aria-pressed="'+(RVIEW===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>':'';
     var seg='<div class="seg" role="group" aria-label="Window">'+[['7d','7d'],['30d','30d'],['season','Season']].map(function(x){return '<button type="button" class="tab" data-w="'+x[0]+'" aria-pressed="'+(WIN===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
-    var h='<details class="fold" id="recFold"'+(REC_OPEN?' open':'')+'><summary><span>Record <span class="meta">'+fdate(rg.from)+' → '+fdate(rg.to)+'</span></span></summary>'+seg+
+    var h='<details class="fold" id="recFold"'+(REC_OPEN?' open':'')+'><summary><span>Record <span class="meta">'+fdate(rg.from)+' → '+fdate(rg.to)+(RVIEW!=='model'&&CHOICES_OK?' · '+(RVIEW==='mine'?'my bets':'minus passes'):'')+'</span></span></summary>'+vseg+seg+
       '<p class="range">'+fdateY(rg.from)+' → '+fdateY(rg.to)+' · as of latest settled day</p>'+
       '<h3>By odds band</h3>'+bandTable(rows)+shadowBlock(rows)+'<p class="cap">Green: hit rate above break-even; red: below. Intensity scales with the gap (capped at 15 pp); grey when n&lt;10.</p>'+
       '<h3>By stat</h3>'+stTable(rows)+
-      '<details class="fold inner" id="grFold"'+(GR_OPEN?' open':'')+'><summary><span>Over time <span class="meta">charts</span></span></summary>'+overTime(ROWS,rg)+'</details>'+
+      (CHOICES_OK?callsTable(allw):'')+
+      '<details class="fold inner" id="grFold"'+(GR_OPEN?' open':'')+'><summary><span>Over time <span class="meta">charts</span></span></summary>'+overTime(VR,rg)+'</details>'+
       '</details>';
     box.innerHTML=h;
     $('recFold').addEventListener('toggle',function(){REC_OPEN=this.open});
     $('grFold').addEventListener('toggle',function(){GR_OPEN=this.open});
     Array.prototype.forEach.call(box.querySelectorAll('[data-w]'),function(b){b.onclick=function(){WIN=b.getAttribute('data-w');renderRecord()}});
+    Array.prototype.forEach.call(box.querySelectorAll('[data-v]'),function(b){b.onclick=function(){RVIEW=b.getAttribute('data-v');renderRecord()}});
     $('results').innerHTML=resultsHtml(ROWS,asOf);
     todayTiles();
   }
@@ -594,14 +607,24 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     Array.prototype.forEach.call($('tabs').children,function(b){b.onclick=function(){sel=b.getAttribute('data-id');tabs();games()}});
   }
   function pickHtml(p,gi,i){
-    var x=resFor(p),rc='',pill='';
+    var x=resFor(p),rc='',pill='',g=G[gi],cb='',cc='';
+    if(CHOICE_URL&&g){
+      var pid=pidFor(g,p),ch=pid?(CHOICES[pid]||''):'',tipped=hasTipped(g);
+      if(ch==='TOOK')cc='<span class="chip took">✅ Taken</span>';
+      if(ch==='PASS')cc='<span class="chip pass">🚫 Passed</span>';
+      if(UNLOCKED){
+        if(!pid) cb='<div class="cbar"><span class="cap" style="margin:0">Recording to the Sheet…</span></div>';
+        else cb='<div class="cbar"><button class="cbtn'+(ch==='TOOK'?' on':'')+'" type="button" data-ch="TOOK" data-pid="'+esc(pid)+'">✅ Took it</button>'+
+          '<button class="cbtn'+(ch==='PASS'?' onp':'')+'" type="button" data-ch="PASS" data-pid="'+esc(pid)+'"'+(tipped?' disabled title="Locked at tip"':'')+'>🚫 Pass</button></div>';
+      }
+    }
     if(x){var rcm={W:' rw',L:' rl',PUSH:' rv',VOID:' rv'};rc=rcm[x.result]||'';
       pill='<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span>'}
     return '<div class="pick'+rc+'"><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' @ '+oddsSpan(p.o)+'</div>'+
       '<div class="meta">Hit '+esc(p.h)+' · '+stars(p.stN)+' · Opp '+esc(p.opp)+'</div><div class="edge">+'+p.e.toFixed(1)+'pp edge</div>'+
       (p.sa!==null?'<div class="safe">Safer rung: O '+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
-      '<div class="chips">'+pill+p.f.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'?' w':'')+'">'+esc(f)+'</span>'}).join('')+'</div>'+
-      '<button class="cbtn" type="button" data-copy="pick" data-g="'+gi+'" data-i="'+i+'">Copy pick</button></div>';
+      '<div class="chips">'+pill+cc+p.f.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'?' w':'')+'">'+esc(f)+'</span>'}).join('')+'</div>'+
+      cb+'<button class="cbtn" type="button" data-copy="pick" data-g="'+gi+'" data-i="'+i+'">Copy pick</button></div>';
   }
   function gameHtml(g,gi){
     var head='<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+'</h2><p>'+esc(g.ctx)+(g.ctx?' · ':'')+'proj total '+esc(fix(g.proj,1))+' (mkt '+esc(fix(g.mkt,1))+')</p></div><button class="cbtn" type="button" data-copy="game" data-g="'+gi+'">Copy game</button></div>';
@@ -613,6 +636,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var html='';
     G.forEach(function(g,gi){if(sel!=='ALL'&&g.id!==sel)return;try{html+=gameHtml(g,gi)}catch(e){}});
     $('games').innerHTML=html;
+    Array.prototype.forEach.call($('games').querySelectorAll('[data-ch]'),function(b){b.onclick=function(){setChoice(b)}});
     Array.prototype.forEach.call($('games').querySelectorAll('[data-copy]'),function(b){
       b.onclick=function(){var g=G[+b.getAttribute('data-g')];if(!g)return;
         if(b.getAttribute('data-copy')==='game')copyText(gameTxt(g),b,'Copy game');
@@ -899,6 +923,63 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   function clearBadge(){try{if(navigator.clearAppBadge)navigator.clearAppBadge()}catch(e){}}
   document.addEventListener('visibilitychange',function(){if(!document.hidden)clearBadge()});
+  /* ---------- your calls: Took it / Pass (Apps Script web app on the Sheet; writes need the PIN) ---------- */
+  var CHOICE_URL='';   // set to the deployed Apps Script web-app URL
+  var CHOICES={},CHOICES_OK=false,UNLOCKED=false,RVIEW='model',PIN=null;
+  try{PIN=localStorage.getItem('nba_pin')}catch(e){}
+  function pidFor(g,p){
+    var iso=slateIso();if(!ROWS||!iso)return null;var k=rkey(p.p,p.s,p.alt),id=null;
+    ROWS.forEach(function(r){if(r.date===iso&&r.game===g.id&&rkey(r.player,r.stat,r.alt)===k)id=r.id});
+    return id;
+  }
+  function hasTipped(g){
+    var iso=slateIso(),n=melNow();if(!iso)return true;if(iso<n.iso)return true;if(iso>n.iso)return false;
+    var m=/^(\d{1,2}):(\d{2})/.exec(g.tip||'');return m?n.min>=(+m[1])*60+(+m[2]):false;
+  }
+  function post(body){return fetch(CHOICE_URL,{method:'POST',body:JSON.stringify(body)}).then(function(r){return r.json()})}
+  function loadChoices(){
+    if(!CHOICE_URL)return;
+    fetch(CHOICE_URL+'?v='+Date.now()).then(function(r){return r.json()}).then(function(j){
+      CHOICES={};(j.choices||[]).forEach(function(c){if(c.choice)CHOICES[c.pick_id]=c.choice});CHOICES_OK=true;
+      if(D)games();renderRecord();
+    }).catch(function(){});
+    if(PIN)post({op:'check',pin:PIN}).then(function(j){UNLOCKED=!!j.ok;if(!j.ok){PIN=null;try{localStorage.removeItem('nba_pin')}catch(e){}}lockUI();if(D)games()}).catch(function(){lockUI()});
+    else lockUI();
+  }
+  function lockUI(){
+    var b=$('lockbar');if(!b||!CHOICE_URL)return;b.hidden=false;
+    if(UNLOCKED){b.innerHTML='<span>✏️ Marking picks as you.</span><button class="cbtn" type="button" id="lockOut">Lock</button>';
+      $('lockOut').onclick=function(){UNLOCKED=false;PIN=null;try{localStorage.removeItem('nba_pin')}catch(e){}lockUI();games()};return}
+    b.innerHTML='<button class="cbtn" type="button" id="unlockBtn">🔒 Mark my picks</button>';
+    $('unlockBtn').onclick=function(){
+      b.innerHTML='<input id="pinIn" type="password" inputmode="numeric" autocomplete="off" placeholder="PIN" aria-label="PIN"><button class="cbtn main" type="button" id="pinGo">Unlock</button><span id="pinMsg"></span>';
+      $('pinIn').focus();
+      var go=function(){var v=$('pinIn').value.trim();if(!v)return;$('pinMsg').textContent='Checking…';
+        post({op:'check',pin:v}).then(function(j){if(j.ok){PIN=v;UNLOCKED=true;try{localStorage.setItem('nba_pin',v)}catch(e){}lockUI();games()}else $('pinMsg').textContent=j.error||'Wrong PIN'}).catch(function(){$('pinMsg').textContent='Could not reach the Sheet'})};
+      $('pinGo').onclick=go;$('pinIn').onkeydown=function(e){if(e.key==='Enter')go()};
+    };
+  }
+  function setChoice(btn){
+    var pid=btn.getAttribute('data-pid'),want=btn.getAttribute('data-ch');
+    var next=CHOICES[pid]===want?'':want,prev=CHOICES[pid]||'';
+    CHOICES[pid]=next;games();
+    post({op:'set',pin:PIN,pick_id:pid,choice:next}).then(function(j){
+      if(!j.ok){CHOICES[pid]=prev;games();alertMsg(j.error||'Not saved')}else renderRecord();
+    }).catch(function(){CHOICES[pid]=prev;games();alertMsg('Could not reach the Sheet — not saved')});
+  }
+  function alertMsg(t){var b=$('lockbar');if(!b)return;var m=document.createElement('span');m.className='neg';m.textContent=t;b.appendChild(m);setTimeout(function(){if(m.parentNode)m.parentNode.removeChild(m)},5000)}
+  function viewRows(all){
+    if(!CHOICES_OK||RVIEW==='model')return all;
+    if(RVIEW==='mine')return all.filter(function(r){return CHOICES[r.id]==='TOOK'});
+    return all.filter(function(r){return CHOICES[r.id]!=='PASS'});
+  }
+  function callsTable(rows){
+    var g={TOOK:[],PASS:[],'':[]};rows.forEach(function(r){g[CHOICES[r.id]||''].push(r)});
+    var line=function(l,a){var s=CORE.summarize(a);return '<tr><td>'+l+'</td><td>'+s.n+'</td><td>'+s.w+'-'+s.l+'</td><td>'+(s.hit===null?'—':s.hit.toFixed(1)+'%')+'</td><td class="'+cls(s.units)+'">'+sg(s.units,2)+'u</td></tr>'};
+    return '<h3>Your calls</h3><div class="ts"><table style="min-width:0"><thead><tr><th></th><th>n</th><th>W-L</th><th>Hit</th><th>Units</th></tr></thead><tbody>'+
+      line('✅ Taken',g.TOOK)+line('🚫 Passed',g.PASS)+line('No call',g[''])+'</tbody></table></div>'+
+      '<p class="cap">Units at the pick\'s Pointsbet odds, flat 1u. If passed picks show positive units, your passes are costing you; if negative, they\'re saving you. Calls started 3 Nov.</p>';
+  }
   function slateFail(){$('slate').hidden=false;$('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>'}
   function foot(){
     var t=FETCHED?FETCHED.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}):'not loaded';
@@ -923,7 +1004,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     .then(init).catch(slateFail);
   loadSched();
   renderTotals();loadTotals();
-  alertUI();clearBadge();
+  alertUI();clearBadge();loadChoices();
   foot();
 })();
 
