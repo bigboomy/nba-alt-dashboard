@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-03T00:09:36.378819+00:00",
+  "generated": "2026-11-03T01:11:27.815993+00:00",
   "date": "Tue 3 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -463,6 +463,159 @@
         }
       ],
       "engine": "nba-session v3.8"
+    },
+    {
+      "id": "PHX@GSW",
+      "tip": "14:10",
+      "proj": 247.0,
+      "mkt": 227.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "GSW B2B, 5 out (Butler/Porzingis/Moody/Horford/Santos); Curry/Draymond status unconfirmed",
+      "picks": [
+        {
+          "p": "Yaxel Lendeborg",
+          "t": "GSW",
+          "s": "PTS",
+          "std": 18.5,
+          "alt": 16.5,
+          "o": 1.5,
+          "h": "80% (4/5)",
+          "e": 3.3,
+          "st": "2.5",
+          "opp": "126.31 (25/25 ⬆)",
+          "f": [
+            "B2B",
+            "DEP",
+            "U0.25"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "TOR@LAC",
+      "tip": "14:10",
+      "proj": 213.4,
+      "mkt": 219.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Both teams B2B; Barnes/Poeltl DTD; LAC missing Ingram/Hachimura/Jones/Beal",
+      "picks": [
+        {
+          "p": "Scottie Barnes",
+          "t": "TOR",
+          "s": "PTS",
+          "std": 24.5,
+          "alt": 21.5,
+          "o": 1.48,
+          "h": "83% (5/6)",
+          "e": 4.5,
+          "st": "3.5",
+          "opp": "114.77 (15/25 –)",
+          "f": [
+            "B2B",
+            "DTD",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "Immanuel Quickley",
+          "t": "TOR",
+          "s": "AST",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.5,
+          "h": "80% (4/5)",
+          "e": 3.3,
+          "st": "3.5",
+          "opp": "24.85 (9/25 –)",
+          "f": [
+            "B2B",
+            "Std?",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "R.J. Barrett",
+          "t": "TOR",
+          "s": "PTS",
+          "std": 21.5,
+          "alt": 19.5,
+          "o": 1.53,
+          "h": "100% (4/4)",
+          "e": 6.5,
+          "st": "2.5",
+          "opp": "114.77 (15/25 –)",
+          "f": [
+            "B2B",
+            "n=4",
+            "U0.25"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "MIA@LAL",
+      "tip": "14:10",
+      "proj": 244.3,
+      "mkt": 236.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "LAL B2B; MIA rested since 10/30",
+      "picks": [
+        {
+          "p": "Davion Mitchell",
+          "t": "MIA",
+          "s": "PTS",
+          "std": 12.5,
+          "alt": 10.5,
+          "o": 1.5,
+          "h": "83% (5/6)",
+          "e": 4.8,
+          "st": "4",
+          "opp": "114.98 (16/25 –)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Sandro Mamukelashvili",
+          "t": "LAL",
+          "s": "REB",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.42,
+          "h": "83% (5/6)",
+          "e": 3.7,
+          "st": "3.5",
+          "opp": "46.53 (20/25 ⬆)",
+          "f": [
+            "B2B",
+            "Std?",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "Ziaire Williams",
+          "t": "LAL",
+          "s": "PTS",
+          "std": 8.5,
+          "alt": 7.5,
+          "o": 1.53,
+          "h": "100% (4/4)",
+          "e": 6.5,
+          "st": "2.5",
+          "opp": "117.26 (20/25 ⬆)",
+          "f": [
+            "B2B",
+            "n=4",
+            "U0.25"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
     }
   ],
   "totals": [
@@ -525,6 +678,21 @@
       "POR@DEN",
       229.7,
       231.5
+    ],
+    [
+      "PHX@GSW",
+      247.0,
+      227.5
+    ],
+    [
+      "TOR@LAC",
+      213.4,
+      219.5
+    ],
+    [
+      "MIA@LAL",
+      244.3,
+      236.5
     ]
   ]
 }
