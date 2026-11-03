@@ -3,6 +3,14 @@
   "changes": [
     {
       "date": "2026-11-03",
+      "version": "resolve task 3-Nov (alerts)",
+      "component": "17:07 resolve",
+      "title": "Evening results posted to the Telegram group",
+      "change": "Each 17:07 resolve posts one Telegram message to the group with every settled pick (✅/❌, line, odds, actual), the day's W-L and units, the 7d/30d/season record and tomorrow's first tip; failures still go to Claude push privately.",
+      "aim": "See results and the next-day heads-up in the same place as the picks."
+    },
+    {
+      "date": "2026-11-03",
       "version": "slate task 3-Nov (alerts)",
       "component": "slate (hourly)",
       "title": "Pick alerts now go to Telegram",
