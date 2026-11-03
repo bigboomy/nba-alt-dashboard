@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-02T23:12:32.968335+00:00",
+  "generated": "2026-11-03T00:09:36.378819+00:00",
   "date": "Tue 3 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -312,6 +312,157 @@
       "mkt_o": 1.9,
       "mkt_u": 1.9,
       "engine": "nba-session v3.8"
+    },
+    {
+      "id": "BOS@HOU",
+      "tip": "12:40",
+      "proj": 232.2,
+      "mkt": 215.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "BOS: P. George, D. Carter OUT; HOU: Adams OUT, Sheppard/Capela Q",
+      "picks": [
+        {
+          "p": "Jayson Tatum",
+          "t": "BOS",
+          "s": "AST",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.5,
+          "h": "100% (4/4)",
+          "e": 7.0,
+          "st": "3",
+          "opp": "25.70 (14 -)",
+          "f": [
+            "U0.5",
+            "[n=4]",
+            "[MIN?]",
+            "[Std?]"
+          ]
+        },
+        {
+          "p": "Alperen Sengun",
+          "t": "HOU",
+          "s": "PTS",
+          "std": 17.5,
+          "alt": 15.5,
+          "o": 1.48,
+          "h": "100% (4/4)",
+          "e": 6.8,
+          "st": "3",
+          "opp": "109.40 (5 ⬇)",
+          "f": [
+            "U0.5",
+            "[n=4]",
+            "[MIN?]"
+          ]
+        },
+        {
+          "p": "Amen Thompson",
+          "t": "HOU",
+          "s": "PTS",
+          "std": 15.5,
+          "alt": 13.5,
+          "o": 1.48,
+          "h": "86% (6/7)",
+          "e": 5.8,
+          "st": "4",
+          "opp": "109.40 (5 ⬇)",
+          "f": [
+            "U1",
+            "[MIN?]"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "UTA@SAS",
+      "tip": "12:40",
+      "proj": 222.3,
+      "mkt": 228.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Injuries not confirmed",
+      "picks": [
+        {
+          "p": "De'Aaron Fox",
+          "t": "SAS",
+          "s": "PTS",
+          "std": 15.5,
+          "alt": 13.5,
+          "o": 1.5,
+          "h": "83% (5/6)",
+          "e": 4.8,
+          "st": "4",
+          "opp": "117.33 (21 ⬆)",
+          "f": [
+            "U1",
+            "[MIN?]"
+          ]
+        },
+        {
+          "p": "Keyonte George",
+          "t": "UTA",
+          "s": "PTS",
+          "std": 20.5,
+          "alt": 18.5,
+          "o": 1.53,
+          "h": "83% (5/6)",
+          "e": 4.4,
+          "st": "4",
+          "opp": "108.76 (4 ⬇)",
+          "f": [
+            "U1",
+            "[MIN?]"
+          ]
+        },
+        {
+          "p": "Stephon Castle",
+          "t": "SAS",
+          "s": "PTS",
+          "std": 16.5,
+          "alt": 13.5,
+          "o": 1.42,
+          "h": "83% (5/6)",
+          "e": 3.7,
+          "st": "4",
+          "opp": "117.33 (21 ⬆)",
+          "f": [
+            "U1",
+            "[MIN?]"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "POR@DEN",
+      "tip": "13:10",
+      "proj": 229.7,
+      "mkt": 231.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "DEN: Strawther OUT; Diallo/Jones Q",
+      "picks": [
+        {
+          "p": "Damian Lillard",
+          "t": "POR",
+          "s": "PTS",
+          "std": 21.5,
+          "alt": 18.5,
+          "o": 1.48,
+          "h": "80% (4/5)",
+          "e": 3.1,
+          "st": "4",
+          "opp": "115.83 (17 -)",
+          "f": [
+            "U1",
+            "[MIN?]"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
     }
   ],
   "totals": [
@@ -359,6 +510,21 @@
       "MIL@MIN",
       232.6,
       230.5
+    ],
+    [
+      "BOS@HOU",
+      232.2,
+      215.5
+    ],
+    [
+      "UTA@SAS",
+      222.3,
+      228.5
+    ],
+    [
+      "POR@DEN",
+      229.7,
+      231.5
     ]
   ]
 }
