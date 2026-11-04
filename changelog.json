@@ -2,6 +2,14 @@
   "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
   "changes": [
     {
+      "date": "2026-11-04",
+      "version": "resolve task 4-Nov",
+      "component": "resolve (now 18:07)",
+      "title": "Resolve moved to 18:07 so late games settle the same night",
+      "change": "The nightly resolve now runs at 18:07 instead of 17:07, because a game is only settled 3h15 after tip and 14:10–14:40 tips were missing the 17:07 run and waiting a full day.",
+      "aim": "Every game's results, Telegram summary and record update land the same evening."
+    },
+    {
       "date": "2026-11-03",
       "version": "resolve task 3-Nov (alerts)",
       "component": "17:07 resolve",

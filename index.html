@@ -702,7 +702,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   /* ---------- run status ----------
      Must match the slate / resolve schedules (architecture doc §4). Melbourne time. */
-  var RUNS={first:2*60+7,last:13*60+7,every:60,ahead:150,grace:20,resolve:17*60+7};
+  var RUNS={first:2*60+7,last:13*60+7,every:60,ahead:150,grace:20,resolve:18*60+7};
   var REFRESH=null,REFRESH_AT=0;
   function melNow(){
     var f=new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Melbourne',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
