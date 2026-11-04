@@ -1,55 +1,95 @@
 {
- "generated": "2026-11-03T06:09:16+00:00",
+ "generated": "2026-11-04T07:09:57+00:00",
  "games": [
-  {
-   "away": "Toronto Raptors",
-   "home": "Los Angeles Clippers",
-   "tip_utc": "2026-11-03T03:13:00Z"
-  },
   {
    "away": "Philadelphia 76ers",
    "home": "Detroit Pistons",
+   "tip_utc": "2026-11-05T00:00:00Z"
+  },
+  {
+   "away": "Atlanta Hawks",
+   "home": "Washington Wizards",
    "tip_utc": "2026-11-05T00:10:00Z"
   },
   {
    "away": "Charlotte Hornets",
    "home": "Brooklyn Nets",
+   "tip_utc": "2026-11-05T00:30:00Z"
+  },
+  {
+   "away": "Milwaukee Bucks",
+   "home": "Boston Celtics",
    "tip_utc": "2026-11-05T00:40:00Z"
+  },
+  {
+   "away": "Chicago Bulls",
+   "home": "New York Knicks",
+   "tip_utc": "2026-11-05T00:40:00Z"
+  },
+  {
+   "away": "Cleveland Cavaliers",
+   "home": "Oklahoma City Thunder",
+   "tip_utc": "2026-11-05T01:00:00Z"
+  },
+  {
+   "away": "Indiana Pacers",
+   "home": "Memphis Grizzlies",
+   "tip_utc": "2026-11-05T01:10:00Z"
+  },
+  {
+   "away": "Utah Jazz",
+   "home": "New Orleans Pelicans",
+   "tip_utc": "2026-11-05T01:10:00Z"
   },
   {
    "away": "Minnesota Timberwolves",
    "home": "Houston Rockets",
-   "tip_utc": "2026-11-05T01:40:00Z"
+   "tip_utc": "2026-11-05T01:30:00Z"
+  },
+  {
+   "away": "Toronto Raptors",
+   "home": "Denver Nuggets",
+   "tip_utc": "2026-11-05T02:00:00Z"
+  },
+  {
+   "away": "Portland Trail Blazers",
+   "home": "Phoenix Suns",
+   "tip_utc": "2026-11-05T02:00:00Z"
   },
   {
    "away": "Dallas Mavericks",
    "home": "San Antonio Spurs",
-   "tip_utc": "2026-11-05T02:40:00Z"
+   "tip_utc": "2026-11-05T02:30:00Z"
+  },
+  {
+   "away": "Los Angeles Lakers",
+   "home": "Sacramento Kings",
+   "tip_utc": "2026-11-05T03:10:00Z"
+  },
+  {
+   "away": "Miami Heat",
+   "home": "Los Angeles Clippers",
+   "tip_utc": "2026-11-05T03:40:00Z"
   },
   {
    "away": "San Antonio Spurs",
    "home": "New York Knicks",
-   "tip_utc": "2026-12-25T17:10:00Z"
+   "tip_utc": "2026-12-25T17:00:00Z"
   },
   {
    "away": "Miami Heat",
    "home": "Boston Celtics",
-   "tip_utc": "2026-12-25T19:40:00Z"
+   "tip_utc": "2026-12-25T19:30:00Z"
   },
   {
    "away": "Philadelphia 76ers",
    "home": "Los Angeles Lakers",
-   "tip_utc": "2026-12-25T22:10:00Z"
-  },
-  {
-   "away": "Oklahoma City Thunder",
-   "home": "Minnesota Timberwolves",
-   "tip_utc": "2026-12-26T01:10:00Z"
+   "tip_utc": "2026-12-25T22:00:00Z"
   },
   {
    "away": "Denver Nuggets",
    "home": "Golden State Warriors",
-   "tip_utc": "2026-12-26T03:40:00Z"
+   "tip_utc": "2026-12-26T03:30:00Z"
   }
  ]
 }
