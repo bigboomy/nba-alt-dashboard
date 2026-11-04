@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-04T22:10:41.604075+00:00",
+  "generated": "2026-11-04T23:12:10.071734+00:00",
   "date": "Thu 5 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -133,6 +133,263 @@
         }
       ],
       "engine": "nba-session v3.8"
+    },
+    {
+      "id": "MIL@BOS",
+      "tip": "11:40",
+      "proj": 229.1,
+      "mkt": 222.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Tatum OUT (rest); Pritchard Q; Kam Jones Q",
+      "picks": [
+        {
+          "p": "Kyle Kuzma",
+          "t": "MIL",
+          "s": "AST",
+          "std": 1.5,
+          "alt": 1.5,
+          "o": 1.48,
+          "h": "86% (6/7 CS)",
+          "e": 5.8,
+          "st": "4",
+          "opp": "28.4 (22/25⬆)",
+          "f": [
+            "U1",
+            "[Std?]"
+          ]
+        },
+        {
+          "p": "Jaime Jaquez Jr",
+          "t": "MIL",
+          "s": "REB",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 2.0,
+          "h": "86% (6/7 CS)",
+          "e": 4.5,
+          "st": "2",
+          "opp": "44.6 (14/25–)",
+          "f": [
+            "U0.25"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "CHI@NYK",
+      "tip": "11:40",
+      "proj": 225.7,
+      "mkt": 233.5,
+      "mkt_o": 1.87,
+      "mkt_u": 1.95,
+      "ctx": "Claxton OUT (CHI); Hart OUT (NYK)",
+      "picks": [
+        {
+          "p": "Karl-Anthony Towns",
+          "t": "NYK",
+          "s": "PTS",
+          "std": 21.5,
+          "alt": 18.5,
+          "o": 1.48,
+          "h": "100% (5/5 CS)",
+          "e": 8.1,
+          "st": "4",
+          "opp": "121.77 (27/30⬆)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Caleb Wilson",
+          "t": "CHI",
+          "s": "PTS",
+          "std": 19.5,
+          "alt": 16.5,
+          "o": 1.48,
+          "h": "83% (5/6 CS)",
+          "e": 4.5,
+          "st": "4",
+          "opp": "110 (11/30–)",
+          "f": [
+            "U1"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "CLE@OKC",
+      "tip": "12:00",
+      "proj": 224.3,
+      "mkt": 226.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "OKC: Holmgren, J.Williams, Wallace out; Jaylin Williams Q; CLE: Tyson, Watson out",
+      "picks": [
+        {
+          "p": "Evan Mobley",
+          "t": "CLE",
+          "s": "PTS",
+          "std": 16.5,
+          "alt": 14.5,
+          "o": 1.53,
+          "h": "83% (5/6 CS)",
+          "e": 4.4,
+          "st": "4",
+          "opp": "109.62 (9/30⬇)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Donovan Mitchell",
+          "t": "CLE",
+          "s": "PTS",
+          "std": 21.5,
+          "alt": 18.5,
+          "o": 1.44,
+          "h": "83% (5/6 CS)",
+          "e": 4.0,
+          "st": "4",
+          "opp": "109.62 (9/30⬇)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Jarrett Allen",
+          "t": "CLE",
+          "s": "REB",
+          "std": 7.5,
+          "alt": 7.5,
+          "o": 1.63,
+          "h": "83% (5/6 CS)",
+          "e": 3.6,
+          "st": "3",
+          "opp": "45.29 (17/25⬆)",
+          "f": [
+            "U0.5",
+            "[Std?]"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "IND@MEM",
+      "tip": "12:10",
+      "proj": 229.5,
+      "mkt": 228.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "IND: Haliburton, Zubac, Toppin, McConnell out; Oubre Q; MEM: Pippen out, Post Q",
+      "picks": [
+        {
+          "p": "Cedric Coward",
+          "t": "MEM",
+          "s": "REB",
+          "std": 7.5,
+          "alt": 5.5,
+          "o": 1.4,
+          "h": "100% (6/6 CS)",
+          "e": 8.2,
+          "st": "4",
+          "opp": "47.1 (21/25⬆)",
+          "f": [
+            "U1",
+            "[Std?]"
+          ]
+        },
+        {
+          "p": "Pascal Siakam",
+          "t": "IND",
+          "s": "PTS",
+          "std": 22.5,
+          "alt": 20.5,
+          "o": 1.5,
+          "h": "80% (4/5 CS)",
+          "e": 3.3,
+          "st": "3",
+          "opp": "108.71 (5/30⬇)",
+          "f": [
+            "U0.5",
+            "DEPL-1★"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "UTA@NOP",
+      "tip": "12:10",
+      "proj": 227.3,
+      "mkt": 231.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "UTA: Jackson, Nurkic out; NOP: Poole, Missi out, Murphy Q",
+      "picks": [],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "MIN@HOU",
+      "tip": "12:30",
+      "proj": 224.6,
+      "mkt": 219.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "MIN: Edwards, Shannon, DiVincenzo out; HOU: Capela, Adams out",
+      "picks": [
+        {
+          "p": "Jaden McDaniels",
+          "t": "MIN",
+          "s": "PTS",
+          "std": 16.5,
+          "alt": 13.5,
+          "o": 1.4,
+          "h": "100% (7/7 CS)",
+          "e": 9.1,
+          "st": "4",
+          "opp": "109.96 (10/30⬇)",
+          "f": [
+            "U1",
+            "DEPL-1★"
+          ]
+        },
+        {
+          "p": "Amen Thompson",
+          "t": "HOU",
+          "s": "PTS",
+          "std": 15.5,
+          "alt": 13.5,
+          "o": 1.53,
+          "h": "86% (6/7 CS)",
+          "e": 5.8,
+          "st": "4",
+          "opp": "103.26 (1/30⬇)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Jabari Smith Jr",
+          "t": "HOU",
+          "s": "PTS",
+          "std": 14.5,
+          "alt": 12.5,
+          "o": 1.56,
+          "h": "86% (6/7 CS)",
+          "e": 5.6,
+          "st": "4",
+          "opp": "103.26 (1/30⬇)",
+          "f": [
+            "U1",
+            "[OUT]"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
     }
   ],
   "totals": [
@@ -150,6 +407,36 @@
       "CHA@BKN",
       201.6,
       212.5
+    ],
+    [
+      "MIL@BOS",
+      229.1,
+      222.5
+    ],
+    [
+      "CHI@NYK",
+      225.7,
+      233.5
+    ],
+    [
+      "CLE@OKC",
+      224.3,
+      226.5
+    ],
+    [
+      "IND@MEM",
+      229.5,
+      228.5
+    ],
+    [
+      "UTA@NOP",
+      227.3,
+      231.5
+    ],
+    [
+      "MIN@HOU",
+      224.6,
+      219.5
     ]
   ]
 }
