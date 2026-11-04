@@ -924,7 +924,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function clearBadge(){try{if(navigator.clearAppBadge)navigator.clearAppBadge()}catch(e){}}
   document.addEventListener('visibilitychange',function(){if(!document.hidden)clearBadge()});
   /* ---------- your calls: Took it / Pass (Apps Script web app on the Sheet; writes need the PIN) ---------- */
-  var CHOICE_URL='';   // set to the deployed Apps Script web-app URL
+  var CHOICE_URL='https://script.google.com/macros/s/AKfycbwpxO48j-Oayc3-vhVvMleaWJh0Ug6xAK7bw3LcQYF9Jx1jTbr4XgospRNh_Z9u-PDAJQ/exec';
   var CHOICES={},CHOICES_OK=false,UNLOCKED=false,RVIEW='model',PIN=null;
   try{PIN=localStorage.getItem('nba_pin')}catch(e){}
   function pidFor(g,p){
