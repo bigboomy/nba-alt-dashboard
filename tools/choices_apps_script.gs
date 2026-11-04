@@ -7,7 +7,7 @@
  * Rules: a PASS can only be set or changed before tip (no hindsight passes). TOOK can be set any time.
  * Writes only the `choices` tab (created on first use). Never touches cohort / stats / totals.
  */
-const PIN = 'CHANGE_ME';                                   // <- set your PIN (4+ digits) before deploying
+const PIN = 'CHANGE_ME';   // <- the ONLY place to put your PIN (4+ digits), then Deploy → New version
 const SHEET_ID = '1OfVQgtxsqubqwPgXdnjxndwm4TnAPfOnpPwvPbKmBJA';
 const HEAD = ['pick_id', 'choice', 'set_at', 'tip_utc'];
 
@@ -43,9 +43,10 @@ function doPost(e) {
   if (fails >= 10) return out({ ok: false, error: 'Too many wrong PINs — try again in an hour' });
   let b;
   try { b = JSON.parse(e.postData.contents); } catch (x) { return out({ ok: false, error: 'bad request' }); }
-  if (PIN === 'CHANGE_ME' || String(b.pin || '') !== PIN) {
+  const pinSet = String(PIN).length >= 4 && !/CHANGE/.test(String(PIN));
+  if (!pinSet || String(b.pin || '').trim() !== String(PIN).trim()) {
     cache.put('fails', String(fails + 1), 3600);
-    return out({ ok: false, error: PIN === 'CHANGE_ME' ? 'PIN not set in the script' : 'Wrong PIN' });
+    return out({ ok: false, error: pinSet ? 'Wrong PIN' : 'PIN not set in the script' });
   }
   if (b.op === 'check') return out({ ok: true });
   const id = String(b.pick_id || ''), choice = String(b.choice || '');

@@ -952,7 +952,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       $('lockOut').onclick=function(){UNLOCKED=false;PIN=null;try{localStorage.removeItem('nba_pin')}catch(e){}lockUI();games()};return}
     b.innerHTML='<button class="cbtn" type="button" id="unlockBtn">🔒 Mark my picks</button>';
     $('unlockBtn').onclick=function(){
-      b.innerHTML='<input id="pinIn" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="PIN" aria-label="PIN"><button class="cbtn main" type="button" id="pinGo">Unlock</button><span id="pinMsg"></span>';
+      b.innerHTML='<input id="pinIn" type="password" inputmode="numeric" autocomplete="off" placeholder="PIN" aria-label="PIN"><button class="cbtn main" type="button" id="pinGo">Unlock</button><span id="pinMsg"></span>';
       $('pinIn').focus();
       var go=function(){var v=$('pinIn').value.trim();if(!v)return;$('pinMsg').textContent='Checking…';
         post({op:'check',pin:v}).then(function(j){if(j.ok){PIN=v;UNLOCKED=true;try{localStorage.setItem('nba_pin',v)}catch(e){}lockUI();games()}else $('pinMsg').textContent=j.error||'Wrong PIN'}).catch(function(){$('pinMsg').textContent='Could not reach the Sheet'})};
