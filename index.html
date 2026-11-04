@@ -58,8 +58,8 @@ tr:last-child td{border-bottom:0}
 .cbtn.done{color:var(--good);border-color:var(--good)}
 .cbtn.main{background:var(--accent);border-color:var(--accent);color:#fff;font-size:.85rem;min-height:40px;padding:8px 14px}
 .cbtn.main.done{background:var(--good);border-color:var(--good)}
-.bar{display:flex;gap:8px;margin-bottom:12px}
-.bar .cbtn{flex:1}
+.prow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:8px 14px;border-top:1px solid var(--line)}
+.prow .meta{margin-left:auto}
 .gh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .pick .cbtn{grid-column:1/-1;justify-self:end;margin-top:6px}
 .pick .cbar{grid-column:1/-1;display:flex;gap:6px;justify-content:flex-end;align-items:center;margin-top:6px;flex-wrap:wrap}
@@ -195,9 +195,6 @@ details.fold.inner{background:transparent;margin:10px 0}
 <body><div class="wrap">
   <h1>NBA Alt-Over Dashboard </h1>
   <p class="sub" id="sub">Loading slate…</p>
-  <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
-  <div id="ver"></div>
-
   <section id="slate" aria-label="Today's slate" hidden>
     <h2 class="sec">Today's slate</h2>
     <div class="stale" id="stale" role="status" hidden></div>
@@ -205,23 +202,19 @@ details.fold.inner{background:transparent;margin:10px 0}
     <p class="nextl" id="nextl" hidden></p>
     <div class="stats" id="stats"></div>
     <div class="stats today" id="today" hidden></div>
-    <div class="bar">
-      <button class="cbtn main" id="copyAll" type="button">Copy all picks</button>
-      <button class="cbtn main" id="copyTotals" type="button">Copy totals</button>
-    </div>
     <div class="tabs" id="tabs" role="group" aria-label="Filter by game"></div>
     <div id="games"></div>
-    <h3>Projected totals <span class="meta">(interest only, not a bet)</span></h3>
+    <details class="fold inner" id="projFold"><summary><span>Projected totals <span class="meta">interest only, not a bet</span></span></summary>
     <div class="ts"><table id="totals" style="min-width:0;border:0"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table></div>
+    </details>
   </section>
+
+  <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
+  <div id="ver"></div>
 
   <div id="results"></div>
   <div id="totalsSec"></div>
 
-  <details class="legend" id="alerts" style="margin-top:16px">
-    <summary>Pick alerts on this phone</summary>
-    <div id="alertBody"><p>Checking…</p></div>
-  </details>
   <details class="legend" style="margin-top:16px">
     <summary>How to read this</summary>
     <p><b>Settled</b> = W or L; void and push are excluded. <b>Units</b> are flat 1u (win = odds − 1, loss = −1). <b>Break-even</b> = 100 ÷ mean odds. <b>Gap</b> = hit% minus break-even, in percentage points. <b>CLV</b> is measured only on picks with a captured closing price. Windows are calendar days ending on the latest settled day, clipped at the season start. Band colours: blue &lt; 1.55, orange 1.55–1.79, magenta 1.80+.</p>
@@ -591,16 +584,6 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var proj=num(t[1]);if(proj===null) return null;
     return {id:String(t[0]),proj:proj,mkt:num(t[2])};
   }
-  var pickTxt=function(p){return p.p+' '+p.s+' O'+p.alt+' @'+p.o.toFixed(2)+' | '+p.h+' | +'+p.e.toFixed(1)+'pp | '+starTxt(p.stN)+(p.f.length?' ['+p.f.join(', ')+']':'')+(p.sa!==null?' | safer O'+p.sa+' @'+p.so.toFixed(2):'')};
-  var projMkt=function(g){return 'proj '+fix(g.proj,1)+' (mkt '+fix(g.mkt,1)+')'};
-  var gameTxt=function(g){return g.id+' | tip '+g.tip+' | '+projMkt(g)+'\n'+(g.picks.length?g.picks.map(pickTxt).join('\n'):'No pick cleared the gates')};
-  var allTxt=function(){return 'NBA ALT-OVERS | '+D.date+' | '+D.tz+' | '+D.book+'\n\n'+G.map(gameTxt).join('\n\n')+'\n\nNot betting advice.'};
-  var totalsTxt=function(){return 'PROJECTED TOTALS (interest only) | '+D.date+'\n'+T.map(function(t){var g=t.mkt===null?null:t.proj-t.mkt;return t.id+' proj '+t.proj.toFixed(1)+' | mkt '+fix(t.mkt,1)+' | gap '+(g===null?'—':(g>=0?'+':'')+g.toFixed(1))}).join('\n')};
-  function copyText(text,btn,label){
-    var ok=function(){btn.textContent='Copied ✓';btn.classList.add('done');setTimeout(function(){btn.textContent=label;btn.classList.remove('done')},1400)};
-    var fb=function(){var ta=document.createElement('textarea');ta.value=text;ta.setAttribute('readonly','');ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy')?ok():(btn.textContent='Copy failed')}catch(e){btn.textContent='Copy failed'}document.body.removeChild(ta)};
-    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(ok,fb)}else{fb()}
-  }
   function tabs(){
     var ids=['ALL'].concat(G.map(function(g){return g.id}));
     $('tabs').innerHTML=ids.map(function(id){return '<button class="tab" data-id="'+esc(id)+'" aria-pressed="'+(id===sel)+'">'+(id==='ALL'?'All games':esc(id))+'</button>'}).join('');
@@ -624,24 +607,40 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       '<div class="meta">Hit '+esc(p.h)+' · '+stars(p.stN)+' · Opp '+esc(p.opp)+'</div><div class="edge">+'+p.e.toFixed(1)+'pp edge</div>'+
       (p.sa!==null?'<div class="safe">Safer rung: O '+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
       '<div class="chips">'+pill+cc+p.f.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'?' w':'')+'">'+esc(f)+'</span>'}).join('')+'</div>'+
-      cb+'<button class="cbtn" type="button" data-copy="pick" data-g="'+gi+'" data-i="'+i+'">Copy pick</button></div>';
+      cb+'</div>';
   }
   function gameHtml(g,gi){
-    var head='<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+'</h2><p>'+esc(g.ctx)+(g.ctx?' · ':'')+'proj total '+esc(fix(g.proj,1))+' (mkt '+esc(fix(g.mkt,1))+')</p></div><button class="cbtn" type="button" data-copy="game" data-g="'+gi+'">Copy game</button></div>';
+    var head='<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+'</h2><p>'+esc(g.ctx)+(g.ctx?' · ':'')+'proj total '+esc(fix(g.proj,1))+' (mkt '+esc(fix(g.mkt,1))+')</p></div></div>';
     var body='';g.picks.forEach(function(p,i){try{body+=pickHtml(p,gi,i)}catch(e){}});
     if(!body) body='<div class="none">No pick cleared the gates.</div>';
     return '<section class="game">'+head+body+'</section>';
   }
+  /* Today's games (Mitch, 5 Nov): from the first slate run the slate shows today's games from schedule.json.
+     A game not yet analysed shows as "picks at ~HH:07"; once a run analyses it, its card replaces that line.
+     The previous day's games are cleared at the first run; a day with no games shows "No NBA games today". */
+  function todaySched(){
+    if(!SCHED||!Array.isArray(SCHED.games)) return null;
+    var n=melNow(),out=[];
+    SCHED.games.forEach(function(x){var d=new Date(x.tip_utc);if(isNaN(d))return;var m=melOf(d);if(m.iso!==n.iso)return;
+      out.push({id:(TEAMC[x.away]||x.away)+'@'+(TEAMC[x.home]||x.home),min:m.min})});
+    return out.sort(function(a,b){return a.min-b.min});
+  }
+  function pendHtml(){
+    var ts=todaySched();if(!ts||!D||slateIso()!==melNow().iso) return '';
+    var done={};G.forEach(function(g){done[g.id]=1});
+    var n=melNow(),left=ts.filter(function(x){return !done[x.id]});
+    if(!left.length) return '';
+    return '<section class="game pend"><div class="gh"><div><h2>Still to come</h2><p>'+left.length+' game'+(left.length===1?'':'s')+' not analysed yet</p></div></div>'+
+      left.map(function(x){var fr=firstRun(x.min),late=x.min-30<=n.min;
+        return '<div class="prow"><b>'+esc(x.id)+'</b><span>tip '+hhmm(x.min)+'</span><span class="meta">'+(late?'tipped / inside 30 min, no run':fr===null?'outside the run window':'picks ~'+hhmm(fr))+'</span></div>'}).join('')+'</section>';
+  }
   function games(){
     var html='';
     G.forEach(function(g,gi){if(sel!=='ALL'&&g.id!==sel)return;try{html+=gameHtml(g,gi)}catch(e){}});
+    if(sel==='ALL') html+=pendHtml();
+    if(!html&&D&&D.cleared){var ts=todaySched();html='<div class="game"><div class="none">'+(ts&&!ts.length?'No NBA games today.':'No games analysed yet today.')+'</div></div>'}
     $('games').innerHTML=html;
     Array.prototype.forEach.call($('games').querySelectorAll('[data-ch]'),function(b){b.onclick=function(){setChoice(b)}});
-    Array.prototype.forEach.call($('games').querySelectorAll('[data-copy]'),function(b){
-      b.onclick=function(){var g=G[+b.getAttribute('data-g')];if(!g)return;
-        if(b.getAttribute('data-copy')==='game')copyText(gameTxt(g),b,'Copy game');
-        else{var p=g.picks[+b.getAttribute('data-i')];if(p)copyText(g.id+' | '+pickTxt(p),b,'Copy pick')}};
-    });
   }
   function totals(){
     var html='';
@@ -649,9 +648,16 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       html+='<tr><td>'+esc(t.id)+'</td><td>'+t.proj.toFixed(1)+'</td><td>'+esc(fix(t.mkt,1))+'</td><td class="'+(g===null?'':(g>=0?'pos':'neg'))+'">'+(g===null?'—':(g>=0?'+':'')+g.toFixed(1))+'</td></tr>'}catch(e){}});
     $('totals').querySelector('tbody').innerHTML=html;
   }
+  var LASTDATA=null;
   function init(data){
     if(!data||typeof data!=='object'||Array.isArray(data)) throw new Error('bad data');
+    LASTDATA=data;
     D={date:str(data.date,''),tz:str(data.tz,''),book:str(data.book,''),engine:str(data.engine,''),engines:{}};
+    var now0=melNow(),dIso=slateIso();
+    if(dIso&&dIso<now0.iso&&now0.min>=RUNS.first){   // first slate run has passed: clear the old day
+      var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],pp=now0.iso.split('-');
+      D.date=melOf(new Date()).wd+' '+(+pp[2])+' '+mo[+pp[1]-1]+' '+pp[0];D.cleared=true;data={games:[],totals:[]};
+    }
     (Array.isArray(data.games)?data.games:[]).forEach(function(g){var e=g&&typeof g.engine==='string'&&g.engine?g.engine:'';if(e)D.engines[e]=(D.engines[e]||0)+1});
     G=[];(Array.isArray(data.games)?data.games:[]).forEach(function(g){try{var n=normGame(g);if(n)G.push(n)}catch(e){}});
     T=[];(Array.isArray(data.totals)?data.totals:[]).forEach(function(t){try{var n=normTotal(t);if(n)T.push(n)}catch(e){}});
@@ -659,15 +665,13 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var avg=all.length?(all.reduce(function(a,p){return a+Number(p.e)},0)/all.length).toFixed(1):'0.0';
     var gen=data.generated?new Date(data.generated):null,genOk=gen&&!isNaN(gen.getTime());
     var parts=[D.date,D.tz,D.book].filter(Boolean);
-    if(genOk)parts.push('updated '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}));
+    if(genOk&&!D.cleared)parts.push('updated '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}));
     $('sub').textContent=parts.join(' · ');
     runStatus();
     $('stats').innerHTML=tile(all.length,'picks','Picks that cleared every gate today')+
       tile('+'+esc(avg)+'pp','avg edge','Model hit % minus the price\'s implied %, averaged')+
-      tile(G.length,'games','Games analysed so far today');
+      tile(G.length+(todaySched()&&slateIso()===melNow().iso?'/'+Math.max(todaySched().length,G.length):''),'games','Games analysed so far, of today\'s games');
     todayTiles();renderVer();
-    $('copyAll').onclick=function(){copyText(allTxt(),this,'Copy all picks')};
-    $('copyTotals').onclick=function(){copyText(totalsTxt(),this,'Copy totals')};
     $('slate').hidden=false;
     totals();tabs();games();
   }
@@ -726,6 +730,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       if(n.min<RUNS.first){cls='info';msg='<b>Today\'s picks start at '+hm(RUNS.first)+'.</b> Showing '+esc(D.date)+' until then.'}
       else if(inWindow){cls='info live';msg='<b>Waiting for today\'s first picks.</b> '+busy+(nr?'Next run '+hm(nr)+'. ':'')+(busy?'':'No game has been due yet. ')+'Games are picked about 1.5–2.5 h before tip. Showing '+esc(D.date)+'.'}
       else {cls='';msg='No picks were posted today: no games, or a run had a problem. Showing '+esc(D.date)+'.'}
+    } else if(!ng&&todaySched()&&!todaySched().length){
+      cls='';msg='<b>No NBA games today.</b>';
     } else if(inWindow){
       cls='info live';
       msg='<b>Picks still coming in.</b> '+busy+ng+' game'+(ng===1?'':'s')+' so far ('+np+' pick'+(np===1?'':'s')+'). '+
@@ -806,7 +812,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   function loadSched(){
     fetch('schedule.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
-      .then(function(j){SCHED=j;nextLine()}).catch(function(){});
+      .then(function(j){SCHED=j;if(D){init(LASTDATA);}else nextLine()}).catch(function(){});
   }
   /* ---------- model totals (spec: claude/NBA_Totals_Tracker_Spec.md rev b, §B rules) ---------- */
   var TOT_URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vRk37gFqBJkXc1gzISmNg3mHtoYKWgw1976R-8Pe3Imo66e5r09-2aC5M5jvHBjlAbqpzATPX4HCaRL/pub?gid=849274921&single=true&output=csv";
@@ -903,9 +909,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       return reg.pushManager.getSubscription().then(function(sub){
         if(sub&&Notification.permission==='granted'){
           box.innerHTML='<p><b>Alerts are on for this phone.</b> The slate sends one alert per run that makes picks, and the icon badge shows today\'s pick count.</p>'+
-            '<p><button class="cbtn" id="copySub" type="button">Copy device code</button> <button class="cbtn" id="sample" type="button">Show a sample</button></p>'+
+            '<p><button class="cbtn" id="sample" type="button">Show a sample</button></p>'+
             '<p class="cap">Send the device code to the Architect once; it goes into the slate task, not the public site.</p>';
-          $('copySub').onclick=function(){copyText(JSON.stringify(sub),this,'Copy device code')};
           $('sample').onclick=function(){reg.showNotification('NBA picks: 2 new',{body:'BOS@ORL 07:40 · Tatum PTS O24.5 @1.83',tag:'nba-sample',icon:'icon-192.png'});if(navigator.setAppBadge)navigator.setAppBadge(2)};
         } else if(Notification.permission==='denied'){
           box.innerHTML='<p>Notifications are blocked for this app. Turn them on in iPhone Settings → Notifications → NBA Alts, then reopen.</p>';

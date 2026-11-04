@@ -1,165 +1,172 @@
 {
-  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
-  "changes": [
-    {
-      "date": "2026-11-04",
-      "version": "resolve task 4-Nov",
-      "component": "resolve (now 18:07)",
-      "title": "Resolve moved to 18:07 so late games settle the same night",
-      "change": "The nightly resolve now runs at 18:07 instead of 17:07, because a game is only settled 3h15 after tip and 14:10–14:40 tips were missing the 17:07 run and waiting a full day.",
-      "aim": "Every game's results, Telegram summary and record update land the same evening."
-    },
-    {
-      "date": "2026-11-03",
-      "version": "resolve task 3-Nov (alerts)",
-      "component": "17:07 resolve",
-      "title": "Evening results posted to the Telegram group",
-      "change": "Each 17:07 resolve posts one Telegram message to the group with every settled pick (✅/❌, line, odds, actual), the day's W-L and units, the 7d/30d/season record and tomorrow's first tip; failures still go to Claude push privately.",
-      "aim": "See results and the next-day heads-up in the same place as the picks."
-    },
-    {
-      "date": "2026-11-03",
-      "version": "slate task 3-Nov (alerts)",
-      "component": "slate (hourly)",
-      "title": "Pick alerts now go to Telegram",
-      "change": "Each slate run that makes picks sends one Telegram message to @NBAboomybot with every game, tip and pick (line, odds, hit rate, stars, stake, safer rung), built by a hash-pinned script; Claude push is now only the fallback if Telegram fails.",
-      "aim": "Get the full pick list on the phone the moment it's made, without opening the dashboard."
-    },
-    {
-      "date": "2026-11-02",
-      "version": "totals tracker v1",
-      "component": "dashboard, 17:07 resolve, Sheet `totals` tab",
-      "title": "Model totals tracked as notional 1u bets",
-      "change": "Every analysed game's projected and market total (with Pointsbet over/under prices from 2 Nov) is recorded in a separate `totals` tab, settled from free final scores including overtime, and shown in a collapsed Model totals section with record, units, ROI and hit rate by window, gap bucket and side; the 22 Oct–1 Nov Notion log is shown separately at an assumed 1.91.",
-      "aim": "See whether the projected-total lean beats the market, kept apart from the prop record."
-    },
-    {
-      "date": "2026-11-02",
-      "version": "slate task 2-Nov (c)",
-      "component": "slate (hourly 02:07–13:07)",
-      "title": "Market total prices kept for the totals tracker",
-      "change": "Each analysed game now also records the Pointsbet Over and Under prices at the market total (mkt_o, mkt_u) from the totals call the slate already makes, at no extra Odds API cost; picks and the totals row are unchanged.",
-      "aim": "Score every model totals lean as a notional 1u bet at the real price, so the separate totals tracker shows what the model would have done."
-    },
-    {
-      "date": "2026-11-02",
-      "version": "dashboard 2-Nov",
-      "component": "dashboard, 17:07 resolve",
-      "title": "Next slate line on the dashboard",
-      "change": "Today's slate now shows the next game day's first tip, game count, last tip and first slate run, from a schedule.json the 17:07 resolve refreshes each evening via the free events call; the status banner now follows the 02:07 start.",
-      "aim": "Know at a glance when tomorrow's picks will start arriving without waiting for the evening notification."
-    },
-    {
-      "date": "2026-11-02",
-      "version": "slate task 2-Nov (b)",
-      "component": "slate (hourly 02:07–13:07), capture (03:48–14:48), resolve",
-      "title": "Every game included, whatever the tip time",
-      "change": "The early-morning cut-off is removed: the slate now runs hourly from 02:07 and capture from 03:48, so games tipping as early as about 04:00 Melbourne time get picks and a closing price, and the evening heads-up counts every game.",
-      "aim": "Stop skipping early weekend and holiday tips now that Mitch wants all games covered."
-    },
-    {
-      "date": "2026-11-02",
-      "version": "resolve task 2-Nov",
-      "component": "17:07 resolve",
-      "title": "Evening heads-up for tomorrow's games",
-      "change": "Every 17:07 run now sends one notification that ends with tomorrow's first tip, game count, last tip and the time of the first slate run, even when nothing needed settling.",
-      "aim": "Let Mitch know each evening when the first picks will arrive."
-    },
-    {
-      "date": "2026-11-02",
-      "version": "nba-session v3.8",
-      "component": "slate",
-      "title": "Five-game samples can now qualify",
-      "change": "The shrink weight drops from 30 to 15 pseudo-games, so a player's 5 current-season games count for 25% of the estimate instead of 14% and a 4/5 or 5/5 record can pass the +3pp test.",
-      "aim": "Stop early-season slates going blank (2 Nov had none) while keeping the price as the main anchor; the review watches whether predicted hit rate drifts above actual."
-    },
-    {
-      "date": "2026-11-02",
-      "version": "nba-session v3.8",
-      "component": "slate",
-      "title": "Player logs now come from the right season",
-      "change": "StatMuse names seasons by the year they end, so current-season logs now use 2027 and a 2026 table is treated as last season.",
-      "aim": "Make sure picks are judged on this season's games, not last season's."
-    },
-    {
-      "date": "2026-11-02",
-      "version": "slate task 2-Nov",
-      "component": "slate (hourly 06:07–13:07), capture (06:48–14:48)",
-      "title": "Slate and capture start two hours earlier",
-      "change": "The slate now runs hourly from 06:07 (was 08:07) and analyses games tipping from 06:37, and capture runs from 06:48 (was 08:48), still at minute :48.",
-      "aim": "Cover early tips such as 07:40 games, which the 08:07 start skipped."
-    },
-    {
-      "date": "2026-11-01",
-      "version": "slate task 1-Nov",
-      "component": "slate (hourly 08:07–13:07), capture (08:48–14:48)",
-      "title": "Each game analysed once, 30–150 minutes before its own tip",
-      "change": "The slate now runs hourly from 08:07 to 13:07 and analyses only games that tip within 150 minutes, at least 30 minutes away and not yet done today, with one totals call per run that has games, and capture now runs hourly at :48 from 08:48 to 14:48.",
-      "aim": "Catch early tips and fresher injury news game by game, while skipping games before 08:37 when Mitch can't bet them."
-    },
-    {
-      "date": "2026-11-01",
-      "version": "sheet I/O v1.1",
-      "component": "slate, capture",
-      "title": "Ready for hourly per-game slate runs",
-      "change": "Each slate run now merges its games into the day's dashboard file instead of replacing it, reports which games are already done today, and capture prices each pick once in its last 2–70 minutes before tip.",
-      "aim": "Let picks be made closer to tip, game by game, without losing earlier games or pricing the close twice."
-    },
-    {
-      "date": "2026-11-01",
-      "version": "nba-session v3.7",
-      "component": "09:00 slate",
-      "title": "Every game on the slate is analysed",
-      "change": "The 4-game limit is removed, so the slate prices every game and cuts games only when the Odds API quota can't cover them plus a 50-request reserve for closing-odds capture.",
-      "aim": "Stop missing qualifying picks on big nights now that the stricter v3.5 test filters for quality instead of a game limit."
-    },
-    {
-      "date": "2026-11-01",
-      "version": "nba-session v3.6",
-      "component": "09:00 slate",
-      "title": "Max 3 picks per game, no session cap",
-      "change": "Each game now allows at most 3 picks (was 5), the 8u session cap is removed because the per-game caps already limit a session to 12 picks, and any pick a cap trims is dropped instead of being logged.",
-      "aim": "Cut stacked exposure to one game's pace and blowout risk, and keep the record to picks the engine actually stands behind."
-    },
-    {
-      "date": "2026-11-01",
-      "version": "nba-session v3.5",
-      "component": "09:00 slate",
-      "title": "Hit rates recalibrated toward the market price",
-      "change": "Each rung's probability now leans 75% on a price-adjusted market estimate (bookmaker margin assumed to rise from 0% at 1.50 to about 22% at 1.95), and a pick needs at least +3pp over the break-even price instead of +5pp over a margin-free price.",
-      "aim": "Close the gap between the 81% hit rate the model claimed and the 56% it delivered, which should mean fewer, shorter-priced picks and 1.80+ only on near-perfect samples."
-    },
-    {
-      "date": "2026-10-31",
-      "version": "sheet I/O v1",
-      "component": "slate, capture, resolve",
-      "title": "Picks, closes and results now recorded straight to the Google Sheet",
-      "change": "All three tasks write the Sheet through one hash-pinned script and check the Sheet's own totals after every write; Notion and record.json are no longer written.",
-      "aim": "One reliable record that the dashboard and the weekly analyst review read directly, with no copying between systems."
-    },
-    {
-      "date": "2026-10-31",
-      "version": "slate task 31-Oct",
-      "component": "09:00 slate",
-      "title": "Safer rung on 1.80+ picks",
-      "change": "Every pick priced 1.80 or longer now shows the next rung down priced 1.40–1.79, with its own hit rate; display only, not logged as a pick.",
-      "aim": "Make a higher-hit-rate alternative visible on long prices, and track whether stepping down would have paid."
-    },
-    {
-      "date": "2026-10-31",
-      "version": "resolve task 31-Oct",
-      "component": "17:07 resolve",
-      "title": "Resolve no longer overwrites closing prices",
-      "change": "Close odds and CLV are now owned by the capture task; resolve only marks a still-blank close as 'no close', and runs on Melbourne time.",
-      "aim": "Protect the closing-line data needed to judge whether picks beat the market."
-    },
-    {
-      "date": "2026-10-31",
-      "version": "capture script v2",
-      "component": "hourly close capture",
-      "title": "Closing-odds capture fixed",
-      "change": "A parsing bug had blanked every odds response, so 91% of picks had no closing price; capture now runs hourly before tip and asks only for markets with picks.",
-      "aim": "Get closing-line value (CLV) on every pick — the fastest honest signal of whether the model has an edge."
-    }
-  ]
+ "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
+ "changes": [
+  {
+   "date": "2026-11-05",
+   "title": "Today's slate first; today's games listed from the first run",
+   "component": "dashboard",
+   "change": "Today's slate moved to the top. Copy buttons removed. Projected totals and model totals collapsed. From the first slate run (02:07) the slate lists today's games from the schedule, each marked with when its picks are due; the previous day's games are cleared. A day with no games shows 'No NBA games today'.",
+   "aim": "See what's on today at a glance, without yesterday's games hanging around."
+  },
+  {
+   "date": "2026-11-04",
+   "version": "resolve task 4-Nov",
+   "component": "resolve (now 18:07)",
+   "title": "Resolve moved to 18:07 so late games settle the same night",
+   "change": "The nightly resolve now runs at 18:07 instead of 17:07, because a game is only settled 3h15 after tip and 14:10–14:40 tips were missing the 17:07 run and waiting a full day.",
+   "aim": "Every game's results, Telegram summary and record update land the same evening."
+  },
+  {
+   "date": "2026-11-03",
+   "version": "resolve task 3-Nov (alerts)",
+   "component": "17:07 resolve",
+   "title": "Evening results posted to the Telegram group",
+   "change": "Each 17:07 resolve posts one Telegram message to the group with every settled pick (✅/❌, line, odds, actual), the day's W-L and units, the 7d/30d/season record and tomorrow's first tip; failures still go to Claude push privately.",
+   "aim": "See results and the next-day heads-up in the same place as the picks."
+  },
+  {
+   "date": "2026-11-03",
+   "version": "slate task 3-Nov (alerts)",
+   "component": "slate (hourly)",
+   "title": "Pick alerts now go to Telegram",
+   "change": "Each slate run that makes picks sends one Telegram message to @NBAboomybot with every game, tip and pick (line, odds, hit rate, stars, stake, safer rung), built by a hash-pinned script; Claude push is now only the fallback if Telegram fails.",
+   "aim": "Get the full pick list on the phone the moment it's made, without opening the dashboard."
+  },
+  {
+   "date": "2026-11-02",
+   "version": "totals tracker v1",
+   "component": "dashboard, 17:07 resolve, Sheet `totals` tab",
+   "title": "Model totals tracked as notional 1u bets",
+   "change": "Every analysed game's projected and market total (with Pointsbet over/under prices from 2 Nov) is recorded in a separate `totals` tab, settled from free final scores including overtime, and shown in a collapsed Model totals section with record, units, ROI and hit rate by window, gap bucket and side; the 22 Oct–1 Nov Notion log is shown separately at an assumed 1.91.",
+   "aim": "See whether the projected-total lean beats the market, kept apart from the prop record."
+  },
+  {
+   "date": "2026-11-02",
+   "version": "slate task 2-Nov (c)",
+   "component": "slate (hourly 02:07–13:07)",
+   "title": "Market total prices kept for the totals tracker",
+   "change": "Each analysed game now also records the Pointsbet Over and Under prices at the market total (mkt_o, mkt_u) from the totals call the slate already makes, at no extra Odds API cost; picks and the totals row are unchanged.",
+   "aim": "Score every model totals lean as a notional 1u bet at the real price, so the separate totals tracker shows what the model would have done."
+  },
+  {
+   "date": "2026-11-02",
+   "version": "dashboard 2-Nov",
+   "component": "dashboard, 17:07 resolve",
+   "title": "Next slate line on the dashboard",
+   "change": "Today's slate now shows the next game day's first tip, game count, last tip and first slate run, from a schedule.json the 17:07 resolve refreshes each evening via the free events call; the status banner now follows the 02:07 start.",
+   "aim": "Know at a glance when tomorrow's picks will start arriving without waiting for the evening notification."
+  },
+  {
+   "date": "2026-11-02",
+   "version": "slate task 2-Nov (b)",
+   "component": "slate (hourly 02:07–13:07), capture (03:48–14:48), resolve",
+   "title": "Every game included, whatever the tip time",
+   "change": "The early-morning cut-off is removed: the slate now runs hourly from 02:07 and capture from 03:48, so games tipping as early as about 04:00 Melbourne time get picks and a closing price, and the evening heads-up counts every game.",
+   "aim": "Stop skipping early weekend and holiday tips now that Mitch wants all games covered."
+  },
+  {
+   "date": "2026-11-02",
+   "version": "resolve task 2-Nov",
+   "component": "17:07 resolve",
+   "title": "Evening heads-up for tomorrow's games",
+   "change": "Every 17:07 run now sends one notification that ends with tomorrow's first tip, game count, last tip and the time of the first slate run, even when nothing needed settling.",
+   "aim": "Let Mitch know each evening when the first picks will arrive."
+  },
+  {
+   "date": "2026-11-02",
+   "version": "nba-session v3.8",
+   "component": "slate",
+   "title": "Five-game samples can now qualify",
+   "change": "The shrink weight drops from 30 to 15 pseudo-games, so a player's 5 current-season games count for 25% of the estimate instead of 14% and a 4/5 or 5/5 record can pass the +3pp test.",
+   "aim": "Stop early-season slates going blank (2 Nov had none) while keeping the price as the main anchor; the review watches whether predicted hit rate drifts above actual."
+  },
+  {
+   "date": "2026-11-02",
+   "version": "nba-session v3.8",
+   "component": "slate",
+   "title": "Player logs now come from the right season",
+   "change": "StatMuse names seasons by the year they end, so current-season logs now use 2027 and a 2026 table is treated as last season.",
+   "aim": "Make sure picks are judged on this season's games, not last season's."
+  },
+  {
+   "date": "2026-11-02",
+   "version": "slate task 2-Nov",
+   "component": "slate (hourly 06:07–13:07), capture (06:48–14:48)",
+   "title": "Slate and capture start two hours earlier",
+   "change": "The slate now runs hourly from 06:07 (was 08:07) and analyses games tipping from 06:37, and capture runs from 06:48 (was 08:48), still at minute :48.",
+   "aim": "Cover early tips such as 07:40 games, which the 08:07 start skipped."
+  },
+  {
+   "date": "2026-11-01",
+   "version": "slate task 1-Nov",
+   "component": "slate (hourly 08:07–13:07), capture (08:48–14:48)",
+   "title": "Each game analysed once, 30–150 minutes before its own tip",
+   "change": "The slate now runs hourly from 08:07 to 13:07 and analyses only games that tip within 150 minutes, at least 30 minutes away and not yet done today, with one totals call per run that has games, and capture now runs hourly at :48 from 08:48 to 14:48.",
+   "aim": "Catch early tips and fresher injury news game by game, while skipping games before 08:37 when Mitch can't bet them."
+  },
+  {
+   "date": "2026-11-01",
+   "version": "sheet I/O v1.1",
+   "component": "slate, capture",
+   "title": "Ready for hourly per-game slate runs",
+   "change": "Each slate run now merges its games into the day's dashboard file instead of replacing it, reports which games are already done today, and capture prices each pick once in its last 2–70 minutes before tip.",
+   "aim": "Let picks be made closer to tip, game by game, without losing earlier games or pricing the close twice."
+  },
+  {
+   "date": "2026-11-01",
+   "version": "nba-session v3.7",
+   "component": "09:00 slate",
+   "title": "Every game on the slate is analysed",
+   "change": "The 4-game limit is removed, so the slate prices every game and cuts games only when the Odds API quota can't cover them plus a 50-request reserve for closing-odds capture.",
+   "aim": "Stop missing qualifying picks on big nights now that the stricter v3.5 test filters for quality instead of a game limit."
+  },
+  {
+   "date": "2026-11-01",
+   "version": "nba-session v3.6",
+   "component": "09:00 slate",
+   "title": "Max 3 picks per game, no session cap",
+   "change": "Each game now allows at most 3 picks (was 5), the 8u session cap is removed because the per-game caps already limit a session to 12 picks, and any pick a cap trims is dropped instead of being logged.",
+   "aim": "Cut stacked exposure to one game's pace and blowout risk, and keep the record to picks the engine actually stands behind."
+  },
+  {
+   "date": "2026-11-01",
+   "version": "nba-session v3.5",
+   "component": "09:00 slate",
+   "title": "Hit rates recalibrated toward the market price",
+   "change": "Each rung's probability now leans 75% on a price-adjusted market estimate (bookmaker margin assumed to rise from 0% at 1.50 to about 22% at 1.95), and a pick needs at least +3pp over the break-even price instead of +5pp over a margin-free price.",
+   "aim": "Close the gap between the 81% hit rate the model claimed and the 56% it delivered, which should mean fewer, shorter-priced picks and 1.80+ only on near-perfect samples."
+  },
+  {
+   "date": "2026-10-31",
+   "version": "sheet I/O v1",
+   "component": "slate, capture, resolve",
+   "title": "Picks, closes and results now recorded straight to the Google Sheet",
+   "change": "All three tasks write the Sheet through one hash-pinned script and check the Sheet's own totals after every write; Notion and record.json are no longer written.",
+   "aim": "One reliable record that the dashboard and the weekly analyst review read directly, with no copying between systems."
+  },
+  {
+   "date": "2026-10-31",
+   "version": "slate task 31-Oct",
+   "component": "09:00 slate",
+   "title": "Safer rung on 1.80+ picks",
+   "change": "Every pick priced 1.80 or longer now shows the next rung down priced 1.40–1.79, with its own hit rate; display only, not logged as a pick.",
+   "aim": "Make a higher-hit-rate alternative visible on long prices, and track whether stepping down would have paid."
+  },
+  {
+   "date": "2026-10-31",
+   "version": "resolve task 31-Oct",
+   "component": "17:07 resolve",
+   "title": "Resolve no longer overwrites closing prices",
+   "change": "Close odds and CLV are now owned by the capture task; resolve only marks a still-blank close as 'no close', and runs on Melbourne time.",
+   "aim": "Protect the closing-line data needed to judge whether picks beat the market."
+  },
+  {
+   "date": "2026-10-31",
+   "version": "capture script v2",
+   "component": "hourly close capture",
+   "title": "Closing-odds capture fixed",
+   "change": "A parsing bug had blanked every odds response, so 91% of picks had no closing price; capture now runs hourly before tip and asks only for markets with picks.",
+   "aim": "Get closing-line value (CLV) on every pick — the fastest honest signal of whether the model has an edge."
+  }
+ ]
 }
