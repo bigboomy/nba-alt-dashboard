@@ -1,617 +1,134 @@
 {
-  "generated": "2026-11-03T01:11:27.815993+00:00",
-  "date": "Tue 3 Nov 2026",
+  "generated": "2026-11-04T22:10:41.604075+00:00",
+  "date": "Thu 5 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
   "engine": "nba-session v3.8",
   "games": [
     {
-      "id": "OKC@CLE",
-      "tip": "11:10",
-      "proj": 222.0,
-      "mkt": 229.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "OKC missing Holmgren, J.Williams, Caruso, Wallace, Topic, Sorber; CLE missing Tyson, Tomlin, Watson DTD",
-      "picks": [
-        {
-          "p": "Evan Mobley",
-          "t": "CLE",
-          "s": "PTS",
-          "std": 17.5,
-          "alt": 15.5,
-          "o": 1.53,
-          "h": "83% (5/6)",
-          "e": 4.4,
-          "st": "4",
-          "opp": "106.21 (3/25 ⬇)",
-          "f": [
-            "U1",
-            "OPP⬇3"
-          ]
-        },
-        {
-          "p": "Jarrett Allen",
-          "t": "CLE",
-          "s": "REB",
-          "std": 7.5,
-          "alt": 7.5,
-          "o": 1.5,
-          "h": "83% (5/6)",
-          "e": 4.8,
-          "st": "4",
-          "opp": "45.29 (17/25 –)",
-          "f": [
-            "U1",
-            "OPP–17",
-            "[Std?]"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "ATL@IND",
-      "tip": "11:40",
-      "proj": 236.6,
-      "mkt": 228.5,
-      "ctx": "IND short-handed: Haliburton, Siakam, Zubac out; IND on B2B",
-      "picks": [],
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "BKN@NYK",
-      "tip": "11:40",
-      "proj": 217.0,
-      "mkt": 219.5,
-      "ctx": "BKN 0-5; Randle/MPJ missed BKN's last 2 games, not on report",
-      "picks": [
-        {
-          "p": "Karl-Anthony Towns",
-          "t": "NYK",
-          "s": "PTS",
-          "std": 20.5,
-          "alt": 18.5,
-          "o": 1.53,
-          "h": "100% (5/5)",
-          "e": 7.9,
-          "st": "4",
-          "opp": "116.11 (19/27 -)",
-          "f": [
-            "U1"
-          ]
-        }
-      ],
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "DET@CHA",
-      "tip": "11:40",
-      "proj": 198.2,
-      "mkt": 209.5,
-      "ctx": "DET 5-1, top defence; low-pace game",
-      "picks": [
-        {
-          "p": "Duncan Robinson",
-          "t": "DET",
-          "s": "PTS",
-          "std": 13.5,
-          "alt": 11.5,
-          "o": 1.5,
-          "h": "100% (6/6)",
-          "e": 9.5,
-          "st": "4",
-          "opp": "111.66 (11/27 -)",
-          "f": [
-            "U1"
-          ]
-        },
-        {
-          "p": "Duncan Robinson",
-          "t": "DET",
-          "s": "AST",
-          "std": 1.5,
-          "alt": 1.5,
-          "o": 1.4,
-          "h": "100% (6/6)",
-          "e": 8.2,
-          "st": "4",
-          "opp": "25.93 (16/27 -)",
-          "f": [
-            "Std?",
-            "U1"
-          ]
-        },
-        {
-          "p": "Cade Cunningham",
-          "t": "DET",
-          "s": "AST",
-          "std": 7.5,
-          "alt": 7.5,
-          "o": 1.48,
-          "h": "80% (4/5)",
-          "e": 3.1,
-          "st": "4",
-          "opp": "25.93 (16/27 -)",
-          "f": [
-            "Std?",
-            "U1"
-          ]
-        }
-      ],
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "CHI@PHI",
-      "tip": "11:40",
-      "proj": 224.8,
-      "mkt": 239.5,
-      "ctx": "Embiid questionable; CHI worst DRtg, fastest pace",
+      "id": "PHI@DET",
+      "tip": "11:00",
+      "proj": 205.4,
+      "mkt": 220.5,
+      "mkt_o": 1.95,
+      "mkt_u": 1.87,
+      "ctx": "Embiid/Maxey/Cade all available; DET missing Duren, Joe",
       "picks": [
         {
           "p": "Tyrese Maxey",
           "t": "PHI",
           "s": "PTS",
-          "std": 26.5,
-          "alt": 23.5,
-          "o": 1.44,
+          "std": 24.5,
+          "alt": 21.5,
+          "o": 1.5,
           "h": "100% (5/5)",
-          "e": 7.6,
+          "e": 8.3,
           "st": "4",
-          "opp": "121.77 (25/27 ⬆)",
+          "opp": "103.83 (1⬇)",
           "f": [
             "U1"
           ]
         },
         {
-          "p": "Caleb Wilson",
-          "t": "CHI",
+          "p": "Tyrese Maxey",
+          "t": "PHI",
+          "s": "AST",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.42,
+          "h": "100% (5/5)",
+          "e": 7.4,
+          "st": "4",
+          "opp": "25.66 (13–)",
+          "f": [
+            "[Std?]",
+            "U1"
+          ]
+        },
+        {
+          "p": "LeBron James",
+          "t": "PHI",
+          "s": "PTS",
+          "std": 15.5,
+          "alt": 12.5,
+          "o": 1.4,
+          "h": "100% (5/5)",
+          "e": 7.1,
+          "st": "4",
+          "opp": "103.83 (1⬇)",
+          "f": [
+            "U1"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "ATL@WAS",
+      "tip": "11:10",
+      "proj": 219.6,
+      "mkt": 230.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "J.Johnson Q (ankle), Sarr Q (knee); Trae vs former team",
+      "picks": [
+        {
+          "p": "Trae Young",
+          "t": "WAS",
           "s": "PTS",
           "std": 19.5,
-          "alt": 16.5,
-          "o": 1.42,
-          "h": "83% (5/6)",
-          "e": 3.7,
-          "st": "4",
-          "opp": "103.62 (1/27 ⬇)",
-          "f": [
-            "U1"
-          ]
-        }
-      ],
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "WAS@ORL",
-      "tip": "11:40",
-      "proj": 223.6,
-      "mkt": 225.5,
-      "ctx": "ORL: Banchero, Black, Isaac out; ORL on B2B",
-      "picks": [],
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "SAC@DAL",
-      "tip": "12:10",
-      "proj": 234.8,
-      "mkt": 231.5,
-      "ctx": "LaVine questionable; Irving doubtful; SAC 0-6",
-      "picks": [
-        {
-          "p": "Domantas Sabonis",
-          "t": "SAC",
-          "s": "REB",
-          "std": 13.5,
-          "alt": 13.5,
-          "o": 1.74,
-          "h": "100% (6/6)",
-          "e": 7.8,
-          "st": "4",
-          "opp": "42.27 (7/25 ⬇)",
-          "f": [
-            "U1"
-          ]
-        },
-        {
-          "p": "Domantas Sabonis",
-          "t": "SAC",
-          "s": "AST",
-          "std": 5.5,
-          "alt": 5.5,
-          "o": 1.53,
-          "h": "83% (5/6)",
-          "e": 4.4,
-          "st": "4",
-          "opp": "30.67 (27/27 ⬆)",
-          "f": [
-            "Std?",
-            "U1"
-          ]
-        }
-      ],
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "NOP@MEM",
-      "tip": "12:10",
-      "proj": 229.0,
-      "mkt": 232.5,
-      "ctx": "MEM 6-0; Pippen doubtful, D.Murray questionable",
-      "picks": [
-        {
-          "p": "Zion Williamson",
-          "t": "NOP",
-          "s": "PTS",
-          "std": 20.5,
-          "alt": 18.5,
+          "alt": 17.5,
           "o": 1.5,
           "h": "80% (4/5)",
           "e": 3.3,
           "st": "4",
-          "opp": "105.44 (3/27 ⬇)",
+          "opp": "112.52 (13–)",
           "f": [
             "U1"
           ]
         }
       ],
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
       "engine": "nba-session v3.8"
     },
     {
-      "id": "MIL@MIN",
-      "tip": "12:10",
-      "proj": 232.6,
-      "mkt": 230.5,
-      "ctx": "Edwards out; LaMelo questionable",
+      "id": "CHA@BKN",
+      "tip": "11:30",
+      "proj": 201.6,
+      "mkt": 212.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Knueppel debut (prob), C.White prob; BKN missing Demin",
       "picks": [
         {
-          "p": "Ryan Rollins",
-          "t": "MIL",
-          "s": "AST",
-          "std": 3.5,
-          "alt": 3.5,
-          "o": 1.44,
+          "p": "Moussa Diabate",
+          "t": "CHA",
+          "s": "REB",
+          "std": 9.5,
+          "alt": 7.5,
+          "o": 1.42,
           "h": "83% (5/6)",
-          "e": 4.0,
+          "e": 3.7,
           "st": "4",
-          "opp": "24.07 (6/27 ⬇)",
+          "opp": "41.91 (6⬇)",
           "f": [
-            "Std?",
             "U1"
           ]
         },
         {
-          "p": "Jaden McDaniels",
-          "t": "MIN",
+          "p": "Julius Randle",
+          "t": "BKN",
           "s": "REB",
           "std": 5.5,
           "alt": 5.5,
-          "o": 1.87,
-          "h": "86% (6/7)",
-          "e": 4.6,
-          "st": "3",
-          "opp": "42.57 (8/25 ⬇)",
-          "f": [
-            "U0.5"
-          ]
-        }
-      ],
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "BOS@HOU",
-      "tip": "12:40",
-      "proj": 232.2,
-      "mkt": 215.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "BOS: P. George, D. Carter OUT; HOU: Adams OUT, Sheppard/Capela Q",
-      "picks": [
-        {
-          "p": "Jayson Tatum",
-          "t": "BOS",
-          "s": "AST",
-          "std": 5.5,
-          "alt": 5.5,
-          "o": 1.5,
-          "h": "100% (4/4)",
-          "e": 7.0,
-          "st": "3",
-          "opp": "25.70 (14 -)",
-          "f": [
-            "U0.5",
-            "[n=4]",
-            "[MIN?]",
-            "[Std?]"
-          ]
-        },
-        {
-          "p": "Alperen Sengun",
-          "t": "HOU",
-          "s": "PTS",
-          "std": 17.5,
-          "alt": 15.5,
           "o": 1.48,
           "h": "100% (4/4)",
           "e": 6.8,
           "st": "3",
-          "opp": "109.40 (5 ⬇)",
+          "opp": "42.14 (—)",
           "f": [
-            "U0.5",
             "[n=4]",
-            "[MIN?]"
-          ]
-        },
-        {
-          "p": "Amen Thompson",
-          "t": "HOU",
-          "s": "PTS",
-          "std": 15.5,
-          "alt": 13.5,
-          "o": 1.48,
-          "h": "86% (6/7)",
-          "e": 5.8,
-          "st": "4",
-          "opp": "109.40 (5 ⬇)",
-          "f": [
-            "U1",
-            "[MIN?]"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "UTA@SAS",
-      "tip": "12:40",
-      "proj": 222.3,
-      "mkt": 228.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "Injuries not confirmed",
-      "picks": [
-        {
-          "p": "De'Aaron Fox",
-          "t": "SAS",
-          "s": "PTS",
-          "std": 15.5,
-          "alt": 13.5,
-          "o": 1.5,
-          "h": "83% (5/6)",
-          "e": 4.8,
-          "st": "4",
-          "opp": "117.33 (21 ⬆)",
-          "f": [
-            "U1",
-            "[MIN?]"
-          ]
-        },
-        {
-          "p": "Keyonte George",
-          "t": "UTA",
-          "s": "PTS",
-          "std": 20.5,
-          "alt": 18.5,
-          "o": 1.53,
-          "h": "83% (5/6)",
-          "e": 4.4,
-          "st": "4",
-          "opp": "108.76 (4 ⬇)",
-          "f": [
-            "U1",
-            "[MIN?]"
-          ]
-        },
-        {
-          "p": "Stephon Castle",
-          "t": "SAS",
-          "s": "PTS",
-          "std": 16.5,
-          "alt": 13.5,
-          "o": 1.42,
-          "h": "83% (5/6)",
-          "e": 3.7,
-          "st": "4",
-          "opp": "117.33 (21 ⬆)",
-          "f": [
-            "U1",
-            "[MIN?]"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "POR@DEN",
-      "tip": "13:10",
-      "proj": 229.7,
-      "mkt": 231.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "DEN: Strawther OUT; Diallo/Jones Q",
-      "picks": [
-        {
-          "p": "Damian Lillard",
-          "t": "POR",
-          "s": "PTS",
-          "std": 21.5,
-          "alt": 18.5,
-          "o": 1.48,
-          "h": "80% (4/5)",
-          "e": 3.1,
-          "st": "4",
-          "opp": "115.83 (17 -)",
-          "f": [
-            "U1",
-            "[MIN?]"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "PHX@GSW",
-      "tip": "14:10",
-      "proj": 247.0,
-      "mkt": 227.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "GSW B2B, 5 out (Butler/Porzingis/Moody/Horford/Santos); Curry/Draymond status unconfirmed",
-      "picks": [
-        {
-          "p": "Yaxel Lendeborg",
-          "t": "GSW",
-          "s": "PTS",
-          "std": 18.5,
-          "alt": 16.5,
-          "o": 1.5,
-          "h": "80% (4/5)",
-          "e": 3.3,
-          "st": "2.5",
-          "opp": "126.31 (25/25 ⬆)",
-          "f": [
-            "B2B",
-            "DEP",
-            "U0.25"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "TOR@LAC",
-      "tip": "14:10",
-      "proj": 213.4,
-      "mkt": 219.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "Both teams B2B; Barnes/Poeltl DTD; LAC missing Ingram/Hachimura/Jones/Beal",
-      "picks": [
-        {
-          "p": "Scottie Barnes",
-          "t": "TOR",
-          "s": "PTS",
-          "std": 24.5,
-          "alt": 21.5,
-          "o": 1.48,
-          "h": "83% (5/6)",
-          "e": 4.5,
-          "st": "3.5",
-          "opp": "114.77 (15/25 –)",
-          "f": [
-            "B2B",
-            "DTD",
+            "[Std?]",
             "U0.5"
-          ]
-        },
-        {
-          "p": "Immanuel Quickley",
-          "t": "TOR",
-          "s": "AST",
-          "std": 5.5,
-          "alt": 5.5,
-          "o": 1.5,
-          "h": "80% (4/5)",
-          "e": 3.3,
-          "st": "3.5",
-          "opp": "24.85 (9/25 –)",
-          "f": [
-            "B2B",
-            "Std?",
-            "U0.5"
-          ]
-        },
-        {
-          "p": "R.J. Barrett",
-          "t": "TOR",
-          "s": "PTS",
-          "std": 21.5,
-          "alt": 19.5,
-          "o": 1.53,
-          "h": "100% (4/4)",
-          "e": 6.5,
-          "st": "2.5",
-          "opp": "114.77 (15/25 –)",
-          "f": [
-            "B2B",
-            "n=4",
-            "U0.25"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.8"
-    },
-    {
-      "id": "MIA@LAL",
-      "tip": "14:10",
-      "proj": 244.3,
-      "mkt": 236.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "LAL B2B; MIA rested since 10/30",
-      "picks": [
-        {
-          "p": "Davion Mitchell",
-          "t": "MIA",
-          "s": "PTS",
-          "std": 12.5,
-          "alt": 10.5,
-          "o": 1.5,
-          "h": "83% (5/6)",
-          "e": 4.8,
-          "st": "4",
-          "opp": "114.98 (16/25 –)",
-          "f": [
-            "U1"
-          ]
-        },
-        {
-          "p": "Sandro Mamukelashvili",
-          "t": "LAL",
-          "s": "REB",
-          "std": 3.5,
-          "alt": 3.5,
-          "o": 1.42,
-          "h": "83% (5/6)",
-          "e": 3.7,
-          "st": "3.5",
-          "opp": "46.53 (20/25 ⬆)",
-          "f": [
-            "B2B",
-            "Std?",
-            "U0.5"
-          ]
-        },
-        {
-          "p": "Ziaire Williams",
-          "t": "LAL",
-          "s": "PTS",
-          "std": 8.5,
-          "alt": 7.5,
-          "o": 1.53,
-          "h": "100% (4/4)",
-          "e": 6.5,
-          "st": "2.5",
-          "opp": "117.26 (20/25 ⬆)",
-          "f": [
-            "B2B",
-            "n=4",
-            "U0.25"
           ]
         }
       ],
@@ -620,79 +137,19 @@
   ],
   "totals": [
     [
-      "OKC@CLE",
-      222.0,
-      229.5
+      "PHI@DET",
+      205.4,
+      220.5
     ],
     [
-      "ATL@IND",
-      236.6,
-      228.5
-    ],
-    [
-      "BKN@NYK",
-      217.0,
-      219.5
-    ],
-    [
-      "DET@CHA",
-      198.2,
-      209.5
-    ],
-    [
-      "CHI@PHI",
-      224.8,
-      239.5
-    ],
-    [
-      "WAS@ORL",
-      223.6,
-      225.5
-    ],
-    [
-      "SAC@DAL",
-      234.8,
-      231.5
-    ],
-    [
-      "NOP@MEM",
-      229.0,
-      232.5
-    ],
-    [
-      "MIL@MIN",
-      232.6,
+      "ATL@WAS",
+      219.6,
       230.5
     ],
     [
-      "BOS@HOU",
-      232.2,
-      215.5
-    ],
-    [
-      "UTA@SAS",
-      222.3,
-      228.5
-    ],
-    [
-      "POR@DEN",
-      229.7,
-      231.5
-    ],
-    [
-      "PHX@GSW",
-      247.0,
-      227.5
-    ],
-    [
-      "TOR@LAC",
-      213.4,
-      219.5
-    ],
-    [
-      "MIA@LAL",
-      244.3,
-      236.5
+      "CHA@BKN",
+      201.6,
+      212.5
     ]
   ]
 }
