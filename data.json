@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-05T01:10:42.260529+00:00",
+  "generated": "2026-11-05T02:09:59.097688+00:00",
   "date": "Thu 5 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -548,6 +548,64 @@
         }
       ],
       "engine": "nba-session v3.8"
+    },
+    {
+      "id": "MIA@LAC",
+      "tip": "14:40",
+      "proj": 235.4,
+      "mkt": 233.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Giannis probable; LAC without Beal/Ingram; Hachimura returns",
+      "picks": [
+        {
+          "p": "Keaton Wagler",
+          "t": "LAC",
+          "s": "PTS",
+          "std": 11.5,
+          "alt": 9.5,
+          "o": 1.44,
+          "h": "100% (5/5)",
+          "e": 7.6,
+          "st": "4",
+          "opp": "119.76 (21/25⬆)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Davion Mitchell",
+          "t": "MIA",
+          "s": "PTS",
+          "std": 12.5,
+          "alt": 10.5,
+          "o": 1.53,
+          "h": "83% (5/6)",
+          "e": 4.4,
+          "st": "4",
+          "opp": "115.89 (17/25–)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Kris Dunn",
+          "t": "LAC",
+          "s": "REB",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.5,
+          "h": "80% (4/5)",
+          "e": 3.3,
+          "st": "4",
+          "opp": "46.53 (20/25–)",
+          "f": [
+            "[Std?]",
+            "U1"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
     }
   ],
   "totals": [
@@ -614,6 +672,11 @@
     [
       "LAL@SAC",
       243.9,
+      233.5
+    ],
+    [
+      "MIA@LAC",
+      235.4,
       233.5
     ]
   ]
