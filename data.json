@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-04T23:12:10.071734+00:00",
+  "generated": "2026-11-05T00:10:08.568637+00:00",
   "date": "Thu 5 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -390,6 +390,104 @@
         }
       ],
       "engine": "nba-session v3.8"
+    },
+    {
+      "id": "TOR@DEN",
+      "tip": "13:00",
+      "proj": 230.1,
+      "mkt": 231.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Kawhi OUT (TOR), Poeltl DTD; C.Johnson DTD (DEN)",
+      "picks": [
+        {
+          "p": "Scottie Barnes",
+          "t": "TOR",
+          "s": "PTS",
+          "std": 23.5,
+          "alt": 21.5,
+          "o": 1.59,
+          "h": "83% (5/6 CS)",
+          "e": 3.9,
+          "st": "4",
+          "opp": "115.83 (17/25 –)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Immanuel Quickley",
+          "t": "TOR",
+          "s": "PTS",
+          "std": 16.5,
+          "alt": 14.5,
+          "o": 1.48,
+          "h": "80% (4/5 CS)",
+          "e": 3.1,
+          "st": "4",
+          "opp": "115.83 (17/25 –)",
+          "f": [
+            "U1",
+            "n=5"
+          ]
+        },
+        {
+          "p": "R.J. Barrett",
+          "t": "TOR",
+          "s": "PTS",
+          "std": 21.5,
+          "alt": 18.5,
+          "o": 1.48,
+          "h": "100% (4/4 CS)",
+          "e": 6.8,
+          "st": "3",
+          "opp": "115.83 (17/25 –)",
+          "f": [
+            "U0.5",
+            "EARLY",
+            "n=4"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "POR@PHX",
+      "tip": "13:00",
+      "proj": 241.5,
+      "mkt": 228.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Morant, Sharpe OUT (POR); M.Williams OUT (PHX)",
+      "picks": [],
+      "engine": "nba-session v3.8"
+    },
+    {
+      "id": "DAL@SAS",
+      "tip": "13:30",
+      "proj": 222.9,
+      "mkt": 226.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Lively, Christie, Aldama OUT (DAL); T.Harris OUT (SAS)",
+      "picks": [
+        {
+          "p": "Stephon Castle",
+          "t": "SAS",
+          "s": "PTS",
+          "std": 15.5,
+          "alt": 13.5,
+          "o": 1.48,
+          "h": "83% (5/6 CS)",
+          "e": 4.5,
+          "st": "4",
+          "opp": "111.98 (13/25 –)",
+          "f": [
+            "U1"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.8"
     }
   ],
   "totals": [
@@ -437,6 +535,21 @@
       "MIN@HOU",
       224.6,
       219.5
+    ],
+    [
+      "TOR@DEN",
+      230.1,
+      231.5
+    ],
+    [
+      "POR@PHX",
+      241.5,
+      228.5
+    ],
+    [
+      "DAL@SAS",
+      222.9,
+      226.5
     ]
   ]
 }
