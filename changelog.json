@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-05",
+   "version": "nba-session v3.9",
+   "component": "slate (hourly)",
+   "title": "Stricter picks again, plus a tracked 0u lean tier",
+   "change": "The shrink weight goes back from 15 to 30, so staked picks again need a near-perfect sample (e.g. 5/5 or 6/6 at 1.40–1.50), and rungs that pass only at m = 20 are shown as LEAN at 0u in a separate leans list that is never staked, recorded in the cohort or sent to Telegram.",
+   "aim": "v3.8 went 33/57 (57.9%) against ~66% implied, −6.63u, almost all from one-miss samples (17/36); this restores quality while still measuring whether those quieter samples carry any signal."
+  },
+  {
+   "date": "2026-11-05",
    "title": "Today's slate first; today's games listed from the first run",
    "component": "dashboard",
    "change": "Today's slate moved to the top. Copy buttons removed. Projected totals and model totals collapsed. From the first slate run (02:07) the slate lists today's games from the schedule, each marked with when its picks are due; the previous day's games are cleared. A day with no games shows 'No NBA games today'.",
