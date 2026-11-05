@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-05T21:12:14.446204+00:00",
+  "generated": "2026-11-05T22:05:20.258955+00:00",
   "date": "Fri 6 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
-  "engine": "nba-session v3.9",
+  "engine": "nba-session v3.10",
   "games": [
     {
       "id": "ORL@PHX",
@@ -15,7 +15,7 @@
       "ctx": "PHX B2B (3 in 4); ORL w/o Banchero, Suggs, Isaac, Penda",
       "picks": [],
       "leans": [],
-      "engine": "nba-session v3.9"
+      "engine": "nba-session v3.10"
     },
     {
       "id": "MIA@GSW",
@@ -52,18 +52,36 @@
           "alt": 14.5,
           "o": 1.53,
           "h": "80% (8/10)",
-          "e": 4.2,
+          "e": 5.3,
           "st": "3",
           "opp": "119.76 (21/25 ⬆)",
           "f": [
             "LEAN",
             "U0",
-            "[MIN?]",
+            "QUIET",
+            "Depleted"
+          ]
+        },
+        {
+          "p": "Yaxel Lendeborg",
+          "t": "GSW",
+          "s": "PTS",
+          "std": 19.5,
+          "alt": 16.5,
+          "o": 1.48,
+          "h": "80% (4/5)",
+          "e": 3.1,
+          "st": "4",
+          "opp": "119.76 (21/25 ⬆)",
+          "f": [
+            "LEAN",
+            "U0",
+            "QUIET",
             "Depleted"
           ]
         }
       ],
-      "engine": "nba-session v3.9"
+      "engine": "nba-session v3.10"
     }
   ],
   "totals": [
