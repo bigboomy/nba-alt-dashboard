@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-05",
+   "version": "nba_leans_io.py v1",
+   "component": "resolve + dashboard (leans)",
+   "title": "Leans tracked separately (0u)",
+   "change": "From the 6 Nov slate (nba-session v3.9) each game can carry leans: rungs that pass at m=20 but not m=30. The 18:07 resolve records them from data.json into the Sheet's new `leans` tab and settles them from the same box scores. A collapsed 'Leans (0u)' section shows hit rate against market-implied, record and notional 1u units for 7d / 30d / season. Leans are never staked and never touch the cohort, stats, record, units or hit rate.",
+   "aim": "Judge whether m=20 rungs earn their keep once n≥30, without them muddying the real record."
+  },
+  {
+   "date": "2026-11-05",
    "version": "nba-session v3.9",
    "component": "slate (hourly)",
    "title": "Stricter picks again, plus a tracked 0u lean tier",

@@ -214,6 +214,7 @@ details.fold.inner{background:transparent;margin:10px 0}
 
   <div id="results"></div>
   <div id="totalsSec"></div>
+  <div id="leansSec"></div>
 
   <details class="legend" style="margin-top:16px">
     <summary>How to read this</summary>
@@ -894,6 +895,42 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       renderTotals();
     }).catch(function(){TOTFAIL=true;renderTotals()});
   }
+  /* ---------- leans (nba-session v3.9: tracked only, never staked) ----------
+     Source: the Sheet's `leans` tab, written only by tools/nba_leans_io.py in the resolve task.
+     Never mixed into the record, units or hit rate above. Notional 1u at the lean's Pointsbet price. */
+  var LEAN_URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vRk37gFqBJkXc1gzISmNg3mHtoYKWgw1976R-8Pe3Imo66e5r09-2aC5M5jvHBjlAbqpzATPX4HCaRL/pub?gid=517300811&single=true&output=csv";
+  var LEANS=null,LEANFAIL=false,LEAN_OPEN=false,LEAN_N=30;
+  function leanSum(rows){
+    var s={w:0,l:0,v:0,p:0,u:0,imp:0};
+    rows.forEach(function(r){if(r.result==='W'){s.w++;s.u+=r.odds-1;s.imp+=1/r.odds}else if(r.result==='L'){s.l++;s.u-=1;s.imp+=1/r.odds}else if(r.result==='VOID')s.v++;else if(r.result==='PUSH')s.p++});
+    s.n=s.w+s.l;s.hit=s.n?100*s.w/s.n:null;s.impl=s.n?100*s.imp/s.n:null;s.gap=s.n?s.hit-s.impl:null;s.roi=s.n?100*s.u/s.n:null;return s;
+  }
+  function renderLeans(){
+    var box=$('leansSec');if(!box) return;
+    var head='<details class="fold" id="leanFold"'+(LEAN_OPEN?' open':'')+'><summary><span>Leans (0u) <span class="meta">tracked only, never staked</span></span></summary>';
+    if(LEANFAIL||!LEANS){box.innerHTML=head+'<div class="none">'+(LEANFAIL?'Leans data isn\'t available yet (the Sheet\'s leans tab isn\'t published).':'Loading…')+'</div></details>';bindLean();return}
+    var settled=LEANS.filter(function(r){return r.result==='W'||r.result==='L'}),asOf=null;
+    settled.forEach(function(r){if(!asOf||r.date>asOf)asOf=r.date});
+    var pend=LEANS.filter(function(r){return !r.result}).length;
+    if(!asOf){box.innerHTML=head+'<div class="none">No settled leans yet'+(pend?' ('+pend+' pending)':'')+'. Leans start with the 6 Nov slate (nba-session v3.9).</div></details>';bindLean();return}
+    function win(nd){var lo=nd?addDays(asOf,-(nd-1)):'0000';if(lo<'2026-10-21')lo='2026-10-21';return LEANS.filter(function(r){return r.date>=lo&&r.date<=asOf})}
+    var row=function(label,s){return '<tr><td>'+label+'</td><td>'+s.n+'</td><td>'+s.w+'-'+s.l+(s.p?'-'+s.p:'')+'</td><td>'+(s.hit===null?'—':s.hit.toFixed(1)+'%')+'</td><td>'+(s.impl===null?'—':s.impl.toFixed(1)+'%')+'</td><td class="'+cls(s.gap)+'">'+(s.gap===null?'—':sg(s.gap,1)+'pp')+'</td><td class="'+cls(s.u)+'">'+sg(s.u,2)+'u</td></tr>'};
+    var all=leanSum(LEANS);
+    var h=head+'<div class="ts"><table style="min-width:0"><thead><tr><th></th><th>n</th><th>W-L</th><th>Hit</th><th>Implied</th><th>Gap</th><th>Units</th></tr></thead><tbody>'+
+      row('7d',leanSum(win(7)))+row('30d',leanSum(win(30)))+row('Season',all)+'</tbody></table></div>'+
+      '<p class="cap">'+(all.n<LEAN_N?'<b>Too early to judge: n='+all.n+' of '+LEAN_N+'.</b> ':'')+'Rungs that pass at m=20 but not m=30. Hit is compared with the market-implied rate (mean 1 ÷ odds). Units are notional, flat 1u at the lean\'s price; nothing is staked and none of this is in the record above. As of '+fdate(asOf)+(all.v?' · '+all.v+' void':'')+(pend?' · '+pend+' pending':'')+'.</p></details>';
+    box.innerHTML=h;bindLean();
+  }
+  function bindLean(){var f=$('leanFold');if(f)f.addEventListener('toggle',function(){LEAN_OPEN=this.open})}
+  function loadLeans(){
+    fetch(LEAN_URL,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){
+      if(/^\s*</.test(t))throw 0;
+      var objs=CORE.parseCSV(t);if(objs.length&&!('lean_id' in objs[0]))throw 0;
+      LEANS=objs.filter(function(o){return String(o.lean_id||'').trim()&&/^\d{4}-\d{2}-\d{2}$/.test(String(o.date||'').trim())}).map(function(o){
+        return {date:String(o.date).trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase()}}).filter(function(r){return r.odds!==null&&r.odds>1});
+      LEANFAIL=false;renderLeans();
+    }).catch(function(){LEANFAIL=true;renderLeans()});
+  }
   /* ---------- web-push alerts (sender: tools/nba_push.py in the slate task) ---------- */
   var VAPID_PUB='BAz_aD_630fWpE5YorIANph4tGZ4JUfxDRHYaX_2ljyWtFdlPUW7nxMeR_QDMbV1rJvCuM1BQQamnBDwg8gq444';
   function b64u(s){s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';var r=atob(s),a=new Uint8Array(r.length);for(var i=0;i<r.length;i++)a[i]=r.charCodeAt(i);return a}
@@ -1009,6 +1046,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     .then(init).catch(slateFail);
   loadSched();
   renderTotals();loadTotals();
+  renderLeans();loadLeans();
   alertUI();clearBadge();loadChoices();
   foot();
 })();
