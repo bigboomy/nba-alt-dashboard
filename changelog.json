@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-06",
+   "version": "nba-session v3.10",
+   "component": "slate (hourly)",
+   "title": "More leans on quiet days, flagged QUIET",
+   "change": "On a Melbourne date with fewer than 4 NBA games, leans use m = 15 instead of 20 (so 4/5 and 5/6 samples can show) and every lean that day carries a QUIET flag; staked picks stay at m = 30 every day.",
+   "aim": "Give quiet days some tracked 0u data without lowering the staked bar, and keep QUIET leans separable so they can be judged on their own."
+  },
+  {
    "date": "2026-11-05",
    "version": "nba_leans_io.py v1",
    "component": "resolve + dashboard (leans)",
