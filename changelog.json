@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-07",
+   "version": "nba-session v3.12",
+   "component": "slate (hourly)",
+   "title": "Player game logs now come from ESPN, with a freshness check",
+   "change": "Hit rates are now counted from ESPN game logs (full current season, newest 10 games, minutes included) instead of StatMuse, any player who sat his team's last game is flagged DNP-LAST, and the slate re-counts every sample before saving; StatMuse is a flagged fallback only. Today's (7 Nov) picks were deleted and rebuilt on the new logs.",
+   "aim": "StatMuse was returning short, stale samples (Maxey shown 5/5 when he was 8/9, Derrick White 4/4 when he was 6/8 and below the edge bar), so picks were being made on the wrong games."
+  },
+  {
    "date": "2026-11-06",
    "version": "nba-session v3.11",
    "component": "slate (hourly), weekly review",
