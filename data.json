@@ -1,161 +1,299 @@
 {
-  "generated": "2026-11-06T23:10:12.324857+00:00",
+  "generated": "2026-11-06T23:20:55.726233+00:00",
   "date": "Sat 7 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
-  "engine": "nba-session v3.11",
+  "engine": "nba-session v3.12 (prompt override of v3.11)",
   "games": [
     {
       "id": "WAS@ATL",
       "tip": "11:10",
-      "proj": 219.8,
+      "proj": 220.0,
       "mkt": 228.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
-      "ctx": "Davis Q, Johnson Q; no Pointsbet ATL ladders",
+      "ctx": "ATL Johnson/Landale/Newell/Gilbert OUT; WAS Davis OUT",
       "picks": [],
       "leans": [],
-      "engine": "nba-session v3.11"
+      "engine": "nba-session v3.12 (prompt override of v3.11)"
     },
     {
       "id": "BOS@CHA",
       "tip": "11:10",
-      "proj": 209.0,
+      "proj": 209.2,
       "mkt": 207.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
-      "ctx": "Knueppel OUT, Pritchard Q",
+      "ctx": "CHA Knueppel/Schroder/Diabate OUT",
       "picks": [
-        {
-          "p": "Derrick White",
-          "t": "BOS",
-          "s": "AST",
-          "std": 3.5,
-          "alt": 3.5,
-          "o": 1.42,
-          "h": "100% (4/4)",
-          "e": 3.5,
-          "st": "3",
-          "opp": "26.5 (16/26 –)",
-          "f": [
-            "Std?",
-            "n=4",
-            "EARLY",
-            "U0.5"
-          ]
-        },
         {
           "p": "Jayson Tatum",
           "t": "BOS",
           "s": "AST",
           "std": 5.5,
           "alt": 5.5,
-          "o": 1.48,
-          "h": "100% (4/4)",
-          "e": 3.8,
-          "st": "3",
-          "opp": "26.5 (16/26 –)",
-          "f": [
-            "Std?",
-            "n=4",
-            "EARLY",
-            "U0.5"
-          ]
-        }
-      ],
-      "leans": [],
-      "engine": "nba-session v3.11"
-    },
-    {
-      "id": "PHI@CLE",
-      "tip": "11:40",
-      "proj": 222.4,
-      "mkt": 231.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "early season, CS samples n<=6",
-      "picks": [
-        {
-          "p": "Tyrese Maxey",
-          "t": "PHI",
-          "s": "PTS",
-          "std": 26.5,
-          "alt": 23.5,
-          "o": 1.53,
-          "h": "100% (5/5)",
-          "e": 4.1,
+          "o": 1.5,
+          "h": "100% (7/7)",
+          "e": 6.3,
           "st": "4",
           "opp": "—",
           "f": [
+            "DNP-LAST",
+            "Std?",
             "U1"
           ]
         }
       ],
       "leans": [
         {
-          "p": "Evan Mobley",
-          "t": "CLE",
+          "p": "Paul George",
+          "t": "BOS",
           "s": "PTS",
           "std": 18.5,
-          "alt": 16.5,
-          "o": 1.56,
+          "alt": 15.5,
+          "o": 1.44,
           "h": "83% (5/6)",
-          "e": 3.0,
+          "e": 3.2,
           "st": "4",
           "opp": "—",
           "f": [
             "LEAN",
+            "DNP-LAST",
+            "OUT",
             "U0"
           ]
         }
       ],
-      "engine": "nba-session v3.11"
+      "engine": "nba-session v3.12 (prompt override of v3.11)"
+    },
+    {
+      "id": "PHI@CLE",
+      "tip": "11:40",
+      "proj": 222.6,
+      "mkt": 231.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "CLE Tyson OUT, Allen/Watson Q",
+      "picks": [
+        {
+          "p": "Tyrese Maxey",
+          "t": "PHI",
+          "s": "PTS",
+          "std": 25.5,
+          "alt": 22.5,
+          "o": 1.44,
+          "h": "89% (8/9)",
+          "e": 4.5,
+          "st": "4",
+          "opp": "113.50 (12/25 –)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Evan Mobley",
+          "t": "CLE",
+          "s": "PTS",
+          "std": 18.5,
+          "alt": 15.5,
+          "o": 1.42,
+          "h": "88% (7/8)",
+          "e": 3.6,
+          "st": "4",
+          "opp": "105.40 (2/25 ⬇)",
+          "f": [
+            "MT-",
+            "U1"
+          ]
+        }
+      ],
+      "leans": [],
+      "engine": "nba-session v3.12 (prompt override of v3.11)"
     },
     {
       "id": "UTA@DAL",
       "tip": "12:10",
-      "proj": 220.3,
+      "proj": 220.4,
       "mkt": 225.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
-      "ctx": "early season",
-      "picks": [],
-      "leans": [],
-      "engine": "nba-session v3.11"
+      "ctx": "UTA Jackson Jr/Nurkic OUT; DAL de Larrea OUT",
+      "picks": [
+        {
+          "p": "Brice Sensabaugh",
+          "t": "UTA",
+          "s": "PTS",
+          "std": 7.5,
+          "alt": 5.5,
+          "o": 1.5,
+          "h": "88% (7/8)",
+          "e": 4.4,
+          "st": "3",
+          "opp": "113.03 (11/25 –)",
+          "f": [
+            "ROLE?",
+            "Std?",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "Mo Bamba",
+          "t": "UTA",
+          "s": "PTS",
+          "std": 6.5,
+          "alt": 5.5,
+          "o": 1.42,
+          "h": "100% (5/5)",
+          "e": 4.2,
+          "st": "3",
+          "opp": "113.03 (11/25 –)",
+          "f": [
+            "ROLE?",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "Lauri Markkanen",
+          "t": "UTA",
+          "s": "REB",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.5,
+          "h": "86% (6/7)",
+          "e": 3.6,
+          "st": "3",
+          "opp": "42.27 (7/25 ⬇)",
+          "f": [
+            "ROLE?",
+            "Std?",
+            "MT-",
+            "U0.5"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Zaccharie Risacher",
+          "t": "DAL",
+          "s": "REB",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.83,
+          "h": "88% (7/8)",
+          "e": 3.9,
+          "st": "3",
+          "opp": "42.57 (8/25 ⬇)",
+          "f": [
+            "LEAN",
+            "MT-",
+            "U0"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.12 (prompt override of v3.11)"
     },
     {
       "id": "OKC@MEM",
       "tip": "12:10",
-      "proj": 221.7,
-      "mkt": 224.5,
+      "proj": 221.8,
+      "mkt": 223.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
-      "ctx": "early season",
-      "picks": [],
+      "ctx": "OKC Holmgren/J.Williams/Wallace OUT; MEM Stewart/Pippen OUT",
+      "picks": [
+        {
+          "p": "Cam Spencer",
+          "t": "MEM",
+          "s": "PTS",
+          "std": 8.5,
+          "alt": 6.5,
+          "o": 1.44,
+          "h": "88% (7/8)",
+          "e": 3.8,
+          "st": "4",
+          "opp": "110.50 (8/25 ⬇)",
+          "f": [
+            "MT+",
+            "U1"
+          ]
+        },
+        {
+          "p": "Alex Caruso",
+          "t": "OKC",
+          "s": "PTS",
+          "std": 8.5,
+          "alt": 6.5,
+          "o": 1.44,
+          "h": "100% (5/5)",
+          "e": 4.4,
+          "st": "2",
+          "opp": "—",
+          "f": [
+            "ROLE?",
+            "DNP-LAST",
+            "DEPL",
+            "U0.25"
+          ]
+        }
+      ],
       "leans": [],
-      "engine": "nba-session v3.11"
+      "engine": "nba-session v3.12 (prompt override of v3.11)"
     },
     {
       "id": "TOR@MIL",
       "tip": "12:10",
-      "proj": 233.2,
+      "proj": 233.4,
       "mkt": 228.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
-      "ctx": "early season",
-      "picks": [],
+      "ctx": "TOR Leonard OUT, Barnes/Quickley/Anderson Q",
+      "picks": [
+        {
+          "p": "Kyle Kuzma",
+          "t": "MIL",
+          "s": "AST",
+          "std": 1.5,
+          "alt": 1.5,
+          "o": 1.42,
+          "h": "88% (7/8)",
+          "e": 3.6,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "Std?",
+            "MT-",
+            "U1"
+          ]
+        }
+      ],
       "leans": [],
-      "engine": "nba-session v3.11"
+      "engine": "nba-session v3.12 (prompt override of v3.11)"
     },
     {
       "id": "MIN@NOP",
       "tip": "12:10",
-      "proj": 226.1,
-      "mkt": 231.5,
-      "mkt_o": 1.95,
-      "mkt_u": 1.87,
-      "ctx": "early season",
+      "proj": 226.2,
+      "mkt": 230.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "MIN Edwards/DiVincenzo/Shannon OUT; NOP Missi OUT",
       "picks": [
+        {
+          "p": "Derik Queen",
+          "t": "NOP",
+          "s": "REB",
+          "std": 7.5,
+          "alt": 5.5,
+          "o": 1.44,
+          "h": "88% (7/8)",
+          "e": 3.8,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "Std?",
+            "U1"
+          ]
+        },
         {
           "p": "Zion Williamson",
           "t": "NOP",
@@ -163,46 +301,44 @@
           "std": 19.5,
           "alt": 16.5,
           "o": 1.44,
-          "h": "100% (5/5)",
-          "e": 4.4,
+          "h": "88% (7/8)",
+          "e": 3.8,
           "st": "4",
           "opp": "—",
           "f": [
             "U1"
           ]
-        }
-      ],
-      "leans": [
+        },
         {
-          "p": "Jaden McDaniels",
-          "t": "MIN",
-          "s": "REB",
-          "std": 5.5,
-          "alt": 5.5,
-          "o": 1.69,
+          "p": "Derik Queen",
+          "t": "NOP",
+          "s": "PTS",
+          "std": 10.5,
+          "alt": 8.5,
+          "o": 1.44,
           "h": "86% (6/7)",
           "e": 3.1,
-          "st": "3",
+          "st": "4",
           "opp": "—",
           "f": [
-            "LEAN",
-            "U0",
-            "MT+"
+            "OUT",
+            "U1"
           ]
         }
       ],
-      "engine": "nba-session v3.11"
+      "leans": [],
+      "engine": "nba-session v3.12 (prompt override of v3.11)"
     }
   ],
   "totals": [
     [
       "WAS@ATL",
-      219.8,
+      220.0,
       228.5
     ],
     [
       "BOS@CHA",
-      209.0,
+      209.2,
       207.5
     ],
     [
@@ -212,23 +348,23 @@
     ],
     [
       "UTA@DAL",
-      220.3,
+      220.4,
       225.5
     ],
     [
       "OKC@MEM",
-      221.7,
-      224.5
+      221.8,
+      223.5
     ],
     [
       "TOR@MIL",
-      233.2,
+      233.4,
       228.5
     ],
     [
       "MIN@NOP",
-      226.1,
-      231.5
+      226.2,
+      230.5
     ]
   ]
 }
