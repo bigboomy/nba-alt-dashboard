@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-06",
+   "version": "nba-session v3.11",
+   "component": "slate (hourly), weekly review",
+   "title": "Minutes-trend flag on picks and leans (shadow, under test)",
+   "change": "Every pick and lean whose player has 7+ games this season now carries MT+ when his last-5 minutes are 1.5+ above his last 10, or MT- when 1.5+ below; it never changes a pick, and the Monday review compares flagged against unflagged results.",
+   "aim": "Test on our own bets whether a rising or falling minutes role predicts results beyond the price (two seasons of box scores showed a 6–7pp hit-rate gap), before ever making it a rule."
+  },
+  {
+   "date": "2026-11-06",
    "version": "nba-session v3.10",
    "component": "slate (hourly)",
    "title": "More leans on quiet days, flagged QUIET",
