@@ -1,99 +1,82 @@
 {
-  "generated": "2026-11-05T22:05:20.258955+00:00",
-  "date": "Fri 6 Nov 2026",
+  "generated": "2026-11-06T22:10:54.848115+00:00",
+  "date": "Sat 7 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
-  "engine": "nba-session v3.10",
+  "engine": "nba-session v3.11",
   "games": [
     {
-      "id": "ORL@PHX",
-      "tip": "13:10",
-      "proj": 234.1,
-      "mkt": 222.5,
+      "id": "WAS@ATL",
+      "tip": "11:10",
+      "proj": 219.8,
+      "mkt": 228.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
-      "ctx": "PHX B2B (3 in 4); ORL w/o Banchero, Suggs, Isaac, Penda",
+      "ctx": "Davis Q, Johnson Q; no Pointsbet ATL ladders",
       "picks": [],
       "leans": [],
-      "engine": "nba-session v3.10"
+      "engine": "nba-session v3.11"
     },
     {
-      "id": "MIA@GSW",
-      "tip": "14:10",
-      "proj": 246.1,
-      "mkt": 235.5,
+      "id": "BOS@CHA",
+      "tip": "11:10",
+      "proj": 209.0,
+      "mkt": 207.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
-      "ctx": "MIA B2B (OT win vs LAC); GSW w/o Butler, Moody, Santos, Porzingis",
+      "ctx": "Knueppel OUT, Pritchard Q",
       "picks": [
         {
-          "p": "Davion Mitchell",
-          "t": "MIA",
-          "s": "PTS",
-          "std": 11.5,
-          "alt": 9.5,
-          "o": 1.44,
-          "h": "100% (6/6)",
-          "e": 5.1,
-          "st": "3.5",
-          "opp": "116.24 (18/25 -)",
+          "p": "Derrick White",
+          "t": "BOS",
+          "s": "AST",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.42,
+          "h": "100% (4/4)",
+          "e": 3.5,
+          "st": "3",
+          "opp": "26.5 (16/26 –)",
           "f": [
-            "B2B",
+            "Std?",
+            "n=4",
+            "EARLY",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "Jayson Tatum",
+          "t": "BOS",
+          "s": "AST",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.48,
+          "h": "100% (4/4)",
+          "e": 3.8,
+          "st": "3",
+          "opp": "26.5 (16/26 –)",
+          "f": [
+            "Std?",
+            "n=4",
+            "EARLY",
             "U0.5"
           ]
         }
       ],
-      "leans": [
-        {
-          "p": "Brandin Podziemski",
-          "t": "GSW",
-          "s": "PTS",
-          "std": 16.5,
-          "alt": 14.5,
-          "o": 1.53,
-          "h": "80% (8/10)",
-          "e": 5.3,
-          "st": "3",
-          "opp": "119.76 (21/25 ⬆)",
-          "f": [
-            "LEAN",
-            "U0",
-            "QUIET",
-            "Depleted"
-          ]
-        },
-        {
-          "p": "Yaxel Lendeborg",
-          "t": "GSW",
-          "s": "PTS",
-          "std": 19.5,
-          "alt": 16.5,
-          "o": 1.48,
-          "h": "80% (4/5)",
-          "e": 3.1,
-          "st": "4",
-          "opp": "119.76 (21/25 ⬆)",
-          "f": [
-            "LEAN",
-            "U0",
-            "QUIET",
-            "Depleted"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.10"
+      "leans": [],
+      "engine": "nba-session v3.11"
     }
   ],
   "totals": [
     [
-      "ORL@PHX",
-      234.1,
-      222.5
+      "WAS@ATL",
+      219.8,
+      228.5
     ],
     [
-      "MIA@GSW",
-      246.1,
-      235.5
+      "BOS@CHA",
+      209.0,
+      207.5
     ]
   ]
 }
