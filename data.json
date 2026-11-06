@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-06T22:10:54.848115+00:00",
+  "generated": "2026-11-06T23:10:12.324857+00:00",
   "date": "Sat 7 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -65,6 +65,133 @@
       ],
       "leans": [],
       "engine": "nba-session v3.11"
+    },
+    {
+      "id": "PHI@CLE",
+      "tip": "11:40",
+      "proj": 222.4,
+      "mkt": 231.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "early season, CS samples n<=6",
+      "picks": [
+        {
+          "p": "Tyrese Maxey",
+          "t": "PHI",
+          "s": "PTS",
+          "std": 26.5,
+          "alt": 23.5,
+          "o": 1.53,
+          "h": "100% (5/5)",
+          "e": 4.1,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "U1"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Evan Mobley",
+          "t": "CLE",
+          "s": "PTS",
+          "std": 18.5,
+          "alt": 16.5,
+          "o": 1.56,
+          "h": "83% (5/6)",
+          "e": 3.0,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.11"
+    },
+    {
+      "id": "UTA@DAL",
+      "tip": "12:10",
+      "proj": 220.3,
+      "mkt": 225.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "early season",
+      "picks": [],
+      "leans": [],
+      "engine": "nba-session v3.11"
+    },
+    {
+      "id": "OKC@MEM",
+      "tip": "12:10",
+      "proj": 221.7,
+      "mkt": 224.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "early season",
+      "picks": [],
+      "leans": [],
+      "engine": "nba-session v3.11"
+    },
+    {
+      "id": "TOR@MIL",
+      "tip": "12:10",
+      "proj": 233.2,
+      "mkt": 228.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "early season",
+      "picks": [],
+      "leans": [],
+      "engine": "nba-session v3.11"
+    },
+    {
+      "id": "MIN@NOP",
+      "tip": "12:10",
+      "proj": 226.1,
+      "mkt": 231.5,
+      "mkt_o": 1.95,
+      "mkt_u": 1.87,
+      "ctx": "early season",
+      "picks": [
+        {
+          "p": "Zion Williamson",
+          "t": "NOP",
+          "s": "PTS",
+          "std": 19.5,
+          "alt": 16.5,
+          "o": 1.44,
+          "h": "100% (5/5)",
+          "e": 4.4,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "U1"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Jaden McDaniels",
+          "t": "MIN",
+          "s": "REB",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.69,
+          "h": "86% (6/7)",
+          "e": 3.1,
+          "st": "3",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "MT+"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.11"
     }
   ],
   "totals": [
@@ -77,6 +204,31 @@
       "BOS@CHA",
       209.0,
       207.5
+    ],
+    [
+      "PHI@CLE",
+      222.4,
+      231.5
+    ],
+    [
+      "UTA@DAL",
+      220.3,
+      225.5
+    ],
+    [
+      "OKC@MEM",
+      221.7,
+      224.5
+    ],
+    [
+      "TOR@MIL",
+      233.2,
+      228.5
+    ],
+    [
+      "MIN@NOP",
+      226.1,
+      231.5
     ]
   ]
 }
