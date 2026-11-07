@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-07",
+   "version": "nba-session v3.13",
+   "component": "slate (hourly), weekly review",
+   "title": "Overtime games no longer inflate a player's sample",
+   "change": "When a game in a player's sample went to overtime, its minutes, points, rebounds and assists are scaled back to 48 minutes (one OT ×0.906) before hits are counted, and the pick or lean is flagged OT-ADJ; bets still settle on the real box score including overtime.",
+   "aim": "Stop overtime-assisted hits making a 4/5 player look 5/5 at the edge of the +3pp bar (Zion's 7/8 on 7 Nov contained three overtime games and was really 6/8)."
+  },
+  {
+   "date": "2026-11-07",
    "version": "nba-session v3.12",
    "component": "slate (hourly)",
    "title": "Player game logs now come from ESPN, with a freshness check",
