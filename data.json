@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T20:09:23.964558+00:00",
+  "generated": "2026-11-07T23:10:36.798269+00:00",
   "date": "Sun 8 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -47,6 +47,180 @@
       ],
       "leans": [],
       "engine": "nba-session v3.13"
+    },
+    {
+      "id": "BKN@ATL",
+      "tip": "11:40",
+      "proj": 222.6,
+      "mkt": 226.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "ATL on B2B; Jalen Johnson out/unconfirmed (DNP last 2+), also Gilbert/Newell/Landale listed out (ESPN, stale); BKN Demin/Bilodeau out; Sharpe DTD. Coverage: evaluated 12 of 13 players (29 of 32 player-stats); skipped: Nickeil Alexander-Walker REB (no rung priced 1.40+ at or below std), Onyeka Okongwu AST (no rung priced 1.40+ at or below std), Jalen Johnson PTS (DNP-LAST, listed out/unconfirmed), Jalen Johnson REB (DNP-LAST, listed out/unconfirmed), Jalen Johnson AST (DNP-LAST, listed out/unconfirmed)",
+      "picks": [],
+      "leans": [
+        {
+          "p": "C.J. McCollum",
+          "t": "ATL",
+          "s": "PTS",
+          "std": 13.5,
+          "alt": 11.5,
+          "o": 1.56,
+          "h": "80% (8/10)",
+          "e": 4.1,
+          "st": "3.5",
+          "opp": "113.14 (13–/25)",
+          "f": [
+            "B2B",
+            "LEAN",
+            "U0"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.13"
+    },
+    {
+      "id": "NYK@CLE",
+      "tip": "12:10",
+      "proj": 223.2,
+      "mkt": 222.5,
+      "mkt_o": 1.87,
+      "mkt_u": 1.95,
+      "ctx": "CLE on B2B; Allen, Merrill, Tyson, Tomlin OUT; Hart OUT (NYK). Coverage: evaluated 14 of 15 players (34 of 36 player-stats); skipped: Donovan Mitchell REB (no rung priced 1.40+ at or below std), Mikal Bridges AST (no rung priced 1.40+ at or below std), Jarrett Allen PTS (ruled OUT (knee)), Jarrett Allen REB (ruled OUT (knee))",
+      "picks": [
+        {
+          "p": "Karl-Anthony Towns",
+          "t": "NYK",
+          "s": "PTS",
+          "std": 19.5,
+          "alt": 16.5,
+          "o": 1.44,
+          "h": "88% (7/8)",
+          "e": 3.8,
+          "st": "4",
+          "opp": "112.09 (9–/25)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Karl-Anthony Towns",
+          "t": "NYK",
+          "s": "REB",
+          "std": 13.5,
+          "alt": 11.5,
+          "o": 1.4,
+          "h": "88% (7/8)",
+          "e": 3.4,
+          "st": "4",
+          "opp": "41.26 (5⬇/25)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Evan Mobley",
+          "t": "CLE",
+          "s": "PTS",
+          "std": 17.5,
+          "alt": 15.5,
+          "o": 1.56,
+          "h": "89% (8/9)",
+          "e": 4.3,
+          "st": "3.5",
+          "opp": "108.69 (5⬇/25)",
+          "f": [
+            "OT-ADJ",
+            "B2B",
+            "U0.5"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Meleek Thomas",
+          "t": "CLE",
+          "s": "PTS",
+          "std": 11.5,
+          "alt": 9.5,
+          "o": 1.53,
+          "h": "83% (5/6)",
+          "e": 3.4,
+          "st": "3.5",
+          "opp": "108.69 (5⬇/25)",
+          "f": [
+            "OT-ADJ",
+            "B2B",
+            "LEAN",
+            "U0"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.13"
+    },
+    {
+      "id": "WAS@OKC",
+      "tip": "12:10",
+      "proj": 220.1,
+      "mkt": 223.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "WAS and OKC both on B2B; OKC without J.Williams, Jaylin Williams, Wallace, Holmgren, Sorber; WAS Beekman, Champagnie, Vukcevic, Watkins out; Anthony Davis QUESTIONABLE (ankle, missed last game). Coverage: evaluated 14 of 14 players (36 of 36 player-stats); skipped: Trae Young REB (no rung priced 1.40+ at or below std), Kenrich Williams REB (no rung priced 1.40+ at or below std)",
+      "picks": [
+        {
+          "p": "Trae Young",
+          "t": "WAS",
+          "s": "AST",
+          "std": 9.5,
+          "alt": 7.5,
+          "o": 1.4,
+          "h": "89% (8/9)",
+          "e": 4.0,
+          "st": "3.5",
+          "opp": "19.39 (3⬇/25)",
+          "f": [
+            "[Std?]",
+            "B2B",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "Anthony Davis",
+          "t": "WAS",
+          "s": "PTS",
+          "std": 19.5,
+          "alt": 17.5,
+          "o": 1.56,
+          "h": "88% (7/8)",
+          "e": 3.5,
+          "st": "3.5",
+          "opp": "108.77 (6⬇/25)",
+          "f": [
+            "DNP-LAST",
+            "B2B",
+            "U0.5"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Alex Caruso",
+          "t": "OKC",
+          "s": "PTS",
+          "std": 7.5,
+          "alt": 5.5,
+          "o": 1.44,
+          "h": "83% (5/6)",
+          "e": 3.2,
+          "st": "3.5",
+          "opp": "113.76 (15–/25)",
+          "f": [
+            "B2B",
+            "LEAN",
+            "U0"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.13"
     }
   ],
   "totals": [
@@ -54,6 +228,21 @@
       "DEN@IND",
       227.5,
       229.5
+    ],
+    [
+      "BKN@ATL",
+      222.6,
+      226.5
+    ],
+    [
+      "NYK@CLE",
+      223.2,
+      222.5
+    ],
+    [
+      "WAS@OKC",
+      220.1,
+      223.5
     ]
   ]
 }
