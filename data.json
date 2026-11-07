@@ -1,520 +1,59 @@
 {
-  "generated": "2026-11-07T01:09:54.682249+00:00",
-  "date": "Sat 07 Nov 2026",
+  "generated": "2026-11-07T20:09:23.964558+00:00",
+  "date": "Sun 8 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
-  "engine": "nba-session v3.12",
+  "engine": "nba-session v3.13",
   "games": [
     {
-      "id": "WAS@ATL",
-      "tip": "11:10",
-      "proj": 220.0,
-      "mkt": 228.5,
+      "id": "DEN@IND",
+      "tip": "09:10",
+      "proj": 227.5,
+      "mkt": 229.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
-      "ctx": "ATL Johnson/Landale/Newell/Gilbert OUT; WAS Davis OUT",
-      "picks": [],
-      "leans": [],
-      "engine": "nba-session v3.12 (prompt override of v3.11)"
-    },
-    {
-      "id": "BOS@CHA",
-      "tip": "11:10",
-      "proj": 209.2,
-      "mkt": 207.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "CHA Knueppel/Schroder/Diabate OUT",
+      "ctx": "DEN away, IND home; IND out: Haliburton, McConnell, Sheppard, Furphy (depletion -1 star on IND picks); DEN out: Strawther; DeRozan and Oubre day-to-day. Ratings are 2026-27 only (last-season table unavailable), no blend. Coverage: evaluated 12 of 13 players (31 of 32 player-stats); skipped: Spencer Jones PTS (no ESPN match / 0 current-season games)",
       "picks": [
         {
-          "p": "Jayson Tatum",
-          "t": "BOS",
-          "s": "AST",
-          "std": 5.5,
-          "alt": 5.5,
-          "o": 1.5,
+          "p": "Andrew Nembhard",
+          "t": "IND",
+          "s": "PTS",
+          "std": 16.5,
+          "alt": 13.5,
+          "o": 1.42,
           "h": "100% (7/7)",
-          "e": 6.3,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "DNP-LAST",
-            "Std?",
-            "U1"
-          ]
-        }
-      ],
-      "leans": [
-        {
-          "p": "Paul George",
-          "t": "BOS",
-          "s": "PTS",
-          "std": 18.5,
-          "alt": 15.5,
-          "o": 1.44,
-          "h": "83% (5/6)",
-          "e": 3.2,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "DNP-LAST",
-            "OUT",
-            "U0"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.12 (prompt override of v3.11)"
-    },
-    {
-      "id": "PHI@CLE",
-      "tip": "11:40",
-      "proj": 222.6,
-      "mkt": 231.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "CLE Tyson OUT, Allen/Watson Q",
-      "picks": [
-        {
-          "p": "Tyrese Maxey",
-          "t": "PHI",
-          "s": "PTS",
-          "std": 25.5,
-          "alt": 22.5,
-          "o": 1.44,
-          "h": "89% (8/9)",
-          "e": 4.5,
-          "st": "4",
-          "opp": "113.50 (12/25 –)",
-          "f": [
-            "U1"
-          ]
-        },
-        {
-          "p": "Evan Mobley",
-          "t": "CLE",
-          "s": "PTS",
-          "std": 18.5,
-          "alt": 15.5,
-          "o": 1.42,
-          "h": "88% (7/8)",
-          "e": 3.6,
-          "st": "4",
-          "opp": "105.40 (2/25 ⬇)",
-          "f": [
-            "MT-",
-            "U1"
-          ]
-        }
-      ],
-      "leans": [],
-      "engine": "nba-session v3.12 (prompt override of v3.11)"
-    },
-    {
-      "id": "UTA@DAL",
-      "tip": "12:10",
-      "proj": 220.4,
-      "mkt": 225.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "UTA Jackson Jr/Nurkic OUT; DAL de Larrea OUT",
-      "picks": [
-        {
-          "p": "Brice Sensabaugh",
-          "t": "UTA",
-          "s": "PTS",
-          "std": 7.5,
-          "alt": 5.5,
-          "o": 1.5,
-          "h": "88% (7/8)",
-          "e": 4.4,
+          "e": 5.6,
           "st": "3",
-          "opp": "113.03 (11/25 –)",
+          "opp": "117.00 (20/25 –)",
           "f": [
-            "ROLE?",
-            "Std?",
             "U0.5"
           ]
         },
         {
-          "p": "Mo Bamba",
-          "t": "UTA",
+          "p": "Obi Toppin",
+          "t": "IND",
           "s": "PTS",
-          "std": 6.5,
-          "alt": 5.5,
-          "o": 1.42,
-          "h": "100% (5/5)",
-          "e": 4.2,
-          "st": "3",
-          "opp": "113.03 (11/25 –)",
-          "f": [
-            "ROLE?",
-            "U0.5"
-          ]
-        },
-        {
-          "p": "Lauri Markkanen",
-          "t": "UTA",
-          "s": "REB",
-          "std": 5.5,
-          "alt": 5.5,
-          "o": 1.5,
-          "h": "86% (6/7)",
-          "e": 3.6,
-          "st": "3",
-          "opp": "42.27 (7/25 ⬇)",
-          "f": [
-            "ROLE?",
-            "Std?",
-            "MT-",
-            "U0.5"
-          ]
-        }
-      ],
-      "leans": [
-        {
-          "p": "Zaccharie Risacher",
-          "t": "DAL",
-          "s": "REB",
-          "std": 3.5,
-          "alt": 3.5,
-          "o": 1.83,
-          "h": "88% (7/8)",
-          "e": 3.9,
-          "st": "3",
-          "opp": "42.57 (8/25 ⬇)",
-          "f": [
-            "LEAN",
-            "MT-",
-            "U0"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.12 (prompt override of v3.11)"
-    },
-    {
-      "id": "OKC@MEM",
-      "tip": "12:10",
-      "proj": 221.8,
-      "mkt": 223.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "OKC Holmgren/J.Williams/Wallace OUT; MEM Stewart/Pippen OUT",
-      "picks": [
-        {
-          "p": "Cam Spencer",
-          "t": "MEM",
-          "s": "PTS",
-          "std": 8.5,
-          "alt": 6.5,
-          "o": 1.44,
-          "h": "88% (7/8)",
-          "e": 3.8,
-          "st": "4",
-          "opp": "110.50 (8/25 ⬇)",
-          "f": [
-            "MT+",
-            "U1"
-          ]
-        },
-        {
-          "p": "Alex Caruso",
-          "t": "OKC",
-          "s": "PTS",
-          "std": 8.5,
-          "alt": 6.5,
-          "o": 1.44,
-          "h": "100% (5/5)",
-          "e": 4.4,
-          "st": "2",
-          "opp": "—",
-          "f": [
-            "ROLE?",
-            "DNP-LAST",
-            "DEPL",
-            "U0.25"
-          ]
-        }
-      ],
-      "leans": [],
-      "engine": "nba-session v3.12 (prompt override of v3.11)"
-    },
-    {
-      "id": "TOR@MIL",
-      "tip": "12:10",
-      "proj": 233.4,
-      "mkt": 228.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "TOR Leonard OUT, Barnes/Quickley/Anderson Q",
-      "picks": [
-        {
-          "p": "Kyle Kuzma",
-          "t": "MIL",
-          "s": "AST",
-          "std": 1.5,
-          "alt": 1.5,
-          "o": 1.42,
-          "h": "88% (7/8)",
-          "e": 3.6,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "Std?",
-            "MT-",
-            "U1"
-          ]
-        }
-      ],
-      "leans": [],
-      "engine": "nba-session v3.12 (prompt override of v3.11)"
-    },
-    {
-      "id": "MIN@NOP",
-      "tip": "12:10",
-      "proj": 226.2,
-      "mkt": 230.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "MIN Edwards/DiVincenzo/Shannon OUT; NOP Missi OUT",
-      "picks": [
-        {
-          "p": "Derik Queen",
-          "t": "NOP",
-          "s": "REB",
-          "std": 7.5,
-          "alt": 5.5,
-          "o": 1.44,
-          "h": "88% (7/8)",
-          "e": 3.8,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "Std?",
-            "U1"
-          ]
-        },
-        {
-          "p": "Zion Williamson",
-          "t": "NOP",
-          "s": "PTS",
-          "std": 19.5,
-          "alt": 16.5,
-          "o": 1.44,
-          "h": "88% (7/8)",
-          "e": 3.8,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "U1"
-          ]
-        },
-        {
-          "p": "Derik Queen",
-          "t": "NOP",
-          "s": "PTS",
-          "std": 10.5,
-          "alt": 8.5,
-          "o": 1.44,
-          "h": "86% (6/7)",
-          "e": 3.1,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "OUT",
-            "U1"
-          ]
-        }
-      ],
-      "leans": [],
-      "engine": "nba-session v3.12 (prompt override of v3.11)"
-    },
-    {
-      "id": "POR@LAL",
-      "tip": "14:10",
-      "proj": 241.4,
-      "mkt": 232.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "POR w/o Morant, Sharpe, Krejci (out)",
-      "picks": [
-        {
-          "p": "Ziaire Williams",
-          "t": "LAL",
-          "s": "PTS",
-          "std": 7.5,
-          "alt": 6.5,
-          "o": 1.59,
+          "std": 11.5,
+          "alt": 9.5,
+          "o": 1.53,
           "h": "100% (6/6)",
-          "e": 3.9,
-          "st": "4",
-          "opp": "110.03 (7/25 ⬇)",
-          "f": [
-            "U1"
-          ]
-        },
-        {
-          "p": "Jrue Holiday",
-          "t": "POR",
-          "s": "REB",
-          "std": 3.5,
-          "alt": 3.5,
-          "o": 1.5,
-          "h": "86% (6/7)",
-          "e": 3.6,
+          "e": 5.0,
           "st": "3",
-          "opp": "40.43 (3/25 ⬇)",
+          "opp": "117.00 (20/25 –)",
           "f": [
-            "Std?",
-            "DEPL",
             "U0.5"
-          ]
-        },
-        {
-          "p": "Damian Lillard",
-          "t": "POR",
-          "s": "PTS",
-          "std": 21.5,
-          "alt": 18.5,
-          "o": 1.48,
-          "h": "86% (6/7)",
-          "e": 3.4,
-          "st": "3",
-          "opp": "114.90 (16/25 -)",
-          "f": [
-            "DEPL",
-            "U0.5"
-          ]
-        }
-      ],
-      "leans": [
-        {
-          "p": "Deni Avdija",
-          "t": "POR",
-          "s": "PTS",
-          "std": 23.5,
-          "alt": 20.5,
-          "o": 1.42,
-          "h": "86% (6/7)",
-          "e": 4.0,
-          "st": "3",
-          "opp": "114.90 (16/25 -)",
-          "f": [
-            "LEAN",
-            "U0",
-            "DEPL"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.12"
-    },
-    {
-      "id": "SAS@SAC",
-      "tip": "14:10",
-      "proj": 227.9,
-      "mkt": 231.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "SAC w/o Raynaud, Murray; SAS w/o T.Harris",
-      "picks": [
-        {
-          "p": "Keldon Johnson",
-          "t": "SAS",
-          "s": "REB",
-          "std": 3.5,
-          "alt": 3.5,
-          "o": 1.4,
-          "h": "100% (8/8)",
-          "e": 6.0,
-          "st": "4",
-          "opp": "48.67 (23/25 ⬆)",
-          "f": [
-            "Std?",
-            "U1"
-          ]
-        },
-        {
-          "p": "Zach LaVine",
-          "t": "SAC",
-          "s": "PTS",
-          "std": 19.5,
-          "alt": 16.5,
-          "o": 1.44,
-          "h": "88% (7/8)",
-          "e": 3.8,
-          "st": "4",
-          "opp": "106.97 (3/25 ⬇)",
-          "f": [
-            "MT-",
-            "U1"
-          ]
-        },
-        {
-          "p": "Domantas Sabonis",
-          "t": "SAC",
-          "s": "REB",
-          "std": 13.5,
-          "alt": 11.5,
-          "o": 1.56,
-          "h": "88% (7/8)",
-          "e": 3.5,
-          "st": "4",
-          "opp": "44.04 (13/25 -)",
-          "f": [
-            "Std?",
-            "U1"
           ]
         }
       ],
       "leans": [],
-      "engine": "nba-session v3.12"
+      "engine": "nba-session v3.13"
     }
   ],
   "totals": [
     [
-      "WAS@ATL",
-      220.0,
-      228.5
-    ],
-    [
-      "BOS@CHA",
-      209.2,
-      207.5
-    ],
-    [
-      "PHI@CLE",
-      222.6,
-      231.5
-    ],
-    [
-      "UTA@DAL",
-      220.4,
-      225.5
-    ],
-    [
-      "OKC@MEM",
-      221.8,
-      223.5
-    ],
-    [
-      "TOR@MIL",
-      233.4,
-      228.5
-    ],
-    [
-      "MIN@NOP",
-      226.2,
-      230.5
-    ],
-    [
-      "POR@LAL",
-      241.4,
-      232.5
-    ],
-    [
-      "SAS@SAC",
-      227.9,
-      231.5
+      "DEN@IND",
+      227.5,
+      229.5
     ]
   ]
 }
