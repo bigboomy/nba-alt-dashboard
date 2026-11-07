@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-06T23:20:55.726233+00:00",
-  "date": "Sat 7 Nov 2026",
+  "generated": "2026-11-07T01:09:54.682249+00:00",
+  "date": "Sat 07 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
-  "engine": "nba-session v3.12 (prompt override of v3.11)",
+  "engine": "nba-session v3.12",
   "games": [
     {
       "id": "WAS@ATL",
@@ -328,6 +328,146 @@
       ],
       "leans": [],
       "engine": "nba-session v3.12 (prompt override of v3.11)"
+    },
+    {
+      "id": "POR@LAL",
+      "tip": "14:10",
+      "proj": 241.4,
+      "mkt": 232.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "POR w/o Morant, Sharpe, Krejci (out)",
+      "picks": [
+        {
+          "p": "Ziaire Williams",
+          "t": "LAL",
+          "s": "PTS",
+          "std": 7.5,
+          "alt": 6.5,
+          "o": 1.59,
+          "h": "100% (6/6)",
+          "e": 3.9,
+          "st": "4",
+          "opp": "110.03 (7/25 ⬇)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Jrue Holiday",
+          "t": "POR",
+          "s": "REB",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.5,
+          "h": "86% (6/7)",
+          "e": 3.6,
+          "st": "3",
+          "opp": "40.43 (3/25 ⬇)",
+          "f": [
+            "Std?",
+            "DEPL",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "Damian Lillard",
+          "t": "POR",
+          "s": "PTS",
+          "std": 21.5,
+          "alt": 18.5,
+          "o": 1.48,
+          "h": "86% (6/7)",
+          "e": 3.4,
+          "st": "3",
+          "opp": "114.90 (16/25 -)",
+          "f": [
+            "DEPL",
+            "U0.5"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Deni Avdija",
+          "t": "POR",
+          "s": "PTS",
+          "std": 23.5,
+          "alt": 20.5,
+          "o": 1.42,
+          "h": "86% (6/7)",
+          "e": 4.0,
+          "st": "3",
+          "opp": "114.90 (16/25 -)",
+          "f": [
+            "LEAN",
+            "U0",
+            "DEPL"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.12"
+    },
+    {
+      "id": "SAS@SAC",
+      "tip": "14:10",
+      "proj": 227.9,
+      "mkt": 231.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "SAC w/o Raynaud, Murray; SAS w/o T.Harris",
+      "picks": [
+        {
+          "p": "Keldon Johnson",
+          "t": "SAS",
+          "s": "REB",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.4,
+          "h": "100% (8/8)",
+          "e": 6.0,
+          "st": "4",
+          "opp": "48.67 (23/25 ⬆)",
+          "f": [
+            "Std?",
+            "U1"
+          ]
+        },
+        {
+          "p": "Zach LaVine",
+          "t": "SAC",
+          "s": "PTS",
+          "std": 19.5,
+          "alt": 16.5,
+          "o": 1.44,
+          "h": "88% (7/8)",
+          "e": 3.8,
+          "st": "4",
+          "opp": "106.97 (3/25 ⬇)",
+          "f": [
+            "MT-",
+            "U1"
+          ]
+        },
+        {
+          "p": "Domantas Sabonis",
+          "t": "SAC",
+          "s": "REB",
+          "std": 13.5,
+          "alt": 11.5,
+          "o": 1.56,
+          "h": "88% (7/8)",
+          "e": 3.5,
+          "st": "4",
+          "opp": "44.04 (13/25 -)",
+          "f": [
+            "Std?",
+            "U1"
+          ]
+        }
+      ],
+      "leans": [],
+      "engine": "nba-session v3.12"
     }
   ],
   "totals": [
@@ -365,6 +505,16 @@
       "MIN@NOP",
       226.2,
       230.5
+    ],
+    [
+      "POR@LAL",
+      241.4,
+      232.5
+    ],
+    [
+      "SAS@SAC",
+      227.9,
+      231.5
     ]
   ]
 }
