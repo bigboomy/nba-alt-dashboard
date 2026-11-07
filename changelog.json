@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-07",
+   "version": "slate task 7-Nov (coverage)",
+   "component": "slate (hourly)",
+   "title": "Each game shows how many players were checked",
+   "change": "Every analysed game now carries a Coverage line (in the run output and the game context on the dashboard) counting the players and player-stats with a Pointsbet alt ladder that were evaluated, and naming any skipped with the reason; picks are unchanged.",
+   "aim": "Make it visible that every player is reviewed and nothing is silently skipped, e.g. a name that fails to match ESPN."
+  },
+  {
+   "date": "2026-11-07",
    "version": "nba-session v3.13",
    "component": "slate (hourly), weekly review",
    "title": "Overtime games no longer inflate a player's sample",
