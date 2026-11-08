@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-09",
+   "version": "nba-session v3.17",
+   "component": "slate (hourly), weekly review",
+   "title": "2-star picks staked at 0.25u",
+   "change": "The skill said 0.5u for 2-star picks in one rule and 0.25u in another; it now says 0.25u everywhere, and the Monday review splits gated picks into perfect vs one-miss samples to test 'perfect samples only' as the next rule.",
+   "aim": "Remove the stake ambiguity on the lowest-confidence picks and line up the next test (perfect samples 73% +4.9u vs one-miss 52% −30u for the season)."
+  },
+  {
    "date": "2026-11-08",
    "version": "nba-session v3.16",
    "component": "slate (hourly)",
