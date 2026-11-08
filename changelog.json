@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-08",
+   "version": "nba-session v3.16",
+   "component": "slate (hourly)",
+   "title": "No staked picks priced above 1.85",
+   "change": "A rung can only be a staked pick if its price is 1.85 or shorter; rungs that pass everything else at a longer price become CAP leans (0u), so the killed picks are still tracked.",
+   "aim": "Picks at 1.86+ went 4/22 (18% vs 51% implied, −14.3u) because the engine's assumed bookmaker margin is about half the real one at long prices; judge on CAP lean results and staked ROI over the next 50 picks."
+  },
+  {
+   "date": "2026-11-08",
    "version": "nba-session v3.15",
    "component": "slate (hourly), weekly review",
    "title": "Z-margin and teammate-out flags on every pick (shadow, under test)",
