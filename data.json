@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-08T19:12:27.419238+00:00",
+  "generated": "2026-11-08T21:10:08.549627+00:00",
   "date": "Mon 9 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
-  "engine": "nba-session v3.16",
+  "engine": "nba-session v3.17",
   "games": [
     {
       "id": "PHI@CHI",
@@ -37,6 +37,36 @@
         }
       ],
       "engine": "nba-session v3.16"
+    },
+    {
+      "id": "LAL@DET",
+      "tip": "10:10",
+      "proj": 224.3,
+      "mkt": 217.5,
+      "mkt_o": 1.87,
+      "mkt_u": 1.95,
+      "ctx": "LAL on B2B, Doncic OUT; DET Duren and Joe OUT (neither top-3 scorer; DET top-3 Cunningham, Robinson, Reed all playing). Coverage: evaluated 7 of 7 players (16 of 16 player-stats); skipped: none",
+      "picks": [
+        {
+          "p": "Duncan Robinson",
+          "t": "DET",
+          "s": "AST",
+          "std": 1.5,
+          "alt": 1.5,
+          "o": 1.42,
+          "h": "100% (8/8)",
+          "e": 6.2,
+          "st": "4",
+          "opp": "24.13 (6/25 ⬇)",
+          "f": [
+            "C0.67",
+            "Z1.62",
+            "U1"
+          ]
+        }
+      ],
+      "leans": [],
+      "engine": "nba-session v3.17"
     }
   ],
   "totals": [
@@ -44,6 +74,11 @@
       "PHI@CHI",
       226.1,
       237.5
+    ],
+    [
+      "LAL@DET",
+      224.3,
+      217.5
     ]
   ]
 }
