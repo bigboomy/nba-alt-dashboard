@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-09",
+   "version": "slate task 9-Nov (safer rung retired)",
+   "component": "slate (hourly)",
+   "title": "Safer-rung display retired",
+   "change": "The slate no longer computes or shows a 'safer rung' on 1.80+ picks (it never actually populated, and the 1.85 cap left it covering only 1.80–1.85 picks); the slate now also checks that every 2-star pick is staked at 0.25u.",
+   "aim": "Remove a step that silently never ran; stepping down a rung can now be analysed after the fact from the alt-ladder log."
+  },
+  {
+   "date": "2026-11-09",
    "version": "nba_ladder_io.py v1",
    "component": "slate (ladder log)",
    "title": "Alt-ladder log: every Pointsbet rung recorded",
