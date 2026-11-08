@@ -3,6 +3,30 @@
  "changes": [
   {
    "date": "2026-11-09",
+   "version": "nba_ladder_io.py v1",
+   "component": "slate (ladder log)",
+   "title": "Alt-ladder log: every Pointsbet rung recorded",
+   "change": "Each slate run now saves its alt-odds fetch and logs every Pointsbet alt rung (line:price, Over and Under) for every player and stat of the games it analysed into the Sheet's new `ladders` tab, one row per ladder. No extra Odds API requests.",
+   "aim": "Give the Fable price-map and rung-policy study real prices for every rung (about 14 slates for a coarse calibration, 30 for the map)."
+  },
+  {
+   "date": "2026-11-09",
+   "version": "nba_totals_io.py v1.1",
+   "component": "resolve (totals)",
+   "title": "Model totals settle the same night",
+   "change": "The resolve now settles a game's total the same evening it is recorded, if the score feed already has it final. Before, each day's totals settled the following evening.",
+   "aim": "Totals results land the same night as the props."
+  },
+  {
+   "date": "2026-11-09",
+   "version": "leans backfill",
+   "component": "Sheet (leans)",
+   "title": "Leans 6–8 Nov backfilled; leans failures now alert",
+   "change": "The leans tab was never published, so the resolve could not read it and skipped leans every night. 14 leans from 6–8 Nov were recovered from data.json history and settled from box scores. A leans failure now sends a push notification instead of one quiet output line.",
+   "aim": "Make the lean test possible and stop a silent gap recurring."
+  },
+  {
+   "date": "2026-11-09",
    "version": "nba-session v3.17",
    "component": "slate (hourly), weekly review",
    "title": "2-star picks staked at 0.25u",

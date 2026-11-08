@@ -738,10 +738,12 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       msg='<b>Picks still coming in.</b> '+busy+ng+' game'+(ng===1?'':'s')+' so far ('+np+' pick'+(np===1?'':'s')+'). '+
         (nr?'Next run '+hm(nr)+': adds games tipping before ~'+hm(nr+RUNS.ahead)+', if any.':'Last run under way.')+
         ' This page updates itself.';
+    } else if(!ng&&todaySched()&&todaySched().length){
+      cls='';msg='<b>No games were analysed today.</b> '+todaySched().length+' game'+(todaySched().length===1?' was':'s were')+' on, so a slate run may have had a problem.';
     } else {
       var settled=ROWS&&ROWS.some(function(r){return r.date===iso&&(r.result==='W'||r.result==='L')});
       cls='info done';
-      msg='<b>Today\'s picks are complete.</b> '+ng+' game'+(ng===1?'':'s')+', '+np+' pick'+(np===1?'':'s')+'. '+
+      msg='<b>Today\'s picks are complete.</b> '+ng+' game'+(ng===1?'':'s')+' analysed, '+np+' pick'+(np===1?'':'s')+(np?'':' (nothing cleared the gates; that can be a normal day)')+'. '+
         (settled?'Results are in (tiles above).':'Results settle around '+hm(RUNS.resolve+3)+'.');
     }
     box.className='stale '+cls;box.innerHTML='<span class="dot" aria-hidden="true"></span>'+msg;box.hidden=false;

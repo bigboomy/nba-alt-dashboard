@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-nba_totals_io.py v1 - the only way scheduled tasks write the `totals` tab of the NBA Sheet.
+nba_totals_io.py v1.1 - the only way scheduled tasks write the `totals` tab of the NBA Sheet.
 Deterministic: the model never computes or formats a value; it copies plan blocks into
 Google Sheets update_values calls and passes the tstats readback to `verify`.
 Separate from nba_sheet_io.py so the prop pipeline (cohort / stats) is never touched.
@@ -8,9 +8,11 @@ Separate from nba_sheet_io.py so the prop pipeline (cohort / stats) is never tou
 Commands (totals.csv = fresh curl of the published `totals` tab CSV):
   record   data.json totals.csv        -> plan.json  (append today's analysed games; new keys only)
   history  hist.csv totals.csv         -> plan.json  (one-off: Notion Projected Totals rows, unpriced)
-  pending  totals.csv                  -> games whose final total is due (exit 3 = none)
+  pending  totals.csv [data.json]      -> games whose final total is due (exit 3 = none); with data.json,
+                                          today's not-yet-recorded games count too once due (v1.1)
   actuals  totals.csv scores.json      -> plan.json  (fill final totals from The Odds API /scores)
-  daily    data.json totals.csv scores.json -> plan.json (actuals + record in ONE plan; what the 17:07 resolve runs)
+  daily    data.json totals.csv scores.json -> plan.json (actuals + record in ONE plan; what the 18:07 resolve runs).
+           v1.1: a newly recorded game that is already final in scores.json is settled in the same plan.
   verify   plan.json <rows> <unique> <finals>   (tstats!B2:B4) -> exit 0 match, 1 mismatch
 
 Row = one game. Columns A-M:
@@ -189,18 +191,26 @@ def cmd_daily(a):
     if len(a) < 3:
         die("usage: daily data.json totals.csv scores.json")
     sheet = load_sheet(a[1])
-    blocks, notes, added = actual_blocks(sheet, a[2])
+    finals = parse_finals(a[2])
+    blocks, notes, added = actual_blocks(sheet, a[2], finals)
     try:
         date, out = game_rows(a[0])
         vals = new_rows(sheet, out)
     except SystemExit:
         date, vals = "?", []
         notes.append("data.json unreadable - no games recorded this run")
+    now, ts, same = now_utc(), iso_now(), 0
+    for v in vals:                      # v1.1: settle a new row at once if it is due and final in the feed
+        r = dict(zip(COLS, v))
+        if finished(r, now) and r["game_key"] in finals:
+            v[COLS.index("actual")], v[COLS.index("status")], v[COLS.index("settled_at")] = finals[r["game_key"]], "final", ts
+            same += 1
+    added += same
     if vals:
         first = len(sheet) + 2
         blocks.append({"range": f"totals!A{first}:{LAST}{first + len(vals) - 1}", "values": vals})
     plan = {"blocks": blocks, "expect": expect(sheet, vals, added),
-            "summary": f"totals: {added} game(s) settled, {len(vals)} new game(s) recorded ({date})",
+            "summary": f"totals: {added} game(s) settled ({same} same night), {len(vals)} new game(s) recorded ({date})",
             "notes": notes}
     print(json.dumps(plan, ensure_ascii=False, indent=1))
     sys.exit(0 if blocks else 3)
@@ -244,13 +254,23 @@ def due_rows(sheet):
 
 def cmd_pending(a):
     if not a:
-        die("usage: pending totals.csv")
-    due = due_rows(load_sheet(a[0]))
-    print(json.dumps([{"row": n, "game_key": r["game_key"], "date": r["date"], "game": r["game"]} for n, r in due], indent=1))
-    sys.exit(0 if due else 3)
+        die("usage: pending totals.csv [data.json]")
+    sheet = load_sheet(a[0])
+    due = due_rows(sheet)
+    out = [{"row": n, "game_key": r["game_key"], "date": r["date"], "game": r["game"]} for n, r in due]
+    if len(a) > 1:                      # v1.1: today's games not yet in the tab, once due
+        try:
+            _, rows = game_rows(a[1])
+            have, now = {r["game_key"] for r in sheet}, now_utc()
+            out += [{"row": None, "game_key": r["game_key"], "date": r["date"], "game": r["game"]}
+                    for r in rows if r["game_key"] not in have and finished(r, now)]
+        except SystemExit:
+            pass
+    print(json.dumps(out, indent=1))
+    sys.exit(0 if out else 3)
 
 
-def actual_blocks(sheet, scores_path):
+def parse_finals(scores_path):
     try:
         sc = json.load(open(scores_path, encoding="utf-8"))
     except Exception as e:
@@ -279,6 +299,11 @@ def actual_blocks(sheet, scores_path):
             continue
         tot = num(sum(pts.values()))
         finals[f"{t.date().isoformat()}|{aw}@{h}"] = tot
+    return finals
+
+
+def actual_blocks(sheet, scores_path, finals=None):
+    finals = parse_finals(scores_path) if finals is None else finals
     blocks, notes, ts, added = [], [], iso_now(), 0
     for n, r in due_rows(sheet):
         k = r["game_key"]
