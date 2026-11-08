@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-08",
+   "version": "nba-session v3.14",
+   "component": "slate (hourly)",
+   "title": "Picks need a cushion: alt at most 70% of the player's average",
+   "change": "A rung can only be a staked pick if its alt line is at most 0.70 × the player's average over the same sample games; rungs that pass everything else but not this become CUSH leans (0u), and every pick and lean carries a C<ratio> flag (e.g. C0.62).",
+   "aim": "Picks with that cushion went 29/36 (81% vs 67% implied, +7.3u) and the rest 95/182 (52%, −31u); judge on the first 50 gated picks by hit vs implied and CLV."
+  },
+  {
    "date": "2026-11-07",
    "version": "slate task 7-Nov (coverage)",
    "component": "slate (hourly)",
