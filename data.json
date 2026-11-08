@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-07T23:10:36.798269+00:00",
+  "generated": "2026-11-08T00:10:20.342799+00:00",
   "date": "Sun 8 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -221,6 +221,161 @@
         }
       ],
       "engine": "nba-session v3.13"
+    },
+    {
+      "id": "ORL@GSW",
+      "tip": "12:40",
+      "proj": 228.1,
+      "mkt": 219.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "ORL missing Bane (illness), Banchero, Suggs, Penda, Isaac; GSW missing Butler, Moody, Porzingis, Draymond Q. 3+ rotation OUT both sides (-1 star). Coverage: evaluated 10 of 11 players (25 of 28 player-stats); skipped: Yaxel Lendeborg PTS (no ESPN match or 0 current-season games), Yaxel Lendeborg REB (no ESPN match or 0 current-season games), Yaxel Lendeborg AST (no ESPN match or 0 current-season games)",
+      "picks": [
+        {
+          "p": "Stephen Curry",
+          "t": "GSW",
+          "s": "PTS",
+          "std": 25.5,
+          "alt": 22.5,
+          "o": 1.5,
+          "h": "100% (7/7)",
+          "e": 6.3,
+          "st": "3",
+          "opp": "117.3 (21⬆ of 26)",
+          "f": [
+            "U0.5"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Draymond Green",
+          "t": "GSW",
+          "s": "AST",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.67,
+          "h": "86% (6/7)",
+          "e": 3.2,
+          "st": "2",
+          "opp": "30.09 (25⬆ of 26)",
+          "f": [
+            "[Std?]",
+            "LEAN",
+            "U0"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.13"
+    },
+    {
+      "id": "HOU@PHX",
+      "tip": "13:10",
+      "proj": 239.3,
+      "mkt": 223.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "HOU missing Capela, Adams; PHX missing M. Williams, Goodwin doubtful, Fleming Q (role risk on PHX picks). Coverage: evaluated 14 of 15 players (36 of 39 player-stats); skipped: Fred VanVleet PTS (no ESPN match or 0 current-season games), Fred VanVleet REB (no ESPN match or 0 current-season games), Fred VanVleet AST (no ESPN match or 0 current-season games)",
+      "picks": [
+        {
+          "p": "Miles Bridges",
+          "t": "PHX",
+          "s": "PTS",
+          "std": 15.5,
+          "alt": 13.5,
+          "o": 1.48,
+          "h": "86% (6/7)",
+          "e": 3.4,
+          "st": "4",
+          "opp": "110.51 (7⬇ of 26)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Dillon Brooks",
+          "t": "PHX",
+          "s": "PTS",
+          "std": 16.5,
+          "alt": 13.5,
+          "o": 1.48,
+          "h": "86% (6/7)",
+          "e": 3.4,
+          "st": "4",
+          "opp": "110.51 (7⬇ of 26)",
+          "f": [
+            "U1"
+          ]
+        },
+        {
+          "p": "Miles Bridges",
+          "t": "PHX",
+          "s": "REB",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.53,
+          "h": "86% (6/7)",
+          "e": 3.1,
+          "st": "4",
+          "opp": "38.1 (2⬇ of 26)",
+          "f": [
+            "[Std?]",
+            "U1"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Alperen Sengun",
+          "t": "HOU",
+          "s": "AST",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.42,
+          "h": "86% (6/7)",
+          "e": 4.0,
+          "st": "4",
+          "opp": "28.27 (21⬆ of 26)",
+          "f": [
+            "[Std?]",
+            "LEAN",
+            "U0"
+          ]
+        },
+        {
+          "p": "Khaman Maluach",
+          "t": "PHX",
+          "s": "PTS",
+          "std": 5.5,
+          "alt": 4.5,
+          "o": 1.59,
+          "h": "86% (6/7)",
+          "e": 3.9,
+          "st": "4",
+          "opp": "110.51 (7⬇ of 26)",
+          "f": [
+            "LEAN",
+            "U0"
+          ]
+        },
+        {
+          "p": "Amen Thompson",
+          "t": "HOU",
+          "s": "PTS",
+          "std": 15.5,
+          "alt": 13.5,
+          "o": 1.5,
+          "h": "78% (7/9)",
+          "e": 3.4,
+          "st": "4",
+          "opp": "122.47 (25⬆ of 26)",
+          "f": [
+            "LEAN",
+            "U0"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.13"
     }
   ],
   "totals": [
@@ -242,6 +397,16 @@
     [
       "WAS@OKC",
       220.1,
+      223.5
+    ],
+    [
+      "ORL@GSW",
+      228.1,
+      219.5
+    ],
+    [
+      "HOU@PHX",
+      239.3,
       223.5
     ]
   ]
