@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T22:10:05.770164+00:00",
+  "generated": "2026-11-08T23:10:17.060474+00:00",
   "date": "Mon 9 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -145,6 +145,148 @@
         }
       ],
       "engine": "nba-session v3.17"
+    },
+    {
+      "id": "BKN@DAL",
+      "tip": "11:40",
+      "proj": 216.3,
+      "mkt": 223.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "BKN B2B (played Sat); Injuries via ESPN feed (official report unavailable): BKN Brown Jr/Demin OUT; DAL Lively/de Larrea/Biberovic OUT. TOP3 out: BKN Mikel Brown Jr.. Coverage: evaluated 12 of 13 players (30 of 32 player-stats); skipped: Danny Wolf PTS (4 GP <5, no borrow), Danny Wolf REB (4 GP <5, no borrow)",
+      "picks": [],
+      "leans": [
+        {
+          "p": "Zaccharie Risacher",
+          "t": "DAL",
+          "s": "REB",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.95,
+          "h": "89% (8/9)",
+          "e": 5.2,
+          "st": "3",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "MT-",
+            "C0.68",
+            "Z0.82"
+          ]
+        },
+        {
+          "p": "Julius Randle",
+          "t": "BKN",
+          "s": "REB",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.5,
+          "h": "78% (7/9)",
+          "e": 3.4,
+          "st": "3",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "OT-ADJ",
+            "B2B",
+            "TMO",
+            "C0.78",
+            "Z0.68"
+          ]
+        },
+        {
+          "p": "P.J. Washington",
+          "t": "DAL",
+          "s": "PTS",
+          "std": 13.5,
+          "alt": 11.5,
+          "o": 1.5,
+          "h": "78% (7/9)",
+          "e": 3.4,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.73",
+            "Z0.61"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.17"
+    },
+    {
+      "id": "BOS@MIL",
+      "tip": "12:10",
+      "proj": 224.6,
+      "mkt": 221.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Injuries via ESPN feed (official report unavailable): BOS M.Robinson Q; MIL Trent Jr Q. TOP3 out: none. Coverage: evaluated 13 of 13 players (30 of 32 player-stats); skipped: Brayden Burries AST (no rung priced 1.40+ at or below std), Kyle Kuzma AST (no rung priced 1.40+ at or below std)",
+      "picks": [
+        {
+          "p": "Ryan Rollins",
+          "t": "MIL",
+          "s": "PTS",
+          "std": 9.5,
+          "alt": 7.5,
+          "o": 1.5,
+          "h": "89% (8/9)",
+          "e": 5.1,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "MT-",
+            "C0.68",
+            "Z0.85",
+            "U1"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Paul George",
+          "t": "BOS",
+          "s": "PTS",
+          "std": 17.5,
+          "alt": 14.5,
+          "o": 1.42,
+          "h": "86% (6/7)",
+          "e": 4.0,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "[OUT]",
+            "OT-ADJ",
+            "C0.87",
+            "Z0.44"
+          ]
+        },
+        {
+          "p": "Tyler Herro",
+          "t": "MIL",
+          "s": "PTS",
+          "std": 17.5,
+          "alt": 17.5,
+          "o": 1.5,
+          "h": "78% (7/9)",
+          "e": 3.4,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.78",
+            "Z0.80"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.17"
     }
   ],
   "totals": [
@@ -162,6 +304,16 @@
       "UTA@MIN",
       217.9,
       222.5
+    ],
+    [
+      "BKN@DAL",
+      216.3,
+      223.5
+    ],
+    [
+      "BOS@MIL",
+      224.6,
+      221.5
     ]
   ]
 }
