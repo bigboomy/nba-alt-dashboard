@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T21:10:08.549627+00:00",
+  "generated": "2026-11-08T22:10:05.770164+00:00",
   "date": "Mon 9 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -67,6 +67,84 @@
       ],
       "leans": [],
       "engine": "nba-session v3.17"
+    },
+    {
+      "id": "UTA@MIN",
+      "tip": "11:10",
+      "proj": 217.9,
+      "mkt": 222.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Both teams rest 1+ day (no B2B). MIN without Edwards (OUT) and DiVincenzo (OUT); Beringer Q, Shannon Jr. DTD. UTA without Jackson Jr. (OUT) and Nurkic (OUT); Markkanen Q (wrist). TOP3 out: Edwards (MIN), Jackson Jr. (UTA). Coverage: evaluated 12 of 12 players (25 of 28 player-stats); skipped: Ayo Dosunmu AST (no rung priced 1.40+ at or below std), Ayo Dosunmu REB (no rung priced 1.40+ at or below std), Jonathan Kuminga AST (no rung priced 1.40+ at or below std)",
+      "picks": [],
+      "leans": [
+        {
+          "p": "Lauri Markkanen",
+          "t": "UTA",
+          "s": "REB",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.5,
+          "h": "88% (7/8)",
+          "e": 4.4,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "OT-ADJ",
+            "C0.83",
+            "Z0.39",
+            "MT-",
+            "TMO"
+          ]
+        },
+        {
+          "p": "Terrence Shannon Jr.",
+          "t": "MIN",
+          "s": "PTS",
+          "std": 11.5,
+          "alt": 9.5,
+          "o": 1.5,
+          "h": "86% (6/7)",
+          "e": 3.6,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "OT-ADJ",
+            "C0.80",
+            "Z0.44",
+            "DNP-LAST",
+            "TMO"
+          ]
+        },
+        {
+          "p": "Jaden McDaniels",
+          "t": "MIN",
+          "s": "REB",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.8,
+          "h": "80% (8/10)",
+          "e": 3.3,
+          "st": "3",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "C0.90",
+            "Z0.45",
+            "MT+",
+            "TMO"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.17"
     }
   ],
   "totals": [
@@ -79,6 +157,11 @@
       "LAL@DET",
       224.3,
       217.5
+    ],
+    [
+      "UTA@MIN",
+      217.9,
+      222.5
     ]
   ]
 }
