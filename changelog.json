@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-08",
+   "version": "nba-session v3.15",
+   "component": "slate (hourly), weekly review",
+   "title": "Z-margin and teammate-out flags on every pick (shadow, under test)",
+   "change": "Every pick and lean now carries Z<z> (how many standard deviations the line sits below the player's average) and TMO / TMO-Q / RET when a top-3 scoring teammate is out, questionable or just returning; they never change a pick, and the Monday review tests them at n≥30.",
+   "aim": "Fable's 2,607-game study found hit rate climbs from 58% at z<0.5 to 89% at z≥1.5 and teammates gain 6pp when a top scorer sits; test whether that beats the price on our own bets before any rule."
+  },
+  {
+   "date": "2026-11-08",
    "version": "nba-session v3.14",
    "component": "slate (hourly)",
    "title": "Picks need a cushion: alt at most 70% of the player's average",
