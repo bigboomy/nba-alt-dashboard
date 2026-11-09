@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-08T23:10:17.060474+00:00",
+  "generated": "2026-11-09T00:10:02.114999+00:00",
   "date": "Mon 9 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -287,6 +287,90 @@
         }
       ],
       "engine": "nba-session v3.17"
+    },
+    {
+      "id": "NOP@LAC",
+      "tip": "13:10",
+      "proj": 224.2,
+      "mkt": 226.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Coverage: evaluated 14 of 14 players (32 of 34 player-stats); skipped: Trey Murphy III AST (no rung priced 1.40+ at or below std), Kris Dunn AST (no rung priced 1.40+ at or below std)",
+      "picks": [
+        {
+          "p": "Derik Queen",
+          "t": "NOP",
+          "s": "PTS",
+          "std": 8.5,
+          "alt": 6.5,
+          "o": 1.4,
+          "h": "89% (8/9)",
+          "e": 4.0,
+          "opp": "—",
+          "st": "4",
+          "f": [
+            "OT-ADJ",
+            "MT-",
+            "C0.54",
+            "Z1.25",
+            "U1"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Derrick Jones",
+          "t": "LAC",
+          "s": "REB",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.4,
+          "h": "86% (6/7)",
+          "e": 3.7,
+          "opp": "—",
+          "st": "4",
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "C0.68",
+            "Z0.78"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.17"
+    },
+    {
+      "id": "MIA@SAC",
+      "tip": "13:10",
+      "proj": 237.6,
+      "mkt": 236.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Coverage: evaluated 13 of 14 players (31 of 33 player-stats); skipped: Keegan Murray PTS (2 GP, role unclear), Keegan Murray REB (2 GP, role unclear)",
+      "picks": [],
+      "leans": [
+        {
+          "p": "Domantas Sabonis",
+          "t": "SAC",
+          "s": "REB",
+          "std": 13.5,
+          "alt": 11.5,
+          "o": 1.5,
+          "h": "89% (8/9)",
+          "e": 5.1,
+          "opp": "—",
+          "st": "4",
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "C0.79",
+            "Z0.85"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.17"
     }
   ],
   "totals": [
@@ -314,6 +398,16 @@
       "BOS@MIL",
       224.6,
       221.5
+    ],
+    [
+      "NOP@LAC",
+      224.2,
+      226.5
+    ],
+    [
+      "MIA@SAC",
+      237.6,
+      236.5
     ]
   ]
 }
