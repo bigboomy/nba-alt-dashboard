@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T22:11:37.593021+00:00",
+  "generated": "2026-11-09T23:11:00.880683+00:00",
   "date": "Tue 10 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -225,6 +225,168 @@
         }
       ],
       "engine": "nba-session v3.17"
+    },
+    {
+      "id": "MEM@TOR",
+      "tip": "11:40",
+      "proj": 230.2,
+      "mkt": 224.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "TOP3 PPG MEM: Ty Jerome 26.2, Cameron Boozer 15.4, Cedric Coward 13.6; TOR: Scottie Barnes 23.5 OUT, RJ Barrett 21.6, Immanuel Quickley 17.4 OUT. Dep: MEM False, TOR True. Coverage: evaluated 12 of 12 players (23 of 26 player-stats); skipped: Cameron Boozer AST (no rung priced 1.40+ at or below std), Cedric Coward AST (no rung priced 1.40+ at or below std), Jakob Poeltl AST (no rung priced 1.40+ at or below std)",
+      "picks": [
+        {
+          "p": "Cedric Coward",
+          "t": "MEM",
+          "s": "REB",
+          "std": 7.5,
+          "alt": 5.5,
+          "o": 1.4,
+          "h": "100% (8/8)",
+          "e": 6.0,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "OT-ADJ",
+            "C0.64",
+            "Z1.87",
+            "U1"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Cam Spencer",
+          "t": "MEM",
+          "s": "PTS",
+          "std": 8.5,
+          "alt": 6.5,
+          "o": 1.48,
+          "h": "89% (8/9)",
+          "e": 4.9,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "OT-ADJ",
+            "MT+",
+            "C0.74",
+            "Z0.74"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.17"
+    },
+    {
+      "id": "IND@DAL",
+      "tip": "12:10",
+      "proj": 222.0,
+      "mkt": 226.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "TOP3 PPG IND: Tyrese Haliburton 21.8 OUT, Pascal Siakam 21.4, Andrew Nembhard 17.8; DAL: Cooper Flagg 24.0, Kyrie Irving 21.4, P.J. Washington 14.8. Dep: IND False, DAL False. Coverage: evaluated 10 of 10 players (22 of 22 player-stats); skipped: none",
+      "picks": [
+        {
+          "p": "Obi Toppin",
+          "t": "IND",
+          "s": "PTS",
+          "std": 11.5,
+          "alt": 9.5,
+          "o": 1.44,
+          "h": "100% (7/7)",
+          "e": 5.8,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "C0.69",
+            "Z1.31",
+            "TMO",
+            "U1"
+          ]
+        },
+        {
+          "p": "Obi Toppin",
+          "t": "IND",
+          "s": "REB",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 1.5,
+          "h": "86% (6/7)",
+          "e": 3.6,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "C0.64",
+            "Z1.52",
+            "TMO",
+            "U1"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Andrew Nembhard",
+          "t": "IND",
+          "s": "PTS",
+          "std": 15.5,
+          "alt": 13.5,
+          "o": 1.48,
+          "h": "88% (7/8)",
+          "e": 4.2,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "C0.76",
+            "Z0.90",
+            "TMO"
+          ]
+        },
+        {
+          "p": "Pascal Siakam",
+          "t": "IND",
+          "s": "PTS",
+          "std": 21.5,
+          "alt": 18.5,
+          "o": 1.48,
+          "h": "78% (7/9)",
+          "e": 3.2,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.86",
+            "Z0.60",
+            "TMO"
+          ]
+        },
+        {
+          "p": "Cooper Flagg",
+          "t": "DAL",
+          "s": "AST",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.48,
+          "h": "78% (7/9)",
+          "e": 3.2,
+          "st": "3.5",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "B2B",
+            "MT+",
+            "C0.79",
+            "Z0.49"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.17"
     }
   ],
   "totals": [
@@ -242,6 +404,16 @@
       "WAS@DET",
       211.2,
       219.5
+    ],
+    [
+      "MEM@TOR",
+      230.2,
+      224.5
+    ],
+    [
+      "IND@DAL",
+      222.0,
+      226.5
     ]
   ]
 }
