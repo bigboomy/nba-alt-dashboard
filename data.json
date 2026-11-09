@@ -1,51 +1,146 @@
 {
-  "generated": "2026-11-09T00:10:02.114999+00:00",
-  "date": "Mon 9 Nov 2026",
+  "generated": "2026-11-09T22:11:37.593021+00:00",
+  "date": "Tue 10 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
   "engine": "nba-session v3.17",
   "games": [
     {
-      "id": "PHI@CHI",
-      "tip": "07:40",
-      "proj": 226.1,
-      "mkt": 237.5,
+      "id": "LAL@ATL",
+      "tip": "11:10",
+      "proj": 242.0,
+      "mkt": 236.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
-      "ctx": "PHI on B2B (played 7 Nov). TOP3 PHI Maxey/Brown/Embiid (Embiid probable); CHI Wilson/Powell/Buzelis, Powell OUT. Coverage: evaluated 13 of 13 players (32 of 32 player-stats); skipped: none. Out: Powell, Collins (CHI), Bona, Barlow, Hukporti (PHI); Claxton had no Pointsbet ladder",
+      "ctx": "TOP3 LAL: Luka Doncic, Austin Reaves, Walker Kessler; ATL: Nickeil Alexander-Walker, Jalen Johnson, Aaron Wiggins. Out TOP3: LAL none, ATL none. GTD TOP3: ['Austin Reaves']. Coverage: evaluated 15 of 15 players (32 of 32 player-stats); skipped: none",
+      "picks": [
+        {
+          "p": "Ziaire Williams",
+          "t": "LAL",
+          "s": "PTS",
+          "std": 8.5,
+          "alt": 6.5,
+          "o": 1.44,
+          "h": "100% (8/8)",
+          "e": 6.4,
+          "opp": "112.54 (9–/25)",
+          "f": [
+            "B2B",
+            "MT-",
+            "C0.58",
+            "Z1.54",
+            "TMO-Q",
+            "U0.5"
+          ],
+          "st": "3.5"
+        }
+      ],
+      "leans": [
+        {
+          "p": "Austin Reaves",
+          "t": "LAL",
+          "s": "PTS",
+          "std": 21.5,
+          "alt": 18.5,
+          "o": 1.48,
+          "h": "90% (9/10)",
+          "e": 5.6,
+          "opp": "112.54 (9–/25)",
+          "f": [
+            "B2B",
+            "GTD",
+            "C0.73",
+            "Z0.94",
+            "LEAN",
+            "U0",
+            "CUSH"
+          ],
+          "st": "3.5"
+        },
+        {
+          "p": "Luka Doncic",
+          "t": "LAL",
+          "s": "PTS",
+          "std": 36.5,
+          "alt": 32.5,
+          "o": 1.48,
+          "h": "78% (7/9)",
+          "e": 3.2,
+          "opp": "112.54 (9–/25)",
+          "f": [
+            "B2B",
+            "C0.81",
+            "Z0.77",
+            "TMO-Q",
+            "LEAN",
+            "U0"
+          ],
+          "st": "3.5"
+        },
+        {
+          "p": "Sandro Mamukelashvili",
+          "t": "LAL",
+          "s": "PTS",
+          "std": 8.5,
+          "alt": 6.5,
+          "o": 1.48,
+          "h": "80% (8/10)",
+          "e": 3.1,
+          "opp": "112.54 (9–/25)",
+          "f": [
+            "B2B",
+            "C0.72",
+            "Z0.55",
+            "TMO-Q",
+            "LEAN",
+            "U0",
+            "CUSH"
+          ],
+          "st": "3.5"
+        }
+      ],
+      "engine": "nba-session v3.17"
+    },
+    {
+      "id": "CLE@CHA",
+      "tip": "11:10",
+      "proj": 213.8,
+      "mkt": 215.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "TOP3 CLE: Donovan Mitchell, Evan Mobley, James Harden; CHA: Brandon Miller, Naz Reid, Grayson Allen. Out TOP3: CLE none, CHA ['Brandon Miller']. GTD TOP3: none. Coverage: evaluated 11 of 12 players (28 of 31 player-stats); skipped: Coby White AST (<5 GP, role unclear), Coby White PTS (<5 GP, role unclear), Coby White REB (<5 GP, role unclear)",
       "picks": [],
       "leans": [
         {
-          "p": "Tyrese Maxey",
-          "t": "PHI",
+          "p": "Evan Mobley",
+          "t": "CLE",
           "s": "PTS",
-          "std": 25.5,
-          "alt": 22.5,
-          "o": 1.5,
+          "std": 17.5,
+          "alt": 15.5,
+          "o": 1.56,
           "h": "80% (8/10)",
-          "e": 3.3,
-          "st": "4.0",
-          "opp": "123.92 (25+⬆)",
+          "e": 4.1,
+          "opp": "—",
           "f": [
+            "OT-ADJ",
+            "C0.85",
+            "Z0.54",
             "LEAN",
-            "U0",
-            "CUSH",
-            "C0.84",
-            "Z0.74",
-            "B2B"
-          ]
+            "U0"
+          ],
+          "st": "4"
         }
       ],
-      "engine": "nba-session v3.16"
+      "engine": "nba-session v3.17"
     },
     {
-      "id": "LAL@DET",
-      "tip": "10:10",
-      "proj": 224.3,
-      "mkt": 217.5,
-      "mkt_o": 1.87,
-      "mkt_u": 1.95,
-      "ctx": "LAL on B2B, Doncic OUT; DET Duren and Joe OUT (neither top-3 scorer; DET top-3 Cunningham, Robinson, Reed all playing). Coverage: evaluated 7 of 7 players (16 of 16 player-stats); skipped: none",
+      "id": "WAS@DET",
+      "tip": "11:10",
+      "proj": 211.2,
+      "mkt": 219.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "TOP3 WAS: Anthony Davis, Kyshawn George, Trae Young; DET: Cade Cunningham, Duncan Robinson, Paul Reed. Out TOP3: WAS none, DET none. GTD TOP3: ['Anthony Davis']. Coverage: evaluated 12 of 12 players (27 of 27 player-stats); skipped: none",
       "picks": [
         {
           "p": "Duncan Robinson",
@@ -53,321 +148,80 @@
           "s": "AST",
           "std": 1.5,
           "alt": 1.5,
-          "o": 1.42,
-          "h": "100% (8/8)",
-          "e": 6.2,
-          "st": "4",
-          "opp": "24.13 (6/25 ⬇)",
+          "o": 1.4,
+          "h": "100% (9/9)",
+          "e": 6.6,
+          "opp": "24.87 (10–/25)",
           "f": [
-            "C0.67",
-            "Z1.62",
-            "U1"
-          ]
-        }
-      ],
-      "leans": [],
-      "engine": "nba-session v3.17"
-    },
-    {
-      "id": "UTA@MIN",
-      "tip": "11:10",
-      "proj": 217.9,
-      "mkt": 222.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "Both teams rest 1+ day (no B2B). MIN without Edwards (OUT) and DiVincenzo (OUT); Beringer Q, Shannon Jr. DTD. UTA without Jackson Jr. (OUT) and Nurkic (OUT); Markkanen Q (wrist). TOP3 out: Edwards (MIN), Jackson Jr. (UTA). Coverage: evaluated 12 of 12 players (25 of 28 player-stats); skipped: Ayo Dosunmu AST (no rung priced 1.40+ at or below std), Ayo Dosunmu REB (no rung priced 1.40+ at or below std), Jonathan Kuminga AST (no rung priced 1.40+ at or below std)",
-      "picks": [],
-      "leans": [
-        {
-          "p": "Lauri Markkanen",
-          "t": "UTA",
-          "s": "REB",
-          "std": 5.5,
-          "alt": 5.5,
-          "o": 1.5,
-          "h": "88% (7/8)",
-          "e": 4.4,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
-            "CUSH",
-            "OT-ADJ",
-            "C0.83",
-            "Z0.39",
-            "MT-",
-            "TMO"
-          ]
-        },
-        {
-          "p": "Terrence Shannon Jr.",
-          "t": "MIN",
-          "s": "PTS",
-          "std": 11.5,
-          "alt": 9.5,
-          "o": 1.5,
-          "h": "86% (6/7)",
-          "e": 3.6,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
-            "CUSH",
-            "OT-ADJ",
-            "C0.80",
-            "Z0.44",
-            "DNP-LAST",
-            "TMO"
-          ]
-        },
-        {
-          "p": "Jaden McDaniels",
-          "t": "MIN",
-          "s": "REB",
-          "std": 5.5,
-          "alt": 5.5,
-          "o": 1.8,
-          "h": "80% (8/10)",
-          "e": 3.3,
-          "st": "3",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
-            "OT-ADJ",
-            "C0.90",
-            "Z0.45",
-            "MT+",
-            "TMO"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.17"
-    },
-    {
-      "id": "BKN@DAL",
-      "tip": "11:40",
-      "proj": 216.3,
-      "mkt": 223.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "BKN B2B (played Sat); Injuries via ESPN feed (official report unavailable): BKN Brown Jr/Demin OUT; DAL Lively/de Larrea/Biberovic OUT. TOP3 out: BKN Mikel Brown Jr.. Coverage: evaluated 12 of 13 players (30 of 32 player-stats); skipped: Danny Wolf PTS (4 GP <5, no borrow), Danny Wolf REB (4 GP <5, no borrow)",
-      "picks": [],
-      "leans": [
-        {
-          "p": "Zaccharie Risacher",
-          "t": "DAL",
-          "s": "REB",
-          "std": 3.5,
-          "alt": 3.5,
-          "o": 1.95,
-          "h": "89% (8/9)",
-          "e": 5.2,
-          "st": "3",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
-            "MT-",
-            "C0.68",
-            "Z0.82"
-          ]
-        },
-        {
-          "p": "Julius Randle",
-          "t": "BKN",
-          "s": "REB",
-          "std": 5.5,
-          "alt": 5.5,
-          "o": 1.5,
-          "h": "78% (7/9)",
-          "e": 3.4,
-          "st": "3",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
             "[Std?]",
-            "OT-ADJ",
             "B2B",
-            "TMO",
-            "C0.78",
-            "Z0.68"
-          ]
-        },
-        {
-          "p": "P.J. Washington",
-          "t": "DAL",
-          "s": "PTS",
-          "std": 13.5,
-          "alt": 11.5,
-          "o": 1.5,
-          "h": "78% (7/9)",
-          "e": 3.4,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.73",
-            "Z0.61"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.17"
-    },
-    {
-      "id": "BOS@MIL",
-      "tip": "12:10",
-      "proj": 224.6,
-      "mkt": 221.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "Injuries via ESPN feed (official report unavailable): BOS M.Robinson Q; MIL Trent Jr Q. TOP3 out: none. Coverage: evaluated 13 of 13 players (30 of 32 player-stats); skipped: Brayden Burries AST (no rung priced 1.40+ at or below std), Kyle Kuzma AST (no rung priced 1.40+ at or below std)",
-      "picks": [
-        {
-          "p": "Ryan Rollins",
-          "t": "MIL",
-          "s": "PTS",
-          "std": 9.5,
-          "alt": 7.5,
-          "o": 1.5,
-          "h": "89% (8/9)",
-          "e": 5.1,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "MT-",
-            "C0.68",
-            "Z0.85",
-            "U1"
-          ]
+            "C0.64",
+            "Z1.67",
+            "U0.5"
+          ],
+          "st": "3.5"
         }
       ],
       "leans": [
         {
-          "p": "Paul George",
-          "t": "BOS",
-          "s": "PTS",
-          "std": 17.5,
-          "alt": 14.5,
-          "o": 1.42,
-          "h": "86% (6/7)",
-          "e": 4.0,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
-            "[OUT]",
-            "OT-ADJ",
-            "C0.87",
-            "Z0.44"
-          ]
-        },
-        {
-          "p": "Tyler Herro",
-          "t": "MIL",
+          "p": "Anthony Davis",
+          "t": "WAS",
           "s": "PTS",
           "std": 20.5,
           "alt": 17.5,
-          "o": 1.5,
-          "h": "78% (7/9)",
-          "e": 3.4,
-          "st": "4",
-          "opp": "—",
+          "o": 1.42,
+          "h": "88% (7/8)",
+          "e": 3.6,
+          "opp": "105.92 (2⬇/25)",
           "f": [
+            "GTD",
+            "DNP-LAST",
+            "C0.75",
+            "Z0.76",
             "LEAN",
             "U0",
-            "C0.78",
-            "Z0.80"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.17"
-    },
-    {
-      "id": "NOP@LAC",
-      "tip": "13:10",
-      "proj": 224.2,
-      "mkt": 226.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "Coverage: evaluated 14 of 14 players (32 of 34 player-stats); skipped: Trey Murphy III AST (no rung priced 1.40+ at or below std), Kris Dunn AST (no rung priced 1.40+ at or below std)",
-      "picks": [
+            "CUSH"
+          ],
+          "st": "4"
+        },
         {
-          "p": "Derik Queen",
-          "t": "NOP",
+          "p": "Trae Young",
+          "t": "WAS",
+          "s": "AST",
+          "std": 7.5,
+          "alt": 7.5,
+          "o": 1.44,
+          "h": "80% (8/10)",
+          "e": 3.5,
+          "opp": "25.66 (13–/25)",
+          "f": [
+            "[Std?]",
+            "C0.84",
+            "Z0.49",
+            "TMO-Q",
+            "LEAN",
+            "U0"
+          ],
+          "st": "4"
+        },
+        {
+          "p": "Duncan Robinson",
+          "t": "DET",
           "s": "PTS",
-          "std": 8.5,
-          "alt": 6.5,
-          "o": 1.4,
-          "h": "89% (8/9)",
-          "e": 4.0,
-          "opp": "—",
-          "st": "4",
+          "std": 14.5,
+          "alt": 12.5,
+          "o": 1.48,
+          "h": "78% (7/9)",
+          "e": 3.2,
+          "opp": "113.9 (14–/25)",
           "f": [
-            "OT-ADJ",
-            "MT-",
-            "C0.54",
-            "Z1.25",
-            "U1"
-          ]
-        }
-      ],
-      "leans": [
-        {
-          "p": "Derrick Jones",
-          "t": "LAC",
-          "s": "REB",
-          "std": 3.5,
-          "alt": 3.5,
-          "o": 1.4,
-          "h": "86% (6/7)",
-          "e": 3.7,
-          "opp": "—",
-          "st": "4",
-          "f": [
+            "B2B",
+            "C0.69",
+            "Z1.06",
             "LEAN",
-            "U0",
-            "OT-ADJ",
-            "C0.68",
-            "Z0.78"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.17"
-    },
-    {
-      "id": "MIA@SAC",
-      "tip": "13:10",
-      "proj": 237.6,
-      "mkt": 236.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "Coverage: evaluated 13 of 14 players (31 of 33 player-stats); skipped: Keegan Murray PTS (2 GP, role unclear), Keegan Murray REB (2 GP, role unclear)",
-      "picks": [],
-      "leans": [
-        {
-          "p": "Domantas Sabonis",
-          "t": "SAC",
-          "s": "REB",
-          "std": 13.5,
-          "alt": 11.5,
-          "o": 1.5,
-          "h": "89% (8/9)",
-          "e": 5.1,
-          "opp": "—",
-          "st": "4",
-          "f": [
-            "LEAN",
-            "U0",
-            "CUSH",
-            "C0.79",
-            "Z0.85"
-          ]
+            "U0"
+          ],
+          "st": "3.5"
         }
       ],
       "engine": "nba-session v3.17"
@@ -375,39 +229,19 @@
   ],
   "totals": [
     [
-      "PHI@CHI",
-      226.1,
-      237.5
-    ],
-    [
-      "LAL@DET",
-      224.3,
-      217.5
-    ],
-    [
-      "UTA@MIN",
-      217.9,
-      222.5
-    ],
-    [
-      "BKN@DAL",
-      216.3,
-      223.5
-    ],
-    [
-      "BOS@MIL",
-      224.6,
-      221.5
-    ],
-    [
-      "NOP@LAC",
-      224.2,
-      226.5
-    ],
-    [
-      "MIA@SAC",
-      237.6,
+      "LAL@ATL",
+      242.0,
       236.5
+    ],
+    [
+      "CLE@CHA",
+      213.8,
+      215.5
+    ],
+    [
+      "WAS@DET",
+      211.2,
+      219.5
     ]
   ]
 }
