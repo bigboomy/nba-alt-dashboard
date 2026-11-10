@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-09T23:11:00.880683+00:00",
+  "generated": "2026-11-10T00:11:14.485847+00:00",
   "date": "Tue 10 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -387,6 +387,129 @@
         }
       ],
       "engine": "nba-session v3.17"
+    },
+    {
+      "id": "DEN@HOU",
+      "tip": "12:40",
+      "proj": 228.7,
+      "mkt": 223.5,
+      "mkt_o": 1.87,
+      "mkt_u": 1.95,
+      "ctx": "Coverage: evaluated 12 of 13 players (31 of 33 player-stats); skipped: DeMar DeRozan AST (no rung 1.40+ at/below std), Spencer Jones PTS (<5 GP). DEN Strawther out; HOU Capela, Adams, Tshiebwe out; top3 none out.",
+      "picks": [],
+      "leans": [
+        {
+          "p": "Nikola Jokic",
+          "t": "DEN",
+          "s": "AST",
+          "std": 9.5,
+          "alt": 7.5,
+          "o": 1.4,
+          "h": "88% (7/8)",
+          "e": 3.4,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "OT-ADJ",
+            "[Std?]",
+            "C0.83",
+            "Z0.75",
+            "LEAN",
+            "U0",
+            "CUSH"
+          ]
+        },
+        {
+          "p": "Amen Thompson",
+          "t": "HOU",
+          "s": "PTS",
+          "std": 15.5,
+          "alt": 13.5,
+          "o": 1.48,
+          "h": "80% (8/10)",
+          "e": 3.1,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "C0.87",
+            "Z0.50",
+            "LEAN",
+            "U0",
+            "CUSH"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.17"
+    },
+    {
+      "id": "SAS@PHX",
+      "tip": "13:10",
+      "proj": 232.6,
+      "mkt": 225.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Coverage: evaluated 13 of 14 players (32 of 35 player-stats); skipped: Devin Vassell PTS (ruled OUT), Devin Vassell REB (ruled OUT), Devin Vassell AST (ruled OUT). SAS Vassell, Harris, Quaintance out; PHX Mark Williams out; top3 none out.",
+      "picks": [],
+      "leans": [
+        {
+          "p": "Miles Bridges",
+          "t": "PHX",
+          "s": "REB",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.65,
+          "h": "88% (7/8)",
+          "e": 4.7,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "[Std?]",
+            "C0.68",
+            "Z0.94",
+            "LEAN",
+            "U0"
+          ]
+        },
+        {
+          "p": "Khaman Maluach",
+          "t": "PHX",
+          "s": "REB",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.83,
+          "h": "88% (7/8)",
+          "e": 3.9,
+          "st": "3",
+          "opp": "—",
+          "f": [
+            "MT-",
+            "C0.85",
+            "Z0.42",
+            "LEAN",
+            "U0"
+          ]
+        },
+        {
+          "p": "Miles Bridges",
+          "t": "PHX",
+          "s": "PTS",
+          "std": 15.5,
+          "alt": 12.5,
+          "o": 1.42,
+          "h": "88% (7/8)",
+          "e": 3.6,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "C0.74",
+            "Z0.90",
+            "LEAN",
+            "U0",
+            "CUSH"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.17"
     }
   ],
   "totals": [
@@ -414,6 +537,16 @@
       "IND@DAL",
       222.0,
       226.5
+    ],
+    [
+      "DEN@HOU",
+      228.7,
+      223.5
+    ],
+    [
+      "SAS@PHX",
+      232.6,
+      225.5
     ]
   ]
 }
