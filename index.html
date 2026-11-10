@@ -69,7 +69,7 @@ table.pt .n{text-align:right;white-space:nowrap}table.pt td.eg{color:var(--good,
 table.pt tr.lean td{background:#f8f9fb}table.pt tr.lean .who{color:var(--muted)}table.pt .chips{margin-top:3px}.chip.ln{background:#e8e6f8;color:#4b3fa6}
 details.lf{margin:4px 0 2px;border-top:1px solid var(--line)}details.lf>summary{cursor:pointer;list-style:none;padding:10px 6px;min-height:24px;font-size:.82rem;display:flex;justify-content:space-between;align-items:center;color:var(--text)}
 details.lf>summary::-webkit-details-marker{display:none}details.lf>summary::after{content:"▸";color:var(--muted)}details.lf[open]>summary::after{content:"▾"}
-details.lf>summary span{color:var(--muted)}details.lf>summary b{color:var(--text)}p.lfd{margin:0 6px 4px;font-size:.74rem;color:var(--muted)}
+details.lf>summary span{color:var(--muted)}details.lf>summary b{color:var(--text)}table.pt .opp{font-size:.74rem;color:var(--muted)}p.lfd{margin:0 6px 4px;font-size:.74rem;color:var(--muted)}
 @media (prefers-color-scheme:dark){table.pt tr.lean td{background:rgba(255,255,255,.04)}.chip.ln{background:#2e2a52;color:#c9c3ff}table.gi tr.out td{color:#ff8a80}}
 .prow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:8px 14px;border-top:1px solid var(--line)}
 .prow .meta{margin-left:auto}
@@ -628,7 +628,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var u='';p.f.forEach(function(f){if(/^U\d/.test(f))u=f.slice(1)});
     var fl=p.f.filter(function(f){return !/^U\d/.test(f)&&f!=='LEAN'});
     var chips=(p.lean?'<span class="chip ln">LEAN 0u</span>':'')+pill+cc+fl.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'||f==='DNP-LAST'?' w':'')+'">'+esc(f)+'</span>'}).join('');
-    return '<tr class="pr'+rc+(p.lean?' lean':'')+'"><td><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' <span class="st">'+stars(p.stN)+'</span></div>'+
+    return '<tr class="pr'+rc+(p.lean?' lean':'')+'"><td><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' <span class="st">'+stars(p.stN)+'</span></div>'+(/[0-9]/.test(p.opp)?'<div class="opp">Opp '+esc(p.opp)+'</div>':'')+
       (p.sa!==null?'<div class="safe">Safer: O'+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
       (chips?'<div class="chips">'+chips+'</div>':'')+cb+'</td>'+
       '<td class="n">'+oddsSpan(p.o)+'</td><td class="n">'+esc(String(p.h).replace(/^.*\((.*)\).*$/,'$1'))+'</td><td class="n eg">+'+p.e.toFixed(1)+'</td><td class="n">'+(p.lean?'—':(u?esc(u)+'u':'—'))+'</td></tr>';

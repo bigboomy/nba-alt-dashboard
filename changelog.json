@@ -2,6 +2,13 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-11",
+   "component": "dashboard",
+   "title": "Opponent line back on picks",
+   "change": "The opponent allowance (e.g. 'Opp 112.54 (9–/25)', with its up/down arrow) shows again under each pick and lean; it was left out when the cards became tables on 10 Nov. It's hidden when the slate sends no value.",
+   "aim": "Restore the matchup context Mitch uses when reading a pick."
+  },
+  {
    "date": "2026-11-10",
    "component": "dashboard",
    "title": "Leans collapsed under each game",
