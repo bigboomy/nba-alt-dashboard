@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10T00:11:14.485847+00:00",
+  "generated": "2026-11-10T01:11:36.570960+00:00",
   "date": "Tue 10 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -510,6 +510,59 @@
         }
       ],
       "engine": "nba-session v3.17"
+    },
+    {
+      "id": "NOP@GSW",
+      "tip": "14:10",
+      "proj": 233.3,
+      "mkt": 228.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "NOP on B2B (played Nov 8 ET). OUT: NOP Zion, T.Murphy, Watford, Missi; GSW Butler, Moody, Richard, Porzingis; Payton II Q. NOP TOP3: Zion(out), Bey, Fears. Coverage: evaluated 15 of 15 players (33 of 36 player-stats); skipped: Jeremiah Fears AST (no rung priced 1.40+ at or below std), Stephen Curry AST (no rung priced 1.40+ at or below std), Saddiq Bey AST (no rung priced 1.40+ at or below std)",
+      "picks": [],
+      "leans": [
+        {
+          "p": "Draymond Green",
+          "t": "GSW",
+          "s": "AST",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.42,
+          "h": "88% (7/8)",
+          "e": 3.6,
+          "st": "4",
+          "opp": "26.60 (13/25 -)",
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "OT-ADJ",
+            "C0.72",
+            "Z0.67",
+            "[Std?]"
+          ]
+        },
+        {
+          "p": "Brandon Williams",
+          "t": "GSW",
+          "s": "PTS",
+          "std": 8.5,
+          "alt": 7.5,
+          "o": 1.53,
+          "h": "78% (7/9)",
+          "e": 3.2,
+          "st": "4",
+          "opp": "115.58 (18/25 -)",
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "C0.68",
+            "Z0.68"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.17"
     }
   ],
   "totals": [
@@ -547,6 +600,11 @@
       "SAS@PHX",
       232.6,
       225.5
+    ],
+    [
+      "NOP@GSW",
+      233.3,
+      228.5
     ]
   ]
 }
