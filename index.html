@@ -58,6 +58,16 @@ tr:last-child td{border-bottom:0}
 .cbtn.done{color:var(--good);border-color:var(--good)}
 .cbtn.main{background:var(--accent);border-color:var(--accent);color:#fff;font-size:.85rem;min-height:40px;padding:8px 14px}
 .cbtn.main.done{background:var(--good);border-color:var(--good)}
+.gh2{display:flex;align-items:baseline;gap:8px;padding:11px 12px 6px}.gh2 h2{margin:0;font-size:1.05rem}.gh2 .tp{font-size:.82rem;color:var(--muted)}.gh2 .ct{margin-left:auto;font-size:.78rem;color:var(--muted)}
+.gw{padding:0 6px 6px}.gw.gp{border-top:6px solid var(--bg);padding-top:2px}
+table.gi,table.pt{width:100%;border-collapse:collapse;font-size:.78rem;line-height:1.35;min-width:0;border:0}
+table.gi{table-layout:fixed}table.gi th,table.gi td,table.pt th,table.pt td{padding:6px;vertical-align:top;text-align:left;border:0;border-top:1px solid var(--line);background:none}
+table.gi thead th,table.pt thead th{border-top:0;font-size:.68rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+table.gi th[scope=row]{width:68px;color:var(--muted);font-weight:600}table.gi thead th:first-child{width:68px}
+table.gi tr.out td{color:#b42318;font-weight:600}td.mu{color:var(--muted)}
+table.pt .n{text-align:right;white-space:nowrap}table.pt td.eg{color:var(--good,#0f7b3f)}table.pt .who{font-weight:600;font-size:.86rem}table.pt .line{font-size:.82rem;font-weight:600;text-align:left;white-space:normal}table.pt .st{color:var(--muted);font-size:.72rem}
+table.pt tr.lean td{background:#f8f9fb}table.pt tr.lean .who{color:var(--muted)}table.pt .chips{margin-top:3px}.chip.ln{background:#e8e6f8;color:#4b3fa6}
+@media (prefers-color-scheme:dark){table.pt tr.lean td{background:rgba(255,255,255,.04)}.chip.ln{background:#2e2a52;color:#c9c3ff}table.gi tr.out td{color:#ff8a80}}
 .prow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:8px 14px;border-top:1px solid var(--line)}
 .prow .meta{margin-left:auto}
 .gh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
@@ -578,7 +588,15 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function normGame(g){
     if(!g||typeof g!=='object'||!str(g.id,'')) return null;
     var picks=[];(Array.isArray(g.picks)?g.picks:[]).forEach(function(p){try{var n=normPick(p);if(n)picks.push(n)}catch(e){}});
-    return {id:String(g.id),tip:str(g.tip,'—'),proj:num(g.proj),mkt:num(g.mkt),ctx:str(g.ctx,''),picks:picks};
+    var leans=[];(Array.isArray(g.leans)?g.leans:[]).forEach(function(p){try{var n=normPick(p);if(n){n.lean=true;leans.push(n)}}catch(e){}});
+    /* Structured game info (Architect, 10 Nov; slate step 8 fields): out / q = {TEAM:[names]}, b2b = [TEAM], cov = {players:[x,y],stats:[a,b],skipped:[..]}.
+       Missing fields fall back to the free-text ctx. */
+    function tl(o){var r={};if(o&&typeof o==='object'&&!Array.isArray(o))Object.keys(o).forEach(function(k){if(Array.isArray(o[k]))r[String(k).toUpperCase()]=o[k].map(String)});return r}
+    var cov=(g.cov&&typeof g.cov==='object')?g.cov:null;
+    return {id:String(g.id),tip:str(g.tip,'—'),proj:num(g.proj),mkt:num(g.mkt),mo:num(g.mkt_o),mu:num(g.mkt_u),ctx:str(g.ctx,''),picks:picks,leans:leans,
+      out:tl(g.out),q:tl(g.q),b2b:Array.isArray(g.b2b)?g.b2b.map(function(x){return String(x).toUpperCase()}):null,
+      hasInfo:!!(g.out&&typeof g.out==='object'),
+      cov:cov&&Array.isArray(cov.players)&&Array.isArray(cov.stats)?{pl:cov.players,st:cov.stats,sk:Array.isArray(cov.skipped)?cov.skipped.map(String):[]}:null};
   }
   function normTotal(t){
     if(!Array.isArray(t)||t.length<2||!str(t[0],'')) return null;
@@ -590,9 +608,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     $('tabs').innerHTML=ids.map(function(id){return '<button class="tab" data-id="'+esc(id)+'" aria-pressed="'+(id===sel)+'">'+(id==='ALL'?'All games':esc(id))+'</button>'}).join('');
     Array.prototype.forEach.call($('tabs').children,function(b){b.onclick=function(){sel=b.getAttribute('data-id');tabs();games()}});
   }
-  function pickHtml(p,gi,i){
+  function pickRow(p,gi,i){
     var x=resFor(p),rc='',pill='',g=G[gi],cb='',cc='';
-    if(CHOICE_URL&&g){
+    if(!p.lean&&CHOICE_URL&&g){
       var pid=pidFor(g,p),ch=pid?(CHOICES[pid]||''):'',tipped=hasTipped(g);
       if(ch==='TOOK')cc='<span class="chip took">✅ Taken</span>';
       if(ch==='PASS')cc='<span class="chip pass">🚫 Passed</span>';
@@ -602,19 +620,39 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
           '<button class="cbtn'+(ch==='PASS'?' onp':'')+'" type="button" data-ch="PASS" data-pid="'+esc(pid)+'"'+(tipped?' disabled title="Locked at tip"':'')+'>🚫 Pass</button></div>';
       }
     }
-    if(x){var rcm={W:' rw',L:' rl',PUSH:' rv',VOID:' rv'};rc=rcm[x.result]||'';
+    if(!p.lean&&x){var rcm={W:' rw',L:' rl',PUSH:' rv',VOID:' rv'};rc=rcm[x.result]||'';
       pill='<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span>'}
-    return '<div class="pick'+rc+'"><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' @ '+oddsSpan(p.o)+'</div>'+
-      '<div class="meta">Hit '+esc(p.h)+' · '+stars(p.stN)+' · Opp '+esc(p.opp)+'</div><div class="edge">+'+p.e.toFixed(1)+'pp edge</div>'+
-      (p.sa!==null?'<div class="safe">Safer rung: O '+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
-      '<div class="chips">'+pill+cc+p.f.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'?' w':'')+'">'+esc(f)+'</span>'}).join('')+'</div>'+
-      cb+'</div>';
+    var u='';p.f.forEach(function(f){if(/^U\d/.test(f))u=f.slice(1)});
+    var fl=p.f.filter(function(f){return !/^U\d/.test(f)&&f!=='LEAN'});
+    var chips=(p.lean?'<span class="chip ln">LEAN 0u</span>':'')+pill+cc+fl.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'||f==='DNP-LAST'?' w':'')+'">'+esc(f)+'</span>'}).join('');
+    return '<tr class="pr'+rc+(p.lean?' lean':'')+'"><td><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' <span class="st">'+stars(p.stN)+'</span></div>'+
+      (p.sa!==null?'<div class="safe">Safer: O'+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
+      (chips?'<div class="chips">'+chips+'</div>':'')+cb+'</td>'+
+      '<td class="n">'+oddsSpan(p.o)+'</td><td class="n">'+esc(String(p.h).replace(/^.*\((.*)\).*$/,'$1'))+'</td><td class="n eg">+'+p.e.toFixed(1)+'</td><td class="n">'+(p.lean?'—':(u?esc(u)+'u':'—'))+'</td></tr>';
+  }
+  function infoTable(g){
+    var t=String(g.id).split('@'),A=t[0]||'',H=t[1]||'',rows='';
+    function list(m,k){var v=(m&&m[k])||[];return v.length?v.map(esc).join(', '):'—'}
+    if(g.hasInfo){
+      rows+='<tr class="out"><th scope="row">Out</th><td>'+list(g.out,A)+'</td><td>'+list(g.out,H)+'</td></tr>'+
+        '<tr><th scope="row">Doubtful / Q</th><td>'+list(g.q,A)+'</td><td>'+list(g.q,H)+'</td></tr>'+
+        (g.b2b?'<tr><th scope="row">B2B</th><td>'+(g.b2b.indexOf(A)>=0?'Yes':'—')+'</td><td>'+(g.b2b.indexOf(H)>=0?'Yes':'—')+'</td></tr>':'');
+    }
+    var tot='';
+    if(g.proj!==null){var gap=g.mkt!==null?g.proj-g.mkt:null;
+      tot='Proj <b>'+esc(fix(g.proj,1))+'</b> v mkt <b>'+esc(fix(g.mkt,1))+'</b>'+(g.mo!==null&&g.mu!==null?' (O '+g.mo.toFixed(2)+' / U '+g.mu.toFixed(2)+')':'')+
+        (gap!==null&&Math.abs(gap)>=0.05?' · lean '+(gap>0?'Over':'Under')+' '+Math.abs(gap).toFixed(1):'');}
+    if(tot) rows+='<tr><th scope="row">Total</th><td colspan="2">'+tot+'</td></tr>';
+    if(g.cov) rows+='<tr><th scope="row">Coverage</th><td colspan="2" class="mu">'+esc(g.cov.pl[0])+' of '+esc(g.cov.pl[1])+' players · '+esc(g.cov.st[0])+' of '+esc(g.cov.st[1])+' stats'+(g.cov.sk.length?'<br>Skipped: '+g.cov.sk.map(esc).join(', '):'')+'</td></tr>';
+    if(!g.hasInfo&&g.ctx) rows+='<tr><th scope="row">Notes</th><td colspan="2" class="mu">'+esc(g.ctx)+'</td></tr>';
+    return '<table class="gi"><thead><tr><th></th><th>'+esc(A)+' (away)</th><th>'+esc(H)+' (home)</th></tr></thead><tbody>'+rows+'</tbody></table>';
   }
   function gameHtml(g,gi){
-    var head='<div class="gh"><div><h2>'+esc(g.id)+' · tip '+esc(g.tip)+'</h2><p>'+esc(g.ctx)+(g.ctx?' · ':'')+'proj total '+esc(fix(g.proj,1))+' (mkt '+esc(fix(g.mkt,1))+')</p></div></div>';
-    var body='';g.picks.forEach(function(p,i){try{body+=pickHtml(p,gi,i)}catch(e){}});
-    if(!body) body='<div class="none">No pick cleared the gates.</div>';
-    return '<section class="game">'+head+body+'</section>';
+    var np=g.picks.length,nl=g.leans.length;
+    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span><span class="ct">'+np+' pick'+(np===1?'':'s')+(nl?' · '+nl+' lean'+(nl===1?'':'s'):'')+'</span></div>';
+    var body='';g.picks.concat(g.leans).forEach(function(p,i){try{body+=pickRow(p,gi,i)}catch(e){}});
+    var tbl=body?'<table class="pt"><thead><tr><th>Player · bet</th><th class="n">Odds</th><th class="n">Hit</th><th class="n">Edge</th><th class="n">Stake</th></tr></thead><tbody>'+body+'</tbody></table>':'<div class="none">No pick cleared the gates.</div>';
+    return '<section class="game">'+head+'<div class="gw">'+infoTable(g)+'</div><div class="gw gp">'+tbl+'</div></section>';
   }
   /* Today's games (Mitch, 5 Nov): from the first slate run the slate shows today's games from schedule.json.
      A game not yet analysed shows as "picks at ~HH:07"; once a run analyses it, its card replaces that line.

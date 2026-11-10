@@ -2,6 +2,13 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-10",
+   "component": "dashboard",
+   "title": "Game cards as mini tables, with who's out",
+   "change": "Each game card now has two small tables: game info (Out, Doubtful / Q and B2B per team, the total with prices, coverage) and the picks with their leans (shaded, 0u) in one table with odds, hit, edge and stake. Until the slate sends structured injury fields, the info table shows the slate's note text instead.",
+   "aim": "Bring back a clear view of who's out and make each game readable at a glance."
+  },
+  {
    "date": "2026-11-09",
    "version": "slate task 9-Nov (safer rung retired)",
    "component": "slate (hourly)",
