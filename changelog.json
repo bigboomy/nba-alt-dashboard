@@ -3,6 +3,22 @@
  "changes": [
   {
    "date": "2026-11-10",
+   "version": "nba-session v3.18",
+   "component": "slate (hourly)",
+   "title": "No limits on picks per game or per player",
+   "change": "The 3-picks-per-game, 2-per-player and 3u-per-game caps are removed, so every pick that clears the gates is bet at its full stake; a game with 4+ picks is flagged STACK for information only.",
+   "aim": "With the cushion gate and 1.85 cap the slate makes about 1–3 picks a day and the caps weren't binding; Mitch wants every qualifying pick, accepting that picks in one game can lose together."
+  },
+  {
+   "date": "2026-11-10",
+   "version": "slate task 10-Nov (game fields)",
+   "component": "slate (hourly), dashboard",
+   "title": "Injuries, back-to-backs and coverage sent to the dashboard",
+   "change": "Every analysed game now also carries out / q (each team's Out and Questionable/Doubtful players from the official injury report), b2b (teams on a back-to-back) and cov (the coverage counts and skipped players) for the dashboard; picks are unchanged.",
+   "aim": "Architect request §9 item 14: show each game's injury and schedule context on the dashboard without any Sheet or script change."
+  },
+  {
+   "date": "2026-11-10",
    "component": "dashboard",
    "title": "Game cards as mini tables, with who's out",
    "change": "Each game card now has two small tables: game info (Out, Doubtful / Q and B2B per team, the total with prices, coverage) and the picks with their leans (shaded, 0u) in one table with odds, hit, edge and stake. Until the slate sends structured injury fields, the info table shows the slate's note text instead.",
