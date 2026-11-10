@@ -3,6 +3,13 @@
  "changes": [
   {
    "date": "2026-11-10",
+   "component": "dashboard",
+   "title": "Leans collapsed under each game",
+   "change": "Each game's leans now sit in a collapsed row under its picks, titled 'Leans (n) · near-misses, tracked not bet'; opening it explains they just missed a pick rule (cushion, price cap or looser test) and are staked at 0u.",
+   "aim": "Keep the real picks front and centre while leaving the near-misses one tap away."
+  },
+  {
+   "date": "2026-11-10",
    "version": "nba-session v3.18",
    "component": "slate (hourly)",
    "title": "No limits on picks per game or per player",

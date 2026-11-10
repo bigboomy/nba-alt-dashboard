@@ -67,6 +67,9 @@ table.gi th[scope=row]{width:68px;color:var(--muted);font-weight:600}table.gi th
 table.gi tr.out td{color:#b42318;font-weight:600}td.mu{color:var(--muted)}
 table.pt .n{text-align:right;white-space:nowrap}table.pt td.eg{color:var(--good,#0f7b3f)}table.pt .who{font-weight:600;font-size:.86rem}table.pt .line{font-size:.82rem;font-weight:600;text-align:left;white-space:normal}table.pt .st{color:var(--muted);font-size:.72rem}
 table.pt tr.lean td{background:#f8f9fb}table.pt tr.lean .who{color:var(--muted)}table.pt .chips{margin-top:3px}.chip.ln{background:#e8e6f8;color:#4b3fa6}
+details.lf{margin:4px 0 2px;border-top:1px solid var(--line)}details.lf>summary{cursor:pointer;list-style:none;padding:10px 6px;min-height:24px;font-size:.82rem;display:flex;justify-content:space-between;align-items:center;color:var(--text)}
+details.lf>summary::-webkit-details-marker{display:none}details.lf>summary::after{content:"▸";color:var(--muted)}details.lf[open]>summary::after{content:"▾"}
+details.lf>summary span{color:var(--muted)}details.lf>summary b{color:var(--text)}p.lfd{margin:0 6px 4px;font-size:.74rem;color:var(--muted)}
 @media (prefers-color-scheme:dark){table.pt tr.lean td{background:rgba(255,255,255,.04)}.chip.ln{background:#2e2a52;color:#c9c3ff}table.gi tr.out td{color:#ff8a80}}
 .prow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:8px 14px;border-top:1px solid var(--line)}
 .prow .meta{margin-left:auto}
@@ -647,12 +650,19 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(!g.hasInfo&&g.ctx) rows+='<tr><th scope="row">Notes</th><td colspan="2" class="mu">'+esc(g.ctx)+'</td></tr>';
     return '<table class="gi"><thead><tr><th></th><th>'+esc(A)+' (away)</th><th>'+esc(H)+' (home)</th></tr></thead><tbody>'+rows+'</tbody></table>';
   }
+  var LOPEN={};
   function gameHtml(g,gi){
     var np=g.picks.length,nl=g.leans.length;
     var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span><span class="ct">'+np+' pick'+(np===1?'':'s')+(nl?' · '+nl+' lean'+(nl===1?'':'s'):'')+'</span></div>';
-    var body='';g.picks.concat(g.leans).forEach(function(p,i){try{body+=pickRow(p,gi,i)}catch(e){}});
-    var tbl=body?'<table class="pt"><thead><tr><th>Player · bet</th><th class="n">Odds</th><th class="n">Hit</th><th class="n">Edge</th><th class="n">Stake</th></tr></thead><tbody>'+body+'</tbody></table>':'<div class="none">No pick cleared the gates.</div>';
-    return '<section class="game">'+head+'<div class="gw">'+infoTable(g)+'</div><div class="gw gp">'+tbl+'</div></section>';
+    var th='<thead><tr><th>Player · bet</th><th class="n">Odds</th><th class="n">Hit</th><th class="n">Edge</th><th class="n">Stake</th></tr></thead>';
+    var body='',lb='';
+    g.picks.forEach(function(p,i){try{body+=pickRow(p,gi,i)}catch(e){}});
+    g.leans.forEach(function(p,i){try{lb+=pickRow(p,gi,i)}catch(e){}});
+    var tbl=body?'<table class="pt">'+th+'<tbody>'+body+'</tbody></table>':'<div class="none">No pick cleared the gates.</div>';
+    /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
+    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · near-misses, tracked not bet</span></summary>'+
+      '<p class="lfd">Just missed a pick rule (cushion, price cap or looser test). 0u.</p><table class="pt">'+th+'<tbody>'+lb+'</tbody></table></details>':'';
+    return '<section class="game">'+head+'<div class="gw">'+infoTable(g)+'</div><div class="gw gp">'+tbl+lf+'</div></section>';
   }
   /* Today's games (Mitch, 5 Nov): from the first slate run the slate shows today's games from schedule.json.
      A game not yet analysed shows as "picks at ~HH:07"; once a run analyses it, its card replaces that line.
@@ -679,6 +689,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(sel==='ALL') html+=pendHtml();
     if(!html&&D&&D.cleared){var ts=todaySched();html='<div class="game"><div class="none">'+(ts&&!ts.length?'No NBA games today.':'No games analysed yet today.')+'</div></div>'}
     $('games').innerHTML=html;
+    Array.prototype.forEach.call($('games').querySelectorAll('details.lf'),function(d){d.addEventListener('toggle',function(){LOPEN[d.getAttribute('data-g')]=d.open})});
     Array.prototype.forEach.call($('games').querySelectorAll('[data-ch]'),function(b){b.onclick=function(){setChoice(b)}});
   }
   function totals(){
