@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-nba_ladder_io.py v1 - alt-ladder log: every Pointsbet alt rung the slate saw, one row per player/stat ladder.
-Source: the slate's own `odds_fetch.py alts` output (alts.json) - no extra Odds API request.
+nba_ladder_io.py v1.1 - alt-ladder log: every Pointsbet alt rung the slate saw, one row per player/stat ladder.
+Source: the slate's own alts.json - `odds_fetch.py alts` (The Odds API) or `nba_hp.py alts` (HaterPicks, from 12 Nov).
+v1.1: for HaterPicks data, captured_utc = the copy's copied_at (when the prices were taken) and book = "pointsbet".
 Writes only the `ladders` tab (+ reads `kstats` for verify). Never touches cohort / stats / totals / leans.
 Deterministic: the model copies plan blocks into update_values calls.
 
@@ -81,7 +82,15 @@ def cmd_plan(a):
         die("rows must be the number in kstats!B2")
     have = set()
     now = datetime.now(timezone.utc).replace(second=0, microsecond=0)
+    q = src.get("_quota") if isinstance(src.get("_quota"), dict) else {}
+    hp = q.get("source") == "haterpicks"
+    if hp and q.get("copied_at"):
+        try:
+            now = datetime.fromisoformat(str(q["copied_at"]).replace("Z", "+00:00")).astimezone(timezone.utc).replace(second=0, microsecond=0)
+        except ValueError:
+            pass
     cap = now.isoformat().replace("+00:00", "Z")
+    book_out = "pointsbet" if hp else BOOK
     new, notes, games = [], [], set()
     for ev in evs:
         try:
@@ -114,7 +123,7 @@ def cmd_plan(a):
                             "tip_utc": tip.astimezone(timezone.utc).isoformat().replace("+00:00", "Z"),
                             "captured_utc": cap, "mins_to_tip": mins, "player": player, "stat": stat,
                             "std_line": num(std.get("line")), "std_price": num(std.get("price")),
-                            "over_rungs": over, "under_rungs": under, "n_over": n_over, "book": BOOK})
+                            "over_rungs": over, "under_rungs": under, "n_over": n_over, "book": book_out})
                 n_game += 1
         games.add(gid)
         if not n_game:

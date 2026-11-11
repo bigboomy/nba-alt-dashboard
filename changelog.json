@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-11",
+   "version": "nba_hp.py v1",
+   "component": "slate / capture / resolve (odds source)",
+   "title": "Player-prop odds move to HaterPicks",
+   "change": "Slate ladders and market totals, the closing-price capture and the ladder log now come from HaterPicks' free NBA feed (one call per run returns the whole board, refreshed every 30 minutes); totals settle from ESPN final scores. The Odds API stays as a per-run fallback while its credits last.",
+   "aim": "Keep the system running after the Odds API quota runs out (~14 Nov) at no cost, with Sportsbet prices available for v3.19."
+  },
+  {
+   "date": "2026-11-11",
    "component": "dashboard",
    "title": "Opponent line back on picks",
    "change": "The opponent allowance (e.g. 'Opp 112.54 (9–/25)', with its up/down arrow) shows again under each pick and lean; it was left out when the cards became tables on 10 Nov. It's hidden when the slate sends no value.",
