@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-13",
+   "version": "nba-session v3.18 (P4 port)",
+   "component": "pipeline",
+   "title": "Pipeline moved to the home server",
+   "change": "Picks now come from deterministic Python on the home server (no AI per run), checked every 5 min from 2am to 3pm so each game is picked about 90 min before tip; a closing price only counts if it comes from a newer board than the pick's. Same v3.18 rules, with these approved readings: depletion counts rotation players only, ROLE? is a flag only, half-star stakes round down, no EARLY flag, no projected total or Opp.",
+   "aim": "Same rules, reproducible picks, tested before going live."
+  },
+  {
    "date": "2026-11-11",
    "version": "nba_hp.py v1",
    "component": "slate / capture / resolve (odds source)",
