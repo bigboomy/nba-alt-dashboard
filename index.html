@@ -831,7 +831,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
      (HEALTH_HEARTBEAT = 60 min), so a healthy tick's last_run can be up to ~60 min old. Thresholds therefore add that
      heartbeat: amber > hb+10 min (2 missed 5-min ticks), red > hb+20. Set HEALTH.hb to 0 if the server writes every tick.
      Silent when health.json is absent (pre-cutover) or fresh. */
-  var HEALTH={hb:60,amber:10,red:20,resolveBy:18*60+30},HJ=null;
+  var HEALTH={hb:30,amber:10,red:20,resolveBy:18*60+30},HJ=null;
   function healthCheck(nowMs){
     // returns {cls:'warn'|'bad', msg} or null. nowMs is injectable for tests.
     var j=HJ;if(!j||typeof j!=='object'||!j.jobs||typeof j.jobs!=='object') return null;
