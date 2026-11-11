@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11T00:12:04.420995+00:00",
+  "generated": "2026-11-11T01:14:33.179705+00:00",
   "date": "Wed 11 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -365,6 +365,91 @@
         }
       ],
       "engine": "nba-session v3.18"
+    },
+    {
+      "id": "ORL@SAC",
+      "tip": "14:10",
+      "proj": 226.6,
+      "mkt": 222.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "ORL missing Banchero, Suggs, Isaac, Penda, Nelson (da Silva Q); SAC missing Raynaud, Simmons. Sabonis missed SAC's last game (not on injury report). Coverage: evaluated 14 of 14 players (33 of 34 player-stats); skipped: Zach LaVine AST (no rung priced 1.40+ at/below std)",
+      "out": {
+        "ORL": [
+          "Jalen Suggs (knee)",
+          "Jonathan Isaac (knee)",
+          "Paolo Banchero (ankle)",
+          "Noah Penda (hamstring)",
+          "Izaiyah Nelson (ankle)"
+        ],
+        "SAC": [
+          "Maxime Raynaud (knee)",
+          "Ben Simmons (Achilles)"
+        ]
+      },
+      "q": {
+        "ORL": [
+          "Tristan da Silva (calf)"
+        ],
+        "SAC": []
+      },
+      "b2b": [],
+      "cov": {
+        "players": [
+          14,
+          14
+        ],
+        "stats": [
+          33,
+          34
+        ],
+        "skipped": [
+          "Zach LaVine AST (no rung priced 1.40+ at/below std)"
+        ]
+      },
+      "picks": [
+        {
+          "p": "Precious Achiuwa",
+          "t": "SAC",
+          "s": "PTS",
+          "std": 7.5,
+          "alt": 5.5,
+          "o": 1.5,
+          "h": "89% (8/9)",
+          "e": 5.1,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "MT-",
+            "C0.62",
+            "Z0.87",
+            "U1"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Domantas Sabonis",
+          "t": "SAC",
+          "s": "REB",
+          "std": 13.5,
+          "alt": 11.5,
+          "o": 1.5,
+          "h": "89% (8/9)",
+          "e": 5.1,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "DNP-LAST",
+            "C0.79",
+            "Z0.85"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.18"
     }
   ],
   "totals": [
@@ -387,6 +472,11 @@
       "MIA@UTA",
       224.5,
       228.5
+    ],
+    [
+      "ORL@SAC",
+      226.6,
+      222.5
     ]
   ]
 }
