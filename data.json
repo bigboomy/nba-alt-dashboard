@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-10T15:14:08.766520+00:00",
+  "generated": "2026-11-11T00:12:04.420995+00:00",
   "date": "Wed 11 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -180,6 +180,191 @@
         }
       ],
       "engine": "nba-session v3.18"
+    },
+    {
+      "id": "LAC@PHX",
+      "tip": "13:10",
+      "proj": 232.6,
+      "mkt": 224.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Top3 PPG: LAC Darius Garland, Rui Hachimura, Brook Lopez; PHX Devin Booker, Miles Bridges, Dillon Brooks. Out: LAC Yanic Konan Niederhauser (foot), Brandon Ingram (Achilles), Bradley Beal (knee), Jordan Miller (rotator cuff); PHX Mark Williams (shoulder). Coverage: evaluated 14 of 14 players (32 of 35 player-stats); skipped: Keaton Wagler AST (no rung priced 1.40+ at or below std), Oso Ighodaro AST (no rung priced 1.40+ at or below std), Derrick Jones REB (no rung priced 1.40+ at or below std) B2B: PHX.",
+      "out": {
+        "LAC": [
+          "Yanic Konan Niederhauser (foot)",
+          "Brandon Ingram (Achilles)",
+          "Bradley Beal (knee)",
+          "Jordan Miller (rotator cuff)"
+        ],
+        "PHX": [
+          "Mark Williams (shoulder)"
+        ]
+      },
+      "q": {
+        "LAC": [
+          "Cam Christie (ankle)"
+        ],
+        "PHX": []
+      },
+      "b2b": [
+        "PHX"
+      ],
+      "cov": {
+        "players": [
+          14,
+          14
+        ],
+        "stats": [
+          32,
+          35
+        ],
+        "skipped": [
+          "Keaton Wagler AST (no rung priced 1.40+ at or below std)",
+          "Oso Ighodaro AST (no rung priced 1.40+ at or below std)",
+          "Derrick Jones REB (no rung priced 1.40+ at or below std)"
+        ]
+      },
+      "picks": [
+        {
+          "p": "Khaman Maluach",
+          "t": "PHX",
+          "s": "PTS",
+          "std": 6.5,
+          "alt": 4.5,
+          "o": 1.44,
+          "h": "89% (8/9)",
+          "e": 4.5,
+          "st": "3.5",
+          "opp": "115.83 (18/25 –)",
+          "f": [
+            "B2B",
+            "MT-",
+            "C0.58",
+            "Z1.07",
+            "U0.5"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Keaton Wagler",
+          "t": "LAC",
+          "s": "PTS",
+          "std": 9.5,
+          "alt": 7.5,
+          "o": 1.5,
+          "h": "78% (7/9)",
+          "e": 3.4,
+          "st": "3",
+          "opp": "121.43 (22/25 ⬆)",
+          "f": [
+            "LEAN",
+            "U0",
+            "MT-",
+            "OT-ADJ",
+            "C0.61",
+            "Z1.04"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.18"
+    },
+    {
+      "id": "MIA@UTA",
+      "tip": "13:10",
+      "proj": 224.5,
+      "mkt": 228.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "Top3 PPG: MIA Giannis Antetokounmpo, Bam Adebayo, Davion Mitchell; UTA Keyonte George, Lauri Markkanen, Jaren Jackson Jr.. Out: MIA none; UTA Lauri Markkanen (wrist), Keyonte George (ankle), Jusuf Nurkic (toe), Jaren Jackson Jr. (knee). Coverage: evaluated 14 of 14 players (30 of 31 player-stats); skipped: Darryn Peterson REB (no rung priced 1.40+ at or below std)",
+      "out": {
+        "MIA": [],
+        "UTA": [
+          "Lauri Markkanen (wrist)",
+          "Keyonte George (ankle)",
+          "Jusuf Nurkic (toe)",
+          "Jaren Jackson Jr. (knee)"
+        ]
+      },
+      "q": {
+        "MIA": [],
+        "UTA": []
+      },
+      "b2b": [],
+      "cov": {
+        "players": [
+          14,
+          14
+        ],
+        "stats": [
+          30,
+          31
+        ],
+        "skipped": [
+          "Darryn Peterson REB (no rung priced 1.40+ at or below std)"
+        ]
+      },
+      "picks": [],
+      "leans": [
+        {
+          "p": "Giannis Antetokounmpo",
+          "t": "MIA",
+          "s": "REB",
+          "std": 11.5,
+          "alt": 11.5,
+          "o": 1.63,
+          "h": "80% (8/10)",
+          "e": 3.7,
+          "st": "4",
+          "opp": "42.57 (8/25 ⬇)",
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "C0.91",
+            "Z0.28"
+          ]
+        },
+        {
+          "p": "Davion Mitchell",
+          "t": "MIA",
+          "s": "PTS",
+          "std": 13.5,
+          "alt": 10.5,
+          "o": 1.42,
+          "h": "80% (8/10)",
+          "e": 3.2,
+          "st": "4",
+          "opp": "115.96 (19/25 –)",
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "C0.65",
+            "Z1.18"
+          ]
+        },
+        {
+          "p": "Bam Adebayo",
+          "t": "MIA",
+          "s": "REB",
+          "std": 9.5,
+          "alt": 7.5,
+          "o": 1.42,
+          "h": "80% (8/10)",
+          "e": 3.2,
+          "st": "4",
+          "opp": "42.57 (8/25 ⬇)",
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "C0.90",
+            "Z0.69"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.18"
     }
   ],
   "totals": [
@@ -192,6 +377,16 @@
       "BOS@PHI",
       214.4,
       217.5
+    ],
+    [
+      "LAC@PHX",
+      232.6,
+      224.5
+    ],
+    [
+      "MIA@UTA",
+      224.5,
+      228.5
     ]
   ]
 }
