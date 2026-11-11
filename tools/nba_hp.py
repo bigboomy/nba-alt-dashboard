@@ -10,6 +10,8 @@ Commands:
   alts props.json [GAMES]       -> stdout: alts.json in the odds_fetch.py "alts" shape (Pointsbet as "pointsbetau",
                                 plus "sportsbet" ladders for v3.19, ignored until then), espn ids kept. GAMES = AWY@HOM,...
   totals odds.json [GAMES]      -> stdout: {"AWY@HOM": {"mkt", "mkt_o", "mkt_u"}} from Pointsbet game totals (balanced line)
+  capture sheet.csv -           free check, no call: exit 0 if any pending pick is due a close now (2-70 min before tip
+                                by tip_utc), else exit 3 with a one-line message
   capture sheet.csv props.json  -> stdout: plan.json (close_odds / close_status / clv_pct + close_copied_at), verified with
                                 nba_sheet_io.py verify (needs nba_sheet_io.py in the same folder)
   espn-scores [DAYS]            -> stdout: ESPN finals for the last DAYS US dates (default 3) in the Odds API scores shape,
@@ -198,6 +200,19 @@ def cmd_capture(a):
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     import nba_sheet_io as sio
     rows = sio.load_sheet(a[0])
+    if a[1] == "-":
+        now = datetime.now(timezone.utc); due = 0
+        for r in rows:
+            if r["odds"] == "" or r["close_status"] != "" or r["result"] != "" or not r["tip_utc"]:
+                continue
+            try:
+                lead = datetime.fromisoformat(str(r["tip_utc"]).replace("Z", "+00:00")) - now
+            except ValueError:
+                continue
+            if timedelta(minutes=sio.MIN_LEAD) <= lead <= timedelta(minutes=sio.MAX_LEAD) or lead < timedelta(0):
+                due += 1
+        print(json.dumps({"due": due, "message": f"{due} pick(s) due a close" if due else "No picks due for a close in this window - 0 calls"}))
+        sys.exit(0 if due else 3)
     d = load(a[1])
     mk = (d.get("data") or {}).get("markets") or die("props.json has no markets")
     copied = (d.get("_hp") or {}).get("copied_at") or d.get("copied_at") or ""
