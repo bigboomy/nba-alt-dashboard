@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11T01:14:33.179705+00:00",
+  "generated": "2026-11-11T02:09:52.523907+00:00",
   "date": "Wed 11 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -450,6 +450,153 @@
         }
       ],
       "engine": "nba-session v3.18"
+    },
+    {
+      "id": "OKC@POR",
+      "tip": "15:10",
+      "proj": 223.9,
+      "mkt": 226.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "OKC out: Jaylin Williams, Thomas Sorber, Cason Wallace, Chet Holmgren, Jalen Williams (3 of top-3 scorers incl. Jalen Williams out); POR out: Ja Morant, Vit Krejci, Shaedon Sharpe (Morant, a top-3 scorer, out). Injuries from ESPN feed. Coverage: evaluated 15 of 15 players (37 of 42 player-stats); skipped: Scoot Henderson REB (no rung priced 1.40+ at or below the standard line), Aday Mara AST (no rung priced 1.40+ at or below the standard line), Jared McCain AST (no rung priced 1.40+ at or below the standard line), Kenrich Williams AST (no rung priced 1.40+ at or below the standard line), Toumani Camara AST (no rung priced 1.40+ at or below the standard line)",
+      "out": {
+        "OKC": [
+          "Jaylin Williams (out)",
+          "Thomas Sorber (out)",
+          "Cason Wallace (out)",
+          "Chet Holmgren (out)",
+          "Jalen Williams (out)"
+        ],
+        "POR": [
+          "Ja Morant (out)",
+          "Vit Krejci (out)",
+          "Shaedon Sharpe (out)"
+        ]
+      },
+      "q": {
+        "OKC": [],
+        "POR": []
+      },
+      "b2b": [],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "stats": [
+          37,
+          42
+        ],
+        "skipped": [
+          "Scoot Henderson REB (no rung priced 1.40+ at or below the standard line)",
+          "Aday Mara AST (no rung priced 1.40+ at or below the standard line)",
+          "Jared McCain AST (no rung priced 1.40+ at or below the standard line)",
+          "Kenrich Williams AST (no rung priced 1.40+ at or below the standard line)",
+          "Toumani Camara AST (no rung priced 1.40+ at or below the standard line)"
+        ]
+      },
+      "picks": [
+        {
+          "p": "Alex Caruso",
+          "t": "OKC",
+          "s": "AST",
+          "std": 1.5,
+          "alt": 1.5,
+          "o": 1.5,
+          "h": "86% (6/7)",
+          "e": 3.6,
+          "st": "3",
+          "opp": "23.79 (—)",
+          "f": [
+            "[Std?]",
+            "MT-",
+            "C0.46",
+            "Z1.05",
+            "TMO",
+            "U0.5"
+          ]
+        },
+        {
+          "p": "Alex Caruso",
+          "t": "OKC",
+          "s": "PTS",
+          "std": 6.5,
+          "alt": 4.5,
+          "o": 1.44,
+          "h": "86% (6/7)",
+          "e": 3.1,
+          "st": "3",
+          "opp": "113.86 (—)",
+          "f": [
+            "MT-",
+            "C0.64",
+            "Z0.66",
+            "TMO",
+            "U0.5"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Toumani Camara",
+          "t": "POR",
+          "s": "PTS",
+          "std": 12.5,
+          "alt": 10.5,
+          "o": 1.5,
+          "h": "78% (7/9)",
+          "e": 3.4,
+          "st": "3",
+          "opp": "105.48 (—)",
+          "f": [
+            "LEAN",
+            "U0",
+            "MT+",
+            "C0.80",
+            "Z0.54",
+            "TMO"
+          ]
+        },
+        {
+          "p": "Jrue Holiday",
+          "t": "POR",
+          "s": "PTS",
+          "std": 13.5,
+          "alt": 10.5,
+          "o": 1.48,
+          "h": "78% (7/9)",
+          "e": 3.2,
+          "st": "3",
+          "opp": "105.48 (—)",
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.81",
+            "Z0.52",
+            "TMO"
+          ]
+        },
+        {
+          "p": "Damian Lillard",
+          "t": "POR",
+          "s": "PTS",
+          "std": 19.5,
+          "alt": 16.5,
+          "o": 1.48,
+          "h": "78% (7/9)",
+          "e": 3.2,
+          "st": "3",
+          "opp": "105.48 (—)",
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.85",
+            "Z0.54",
+            "TMO"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.18"
     }
   ],
   "totals": [
@@ -477,6 +624,11 @@
       "ORL@SAC",
       226.6,
       222.5
+    ],
+    [
+      "OKC@POR",
+      223.9,
+      226.5
     ]
   ]
 }
