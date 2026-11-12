@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-11T22:11:11.281607+00:00",
+  "generated": "2026-11-12T00:10:15.686024+00:00",
   "date": "Thu 12 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -711,6 +711,82 @@
         }
       ],
       "engine": "nba-session v3.18"
+    },
+    {
+      "id": "ORL@UTA",
+      "tip": "13:00",
+      "proj": 214.5,
+      "mkt": 213.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "ORL 2-7 vs UTA 1-9 (both B2B, played Nov 11 UTC). ORL OUT: Suggs, Isaac, Banchero, Penda, Nelson (depletion); UTA OUT: Markkanen, Nurkic, Jackson Jr. (depletion). TOP3 ORL: Wagner, Bane, Black; TOP3 UTA: George (Q, missed last game), Markkanen (out), Jackson (out). Coverage: evaluated 11 of 12 players (25 of 28 player-stats); skipped: Darryn Peterson PTS (no current-season ESPN games), Darryn Peterson REB (no current-season ESPN games), Darryn Peterson AST (no current-season ESPN games)",
+      "out": {
+        "ORL": [
+          "Jalen Suggs (knee)",
+          "Jonathan Isaac (knee)",
+          "Paolo Banchero (ankle)",
+          "Noah Penda (hamstring)",
+          "Izaiyah Nelson (ankle)"
+        ],
+        "UTA": [
+          "Lauri Markkanen (hand)",
+          "Jusuf Nurkic (toe)",
+          "Jaren Jackson Jr. (knee)"
+        ]
+      },
+      "q": {
+        "ORL": [
+          "Jamal Cain (shoulder)",
+          "Tristan da Silva (calf)"
+        ],
+        "UTA": [
+          "Keyonte George (ankle)"
+        ]
+      },
+      "b2b": [
+        "ORL",
+        "UTA"
+      ],
+      "cov": {
+        "players": [
+          11,
+          12
+        ],
+        "stats": [
+          25,
+          28
+        ],
+        "skipped": [
+          "Darryn Peterson PTS (no current-season ESPN games)",
+          "Darryn Peterson REB (no current-season ESPN games)",
+          "Darryn Peterson AST (no current-season ESPN games)"
+        ]
+      },
+      "picks": [],
+      "leans": [
+        {
+          "p": "Wendell Carter Jr.",
+          "t": "ORL",
+          "s": "REB",
+          "std": 8.5,
+          "alt": 7.5,
+          "o": 1.44,
+          "h": "80% (8/10)",
+          "e": 3.5,
+          "st": "2.5",
+          "opp": "42.57 (9⬇)",
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "B2B",
+            "C0.78",
+            "Z1.18",
+            "OT-ADJ"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.18"
     }
   ],
   "totals": [
@@ -748,6 +824,11 @@
       "LAL@MIL",
       null,
       228.5
+    ],
+    [
+      "ORL@UTA",
+      214.5,
+      213.5
     ]
   ]
 }
