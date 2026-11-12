@@ -1,1050 +1,197 @@
 {
-  "generated": "2026-11-12T01:09:49.578553+00:00",
-  "date": "Thu 12 Nov 2026",
+  "generated": "2026-11-12T22:10:31.342880+00:00",
+  "date": "Fri 13 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
   "engine": "nba-session v3.18",
   "games": [
     {
-      "id": "BOS@TOR",
+      "id": "DET@WAS",
       "tip": "11:10",
-      "proj": 228.3,
-      "mkt": 215.5,
+      "proj": 218.5,
+      "mkt": 221.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
-      "ctx": "B2B: BOS; BOS TOP3 out: Paul George; TOR TOP3 out: Scottie Barnes; TOR TOP3 Q: Immanuel Quickley. Coverage: evaluated 13 of 13 players (32 of 33 player-stats); skipped: Ja'kobe Walter REB (no rung priced 1.40+ at or below std)",
+      "ctx": "WAS on B2B (played Thu ET). DET out: Duren, Joe; WAS out: Vukcevic, Beekman, Champagnie, Watkins. Coverage: evaluated 15 of 15 players (32 of 33 player-stats); skipped: AJ Dybantsa AST (no rung priced 1.40+ at or below the standard line)",
       "out": {
-        "BOS": [
-          "Paul George (George (illness) has been ruled out for )"
+        "DET": [
+          "Isaiah Joe (Hip)",
+          "Jalen Duren (Hamstring)"
         ],
-        "TOR": [
-          "Trayce Jackson-Davis (Jackson-Davis (illness) has been ruled o)",
-          "Scottie Barnes (Barnes (groin) is out for Wednesday's ga)",
-          "Kawhi Leonard (Leonard (knee) is continuing the recondi)",
-          "Nate Bittle (Bittle (foot) is listed as out for Monda)"
+        "WAS": [
+          "Tristan Vukcevic (Hip)",
+          "Reece Beekman (Shoulder)",
+          "Justin Champagnie (Foot)",
+          "Jamir Watkins (Knee)"
         ]
       },
       "q": {
-        "BOS": [],
-        "TOR": [
-          "Collin Murray-Boyles (Day-To-Day)",
-          "Immanuel Quickley (Day-To-Day)"
-        ]
+        "DET": [
+          "Ugonna Onyenso (Foot)"
+        ],
+        "WAS": []
       },
       "b2b": [
-        "BOS"
+        "WAS"
       ],
       "cov": {
         "players": [
-          13,
-          13
+          15,
+          15
         ],
         "stats": [
           32,
           33
         ],
         "skipped": [
-          "Ja'kobe Walter REB (no rung priced 1.40+ at or below std)"
+          "AJ Dybantsa AST (no rung priced 1.40+ at or below the standard line)"
         ]
       },
       "picks": [
         {
-          "p": "Ja'Kobe Walter",
-          "t": "TOR",
+          "p": "Duncan Robinson",
+          "t": "DET",
           "s": "AST",
           "std": 1.5,
           "alt": 1.5,
-          "o": 1.5,
-          "h": "80% (8/10)",
-          "e": 3.3,
+          "o": 1.4,
+          "h": "100% (10/10)",
+          "e": 7.1,
           "st": "4",
-          "opp": "26.2 (11/25–)",
+          "opp": "—",
           "f": [
-            "MT+",
-            "C0.68",
-            "Z0.50",
-            "TMO",
+            "C0.65",
+            "Z1.66",
             "U1"
           ]
-        }
-      ],
-      "leans": [
+        },
         {
-          "p": "Jayson Tatum",
-          "t": "BOS",
-          "s": "AST",
-          "std": 6.5,
-          "alt": 5.5,
-          "o": 1.4,
+          "p": "Kyshawn George",
+          "t": "WAS",
+          "s": "PTS",
+          "std": 13.5,
+          "alt": 11.5,
+          "o": 1.48,
           "h": "90% (9/10)",
-          "e": 4.6,
+          "e": 5.6,
           "st": "3.5",
           "opp": "—",
           "f": [
-            "LEAN",
-            "U0",
-            "OT-ADJ",
-            "B2B",
-            "MT-",
-            "C0.75",
-            "Z0.94",
-            "TMO",
-            "CUSH"
-          ]
-        },
-        {
-          "p": "RJ Barrett",
-          "t": "TOR",
-          "s": "PTS",
-          "std": 23.5,
-          "alt": 19.5,
-          "o": 1.48,
-          "h": "80% (8/10)",
-          "e": 3.1,
-          "st": "4",
-          "opp": "108.43 (5/25⬇)",
-          "f": [
-            "LEAN",
-            "U0",
-            "MT+",
-            "C0.92",
-            "Z0.35",
-            "TMO",
-            "CUSH"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.18"
-    },
-    {
-      "id": "CLE@NYK",
-      "tip": "11:10",
-      "proj": 225.7,
-      "mkt": 221.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "no B2B; NYK TOP3 Q: Karl-Anthony Towns. Coverage: evaluated 14 of 16 players (29 of 36 player-stats); skipped: Josh Hart PTS (ruled OUT), Josh Hart REB (ruled OUT), Josh Hart AST (ruled OUT), Mikal Bridges REB (no rung priced 1.40+ at or below std), Mikal Bridges AST (no rung priced 1.40+ at or below std), Jaylon Tyson PTS (ruled OUT), Jaylon Tyson REB (ruled OUT)",
-      "out": {
-        "CLE": [
-          "Sam Merrill (Merrill (elbow) is listed as out for Wed)",
-          "Jaylon Tyson (Tyson (ankle) is questionable to face th)"
-        ],
-        "NYK": [
-          "Josh Hart (Hart (illness) is probable for Wednesday)"
-        ]
-      },
-      "q": {
-        "CLE": [],
-        "NYK": [
-          "Karl-Anthony Towns (Day-To-Day)"
-        ]
-      },
-      "b2b": [],
-      "cov": {
-        "players": [
-          14,
-          16
-        ],
-        "stats": [
-          29,
-          36
-        ],
-        "skipped": [
-          "Josh Hart PTS (ruled OUT)",
-          "Josh Hart REB (ruled OUT)",
-          "Josh Hart AST (ruled OUT)",
-          "Mikal Bridges REB (no rung priced 1.40+ at or below std)",
-          "Mikal Bridges AST (no rung priced 1.40+ at or below std)",
-          "Jaylon Tyson PTS (ruled OUT)",
-          "Jaylon Tyson REB (ruled OUT)"
-        ]
-      },
-      "picks": [
-        {
-          "p": "Meleek Thomas",
-          "t": "CLE",
-          "s": "PTS",
-          "std": 9.5,
-          "alt": 7.5,
-          "o": 1.53,
-          "h": "100% (8/8)",
-          "e": 6.5,
-          "st": "4",
-          "opp": "108.59 (6/25⬇)",
-          "f": [
-            "OT-ADJ",
-            "MT+",
-            "C0.59",
-            "Z1.52",
-            "U1"
-          ]
-        },
-        {
-          "p": "OG Anunoby",
-          "t": "NYK",
-          "s": "AST",
-          "std": 1.5,
-          "alt": 1.5,
-          "o": 1.48,
-          "h": "80% (8/10)",
-          "e": 3.1,
-          "st": "4",
-          "opp": "25.72 (8/25⬇)",
-          "f": [
-            "C0.62",
-            "Z0.42",
-            "TMO-Q",
-            "U1"
+            "B2B ⚠️",
+            "C0.60",
+            "Z1.02",
+            "U0.5"
           ]
         }
       ],
       "leans": [
         {
-          "p": "Karl-Anthony Towns",
-          "t": "NYK",
-          "s": "AST",
-          "std": 2.5,
-          "alt": 2.5,
-          "o": 1.71,
-          "h": "80% (8/10)",
-          "e": 3.5,
-          "st": "3",
-          "opp": "25.72 (8/25⬇)",
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.81",
-            "Z0.44"
-          ]
-        },
-        {
-          "p": "Karl-Anthony Towns",
-          "t": "NYK",
-          "s": "PTS",
-          "std": 19.5,
-          "alt": 17.5,
-          "o": 1.48,
-          "h": "80% (8/10)",
-          "e": 3.1,
-          "st": "4",
-          "opp": "114.12 (12/25–)",
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.84",
-            "Z0.68",
-            "CUSH"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.18"
-    },
-    {
-      "id": "WAS@IND",
-      "tip": "11:10",
-      "proj": 224.9,
-      "mkt": 228.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "no B2B; IND TOP3 out: Tyrese Haliburton. Coverage: evaluated 14 of 16 players (30 of 34 player-stats); skipped: Alexandre Sarr PTS (no team), Alexandre Sarr REB (no team), T.J. McConnell PTS (<4 current-season GP), T.J. McConnell AST (<4 current-season GP)",
-      "out": {
-        "WAS": [
-          "Tristan Vukcevic (Vukcevic (hip) has been ruled out for Mo)",
-          "Reece Beekman (The Wizards announced Monday that Beekma)",
-          "Justin Champagnie (Champagnie (foot) is expected to miss se)",
-          "Jamir Watkins (The Wizards announced Thursday that Watk)"
-        ],
-        "IND": [
-          "Tyrese Haliburton (Haliburton (hamstring) is progressing we)",
-          "Johnny Furphy (Furphy (knee) is practicing with the G L)",
-          "Ben Sheppard (Head coach Rick Carlise confirmed Sheppa)"
-        ]
-      },
-      "q": {
-        "WAS": [],
-        "IND": [
-          "T.J. McConnell (Day-To-Day)"
-        ]
-      },
-      "b2b": [],
-      "cov": {
-        "players": [
-          14,
-          16
-        ],
-        "stats": [
-          30,
-          34
-        ],
-        "skipped": [
-          "Alexandre Sarr PTS (no team)",
-          "Alexandre Sarr REB (no team)",
-          "T.J. McConnell PTS (<4 current-season GP)",
-          "T.J. McConnell AST (<4 current-season GP)"
-        ]
-      },
-      "picks": [
-        {
-          "p": "Obi Toppin",
-          "t": "IND",
-          "s": "PTS",
-          "std": 11.5,
-          "alt": 8.5,
-          "o": 1.4,
-          "h": "100% (8/8)",
-          "e": 6.0,
-          "st": "4",
-          "opp": "114.37 (13/25–)",
-          "f": [
-            "C0.64",
-            "Z1.44",
-            "TMO",
-            "U1"
-          ]
-        }
-      ],
-      "leans": [
-        {
-          "p": "Deandre Ayton",
+          "p": "Trae Young",
           "t": "WAS",
-          "s": "REB",
-          "std": 4.5,
-          "alt": 3.5,
-          "o": 1.56,
-          "h": "80% (8/10)",
-          "e": 4.1,
-          "st": "4",
-          "opp": "47.1 (21/25⬆)",
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.67",
-            "Z0.61"
-          ]
-        },
-        {
-          "p": "Pascal Siakam",
-          "t": "IND",
           "s": "PTS",
-          "std": 22.5,
-          "alt": 19.5,
-          "o": 1.5,
-          "h": "80% (8/10)",
-          "e": 3.3,
-          "st": "4",
-          "opp": "114.37 (13/25–)",
+          "std": 15.5,
+          "alt": 13.5,
+          "o": 1.48,
+          "h": "90% (9/10)",
+          "e": 5.6,
+          "st": "3.5",
+          "opp": "—",
           "f": [
+            "B2B ⚠️",
             "LEAN",
             "U0",
-            "C0.88",
-            "Z0.52",
-            "TMO",
-            "CUSH"
+            "CUSH",
+            "C0.76",
+            "Z0.69"
           ]
         }
       ],
       "engine": "nba-session v3.18"
     },
     {
-      "id": "BKN@NOP",
-      "tip": "12:10",
-      "proj": null,
-      "mkt": 228.5,
-      "mkt_o": 1.87,
-      "mkt_u": 1.8,
-      "ctx": "no B2B; BKN TOP3 out: Nolan Traore; NOP TOP3 Q: Trey Murphy III. Coverage: evaluated 14 of 17 players (36 of 44 player-stats); skipped: Trey Murphy III AST (no rung priced 1.40+ at or below std), Mikel Brown PTS (ruled OUT), Nolan Traore PTS (ruled OUT), Nolan Traore REB (ruled OUT), Nolan Traore AST (ruled OUT), Derik Queen AST (no rung priced 1.40+ at or below std), Egor Demin REB (no rung priced 1.40+ at or below std), Michael Porter Jr PTS (no rung priced 1.40+ at or below std)",
+      "id": "TOR@PHI",
+      "tip": "11:10",
+      "proj": 226.8,
+      "mkt": 224.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "TOR on B2B. TOR out: Barnes (TOP3), Leonard, Jackson-Davis, Bittle; PHI out: LeBron, Barlow, Bona, Hukporti; Embiid questionable (TOP3). Coverage: evaluated 17 of 17 players (36 of 37 player-stats); skipped: R.J. Barrett AST (no rung priced 1.40+ at or below the standard line)",
       "out": {
-        "BKN": [
-          "Nolan Traore (Traore (calf) has been ruled out for Wed)",
-          "Mikel Brown Jr. (Brown has been ruled out for Wednesday's)"
+        "TOR": [
+          "Trayce Jackson-Davis (Illness)",
+          "Scottie Barnes (Groin)",
+          "Kawhi Leonard (Knee)",
+          "Nate Bittle (Foot)"
         ],
-        "NOP": [
-          "Bennedict Mathurin (Mathurin has been ruled out for Wednesda)",
-          "Trendon Watford (Watford (ankle) is out for Wednesday's g)",
-          "Yves Missi (Missi (knee) is out for Friday's game ag)"
+        "PHI": [
+          "LeBron James (Back)",
+          "Dominick Barlow (Back)",
+          "Adem Bona (Back)",
+          "Ariel Hukporti (Achilles)"
         ]
       },
       "q": {
-        "BKN": [],
-        "NOP": [
-          "Trey Murphy III (Day-To-Day)"
+        "TOR": [],
+        "PHI": [
+          "Joel Embiid (Foot)"
         ]
       },
-      "b2b": [],
+      "b2b": [
+        "TOR"
+      ],
       "cov": {
         "players": [
-          14,
+          17,
           17
         ],
         "stats": [
           36,
-          44
+          37
         ],
         "skipped": [
-          "Trey Murphy III AST (no rung priced 1.40+ at or below std)",
-          "Mikel Brown PTS (ruled OUT)",
-          "Nolan Traore PTS (ruled OUT)",
-          "Nolan Traore REB (ruled OUT)",
-          "Nolan Traore AST (ruled OUT)",
-          "Derik Queen AST (no rung priced 1.40+ at or below std)",
-          "Egor Demin REB (no rung priced 1.40+ at or below std)",
-          "Michael Porter Jr PTS (no rung priced 1.40+ at or below std)"
+          "R.J. Barrett AST (no rung priced 1.40+ at or below the standard line)"
         ]
       },
       "picks": [],
       "leans": [
         {
-          "p": "Michael Porter Jr.",
-          "t": "BKN",
-          "s": "REB",
-          "std": 6.5,
-          "alt": 6.5,
-          "o": 1.74,
+          "p": "Tyrese Maxey",
+          "t": "PHI",
+          "s": "PTS",
+          "std": 25.5,
+          "alt": 23.5,
+          "o": 1.59,
           "h": "80% (8/10)",
-          "e": 3.4,
-          "st": "3",
-          "opp": "42.63 (10/25–)",
-          "f": [
-            "LEAN",
-            "U0",
-            "OT-ADJ",
-            "MT+",
-            "C0.86",
-            "Z0.34",
-            "TMO"
-          ]
-        },
-        {
-          "p": "Jeremiah Fears",
-          "t": "NOP",
-          "s": "REB",
-          "std": 4.5,
-          "alt": 3.5,
-          "o": 1.42,
-          "h": "80% (8/10)",
-          "e": 3.2,
+          "e": 3.9,
           "st": "4",
-          "opp": "41.91 (6/25⬇)",
+          "opp": "—",
           "f": [
             "LEAN",
             "U0",
-            "OT-ADJ",
-            "MT+",
-            "C0.77",
-            "Z0.50",
+            "C0.90",
+            "Z0.44",
             "TMO-Q"
           ]
-        }
-      ],
-      "engine": "nba-session v3.18"
-    },
-    {
-      "id": "SAS@CHI",
-      "tip": "12:10",
-      "proj": null,
-      "mkt": 237.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "no B2B; CHI TOP3 Q: Caleb Wilson, Norman Powell. Coverage: evaluated 13 of 15 players (29 of 34 player-stats); skipped: Devin Vassell AST (no rung priced 1.40+ at or below std), Nic Claxton PTS (<4 current-season GP), Nic Claxton REB (<4 current-season GP), Nicolas Claxton PTS (no team), Nicolas Claxton REB (no team)",
-      "out": {
-        "SAS": [
-          "Tobias Harris (Harris (calf) is out for Wednesday's gam)",
-          "Jayden Quaintance (Quaintance has been around the team but )"
-        ],
-        "CHI": [
-          "Tobe Awaka (Awaka (back) has been ruled out for Wedn)"
-        ]
-      },
-      "q": {
-        "SAS": [
-          "Devin Vassell (Day-To-Day)"
-        ],
-        "CHI": [
-          "Caleb Wilson (Day-To-Day)",
-          "Norman Powell (Day-To-Day)",
-          "Zach Collins (Day-To-Day)"
-        ]
-      },
-      "b2b": [],
-      "cov": {
-        "players": [
-          13,
-          15
-        ],
-        "stats": [
-          29,
-          34
-        ],
-        "skipped": [
-          "Devin Vassell AST (no rung priced 1.40+ at or below std)",
-          "Nic Claxton PTS (<4 current-season GP)",
-          "Nic Claxton REB (<4 current-season GP)",
-          "Nicolas Claxton PTS (no team)",
-          "Nicolas Claxton REB (no team)"
-        ]
-      },
-      "picks": [],
-      "leans": [
-        {
-          "p": "Caleb Wilson",
-          "t": "CHI",
-          "s": "PTS",
-          "std": 17.5,
-          "alt": 15.5,
-          "o": 1.48,
-          "h": "89% (8/9)",
-          "e": 4.9,
-          "st": "4",
-          "opp": "107.46 (3/25⬇)",
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.80",
-            "Z0.56",
-            "TMO-Q",
-            "CUSH"
-          ]
         },
         {
-          "p": "Dylan Harper",
-          "t": "SAS",
-          "s": "REB",
-          "std": 4.5,
-          "alt": 4.5,
-          "o": 1.69,
-          "h": "80% (8/10)",
-          "e": 3.5,
-          "st": "3",
-          "opp": "46.15 (19/25⬆)",
-          "f": [
-            "LEAN",
-            "U0",
-            "OT-ADJ",
-            "MT-",
-            "C0.87",
-            "Z0.38"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.18"
-    },
-    {
-      "id": "DEN@MEM",
-      "tip": "12:10",
-      "proj": null,
-      "mkt": 230.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "no B2B. Coverage: evaluated 14 of 16 players (30 of 34 player-stats); skipped: DeMar DeRozan PTS (no rung priced 1.40+ at or below std), DeMar DeRozan AST (no rung priced 1.40+ at or below std), Spencer Jones PTS (<4 current-season GP), Cedric Coward AST (no rung priced 1.40+ at or below std)",
-      "out": {
-        "DEN": [
-          "Julian Strawther (Strawther (knee) was diagnosed with a le)"
-        ],
-        "MEM": [
-          "Scotty Pippen Jr. (Pippen (back) remains out for Wednesday')",
-          "Quinten Post (Post (concussion) has been ruled out for)",
-          "Richie Saunders (Saunders signed a two-way contract with )"
-        ]
-      },
-      "q": {
-        "DEN": [],
-        "MEM": [
-          "Isaiah Stewart (Day-To-Day)"
-        ]
-      },
-      "b2b": [],
-      "cov": {
-        "players": [
-          14,
-          16
-        ],
-        "stats": [
-          30,
-          34
-        ],
-        "skipped": [
-          "DeMar DeRozan PTS (no rung priced 1.40+ at or below std)",
-          "DeMar DeRozan AST (no rung priced 1.40+ at or below std)",
-          "Spencer Jones PTS (<4 current-season GP)",
-          "Cedric Coward AST (no rung priced 1.40+ at or below std)"
-        ]
-      },
-      "picks": [
-        {
-          "p": "Cedric Coward",
-          "t": "MEM",
-          "s": "REB",
-          "std": 6.5,
-          "alt": 5.5,
-          "o": 1.44,
-          "h": "100% (9/9)",
-          "e": 7.1,
-          "st": "4",
-          "opp": "45.47 (18/25⬆)",
-          "f": [
-            "OT-ADJ",
-            "C0.66",
-            "Z1.58",
-            "U1"
-          ]
-        },
-        {
-          "p": "Cam Spencer",
-          "t": "MEM",
-          "s": "PTS",
-          "std": 6.5,
-          "alt": 5.5,
-          "o": 1.53,
-          "h": "90% (9/10)",
-          "e": 5.4,
-          "st": "4",
-          "opp": "115.53 (17/25–)",
-          "f": [
-            "OT-ADJ",
-            "C0.64",
-            "Z1.05",
-            "U1"
-          ]
-        }
-      ],
-      "leans": [],
-      "engine": "nba-session v3.18"
-    },
-    {
-      "id": "LAL@MIL",
-      "tip": "12:10",
-      "proj": null,
-      "mkt": 228.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "B2B: MIL; MIL TOP3 Q: Tyler Herro. Coverage: evaluated 13 of 13 players (27 of 29 player-stats); skipped: Jake Laravia REB (no rung priced 1.40+ at or below std), Kyle Kuzma AST (no rung priced 1.40+ at or below std)",
-      "out": {
-        "LAL": [
-          "Quentin Grimes (Grimes (finger) has been ruled out for W)"
-        ],
-        "MIL": [
-          "Myles Turner (Turner has been ruled out for Wednesday')"
-        ]
-      },
-      "q": {
-        "LAL": [],
-        "MIL": [
-          "Tyler Herro (Day-To-Day)"
-        ]
-      },
-      "b2b": [
-        "MIL"
-      ],
-      "cov": {
-        "players": [
-          13,
-          13
-        ],
-        "stats": [
-          27,
-          29
-        ],
-        "skipped": [
-          "Jake Laravia REB (no rung priced 1.40+ at or below std)",
-          "Kyle Kuzma AST (no rung priced 1.40+ at or below std)"
-        ]
-      },
-      "picks": [
-        {
-          "p": "Ziaire Williams",
-          "t": "LAL",
-          "s": "PTS",
-          "std": 8.5,
-          "alt": 6.5,
-          "o": 1.44,
-          "h": "100% (9/9)",
-          "e": 7.1,
-          "st": "4",
-          "opp": "121.83 (24/25⬆)",
-          "f": [
-            "MT-",
-            "C0.58",
-            "Z1.68",
-            "U1"
-          ]
-        }
-      ],
-      "leans": [
-        {
-          "p": "Luka Doncic",
-          "t": "LAL",
-          "s": "PTS",
-          "std": 35.5,
-          "alt": 31.5,
-          "o": 1.44,
-          "h": "80% (8/10)",
-          "e": 3.5,
-          "st": "4",
-          "opp": "121.83 (24/25⬆)",
-          "f": [
-            "LEAN",
-            "U0",
-            "DNP-LAST",
-            "C0.80",
-            "Z0.81"
-          ]
-        },
-        {
-          "p": "Austin Reaves",
-          "t": "LAL",
-          "s": "PTS",
-          "std": 22.5,
-          "alt": 19.5,
-          "o": 1.5,
-          "h": "80% (8/10)",
-          "e": 3.3,
-          "st": "4",
-          "opp": "121.83 (24/25⬆)",
-          "f": [
-            "LEAN",
-            "U0",
-            "DNP-LAST",
-            "C0.76",
-            "Z0.80",
-            "CUSH"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.18"
-    },
-    {
-      "id": "ORL@UTA",
-      "tip": "13:00",
-      "proj": 214.5,
-      "mkt": 213.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "ORL 2-7 vs UTA 1-9 (both B2B, played Nov 11 UTC). ORL OUT: Suggs, Isaac, Banchero, Penda, Nelson (depletion); UTA OUT: Markkanen, Nurkic, Jackson Jr. (depletion). TOP3 ORL: Wagner, Bane, Black; TOP3 UTA: George (Q, missed last game), Markkanen (out), Jackson (out). Coverage: evaluated 11 of 12 players (25 of 28 player-stats); skipped: Darryn Peterson PTS (no current-season ESPN games), Darryn Peterson REB (no current-season ESPN games), Darryn Peterson AST (no current-season ESPN games)",
-      "out": {
-        "ORL": [
-          "Jalen Suggs (knee)",
-          "Jonathan Isaac (knee)",
-          "Paolo Banchero (ankle)",
-          "Noah Penda (hamstring)",
-          "Izaiyah Nelson (ankle)"
-        ],
-        "UTA": [
-          "Lauri Markkanen (hand)",
-          "Jusuf Nurkic (toe)",
-          "Jaren Jackson Jr. (knee)"
-        ]
-      },
-      "q": {
-        "ORL": [
-          "Jamal Cain (shoulder)",
-          "Tristan da Silva (calf)"
-        ],
-        "UTA": [
-          "Keyonte George (ankle)"
-        ]
-      },
-      "b2b": [
-        "ORL",
-        "UTA"
-      ],
-      "cov": {
-        "players": [
-          11,
-          12
-        ],
-        "stats": [
-          25,
-          28
-        ],
-        "skipped": [
-          "Darryn Peterson PTS (no current-season ESPN games)",
-          "Darryn Peterson REB (no current-season ESPN games)",
-          "Darryn Peterson AST (no current-season ESPN games)"
-        ]
-      },
-      "picks": [],
-      "leans": [
-        {
-          "p": "Wendell Carter Jr.",
-          "t": "ORL",
-          "s": "REB",
-          "std": 8.5,
-          "alt": 7.5,
-          "o": 1.44,
-          "h": "80% (8/10)",
-          "e": 3.5,
-          "st": "2.5",
-          "opp": "42.57 (9⬇)",
-          "f": [
-            "LEAN",
-            "U0",
-            "CUSH",
-            "B2B",
-            "C0.78",
-            "Z1.18",
-            "OT-ADJ"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.18"
-    },
-    {
-      "id": "GSW@HOU",
-      "tip": "13:40",
-      "proj": null,
-      "mkt": 219.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "GSW without Butler/Moody/Porzingis; HOU without Capela/Adams. Proj total unavailable (no team ratings). Coverage: evaluated 15 of 15 players (38 of 38 player-stats); skipped: none",
-      "out": {
-        "GSW": [
-          "Gary Payton II (knee)",
-          "Brandon Williams (hamstring)",
-          "Kristaps Porzingis (out)",
-          "Moses Moody (knee)",
-          "Jimmy Butler III (knee)"
-        ],
-        "HOU": [
-          "Clint Capela (ankle)",
-          "Steven Adams (out)"
-        ]
-      },
-      "q": {
-        "GSW": [],
-        "HOU": []
-      },
-      "b2b": [],
-      "cov": {
-        "players": [
-          15,
-          15
-        ],
-        "stats": [
-          38,
-          38
-        ],
-        "skipped": []
-      },
-      "picks": [
-        {
-          "p": "Yaxel Lendeborg",
-          "t": "GSW",
-          "s": "PTS",
-          "std": 17.5,
-          "alt": 15.5,
-          "o": 1.53,
-          "h": "90% (9/10)",
-          "e": 5.4,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "C0.70",
-            "Z0.76",
-            "OT-ADJ",
-            "U1"
-          ]
-        },
-        {
-          "p": "Marcus Smart",
-          "t": "HOU",
-          "s": "PTS",
-          "std": 5.5,
-          "alt": 4.5,
-          "o": 1.48,
-          "h": "86% (6/7)",
-          "e": 3.4,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "C0.70",
-            "Z0.87",
-            "OUT",
-            "U1"
-          ]
-        },
-        {
-          "p": "Tari Eason",
-          "t": "HOU",
-          "s": "PTS",
-          "std": 8.5,
-          "alt": 6.5,
-          "o": 1.5,
-          "h": "80% (8/10)",
-          "e": 3.3,
-          "st": "4",
-          "opp": "—",
-          "f": [
-            "C0.62",
-            "Z0.83",
-            "MT-",
-            "U1"
-          ]
-        }
-      ],
-      "leans": [
-        {
-          "p": "Draymond Green",
-          "t": "GSW",
+          "p": "Jamal Shead",
+          "t": "TOR",
           "s": "AST",
           "std": 5.5,
           "alt": 5.5,
-          "o": 1.69,
-          "h": "89% (8/9)",
-          "e": 5.7,
-          "st": "3",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.74",
-            "Z0.65",
-            "OT-ADJ"
-          ]
-        },
-        {
-          "p": "Stephen Curry",
-          "t": "GSW",
-          "s": "PTS",
-          "std": 26.5,
-          "alt": 23.5,
           "o": 1.48,
-          "h": "89% (8/9)",
-          "e": 4.9,
-          "st": "4",
+          "h": "80% (8/10)",
+          "e": 3.1,
+          "st": "3.5",
           "opp": "—",
           "f": [
+            "B2B ⚠️",
+            "MT+",
             "LEAN",
             "U0",
             "CUSH",
-            "C0.78",
-            "Z0.92",
-            "OT-ADJ"
-          ]
-        },
-        {
-          "p": "De'Anthony Melton",
-          "t": "GSW",
-          "s": "REB",
-          "std": 3.5,
-          "alt": 3.5,
-          "o": 2.3,
-          "h": "80% (8/10)",
-          "e": 3.9,
-          "st": "2",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.78",
-            "Z0.48",
-            "OT-ADJ"
-          ]
-        }
-      ],
-      "engine": "nba-session v3.18"
-    },
-    {
-      "id": "OKC@POR",
-      "tip": "14:10",
-      "proj": null,
-      "mkt": 224.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "ctx": "OKC without SGA-adjacent depth: J.Williams, Mitchell, Holmgren, Wallace out; POR without Morant, Sharpe, Krejci. Both teams on B2B. Proj total unavailable (no team ratings). Coverage: evaluated 15 of 15 players (40 of 40 player-stats); skipped: none",
-      "out": {
-        "OKC": [
-          "Jaylin Williams (back)",
-          "Ajay Mitchell (out)",
-          "Thomas Sorber (knee)",
-          "Cason Wallace (out)",
-          "Chet Holmgren (out)",
-          "Jalen Williams (leg)"
-        ],
-        "POR": [
-          "Chris Youngblood (out)",
-          "Vit Krejci (out)",
-          "Ja Morant (out)",
-          "Shaedon Sharpe (out)"
-        ]
-      },
-      "q": {
-        "OKC": [],
-        "POR": []
-      },
-      "b2b": [
-        "OKC",
-        "POR"
-      ],
-      "cov": {
-        "players": [
-          15,
-          15
-        ],
-        "stats": [
-          40,
-          40
-        ],
-        "skipped": []
-      },
-      "picks": [],
-      "leans": [
-        {
-          "p": "Jrue Holiday",
-          "t": "POR",
-          "s": "PTS",
-          "std": 11.5,
-          "alt": 9.5,
-          "o": 1.44,
-          "h": "80% (8/10)",
-          "e": 3.5,
-          "st": "3.5",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.74",
-            "Z0.73",
-            "B2B",
-            "TMO"
-          ]
-        },
-        {
-          "p": "Deni Avdija",
-          "t": "POR",
-          "s": "PTS",
-          "std": 22.5,
-          "alt": 19.5,
-          "o": 1.44,
-          "h": "80% (8/10)",
-          "e": 3.5,
-          "st": "3.5",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.87",
-            "Z0.79",
-            "B2B",
-            "TMO"
-          ]
-        },
-        {
-          "p": "Bennett Stirtz",
-          "t": "OKC",
-          "s": "PTS",
-          "std": 8.5,
-          "alt": 6.5,
-          "o": 1.44,
-          "h": "80% (8/10)",
-          "e": 3.5,
-          "st": "2.5",
-          "opp": "—",
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.73",
-            "Z0.49",
-            "B2B",
+            "C0.77",
+            "Z0.39",
             "TMO"
           ]
         }
@@ -1054,53 +201,13 @@
   ],
   "totals": [
     [
-      "BOS@TOR",
-      228.3,
-      215.5
-    ],
-    [
-      "CLE@NYK",
-      225.7,
+      "DET@WAS",
+      218.5,
       221.5
     ],
     [
-      "WAS@IND",
-      224.9,
-      228.5
-    ],
-    [
-      "BKN@NOP",
-      null,
-      228.5
-    ],
-    [
-      "SAS@CHI",
-      null,
-      237.5
-    ],
-    [
-      "DEN@MEM",
-      null,
-      230.5
-    ],
-    [
-      "LAL@MIL",
-      null,
-      228.5
-    ],
-    [
-      "ORL@UTA",
-      214.5,
-      213.5
-    ],
-    [
-      "GSW@HOU",
-      null,
-      219.5
-    ],
-    [
-      "OKC@POR",
-      null,
+      "TOR@PHI",
+      226.8,
       224.5
     ]
   ]
