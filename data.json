@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-12T00:10:15.686024+00:00",
+  "generated": "2026-11-12T01:09:49.578553+00:00",
   "date": "Thu 12 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -787,6 +787,269 @@
         }
       ],
       "engine": "nba-session v3.18"
+    },
+    {
+      "id": "GSW@HOU",
+      "tip": "13:40",
+      "proj": null,
+      "mkt": 219.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "GSW without Butler/Moody/Porzingis; HOU without Capela/Adams. Proj total unavailable (no team ratings). Coverage: evaluated 15 of 15 players (38 of 38 player-stats); skipped: none",
+      "out": {
+        "GSW": [
+          "Gary Payton II (knee)",
+          "Brandon Williams (hamstring)",
+          "Kristaps Porzingis (out)",
+          "Moses Moody (knee)",
+          "Jimmy Butler III (knee)"
+        ],
+        "HOU": [
+          "Clint Capela (ankle)",
+          "Steven Adams (out)"
+        ]
+      },
+      "q": {
+        "GSW": [],
+        "HOU": []
+      },
+      "b2b": [],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "stats": [
+          38,
+          38
+        ],
+        "skipped": []
+      },
+      "picks": [
+        {
+          "p": "Yaxel Lendeborg",
+          "t": "GSW",
+          "s": "PTS",
+          "std": 17.5,
+          "alt": 15.5,
+          "o": 1.53,
+          "h": "90% (9/10)",
+          "e": 5.4,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "C0.70",
+            "Z0.76",
+            "OT-ADJ",
+            "U1"
+          ]
+        },
+        {
+          "p": "Marcus Smart",
+          "t": "HOU",
+          "s": "PTS",
+          "std": 5.5,
+          "alt": 4.5,
+          "o": 1.48,
+          "h": "86% (6/7)",
+          "e": 3.4,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "C0.70",
+            "Z0.87",
+            "OUT",
+            "U1"
+          ]
+        },
+        {
+          "p": "Tari Eason",
+          "t": "HOU",
+          "s": "PTS",
+          "std": 8.5,
+          "alt": 6.5,
+          "o": 1.5,
+          "h": "80% (8/10)",
+          "e": 3.3,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "C0.62",
+            "Z0.83",
+            "MT-",
+            "U1"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Draymond Green",
+          "t": "GSW",
+          "s": "AST",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.69,
+          "h": "89% (8/9)",
+          "e": 5.7,
+          "st": "3",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.74",
+            "Z0.65",
+            "OT-ADJ"
+          ]
+        },
+        {
+          "p": "Stephen Curry",
+          "t": "GSW",
+          "s": "PTS",
+          "std": 26.5,
+          "alt": 23.5,
+          "o": 1.48,
+          "h": "89% (8/9)",
+          "e": 4.9,
+          "st": "4",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "C0.78",
+            "Z0.92",
+            "OT-ADJ"
+          ]
+        },
+        {
+          "p": "De'Anthony Melton",
+          "t": "GSW",
+          "s": "REB",
+          "std": 3.5,
+          "alt": 3.5,
+          "o": 2.3,
+          "h": "80% (8/10)",
+          "e": 3.9,
+          "st": "2",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.78",
+            "Z0.48",
+            "OT-ADJ"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.18"
+    },
+    {
+      "id": "OKC@POR",
+      "tip": "14:10",
+      "proj": null,
+      "mkt": 224.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "OKC without SGA-adjacent depth: J.Williams, Mitchell, Holmgren, Wallace out; POR without Morant, Sharpe, Krejci. Both teams on B2B. Proj total unavailable (no team ratings). Coverage: evaluated 15 of 15 players (40 of 40 player-stats); skipped: none",
+      "out": {
+        "OKC": [
+          "Jaylin Williams (back)",
+          "Ajay Mitchell (out)",
+          "Thomas Sorber (knee)",
+          "Cason Wallace (out)",
+          "Chet Holmgren (out)",
+          "Jalen Williams (leg)"
+        ],
+        "POR": [
+          "Chris Youngblood (out)",
+          "Vit Krejci (out)",
+          "Ja Morant (out)",
+          "Shaedon Sharpe (out)"
+        ]
+      },
+      "q": {
+        "OKC": [],
+        "POR": []
+      },
+      "b2b": [
+        "OKC",
+        "POR"
+      ],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "stats": [
+          40,
+          40
+        ],
+        "skipped": []
+      },
+      "picks": [],
+      "leans": [
+        {
+          "p": "Jrue Holiday",
+          "t": "POR",
+          "s": "PTS",
+          "std": 11.5,
+          "alt": 9.5,
+          "o": 1.44,
+          "h": "80% (8/10)",
+          "e": 3.5,
+          "st": "3.5",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.74",
+            "Z0.73",
+            "B2B",
+            "TMO"
+          ]
+        },
+        {
+          "p": "Deni Avdija",
+          "t": "POR",
+          "s": "PTS",
+          "std": 22.5,
+          "alt": 19.5,
+          "o": 1.44,
+          "h": "80% (8/10)",
+          "e": 3.5,
+          "st": "3.5",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.87",
+            "Z0.79",
+            "B2B",
+            "TMO"
+          ]
+        },
+        {
+          "p": "Bennett Stirtz",
+          "t": "OKC",
+          "s": "PTS",
+          "std": 8.5,
+          "alt": 6.5,
+          "o": 1.44,
+          "h": "80% (8/10)",
+          "e": 3.5,
+          "st": "2.5",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.73",
+            "Z0.49",
+            "B2B",
+            "TMO"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.18"
     }
   ],
   "totals": [
@@ -829,6 +1092,16 @@
       "ORL@UTA",
       214.5,
       213.5
+    ],
+    [
+      "GSW@HOU",
+      null,
+      219.5
+    ],
+    [
+      "OKC@POR",
+      null,
+      224.5
     ]
   ]
 }
