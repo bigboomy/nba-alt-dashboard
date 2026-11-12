@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-12T22:10:31.342880+00:00",
+  "generated": "2026-11-12T23:10:44.939983+00:00",
   "date": "Fri 13 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -197,6 +197,133 @@
         }
       ],
       "engine": "nba-session v3.18"
+    },
+    {
+      "id": "DAL@MIN",
+      "tip": "12:10",
+      "proj": 223.5,
+      "mkt": 225.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "ctx": "DAL 6-2/MIN 8-3 form; Out: DAL Lively, Biberovic, de Larrea; MIN Edwards (top-3 scorer), DiVincenzo; no B2B. Proj src: season PPG proxy. Coverage: evaluated 15 of 15 players (33 of 40 player-stats); skipped: Shannon Jr. PTS (no ESPN match), Rudy Gobert AST (no Over rungs), Naji Marshall AST (no rung priced 1.40+ at or below the standard line), Jaden McDaniels AST (no rung priced 1.40+ at or below the standard line), Jonathan Kuminga AST (no rung priced 1.40+ at or below the standard line), PJ Washington AST (no Over rungs), Caleb Martin AST (no Over rungs)",
+      "out": {
+        "MIN": [
+          "Anthony Edwards (knee)",
+          "Donte DiVincenzo (Achilles)"
+        ],
+        "DAL": [
+          "Dereck Lively II (foot)",
+          "Tarik Biberovic (heel)",
+          "Sergio de Larrea (knee)"
+        ]
+      },
+      "q": {
+        "MIN": [],
+        "DAL": [
+          "Morez Johnson Jr. (shin, probable)"
+        ]
+      },
+      "b2b": [],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "stats": [
+          33,
+          40
+        ],
+        "skipped": [
+          "Shannon Jr. PTS (no ESPN match)",
+          "Rudy Gobert AST (no Over rungs)",
+          "Naji Marshall AST (no rung priced 1.40+ at or below the standard line)",
+          "Jaden McDaniels AST (no rung priced 1.40+ at or below the standard line)",
+          "Jonathan Kuminga AST (no rung priced 1.40+ at or below the standard line)",
+          "PJ Washington AST (no Over rungs)",
+          "Caleb Martin AST (no Over rungs)"
+        ]
+      },
+      "picks": [
+        {
+          "p": "Santi Aldama",
+          "t": "DAL",
+          "s": "PTS",
+          "std": 7.5,
+          "alt": 5.5,
+          "o": 1.5,
+          "h": "100% (3/3)",
+          "e": 3.0,
+          "f": [
+            "[n=3]",
+            "C0.55",
+            "Z2.25",
+            "U0.5"
+          ],
+          "opp": "106.1 (1⬇)",
+          "st": "3"
+        }
+      ],
+      "leans": [
+        {
+          "p": "P.J. Washington Jr.",
+          "t": "DAL",
+          "s": "PTS",
+          "std": 12.5,
+          "alt": 11.5,
+          "o": 1.63,
+          "h": "80% (8/10)",
+          "e": 3.7,
+          "f": [
+            "C0.76",
+            "Z0.50",
+            "LEAN",
+            "U0"
+          ],
+          "opp": "106.1 (1⬇)",
+          "st": "4"
+        },
+        {
+          "p": "Cooper Flagg",
+          "t": "DAL",
+          "s": "AST",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.67,
+          "h": "80% (8/10)",
+          "e": 3.6,
+          "f": [
+            "C0.80",
+            "Z0.49",
+            "MT+",
+            "LEAN",
+            "U0"
+          ],
+          "opp": "24.04 (4⬇)",
+          "st": "3"
+        },
+        {
+          "p": "Trey Lyles",
+          "t": "MIN",
+          "s": "PTS",
+          "std": 5.5,
+          "alt": 4.5,
+          "o": 1.65,
+          "h": "80% (8/10)",
+          "e": 3.6,
+          "f": [
+            "C0.65",
+            "Z0.77",
+            "OT-ADJ",
+            "MT+",
+            "TMO",
+            "LEAN",
+            "U0"
+          ],
+          "opp": "111.17 (9⬇)",
+          "st": "3"
+        }
+      ],
+      "engine": "nba-session v3.18"
     }
   ],
   "totals": [
@@ -209,6 +336,11 @@
       "TOR@PHI",
       226.8,
       224.5
+    ],
+    [
+      "DAL@MIN",
+      223.5,
+      225.5
     ]
   ]
 }
