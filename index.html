@@ -11,8 +11,8 @@
 <meta name="apple-mobile-web-app-title" content="NBA Alts">
 <meta name="theme-color" content="#0e1116">
 <style>
-:root{--bg:#f6f7f9;--card:#fff;--text:#14171c;--muted:#5f6b7a;--line:#e3e7ec;--accent:#1d4ed8;--good:#0f7b3f;--warn:#b45309;--chip:#eef2f7}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1116;--card:#171b22;--text:#e8ebf0;--muted:#97a3b3;--line:#262c36;--accent:#6ea0ff;--good:#4ade80;--warn:#fbbf24;--chip:#202632}}
+:root{--bg:#f6f7f9;--card:#fff;--text:#14171c;--muted:#5f6b7a;--line:#e3e7ec;--accent:#1d4ed8;--good:#0f7b3f;--warn:#b45309;--bad:#b91c1c;--chip:#eef2f7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1116;--card:#171b22;--text:#e8ebf0;--muted:#97a3b3;--line:#262c36;--accent:#6ea0ff;--good:#4ade80;--warn:#fbbf24;--bad:#f87171;--chip:#202632}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 .wrap{max-width:720px;margin:0 auto;padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -91,6 +91,8 @@ details.lf>summary span{color:var(--muted)}details.lf>summary b{color:var(--text
 .stale .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px;background:var(--warn)}
 .stale.live .dot{background:#3fb950;animation:pulse 2s ease-in-out infinite}
 .stale.done .dot{background:var(--muted,#888)}
+.stale.bad{border-color:var(--bad);color:var(--bad)}
+.stale.bad .dot{background:var(--bad)}
 @keyframes pulse{50%{opacity:.35}}
 @media (prefers-reduced-motion:reduce){.stale.live .dot{animation:none}}
 .err{border-color:var(--warn);color:var(--warn)}
@@ -208,6 +210,7 @@ details.fold.inner{background:transparent;margin:10px 0}
 <body><div class="wrap">
   <h1>NBA Alt-Over Dashboard </h1>
   <p class="sub" id="sub">Loading slate…</p>
+  <div class="stale" id="health" role="status" hidden></div>
   <section id="slate" aria-label="Today's slate" hidden>
     <h2 class="sec">Today's slate</h2>
     <div class="stale" id="stale" role="status" hidden></div>
@@ -231,7 +234,7 @@ details.fold.inner{background:transparent;margin:10px 0}
 
   <details class="legend" style="margin-top:16px">
     <summary>How to read this</summary>
-    <p><b>Settled</b> = W or L; void and push are excluded. <b>Units</b> are flat 1u (win = odds − 1, loss = −1). <b>Break-even</b> = 100 ÷ mean odds. <b>Gap</b> = hit% minus break-even, in percentage points. <b>CLV</b> is measured only on picks with a captured closing price. Windows are calendar days ending on the latest settled day, clipped at the season start. Band colours: blue &lt; 1.55, orange 1.55–1.79, magenta 1.80+.</p>
+    <p><b>Settled</b> = W or L; void and push are excluded. <b>Units</b> are flat 1u (win = odds − 1, loss = −1). <b>Break-even</b> = 100 ÷ mean odds. <b>Gap</b> = hit% minus break-even, in percentage points. <b>CLV</b> is measured only on picks with a captured closing price; picks with no close, or no newer price than the board they were picked from (same board), count as not covered. Windows are calendar days ending on the latest settled day, clipped at the season start. Band colours: blue &lt; 1.55, orange 1.55–1.79, magenta 1.80+.</p>
   </details>
   <p class="foot"><b>Not betting advice.</b> Hit rate is not profit; prices move and players sit. Past results do not predict future ones. Only bet what you can afford to lose. If gambling is a problem for you or someone you know, contact your local support service (Australia: 1800 858 858, gamblinghelponline.org.au).</p>
   <p class="foot" id="src" style="margin-top:0"></p>
@@ -300,6 +303,7 @@ function summarize(rows){
     if(r.result==='W'){s.w++;s.units+=(r.odds||0)-1}else{s.l++;s.units-=1}
     s.oddsSum+=r.odds||0;
     if(r.hit!==null)s.predSum+=r.hit;
+    // only close_status 'ok' carries CLV; 'no_close' and 'same_board' (P4: no newer price at capture) are both uncovered
     if(r.closeStatus==='ok'&&r.clv!==null){s.clvSum+=r.clv;s.clvN++}
   });
   s.hit=s.n?100*s.w/s.n:null;
@@ -603,8 +607,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   function normTotal(t){
     if(!Array.isArray(t)||t.length<2||!str(t[0],'')) return null;
-    var proj=num(t[1]);if(proj===null) return null;
-    return {id:String(t[0]),proj:proj,mkt:num(t[2])};
+    /* proj may be null (P4 port, ENGINE_DECISIONS D5): keep the row so the market total still shows. */
+    var proj=num(t[1]),mkt=num(t[2]);if(proj===null&&mkt===null) return null;
+    return {id:String(t[0]),proj:proj,mkt:mkt};
   }
   function tabs(){
     var ids=['ALL'].concat(G.map(function(g){return g.id}));
@@ -642,9 +647,11 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         (g.b2b?'<tr><th scope="row">B2B</th><td>'+(g.b2b.indexOf(A)>=0?'Yes':'—')+'</td><td>'+(g.b2b.indexOf(H)>=0?'Yes':'—')+'</td></tr>':'');
     }
     var tot='';
+    var ou=g.mo!==null&&g.mu!==null?' (O '+g.mo.toFixed(2)+' / U '+g.mu.toFixed(2)+')':'';
     if(g.proj!==null){var gap=g.mkt!==null?g.proj-g.mkt:null;
-      tot='Proj <b>'+esc(fix(g.proj,1))+'</b> v mkt <b>'+esc(fix(g.mkt,1))+'</b>'+(g.mo!==null&&g.mu!==null?' (O '+g.mo.toFixed(2)+' / U '+g.mu.toFixed(2)+')':'')+
+      tot='Proj <b>'+esc(fix(g.proj,1))+'</b> v mkt <b>'+esc(fix(g.mkt,1))+'</b>'+ou+
         (gap!==null&&Math.abs(gap)>=0.05?' · lean '+(gap>0?'Over':'Under')+' '+Math.abs(gap).toFixed(1):'');}
+    else if(g.mkt!==null) tot='Mkt <b>'+esc(fix(g.mkt,1))+'</b>'+ou;   // proj null (D5): market only, no lean
     if(tot) rows+='<tr><th scope="row">Total</th><td colspan="2">'+tot+'</td></tr>';
     if(g.cov) rows+='<tr><th scope="row">Coverage</th><td colspan="2" class="mu">'+esc(g.cov.pl[0])+' of '+esc(g.cov.pl[1])+' players · '+esc(g.cov.st[0])+' of '+esc(g.cov.st[1])+' stats'+(g.cov.sk.length?'<br>Skipped: '+g.cov.sk.map(esc).join(', '):'')+'</td></tr>';
     if(!g.hasInfo&&g.ctx) rows+='<tr><th scope="row">Notes</th><td colspan="2" class="mu">'+esc(g.ctx)+'</td></tr>';
@@ -665,7 +672,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return '<section class="game">'+head+'<div class="gw">'+infoTable(g)+'</div><div class="gw gp">'+tbl+lf+'</div></section>';
   }
   /* Today's games (Mitch, 5 Nov): from the first slate run the slate shows today's games from schedule.json.
-     A game not yet analysed shows as "picks at ~HH:07"; once a run analyses it, its card replaces that line.
+     A game not yet analysed shows as "picks ~HH:MM" (about 90 min before tip); once a tick analyses it, its card replaces that line.
      The previous day's games are cleared at the first run; a day with no games shows "No NBA games today". */
   function todaySched(){
     if(!SCHED||!Array.isArray(SCHED.games)) return null;
@@ -681,7 +688,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(!left.length) return '';
     return '<section class="game pend"><div class="gh"><div><h2>Still to come</h2><p>'+left.length+' game'+(left.length===1?'':'s')+' not analysed yet</p></div></div>'+
       left.map(function(x){var fr=firstRun(x.min),late=x.min-30<=n.min;
-        return '<div class="prow"><b>'+esc(x.id)+'</b><span>tip '+hhmm(x.min)+'</span><span class="meta">'+(late?'tipped / inside 30 min, no run':fr===null?'outside the run window':'picks ~'+hhmm(fr))+'</span></div>'}).join('')+'</section>';
+        return '<div class="prow"><b>'+esc(x.id)+'</b><span>tip '+hhmm(x.min)+'</span><span class="meta">'+(late?'tipped / inside 30 min, not analysed':fr===null?'outside the run window':fr<=n.min?'due now, posting soon':'picks ~'+hhmm(fr))+'</span></div>'}).join('')+'</section>';
   }
   function games(){
     var html='';
@@ -694,8 +701,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   function totals(){
     var html='';
-    T.forEach(function(t){try{var g=t.mkt===null?null:t.proj-t.mkt;
-      html+='<tr><td>'+esc(t.id)+'</td><td>'+t.proj.toFixed(1)+'</td><td>'+esc(fix(t.mkt,1))+'</td><td class="'+(g===null?'':(g>=0?'pos':'neg'))+'">'+(g===null?'—':(g>=0?'+':'')+g.toFixed(1))+'</td></tr>'}catch(e){}});
+    T.forEach(function(t){try{var g=t.mkt===null||t.proj===null?null:t.proj-t.mkt;
+      html+='<tr><td>'+esc(t.id)+'</td><td>'+esc(fix(t.proj,1))+'</td><td>'+esc(fix(t.mkt,1))+'</td><td class="'+(g===null?'':(g>=0?'pos':'neg'))+'">'+(g===null?'—':(g>=0?'+':'')+g.toFixed(1))+'</td></tr>'}catch(e){}});
     $('totals').querySelector('tbody').innerHTML=html;
   }
   var LASTDATA=null;
@@ -755,8 +762,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     box.innerHTML=h+'</div>';
   }
   /* ---------- run status ----------
-     Must match the slate / resolve schedules (architecture doc §4). Melbourne time. */
-  var RUNS={first:2*60+7,last:13*60+7,every:60,ahead:150,grace:20,resolve:18*60+7};
+     P4 home server (cutover Nov 2026): a 5-min tick runs 02:00–15:00 Melbourne. Each game is analysed by the first tick
+     inside tip−90 … tip−30 min (so picks land ~90 min before tip), closes are captured 2–70 min before tip, resolve 18:07.
+     Must match nba-pipeline jobs/tick.py + config. Melbourne time, minutes after midnight. */
+  var RUNS={first:2*60,last:15*60,every:5,ahead:90,lead:30,lag:6,resolve:18*60+7};
   var REFRESH=null,REFRESH_AT=0;
   function melNow(){
     var f=new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Melbourne',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
@@ -764,31 +773,37 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return {iso:o.year+'-'+o.month+'-'+o.day,min:(+o.hour)*60+(+o.minute)};
   }
   function hm(m){m=((m%1440)+1440)%1440;var h=Math.floor(m/60),mm=m%60;return (h%12||12)+':'+('0'+mm).slice(-2)+(h<12?'am':'pm')}
-  function nextRun(min){
-    if(min<RUNS.first) return RUNS.first;
-    var k=Math.ceil((min-RUNS.first)/RUNS.every),t=RUNS.first+k*RUNS.every;
-    return t>RUNS.last?null:t;
+  /* Next game still to be picked today: {id,min} where min = its pick tick (may be <= now = due/posting), or null.
+     null too when schedule.json is missing (callers then fall back to generic text). */
+  function nextPick(n){
+    var ts=todaySched();if(!ts) return null;
+    var done={};if(D&&slateIso()===n.iso) G.forEach(function(g){done[g.id]=1});
+    var best=null;
+    ts.forEach(function(x){if(done[x.id]||x.min-RUNS.lead<=n.min) return;var p=firstRun(x.min);if(p===null) return;
+      if(!best||p<best.min) best={id:x.id,min:p}});
+    return best;
   }
   function runStatus(){
     var box=$('stale');if(!box||!D) return;
     var n=melNow(),iso=slateIso(),today=iso===n.iso,cls='info',msg='';
     var ng=G.length,np=G.reduce(function(a,g){return a+g.picks.length},0);
-    var nr=nextRun(n.min),inWindow=n.min<RUNS.last+RUNS.grace;
-    var lr=n.min>=RUNS.first?Math.min(RUNS.last,RUNS.first+Math.floor((n.min-RUNS.first)/RUNS.every)*RUNS.every):null;
-    var busy=lr!==null&&n.min-lr<RUNS.grace?'A run started at '+hm(lr)+' and may still be posting. ':'';
+    var ts=todaySched(),nx=nextPick(n);
+    // window open = before 15:00 (+lag) and, when the schedule is known, a game is still to be picked
+    var inWindow=n.min<RUNS.last+RUNS.lag&&(ts?!!nx:true);
+    var due=nx&&nx.min<=n.min;
+    var nxt=nx?(due?'<b>'+esc(nx.id)+'</b> is due now and may still be posting. ':'Next picks ~'+hm(nx.min)+' ('+esc(nx.id)+'). '):'';
     if(!today){
-      if(n.min<RUNS.first){cls='info';msg='<b>Today\'s picks start at '+hm(RUNS.first)+'.</b> Showing '+esc(D.date)+' until then.'}
-      else if(inWindow){cls='info live';msg='<b>Waiting for today\'s first picks.</b> '+busy+(nr?'Next run '+hm(nr)+'. ':'')+(busy?'':'No game has been due yet. ')+'Games are picked about 1.5–2.5 h before tip. Showing '+esc(D.date)+'.'}
+      if(n.min<RUNS.first){cls='info';msg='<b>Today\'s picks land ~90 min before each tip.</b> '+(nx?'First ~'+hm(nx.min)+' ('+esc(nx.id)+'). ':'')+'Showing '+esc(D.date)+' until then.'}
+      else if(inWindow){cls='info live';msg='<b>Waiting for today\'s first picks.</b> '+nxt+'Each game is picked about 90 min before tip. Showing '+esc(D.date)+'.'}
       else {cls='';msg='No picks were posted today: no games, or a run had a problem. Showing '+esc(D.date)+'.'}
-    } else if(!ng&&todaySched()&&!todaySched().length){
+    } else if(!ng&&ts&&!ts.length){
       cls='';msg='<b>No NBA games today.</b>';
     } else if(inWindow){
       cls='info live';
-      msg='<b>Picks still coming in.</b> '+busy+ng+' game'+(ng===1?'':'s')+' so far ('+np+' pick'+(np===1?'':'s')+'). '+
-        (nr?'Next run '+hm(nr)+': adds games tipping before ~'+hm(nr+RUNS.ahead)+', if any.':'Last run under way.')+
-        ' This page updates itself.';
-    } else if(!ng&&todaySched()&&todaySched().length){
-      cls='';msg='<b>No games were analysed today.</b> '+todaySched().length+' game'+(todaySched().length===1?' was':'s were')+' on, so a slate run may have had a problem.';
+      msg='<b>Picks still coming in.</b> '+ng+' game'+(ng===1?'':'s')+' so far ('+np+' pick'+(np===1?'':'s')+'). '+
+        (nx?nxt:'Each game is picked about 90 min before tip. ')+'This page updates itself.';
+    } else if(!ng&&ts&&ts.length){
+      cls='';msg='<b>No games were analysed today.</b> '+ts.length+' game'+(ts.length===1?' was':'s were')+' on, so a slate run may have had a problem.';
     } else {
       var settled=ROWS&&ROWS.some(function(r){return r.date===iso&&(r.result==='W'||r.result==='L')});
       cls='info done';
@@ -796,35 +811,78 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         (settled?'Results are in (tiles above).':'Results settle around '+hm(RUNS.resolve+3)+'.');
     }
     box.className='stale '+cls;box.innerHTML='<span class="dot" aria-hidden="true"></span>'+msg;box.hidden=false;
-    schedule(n,nr,lr,today,inWindow);
+    schedule(n,nx,today,inWindow);
     nextLine();
   }
-  function schedule(n,nr,lr,today,inWindow){
+  function schedule(n,nx,today,inWindow){
     if(REFRESH&&REFRESH_AT>Date.now()) return;      // a reload is already booked; don't push it back
     var target=null;
-    if(lr!==null&&n.min<lr+8) target=lr+8;          // run time + push + Pages/CSV cache
-    else if(lr!==null&&n.min<lr+18) target=lr+18;   // second look for a slow run
-    else if(inWindow&&nr!==null) target=nr+8;
-    else if(inWindow) target=RUNS.last+RUNS.grace;
+    if(nx&&nx.min<=n.min) target=n.min+3;           // due now: tick + push + Pages cache, look again shortly
+    else if(nx) target=nx.min+RUNS.lag;             // just after the next game's pick tick has posted
+    else if(inWindow) target=n.min+15;              // no schedule.json: plain polling
     else if(today&&n.min<RUNS.resolve+30) target=RUNS.resolve+12;
     var wait=target===null?null:(target-n.min)*60000;
     if(wait===null||wait<60000) wait=wait===null?null:60000;
     if(wait!==null&&wait<=3*3600000){REFRESH_AT=Date.now()+wait;REFRESH=setTimeout(reloadData,wait)}
   }
+  /* ---------- health.json staleness (P4 server) ----------
+     health.json = {"generated","engine","jobs":{"tick"|"resolve":{"status":"ok"|"fail","detail","last_run"}}} (nba-pipeline
+     nba/io/publish.py write_health). It is re-written only when a job's status/detail changes or on an hourly heartbeat
+     (HEALTH_HEARTBEAT = 60 min), so a healthy tick's last_run can be up to ~60 min old. Thresholds therefore add that
+     heartbeat: amber > hb+10 min (2 missed 5-min ticks), red > hb+20. Set HEALTH.hb to 0 if the server writes every tick.
+     Silent when health.json is absent (pre-cutover) or fresh. */
+  var HEALTH={hb:30,amber:10,red:20,resolveBy:18*60+30},HJ=null;
+  function healthCheck(nowMs){
+    // returns {cls:'warn'|'bad', msg} or null. nowMs is injectable for tests.
+    var j=HJ;if(!j||typeof j!=='object'||!j.jobs||typeof j.jobs!=='object') return null;
+    nowMs=nowMs||Date.now();
+    var n=melOf(new Date(nowMs)),out=null;
+    function ts(job){var x=j.jobs[job];if(!x||!x.last_run) return null;var t=Date.parse(x.last_run);return isNaN(t)?null:t}
+    var tick=j.jobs.tick,tt=ts('tick');
+    if(tick&&tt!==null&&n.min>=RUNS.first){
+      var startMs=nowMs-(n.min-RUNS.first)*60000;               // today's 02:00 Melbourne
+      var ref=nowMs-Math.max(0,n.min-RUNS.last)*60000;          // now, or 15:00 once the window has closed
+      // the day's first tick always writes (heartbeat expired overnight); until then measure from 02:00 with no heartbeat allowance
+      var since=tt>=startMs,age=(ref-(since?tt:startMs))/60000,lim=since?HEALTH.hb:0;
+      var last=melOf(new Date(tt)),lt=(last.iso===n.iso?'':'yesterday ')+hm(last.min);
+      if(age>lim+HEALTH.red) out={cls:'bad',msg:'<b>Home server: no pick check since '+lt+'.</b> The 5-min schedule looks stopped, so new picks may be missing.'};
+      else if(age>lim+HEALTH.amber) out={cls:'warn',msg:'<b>Home server is running late.</b> Last pick check '+lt+'.'};
+    }
+    if(!out&&tick&&tick.status==='fail'&&n.min>=RUNS.first&&n.min<RUNS.last+RUNS.lag)
+      out={cls:'warn',msg:'<b>Home server: the last pick check had an error.</b> It retries every 5 min.'};
+    var res=j.jobs.resolve,rt=ts('resolve');
+    if(!out&&res&&rt!==null){
+      // last expected resolve: today's 18:07 once it's past 18:30, otherwise yesterday's
+      var expMs=nowMs-(n.min-RUNS.resolve)*60000-(n.min<HEALTH.resolveBy?864e5:0);
+      if(rt<expMs-5*60000) out={cls:'warn',msg:'<b>Results haven\'t settled.</b> The '+hm(RUNS.resolve)+' resolve on the home server didn\'t report.'};
+      else if(res.status==='fail'&&nowMs-rt<20*3600000) out={cls:'warn',msg:'<b>The last resolve had an error.</b> Results may be incomplete.'};
+    }
+    return out;
+  }
+  function healthBanner(){
+    var box=$('health');if(!box) return;
+    var h=null;try{h=healthCheck()}catch(e){h=null}
+    if(!h){box.hidden=true;box.innerHTML='';return}
+    box.className='stale'+(h.cls==='bad'?' bad':'');box.innerHTML='<span class="dot" aria-hidden="true"></span>'+h.msg;box.hidden=false;
+  }
+  function loadHealth(){
+    fetch('health.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
+      .then(function(j){HJ=j;healthBanner()}).catch(function(){HJ=null;healthBanner()});
+  }
   function reloadData(){
     REFRESH=null;REFRESH_AT=0;
-    loadSched();
+    loadSched();loadHealth();
     fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(init).catch(function(){runStatus()});
     fetch(CSV_URL,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){
       var rows=CORE.normRows(CORE.parseCSV(t));if(rows.length){ROWS=rows;FETCHED=new Date();foot();renderRecord();if(D){games();runStatus()}}
     }).catch(function(){});
   }
-  setInterval(function(){if(D)runStatus()},60000);
+  setInterval(function(){if(D)runStatus();healthBanner()},60000);
   document.addEventListener('visibilitychange',function(){if(!document.hidden&&D){var n=melNow();if(n.min>=RUNS.first)reloadData()}});
   /* ---------- next slate line ----------
-     Rule owned by the Analyst (matches the slate task, 2 Nov b): every game is analysed;
-     first slate run = earliest HH:07 (HH 02–13) with tip−150 ≤ run ≤ tip−30. schedule.json is written by the 17:07 resolve. */
-  var SCHED=null,FIRST_H=2,LAST_H=13;
+     P4 server (ENGINE_DECISIONS D9): every game is analysed by the first 5-min tick (02:00–15:00) with tip−90 ≤ tick ≤ tip−30,
+     i.e. picks land ~90 min before each tip. schedule.json is written by the 18:07 resolve. */
+  var SCHED=null,FIRST_H=2,LAST_H=15;
   var TEAMC={'Atlanta Hawks':'ATL','Boston Celtics':'BOS','Brooklyn Nets':'BKN','Charlotte Hornets':'CHA','Chicago Bulls':'CHI','Cleveland Cavaliers':'CLE','Dallas Mavericks':'DAL','Denver Nuggets':'DEN','Detroit Pistons':'DET','Golden State Warriors':'GSW','Houston Rockets':'HOU','Indiana Pacers':'IND','Los Angeles Clippers':'LAC','Los Angeles Lakers':'LAL','Memphis Grizzlies':'MEM','Miami Heat':'MIA','Milwaukee Bucks':'MIL','Minnesota Timberwolves':'MIN','New Orleans Pelicans':'NOP','New York Knicks':'NYK','Oklahoma City Thunder':'OKC','Orlando Magic':'ORL','Philadelphia 76ers':'PHI','Phoenix Suns':'PHX','Portland Trail Blazers':'POR','Sacramento Kings':'SAC','San Antonio Spurs':'SAS','Toronto Raptors':'TOR','Utah Jazz':'UTA','Washington Wizards':'WAS'};
   function melOf(d){
     var f=new Intl.DateTimeFormat('en-CA',{timeZone:'Australia/Melbourne',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hourCycle:'h23',weekday:'short'});
@@ -832,7 +890,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return {iso:o.year+'-'+o.month+'-'+o.day,min:(+o.hour)*60+(+o.minute),wd:o.weekday};
   }
   function hhmm(m){return ('0'+Math.floor(m/60)).slice(-2)+':'+('0'+m%60).slice(-2)}
-  function firstRun(tip){for(var h=FIRST_H;h<=LAST_H;h++){var t=h*60+7;if(t>=tip-150&&t<=tip-30)return t}return null}
+  function firstRun(tip){   // pick tick for a tip (Melbourne minutes), or null when no tick falls inside tip−90 … tip−30
+    var t=Math.max(FIRST_H*60,Math.ceil((tip-RUNS.ahead)/RUNS.every)*RUNS.every);
+    return t<=tip-RUNS.lead&&t<=LAST_H*60?t:null;
+  }
   function addDays(iso,k){var d=new Date(iso+'T12:00:00Z');d.setUTCDate(d.getUTCDate()+k);return d.toISOString().slice(0,10)}
   function nextLine(){
     var el=$('nextl');if(!el) return;
@@ -847,9 +908,11 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     });
     function describe(iso,list,label){
       var ok=list.slice().sort(function(a,b){return a.min-b.min});
-      var f=ok[0],fr=firstRun(f.min);
+      var f=ok[0],fr=null;
+      ok.forEach(function(g){var p=firstRun(g.min);if(p!==null&&(fr===null||p<fr))fr=p});
+      var isToday=iso===now.iso;
       return '<b>Next — '+label+':</b> first tip '+hhmm(f.min)+' '+esc(f.id)+' ('+ok.length+' game'+(ok.length===1?'':'s')+', last tip '+hhmm(ok[ok.length-1].min)+')'+
-        ' · first slate run '+(fr===null?'—':hhmm(fr));
+        ' · picks land ~90 min before each tip'+(fr===null?'':isToday&&fr<=now.min?', next due now':', '+(isToday?'next':'first')+' ~'+hhmm(fr));
     }
     var html='';
     var todayLeft=(byDay[now.iso]||[]).filter(function(g){return !done[g.id]&&g.min-30>now.min});
@@ -874,7 +937,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       var d=String(o.date||'').slice(0,10);if(!/^\d{4}-\d{2}-\d{2}$/.test(d))return null;
       var proj=numOrNull(o.proj),mkt=numOrNull(o.mkt),act=numOrNull(o.actual),st=String(o.status||'').trim();
       var r={date:d,game:o.game||'',tip:o.tip||'',proj:proj,mkt:mkt,actual:act,src:String(o.source||'').trim()||'slate',status:st};
-      if(proj===null||mkt===null){r.nobet=true;return r}
+      if(proj===null||mkt===null){r.nobet=true;return r}   // proj null (P4, D5) is always nobet
       r.gap=proj-mkt;
       if(Math.abs(r.gap)<1){r.nobet=true;return r}
       r.side=r.gap>0?'O':'U';
@@ -1095,7 +1158,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   fetch('data.json?v='+Date.now(),{cache:'no-store'})
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
     .then(init).catch(slateFail);
-  loadSched();
+  loadSched();loadHealth();
   renderTotals();loadTotals();
   renderLeans();loadLeans();
   alertUI();clearBadge();loadChoices();
