@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-12T23:10:44.939983+00:00",
+  "generated": "2026-11-13T00:10:25.846729+00:00",
   "date": "Fri 13 Nov 2026",
   "tz": "Melbourne time (AEDT)",
   "book": "Pointsbet AU, decimal odds",
@@ -324,6 +324,85 @@
         }
       ],
       "engine": "nba-session v3.18"
+    },
+    {
+      "id": "CHA@PHX",
+      "tip": "13:10",
+      "proj": 222.7,
+      "mkt": 213.5,
+      "mkt_o": 1.8,
+      "mkt_u": 1.87,
+      "ctx": "CHA short-handed: Brandon Miller (top-3 scorer), Kon Knueppel, Dennis Schroder out; PHX without Mark Williams. No B2B. Injuries from ESPN feed. Coverage: evaluated 16 of 16 players (37 of 40 player-stats); skipped: Oso Ighodaro AST (no rung priced 1.40+ at or below the standard line), Miles Bridges AST (no rung priced 1.40+ at or below the standard line), Jalen Green AST (no rung priced 1.40+ at or below the standard line)",
+      "out": {
+        "CHA": [
+          "Brandon Miller (groin)",
+          "Kon Knueppel (hamstring)",
+          "Dennis Schroder (hamstring)"
+        ],
+        "PHX": [
+          "Mark Williams (shoulder surgery)"
+        ]
+      },
+      "q": {
+        "CHA": [],
+        "PHX": []
+      },
+      "b2b": [],
+      "cov": {
+        "players": [
+          16,
+          16
+        ],
+        "stats": [
+          37,
+          40
+        ],
+        "skipped": [
+          "Oso Ighodaro AST (no rung priced 1.40+ at or below the standard line)",
+          "Miles Bridges AST (no rung priced 1.40+ at or below the standard line)",
+          "Jalen Green AST (no rung priced 1.40+ at or below the standard line)"
+        ]
+      },
+      "picks": [
+        {
+          "p": "Khaman Maluach",
+          "t": "PHX",
+          "s": "PTS",
+          "std": 6.5,
+          "alt": 4.5,
+          "o": 1.42,
+          "h": "90% (9/10)",
+          "e": 4.9,
+          "st": "4",
+          "opp": "115.51 (17–)",
+          "f": [
+            "C0.56",
+            "Z1.17",
+            "U1"
+          ]
+        }
+      ],
+      "leans": [
+        {
+          "p": "Khaman Maluach",
+          "t": "PHX",
+          "s": "REB",
+          "std": 5.5,
+          "alt": 5.5,
+          "o": 1.87,
+          "h": "80% (8/10)",
+          "e": 3.3,
+          "st": "3",
+          "opp": "—",
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.86",
+            "Z0.41"
+          ]
+        }
+      ],
+      "engine": "nba-session v3.18"
     }
   ],
   "totals": [
@@ -341,6 +420,11 @@
       "DAL@MIN",
       223.5,
       225.5
+    ],
+    [
+      "CHA@PHX",
+      222.7,
+      213.5
     ]
   ]
 }
