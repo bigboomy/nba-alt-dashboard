@@ -227,9 +227,287 @@
         "NYK": []
       },
       "tip": "11:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          14,
+          14
+        ],
+        "skipped": [],
+        "stats": [
+          32,
+          32
+        ]
+      },
+      "ctx": "Out TOP3: Caleb Wilson (CHI); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 14 of 14 players (32 of 32 player-stats); skipped: none",
+      "engine": "nba-session v3.18-p4",
+      "id": "ATL@CHI",
+      "leans": [
+        {
+          "alt": 3.5,
+          "e": 3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "MT+",
+            "C0.78",
+            "Z0.50"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.48,
+          "opp": "—",
+          "p": "Kingston Flemings",
+          "s": "AST",
+          "st": "4",
+          "std": 4.5,
+          "t": "ATL"
+        }
+      ],
+      "mkt": 245.5,
+      "mkt_o": 1.8,
+      "mkt_u": 1.87,
+      "out": {
+        "ATL": [
+          "Asa Newell (Newell (toe) has been ruled out for Friday's game against Chicago.)",
+          "Henri Veesaar (Veesaar was diagnosed with a torn right ACL and is expected to miss the 2026-27 season, the Hawks announced Monday.)",
+          "Keshon Gilbert (Gilbert (knee) has been ruled out for Friday's game against the Bulls.)",
+          "Mouhamed Gueye (Gueye (foot) is ready to begin on-court activities and will be re-evaluated in four weeks, Brad Rowland of the Locked On Podcast Network reports.)"
+        ],
+        "CHI": [
+          "Caleb Wilson (Wilson (hand) is expected to miss four to six weeks, Shams Charania of ESPN reports.)",
+          "Tobe Awaka (Awaka (back) has been ruled out for Friday's game against the Hawks.)"
+        ]
+      },
+      "picks": [
+        {
+          "alt": 9.5,
+          "e": 4.9,
+          "f": [
+            "C0.66",
+            "Z1.08",
+            "U1"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.42,
+          "opp": "—",
+          "p": "Aaron Wiggins",
+          "s": "PTS",
+          "st": "4",
+          "std": 12.5,
+          "t": "ATL"
+        }
+      ],
+      "proj": null,
+      "q": {
+        "ATL": [
+          "Kingston Flemings (Flemings (back) is questionable for Friday's game against the Bulls.)"
+        ],
+        "CHI": [
+          "Dailyn Swain (Swain (back) is listed as questionable for Friday's game against Atlanta.)",
+          "Norman Powell (Powell (shoulder) is questionable for Friday's game against the Hawks.)"
+        ]
+      },
+      "tip": "12:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          14,
+          15
+        ],
+        "skipped": [
+          "Pelle Larsson PTS (ruled OUT)",
+          "Pelle Larsson REB (ruled OUT)",
+          "Pelle Larsson AST (ruled OUT)"
+        ],
+        "stats": [
+          39,
+          42
+        ]
+      },
+      "ctx": "Out TOP3: Evan Mobley (CLE); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 14 of 15 players (39 of 42 player-stats); skipped: Pelle Larsson PTS (ruled OUT), Pelle Larsson REB (ruled OUT), Pelle Larsson AST (ruled OUT)",
+      "engine": "nba-session v3.18-p4",
+      "id": "CLE@MIA",
+      "leans": [
+        {
+          "alt": 7.5,
+          "e": 4.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[Std?]",
+            "OT-ADJ",
+            "C0.89",
+            "Z0.84"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.4,
+          "opp": "—",
+          "p": "Bam Adebayo",
+          "s": "REB",
+          "st": "4",
+          "std": 9.5,
+          "t": "MIA"
+        },
+        {
+          "alt": 13.5,
+          "e": 3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "C0.80",
+            "Z0.76"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.59,
+          "opp": "—",
+          "p": "Davion Mitchell",
+          "s": "PTS",
+          "st": "4",
+          "std": 14.5,
+          "t": "MIA"
+        },
+        {
+          "alt": 1.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.54",
+            "Z0.83",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "—",
+          "p": "Peyton Watson",
+          "s": "AST",
+          "st": "4",
+          "std": 1.5,
+          "t": "CLE"
+        }
+      ],
+      "mkt": 236.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "CLE": [
+          "Evan Mobley (Mobley (toe) is out for Friday's game against the Heat.)",
+          "Nae'Qwan Tomlin (Tomlin is set to miss several weeks with a lower back stress reaction, Chris Fedor of The Cleveland Plain Dealer reports.)",
+          "Sam Merrill (Merrill (elbow) is listed as out for Wednesday's game against the Knicks.)"
+        ],
+        "MIA": [
+          "Pelle Larsson (Larsson (illness) is out for Friday's game against Cleveland.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "CLE": [],
+        "MIA": [
+          "Klay Thompson (Thompson (ankle) has been downgraded to questionable for Friday's game against Cleveland.)"
+        ]
+      },
+      "tip": "12:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          17,
+          17
+        ],
+        "skipped": [],
+        "stats": [
+          41,
+          41
+        ]
+      },
+      "ctx": "Out TOP3: Trey Murphy III (NOP); Returning: none; Depleted: NOP (3 rotation out); missed last game: none. Coverage: evaluated 17 of 17 players (41 of 41 player-stats); skipped: none",
+      "engine": "nba-session v3.18-p4",
+      "id": "MEM@NOP",
+      "leans": [
+        {
+          "alt": 1.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.57",
+            "Z1.07",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "—",
+          "p": "Saddiq Bey",
+          "s": "AST",
+          "st": "3",
+          "std": 1.5,
+          "t": "NOP"
+        }
+      ],
+      "mkt": 235.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "MEM": [
+          "Quinten Post (Post (concussion) has been ruled out for Friday's game against New Orleans.)",
+          "Richie Saunders (Saunders signed a two-way contract with the Grizzlies on Saturday, Shams Charania of ESPN reports.)",
+          "Scotty Pippen Jr. (Pippen (back) remains out for Wednesday's game against Denver, Michael Wallace of the Grizzlies' official site reports.)",
+          "Zach Edey (Edey won't play in Friday's game against the Pelicans due to left ankle injury management.)"
+        ],
+        "NOP": [
+          "Bryce McGowens (McGowens (elbow) is listed as out for Friday's game against the Grizzlies.)",
+          "Dejounte Murray (Murray (ankle) is out for Friday's game against Memphis.)",
+          "Trendon Watford (Watford (ankle) is listed as out for Friday's game against the Grizzlies.)",
+          "Trey Murphy III (Murphy (knee) is out for Friday's game against Memphis.)",
+          "Yves Missi (Missi (knee) is out for Friday's game against the Grizzlies.)"
+        ]
+      },
+      "picks": [
+        {
+          "alt": 6.5,
+          "e": 8.3,
+          "f": [
+            "OT-ADJ",
+            "C0.66",
+            "Z1.15",
+            "U1"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.5,
+          "opp": "—",
+          "p": "Cam Spencer",
+          "s": "PTS",
+          "st": "4",
+          "std": 8.5,
+          "t": "MEM"
+        }
+      ],
+      "proj": null,
+      "q": {
+        "MEM": [],
+        "NOP": [
+          "Bennedict Mathurin (Mathurin (thumb) is listed as questionable for Friday's game against Memphis.)"
+        ]
+      },
+      "tip": "12:00"
     }
   ],
-  "generated": "2026-11-13T22:30:03Z",
+  "generated": "2026-11-13T23:30:03Z",
   "totals": [
     [
       "MIL@ORL",
@@ -240,6 +518,21 @@
       "NYK@IND",
       null,
       219.5
+    ],
+    [
+      "ATL@CHI",
+      null,
+      245.5
+    ],
+    [
+      "CLE@MIA",
+      null,
+      236.5
+    ],
+    [
+      "MEM@NOP",
+      null,
+      235.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
