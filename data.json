@@ -74,14 +74,137 @@
         "NOP": []
       },
       "tip": "11:00"
+    },
+    {
+      "b2b": [
+        "CLE"
+      ],
+      "cov": {
+        "players": [
+          16,
+          17
+        ],
+        "skipped": [
+          "Santi Aldama PTS (Role Unclear)",
+          "Santi Aldama REB (Role Unclear)",
+          "Tyrese Proctor REB (no rung priced 1.40+ at or below std)",
+          "Tyrese Proctor AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          32,
+          36
+        ]
+      },
+      "ctx": "Out TOP3: Evan Mobley (CLE); Returning: none; Depleted: CLE (3 rotation out); missed last game: none. Coverage: evaluated 16 of 17 players (32 of 36 player-stats); skipped: Santi Aldama PTS (Role Unclear), Santi Aldama REB (Role Unclear), Tyrese Proctor REB (no rung priced 1.40+ at or below std), Tyrese Proctor AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.19-p4",
+      "id": "DAL@CLE",
+      "leans": [
+        {
+          "alt": 5.5,
+          "e": 4.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.79",
+            "Z0.55"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.53,
+          "opp": "—",
+          "p": "Cooper Flagg",
+          "s": "AST",
+          "st": "4",
+          "std": 6.5,
+          "t": "DAL"
+        },
+        {
+          "alt": 2.5,
+          "e": 3.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "MT-",
+            "C0.52",
+            "Z1.10"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.63,
+          "opp": "—",
+          "p": "Zaccharie Risacher",
+          "s": "REB",
+          "st": "4",
+          "std": 2.5,
+          "t": "DAL"
+        },
+        {
+          "alt": 1.5,
+          "e": 3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "[ROLE?]",
+            "B2B",
+            "OT-ADJ",
+            "C0.54",
+            "Z0.83",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.48,
+          "opp": "—",
+          "p": "Peyton Watson",
+          "s": "AST",
+          "st": "2.5",
+          "std": 1.5,
+          "t": "CLE"
+        }
+      ],
+      "mkt": 227.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "CLE": [
+          "Evan Mobley (Mobley (toe) has been ruled out for Saturday's meeting with Dallas.)",
+          "Jarrett Allen (Allen (knee) is listed as questionable for Saturday's game against Dallas.)",
+          "Nae'Qwan Tomlin (Tomlin is set to miss several weeks with a lower back stress reaction, Chris Fedor of The Cleveland Plain Dealer reports.)",
+          "Sam Merrill (Merrill (elbow) is listed as out for Wednesday's game against the Knicks.)"
+        ],
+        "DAL": [
+          "Dereck Lively II (Lively (foot) is listed as out for Thursday's game in Minnesota.)",
+          "Sergio de Larrea (De Larrea (knee) has been ruled out for Thursday's game at Minnesota.)",
+          "Tarik Biberovic (Biberovic (heel) is out for Thursday's game against Minnesota.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "CLE": [
+          "Donovan Mitchell (Mitchell (knee) is listed as questionable for Saturday's game against the Mavericks.)",
+          "James Harden (Harden (left lower leg/calf tightness) is listed as questionable for Saturday's game against the Mavericks.)",
+          "Peyton Watson (Watson (hamstring) is listed as questionable for Saturday's game against the Mavericks.)"
+        ],
+        "DAL": [
+          "Max Christie (Christie (ankle) has been downgraded to doubtful for Saturday's game against the Cavaliers)",
+          "Morez Johnson Jr. (Johnson (left shin contusion) is listed as probable for Saturday against Cleveland.)"
+        ]
+      },
+      "tip": "11:30"
     }
   ],
-  "generated": "2026-11-14T22:30:03Z",
+  "generated": "2026-11-14T23:05:03Z",
   "totals": [
     [
       "DEN@NOP",
       null,
       236.5
+    ],
+    [
+      "DAL@CLE",
+      null,
+      227.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
