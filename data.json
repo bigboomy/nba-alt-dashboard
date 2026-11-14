@@ -702,9 +702,109 @@
         ]
       },
       "tip": "13:30"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          17,
+          17
+        ],
+        "skipped": [],
+        "stats": [
+          37,
+          37
+        ]
+      },
+      "ctx": "Out TOP3: Ja Morant (POR); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 17 of 17 players (37 of 37 player-stats); skipped: none",
+      "engine": "nba-session v3.18-p4",
+      "id": "POR@SAC",
+      "leans": [
+        {
+          "alt": 21.5,
+          "e": 5.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "C0.78",
+            "Z0.95"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.48,
+          "opp": "—",
+          "p": "Darius Acuff",
+          "s": "PTS",
+          "st": "4",
+          "std": 25.5,
+          "t": "SAC"
+        },
+        {
+          "alt": 21.5,
+          "e": 4.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "C0.91",
+            "Z0.53",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.53,
+          "opp": "—",
+          "p": "Deni Avdija",
+          "s": "PTS",
+          "st": "4",
+          "std": 23.5,
+          "t": "POR"
+        },
+        {
+          "alt": 2.5,
+          "e": 3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "C0.78",
+            "Z0.50"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.59,
+          "opp": "—",
+          "p": "Zach LaVine",
+          "s": "REB",
+          "st": "4",
+          "std": 2.5,
+          "t": "SAC"
+        }
+      ],
+      "mkt": 229.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "POR": [
+          "Chris Youngblood (Youngblood (foot) is out for Friday's game against Sacramento.)",
+          "Ja Morant (Head coach Micah Nori said Morant met with a doctor in Los Angeles, who gave him a positive outlook on his recovery from the hamstring injury. While Nori declined to update Morant's timetable, he added Morant \"may not be out for as long as we thought,\" Trail Blazers Insider Sean Highkin reports.)",
+          "Shaedon Sharpe (Sharpe suffered a torn meniscus in his knee and is expected to miss six months, per Shams Charania of ESPN.)",
+          "Vit Krejci (Krejci underwent surgery on his fractured left ankle Wednesday and will be re-evaluated in eight weeks, Brett Siegel of ClutchPoints.com reports.)"
+        ],
+        "SAC": [
+          "Ben Simmons (Simmons underwent successful surgery Tuesday to repair a torn right Achilles tendon, James Ham of ESPN 1320 Sacramento reports.)",
+          "Maxime Raynaud (Raynaud (knee) has been ruled out for Tuesday's game against Orlando.)",
+          "Precious Achiuwa (Achiuwa (ankle) is out for Friday's game against the Trail Blazers.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "POR": [],
+        "SAC": []
+      },
+      "tip": "14:00"
     }
   ],
-  "generated": "2026-11-14T01:00:03Z",
+  "generated": "2026-11-14T01:30:03Z",
   "totals": [
     [
       "MIL@ORL",
@@ -740,6 +840,11 @@
       "GSW@SAS",
       null,
       216.5
+    ],
+    [
+      "POR@SAC",
+      null,
+      229.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
