@@ -568,9 +568,143 @@
         "UTA": []
       },
       "tip": "12:30"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          17,
+          17
+        ],
+        "skipped": [],
+        "stats": [
+          39,
+          39
+        ]
+      },
+      "ctx": "Out TOP3: Stephen Curry (GSW); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 17 of 17 players (39 of 39 player-stats); skipped: none",
+      "engine": "nba-session v3.18-p4",
+      "id": "GSW@SAS",
+      "leans": [
+        {
+          "alt": 5.5,
+          "e": 6.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "MT-",
+            "C0.75",
+            "Z0.67",
+            "TMO"
+          ],
+          "h": "90% (9/10)",
+          "o": 2.05,
+          "opp": "—",
+          "p": "Draymond Green",
+          "s": "AST",
+          "st": "3",
+          "std": 5.5,
+          "t": "GSW"
+        },
+        {
+          "alt": 4.5,
+          "e": 4.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "OT-ADJ",
+            "MT+",
+            "C0.60",
+            "Z0.55",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.53,
+          "opp": "—",
+          "p": "Charles Bassey",
+          "s": "PTS",
+          "st": "4",
+          "std": 5.5,
+          "t": "GSW"
+        },
+        {
+          "alt": 4.5,
+          "e": 3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[Std?]",
+            "OT-ADJ",
+            "C0.83",
+            "Z0.62",
+            "TMO-Q"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.69,
+          "opp": "—",
+          "p": "Dylan Harper",
+          "s": "REB",
+          "st": "3",
+          "std": 4.5,
+          "t": "SAS"
+        }
+      ],
+      "mkt": 216.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "GSW": [
+          "Brandon Williams (Williams (hamstring) will miss at least one week, per Anthony Slater of ESPN.com.)",
+          "Jimmy Butler III (Butler (knee) could return sometime between January and February as he continues recovering from a torn right ACL, Anthony Slater of ESPN reports.)",
+          "Kristaps Porzingis (Porzingis announced on his social media that he's stepping away from basketball.)",
+          "Moses Moody (Moody (knee) is progressing toward a potential return between December and January after rupturing his left patellar tendon in March, Anthony Slater of ESPN reports.)",
+          "Stephen Curry (Curry has been diagnosed with an oblique abdominal tear and will be re-evaluated in two weeks, Shams Charania of ESPN reports.)"
+        ],
+        "SAS": [
+          "Jayden Quaintance (Quaintance has been around the team but has not yet been cleared for basketball activities, Matt Guzman of SI.com reports.)",
+          "Tobias Harris (Harris (calf) is out for Wednesday's game against Chicago, Jared Weiss of The Athletic reports.)"
+        ]
+      },
+      "picks": [
+        {
+          "alt": 7.5,
+          "e": 3.3,
+          "f": [
+            "OT-ADJ",
+            "C0.69",
+            "Z0.50",
+            "TMO-Q",
+            "U1"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.5,
+          "opp": "—",
+          "p": "Julian Champagnie",
+          "s": "PTS",
+          "st": "4",
+          "std": 9.5,
+          "t": "SAS"
+        }
+      ],
+      "proj": null,
+      "q": {
+        "GSW": [
+          "Charles Bassey (Bassey is probable for Friday's game against the Spurs due to left toe soreness.)"
+        ],
+        "SAS": [
+          "De'Aaron Fox (Fox is questionable for Friday's game against the Warriors due to left hip soreness.)",
+          "Devin Vassell (Vassell is questionable for Friday's game against the Warriors due to left adductor tightness.)"
+        ]
+      },
+      "tip": "13:30"
     }
   ],
-  "generated": "2026-11-14T00:00:03Z",
+  "generated": "2026-11-14T01:00:03Z",
   "totals": [
     [
       "MIL@ORL",
@@ -601,6 +735,11 @@
       "UTA@HOU",
       null,
       221.5
+    ],
+    [
+      "GSW@SAS",
+      null,
+      216.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
