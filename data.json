@@ -802,9 +802,141 @@
         "SAC": []
       },
       "tip": "14:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          16,
+          17
+        ],
+        "skipped": [
+          "Max Strus PTS (Role Unclear)",
+          "Max Strus REB (Role Unclear)",
+          "Max Strus AST (Role Unclear)"
+        ],
+        "stats": [
+          39,
+          42
+        ]
+      },
+      "ctx": "Out TOP3: Jalen Williams (OKC); Returning: none; Depleted: OKC (4 rotation out); missed last game: none. Coverage: evaluated 16 of 17 players (39 of 42 player-stats); skipped: Max Strus PTS (Role Unclear), Max Strus REB (Role Unclear), Max Strus AST (Role Unclear)",
+      "engine": "nba-session v3.18-p4",
+      "id": "OKC@LAC",
+      "leans": [
+        {
+          "alt": 8.5,
+          "e": 4.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "MT-",
+            "C0.70",
+            "Z0.83"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.56,
+          "opp": "—",
+          "p": "Keaton Wagler",
+          "s": "PTS",
+          "st": "4",
+          "std": 9.5,
+          "t": "LAC"
+        },
+        {
+          "alt": 2.5,
+          "e": 3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "OT-ADJ",
+            "MT-",
+            "C0.74",
+            "Z0.75"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.59,
+          "opp": "—",
+          "p": "Keaton Wagler",
+          "s": "AST",
+          "st": "4",
+          "std": 2.5,
+          "t": "LAC"
+        },
+        {
+          "alt": 3.5,
+          "e": 3.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "OT-ADJ",
+            "C0.73",
+            "Z0.65"
+          ],
+          "h": "78% (7/9)",
+          "o": 1.5,
+          "opp": "—",
+          "p": "Derrick Jones Jr.",
+          "s": "REB",
+          "st": "4",
+          "std": 3.5,
+          "t": "LAC"
+        }
+      ],
+      "mkt": 222.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "LAC": [
+          "Bradley Beal (Beal (knee) will not be ready for the start of the regular season, NBA writer Justin Russo reports.)",
+          "Brandon Ingram (Ingram (Achilles) won't play in Friday's game against the Thunder, per Law Murray of The Athletic.)",
+          "Jordan Miller (Miller underwent surgery Wednesday to repair a torn left rotator cuff and will be re-evaluated in six months, per Law Murray of The Athletic.)",
+          "Yanic Konan Niederhauser (Niederhauser (foot) is out for Tuesday's game against Phoenix, Ohm Youngmisuk of ESPN.com reports.)"
+        ],
+        "OKC": [
+          "Cason Wallace (Wallace underwent surgery Friday to repair a torn labrum in his left shoulder and will be re-evaluated before the end of the regular season, Clemente Almanza of USA Today reports.)",
+          "Chet Holmgren (Holmgren underwent a biological treatment Friday to address a small patellar tendon tear and will miss at least 8-10 weeks, Nick Crain of Slam reports.)",
+          "Jalen Williams (Williams (leg) underwent successful surgery Wednesday to \"address a fractured left fibula and reconstruction of ankle ligaments following a fracture and dislocation.\" He will be re-evaluated before the end of the regular season, Tim MacMahon of ESPN.com reports.)",
+          "Jaylin Williams (Williams (back) has been ruled out for Wednesday's game against Portland and remains out indefinitely.)",
+          "Thomas Sorber (Sorber (knee) has been ruled out for Friday's game against the Clippers.)"
+        ]
+      },
+      "picks": [
+        {
+          "alt": 6.5,
+          "e": 3.3,
+          "f": [
+            "[ROLE?]",
+            "MT+",
+            "C0.68",
+            "Z0.75",
+            "TMO",
+            "U0.5"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.5,
+          "opp": "—",
+          "p": "Bennett Stirtz",
+          "s": "PTS",
+          "st": "3",
+          "std": 8.5,
+          "t": "OKC"
+        }
+      ],
+      "proj": null,
+      "q": {
+        "LAC": [],
+        "OKC": [
+          "Ajay Mitchell (Mitchell (ankle) is questionable for Friday's game against the Clippers.)"
+        ]
+      },
+      "tip": "14:30"
     }
   ],
-  "generated": "2026-11-14T01:30:03Z",
+  "generated": "2026-11-14T02:00:03Z",
   "totals": [
     [
       "MIL@ORL",
@@ -845,6 +977,11 @@
       "POR@SAC",
       null,
       229.5
+    ],
+    [
+      "OKC@LAC",
+      null,
+      222.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
