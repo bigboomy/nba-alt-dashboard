@@ -5,6 +5,14 @@
    "date": "2026-11-15",
    "version": "nba-session v3.19-p4",
    "component": "pipeline",
+   "title": "Fresher prices, underdog flag, whole-board results",
+   "change": "Picks wait one 5-min tick when a fresh odds copy is minutes away; a DOG7 flag (no stake effect) marks players whose team is a 7+ point underdog; every rung on the board (Pointsbet, Sportsbet, Ladbrokes) is now graded nightly.",
+   "aim": "Stop picking on half-hour-old prices and build ~100 graded rungs a night to test rule ideas properly."
+  },
+  {
+   "date": "2026-11-15",
+   "version": "nba-session v3.19-p4",
+   "component": "pipeline",
    "title": "Perfect samples only",
    "change": "A pick is only staked when the player cleared the line in every game of the sample (e.g. 10/10, 9/9); a pick with any miss is kept as a 0u lean flagged MISS on the same rung.",
    "aim": "Season to date perfect samples went 46-17 (+5.38u) and one-miss picks lost; expect around break-even until the whole-board data confirms it."
