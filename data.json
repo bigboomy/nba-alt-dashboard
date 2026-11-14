@@ -505,9 +505,72 @@
         ]
       },
       "tip": "12:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "skipped": [
+          "Fred Vanvleet REB (no rung priced 1.40+ at or below std)",
+          "Fred Vanvleet AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          34,
+          36
+        ]
+      },
+      "ctx": "Out TOP3: Lauri Markkanen (UTA), Jaren Jackson Jr. (UTA); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 15 of 15 players (34 of 36 player-stats); skipped: Fred Vanvleet REB (no rung priced 1.40+ at or below std), Fred Vanvleet AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.18-p4",
+      "id": "UTA@HOU",
+      "leans": [
+        {
+          "alt": 6.5,
+          "e": 3.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.82",
+            "Z0.76"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.77,
+          "opp": "—",
+          "p": "Alperen Sengun",
+          "s": "AST",
+          "st": "3",
+          "std": 6.5,
+          "t": "HOU"
+        }
+      ],
+      "mkt": 221.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "HOU": [
+          "Clint Capela (Head coach Ime Udoka stated Monday that Capela (ankle) could be cleared to return either Nov. 15 in Washington or Nov. 16 in Miami, Lachard Binkley of SI.com reports.)",
+          "Marcus Smart (Smart has been suspended three games for throwing a punch during Wednesday's matchup against Golden State, Shams Charania of ESPN reports.)",
+          "Steven Adams (Head coach Ime Udoka said Monday that Adams could return as soon as Sunday's game at Washington, Lachard Binkley of SI.com reports.)"
+        ],
+        "UTA": [
+          "Jaren Jackson Jr. (Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.)",
+          "Jusuf Nurkic (Nurkic (toe) has begun participating in on-court activities as he continues recovering from a right foot injury sustained during an Oct. 4 preseason game against Denver. He will be re-evaluated in two weeks, the Jazz announced Friday.)",
+          "Lauri Markkanen (Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.)",
+          "Trey Alexander (Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "HOU": [],
+        "UTA": []
+      },
+      "tip": "12:30"
     }
   ],
-  "generated": "2026-11-13T23:30:03Z",
+  "generated": "2026-11-14T00:00:03Z",
   "totals": [
     [
       "MIL@ORL",
@@ -533,6 +596,11 @@
       "MEM@NOP",
       null,
       235.5
+    ],
+    [
+      "UTA@HOU",
+      null,
+      221.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
