@@ -1,70 +1,30 @@
 {
- "generated": "2026-11-13T07:08:35+00:00",
- "games": [
-  {
-   "away": "New York Knicks",
-   "home": "Indiana Pacers",
-   "tip_utc": "2026-11-14T00:10:00Z"
-  },
-  {
-   "away": "Milwaukee Bucks",
-   "home": "Orlando Magic",
-   "tip_utc": "2026-11-14T00:10:00Z"
-  },
-  {
-   "away": "Atlanta Hawks",
-   "home": "Chicago Bulls",
-   "tip_utc": "2026-11-14T01:10:00Z"
-  },
-  {
-   "away": "Cleveland Cavaliers",
-   "home": "Miami Heat",
-   "tip_utc": "2026-11-14T01:10:00Z"
-  },
-  {
-   "away": "Memphis Grizzlies",
-   "home": "New Orleans Pelicans",
-   "tip_utc": "2026-11-14T01:10:00Z"
-  },
-  {
-   "away": "Utah Jazz",
-   "home": "Houston Rockets",
-   "tip_utc": "2026-11-14T01:40:00Z"
-  },
-  {
-   "away": "Golden State Warriors",
-   "home": "San Antonio Spurs",
-   "tip_utc": "2026-11-14T02:40:00Z"
-  },
-  {
-   "away": "Portland Trail Blazers",
-   "home": "Sacramento Kings",
-   "tip_utc": "2026-11-14T03:10:00Z"
-  },
-  {
-   "away": "Oklahoma City Thunder",
-   "home": "Los Angeles Clippers",
-   "tip_utc": "2026-11-14T03:40:00Z"
-  },
-  {
-   "away": "San Antonio Spurs",
-   "home": "New York Knicks",
-   "tip_utc": "2026-12-25T17:00:00Z"
-  },
-  {
-   "away": "Miami Heat",
-   "home": "Boston Celtics",
-   "tip_utc": "2026-12-25T19:30:00Z"
-  },
-  {
-   "away": "Philadelphia 76ers",
-   "home": "Los Angeles Lakers",
-   "tip_utc": "2026-12-25T22:00:00Z"
-  },
-  {
-   "away": "Denver Nuggets",
-   "home": "Golden State Warriors",
-   "tip_utc": "2026-12-26T03:30:00Z"
-  }
- ]
+  "generated": "2026-11-14T07:07:03Z",
+  "games": [
+    {
+      "away": "Denver Nuggets",
+      "home": "New Orleans Pelicans",
+      "tip_utc": "2026-11-15T00:00:00Z"
+    },
+    {
+      "away": "Dallas Mavericks",
+      "home": "Cleveland Cavaliers",
+      "tip_utc": "2026-11-15T00:30:00Z"
+    },
+    {
+      "away": "Brooklyn Nets",
+      "home": "Memphis Grizzlies",
+      "tip_utc": "2026-11-15T01:00:00Z"
+    },
+    {
+      "away": "Chicago Bulls",
+      "home": "Minnesota Timberwolves",
+      "tip_utc": "2026-11-15T01:00:00Z"
+    },
+    {
+      "away": "Detroit Pistons",
+      "home": "Miami Heat",
+      "tip_utc": "2026-11-15T01:00:00Z"
+    }
+  ]
 }
