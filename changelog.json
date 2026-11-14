@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-15",
+   "version": "nba-session v3.19-p4",
+   "component": "pipeline",
+   "title": "Perfect samples only",
+   "change": "A pick is only staked when the player cleared the line in every game of the sample (e.g. 10/10, 9/9); a pick with any miss is kept as a 0u lean flagged MISS on the same rung.",
+   "aim": "Season to date perfect samples went 46-17 (+5.38u) and one-miss picks lost; expect around break-even until the whole-board data confirms it."
+  },
+  {
    "date": "2026-11-13",
    "version": "nba-session v3.18 (P4 port)",
    "component": "pipeline",

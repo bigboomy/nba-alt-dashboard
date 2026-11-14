@@ -635,7 +635,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       pill='<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span>'}
     var u='';p.f.forEach(function(f){if(/^U\d/.test(f))u=f.slice(1)});
     var fl=p.f.filter(function(f){return !/^U\d/.test(f)&&f!=='LEAN'});
-    var chips=(p.lean?'<span class="chip ln">LEAN 0u</span>':'')+pill+cc+fl.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'||f==='DNP-LAST'?' w':'')+'">'+esc(f)+'</span>'}).join('');
+    var chips=(p.lean?'<span class="chip ln">LEAN 0u</span>':'')+pill+cc+fl.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'||f==='DNP-LAST'||f==='MISS'?' w':'')+'">'+esc(f)+'</span>'}).join('');
     return '<tr class="pr'+rc+(p.lean?' lean':'')+'"><td><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' <span class="st">'+stars(p.stN)+'</span></div>'+(/[0-9]/.test(p.opp)?'<div class="opp">Opp '+esc(p.opp)+'</div>':'')+
       (p.sa!==null?'<div class="safe">Safer: O'+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
       (chips?'<div class="chips">'+chips+'</div>':'')+cb+'</td>'+
@@ -680,7 +680,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var tbl=body?'<table class="pt">'+th+'<tbody>'+body+'</tbody></table>':'<div class="none">No pick cleared the gates.</div>';
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
     var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · near-misses, tracked not bet</span></summary>'+
-      '<p class="lfd">Just missed a pick rule (cushion, price cap or looser test). 0u.</p><table class="pt">'+th+'<tbody>'+lb+'</tbody></table></details>':'';
+      '<p class="lfd">Just missed a pick rule (one miss in the sample, cushion, price cap or looser test). 0u.</p><table class="pt">'+th+'<tbody>'+lb+'</tbody></table></details>':'';
     return '<section class="game">'+head+'<div class="gw">'+infoTable(g)+'</div><div class="gw gp">'+tbl+lf+'</div></section>';
   }
   /* Today's games (Mitch, 5 Nov): from the first slate run the slate shows today's games from schedule.json.
