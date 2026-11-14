@@ -192,9 +192,301 @@
         ]
       },
       "tip": "11:30"
+    },
+    {
+      "b2b": [
+        "MEM"
+      ],
+      "cov": {
+        "players": [
+          17,
+          17
+        ],
+        "skipped": [
+          "DayRon Sharpe AST (no rung priced 1.40+ at or below std)",
+          "Nolan Traore AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          35,
+          37
+        ]
+      },
+      "ctx": "Out TOP3: Ty Jerome (MEM); Returning: none; Depleted: none; missed last game: Nolan Traore. Coverage: evaluated 17 of 17 players (35 of 37 player-stats); skipped: DayRon Sharpe AST (no rung priced 1.40+ at or below std), Nolan Traore AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.19-p4",
+      "id": "BKN@MEM",
+      "leans": [
+        {
+          "alt": 8.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "DNP-LAST",
+            "OT-ADJ",
+            "MT+",
+            "C0.67",
+            "Z0.73",
+            "TMO-Q"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "—",
+          "p": "Nolan Traore",
+          "s": "PTS",
+          "st": "4",
+          "std": 10.5,
+          "t": "BKN"
+        },
+        {
+          "alt": 9.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "B2B",
+            "OT-ADJ",
+            "C0.81",
+            "Z0.40",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "—",
+          "p": "Jerami Grant",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 11.5,
+          "t": "MEM"
+        },
+        {
+          "alt": 6.5,
+          "e": 3.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.66",
+            "Z1.44",
+            "TMO-Q"
+          ],
+          "h": "83% (5/6)",
+          "o": 1.53,
+          "opp": "—",
+          "p": "Danny Wolf",
+          "s": "PTS",
+          "st": "4",
+          "std": 7.5,
+          "t": "BKN"
+        }
+      ],
+      "mkt": 227.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "BKN": [],
+        "MEM": [
+          "Quinten Post (Post (concussion) has been ruled out for Saturday's game against the Nets.)",
+          "Richie Saunders (Saunders signed a two-way contract with the Grizzlies on Saturday, Shams Charania of ESPN reports.)",
+          "Scotty Pippen Jr. (Pippen (back) remains out for Wednesday's game against Denver, Michael Wallace of the Grizzlies' official site reports.)",
+          "Ty Jerome (Jerome (hip) has been ruled out for Saturday's game against the Nets.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "BKN": [
+          "Michael Porter Jr. (Porter delivered 22 points (7-14 FG, 4-10 3Pt, 4-4 FT), six rebounds, three assists and a steal across 28 minutes in Wednesday's 145-111 win over the Pelicans.)",
+          "Mikel Brown Jr. (Brown (illness) has been upgraded to probable for Saturday's game at Memphis.)",
+          "Nolan Traore (Traore (calf) is listed as probable for Saturday's game against Memphis.)"
+        ],
+        "MEM": [
+          "Jerami Grant (Grant (head) is questionable for Saturday's game against the Nets.)",
+          "Zach Edey (Edey (ankle) is listed as questionable for Saturday's game against Brooklyn.)"
+        ]
+      },
+      "tip": "12:00"
+    },
+    {
+      "b2b": [
+        "CHI"
+      ],
+      "cov": {
+        "players": [
+          12,
+          14
+        ],
+        "skipped": [
+          "Jonathan Kuminga AST (no rung priced 1.40+ at or below std)",
+          "Nic Claxton PTS (Role Unclear)",
+          "Nic Claxton REB (Role Unclear)",
+          "Norman Powell REB (no rung priced 1.40+ at or below std)",
+          "Shannon Jr. PTS (no ESPN match)"
+        ],
+        "stats": [
+          25,
+          30
+        ]
+      },
+      "ctx": "Out TOP3: Caleb Wilson (CHI), Anthony Edwards (MIN); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 12 of 14 players (25 of 30 player-stats); skipped: Jonathan Kuminga AST (no rung priced 1.40+ at or below std), Nic Claxton PTS (Role Unclear), Nic Claxton REB (Role Unclear), Norman Powell REB (no rung priced 1.40+ at or below std), Shannon Jr. PTS (no ESPN match)",
+      "engine": "nba-session v3.19-p4",
+      "id": "CHI@MIN",
+      "leans": [
+        {
+          "alt": 5.5,
+          "e": 3.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.90",
+            "Z0.41",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.74,
+          "opp": "—",
+          "p": "Jaden McDaniels",
+          "s": "REB",
+          "st": "3",
+          "std": 5.5,
+          "t": "MIN"
+        }
+      ],
+      "mkt": 234.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "CHI": [
+          "Caleb Wilson (Wilson (hand) is expected to miss four to six weeks, Shams Charania of ESPN reports.)",
+          "Tobe Awaka (Awaka has been ruled out for Saturday's game against the Timberwolves.)"
+        ],
+        "MIN": [
+          "Anthony Edwards (Edwards underwent a successful arthroscopic procedure on his right knee Thursday, the Timberwolves announced.)",
+          "Donte DiVincenzo (DiVincenzo (Achilles) remains confident that he'll return during the 2026-27 season, Jon Krawczynski of The Athletic reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "CHI": [
+          "Jalen Smith (Smith (finger) is listed as questionable for Saturday's game at Minnesota.)",
+          "Nic Claxton (Claxton (hamstring) is listed as questionable for Saturday's game against the Timberwolves.)",
+          "Norman Powell (Powell (back) is listed as questionable for Saturday's game against Minnesota.)"
+        ],
+        "MIN": []
+      },
+      "tip": "12:00"
+    },
+    {
+      "b2b": [
+        "MIA"
+      ],
+      "cov": {
+        "players": [
+          17,
+          17
+        ],
+        "skipped": [],
+        "stats": [
+          42,
+          42
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 17 of 17 players (42 of 42 player-stats); skipped: none",
+      "engine": "nba-session v3.19-p4",
+      "id": "DET@MIA",
+      "leans": [
+        {
+          "alt": 7.5,
+          "e": 7.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "B2B",
+            "OT-ADJ",
+            "C0.81",
+            "Z0.94"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.42,
+          "opp": "—",
+          "p": "Bam Adebayo",
+          "s": "REB",
+          "st": "3.5",
+          "std": 8.5,
+          "t": "MIA"
+        },
+        {
+          "alt": 1.5,
+          "e": 5.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "OT-ADJ",
+            "C0.69",
+            "Z1.02"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.48,
+          "opp": "—",
+          "p": "Duncan Robinson",
+          "s": "AST",
+          "st": "4",
+          "std": 1.5,
+          "t": "DET"
+        },
+        {
+          "alt": 11.5,
+          "e": 3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "B2B",
+            "OT-ADJ",
+            "MT+",
+            "C0.66",
+            "Z1.23"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.5,
+          "opp": "—",
+          "p": "Davion Mitchell",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 13.5,
+          "t": "MIA"
+        }
+      ],
+      "mkt": 228.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "DET": [
+          "Isaiah Joe (Joe (hip) is out for Monday against the Wizards.)",
+          "Jalen Duren (Duren (hamstring) has begun on-court activity and will be re-evaluated in two weeks, Hunter Patterson of The Athletic reports.)"
+        ],
+        "MIA": []
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "DET": [
+          "Ugonna Onyenso (Onyenso agreed to a two-way contract with the Pistons on Thursday.)"
+        ],
+        "MIA": [
+          "Klay Thompson (Thompson (ankle) is listed as probable for Saturday's game against the Pistons.)",
+          "Pelle Larsson (Larsson (illness) is listed as doubtful for Saturday's game against Detroit.)"
+        ]
+      },
+      "tip": "12:00"
     }
   ],
-  "generated": "2026-11-14T23:05:03Z",
+  "generated": "2026-11-14T23:30:03Z",
   "totals": [
     [
       "DEN@NOP",
@@ -205,6 +497,21 @@
       "DAL@CLE",
       null,
       227.5
+    ],
+    [
+      "BKN@MEM",
+      null,
+      227.5
+    ],
+    [
+      "CHI@MIN",
+      null,
+      234.5
+    ],
+    [
+      "DET@MIA",
+      null,
+      228.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
