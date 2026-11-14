@@ -64,6 +64,9 @@ table.gi,table.pt{width:100%;border-collapse:collapse;font-size:.78rem;line-heig
 table.gi{table-layout:fixed}table.gi th,table.gi td,table.pt th,table.pt td{padding:6px;vertical-align:top;text-align:left;border:0;border-top:1px solid var(--line);background:none}
 table.gi thead th,table.pt thead th{border-top:0;font-size:.68rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
 table.gi th[scope=row]{width:68px;color:var(--muted);font-weight:600}table.gi thead th:first-child{width:68px}
+.ij{padding:1px 0}.ij .n1{white-space:nowrap}.is{display:inline-block;font-size:.66rem;font-weight:700;padding:0 5px;border-radius:4px;margin-left:3px;vertical-align:1px}
+.isOut{background:#fde7e5;color:#b42318}.isQ,.isD{background:#fdf1d8;color:#8a5a00}.isP{background:#eef0f3;color:#5b6573}
+@media (prefers-color-scheme:dark){.isOut{background:#4a1d1a;color:#ff8a80}.isQ,.isD{background:#4a3a14;color:#ffd27a}.isP{background:#2a2f36;color:#aab3bf}}
 table.gi tr.out td{color:#b42318;font-weight:600}td.mu{color:var(--muted)}
 table.pt .n{text-align:right;white-space:nowrap}table.pt td.eg{color:var(--good,#0f7b3f)}table.pt .who{font-weight:600;font-size:.86rem}table.pt .line{font-size:.82rem;font-weight:600;text-align:left;white-space:normal}table.pt .st{color:var(--muted);font-size:.72rem}
 table.pt tr.lean td{background:#f8f9fb}table.pt tr.lean .who{color:var(--muted)}table.pt .chips{margin-top:3px}.chip.ln{background:#e8e6f8;color:#4b3fa6}
@@ -641,9 +644,18 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function infoTable(g){
     var t=String(g.id).split('@'),A=t[0]||'',H=t[1]||'',rows='';
     function list(m,k){var v=(m&&m[k])||[];return v.length?v.map(esc).join(', '):'—'}
+    /* Injury list (Mitch, 14 Nov): name + status only. The feed's text after the name, "(...)", is dropped.
+       Out bucket -> Out; Q bucket -> Q, except entries the feed calls probable (P) or doubtful (D). */
+    function nm(x){return String(x).replace(/\s*\(.*$/,'').trim()}
+    function inj(k){
+      var r=[];((g.out&&g.out[k])||[]).forEach(function(x){r.push([nm(x),'Out'])});
+      ((g.q&&g.q[k])||[]).forEach(function(x){var d=String(x).replace(/^[^(]*/,'');r.push([nm(x),/probable/i.test(d)?'P':/doubtful/i.test(d)?'D':'Q'])});
+      if(!r.length) return '<span class="mu">—</span>';
+      return r.map(function(e){var w=e[0].split(' '),l=w.pop();   // keep the last word with its tag
+        return '<div class="ij">'+(w.length?esc(w.join(' '))+' ':'')+'<span class="n1">'+esc(l)+' <span class="is is'+e[1]+'">'+e[1]+'</span></span></div>'}).join('');
+    }
     if(g.hasInfo){
-      rows+='<tr class="out"><th scope="row">Out</th><td>'+list(g.out,A)+'</td><td>'+list(g.out,H)+'</td></tr>'+
-        '<tr><th scope="row">Doubtful / Q</th><td>'+list(g.q,A)+'</td><td>'+list(g.q,H)+'</td></tr>'+
+      rows+='<tr><th scope="row">Injuries</th><td>'+inj(A)+'</td><td>'+inj(H)+'</td></tr>'+
         (g.b2b?'<tr><th scope="row">B2B</th><td>'+(g.b2b.indexOf(A)>=0?'Yes':'—')+'</td><td>'+(g.b2b.indexOf(H)>=0?'Yes':'—')+'</td></tr>':'');
     }
     var tot='';
