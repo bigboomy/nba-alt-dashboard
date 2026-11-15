@@ -326,7 +326,7 @@ function groupBy(rows,keyFn,keys){
 }
 function byBand(rows){return groupBy(rows,function(r){return bandOf(r.odds)},['A','B','C'])}
 function byPBand(rows){return groupBy(rows,function(r){return pbandOf(r.hit)},['p1','p2','p3'])}
-function byStat(rows){return groupBy(rows,function(r){return r.stat},['PTS','REB','AST'])}
+function byStat(rows){return groupBy(rows,function(r){return r.stat},['PTS','REB','AST','3PM'])}
 function dayList(from,to){var o=[],d=from;while(d<=to){o.push(d);d=addDays(d,1)}return o}
 /* cumulative units per day for rows subset (All or a band) */
 function cumSeries(rows,from,to){
@@ -421,7 +421,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return statTable(items,true);
   }
   function stTable(rows){
-    var b=CORE.byStat(rows),items=['PTS','REB','AST'].map(function(k){return {label:k,s:b[k]}});
+    var b=CORE.byStat(rows),items=['PTS','REB','AST','3PM'].map(function(k){return {label:k,s:b[k]}});
     items.push({label:'All',s:CORE.summarize(rows),all:true});
     return statTable(items,false);
   }

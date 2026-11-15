@@ -25,7 +25,7 @@ COLS = ("lean_id date tip_utc game player team stat std alt odds hit_pct hit_sam
         "flags actual result resolved_at engine_version").split()
 LETTER = {c: chr(65 + i) for i, c in enumerate(COLS)}
 NUMERIC = {"std", "alt", "odds", "hit_pct", "edge", "stars", "actual"}
-STATS = {"PTS", "REB", "AST"}
+STATS = {"PTS", "REB", "AST", "3PM"}  # 3PM added 16 Nov 2026 (P4 v3.20)
 
 
 def die(m):

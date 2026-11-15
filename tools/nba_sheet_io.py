@@ -33,7 +33,8 @@ NUMERIC = {"std", "alt", "odds", "hit_pct", "edge", "stars", "stake_u", "close_o
            "actual", "safe_alt", "safe_odds"}
 BASE = "https://api.the-odds-api.com/v4/sports/basketball_nba"
 MIN_LEAD, MAX_LEAD = 2, 70   # capture a pick once, 2-70 min before its tip (hourly runs at :48)
-MARKET = {"PTS": "player_points_alternate", "REB": "player_rebounds_alternate", "AST": "player_assists_alternate"}
+MARKET = {"PTS": "player_points_alternate", "REB": "player_rebounds_alternate", "AST": "player_assists_alternate",
+          "3PM": "player_threes_alternate"}  # 3PM added 16 Nov 2026 (P4 v3.20); the cloud engine never emits it
 TEAMS = {
     "ATL": "Atlanta Hawks", "BOS": "Boston Celtics", "BKN": "Brooklyn Nets", "BRK": "Brooklyn Nets",
     "CHA": "Charlotte Hornets", "CHI": "Chicago Bulls", "CLE": "Cleveland Cavaliers",
