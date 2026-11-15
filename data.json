@@ -112,12 +112,117 @@
         "PHI": []
       },
       "tip": "05:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "skipped": [],
+        "stats": [
+          39,
+          39
+        ]
+      },
+      "ctx": "Out TOP3: Austin Reaves (LAL); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 15 of 15 players (39 of 39 player-stats); skipped: none",
+      "engine": "nba-session v3.19-p4",
+      "id": "LAL@PHX",
+      "leans": [
+        {
+          "alt": 31.5,
+          "e": 4.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[ROLE?]",
+            "C0.79",
+            "Z0.89",
+            "TMO"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.4,
+          "opp": "—",
+          "p": "Luka Doncic",
+          "s": "PTS",
+          "st": "4",
+          "std": 35.5,
+          "t": "LAL"
+        },
+        {
+          "alt": 5.5,
+          "e": 4.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.66",
+            "Z1.05"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.56,
+          "opp": "—",
+          "p": "Khaman Maluach",
+          "s": "PTS",
+          "st": "4",
+          "std": 6.5,
+          "t": "PHX"
+        },
+        {
+          "alt": 5.5,
+          "e": 3.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "MT-",
+            "C0.72",
+            "Z0.77"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.74,
+          "opp": "—",
+          "p": "Miles Bridges",
+          "s": "REB",
+          "st": "3",
+          "std": 5.5,
+          "t": "PHX"
+        }
+      ],
+      "mkt": 225.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "LAL": [
+          "Austin Reaves (Reaves (heel) has been ruled out for Sunday's game against the Suns, Daniel Starkand of LakersNation.com reports.)"
+        ],
+        "PHX": [
+          "Mark Williams (Williams underwent surgery Thursday to repair a torn labrum in his left shoulder and will miss an extended period of time, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "LAL": [
+          "Adou Thiero (Thiero (ankle) is questionable for Sunday's game against the Suns.)",
+          "Collin Sexton (Sexton (head) is questionable for Sunday's game against the Suns, Daniel Starkand of LakersNation.com reports.)"
+        ],
+        "PHX": [
+          "Drew Timme (The Suns claimed Timme off waivers Monday, per Michael Scotto of HoopsHype.com.)"
+        ]
+      },
+      "tip": "08:00"
     }
   ],
-  "generated": "2026-11-15T16:30:02Z",
+  "generated": "2026-11-15T19:30:02Z",
   "totals": [
     [
       "IND@PHI",
+      null,
+      225.5
+    ],
+    [
+      "LAL@PHX",
       null,
       225.5
     ]
