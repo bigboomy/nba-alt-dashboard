@@ -740,9 +740,78 @@
         ]
       },
       "tip": "11:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          16,
+          17
+        ],
+        "skipped": [
+          "CJ McCollum REB (no rung priced 1.40+ at or below std)",
+          "Ryan Rollins PTS (ruled OUT)",
+          "Ryan Rollins 3PM (ruled OUT)"
+        ],
+        "stats": [
+          51,
+          54
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 16 of 17 players (51 of 54 player-stats); skipped: CJ McCollum REB (no rung priced 1.40+ at or below std), Ryan Rollins PTS (ruled OUT), Ryan Rollins 3PM (ruled OUT)",
+      "engine": "nba-session v3.20-p4",
+      "id": "ATL@MIL",
+      "leans": [
+        {
+          "alt": 11.5,
+          "e": 3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "MU+5%",
+            "OT-ADJ",
+            "C0.74",
+            "Z0.62"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.5,
+          "opp": "MIL 3rd most PTS allowed · pace +1.7",
+          "p": "Onyeka Okongwu",
+          "s": "PTS",
+          "st": "4",
+          "std": 13.5,
+          "t": "ATL"
+        }
+      ],
+      "mkt": 233.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "ATL": [
+          "Asa Newell (Newell (toe) has been ruled out for Friday's game against Chicago.)",
+          "Henri Veesaar (Veesaar was diagnosed with a torn right ACL and is expected to miss the 2026-27 season, the Hawks announced Monday.)",
+          "Keshon Gilbert (Gilbert (knee) has been ruled out for Friday's game against the Bulls.)",
+          "Kingston Flemings (Flemings (back) has been ruled out for Sunday's game against the Bucks.)",
+          "Mouhamed Gueye (Gueye (foot) is ready to begin on-court activities and will be re-evaluated in four weeks, Brad Rowland of the Locked On Podcast Network reports.)"
+        ],
+        "MIL": [
+          "Ousmane Dieng (Dieng (finger) is listed as out for Sunday's game versus the Hawks.)",
+          "Ryan Rollins (Rollins (illness) is out for Sunday's game against the Hawks.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "ATL": [
+          "Jock Landale (Landale (hip) is listed as questionable for Sunday's game against Milwakee.)"
+        ],
+        "MIL": []
+      },
+      "tip": "12:00"
     }
   ],
-  "generated": "2026-11-15T22:35:02Z",
+  "generated": "2026-11-15T23:30:02Z",
   "totals": [
     [
       "IND@PHI",
@@ -778,6 +847,11 @@
       "HOU@WAS",
       null,
       223.5
+    ],
+    [
+      "ATL@MIL",
+      null,
+      233.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
