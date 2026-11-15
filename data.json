@@ -1,7 +1,7 @@
 {
   "book": "Pointsbet AU, decimal odds",
   "date": "Mon 16 Nov 2026",
-  "engine": "nba-session v3.19-p4",
+  "engine": "nba-session v3.20-p4",
   "games": [
     {
       "b2b": [],
@@ -639,9 +639,110 @@
         ]
       },
       "tip": "10:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "skipped": [],
+        "stats": [
+          49,
+          49
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 15 of 15 players (49 of 49 player-stats); skipped: none",
+      "engine": "nba-session v3.20-p4",
+      "id": "HOU@WAS",
+      "leans": [
+        {
+          "alt": 13.5,
+          "e": 3.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "C0.85",
+            "Z0.35"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.65,
+          "opp": "WAS 13th most PTS allowed · pace -1.4",
+          "p": "Jabari Smith",
+          "s": "PTS",
+          "st": "3",
+          "std": 13.5,
+          "t": "HOU"
+        },
+        {
+          "alt": 6.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "C0.80",
+            "Z0.85"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.71,
+          "opp": "WAS 7th most AST allowed · pace -1.4",
+          "p": "Alperen Sengun",
+          "s": "AST",
+          "st": "3",
+          "std": 6.5,
+          "t": "HOU"
+        },
+        {
+          "alt": 0.5,
+          "e": 3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "MU-6%",
+            "C0.57",
+            "Z0.66"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.87,
+          "opp": "WAS 4th fewest 3PM allowed · pace -1.4",
+          "p": "Alperen Sengun",
+          "s": "3PM",
+          "st": "3",
+          "std": 0.5,
+          "t": "HOU"
+        }
+      ],
+      "mkt": 223.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "HOU": [
+          "Clint Capela (Capela (ankle) has been ruled out for Sunday's game at Washington.)",
+          "Fred VanVleet (VanVleet (right knee injury management) has been ruled out for Sunday's game against the Wizards.)",
+          "Marcus Smart (Smart has been suspended three games for throwing a punch during Wednesday's matchup against Golden State, Shams Charania of ESPN reports.)"
+        ],
+        "WAS": [
+          "Jamir Watkins (The Wizards announced Thursday that Watkins has undergone surgery for a torn ACL.)",
+          "Justin Champagnie (Champagnie (foot) is expected to miss several months, per Josh Robbins of The Athletic.)",
+          "Reece Beekman (The Wizards announced Monday that Beekman sustained a right acromioclavicular joint injury and will be re-evaluated in approximately three weeks.)",
+          "Tristan Vukcevic (Vukcevic (hip) has been ruled out for Monday's game against Detroit.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "HOU": [],
+        "WAS": [
+          "Tre Johnson (Johnson is listed as questionable for Sunday's game against the Rockets due to lower-back soreness.)"
+        ]
+      },
+      "tip": "11:00"
     }
   ],
-  "generated": "2026-11-15T21:30:02Z",
+  "generated": "2026-11-15T22:35:02Z",
   "totals": [
     [
       "IND@PHI",
@@ -672,6 +773,11 @@
       "NYK@TOR",
       null,
       217.5
+    ],
+    [
+      "HOU@WAS",
+      null,
+      223.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
