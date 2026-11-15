@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-16",
+   "version": "nba-session v3.20-p4",
+   "component": "pipeline",
+   "title": "Opponent matchup adjustment",
+   "change": "Each game in a player's sample is rescaled for tonight's opponent and expected pace (what the opponent allows of that stat per 100 possessions), shrunk toward league average while team data is thin; picks show an Opp line and an MU+x% flag, and threes (3PM) are now logged and graded on the whole board but not yet picked.",
+   "aim": "Stop treating a hot run against soft defences as form; backtest 9-16 Nov changed little (11-3 vs 10-3) and the effect grows as team samples fill in."
+  },
+  {
    "date": "2026-11-15",
    "version": "nba-session v3.19-p4",
    "component": "pipeline",
