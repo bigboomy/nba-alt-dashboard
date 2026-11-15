@@ -315,9 +315,122 @@
         "LAC": []
       },
       "tip": "08:30"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          13,
+          14
+        ],
+        "skipped": [
+          "De'Aaron Fox REB (no rung priced 1.40+ at or below std)",
+          "DeAaron Fox PTS (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          30,
+          32
+        ]
+      },
+      "ctx": "Out TOP3: Lauri Markkanen (UTA); Returning: none; Depleted: UTA (3 rotation out); missed last game: none. Coverage: evaluated 13 of 14 players (30 of 32 player-stats); skipped: De'Aaron Fox REB (no rung priced 1.40+ at or below std), DeAaron Fox PTS (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.19-p4",
+      "id": "SAS@UTA",
+      "leans": [
+        {
+          "alt": 1.5,
+          "e": 4.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "OT-ADJ",
+            "MT-",
+            "C0.47",
+            "Z0.76"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.4,
+          "opp": "—",
+          "p": "Devin Vassell",
+          "s": "AST",
+          "st": "4",
+          "std": 2.5,
+          "t": "SAS"
+        },
+        {
+          "alt": 24.5,
+          "e": 4.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "MT-",
+            "C0.79",
+            "Z0.53"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.53,
+          "opp": "—",
+          "p": "Victor Wembanyama",
+          "s": "PTS",
+          "st": "4",
+          "std": 26.5,
+          "t": "SAS"
+        },
+        {
+          "alt": 3.5,
+          "e": 3.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "[ROLE?]",
+            "DOG7",
+            "OT-ADJ",
+            "MT+",
+            "C0.83",
+            "Z0.57",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.67,
+          "opp": "—",
+          "p": "Darryn Peterson",
+          "s": "AST",
+          "st": "2",
+          "std": 3.5,
+          "t": "UTA"
+        }
+      ],
+      "mkt": 225.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "SAS": [
+          "Jayden Quaintance (Quaintance has been around the team but has not yet been cleared for basketball activities, Matt Guzman of SI.com reports.)",
+          "Tobias Harris (Harris (calf) is out for Wednesday's game against Chicago, Jared Weiss of The Athletic reports.)"
+        ],
+        "UTA": [
+          "Jaren Jackson Jr. (Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.)",
+          "Jaxson Hayes (Hayes (knee) has been ruled out for Sunday's game against the Spurs.)",
+          "Jusuf Nurkic (Nurkic (toe) has begun participating in on-court activities as he continues recovering from a right foot injury sustained during an Oct. 4 preseason game against Denver. He will be re-evaluated in two weeks, the Jazz announced Friday.)",
+          "Lauri Markkanen (Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.)",
+          "Trey Alexander (Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "SAS": [
+          "De'Aaron Fox (Fox (hip) is listed as questionable for Sunday's game against Utah.)"
+        ],
+        "UTA": []
+      },
+      "tip": "09:00"
     }
   ],
-  "generated": "2026-11-15T20:05:02Z",
+  "generated": "2026-11-15T20:30:02Z",
   "totals": [
     [
       "IND@PHI",
@@ -333,6 +446,11 @@
       "CHA@LAC",
       null,
       213.5
+    ],
+    [
+      "SAS@UTA",
+      null,
+      225.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
