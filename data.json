@@ -428,9 +428,220 @@
         "UTA": []
       },
       "tip": "09:00"
+    },
+    {
+      "b2b": [
+        "DAL"
+      ],
+      "cov": {
+        "players": [
+          17,
+          17
+        ],
+        "skipped": [
+          "Morez Johnson REB (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          38,
+          39
+        ]
+      },
+      "ctx": "Out TOP3: Kyrie Irving (DAL); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 17 of 17 players (38 of 39 player-stats); skipped: Morez Johnson REB (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.19-p4",
+      "id": "DAL@BOS",
+      "leans": [
+        {
+          "alt": 4.5,
+          "e": 5.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[ROLE?]",
+            "B2B",
+            "DOG7",
+            "MT-",
+            "C0.65",
+            "Z0.87",
+            "TMO"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.48,
+          "opp": "—",
+          "p": "Cooper Flagg",
+          "s": "AST",
+          "st": "3.5",
+          "std": 5.5,
+          "t": "DAL"
+        },
+        {
+          "alt": 5.5,
+          "e": 5.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "OT-ADJ",
+            "C0.78",
+            "Z1.02"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.44,
+          "opp": "—",
+          "p": "Jayson Tatum",
+          "s": "AST",
+          "st": "4",
+          "std": 6.5,
+          "t": "BOS"
+        },
+        {
+          "alt": 5.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "MT+",
+            "C0.70",
+            "Z0.70"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "—",
+          "p": "Sam Hauser",
+          "s": "PTS",
+          "st": "4",
+          "std": 6.5,
+          "t": "BOS"
+        }
+      ],
+      "mkt": 217.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "BOS": [],
+        "DAL": [
+          "Dereck Lively II (Lively (foot) is listed as out for Thursday's game in Minnesota.)",
+          "Kyrie Irving (Irving (knee) has been ruled out for Sunday's game against the Celtics.)",
+          "Max Christie (Christie (ankle) has been ruled out for Sunday's game against the Celtics.)",
+          "Sergio de Larrea (De Larrea (knee) has been ruled out for Thursday's game at Minnesota.)",
+          "Tarik Biberovic (Biberovic (heel) is out for Thursday's game against Minnesota.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "BOS": [],
+        "DAL": [
+          "Daniel Gafford (Gafford (shoulder) is probable to play in Sunday's game against the Celtics.)",
+          "Santi Aldama (Aldama (ankle) is listed as questionable for Sunday's game in Boston.)"
+        ]
+      },
+      "tip": "10:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          14,
+          16
+        ],
+        "skipped": [
+          "Ja'kobe Walter PTS (no rung priced 1.40+ at or below std)",
+          "OG Anunoby REB (no rung priced 1.40+ at or below std)",
+          "Scottie Barnes PTS (ruled OUT)",
+          "Scottie Barnes REB (ruled OUT)",
+          "Scottie Barnes AST (ruled OUT)"
+        ],
+        "stats": [
+          32,
+          37
+        ]
+      },
+      "ctx": "Out TOP3: Scottie Barnes (TOR); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 14 of 16 players (32 of 37 player-stats); skipped: Ja'kobe Walter PTS (no rung priced 1.40+ at or below std), OG Anunoby REB (no rung priced 1.40+ at or below std), Scottie Barnes PTS (ruled OUT), Scottie Barnes REB (ruled OUT), Scottie Barnes AST (ruled OUT)",
+      "engine": "nba-session v3.19-p4",
+      "id": "NYK@TOR",
+      "leans": [
+        {
+          "alt": 11.5,
+          "e": 5.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "C0.81",
+            "Z1.02"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.56,
+          "opp": "—",
+          "p": "Karl-Anthony Towns",
+          "s": "REB",
+          "st": "4",
+          "std": 12.5,
+          "t": "NYK"
+        },
+        {
+          "alt": 5.5,
+          "e": 3.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "C0.70",
+            "Z0.76"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.67,
+          "opp": "—",
+          "p": "Andre Drummond",
+          "s": "REB",
+          "st": "3",
+          "std": 6.5,
+          "t": "NYK"
+        },
+        {
+          "alt": 17.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.83",
+            "Z0.74"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "—",
+          "p": "Karl-Anthony Towns",
+          "s": "PTS",
+          "st": "4",
+          "std": 20.5,
+          "t": "NYK"
+        }
+      ],
+      "mkt": 217.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "NYK": [],
+        "TOR": [
+          "Kawhi Leonard (Head coach Darko Rajakovic said Wednesday that Leonard (knee) is doing individual on-court work and is progressing well, Michael Grange of Sportsnet.ca reports.)",
+          "Nate Bittle (Bittle (foot) has been ruled out for Sunday's game against the Knicks, Zulfi Sheikh of Sportsnet.ca reports.)",
+          "Scottie Barnes (Barnes (groin) is listed as questionable for Sunday's game against the Knicks, Michael Grange of Sportsnet.ca reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "NYK": [],
+        "TOR": [
+          "Kevin McCullar Jr. (McCullar signed a two-way contract with the Raptors on Thursday, Michael Scotto of HoopsHype.com reports.)"
+        ]
+      },
+      "tip": "10:00"
     }
   ],
-  "generated": "2026-11-15T20:30:02Z",
+  "generated": "2026-11-15T21:30:02Z",
   "totals": [
     [
       "IND@PHI",
@@ -451,6 +662,16 @@
       "SAS@UTA",
       null,
       225.5
+    ],
+    [
+      "DAL@BOS",
+      null,
+      217.5
+    ],
+    [
+      "NYK@TOR",
+      null,
+      217.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
