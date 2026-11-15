@@ -212,9 +212,112 @@
         ]
       },
       "tip": "08:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          16,
+          17
+        ],
+        "skipped": [
+          "Derrick Jones REB (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          43,
+          44
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 16 of 17 players (43 of 44 player-stats); skipped: Derrick Jones REB (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.19-p4",
+      "id": "CHA@LAC",
+      "leans": [
+        {
+          "alt": 8.5,
+          "e": 3.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "MT-",
+            "C0.71",
+            "Z0.82"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.63,
+          "opp": "—",
+          "p": "Keaton Wagler",
+          "s": "PTS",
+          "st": "4",
+          "std": 9.5,
+          "t": "LAC"
+        },
+        {
+          "alt": 3.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "OT-ADJ",
+            "C0.73",
+            "Z0.69"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.69,
+          "opp": "—",
+          "p": "Derrick Jones Jr.",
+          "s": "REB",
+          "st": "3",
+          "std": 3.5,
+          "t": "LAC"
+        },
+        {
+          "alt": 3.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "MT+",
+            "C0.66",
+            "Z0.48"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.69,
+          "opp": "—",
+          "p": "Ryan Kalkbrenner",
+          "s": "REB",
+          "st": "3",
+          "std": 3.5,
+          "t": "CHA"
+        }
+      ],
+      "mkt": 213.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "CHA": [
+          "Dennis Schroder (Schroder has been diagnosed with a left hamstring strain and will be reevaluated in two weeks, Michael Scotto of HoopsHype.com reports.)",
+          "Kon Knueppel (Knueppel (hamstring) was diagnosed with a left hamstring strain Sunday and will be re-evaluated in four weeks.)"
+        ],
+        "LAC": [
+          "Bradley Beal (Beal (knee) will not be ready for the start of the regular season, NBA writer Justin Russo reports.)",
+          "Brandon Ingram (Ingram (Achilles) won't play in Friday's game against the Thunder, per Law Murray of The Athletic.)",
+          "Jordan Miller (Miller underwent surgery Wednesday to repair a torn left rotator cuff and will be re-evaluated in six months, per Law Murray of The Athletic.)",
+          "Yanic Konan Niederhauser (Niederhauser (foot) is out for Tuesday's game against Phoenix, Ohm Youngmisuk of ESPN.com reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "CHA": [],
+        "LAC": []
+      },
+      "tip": "08:30"
     }
   ],
-  "generated": "2026-11-15T19:30:02Z",
+  "generated": "2026-11-15T20:05:02Z",
   "totals": [
     [
       "IND@PHI",
@@ -225,6 +328,11 @@
       "LAL@PHX",
       null,
       225.5
+    ],
+    [
+      "CHA@LAC",
+      null,
+      213.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
