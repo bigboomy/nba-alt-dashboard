@@ -7,25 +7,75 @@
       "b2b": [],
       "cov": {
         "players": [
-          13,
-          13
+          14,
+          14
         ],
         "skipped": [],
         "stats": [
-          42,
-          42
+          33,
+          33
         ]
       },
-      "ctx": "Out TOP3: Caleb Wilson (CHI), Evan Mobley (CLE); Returning: none; Depleted: none; missed last game: Peyton Watson. Coverage: evaluated 13 of 13 players (42 of 42 player-stats); skipped: none",
-      "engine": "nba-session v3.21-p4",
+      "ctx": "Out TOP3: Caleb Wilson (CHI), Evan Mobley (CLE); Returning: none; Depleted: CLE (3 rotation out); missed last game: Jarrett Allen, Peyton Watson. Coverage: evaluated 14 of 14 players (33 of 33 player-stats); skipped: none",
+      "engine": "nba-session v3.23-p4",
       "id": "CHI@CLE",
       "leans": [
         {
           "alt": 1.5,
+          "e": 5.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "[ROLE?]",
+            "MU+4%",
+            "DOG7",
+            "OT-ADJ",
+            "C0.70",
+            "Z1.05",
+            "TMO"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.44,
+          "opp": "CLE 12th most AST allowed · pace +2.6",
+          "p": "Matas Buzelis",
+          "s": "AST",
+          "st": "4",
+          "std": 1.5,
+          "t": "CHI"
+        },
+        {
+          "alt": 7.5,
           "e": 3.2,
           "f": [
             "LEAN",
             "U0",
+            "[ROLE?]",
+            "MU+4%",
+            "DNP-LAST",
+            "OT-ADJ",
+            "MT-",
+            "C0.87",
+            "Z0.30",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.42,
+          "opp": "CHI 8th most REB allowed · pace +2.6",
+          "p": "Jarrett Allen",
+          "s": "REB",
+          "st": "3",
+          "std": 8.5,
+          "t": "CLE"
+        },
+        {
+          "alt": 1.5,
+          "e": 3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
             "[Std?]",
             "[ROLE?]",
             "MU+5%",
@@ -36,12 +86,34 @@
             "TMO"
           ],
           "h": "80% (8/10)",
-          "o": 1.42,
+          "o": 1.48,
           "opp": "CHI 7th most AST allowed · pace +2.6",
           "p": "Peyton Watson",
           "s": "AST",
-          "st": "4",
+          "st": "3",
           "std": 1.5,
+          "t": "CLE"
+        },
+        {
+          "alt": 8.5,
+          "e": 6.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR85",
+            "[ROLE?]",
+            "MU+5%",
+            "C0.60",
+            "Z1.40",
+            "TMO"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.36,
+          "opp": "CHI 4th most PTS allowed · pace +2.6",
+          "p": "Meleek Thomas",
+          "s": "PTS",
+          "st": "4",
+          "std": 11.5,
           "t": "CLE"
         }
       ],
@@ -55,20 +127,37 @@
         ],
         "CLE": [
           "Evan Mobley (Mobley will receive treatment and participate in rehab after the team confirmed a diagnosis of a right great toe sprain, and he'll be re-evaluated in the next 7-to-10 days.)",
+          "Jaylon Tyson (Tyson (ankle) has been ruled out for Monday's game against Chicago.)",
           "Nae'Qwan Tomlin (Tomlin is set to miss several weeks with a lower back stress reaction, Chris Fedor of The Cleveland Plain Dealer reports.)",
           "Sam Merrill (Merrill (elbow) has been ruled out for Monday's game against the Bulls.)"
         ]
       },
-      "picks": [],
+      "picks": [
+        {
+          "alt": 9.5,
+          "e": 8.3,
+          "f": [
+            "[ROLE?]",
+            "MU+5%",
+            "C0.67",
+            "Z1.15",
+            "TMO",
+            "U0.5"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.5,
+          "opp": "CHI 4th most PTS allowed · pace +2.6",
+          "p": "Meleek Thomas",
+          "s": "PTS",
+          "st": "3",
+          "std": 11.5,
+          "t": "CLE"
+        }
+      ],
       "proj": null,
       "q": {
-        "CHI": [
-          "Jalen Smith (Smith (finger) is listed as questionable for Monday's game against Cleveland.)"
-        ],
-        "CLE": [
-          "Jaylon Tyson (Tyson (ankle) has been downgraded to doubtful for Monday's game against the Bulls.)",
-          "Peyton Watson (Watson (abdominal soreness) is questionable to play in Monday's game against the Bulls.)"
-        ]
+        "CHI": [],
+        "CLE": []
       },
       "tip": "11:00"
     },
@@ -85,66 +174,67 @@
           "Anthony Davis AST (no rung priced 1.40+ at or below std)"
         ],
         "stats": [
-          43,
-          44
+          31,
+          32
         ]
       },
-      "ctx": "Out TOP3: Ty Jerome (MEM); Returning: none; Depleted: MEM (3 rotation out); missed last game: none. Coverage: evaluated 15 of 15 players (43 of 44 player-stats); skipped: Anthony Davis AST (no rung priced 1.40+ at or below std)",
-      "engine": "nba-session v3.21-p4",
+      "ctx": "Out TOP3: Ty Jerome (MEM); Returning: none; Depleted: MEM (3 rotation out); missed last game: none. Coverage: evaluated 15 of 15 players (31 of 32 player-stats); skipped: Anthony Davis AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.23-p4",
       "id": "MEM@WAS",
       "leans": [
         {
-          "alt": 5.5,
-          "e": 5.1,
-          "f": [
-            "LEAN",
-            "U0",
-            "MISS",
-            "B2B",
-            "OT-ADJ",
-            "C0.69",
-            "Z0.99"
-          ],
-          "h": "90% (9/10)",
-          "o": 1.44,
-          "opp": "MEM 5th fewest REB allowed · pace +0.7",
-          "p": "Alexandre Sarr",
-          "s": "REB",
-          "st": "3.5",
-          "std": 6.5,
-          "t": "WAS"
-        },
-        {
-          "alt": 1.5,
-          "e": 4.2,
+          "alt": 6.5,
+          "e": 3.5,
           "f": [
             "LEAN",
             "U0",
             "[Std?]",
             "B2B",
             "OT-ADJ",
-            "MT-",
-            "C0.54",
-            "Z0.79"
+            "C0.81",
+            "Z0.59"
           ],
           "h": "80% (8/10)",
-          "o": 1.53,
-          "opp": "MEM 8th fewest 3PM allowed · pace +0.7",
-          "p": "Kyshawn George",
-          "s": "3PM",
-          "st": "3.5",
-          "std": 1.5,
+          "o": 1.71,
+          "opp": "MEM 5th fewest REB allowed · pace +0.7",
+          "p": "Alexandre Sarr",
+          "s": "REB",
+          "st": "2.5",
+          "std": 6.5,
           "t": "WAS"
+        },
+        {
+          "alt": 5.5,
+          "e": 5.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR85",
+            "[ROLE?]",
+            "OPP-B2B",
+            "MU+5%",
+            "OT-ADJ",
+            "C0.60",
+            "Z1.66",
+            "TMO"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.27,
+          "opp": "WAS 2nd most REB allowed · pace +0.7",
+          "p": "Cedric Coward",
+          "s": "REB",
+          "st": "4",
+          "std": 7.5,
+          "t": "MEM"
         }
       ],
-      "mkt": 232.5,
+      "mkt": 231.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
       "out": {
         "MEM": [
           "GG Jackson (Jackson will undergo surgery to repair the broken fifth metatarsal in his left foot and is set to miss significant time.)",
           "Isaiah Stewart (Stewart is out for Monday's game against the Wizards due to an illness.)",
-          "Quinten Post (Post (concussion) is questionable for Monday's game against the Wizards.)",
           "Richie Saunders (Saunders signed a two-way contract with the Grizzlies on Saturday, Shams Charania of ESPN reports.)",
           "Scotty Pippen Jr. (Pippen (back) is progressing in his recovery but is still considered week-to-week.)",
           "Ty Jerome (Jerome (hip) has been ruled out for Monday's game against the Wizards.)"
@@ -159,9 +249,7 @@
       "picks": [],
       "proj": null,
       "q": {
-        "MEM": [
-          "Zach Edey (Edey (ankle) is questionable for Monday's game against Washington.)"
-        ],
+        "MEM": [],
         "WAS": []
       },
       "tip": "11:00"
@@ -173,26 +261,25 @@
       "cov": {
         "players": [
           14,
-          15
+          14
         ],
         "skipped": [
-          "Jalen Suggs REB (no rung priced 1.40+ at or below std)",
-          "Neemias Queta PTS (ruled OUT)",
-          "Neemias Queta REB (ruled OUT)",
+          "Desmond Bane AST (no rung priced 1.40+ at or below std)",
+          "Sam Hauser REB (no rung priced 1.40+ at or below std)",
           "Tristan Da Silva REB (no rung priced 1.40+ at or below std)"
         ],
         "stats": [
-          45,
-          49
+          33,
+          36
         ]
       },
-      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 14 of 15 players (45 of 49 player-stats); skipped: Jalen Suggs REB (no rung priced 1.40+ at or below std), Neemias Queta PTS (ruled OUT), Neemias Queta REB (ruled OUT), Tristan Da Silva REB (no rung priced 1.40+ at or below std)",
-      "engine": "nba-session v3.21-p4",
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 14 of 14 players (33 of 36 player-stats); skipped: Desmond Bane AST (no rung priced 1.40+ at or below std), Sam Hauser REB (no rung priced 1.40+ at or below std), Tristan Da Silva REB (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.23-p4",
       "id": "ORL@BOS",
       "leans": [
         {
           "alt": 5.5,
-          "e": 4.9,
+          "e": 5.8,
           "f": [
             "LEAN",
             "U0",
@@ -203,7 +290,7 @@
             "Z0.89"
           ],
           "h": "90% (9/10)",
-          "o": 1.42,
+          "o": 1.5,
           "opp": "ORL 9th most AST allowed · pace -2.5",
           "p": "Jayson Tatum",
           "s": "AST",
@@ -212,51 +299,71 @@
           "t": "BOS"
         },
         {
-          "alt": 3.5,
-          "e": 3.5,
+          "alt": 5.5,
+          "e": 4.2,
           "f": [
             "LEAN",
             "U0",
-            "B2B",
-            "MU-4%",
+            "OPP-B2B",
+            "DOG7",
             "OT-ADJ",
-            "C0.67",
-            "Z1.13"
+            "C0.64",
+            "Z0.77"
           ],
           "h": "80% (8/10)",
-          "o": 1.44,
-          "opp": "ORL 7th fewest REB allowed · pace -2.5",
-          "p": "Paul George",
-          "s": "REB",
-          "st": "3.5",
-          "std": 4.5,
-          "t": "BOS"
+          "o": 1.53,
+          "opp": "BOS 15th fewest AST allowed · pace -2.5",
+          "p": "Franz Wagner",
+          "s": "AST",
+          "st": "4",
+          "std": 6.5,
+          "t": "ORL"
         },
         {
-          "alt": 3.5,
-          "e": 3.4,
+          "alt": 5.5,
+          "e": 4.1,
           "f": [
             "LEAN",
             "U0",
             "[Std?]",
+            "B2B",
+            "OT-ADJ",
+            "C0.73",
+            "Z0.63"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.56,
+          "opp": "ORL 14th fewest PTS allowed · pace -2.5",
+          "p": "Sam Hauser",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 6.5,
+          "t": "BOS"
+        },
+        {
+          "alt": 5.5,
+          "e": 4.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR85",
             "OPP-B2B",
             "DOG7",
             "OT-ADJ",
-            "MT+",
-            "C0.66",
-            "Z0.70"
+            "C0.59",
+            "Z2.07"
           ],
-          "h": "78% (7/9)",
-          "o": 1.5,
-          "opp": "BOS 15th fewest AST allowed · pace -2.5",
-          "p": "Anthony Black",
-          "s": "AST",
-          "st": "4",
-          "std": 4.5,
+          "h": "100% (10/10)",
+          "o": 1.21,
+          "opp": "BOS 12th most REB allowed · pace -2.5",
+          "p": "Wendell Carter Jr.",
+          "s": "REB",
+          "st": "5",
+          "std": 8.5,
           "t": "ORL"
         }
       ],
-      "mkt": 212.5,
+      "mkt": 214.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
       "out": {
@@ -284,27 +391,49 @@
       ],
       "cov": {
         "players": [
-          15,
-          15
+          16,
+          16
         ],
         "skipped": [
           "Reed Sheppard AST (no rung priced 1.40+ at or below std)"
         ],
         "stats": [
-          43,
-          44
+          33,
+          34
         ]
       },
-      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: Fred Vanvleet. Coverage: evaluated 15 of 15 players (43 of 44 player-stats); skipped: Reed Sheppard AST (no rung priced 1.40+ at or below std)",
-      "engine": "nba-session v3.21-p4",
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: Fred Vanvleet. Coverage: evaluated 16 of 16 players (33 of 34 player-stats); skipped: Reed Sheppard AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.23-p4",
       "id": "HOU@MIA",
       "leans": [
+        {
+          "alt": 11.5,
+          "e": 4.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "OPP-B2B",
+            "OT-ADJ",
+            "MT+",
+            "C0.72",
+            "Z1.04"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.53,
+          "opp": "HOU 7th fewest PTS allowed · pace +0.1",
+          "p": "Davion Mitchell",
+          "s": "PTS",
+          "st": "4",
+          "std": 13.5,
+          "t": "MIA"
+        },
         {
           "alt": 11.5,
           "e": 4.1,
           "f": [
             "LEAN",
             "U0",
+            "[Std?]",
             "B2B",
             "DNP-LAST",
             "C0.75",
@@ -334,7 +463,7 @@
             "TMO-Q"
           ],
           "h": "80% (8/10)",
-          "o": 1.71,
+          "o": 1.69,
           "opp": "MIA 1st most AST allowed · pace +0.1",
           "p": "Alperen Sengun",
           "s": "AST",
@@ -343,26 +472,25 @@
           "t": "HOU"
         },
         {
-          "alt": 1.5,
-          "e": 3.3,
+          "alt": 9.5,
+          "e": 5.6,
           "f": [
             "LEAN",
             "U0",
-            "MISS",
-            "[Std?]",
+            "HR85",
             "OPP-B2B",
             "OT-ADJ",
             "MT+",
-            "C0.65",
-            "Z0.59"
+            "C0.59",
+            "Z1.50"
           ],
-          "h": "80% (8/10)",
-          "o": 1.5,
-          "opp": "HOU 9th fewest 3PM allowed · pace +0.1",
+          "h": "100% (10/10)",
+          "o": 1.29,
+          "opp": "HOU 7th fewest PTS allowed · pace +0.1",
           "p": "Davion Mitchell",
-          "s": "3PM",
-          "st": "4",
-          "std": 1.5,
+          "s": "PTS",
+          "st": "5",
+          "std": 13.5,
           "t": "MIA"
         }
       ],
@@ -401,16 +529,15 @@
           16
         ],
         "skipped": [
-          "Day'Ron Sharpe PTS (no rung priced 1.40+ at or below std)",
           "Egor Demin AST (no rung priced 1.40+ at or below std)"
         ],
         "stats": [
-          43,
-          45
+          32,
+          33
         ]
       },
-      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 16 of 16 players (43 of 45 player-stats); skipped: Day'Ron Sharpe PTS (no rung priced 1.40+ at or below std), Egor Demin AST (no rung priced 1.40+ at or below std)",
-      "engine": "nba-session v3.21-p4",
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 16 of 16 players (32 of 33 player-stats); skipped: Egor Demin AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.23-p4",
       "id": "PHI@BKN",
       "leans": [
         {
@@ -435,24 +562,23 @@
         },
         {
           "alt": 7.5,
-          "e": 3.6,
+          "e": 3.1,
           "f": [
             "LEAN",
             "U0",
             "CUSH",
-            "[Std?]",
             "OPP-B2B",
             "MT+",
             "C0.73",
             "Z1.03"
           ],
           "h": "86% (6/7)",
-          "o": 1.5,
+          "o": 1.53,
           "opp": "PHI 8th fewest PTS allowed · pace -0.2",
           "p": "Danny Wolf",
           "s": "PTS",
           "st": "4",
-          "std": 9.5,
+          "std": 8.5,
           "t": "BKN"
         }
       ],
@@ -710,7 +836,7 @@
       "tip": "12:00"
     }
   ],
-  "generated": "2026-11-16T23:35:02Z",
+  "generated": "2026-11-16T23:37:38Z",
   "totals": [
     [
       "CHI@CLE",
@@ -720,12 +846,12 @@
     [
       "MEM@WAS",
       null,
-      232.5
+      231.5
     ],
     [
       "ORL@BOS",
       null,
-      212.5
+      214.5
     ],
     [
       "HOU@MIA",
