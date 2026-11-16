@@ -1,7 +1,7 @@
 {
   "book": "Pointsbet AU, decimal odds",
   "date": "Tue 17 Nov 2026",
-  "engine": "nba-session v3.21-p4",
+  "engine": "nba-session v3.23-p4",
   "games": [
     {
       "b2b": [],
@@ -477,9 +477,240 @@
         ]
       },
       "tip": "11:30"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "skipped": [
+          "De'anthony Melton REB (no rung priced 1.40+ at or below std)",
+          "Derik Queen AST (no rung priced 1.40+ at or below std)",
+          "Saddiq Bey AST (no rung priced 1.40+ at or below std)",
+          "Will Richard REB (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          33,
+          37
+        ]
+      },
+      "ctx": "Out TOP3: Stephen Curry (GSW), Trey Murphy III (NOP); Returning: none; Depleted: NOP (3 rotation out); missed last game: none. Coverage: evaluated 15 of 15 players (33 of 37 player-stats); skipped: De'anthony Melton REB (no rung priced 1.40+ at or below std), Derik Queen AST (no rung priced 1.40+ at or below std), Saddiq Bey AST (no rung priced 1.40+ at or below std), Will Richard REB (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.23-p4",
+      "id": "GSW@NOP",
+      "leans": [
+        {
+          "alt": 3.5,
+          "e": 4.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[Std?]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.73",
+            "Z0.74",
+            "TMO"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.59,
+          "opp": "NOP 14th fewest REB allowed · pace +1.7",
+          "p": "De'Anthony Melton",
+          "s": "REB",
+          "st": "4",
+          "std": 3.5,
+          "t": "GSW"
+        },
+        {
+          "alt": 19.5,
+          "e": 3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.90",
+            "Z0.45",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.5,
+          "opp": "GSW 10th fewest PTS allowed · pace +1.7",
+          "p": "Zion Williamson",
+          "s": "PTS",
+          "st": "3",
+          "std": 21.5,
+          "t": "NOP"
+        },
+        {
+          "alt": 5.5,
+          "e": 3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "MU+5%",
+            "OT-ADJ",
+            "MT-",
+            "C0.76",
+            "Z0.54",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.8,
+          "opp": "NOP 3rd most AST allowed · pace +1.7",
+          "p": "Draymond Green",
+          "s": "AST",
+          "st": "3",
+          "std": 5.5,
+          "t": "GSW"
+        }
+      ],
+      "mkt": 223.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "GSW": [
+          "Brandon Williams (Williams (hamstring) will miss at least one week, per Anthony Slater of ESPN.com.)",
+          "Jimmy Butler III (Butler (knee) could return sometime between January and February as he continues recovering from a torn right ACL, Anthony Slater of ESPN reports.)",
+          "Kristaps Porzingis (Porzingis announced on his social media that he's stepping away from basketball.)",
+          "Moses Moody (Moody (knee) is progressing toward a potential return between December and January after rupturing his left patellar tendon in March, Anthony Slater of ESPN reports.)",
+          "Stephen Curry (Curry has been diagnosed with an oblique abdominal tear and will be re-evaluated in two weeks, Shams Charania of ESPN reports.)"
+        ],
+        "NOP": [
+          "Bennedict Mathurin (Mathurin (foot) has been ruled out for Monday's game against the Warriors.)",
+          "Bryce McGowens (McGowens (elbow) has been ruled out for Monday's game against the Warriors.)",
+          "Dejounte Murray (Murray (ankle) is out for Friday's game against Memphis.)",
+          "Trendon Watford (Watford (ankle) has been ruled out for Monday's game against Golden State.)",
+          "Trey Murphy III (Murphy (knees) has been ruled out for Monday's game against Golden State.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "GSW": [
+          "Gui Santos (Santos is questionable for Monday's game against New Orleans due to right ankle inflammation.)"
+        ],
+        "NOP": []
+      },
+      "tip": "12:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          15,
+          16
+        ],
+        "skipped": [
+          "Lamelo Ball REB (no rung priced 1.40+ at or below std)",
+          "Shannon Jr. PTS (no ESPN match)"
+        ],
+        "stats": [
+          37,
+          39
+        ]
+      },
+      "ctx": "Out TOP3: Ja Morant (POR), Anthony Edwards (MIN); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 15 of 16 players (37 of 39 player-stats); skipped: Lamelo Ball REB (no rung priced 1.40+ at or below std), Shannon Jr. PTS (no ESPN match)",
+      "engine": "nba-session v3.23-p4",
+      "id": "POR@MIN",
+      "leans": [
+        {
+          "alt": 14.5,
+          "e": 4.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.73",
+            "Z0.91",
+            "TMO"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.42,
+          "opp": "POR 12th fewest PTS allowed · pace +0.8",
+          "p": "Ayo Dosunmu",
+          "s": "PTS",
+          "st": "4",
+          "std": 17.5,
+          "t": "MIN"
+        },
+        {
+          "alt": 4.5,
+          "e": 3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "OT-ADJ",
+            "MT+",
+            "C0.72",
+            "Z0.58",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.59,
+          "opp": "POR 12th fewest PTS allowed · pace +0.8",
+          "p": "Trey Lyles",
+          "s": "PTS",
+          "st": "4",
+          "std": 5.5,
+          "t": "MIN"
+        },
+        {
+          "alt": 11.5,
+          "e": 4.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR85",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.67",
+            "Z1.58",
+            "TMO"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.21,
+          "opp": "POR 12th fewest PTS allowed · pace +0.8",
+          "p": "Jaden McDaniels",
+          "s": "PTS",
+          "st": "5",
+          "std": 16.5,
+          "t": "MIN"
+        }
+      ],
+      "mkt": 227.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "MIN": [
+          "Anthony Edwards (Edwards underwent a successful arthroscopic procedure on his right knee Thursday, the Timberwolves announced.)",
+          "Donte DiVincenzo (DiVincenzo (Achilles) remains confident that he'll return during the 2026-27 season, Jon Krawczynski of The Athletic reports.)",
+          "Jaylen Clark (Clark (hamstring) has been ruled out for the next two weeks.)"
+        ],
+        "POR": [
+          "Chris Youngblood (Youngblood (foot) is out for Monday's game against the Timberwolves.)",
+          "Ja Morant (Head coach Micah Nori said Morant met with a doctor in Los Angeles, who gave him a positive outlook on his recovery from the hamstring injury. While Nori declined to update Morant's timetable, he added Morant \"may not be out for as long as we thought,\" Trail Blazers Insider Sean Highkin reports.)",
+          "Shaedon Sharpe (Sharpe suffered a torn meniscus in his knee and is expected to miss six months, per Shams Charania of ESPN.)",
+          "Vit Krejci (Krejci underwent surgery on his fractured left ankle Wednesday and will be re-evaluated in eight weeks, Brett Siegel of ClutchPoints.com reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "MIN": [],
+        "POR": []
+      },
+      "tip": "12:00"
     }
   ],
-  "generated": "2026-11-16T23:05:02Z",
+  "generated": "2026-11-16T23:35:02Z",
   "totals": [
     [
       "CHI@CLE",
@@ -505,6 +736,16 @@
       "PHI@BKN",
       null,
       226.5
+    ],
+    [
+      "GSW@NOP",
+      null,
+      223.5
+    ],
+    [
+      "POR@MIN",
+      null,
+      227.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
