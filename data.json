@@ -277,9 +277,209 @@
         "ORL": []
       },
       "tip": "11:00"
+    },
+    {
+      "b2b": [
+        "HOU"
+      ],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "skipped": [
+          "Reed Sheppard AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          43,
+          44
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: Fred Vanvleet. Coverage: evaluated 15 of 15 players (43 of 44 player-stats); skipped: Reed Sheppard AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.21-p4",
+      "id": "HOU@MIA",
+      "leans": [
+        {
+          "alt": 11.5,
+          "e": 4.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "B2B",
+            "DNP-LAST",
+            "C0.75",
+            "Z0.70",
+            "TMO-Q"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.56,
+          "opp": "MIA 7th most PTS allowed · pace +0.1",
+          "p": "Fred Vanvleet",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 13.5,
+          "t": "HOU"
+        },
+        {
+          "alt": 6.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "B2B",
+            "MU+5%",
+            "C0.76",
+            "Z1.02",
+            "TMO-Q"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.71,
+          "opp": "MIA 1st most AST allowed · pace +0.1",
+          "p": "Alperen Sengun",
+          "s": "AST",
+          "st": "2.5",
+          "std": 6.5,
+          "t": "HOU"
+        },
+        {
+          "alt": 1.5,
+          "e": 3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "OPP-B2B",
+            "OT-ADJ",
+            "MT+",
+            "C0.65",
+            "Z0.59"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.5,
+          "opp": "HOU 9th fewest 3PM allowed · pace +0.1",
+          "p": "Davion Mitchell",
+          "s": "3PM",
+          "st": "4",
+          "std": 1.5,
+          "t": "MIA"
+        }
+      ],
+      "mkt": 232.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "HOU": [
+          "Clint Capela (Capela (ankle) is out for Monday's game against the Heat.)",
+          "Marcus Smart (Smart has been suspended three games for throwing a punch during Wednesday's matchup against Golden State, Shams Charania of ESPN reports.)",
+          "Steven Adams (Adams (calf) is out for Monday's game against the Heat.)"
+        ],
+        "MIA": [
+          "Nikola Jovic (Jovic (illness) is out for Monday's game against Houston.)",
+          "Pelle Larsson (Larsson won't play in Monday's game against the Rockets due to an illness, Ira Winderman of the South Florida Sun Sentinel reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "HOU": [
+          "Amen Thompson (Thompson (knee) is listed as questionable for Monday's game against the Heat.)",
+          "Julian Phillips (Phillips (illness) is available for Wednesday's game against Dallas.)"
+        ],
+        "MIA": []
+      },
+      "tip": "11:30"
+    },
+    {
+      "b2b": [
+        "PHI"
+      ],
+      "cov": {
+        "players": [
+          16,
+          16
+        ],
+        "skipped": [
+          "Day'Ron Sharpe PTS (no rung priced 1.40+ at or below std)",
+          "Egor Demin AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          43,
+          45
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 16 of 16 players (43 of 45 player-stats); skipped: Day'Ron Sharpe PTS (no rung priced 1.40+ at or below std), Egor Demin AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.21-p4",
+      "id": "PHI@BKN",
+      "leans": [
+        {
+          "alt": 23.5,
+          "e": 3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "B2B",
+            "C0.90",
+            "Z0.47",
+            "TMO-Q"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.59,
+          "opp": "BKN 10th most PTS allowed · pace -0.2",
+          "p": "Tyrese Maxey",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 25.5,
+          "t": "PHI"
+        },
+        {
+          "alt": 7.5,
+          "e": 3.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[Std?]",
+            "OPP-B2B",
+            "MT+",
+            "C0.73",
+            "Z1.03"
+          ],
+          "h": "86% (6/7)",
+          "o": 1.5,
+          "opp": "PHI 8th fewest PTS allowed · pace -0.2",
+          "p": "Danny Wolf",
+          "s": "PTS",
+          "st": "4",
+          "std": 9.5,
+          "t": "BKN"
+        }
+      ],
+      "mkt": 226.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "BKN": [],
+        "PHI": [
+          "Adem Bona (Bona (back) will be re-evaluated in approximately one week after seeing a specialist, Ky Carlin of USA Today reports.)",
+          "Ariel Hukporti (Hukporti has sustained a season-ending ruptured right Achilles tendon, per Shams Charania of ESPN.)",
+          "Dominick Barlow (Barlow (back) participated in Thursday's shootaround but doesn't have a timeline to return to game action, Ky Carlin of USA Today reports.)",
+          "LeBron James (James (back) has been ruled out for Monday's game against the Nets.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "BKN": [],
+        "PHI": [
+          "Joel Embiid (Embiid (foot) is questionable for Monday's game against the Nets.)"
+        ]
+      },
+      "tip": "11:30"
     }
   ],
-  "generated": "2026-11-16T22:30:02Z",
+  "generated": "2026-11-16T23:05:02Z",
   "totals": [
     [
       "CHI@CLE",
@@ -295,6 +495,16 @@
       "ORL@BOS",
       null,
       212.5
+    ],
+    [
+      "HOU@MIA",
+      null,
+      232.5
+    ],
+    [
+      "PHI@BKN",
+      null,
+      226.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
