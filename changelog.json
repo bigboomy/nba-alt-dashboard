@@ -2,6 +2,30 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-17",
+   "version": "nba-session v3.23-p4",
+   "component": "pipeline",
+   "title": "HR85 hit-rate tier (0u)",
+   "change": "Each player/stat's best-priced Pointsbet rung at $1.20-1.39 whose matchup-adjusted sample (8+ games) cleared the line every time, with the line at most 70% of the average, is logged as a 0u lean flagged HR85 with its own record on the dashboard, outside the near-miss leans.",
+   "aim": "Test Mitch's 85%-at-$1.20+ goal: on the fixed 13-16 Nov board this rule went 21-3 (88%, +2.73u flat); KILL under 83% over 40, CONFIRM at 85%+ over 40, then Mitch decides on staking."
+  },
+  {
+   "date": "2026-11-17",
+   "version": "nba-session v3.22-p4",
+   "component": "pipeline",
+   "title": "Threes back to board-only",
+   "change": "Threes (3PM) are no longer picked or leaned; they stay logged and graded on the whole board every night.",
+   "aim": "Only 5 graded threes props sat in our price band, so they go back to data-only until there are 60 to judge (critic C-3)."
+  },
+  {
+   "date": "2026-11-17",
+   "version": "nba-session v3.21-p4",
+   "component": "pipeline",
+   "title": "Board results use the adjusted sample",
+   "change": "The nightly whole-board CSV now counts hits, perfect samples, edge and cushion on the matchup-adjusted values the engine actually picks on (raw counts kept alongside); 13-16 Nov were re-graded.",
+   "aim": "Make board-based rule tests (HR85, best price, the scout) describe the live rule rather than the pre-v3.20 one."
+  },
+  {
    "date": "2026-11-16",
    "version": "nba-session v3.21-p4",
    "component": "pipeline",

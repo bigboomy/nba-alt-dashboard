@@ -234,6 +234,7 @@ details.fold.inner{background:transparent;margin:10px 0}
   <div id="results"></div>
   <div id="totalsSec"></div>
   <div id="leansSec"></div>
+  <div id="hrSec"></div>
 
   <details class="legend" style="margin-top:16px">
     <summary>How to read this</summary>
@@ -671,15 +672,15 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   var LOPEN={};
   function gameHtml(g,gi){
-    var np=g.picks.length,nl=g.leans.length;
-    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span><span class="ct">'+np+' pick'+(np===1?'':'s')+(nl?' · '+nl+' lean'+(nl===1?'':'s'):'')+'</span></div>';
+    var np=g.picks.length,nl=g.leans.length,nh=g.leans.filter(function(p){return p.f.indexOf('HR85')>=0}).length;
+    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span><span class="ct">'+np+' pick'+(np===1?'':'s')+(nl-nh?' · '+(nl-nh)+' lean'+(nl-nh===1?'':'s'):'')+(nh?' · '+nh+' HR85':'')+'</span></div>';
     var th='<thead><tr><th>Player · bet</th><th class="n">Odds</th><th class="n">Hit</th><th class="n">Edge</th><th class="n">Stake</th></tr></thead>';
     var body='',lb='';
     g.picks.forEach(function(p,i){try{body+=pickRow(p,gi,i)}catch(e){}});
     g.leans.forEach(function(p,i){try{lb+=pickRow(p,gi,i)}catch(e){}});
     var tbl=body?'<table class="pt">'+th+'<tbody>'+body+'</tbody></table>':'<div class="none">No pick cleared the gates.</div>';
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
-    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · near-misses, tracked not bet</span></summary>'+
+    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · near-misses'+(nh?' and HR85 hit-rate tier':'')+', tracked not bet</span></summary>'+
       '<p class="lfd">Just missed a pick rule (one miss in the sample, cushion, price cap or looser test). 0u.</p><table class="pt">'+th+'<tbody>'+lb+'</tbody></table></details>':'';
     return '<section class="game">'+head+'<div class="gw">'+infoTable(g)+'</div><div class="gw gp">'+tbl+lf+'</div></section>';
   }
@@ -1048,14 +1049,37 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     box.innerHTML=h;bindLean();
   }
   function bindLean(){var f=$('leanFold');if(f)f.addEventListener('toggle',function(){LEAN_OPEN=this.open})}
+  /* ---------- HR85 hit-rate tier (nba-session v3.23, 17 Nov): perfect adjusted samples at $1.20-1.39, 0u ----------
+     Rows in the Sheet's leans tab flagged HR85. Own record, never in the leans record or the staked record.
+     Test: KILL under 83% over 40 settled; CONFIRM at 85%+ over 40, then Mitch decides on staking. */
+  var HRS=null,HR_OPEN=false;
+  function renderHr(){
+    var box=$('hrSec');if(!box) return;
+    var head='<details class="fold" id="hrFold"'+(HR_OPEN?' open':'')+'><summary><span>Hit-rate tier HR85 (0u) <span class="meta">target 85%+ at $1.20-1.39</span></span></summary>';
+    if(LEANFAIL||!HRS){box.innerHTML=LEANFAIL?'':head+'<div class="none">Loading…</div></details>';bindHr();return}
+    var settled=HRS.filter(function(r){return r.result==='W'||r.result==='L'}),asOf=null;
+    settled.forEach(function(r){if(!asOf||r.date>asOf)asOf=r.date});
+    var pend=HRS.filter(function(r){return !r.result}).length;
+    if(!asOf){box.innerHTML=head+'<div class="none">No settled HR85 rungs yet'+(pend?' ('+pend+' pending)':'')+'. The tier starts with the 17 Nov slate (v3.23).</div></details>';bindHr();return}
+    function win(nd){var lo=addDays(asOf,-(nd-1));return HRS.filter(function(r){return r.date>=lo&&r.date<=asOf})}
+    var row=function(label,s){return '<tr><td>'+label+'</td><td>'+s.n+'</td><td>'+s.w+'-'+s.l+'</td><td class="'+(s.hit===null?'':(s.hit>=85?'pos':(s.hit<83?'neg':'')))+'">'+(s.hit===null?'—':s.hit.toFixed(1)+'%')+'</td><td>'+(s.impl===null?'—':s.impl.toFixed(1)+'%')+'</td><td class="'+cls(s.u)+'">'+sg(s.u,2)+'u</td></tr>'};
+    var all=leanSum(HRS);
+    var verdict=all.n<40?'<b>Collecting: '+all.n+' of 40 settled.</b> ':(all.hit>=85?'<b>CONFIRM: 85%+ over '+all.n+'. Mitch decides on staking.</b> ':(all.hit<83?'<b>KILL: under 83% over '+all.n+'.</b> ':'<b>Between 83% and 85% over '+all.n+': keep collecting.</b> '));
+    box.innerHTML=head+'<div class="ts"><table style="min-width:0"><thead><tr><th></th><th>n</th><th>W-L</th><th>Hit</th><th>Implied</th><th>Units</th></tr></thead><tbody>'+
+      row('7d',leanSum(win(7)))+row('Since 17 Nov',all)+'</tbody></table></div>'+
+      '<p class="cap">'+verdict+'Best-priced Pointsbet rung at $1.20-1.39 where every game of the matchup-adjusted sample (8+ games) cleared the line, line at most 70% of the average. Break-even at $1.25 is 80%. Units are notional, flat 1u; nothing is staked. As of '+fdate(asOf)+(all.v?' · '+all.v+' void':'')+(pend?' · '+pend+' pending':'')+'.</p></details>';
+    bindHr();
+  }
+  function bindHr(){var f=$('hrFold');if(f)f.addEventListener('toggle',function(){HR_OPEN=this.open})}
   function loadLeans(){
     fetch(LEAN_URL,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){
       if(/^\s*</.test(t))throw 0;
       var objs=CORE.parseCSV(t);if(objs.length&&!('lean_id' in objs[0]))throw 0;
       LEANS=objs.filter(function(o){return String(o.lean_id||'').trim()&&/^\d{4}-\d{2}-\d{2}$/.test(String(o.date||'').trim())}).map(function(o){
-        return {date:String(o.date).trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase()}}).filter(function(r){return r.odds!==null&&r.odds>1});
+        return {date:String(o.date).trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase(),hr:/(^|\s)HR85(\s|$)/.test(String(o.flags||''))}}).filter(function(r){return r.odds!==null&&r.odds>1});
+      HRS=LEANS.filter(function(r){return r.hr});LEANS=LEANS.filter(function(r){return !r.hr});renderHr();
       LEANFAIL=false;renderLeans();
-    }).catch(function(){LEANFAIL=true;renderLeans()});
+    }).catch(function(){LEANFAIL=true;renderLeans();renderHr()});
   }
   /* ---------- web-push alerts (sender: tools/nba_push.py in the slate task) ---------- */
   var VAPID_PUB='BAz_aD_630fWpE5YorIANph4tGZ4JUfxDRHYaX_2ljyWtFdlPUW7nxMeR_QDMbV1rJvCuM1BQQamnBDwg8gq444';
@@ -1172,7 +1196,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     .then(init).catch(slateFail);
   loadSched();loadHealth();
   renderTotals();loadTotals();
-  renderLeans();loadLeans();
+  renderLeans();renderHr();loadLeans();
   alertUI();clearBadge();loadChoices();
   foot();
 })();
