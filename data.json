@@ -809,9 +809,117 @@
         "MIL": []
       },
       "tip": "12:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "skipped": [
+          "De'andre Hunter REB (no rung priced 1.40+ at or below std)",
+          "Zach LaVine PTS (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          43,
+          45
+        ]
+      },
+      "ctx": "Out TOP3: Jalen Williams (OKC); Returning: none; Depleted: OKC (4 rotation out); missed last game: none. Coverage: evaluated 15 of 15 players (43 of 45 player-stats); skipped: De'andre Hunter REB (no rung priced 1.40+ at or below std), Zach LaVine PTS (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.20-p4",
+      "id": "OKC@SAC",
+      "leans": [
+        {
+          "alt": 5.5,
+          "e": 4.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "DOG7",
+            "C0.73",
+            "Z0.75"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.53,
+          "opp": "OKC 6th fewest AST allowed · pace -0.2",
+          "p": "Darius Acuff Jr.",
+          "s": "AST",
+          "st": "4",
+          "std": 6.5,
+          "t": "SAC"
+        },
+        {
+          "alt": 8.5,
+          "e": 3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "C0.82",
+            "Z0.58",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.59,
+          "opp": "SAC 2nd most PTS allowed · pace -0.2",
+          "p": "Aday Mara",
+          "s": "PTS",
+          "st": "3",
+          "std": 9.5,
+          "t": "OKC"
+        },
+        {
+          "alt": 11.5,
+          "e": 3.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "DOG7",
+            "MT-",
+            "C0.89",
+            "Z0.28"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.65,
+          "opp": "OKC 12th most REB allowed · pace -0.2",
+          "p": "Domantas Sabonis",
+          "s": "REB",
+          "st": "3",
+          "std": 12.5,
+          "t": "SAC"
+        }
+      ],
+      "mkt": 223.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "OKC": [
+          "Cason Wallace (Wallace underwent surgery Friday to repair a torn labrum in his left shoulder and will be re-evaluated before the end of the regular season, Clemente Almanza of USA Today reports.)",
+          "Chet Holmgren (Holmgren underwent a biological treatment Friday to address a small patellar tendon tear and will miss at least 8-10 weeks, Nick Crain of Slam reports.)",
+          "Jalen Williams (Williams (leg) underwent successful surgery Wednesday to \"address a fractured left fibula and reconstruction of ankle ligaments following a fracture and dislocation.\" He will be re-evaluated before the end of the regular season, Tim MacMahon of ESPN.com reports.)",
+          "Jaylin Williams (Williams (back) has been ruled out for Sunday's game against the Kings.)",
+          "Thomas Sorber (Sorber (knee) has been ruled out for Friday's game against the Clippers.)"
+        ],
+        "SAC": [
+          "Ben Simmons (Simmons underwent successful surgery Tuesday to repair a torn right Achilles tendon, James Ham of ESPN 1320 Sacramento reports.)",
+          "Maxime Raynaud (Raynaud (knee) has been ruled out for Sunday's game against the Thunder.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "OKC": [
+          "Ajay Mitchell (Mitchell (ankle) is questionable to suit up for Sunday's game against the Kings.)"
+        ],
+        "SAC": [
+          "Precious Achiuwa (Achiuwa (ankle) is questionable for Sunday's game against the Thunder.)"
+        ]
+      },
+      "tip": "13:00"
     }
   ],
-  "generated": "2026-11-15T23:30:02Z",
+  "generated": "2026-11-16T00:30:02Z",
   "totals": [
     [
       "IND@PHI",
@@ -852,6 +960,11 @@
       "ATL@MIL",
       null,
       233.5
+    ],
+    [
+      "OKC@SAC",
+      null,
+      223.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
