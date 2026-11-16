@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-16",
+   "version": "nba-session v3.21-p4",
+   "component": "pipeline",
+   "title": "A tier: staked picks need 6pp edge",
+   "change": "A perfect-sample pick is only staked when its stated edge is 6.0pp or more (A tier); a perfect pick with 3-6pp edge is kept as a 0u lean flagged THIN (B tier) on the same rung and tracked in the leans section.",
+   "aim": "Live since 7 Nov perfect picks with 6pp+ went 13-3 (+2.92u) and thinner ones 3-3; the replay of 9-16 Nov drops only 1 of 14 picks, so it guards against thin edges without cutting volume much."
+  },
+  {
+   "date": "2026-11-16",
    "version": "nba-session v3.20-p4",
    "component": "pipeline",
    "title": "Opponent matchup adjustment",
