@@ -1,970 +1,300 @@
 {
   "book": "Pointsbet AU, decimal odds",
-  "date": "Mon 16 Nov 2026",
-  "engine": "nba-session v3.20-p4",
+  "date": "Tue 17 Nov 2026",
+  "engine": "nba-session v3.21-p4",
   "games": [
     {
       "b2b": [],
       "cov": {
         "players": [
-          16,
-          16
+          13,
+          13
         ],
         "skipped": [],
         "stats": [
-          41,
-          41
+          42,
+          42
         ]
       },
-      "ctx": "Out TOP3: Tyrese Haliburton (IND), Joel Embiid (PHI); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 16 of 16 players (41 of 41 player-stats); skipped: none",
-      "engine": "nba-session v3.19-p4",
-      "id": "IND@PHI",
+      "ctx": "Out TOP3: Caleb Wilson (CHI), Evan Mobley (CLE); Returning: none; Depleted: none; missed last game: Peyton Watson. Coverage: evaluated 13 of 13 players (42 of 42 player-stats); skipped: none",
+      "engine": "nba-session v3.21-p4",
+      "id": "CHI@CLE",
       "leans": [
         {
-          "alt": 23.5,
-          "e": 3.3,
-          "f": [
-            "LEAN",
-            "U0",
-            "CUSH",
-            "[ROLE?]",
-            "C0.90",
-            "Z0.46",
-            "TMO"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.5,
-          "opp": "—",
-          "p": "Tyrese Maxey",
-          "s": "PTS",
-          "st": "4",
-          "std": 26.5,
-          "t": "PHI"
-        },
-        {
-          "alt": 17.5,
+          "alt": 1.5,
           "e": 3.2,
           "f": [
             "LEAN",
             "U0",
+            "[Std?]",
             "[ROLE?]",
-            "DOG7",
-            "C0.81",
-            "Z0.82",
+            "MU+5%",
+            "DNP-LAST",
+            "OT-ADJ",
+            "C0.52",
+            "Z0.87",
             "TMO"
           ],
           "h": "80% (8/10)",
           "o": 1.42,
-          "opp": "—",
-          "p": "Pascal Siakam",
-          "s": "PTS",
+          "opp": "CHI 7th most AST allowed · pace +2.6",
+          "p": "Peyton Watson",
+          "s": "AST",
           "st": "4",
-          "std": 20.5,
-          "t": "IND"
+          "std": 1.5,
+          "t": "CLE"
         }
       ],
-      "mkt": 225.5,
+      "mkt": 241.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
       "out": {
-        "IND": [
-          "Ben Sheppard (Head coach Rick Carlise confirmed Sheppard will miss \"months\" after undergoing surgery to repair a torn meniscus in his left knee, Tony East of Forbes.com reports.)",
-          "Johnny Furphy (Furphy (knee) is practicing with the G League's Noblesville Boom, per Alex Golden of SI.com.)",
-          "Tyrese Haliburton (Head coach Rick Carlisle said Wednesday that Haliburton (hamstring) will miss at least 10 more days, Alex Golden of SI.com reports.)"
+        "CHI": [
+          "Caleb Wilson (Wilson (hand) is expected to miss four to six weeks, Shams Charania of ESPN reports.)",
+          "Tobe Awaka (Awaka (back) has been ruled out for Monday's game against the Cavaliers.)"
         ],
-        "PHI": [
-          "Adem Bona (Bona (back) will be re-evaluated in approximately one week after seeing a specialist, Ky Carlin of USA Today reports.)",
-          "Ariel Hukporti (Hukporti has sustained a season-ending ruptured right Achilles tendon, per Shams Charania of ESPN.)",
-          "Dominick Barlow (Barlow (back) participated in Thursday's shootaround but doesn't have a timeline to return to game action, Ky Carlin of USA Today reports.)",
-          "Joel Embiid (Embiid (right foot injury management) has been ruled out for Sunday's game against the Pacers.)"
-        ]
-      },
-      "picks": [
-        {
-          "alt": 7.5,
-          "e": 7.6,
-          "f": [
-            "[ROLE?]",
-            "DOG7",
-            "MT-",
-            "C0.60",
-            "Z1.35",
-            "TMO",
-            "U1"
-          ],
-          "h": "100% (10/10)",
-          "o": 1.44,
-          "opp": "—",
-          "p": "Obi Toppin",
-          "s": "PTS",
-          "st": "4",
-          "std": 9.5,
-          "t": "IND"
-        }
-      ],
-      "proj": null,
-      "q": {
-        "IND": [
-          "Aaron Nesmith (Nesmith (hand) is listed as questionable for Sunday's game against Philadelphia.)",
-          "Andrew Nembhard (Nembhard is questionable for Sunday's game against the 76ers due to left hip soreness.)",
-          "T.J. McConnell (McConnell (hamstring) is listed as probable for Sunday's game against the 76ers.)"
-        ],
-        "PHI": []
-      },
-      "tip": "05:00"
-    },
-    {
-      "b2b": [],
-      "cov": {
-        "players": [
-          15,
-          15
-        ],
-        "skipped": [],
-        "stats": [
-          39,
-          39
-        ]
-      },
-      "ctx": "Out TOP3: Austin Reaves (LAL); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 15 of 15 players (39 of 39 player-stats); skipped: none",
-      "engine": "nba-session v3.19-p4",
-      "id": "LAL@PHX",
-      "leans": [
-        {
-          "alt": 31.5,
-          "e": 4.6,
-          "f": [
-            "LEAN",
-            "U0",
-            "CUSH",
-            "[ROLE?]",
-            "C0.79",
-            "Z0.89",
-            "TMO"
-          ],
-          "h": "90% (9/10)",
-          "o": 1.4,
-          "opp": "—",
-          "p": "Luka Doncic",
-          "s": "PTS",
-          "st": "4",
-          "std": 35.5,
-          "t": "LAL"
-        },
-        {
-          "alt": 5.5,
-          "e": 4.1,
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.66",
-            "Z1.05"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.56,
-          "opp": "—",
-          "p": "Khaman Maluach",
-          "s": "PTS",
-          "st": "4",
-          "std": 6.5,
-          "t": "PHX"
-        },
-        {
-          "alt": 5.5,
-          "e": 3.4,
-          "f": [
-            "LEAN",
-            "U0",
-            "MT-",
-            "C0.72",
-            "Z0.77"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.74,
-          "opp": "—",
-          "p": "Miles Bridges",
-          "s": "REB",
-          "st": "3",
-          "std": 5.5,
-          "t": "PHX"
-        }
-      ],
-      "mkt": 225.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "out": {
-        "LAL": [
-          "Austin Reaves (Reaves (heel) has been ruled out for Sunday's game against the Suns, Daniel Starkand of LakersNation.com reports.)"
-        ],
-        "PHX": [
-          "Mark Williams (Williams underwent surgery Thursday to repair a torn labrum in his left shoulder and will miss an extended period of time, Shams Charania of ESPN reports.)"
+        "CLE": [
+          "Evan Mobley (Mobley will receive treatment and participate in rehab after the team confirmed a diagnosis of a right great toe sprain, and he'll be re-evaluated in the next 7-to-10 days.)",
+          "Nae'Qwan Tomlin (Tomlin is set to miss several weeks with a lower back stress reaction, Chris Fedor of The Cleveland Plain Dealer reports.)",
+          "Sam Merrill (Merrill (elbow) has been ruled out for Monday's game against the Bulls.)"
         ]
       },
       "picks": [],
       "proj": null,
       "q": {
-        "LAL": [
-          "Adou Thiero (Thiero (ankle) is questionable for Sunday's game against the Suns.)",
-          "Collin Sexton (Sexton (head) is questionable for Sunday's game against the Suns, Daniel Starkand of LakersNation.com reports.)"
+        "CHI": [
+          "Jalen Smith (Smith (finger) is listed as questionable for Monday's game against Cleveland.)"
         ],
-        "PHX": [
-          "Drew Timme (The Suns claimed Timme off waivers Monday, per Michael Scotto of HoopsHype.com.)"
+        "CLE": [
+          "Jaylon Tyson (Tyson (ankle) has been downgraded to doubtful for Monday's game against the Bulls.)",
+          "Peyton Watson (Watson (abdominal soreness) is questionable to play in Monday's game against the Bulls.)"
         ]
       },
-      "tip": "08:00"
+      "tip": "11:00"
     },
     {
-      "b2b": [],
+      "b2b": [
+        "WAS"
+      ],
       "cov": {
         "players": [
-          16,
-          17
+          15,
+          15
         ],
         "skipped": [
-          "Derrick Jones REB (no rung priced 1.40+ at or below std)"
+          "Anthony Davis AST (no rung priced 1.40+ at or below std)"
         ],
         "stats": [
           43,
           44
         ]
       },
-      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 16 of 17 players (43 of 44 player-stats); skipped: Derrick Jones REB (no rung priced 1.40+ at or below std)",
-      "engine": "nba-session v3.19-p4",
-      "id": "CHA@LAC",
+      "ctx": "Out TOP3: Ty Jerome (MEM); Returning: none; Depleted: MEM (3 rotation out); missed last game: none. Coverage: evaluated 15 of 15 players (43 of 44 player-stats); skipped: Anthony Davis AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.21-p4",
+      "id": "MEM@WAS",
       "leans": [
         {
-          "alt": 8.5,
-          "e": 3.7,
-          "f": [
-            "LEAN",
-            "U0",
-            "OT-ADJ",
-            "MT-",
-            "C0.71",
-            "Z0.82"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.63,
-          "opp": "—",
-          "p": "Keaton Wagler",
-          "s": "PTS",
-          "st": "4",
-          "std": 9.5,
-          "t": "LAC"
-        },
-        {
-          "alt": 3.5,
-          "e": 3.5,
-          "f": [
-            "LEAN",
-            "U0",
-            "[Std?]",
-            "OT-ADJ",
-            "C0.73",
-            "Z0.69"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.69,
-          "opp": "—",
-          "p": "Derrick Jones Jr.",
-          "s": "REB",
-          "st": "3",
-          "std": 3.5,
-          "t": "LAC"
-        },
-        {
-          "alt": 3.5,
-          "e": 3.5,
-          "f": [
-            "LEAN",
-            "U0",
-            "[Std?]",
-            "MT+",
-            "C0.66",
-            "Z0.48"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.69,
-          "opp": "—",
-          "p": "Ryan Kalkbrenner",
-          "s": "REB",
-          "st": "3",
-          "std": 3.5,
-          "t": "CHA"
-        }
-      ],
-      "mkt": 213.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "out": {
-        "CHA": [
-          "Dennis Schroder (Schroder has been diagnosed with a left hamstring strain and will be reevaluated in two weeks, Michael Scotto of HoopsHype.com reports.)",
-          "Kon Knueppel (Knueppel (hamstring) was diagnosed with a left hamstring strain Sunday and will be re-evaluated in four weeks.)"
-        ],
-        "LAC": [
-          "Bradley Beal (Beal (knee) will not be ready for the start of the regular season, NBA writer Justin Russo reports.)",
-          "Brandon Ingram (Ingram (Achilles) won't play in Friday's game against the Thunder, per Law Murray of The Athletic.)",
-          "Jordan Miller (Miller underwent surgery Wednesday to repair a torn left rotator cuff and will be re-evaluated in six months, per Law Murray of The Athletic.)",
-          "Yanic Konan Niederhauser (Niederhauser (foot) is out for Tuesday's game against Phoenix, Ohm Youngmisuk of ESPN.com reports.)"
-        ]
-      },
-      "picks": [],
-      "proj": null,
-      "q": {
-        "CHA": [],
-        "LAC": []
-      },
-      "tip": "08:30"
-    },
-    {
-      "b2b": [],
-      "cov": {
-        "players": [
-          13,
-          14
-        ],
-        "skipped": [
-          "De'Aaron Fox REB (no rung priced 1.40+ at or below std)",
-          "DeAaron Fox PTS (no rung priced 1.40+ at or below std)"
-        ],
-        "stats": [
-          30,
-          32
-        ]
-      },
-      "ctx": "Out TOP3: Lauri Markkanen (UTA); Returning: none; Depleted: UTA (3 rotation out); missed last game: none. Coverage: evaluated 13 of 14 players (30 of 32 player-stats); skipped: De'Aaron Fox REB (no rung priced 1.40+ at or below std), DeAaron Fox PTS (no rung priced 1.40+ at or below std)",
-      "engine": "nba-session v3.19-p4",
-      "id": "SAS@UTA",
-      "leans": [
-        {
-          "alt": 1.5,
-          "e": 4.6,
+          "alt": 5.5,
+          "e": 5.1,
           "f": [
             "LEAN",
             "U0",
             "MISS",
-            "[Std?]",
+            "B2B",
             "OT-ADJ",
-            "MT-",
-            "C0.47",
-            "Z0.76"
+            "C0.69",
+            "Z0.99"
           ],
           "h": "90% (9/10)",
-          "o": 1.4,
-          "opp": "—",
-          "p": "Devin Vassell",
-          "s": "AST",
-          "st": "4",
-          "std": 2.5,
-          "t": "SAS"
+          "o": 1.44,
+          "opp": "MEM 5th fewest REB allowed · pace +0.7",
+          "p": "Alexandre Sarr",
+          "s": "REB",
+          "st": "3.5",
+          "std": 6.5,
+          "t": "WAS"
         },
         {
-          "alt": 24.5,
+          "alt": 1.5,
           "e": 4.2,
           "f": [
             "LEAN",
             "U0",
+            "[Std?]",
+            "B2B",
             "OT-ADJ",
             "MT-",
-            "C0.79",
-            "Z0.53"
+            "C0.54",
+            "Z0.79"
           ],
           "h": "80% (8/10)",
           "o": 1.53,
-          "opp": "—",
-          "p": "Victor Wembanyama",
-          "s": "PTS",
-          "st": "4",
-          "std": 26.5,
-          "t": "SAS"
-        },
-        {
-          "alt": 3.5,
-          "e": 3.6,
-          "f": [
-            "LEAN",
-            "U0",
-            "[Std?]",
-            "[ROLE?]",
-            "DOG7",
-            "OT-ADJ",
-            "MT+",
-            "C0.83",
-            "Z0.57",
-            "TMO"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.67,
-          "opp": "—",
-          "p": "Darryn Peterson",
-          "s": "AST",
-          "st": "2",
-          "std": 3.5,
-          "t": "UTA"
-        }
-      ],
-      "mkt": 225.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "out": {
-        "SAS": [
-          "Jayden Quaintance (Quaintance has been around the team but has not yet been cleared for basketball activities, Matt Guzman of SI.com reports.)",
-          "Tobias Harris (Harris (calf) is out for Wednesday's game against Chicago, Jared Weiss of The Athletic reports.)"
-        ],
-        "UTA": [
-          "Jaren Jackson Jr. (Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.)",
-          "Jaxson Hayes (Hayes (knee) has been ruled out for Sunday's game against the Spurs.)",
-          "Jusuf Nurkic (Nurkic (toe) has begun participating in on-court activities as he continues recovering from a right foot injury sustained during an Oct. 4 preseason game against Denver. He will be re-evaluated in two weeks, the Jazz announced Friday.)",
-          "Lauri Markkanen (Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.)",
-          "Trey Alexander (Alexander won't play Wednesday against the Grizzlies due to a left knee bone bruise.)"
-        ]
-      },
-      "picks": [],
-      "proj": null,
-      "q": {
-        "SAS": [
-          "De'Aaron Fox (Fox (hip) is listed as questionable for Sunday's game against Utah.)"
-        ],
-        "UTA": []
-      },
-      "tip": "09:00"
-    },
-    {
-      "b2b": [
-        "DAL"
-      ],
-      "cov": {
-        "players": [
-          17,
-          17
-        ],
-        "skipped": [
-          "Morez Johnson REB (no rung priced 1.40+ at or below std)"
-        ],
-        "stats": [
-          38,
-          39
-        ]
-      },
-      "ctx": "Out TOP3: Kyrie Irving (DAL); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 17 of 17 players (38 of 39 player-stats); skipped: Morez Johnson REB (no rung priced 1.40+ at or below std)",
-      "engine": "nba-session v3.19-p4",
-      "id": "DAL@BOS",
-      "leans": [
-        {
-          "alt": 4.5,
-          "e": 5.6,
-          "f": [
-            "LEAN",
-            "U0",
-            "MISS",
-            "[ROLE?]",
-            "B2B",
-            "DOG7",
-            "MT-",
-            "C0.65",
-            "Z0.87",
-            "TMO"
-          ],
-          "h": "90% (9/10)",
-          "o": 1.48,
-          "opp": "—",
-          "p": "Cooper Flagg",
-          "s": "AST",
-          "st": "3.5",
-          "std": 5.5,
-          "t": "DAL"
-        },
-        {
-          "alt": 5.5,
-          "e": 5.1,
-          "f": [
-            "LEAN",
-            "U0",
-            "CUSH",
-            "OT-ADJ",
-            "C0.78",
-            "Z1.02"
-          ],
-          "h": "90% (9/10)",
-          "o": 1.44,
-          "opp": "—",
-          "p": "Jayson Tatum",
-          "s": "AST",
-          "st": "4",
-          "std": 6.5,
-          "t": "BOS"
-        },
-        {
-          "alt": 5.5,
-          "e": 3.5,
-          "f": [
-            "LEAN",
-            "U0",
-            "OT-ADJ",
-            "MT+",
-            "C0.70",
-            "Z0.70"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.44,
-          "opp": "—",
-          "p": "Sam Hauser",
-          "s": "PTS",
-          "st": "4",
-          "std": 6.5,
-          "t": "BOS"
-        }
-      ],
-      "mkt": 217.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "out": {
-        "BOS": [],
-        "DAL": [
-          "Dereck Lively II (Lively (foot) is listed as out for Thursday's game in Minnesota.)",
-          "Kyrie Irving (Irving (knee) has been ruled out for Sunday's game against the Celtics.)",
-          "Max Christie (Christie (ankle) has been ruled out for Sunday's game against the Celtics.)",
-          "Sergio de Larrea (De Larrea (knee) has been ruled out for Thursday's game at Minnesota.)",
-          "Tarik Biberovic (Biberovic (heel) is out for Thursday's game against Minnesota.)"
-        ]
-      },
-      "picks": [],
-      "proj": null,
-      "q": {
-        "BOS": [],
-        "DAL": [
-          "Daniel Gafford (Gafford (shoulder) is probable to play in Sunday's game against the Celtics.)",
-          "Santi Aldama (Aldama (ankle) is listed as questionable for Sunday's game in Boston.)"
-        ]
-      },
-      "tip": "10:00"
-    },
-    {
-      "b2b": [],
-      "cov": {
-        "players": [
-          14,
-          16
-        ],
-        "skipped": [
-          "Ja'kobe Walter PTS (no rung priced 1.40+ at or below std)",
-          "OG Anunoby REB (no rung priced 1.40+ at or below std)",
-          "Scottie Barnes PTS (ruled OUT)",
-          "Scottie Barnes REB (ruled OUT)",
-          "Scottie Barnes AST (ruled OUT)"
-        ],
-        "stats": [
-          32,
-          37
-        ]
-      },
-      "ctx": "Out TOP3: Scottie Barnes (TOR); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 14 of 16 players (32 of 37 player-stats); skipped: Ja'kobe Walter PTS (no rung priced 1.40+ at or below std), OG Anunoby REB (no rung priced 1.40+ at or below std), Scottie Barnes PTS (ruled OUT), Scottie Barnes REB (ruled OUT), Scottie Barnes AST (ruled OUT)",
-      "engine": "nba-session v3.19-p4",
-      "id": "NYK@TOR",
-      "leans": [
-        {
-          "alt": 11.5,
-          "e": 5.1,
-          "f": [
-            "LEAN",
-            "U0",
-            "CUSH",
-            "C0.81",
-            "Z1.02"
-          ],
-          "h": "90% (9/10)",
-          "o": 1.56,
-          "opp": "—",
-          "p": "Karl-Anthony Towns",
-          "s": "REB",
-          "st": "4",
-          "std": 12.5,
-          "t": "NYK"
-        },
-        {
-          "alt": 5.5,
-          "e": 3.6,
-          "f": [
-            "LEAN",
-            "U0",
-            "[Std?]",
-            "C0.70",
-            "Z0.76"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.67,
-          "opp": "—",
-          "p": "Andre Drummond",
-          "s": "REB",
-          "st": "3",
-          "std": 6.5,
-          "t": "NYK"
-        },
-        {
-          "alt": 17.5,
-          "e": 3.5,
-          "f": [
-            "LEAN",
-            "U0",
-            "C0.83",
-            "Z0.74"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.44,
-          "opp": "—",
-          "p": "Karl-Anthony Towns",
-          "s": "PTS",
-          "st": "4",
-          "std": 20.5,
-          "t": "NYK"
-        }
-      ],
-      "mkt": 217.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "out": {
-        "NYK": [],
-        "TOR": [
-          "Kawhi Leonard (Head coach Darko Rajakovic said Wednesday that Leonard (knee) is doing individual on-court work and is progressing well, Michael Grange of Sportsnet.ca reports.)",
-          "Nate Bittle (Bittle (foot) has been ruled out for Sunday's game against the Knicks, Zulfi Sheikh of Sportsnet.ca reports.)",
-          "Scottie Barnes (Barnes (groin) is listed as questionable for Sunday's game against the Knicks, Michael Grange of Sportsnet.ca reports.)"
-        ]
-      },
-      "picks": [],
-      "proj": null,
-      "q": {
-        "NYK": [],
-        "TOR": [
-          "Kevin McCullar Jr. (McCullar signed a two-way contract with the Raptors on Thursday, Michael Scotto of HoopsHype.com reports.)"
-        ]
-      },
-      "tip": "10:00"
-    },
-    {
-      "b2b": [],
-      "cov": {
-        "players": [
-          15,
-          15
-        ],
-        "skipped": [],
-        "stats": [
-          49,
-          49
-        ]
-      },
-      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 15 of 15 players (49 of 49 player-stats); skipped: none",
-      "engine": "nba-session v3.20-p4",
-      "id": "HOU@WAS",
-      "leans": [
-        {
-          "alt": 13.5,
-          "e": 3.6,
-          "f": [
-            "LEAN",
-            "U0",
-            "[Std?]",
-            "C0.85",
-            "Z0.35"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.65,
-          "opp": "WAS 13th most PTS allowed · pace -1.4",
-          "p": "Jabari Smith",
-          "s": "PTS",
-          "st": "3",
-          "std": 13.5,
-          "t": "HOU"
-        },
-        {
-          "alt": 6.5,
-          "e": 3.5,
-          "f": [
-            "LEAN",
-            "U0",
-            "[Std?]",
-            "C0.80",
-            "Z0.85"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.71,
-          "opp": "WAS 7th most AST allowed · pace -1.4",
-          "p": "Alperen Sengun",
-          "s": "AST",
-          "st": "3",
-          "std": 6.5,
-          "t": "HOU"
-        },
-        {
-          "alt": 0.5,
-          "e": 3.3,
-          "f": [
-            "LEAN",
-            "U0",
-            "MU-6%",
-            "C0.57",
-            "Z0.66"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.87,
-          "opp": "WAS 4th fewest 3PM allowed · pace -1.4",
-          "p": "Alperen Sengun",
+          "opp": "MEM 8th fewest 3PM allowed · pace +0.7",
+          "p": "Kyshawn George",
           "s": "3PM",
-          "st": "3",
-          "std": 0.5,
-          "t": "HOU"
+          "st": "3.5",
+          "std": 1.5,
+          "t": "WAS"
         }
       ],
-      "mkt": 223.5,
+      "mkt": 232.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
       "out": {
-        "HOU": [
-          "Clint Capela (Capela (ankle) has been ruled out for Sunday's game at Washington.)",
-          "Fred VanVleet (VanVleet (right knee injury management) has been ruled out for Sunday's game against the Wizards.)",
-          "Marcus Smart (Smart has been suspended three games for throwing a punch during Wednesday's matchup against Golden State, Shams Charania of ESPN reports.)"
+        "MEM": [
+          "GG Jackson (Jackson will undergo surgery to repair the broken fifth metatarsal in his left foot and is set to miss significant time.)",
+          "Isaiah Stewart (Stewart is out for Monday's game against the Wizards due to an illness.)",
+          "Quinten Post (Post (concussion) is questionable for Monday's game against the Wizards.)",
+          "Richie Saunders (Saunders signed a two-way contract with the Grizzlies on Saturday, Shams Charania of ESPN reports.)",
+          "Scotty Pippen Jr. (Pippen (back) is progressing in his recovery but is still considered week-to-week.)",
+          "Ty Jerome (Jerome (hip) has been ruled out for Monday's game against the Wizards.)"
         ],
         "WAS": [
           "Jamir Watkins (The Wizards announced Thursday that Watkins has undergone surgery for a torn ACL.)",
           "Justin Champagnie (Champagnie (foot) is expected to miss several months, per Josh Robbins of The Athletic.)",
           "Reece Beekman (The Wizards announced Monday that Beekman sustained a right acromioclavicular joint injury and will be re-evaluated in approximately three weeks.)",
-          "Tristan Vukcevic (Vukcevic (hip) has been ruled out for Monday's game against Detroit.)"
+          "Tristan Vukcevic (Vukcevic (hip) has been ruled out for Monday's game against Memphis.)"
         ]
       },
       "picks": [],
       "proj": null,
       "q": {
-        "HOU": [],
-        "WAS": [
-          "Tre Johnson (Johnson is listed as questionable for Sunday's game against the Rockets due to lower-back soreness.)"
-        ]
+        "MEM": [
+          "Zach Edey (Edey (ankle) is questionable for Monday's game against Washington.)"
+        ],
+        "WAS": []
       },
       "tip": "11:00"
     },
     {
-      "b2b": [],
+      "b2b": [
+        "BOS"
+      ],
       "cov": {
         "players": [
-          16,
-          17
+          14,
+          15
         ],
         "skipped": [
-          "CJ McCollum REB (no rung priced 1.40+ at or below std)",
-          "Ryan Rollins PTS (ruled OUT)",
-          "Ryan Rollins 3PM (ruled OUT)"
+          "Jalen Suggs REB (no rung priced 1.40+ at or below std)",
+          "Neemias Queta PTS (ruled OUT)",
+          "Neemias Queta REB (ruled OUT)",
+          "Tristan Da Silva REB (no rung priced 1.40+ at or below std)"
         ],
         "stats": [
-          51,
-          54
+          45,
+          49
         ]
       },
-      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 16 of 17 players (51 of 54 player-stats); skipped: CJ McCollum REB (no rung priced 1.40+ at or below std), Ryan Rollins PTS (ruled OUT), Ryan Rollins 3PM (ruled OUT)",
-      "engine": "nba-session v3.20-p4",
-      "id": "ATL@MIL",
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 14 of 15 players (45 of 49 player-stats); skipped: Jalen Suggs REB (no rung priced 1.40+ at or below std), Neemias Queta PTS (ruled OUT), Neemias Queta REB (ruled OUT), Tristan Da Silva REB (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.21-p4",
+      "id": "ORL@BOS",
       "leans": [
         {
-          "alt": 11.5,
-          "e": 3.3,
+          "alt": 5.5,
+          "e": 4.9,
           "f": [
             "LEAN",
             "U0",
             "CUSH",
-            "MU+5%",
+            "B2B",
             "OT-ADJ",
-            "C0.74",
-            "Z0.62"
+            "C0.79",
+            "Z0.89"
           ],
-          "h": "80% (8/10)",
-          "o": 1.5,
-          "opp": "MIL 3rd most PTS allowed · pace +1.7",
-          "p": "Onyeka Okongwu",
-          "s": "PTS",
-          "st": "4",
-          "std": 13.5,
-          "t": "ATL"
-        }
-      ],
-      "mkt": 233.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "out": {
-        "ATL": [
-          "Asa Newell (Newell (toe) has been ruled out for Friday's game against Chicago.)",
-          "Henri Veesaar (Veesaar was diagnosed with a torn right ACL and is expected to miss the 2026-27 season, the Hawks announced Monday.)",
-          "Keshon Gilbert (Gilbert (knee) has been ruled out for Friday's game against the Bulls.)",
-          "Kingston Flemings (Flemings (back) has been ruled out for Sunday's game against the Bucks.)",
-          "Mouhamed Gueye (Gueye (foot) is ready to begin on-court activities and will be re-evaluated in four weeks, Brad Rowland of the Locked On Podcast Network reports.)"
-        ],
-        "MIL": [
-          "Ousmane Dieng (Dieng (finger) is listed as out for Sunday's game versus the Hawks.)",
-          "Ryan Rollins (Rollins (illness) is out for Sunday's game against the Hawks.)"
-        ]
-      },
-      "picks": [],
-      "proj": null,
-      "q": {
-        "ATL": [
-          "Jock Landale (Landale (hip) is listed as questionable for Sunday's game against Milwakee.)"
-        ],
-        "MIL": []
-      },
-      "tip": "12:00"
-    },
-    {
-      "b2b": [],
-      "cov": {
-        "players": [
-          15,
-          15
-        ],
-        "skipped": [
-          "De'andre Hunter REB (no rung priced 1.40+ at or below std)",
-          "Zach LaVine PTS (no rung priced 1.40+ at or below std)"
-        ],
-        "stats": [
-          43,
-          45
-        ]
-      },
-      "ctx": "Out TOP3: Jalen Williams (OKC); Returning: none; Depleted: OKC (4 rotation out); missed last game: none. Coverage: evaluated 15 of 15 players (43 of 45 player-stats); skipped: De'andre Hunter REB (no rung priced 1.40+ at or below std), Zach LaVine PTS (no rung priced 1.40+ at or below std)",
-      "engine": "nba-session v3.20-p4",
-      "id": "OKC@SAC",
-      "leans": [
+          "h": "90% (9/10)",
+          "o": 1.42,
+          "opp": "ORL 9th most AST allowed · pace -2.5",
+          "p": "Jayson Tatum",
+          "s": "AST",
+          "st": "3.5",
+          "std": 6.5,
+          "t": "BOS"
+        },
         {
-          "alt": 5.5,
-          "e": 4.2,
+          "alt": 3.5,
+          "e": 3.5,
           "f": [
             "LEAN",
             "U0",
-            "DOG7",
-            "C0.73",
-            "Z0.75"
+            "B2B",
+            "MU-4%",
+            "OT-ADJ",
+            "C0.67",
+            "Z1.13"
           ],
           "h": "80% (8/10)",
-          "o": 1.53,
-          "opp": "OKC 6th fewest AST allowed · pace -0.2",
-          "p": "Darius Acuff Jr.",
+          "o": 1.44,
+          "opp": "ORL 7th fewest REB allowed · pace -2.5",
+          "p": "Paul George",
+          "s": "REB",
+          "st": "3.5",
+          "std": 4.5,
+          "t": "BOS"
+        },
+        {
+          "alt": 3.5,
+          "e": 3.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "OPP-B2B",
+            "DOG7",
+            "OT-ADJ",
+            "MT+",
+            "C0.66",
+            "Z0.70"
+          ],
+          "h": "78% (7/9)",
+          "o": 1.5,
+          "opp": "BOS 15th fewest AST allowed · pace -2.5",
+          "p": "Anthony Black",
           "s": "AST",
           "st": "4",
-          "std": 6.5,
-          "t": "SAC"
-        },
-        {
-          "alt": 8.5,
-          "e": 3.9,
-          "f": [
-            "LEAN",
-            "U0",
-            "[ROLE?]",
-            "C0.82",
-            "Z0.58",
-            "TMO"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.59,
-          "opp": "SAC 2nd most PTS allowed · pace -0.2",
-          "p": "Aday Mara",
-          "s": "PTS",
-          "st": "3",
-          "std": 9.5,
-          "t": "OKC"
-        },
-        {
-          "alt": 11.5,
-          "e": 3.6,
-          "f": [
-            "LEAN",
-            "U0",
-            "DOG7",
-            "MT-",
-            "C0.89",
-            "Z0.28"
-          ],
-          "h": "80% (8/10)",
-          "o": 1.65,
-          "opp": "OKC 12th most REB allowed · pace -0.2",
-          "p": "Domantas Sabonis",
-          "s": "REB",
-          "st": "3",
-          "std": 12.5,
-          "t": "SAC"
+          "std": 4.5,
+          "t": "ORL"
         }
       ],
-      "mkt": 223.5,
+      "mkt": 212.5,
       "mkt_o": 1.9,
       "mkt_u": 1.9,
       "out": {
-        "OKC": [
-          "Cason Wallace (Wallace underwent surgery Friday to repair a torn labrum in his left shoulder and will be re-evaluated before the end of the regular season, Clemente Almanza of USA Today reports.)",
-          "Chet Holmgren (Holmgren underwent a biological treatment Friday to address a small patellar tendon tear and will miss at least 8-10 weeks, Nick Crain of Slam reports.)",
-          "Jalen Williams (Williams (leg) underwent successful surgery Wednesday to \"address a fractured left fibula and reconstruction of ankle ligaments following a fracture and dislocation.\" He will be re-evaluated before the end of the regular season, Tim MacMahon of ESPN.com reports.)",
-          "Jaylin Williams (Williams (back) has been ruled out for Sunday's game against the Kings.)",
-          "Thomas Sorber (Sorber (knee) has been ruled out for Friday's game against the Clippers.)"
+        "BOS": [
+          "Neemias Queta (Queta (rest) won't play in Monday's game against the Magic, Taylor Snow of the Celtics' official site reports.)"
         ],
-        "SAC": [
-          "Ben Simmons (Simmons underwent successful surgery Tuesday to repair a torn right Achilles tendon, James Ham of ESPN 1320 Sacramento reports.)",
-          "Maxime Raynaud (Raynaud (knee) has been ruled out for Sunday's game against the Thunder.)"
+        "ORL": [
+          "Izaiyah Nelson (Team president Jeff Weltman said Monday that Nelson (ankle) remains about a month away from returning to the court after offseason surgery, per Philip Rossman-Reich of OrlandoMagicDaily.com.)",
+          "Jonathan Isaac (Isaac (knee) has been ruled out for Monday's game against the Celtics.)",
+          "Noah Penda (Penda (hamstring) is making progress but remains without a timetable to return to game action, Jason Beede of the Orlando Sentinel reports.)",
+          "Paolo Banchero (Banchero is expected to be sidelined for the next four-to-six weeks due to a right high-ankle sprain, Shams Charania of ESPN reports.)"
         ]
       },
       "picks": [],
       "proj": null,
       "q": {
-        "OKC": [
-          "Ajay Mitchell (Mitchell (ankle) is questionable to suit up for Sunday's game against the Kings.)"
-        ],
-        "SAC": [
-          "Precious Achiuwa (Achiuwa (ankle) is questionable for Sunday's game against the Thunder.)"
-        ]
+        "BOS": [],
+        "ORL": []
       },
-      "tip": "13:00"
+      "tip": "11:00"
     }
   ],
-  "generated": "2026-11-16T00:30:02Z",
+  "generated": "2026-11-16T22:30:02Z",
   "totals": [
     [
-      "IND@PHI",
+      "CHI@CLE",
       null,
-      225.5
+      241.5
     ],
     [
-      "LAL@PHX",
+      "MEM@WAS",
       null,
-      225.5
+      232.5
     ],
     [
-      "CHA@LAC",
+      "ORL@BOS",
       null,
-      213.5
-    ],
-    [
-      "SAS@UTA",
-      null,
-      225.5
-    ],
-    [
-      "DAL@BOS",
-      null,
-      217.5
-    ],
-    [
-      "NYK@TOR",
-      null,
-      217.5
-    ],
-    [
-      "HOU@WAS",
-      null,
-      223.5
-    ],
-    [
-      "ATL@MIL",
-      null,
-      233.5
-    ],
-    [
-      "OKC@SAC",
-      null,
-      223.5
+      212.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
