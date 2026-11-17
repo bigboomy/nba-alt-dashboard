@@ -141,14 +141,249 @@
         ]
       },
       "tip": "11:30"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "skipped": [
+          "Victor Wembanyama AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          33,
+          34
+        ]
+      },
+      "ctx": "Out TOP3: Duncan Robinson (DET); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 15 of 15 players (33 of 34 player-stats); skipped: Victor Wembanyama AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.23-p4",
+      "id": "DET@SAS",
+      "leans": [
+        {
+          "alt": 4.5,
+          "e": 4.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[Std?]",
+            "OT-ADJ",
+            "MT+",
+            "C0.73",
+            "Z1.03"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.67,
+          "opp": "DET 9th most REB allowed · pace -0.2",
+          "p": "Keldon Johnson",
+          "s": "REB",
+          "st": "3",
+          "std": 5.5,
+          "t": "SAS"
+        },
+        {
+          "alt": 24.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "MT-",
+            "C0.81",
+            "Z0.45"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "DET 6th fewest PTS allowed · pace -0.2",
+          "p": "Victor Wembanyama",
+          "s": "PTS",
+          "st": "4",
+          "std": 27.5,
+          "t": "SAS"
+        },
+        {
+          "alt": 3.5,
+          "e": 3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[Std?]",
+            "MU-5%",
+            "OT-ADJ",
+            "C0.72",
+            "Z0.51"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.5,
+          "opp": "DET 2nd fewest AST allowed · pace -0.2",
+          "p": "Dylan Harper",
+          "s": "AST",
+          "st": "4",
+          "std": 4.5,
+          "t": "SAS"
+        },
+        {
+          "alt": 3.5,
+          "e": 5.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR85",
+            "[Std?]",
+            "OT-ADJ",
+            "MT+",
+            "C0.57",
+            "Z1.65"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.31,
+          "opp": "DET 9th most REB allowed · pace -0.2",
+          "p": "Keldon Johnson",
+          "s": "REB",
+          "st": "5",
+          "std": 5.5,
+          "t": "SAS"
+        }
+      ],
+      "mkt": 221.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "DET": [
+          "Duncan Robinson (Robinson will be re-evaluated in one week due to a left quadriceps strain, Coty M. Davis of The Detroit News reports.)",
+          "Isaiah Joe (Joe (hip) is out for Tuesday's game against the Spurs.)",
+          "Jalen Duren (Duren (hamstring) has begun on-court activity and will be re-evaluated in two weeks, Hunter Patterson of The Athletic reports.)",
+          "Ronald Holland II (Holland is out for Tuesday's game against San Antonio due to a left knee contusion.)",
+          "Taurean Prince (Prince (knee) has been ruled out for Tuesday's game against the Spurs.)"
+        ],
+        "SAS": [
+          "Jayden Quaintance (Quaintance has been around the team but has not yet been cleared for basketball activities, Matt Guzman of SI.com reports.)",
+          "Tobias Harris (Harris (calf) is likely to be sidelined until early December, per Jeff Garcia of KENS 5 San Antonio.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "DET": [],
+        "SAS": []
+      },
+      "tip": "12:00"
+    },
+    {
+      "b2b": [
+        "POR",
+        "MIN"
+      ],
+      "cov": {
+        "players": [
+          15,
+          16
+        ],
+        "skipped": [
+          "Shannon Jr. PTS (no ESPN match)"
+        ],
+        "stats": [
+          32,
+          33
+        ]
+      },
+      "ctx": "Out TOP3: Ja Morant (POR), Anthony Edwards (MIN); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 15 of 16 players (32 of 33 player-stats); skipped: Shannon Jr. PTS (no ESPN match)",
+      "engine": "nba-session v3.23-p4",
+      "id": "POR@MIN",
+      "leans": [
+        {
+          "alt": 15.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "B2B",
+            "OPP-B2B",
+            "C0.78",
+            "Z0.73",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "POR 10th fewest PTS allowed · pace +0.8",
+          "p": "Ayo Dosunmu",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 18.5,
+          "t": "MIN"
+        },
+        {
+          "alt": 5.5,
+          "e": 3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "B2B",
+            "OPP-B2B",
+            "C0.92",
+            "Z0.30",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.87,
+          "opp": "POR 8th fewest REB allowed · pace +0.8",
+          "p": "Jaden McDaniels",
+          "s": "REB",
+          "st": "2.5",
+          "std": 5.5,
+          "t": "MIN"
+        }
+      ],
+      "mkt": 226.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "MIN": [
+          "Anthony Edwards (Edwards underwent a successful arthroscopic procedure on his right knee Thursday, the Timberwolves announced.)",
+          "Donte DiVincenzo (DiVincenzo (Achilles) remains confident that he'll return during the 2026-27 season, Jon Krawczynski of The Athletic reports.)",
+          "Jaylen Clark (Clark (hamstring) has been ruled out for the next two weeks.)",
+          "Jonathan Kuminga (Kuminga (shoulder) is out for Tuesday's game against Portland.)",
+          "Zyon Pullin (Pullin (quadriceps) has been ruled out for Tuesday's game against Portland.)"
+        ],
+        "POR": [
+          "Chris Youngblood (Youngblood (heel) has been ruled out for Tuesday's game at Minnesota.)",
+          "Ja Morant (Head coach Micah Nori said Morant met with a doctor in Los Angeles, who gave him a positive outlook on his recovery from the hamstring injury. While Nori declined to update Morant's timetable, he added Morant \"may not be out for as long as we thought,\" Trail Blazers Insider Sean Highkin reports.)",
+          "Shaedon Sharpe (Sharpe suffered a torn meniscus in his knee and is expected to miss six months, per Shams Charania of ESPN.)",
+          "Vit Krejci (Krejci underwent surgery on his fractured left ankle Wednesday and will be re-evaluated in eight weeks, Brett Siegel of ClutchPoints.com reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "MIN": [],
+        "POR": [
+          "Deni Avdija (Avdija (foot) is questionable for Tuesday's game against the Timberwolves.)"
+        ]
+      },
+      "tip": "12:00"
     }
   ],
-  "generated": "2026-11-17T23:00:02Z",
+  "generated": "2026-11-17T23:35:02Z",
   "totals": [
     [
       "NYK@TOR",
       null,
       215.5
+    ],
+    [
+      "DET@SAS",
+      null,
+      221.5
+    ],
+    [
+      "POR@MIN",
+      null,
+      226.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
