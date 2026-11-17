@@ -834,9 +834,95 @@
         "POR": []
       },
       "tip": "12:00"
+    },
+    {
+      "b2b": [
+        "PHX"
+      ],
+      "cov": {
+        "players": [
+          16,
+          16
+        ],
+        "skipped": [
+          "Collin Gillespie REB (no rung priced 1.40+ at or below std)",
+          "DeMar DeRozan AST (no rung priced 1.40+ at or below std)",
+          "Miles Bridges AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          37,
+          40
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 16 of 16 players (37 of 40 player-stats); skipped: Collin Gillespie REB (no rung priced 1.40+ at or below std), DeMar DeRozan AST (no rung priced 1.40+ at or below std), Miles Bridges AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.23-p4",
+      "id": "PHX@DEN",
+      "leans": [
+        {
+          "alt": 4.5,
+          "e": 6.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "OPP-B2B",
+            "OT-ADJ",
+            "MT-",
+            "C0.64",
+            "Z0.74"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.87,
+          "opp": "PHX 5th most PTS allowed · pace -1.6",
+          "p": "Trevon Brazile",
+          "s": "PTS",
+          "st": "3",
+          "std": 4.5,
+          "t": "DEN"
+        },
+        {
+          "alt": 5.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "B2B",
+            "DOG7",
+            "C0.61",
+            "Z0.68"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "DEN 13th most PTS allowed · pace -1.6",
+          "p": "Luke Kennard",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 7.5,
+          "t": "PHX"
+        }
+      ],
+      "mkt": 230.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "out": {
+        "DEN": [
+          "Julian Strawther (Strawther (knee) was diagnosed with a left knee sprain Friday and will be re-evaluated in six weeks, Vinny Benedetto of The Denver Gazette reports.)"
+        ],
+        "PHX": [
+          "Mark Williams (Williams underwent surgery Thursday to repair a torn labrum in his left shoulder and will miss an extended period of time, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "DEN": [],
+        "PHX": [
+          "Ryan Dunn (Dunn (thumb) is listed as questionable for Monday's game against Denver.)"
+        ]
+      },
+      "tip": "13:00"
     }
   ],
-  "generated": "2026-11-16T23:37:38Z",
+  "generated": "2026-11-17T00:30:02Z",
   "totals": [
     [
       "CHI@CLE",
@@ -872,6 +958,11 @@
       "POR@MIN",
       null,
       227.5
+    ],
+    [
+      "PHX@DEN",
+      null,
+      230.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
