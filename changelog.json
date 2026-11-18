@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-18",
+   "version": "nba-session v3.24-p4",
+   "component": "pipeline",
+   "title": "PIN Pinnacle-anchor tier (0u)",
+   "change": "Each player/stat's alt rung at Pointsbet, Ladbrokes or Sportsbet priced $1.20-3.00 that pays 4pp or more over Pinnacle's margin-free price is logged as a 0u lean flagged PIN with its own record; every pick, lean and HR85 rung also shows PIN+ or PIN- for whether Pinnacle agrees.",
+   "aim": "Test whether soft-book prices that lag the sharp line make money: KILL if flat ROI is below 0 after 100 settled, CONFIRM above +5% (Mitch, 18 Nov)."
+  },
+  {
    "date": "2026-11-17",
    "version": "nba-session v3.23-p4",
    "component": "pipeline",
