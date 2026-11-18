@@ -69,7 +69,7 @@ table.gi th[scope=row]{width:68px;color:var(--muted);font-weight:600}table.gi th
 @media (prefers-color-scheme:dark){.isOut{background:#4a1d1a;color:#ff8a80}.isQ,.isD{background:#4a3a14;color:#ffd27a}.isP{background:#2a2f36;color:#aab3bf}}
 table.gi tr.out td{color:#b42318;font-weight:600}td.mu{color:var(--muted)}
 table.pt .n{text-align:right;white-space:nowrap}table.pt td.eg{color:var(--good,#0f7b3f)}table.pt .who{font-weight:600;font-size:.86rem}table.pt .line{font-size:.82rem;font-weight:600;text-align:left;white-space:normal}table.pt .st{color:var(--muted);font-size:.72rem}
-table.pt tr.lean td{background:#f8f9fb}table.pt tr.lean .who{color:var(--muted)}table.pt .chips{margin-top:3px}.chip.ln{background:#e8e6f8;color:#4b3fa6}
+.cxl{font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.4}table.pt tr.lean td{background:#f8f9fb}table.pt tr.lean .who{color:var(--muted)}table.pt .chips{margin-top:3px}.chip.ln{background:#e8e6f8;color:#4b3fa6}
 details.lf{margin:4px 0 2px;border-top:1px solid var(--line)}details.lf>summary{cursor:pointer;list-style:none;padding:10px 6px;min-height:24px;font-size:.82rem;display:flex;justify-content:space-between;align-items:center;color:var(--text)}
 details.lf>summary::-webkit-details-marker{display:none}details.lf>summary::after{content:"▸";color:var(--muted)}details.lf[open]>summary::after{content:"▾"}
 details.lf>summary span{color:var(--muted)}details.lf>summary b{color:var(--text)}table.pt .opp{font-size:.74rem;color:var(--muted)}p.lfd{margin:0 6px 4px;font-size:.74rem;color:var(--muted)}
@@ -608,6 +608,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return {id:String(g.id),tip:str(g.tip,'—'),proj:num(g.proj),mkt:num(g.mkt),mo:num(g.mkt_o),mu:num(g.mkt_u),ctx:str(g.ctx,''),picks:picks,leans:leans,
       out:tl(g.out),q:tl(g.q),b2b:Array.isArray(g.b2b)?g.b2b.map(function(x){return String(x).toUpperCase()}):null,
       hasInfo:!!(g.out&&typeof g.out==='object'),
+      cx:(g.cx&&typeof g.cx==='object')?g.cx:{},abs:(g.abs&&typeof g.abs==='object')?g.abs:null,mx:(g.mx&&typeof g.mx==='object')?g.mx:null,
       cov:cov&&Array.isArray(cov.players)&&Array.isArray(cov.stats)?{pl:cov.players,st:cov.stats,sk:Array.isArray(cov.skipped)?cov.skipped.map(String):[]}:null};
   }
   function normTotal(t){
@@ -638,10 +639,26 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var u='';p.f.forEach(function(f){if(/^U\d/.test(f))u=f.slice(1)});
     var fl=p.f.filter(function(f){return !/^U\d/.test(f)&&f!=='LEAN'});
     var chips=(p.lean?'<span class="chip ln">LEAN 0u</span>':'')+pill+cc+fl.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'||f==='DNP-LAST'||f==='MISS'||f==='THIN'||f==='DOG7'?' w':'')+'">'+esc(f)+'</span>'}).join('');
+    var cxl=g?cxLine(g,p):'';
     return '<tr class="pr'+rc+(p.lean?' lean':'')+'"><td><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' <span class="st">'+stars(p.stN)+'</span></div>'+(/[0-9]/.test(p.opp)?'<div class="opp">Opp '+esc(p.opp)+'</div>':'')+
       (p.sa!==null?'<div class="safe">Safer: O'+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
-      (chips?'<div class="chips">'+chips+'</div>':'')+cb+'</td>'+
+      (chips?'<div class="chips">'+chips+'</div>':'')+cxl+cb+'</td>'+
       '<td class="n">'+oddsSpan(p.o)+'</td><td class="n">'+esc(String(p.h).replace(/^.*\((.*)\).*$/,'$1'))+'</td><td class="n eg">+'+p.e.toFixed(1)+'</td><td class="n">'+(p.lean?'—':(u?esc(u)+'u':'—'))+'</td></tr>';
+  }
+  /* v3.25 live context (Mitch 18 Nov): minutes model, WOWY, opponent key players out, Pinnacle fair, best price.
+     From game.cx, keyed player|stat|alt|kind. Display only: none of it moves a pick or stake. */
+  function cxKind(p){return !p.lean?'pick':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':'lean'}
+  function cxLine(g,p){
+    var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];if(!c) return '';
+    function pc(v){return v===''||v===null||v===undefined?null:Math.round(Number(v)*100)+'%'}
+    var bits=[],m=pc(c.p_mm),w=pc(c.p_wowy),pf=pc(c.p_pin);
+    if(m) bits.push('Minutes model '+m);
+    if(w&&w!==m) bits.push('With/without '+w+(c.wowy_L!==''&&c.wowy_L!==undefined?' (×'+Number(c.wowy_L).toFixed(2)+')':''));
+    if(pf) bits.push('Pinnacle fair '+pf);
+    if(c.opp_out) bits.push('Opp out: '+String(c.opp_out).split(';').map(function(x){var i=x.indexOf(':');return x.slice(i+1)+' ('+x.slice(0,i)+')'}).join(', ')+
+      (Number(c.opp_lift)>0?' · +'+(Number(c.opp_lift)*100).toFixed(1)+'% '+p.s:''));
+    if(c.best_book) bits.push('Best '+c.best_book+' '+Number(c.best_price).toFixed(2)+' ('+c.n_books+' book'+(Number(c.n_books)===1?'':'s')+')');
+    return bits.length?'<div class="cxl">'+bits.map(esc).join(' · ')+'</div>':'';
   }
   function infoTable(g){
     var t=String(g.id).split('@'),A=t[0]||'',H=t[1]||'',rows='';
@@ -656,8 +673,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       return r.map(function(e){var w=e[0].split(' '),l=w.pop();   // keep the last word with its tag
         return '<div class="ij">'+(w.length?esc(w.join(' '))+' ':'')+'<span class="n1">'+esc(l)+' <span class="is is'+e[1]+'">'+e[1]+'</span></span></div>'}).join('');
     }
+    function kout(k){var v=(g.abs&&g.abs[k])||[];return v.length?v.map(function(o){return '<div class="ij">'+esc(o.name)+' <span class="mu">'+esc((o.roles||[]).join('/'))+'</span></div>'}).join(''):'<span class="mu">—</span>'}
     if(g.hasInfo){
       rows+='<tr><th scope="row">Injuries</th><td>'+inj(A)+'</td><td>'+inj(H)+'</td></tr>'+
+        (g.abs?'<tr><th scope="row">Key out<br><span class="mu">fresh</span></th><td>'+kout(A)+'</td><td>'+kout(H)+'</td></tr>':'')+
         (g.b2b?'<tr><th scope="row">B2B</th><td>'+(g.b2b.indexOf(A)>=0?'Yes':'—')+'</td><td>'+(g.b2b.indexOf(H)>=0?'Yes':'—')+'</td></tr>':'');
     }
     var tot='';

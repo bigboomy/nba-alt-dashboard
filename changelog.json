@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-18",
+   "version": "nba-session v3.25-p4",
+   "component": "pipeline",
+   "title": "Live context data on every item (data only)",
+   "change": "Minutes model, with/without lift, opponent key players freshly out, Pinnacle fair price and the best price across all books now show on every pick, lean, HR85 and PIN row and go to a new Sheet tab 'context'; the board also logs steals, blocks and the combo props, and each game carries a season team table with league ranks.",
+   "aim": "Move everything out of shadow into the live datasets (Mitch, 18 Nov); nothing here changes a pick, lean, tier or stake."
+  },
+  {
+   "date": "2026-11-18",
    "version": "nba-session v3.24-p4",
    "component": "pipeline",
    "title": "PIN Pinnacle-anchor tier (0u)",
