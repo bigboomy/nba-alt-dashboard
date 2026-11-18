@@ -1985,9 +1985,873 @@
         ]
       },
       "tip": "11:00"
+    },
+    {
+      "abs": {
+        "BKN": [],
+        "CHI": []
+      },
+      "b2b": [],
+      "cov": {
+        "players": [
+          17,
+          17
+        ],
+        "skipped": [],
+        "stats": [
+          41,
+          41
+        ]
+      },
+      "ctx": "Out TOP3: Caleb Wilson (CHI); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 17 of 17 players (41 of 41 player-stats); skipped: none",
+      "cx": {
+        "Michael Porter Jr.|PTS|19.5|lean": {
+          "best_book": "playup",
+          "best_price": 1.45,
+          "mm_min": 33.61,
+          "mm_mu": 22.363,
+          "n_books": 14,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6736,
+          "p_pin": 0.6872,
+          "p_wowy": 0.6736,
+          "pin_edge_pp": -1.7,
+          "pin_line": 23.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 22.363
+        },
+        "Nolan Traore|PTS|11.5|lean": {
+          "best_book": "ladbrokes",
+          "best_price": 1.6,
+          "mm_min": 24.43,
+          "mm_mu": 16.319,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8257,
+          "p_pin": 0.6217,
+          "p_wowy": 0.8257,
+          "pin_edge_pp": -0.7,
+          "pin_line": 13.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 16.319
+        },
+        "Nolan Traore|PTS|9.5|HR85": {
+          "best_book": "ladbrokes",
+          "best_price": 1.35,
+          "mm_min": 24.43,
+          "mm_mu": 16.319,
+          "n_books": 15,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9208,
+          "p_pin": 0.7586,
+          "p_wowy": 0.9208,
+          "pin_edge_pp": 0.7,
+          "pin_line": 13.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 16.319
+        },
+        "Norman Powell|PTS|15.5|PIN": {
+          "best_book": "pointsbet",
+          "best_price": 1.21,
+          "mm_min": 29.05,
+          "mm_mu": 21.917,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8476,
+          "p_pin": 0.8664,
+          "p_wowy": 0.8476,
+          "pin_edge_pp": 4.0,
+          "pin_line": 23.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 21.917
+        }
+      },
+      "engine": "nba-session v3.27-p4",
+      "id": "CHI@BKN",
+      "leans": [
+        {
+          "alt": 11.5,
+          "e": 4.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "MU+5%",
+            "OT-ADJ",
+            "C0.69",
+            "Z1.21",
+            "PIN-0.7",
+            "BEST-ladbrokes@1.60"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.59,
+          "opp": "CHI 4th most PTS allowed · pace +3.1",
+          "p": "Nolan Traore",
+          "s": "PTS",
+          "st": "4",
+          "std": 13.5,
+          "t": "BKN"
+        },
+        {
+          "alt": 19.5,
+          "e": 3.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "MU+5%",
+            "OT-ADJ",
+            "C0.90",
+            "Z0.39",
+            "PIN-1.7"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.42,
+          "opp": "CHI 4th most PTS allowed · pace +3.1",
+          "p": "Michael Porter Jr.",
+          "s": "PTS",
+          "st": "4",
+          "std": 22.5,
+          "t": "BKN"
+        },
+        {
+          "alt": 9.5,
+          "e": 6.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR85",
+            "[Std?]",
+            "MU+5%",
+            "OT-ADJ",
+            "C0.57",
+            "Z1.69",
+            "PIN+0.7",
+            "BEST-ladbrokes@1.35"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.33,
+          "opp": "CHI 4th most PTS allowed · pace +3.1",
+          "p": "Nolan Traore",
+          "s": "PTS",
+          "st": "5",
+          "std": 13.5,
+          "t": "BKN"
+        },
+        {
+          "alt": 15.5,
+          "e": 1.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "PIN",
+            "BK-pointsbet",
+            "[ROLE?]",
+            "MU+4%",
+            "OT-ADJ",
+            "MT-",
+            "C0.68",
+            "Z1.16",
+            "TMO",
+            "PIN+4.0"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.21,
+          "opp": "BKN 7th most PTS allowed · pace +3.1",
+          "p": "Norman Powell",
+          "s": "PTS",
+          "st": "5",
+          "std": 22.5,
+          "t": "CHI"
+        }
+      ],
+      "mkt": 240.5,
+      "mkt_o": 1.87,
+      "mkt_u": 1.8,
+      "mx": {
+        "exp_pace": 105.5,
+        "home_spread": -1.5,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.7,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.4
+        },
+        "teams": {
+          "BKN": {
+            "allow100": {
+              "3PM": 13.4,
+              "AST": 26.0,
+              "PTS": 112.6,
+              "REB": 41.7
+            },
+            "allow_rk": {
+              "3PM": 12,
+              "AST": 14,
+              "PTS": 7,
+              "REB": 27
+            },
+            "out": [],
+            "pace": 102.6,
+            "rk": {
+              "ast": 26,
+              "blk": 17,
+              "dreb": 24,
+              "fg3_pct": 10,
+              "fg3a": 12,
+              "fg3m": 8,
+              "fg_pct": 25,
+              "ft_pct": 26,
+              "fta": 5,
+              "net": 23,
+              "opp_fg3_pct": 18,
+              "opp_fg_pct": 21,
+              "oppg": 24,
+              "oreb": 19,
+              "pace": 13,
+              "pf": 30,
+              "ppg": 24,
+              "reb": 21,
+              "stl": 10,
+              "tov": 26,
+              "ts_pct": 13
+            },
+            "v": {
+              "ast": 24.3,
+              "ats": "7-6-0",
+              "ats_away": "6-2-0",
+              "ats_home": "1-4-0",
+              "ats_l10": "6-4-0",
+              "away": "2-6",
+              "blk": 4.9,
+              "dreb": 30.7,
+              "fg3_pct": 36.2,
+              "fg3a": 39.9,
+              "fg3m": 14.5,
+              "fg_pct": 44.7,
+              "ft_pct": 74.8,
+              "fta": 28.7,
+              "gp": 13,
+              "home": "1-4",
+              "l10": "3-7",
+              "net": -6.7,
+              "opp_fg3_pct": 35.8,
+              "opp_fg_pct": 47.1,
+              "oppg": 117.8,
+              "oreb": 11.5,
+              "ou": "8-5-0",
+              "ou_l10": "6-4-0",
+              "pace": 102.7,
+              "pf": 26.3,
+              "ppg": 111.2,
+              "reb": 42.2,
+              "rec": "3-10",
+              "stl": 8.5,
+              "tov": 17.2,
+              "ts_pct": 57.4
+            }
+          },
+          "CHI": {
+            "allow100": {
+              "3PM": 12.8,
+              "AST": 26.5,
+              "PTS": 113.6,
+              "REB": 43.5
+            },
+            "allow_rk": {
+              "3PM": 21,
+              "AST": 5,
+              "PTS": 4,
+              "REB": 7
+            },
+            "out": [],
+            "pace": 105.3,
+            "rk": {
+              "ast": 11,
+              "blk": 5,
+              "dreb": 20,
+              "fg3_pct": 30,
+              "fg3a": 8,
+              "fg3m": 20,
+              "fg_pct": 25,
+              "ft_pct": 23,
+              "fta": 3,
+              "net": 28,
+              "opp_fg3_pct": 19,
+              "opp_fg_pct": 27,
+              "oppg": 30,
+              "oreb": 13,
+              "pace": 1,
+              "pf": 25,
+              "ppg": 14,
+              "reb": 16,
+              "stl": 13,
+              "tov": 28,
+              "ts_pct": 24
+            },
+            "v": {
+              "ast": 27.2,
+              "ats": "7-6-0",
+              "ats_away": "3-5-0",
+              "ats_home": "4-1-0",
+              "ats_l10": "6-4-0",
+              "away": "2-6",
+              "blk": 5.8,
+              "dreb": 31.3,
+              "fg3_pct": 30.8,
+              "fg3a": 40.9,
+              "fg3m": 12.6,
+              "fg_pct": 44.7,
+              "ft_pct": 76.1,
+              "fta": 28.9,
+              "gp": 13,
+              "home": "1-4",
+              "l10": "2-8",
+              "net": -11.3,
+              "opp_fg3_pct": 36.0,
+              "opp_fg_pct": 48.1,
+              "oppg": 125.9,
+              "oreb": 12.5,
+              "ou": "5-8-0",
+              "ou_l10": "4-6-0",
+              "pace": 107.5,
+              "pf": 23.4,
+              "ppg": 114.6,
+              "reb": 43.8,
+              "rec": "3-10",
+              "stl": 8.3,
+              "tov": 17.3,
+              "ts_pct": 56.1
+            }
+          }
+        }
+      },
+      "out": {
+        "BKN": [],
+        "CHI": [
+          "Caleb Wilson (Wilson (hand) is expected to miss four to six weeks, Shams Charania of ESPN reports.)",
+          "Tobe Awaka (Awaka (back) has been ruled out for Wednesday's game against the Nets.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "BKN": [],
+        "CHI": []
+      },
+      "tip": "11:30"
+    },
+    {
+      "abs": {
+        "TOR": [
+          {
+            "min": 35.3,
+            "name": "RJ Barrett",
+            "roles": [
+              "SC2"
+            ]
+          },
+          {
+            "min": 34.5,
+            "name": "Scottie Barnes",
+            "roles": [
+              "SC1",
+              "REB1"
+            ]
+          }
+        ],
+        "WAS": []
+      },
+      "b2b": [
+        "TOR"
+      ],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "skipped": [
+          "Ja'Kobe Walter REB (no rung priced 1.40+ at or below std)",
+          "Ja'kobe Walter AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          41,
+          43
+        ]
+      },
+      "ctx": "Out TOP3: Scottie Barnes (TOR), RJ Barrett (TOR); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 15 of 15 players (41 of 43 player-stats); skipped: Ja'Kobe Walter REB (no rung priced 1.40+ at or below std), Ja'kobe Walter AST (no rung priced 1.40+ at or below std)",
+      "cx": {
+        "AJ Dybantsa|REB|3.5|HR85": {
+          "best_book": "tab",
+          "best_price": 1.26,
+          "mm_min": 33.59,
+          "mm_mu": 6.372,
+          "n_books": 12,
+          "opp_lift": 0.067,
+          "opp_out": "SC2:RJ Barrett;SC1/REB1:Scottie Barnes",
+          "p_mm": 0.879,
+          "p_pin": 0.7466,
+          "p_wowy": 0.879,
+          "pin_edge_pp": -8.0,
+          "pin_line": 5.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 6.372
+        },
+        "Alexandre Sarr|REB|6.5|lean": {
+          "best_book": "ladbrokes",
+          "best_price": 1.8,
+          "mm_min": 28.55,
+          "mm_mu": 7.965,
+          "n_books": 8,
+          "opp_lift": 0.067,
+          "opp_out": "SC2:RJ Barrett;SC1/REB1:Scottie Barnes",
+          "p_mm": 0.6428,
+          "p_pin": "",
+          "p_wowy": 0.6428,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 7.965
+        },
+        "Anthony Davis|PTS|19.5|lean": {
+          "best_book": "tabtouch",
+          "best_price": 1.52,
+          "mm_min": 33.99,
+          "mm_mu": 25.489,
+          "n_books": 15,
+          "opp_lift": 0.074,
+          "opp_out": "SC2:RJ Barrett;SC1/REB1:Scottie Barnes",
+          "p_mm": 0.7617,
+          "p_pin": 0.6589,
+          "p_wowy": 0.7617,
+          "pin_edge_pp": -3.6,
+          "pin_line": 22.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 25.489
+        },
+        "Immanuel Quickley|AST|5.5|OUTLIFT": {
+          "best_book": "dabble",
+          "best_price": 1.53,
+          "mm_min": 36.5,
+          "mm_mu": 7.322,
+          "n_books": 9,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7067,
+          "p_pin": 0.6117,
+          "p_wowy": 0.4667,
+          "pin_edge_pp": -8.3,
+          "pin_line": 6.5,
+          "wowy_L": 0.99,
+          "wowy_keys": "RJ Barrett;Scottie Barnes",
+          "wowy_mu": 5.539
+        },
+        "Immanuel Quickley|PTS|18.5|OUTLIFT": {
+          "best_book": "pointsbet",
+          "best_price": 1.59,
+          "mm_min": 36.5,
+          "mm_mu": 22.104,
+          "n_books": 1,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6667,
+          "p_pin": 0.6383,
+          "p_wowy": 0.4628,
+          "pin_edge_pp": 0.9,
+          "pin_line": 21.5,
+          "wowy_L": 1.096,
+          "wowy_keys": "RJ Barrett;Scottie Barnes",
+          "wowy_mu": 18.512
+        },
+        "Immanuel Quickley|REB|3.5|OUTLIFT": {
+          "best_book": "dabble",
+          "best_price": 1.62,
+          "mm_min": 36.5,
+          "mm_mu": 4.526,
+          "n_books": 9,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6321,
+          "p_pin": 0.5824,
+          "p_wowy": 0.6591,
+          "pin_edge_pp": -11.2,
+          "pin_line": 3.5,
+          "wowy_L": 1.236,
+          "wowy_keys": "RJ Barrett;Scottie Barnes",
+          "wowy_mu": 4.702
+        }
+      },
+      "engine": "nba-session v3.27-p4",
+      "id": "WAS@TOR",
+      "leans": [
+        {
+          "alt": 19.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "OPP-B2B",
+            "OT-ADJ",
+            "C0.77",
+            "Z0.71",
+            "PIN-3.6",
+            "OPP-OUT:SC1/SC2/REB1",
+            "BEST-ladbrokes@1.45"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "TOR 15th most PTS allowed · pace -0.0",
+          "p": "Anthony Davis",
+          "s": "PTS",
+          "st": "4",
+          "std": 22.5,
+          "t": "WAS"
+        },
+        {
+          "alt": 6.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "OPP-B2B",
+            "OT-ADJ",
+            "C0.83",
+            "Z0.48",
+            "OPP-OUT:SC1/SC2/REB1",
+            "REB-OPP",
+            "BEST-ladbrokes@1.80"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.71,
+          "opp": "TOR 9th fewest REB allowed · pace -0.0",
+          "p": "Alexandre Sarr",
+          "s": "REB",
+          "st": "3",
+          "std": 6.5,
+          "t": "WAS"
+        },
+        {
+          "alt": 3.5,
+          "e": 4.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR85",
+            "OPP-B2B",
+            "OT-ADJ",
+            "C0.56",
+            "Z1.94",
+            "PIN-8.0",
+            "OPP-OUT:SC1/SC2/REB1",
+            "REB-OPP",
+            "BEST-ladbrokes@1.25"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.21,
+          "opp": "TOR 9th fewest REB allowed · pace -0.0",
+          "p": "AJ Dybantsa",
+          "s": "REB",
+          "st": "5",
+          "std": 5.5,
+          "t": "WAS"
+        },
+        {
+          "alt": 18.5,
+          "e": -10.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC1/SC2/REB1",
+            "[ROLE?]",
+            "B2B",
+            "OT-ADJ",
+            "C1.05",
+            "Z-0.15",
+            "TMO",
+            "PIN+0.9"
+          ],
+          "h": "30% (3/10)",
+          "o": 1.59,
+          "opp": "WAS 5th most PTS allowed · pace -0.0",
+          "p": "Immanuel Quickley",
+          "s": "PTS",
+          "st": "1.5",
+          "std": 20.5,
+          "t": "TOR"
+        },
+        {
+          "alt": 5.5,
+          "e": 0.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC1/SC2/REB1",
+            "[ROLE?]",
+            "B2B",
+            "MU+5%",
+            "OT-ADJ",
+            "C0.94",
+            "Z0.16",
+            "TMO",
+            "PIN-8.3"
+          ],
+          "h": "70% (7/10)",
+          "o": 1.44,
+          "opp": "WAS 1st most AST allowed · pace -0.0",
+          "p": "Immanuel Quickley",
+          "s": "AST",
+          "st": "3.5",
+          "std": 6.5,
+          "t": "TOR"
+        },
+        {
+          "alt": 3.5,
+          "e": -2.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC1/SC2/REB1",
+            "[ROLE?]",
+            "B2B",
+            "MU+4%",
+            "OT-ADJ",
+            "C0.88",
+            "Z0.25",
+            "TMO",
+            "PIN-11.2",
+            "MAIN-U+2.6",
+            "BEST-sportsbet@1.48"
+          ],
+          "h": "60% (6/10)",
+          "o": 1.44,
+          "opp": "WAS 2nd most REB allowed · pace -0.0",
+          "p": "Immanuel Quickley",
+          "s": "REB",
+          "st": "3.5",
+          "std": 4.5,
+          "t": "TOR"
+        }
+      ],
+      "mkt": 225.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "mx": {
+        "exp_pace": 102.3,
+        "home_spread": -4.5,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.7,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.4
+        },
+        "teams": {
+          "TOR": {
+            "allow100": {
+              "3PM": 12.8,
+              "AST": 25.7,
+              "PTS": 111.4,
+              "REB": 42.4
+            },
+            "allow_rk": {
+              "3PM": 20,
+              "AST": 18,
+              "PTS": 15,
+              "REB": 22
+            },
+            "out": [
+              {
+                "min": 35.3,
+                "name": "RJ Barrett",
+                "roles": [
+                  "SC2"
+                ]
+              },
+              {
+                "min": 34.5,
+                "name": "Scottie Barnes",
+                "roles": [
+                  "SC1",
+                  "REB1"
+                ]
+              }
+            ],
+            "pace": 101.9,
+            "rk": {
+              "ast": 4,
+              "blk": 21,
+              "dreb": 30,
+              "fg3_pct": 25,
+              "fg3a": 23,
+              "fg3m": 25,
+              "fg_pct": 20,
+              "ft_pct": 29,
+              "fta": 12,
+              "net": 16,
+              "opp_fg3_pct": 23,
+              "opp_fg_pct": 25,
+              "oppg": 13,
+              "oreb": 7,
+              "pace": 22,
+              "pf": 29,
+              "ppg": 18,
+              "reb": 27,
+              "stl": 3,
+              "tov": 5,
+              "ts_pct": 28
+            },
+            "v": {
+              "ast": 27.9,
+              "ats": "6-8-0",
+              "ats_away": "3-4-0",
+              "ats_home": "3-4-0",
+              "ats_l10": "3-7-0",
+              "away": "3-4",
+              "blk": 4.5,
+              "dreb": 27.2,
+              "fg3_pct": 33.3,
+              "fg3a": 35.9,
+              "fg3m": 11.9,
+              "fg_pct": 45.6,
+              "ft_pct": 71.9,
+              "fta": 25.4,
+              "gp": 14,
+              "home": "2-5",
+              "l10": "2-8",
+              "net": 0.3,
+              "opp_fg3_pct": 36.6,
+              "opp_fg_pct": 47.7,
+              "oppg": 112.6,
+              "oreb": 13.4,
+              "ou": "7-7-0",
+              "ou_l10": "6-4-0",
+              "pace": 101.6,
+              "pf": 25.2,
+              "ppg": 112.9,
+              "reb": 40.6,
+              "rec": "5-9",
+              "stl": 9.9,
+              "tov": 13.9,
+              "ts_pct": 55.4
+            }
+          },
+          "WAS": {
+            "allow100": {
+              "3PM": 12.6,
+              "AST": 27.1,
+              "PTS": 113.1,
+              "REB": 44.7
+            },
+            "allow_rk": {
+              "3PM": 23,
+              "AST": 1,
+              "PTS": 5,
+              "REB": 2
+            },
+            "out": [],
+            "pace": 102.8,
+            "rk": {
+              "ast": 28,
+              "blk": 10,
+              "dreb": 22,
+              "fg3_pct": 28,
+              "fg3a": 27,
+              "fg3m": 29,
+              "fg_pct": 17,
+              "ft_pct": 9,
+              "fta": 8,
+              "net": 25,
+              "opp_fg3_pct": 6,
+              "opp_fg_pct": 19,
+              "oppg": 26,
+              "oreb": 23,
+              "pace": 8,
+              "pf": 7,
+              "ppg": 23,
+              "reb": 23,
+              "stl": 20,
+              "tov": 14,
+              "ts_pct": 21
+            },
+            "v": {
+              "ast": 23.9,
+              "ats": "6-9-0",
+              "ats_away": "3-5-0",
+              "ats_home": "3-4-0",
+              "ats_l10": "4-6-0",
+              "away": "2-6",
+              "blk": 5.5,
+              "dreb": 30.9,
+              "fg3_pct": 31.5,
+              "fg3a": 32.8,
+              "fg3m": 10.3,
+              "fg_pct": 45.8,
+              "ft_pct": 79.9,
+              "fta": 26.5,
+              "gp": 15,
+              "home": "2-5",
+              "l10": "2-8",
+              "net": -7.9,
+              "opp_fg3_pct": 33.2,
+              "opp_fg_pct": 46.7,
+              "oppg": 119.2,
+              "oreb": 10.9,
+              "ou": "6-9-0",
+              "ou_l10": "5-5-0",
+              "pace": 103.0,
+              "pf": 20.7,
+              "ppg": 111.3,
+              "reb": 41.7,
+              "rec": "4-11",
+              "stl": 7.7,
+              "tov": 14.7,
+              "ts_pct": 56.3
+            }
+          }
+        }
+      },
+      "out": {
+        "TOR": [
+          "Kawhi Leonard (Leonard (knee) has progressed in his strength and conditioning program but will miss at least one more week, Michael Scotto of HoopsHype.com reports.)",
+          "Nate Bittle (Bittle (foot) has been ruled out for Sunday's game against the Knicks, Zulfi Sheikh of Sportsnet.ca reports.)",
+          "RJ Barrett (Barrett is questionable for Wednesday's game against the Wizards due to hamstring tightness, Esfandiar Baraheni of The Athletic reports.)",
+          "Scottie Barnes (Barnes (injury management) has been ruled out for Wednesday's game against Washington, Esfandiar Baraheni of The Athletic reports.)"
+        ],
+        "WAS": [
+          "Jamir Watkins (The Wizards announced Thursday that Watkins has undergone surgery for a torn ACL.)",
+          "Justin Champagnie (Champagnie (foot) is expected to miss several months, per Josh Robbins of The Athletic.)",
+          "Reece Beekman (The Wizards announced Monday that Beekman sustained a right acromioclavicular joint injury and will be re-evaluated in approximately three weeks.)",
+          "Tristan Vukcevic (Vukcevic (hip) has been ruled out for Monday's game against Memphis.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "TOR": [],
+        "WAS": [
+          "Felix Okpara (Okpara (illness) is available for Friday's game against Toronto.)"
+        ]
+      },
+      "tip": "11:30"
     }
   ],
-  "generated": "2026-11-18T22:30:02Z",
+  "generated": "2026-11-18T23:05:02Z",
   "totals": [
     [
       "HOU@IND",
@@ -2008,6 +2872,16 @@
       "PHI@ORL",
       null,
       null
+    ],
+    [
+      "CHI@BKN",
+      null,
+      240.5
+    ],
+    [
+      "WAS@TOR",
+      null,
+      225.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
