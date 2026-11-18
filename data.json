@@ -366,9 +366,176 @@
         ]
       },
       "tip": "12:00"
+    },
+    {
+      "b2b": [],
+      "cov": {
+        "players": [
+          16,
+          16
+        ],
+        "skipped": [
+          "Max Strus AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          34,
+          35
+        ]
+      },
+      "ctx": "Out TOP3: Lauri Markkanen (UTA); Returning: none; Depleted: UTA (3 rotation out); missed last game: none. Coverage: evaluated 16 of 16 players (34 of 35 player-stats); skipped: Max Strus AST (no rung priced 1.40+ at or below std)",
+      "engine": "nba-session v3.23-p4",
+      "id": "UTA@LAC",
+      "leans": [
+        {
+          "alt": 3.5,
+          "e": 4.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "OT-ADJ",
+            "C0.74",
+            "Z0.66"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.56,
+          "opp": "UTA 6th most REB allowed · pace +0.6",
+          "p": "Derrick Jones Jr.",
+          "s": "REB",
+          "st": "4",
+          "std": 3.5,
+          "t": "LAC"
+        },
+        {
+          "alt": 2.5,
+          "e": 3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "OT-ADJ",
+            "MT-",
+            "C0.69",
+            "Z1.02"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.59,
+          "opp": "UTA 6th most REB allowed · pace +0.6",
+          "p": "Kris Dunn",
+          "s": "REB",
+          "st": "4",
+          "std": 2.5,
+          "t": "LAC"
+        },
+        {
+          "alt": 9.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "MT-",
+            "C0.78",
+            "Z0.61"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "UTA 9th most PTS allowed · pace +0.6",
+          "p": "Keaton Wagler",
+          "s": "PTS",
+          "st": "4",
+          "std": 11.5,
+          "t": "LAC"
+        },
+        {
+          "alt": 6.5,
+          "e": 6.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR85",
+            "OT-ADJ",
+            "C0.54",
+            "Z2.02"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.33,
+          "opp": "UTA 9th most PTS allowed · pace +0.6",
+          "p": "Derrick Jones Jr.",
+          "s": "PTS",
+          "st": "5",
+          "std": 9.5,
+          "t": "LAC"
+        },
+        {
+          "alt": 1.5,
+          "e": 4.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR85",
+            "[Std?]",
+            "OT-ADJ",
+            "MT-",
+            "C0.41",
+            "Z1.92"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.21,
+          "opp": "UTA 6th most REB allowed · pace +0.6",
+          "p": "Kris Dunn",
+          "s": "REB",
+          "st": "5",
+          "std": 2.5,
+          "t": "LAC"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "out": {
+        "LAC": [
+          "Bradley Beal (Beal (knee) will not be ready for the start of the regular season, NBA writer Justin Russo reports.)",
+          "Brandon Ingram (Ingram (Achilles) won't play in Friday's game against the Thunder, per Law Murray of The Athletic.)",
+          "Jordan Miller (Miller underwent surgery Wednesday to repair a torn left rotator cuff and will be re-evaluated in six months, per Law Murray of The Athletic.)",
+          "Yanic Konan Niederhauser (Niederhauser (foot) has been ruled out for Tuesday's game against the Jazz.)"
+        ],
+        "UTA": [
+          "Jaren Jackson Jr. (Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.)",
+          "Jaxson Hayes (Hayes (knee) has been ruled out for Tuesday's game against the Clippers.)",
+          "Jusuf Nurkic (Nurkic (toe) has begun participating in on-court activities as he continues recovering from a right foot injury sustained during an Oct. 4 preseason game against Denver. He will be re-evaluated in two weeks, the Jazz announced Friday.)",
+          "Lauri Markkanen (Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [
+        {
+          "alt": 7.5,
+          "e": 8.1,
+          "f": [
+            "OT-ADJ",
+            "C0.62",
+            "Z1.65",
+            "U1"
+          ],
+          "h": "100% (10/10)",
+          "o": 1.48,
+          "opp": "UTA 9th most PTS allowed · pace +0.6",
+          "p": "Derrick Jones Jr.",
+          "s": "PTS",
+          "st": "4",
+          "std": 9.5,
+          "t": "LAC"
+        }
+      ],
+      "proj": null,
+      "q": {
+        "LAC": [],
+        "UTA": []
+      },
+      "tip": "14:30"
     }
   ],
-  "generated": "2026-11-17T23:35:02Z",
+  "generated": "2026-11-18T02:00:02Z",
   "totals": [
     [
       "NYK@TOR",
@@ -384,6 +551,11 @@
       "POR@MIN",
       null,
       226.5
+    ],
+    [
+      "UTA@LAC",
+      null,
+      null
     ]
   ],
   "tz": "Melbourne time (AEDT)"
