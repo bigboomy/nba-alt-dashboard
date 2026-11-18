@@ -1,30 +1,65 @@
 {
-  "generated": "2026-11-17T07:07:02Z",
+  "generated": "2026-11-18T07:07:02Z",
   "games": [
     {
-      "away": "New York Knicks",
+      "away": "Houston Rockets",
+      "home": "Indiana Pacers",
+      "tip_utc": "2026-11-19T00:00:00Z"
+    },
+    {
+      "away": "Memphis Grizzlies",
+      "home": "Cleveland Cavaliers",
+      "tip_utc": "2026-11-19T00:00:00Z"
+    },
+    {
+      "away": "Milwaukee Bucks",
+      "home": "Miami Heat",
+      "tip_utc": "2026-11-19T00:00:00Z"
+    },
+    {
+      "away": "Philadelphia 76ers",
+      "home": "Orlando Magic",
+      "tip_utc": "2026-11-19T00:00:00Z"
+    },
+    {
+      "away": "Chicago Bulls",
+      "home": "Brooklyn Nets",
+      "tip_utc": "2026-11-19T00:30:00Z"
+    },
+    {
+      "away": "Washington Wizards",
       "home": "Toronto Raptors",
-      "tip_utc": "2026-11-18T00:30:00Z"
+      "tip_utc": "2026-11-19T00:30:00Z"
+    },
+    {
+      "away": "Atlanta Hawks",
+      "home": "Oklahoma City Thunder",
+      "tip_utc": "2026-11-19T01:00:00Z"
     },
     {
       "away": "Detroit Pistons",
-      "home": "San Antonio Spurs",
-      "tip_utc": "2026-11-18T01:00:00Z"
+      "home": "New Orleans Pelicans",
+      "tip_utc": "2026-11-19T01:00:00Z"
     },
     {
-      "away": "Portland Trail Blazers",
-      "home": "Minnesota Timberwolves",
-      "tip_utc": "2026-11-18T01:00:00Z"
+      "away": "Golden State Warriors",
+      "home": "Dallas Mavericks",
+      "tip_utc": "2026-11-19T01:00:00Z"
+    },
+    {
+      "away": "Boston Celtics",
+      "home": "Denver Nuggets",
+      "tip_utc": "2026-11-19T02:30:00Z"
+    },
+    {
+      "away": "Phoenix Suns",
+      "home": "Sacramento Kings",
+      "tip_utc": "2026-11-19T03:00:00Z"
     },
     {
       "away": "Utah Jazz",
-      "home": "Los Angeles Clippers",
-      "tip_utc": "2026-11-18T03:30:00Z"
-    },
-    {
-      "away": "Charlotte Hornets",
       "home": "Los Angeles Lakers",
-      "tip_utc": "2026-11-18T04:00:00Z"
+      "tip_utc": "2026-11-19T03:00:00Z"
     }
   ]
 }
