@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-18",
+   "version": "nba-session v3.27-p4",
+   "component": "pipeline",
+   "title": "Late-scratch auto re-run (0u LSR items)",
+   "change": "When a watched player turns OUT at least 10 minutes before tip, the tick re-runs that game and logs anything new to it as a 0u lean flagged LSR plus what it would have been (LSR-PICK, LEAN, HR85, PIN or OUTLIFT); the original picks and leans are never changed.",
+   "aim": "Find out whether acting on late scratches pays before any staking: KILL if flat ROI is below 0 after 40 settled, CONFIRM above +5% (Mitch, 18 Nov)."
+  },
+  {
+   "date": "2026-11-18",
    "version": "nba-session v3.26-p4",
    "component": "pipeline",
    "title": "OUTLIFT teammate-out tier (0u)",
