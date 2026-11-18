@@ -236,6 +236,7 @@ details.fold.inner{background:transparent;margin:10px 0}
   <div id="leansSec"></div>
   <div id="hrSec"></div>
   <div id="pinSec"></div>
+  <div id="olSec"></div>
 
   <details class="legend" style="margin-top:16px">
     <summary>How to read this</summary>
@@ -647,7 +648,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   /* v3.25 live context (Mitch 18 Nov): minutes model, WOWY, opponent key players out, Pinnacle fair, best price.
      From game.cx, keyed player|stat|alt|kind. Display only: none of it moves a pick or stake. */
-  function cxKind(p){return !p.lean?'pick':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':'lean'}
+  function cxKind(p){return !p.lean?'pick':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':p.f.indexOf('OUTLIFT')>=0?'OUTLIFT':'lean'}
   function cxLine(g,p){
     var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];if(!c) return '';
     function pc(v){return v===''||v===null||v===undefined?null:Math.round(Number(v)*100)+'%'}
@@ -693,15 +694,16 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   var LOPEN={};
   function gameHtml(g,gi){
     var np=g.picks.length,nl=g.leans.length,nh=g.leans.filter(function(p){return p.f.indexOf('HR85')>=0}).length,
-        npn=g.leans.filter(function(p){return p.f.indexOf('PIN')>=0}).length;
-    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span><span class="ct">'+np+' pick'+(np===1?'':'s')+(nl-nh-npn?' · '+(nl-nh-npn)+' lean'+(nl-nh-npn===1?'':'s'):'')+(nh?' · '+nh+' HR85':'')+(npn?' · '+npn+' PIN':'')+'</span></div>';
+        npn=g.leans.filter(function(p){return p.f.indexOf('PIN')>=0}).length,
+        nol=g.leans.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length;
+    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span><span class="ct">'+np+' pick'+(np===1?'':'s')+(nl-nh-npn-nol?' · '+(nl-nh-npn-nol)+' lean'+(nl-nh-npn-nol===1?'':'s'):'')+(nh?' · '+nh+' HR85':'')+(npn?' · '+npn+' PIN':'')+(nol?' · '+nol+' OUTLIFT':'')+'</span></div>';
     var th='<thead><tr><th>Player · bet</th><th class="n">Odds</th><th class="n">Hit</th><th class="n">Edge</th><th class="n">Stake</th></tr></thead>';
     var body='',lb='';
     g.picks.forEach(function(p,i){try{body+=pickRow(p,gi,i)}catch(e){}});
     g.leans.forEach(function(p,i){try{lb+=pickRow(p,gi,i)}catch(e){}});
     var tbl=body?'<table class="pt">'+th+'<tbody>'+body+'</tbody></table>':'<div class="none">No pick cleared the gates.</div>';
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
-    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · near-misses'+(nh?' and HR85 hit-rate tier':'')+(npn?(nh?',':' and')+' PIN Pinnacle-anchor tier':'')+', tracked not bet</span></summary>'+
+    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · near-misses'+(nh?' and HR85 hit-rate tier':'')+(npn?(nh?',':' and')+' PIN Pinnacle-anchor tier':'')+(nol?((nh||npn)?',':' and')+' OUTLIFT teammate-out tier':'')+', tracked not bet</span></summary>'+
       '<p class="lfd">Just missed a pick rule (one miss in the sample, cushion, price cap or looser test). 0u.</p><table class="pt">'+th+'<tbody>'+lb+'</tbody></table></details>':'';
     return '<section class="game">'+head+'<div class="gw">'+infoTable(g)+'</div><div class="gw gp">'+tbl+lf+'</div></section>';
   }
@@ -1115,15 +1117,38 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     bindPin();
   }
   function bindPin(){var f=$('pinFold');if(f)f.addEventListener('toggle',function(){PIN_OPEN=this.open})}
+  /* ---------- OUT-LIFT tier (nba-session v3.26, 18 Nov): a key player's Pointsbet alt rung at $1.20-1.59 while a key
+     teammate is freshly out, 0u. Rows in the leans tab flagged OUTLIFT. Own record.
+     Test: KILL if flat ROI < 0 after 60 settled; CONFIRM if > +5% over 60. */
+  var OLS=null,OL_OPEN=false;
+  function renderOl(){
+    var box=$('olSec');if(!box) return;
+    var head='<details class="fold" id="olFold"'+(OL_OPEN?' open':'')+'><summary><span>Teammate-out tier OUTLIFT (0u) <span class="meta">key player, key teammate out, $1.20-1.59</span></span></summary>';
+    if(LEANFAIL||!OLS){box.innerHTML=LEANFAIL?'':head+'<div class="none">Loading…</div></details>';bindOl();return}
+    var settled=OLS.filter(function(r){return r.result==='W'||r.result==='L'}),asOf=null;
+    settled.forEach(function(r){if(!asOf||r.date>asOf)asOf=r.date});
+    var pend=OLS.filter(function(r){return !r.result}).length;
+    if(!asOf){box.innerHTML=head+'<div class="none">No settled OUTLIFT rungs yet'+(pend?' ('+pend+' pending)':'')+'. The tier starts with the 19 Nov slate (v3.26).</div></details>';bindOl();return}
+    function win(nd){var lo=addDays(asOf,-(nd-1));return OLS.filter(function(r){return r.date>=lo&&r.date<=asOf})}
+    var roi=function(s){return s.n?100*s.u/s.n:null};
+    var row=function(label,s){var r=roi(s);return '<tr><td>'+label+'</td><td>'+s.n+'</td><td>'+s.w+'-'+s.l+'</td><td>'+(s.hit===null?'—':s.hit.toFixed(1)+'%')+'</td><td>'+(s.impl===null?'—':s.impl.toFixed(1)+'%')+'</td><td class="'+cls(s.u)+'">'+sg(s.u,2)+'u</td><td class="'+(r===null?'':(r>5?'pos':(r<0?'neg':'')))+'">'+(r===null?'—':sg(r,1)+'%')+'</td></tr>'};
+    var all=leanSum(OLS),ra=roi(all);
+    var verdict=all.n<60?'<b>Collecting: '+all.n+' of 60 settled.</b> ':(ra>5?'<b>CONFIRM: flat ROI above +5% over '+all.n+'. Mitch decides on staking.</b> ':(ra<0?'<b>KILL: flat ROI below 0 over '+all.n+'.</b> ':'<b>Flat ROI between 0 and +5% over '+all.n+': keep collecting.</b> '));
+    box.innerHTML=head+'<div class="ts"><table style="min-width:0"><thead><tr><th></th><th>n</th><th>W-L</th><th>Hit</th><th>Implied</th><th>Units</th><th>ROI</th></tr></thead><tbody>'+
+      row('7d',leanSum(win(7)))+row('Since 19 Nov',all)+'</tbody></table></div>'+
+      '<p class="cap">'+verdict+'One rung per player/stat: a key player (top-3 scorer, top rebounder or top passer) whose key teammate is freshly out (TM-OUT flag); the highest-priced Pointsbet alt rung at $1.20-1.59, at or under the main line. Units are notional, flat 1u; nothing is staked. As of '+fdate(asOf)+(all.v?' · '+all.v+' void':'')+(pend?' · '+pend+' pending':'')+'.</p></details>';
+    bindOl();
+  }
+  function bindOl(){var f=$('olFold');if(f)f.addEventListener('toggle',function(){OL_OPEN=this.open})}
   function loadLeans(){
     fetch(LEAN_URL,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){
       if(/^\s*</.test(t))throw 0;
       var objs=CORE.parseCSV(t);if(objs.length&&!('lean_id' in objs[0]))throw 0;
       LEANS=objs.filter(function(o){return String(o.lean_id||'').trim()&&/^\d{4}-\d{2}-\d{2}$/.test(String(o.date||'').trim())}).map(function(o){
-        return {date:String(o.date).trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase(),hr:/(^|\s)HR85(\s|$)/.test(String(o.flags||'')),pin:/(^|\s)PIN(\s|$)/.test(String(o.flags||''))}}).filter(function(r){return r.odds!==null&&r.odds>1});
-      HRS=LEANS.filter(function(r){return r.hr});PINS=LEANS.filter(function(r){return r.pin});LEANS=LEANS.filter(function(r){return !r.hr&&!r.pin});renderHr();renderPin();
+        return {date:String(o.date).trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase(),hr:/(^|\s)HR85(\s|$)/.test(String(o.flags||'')),pin:/(^|\s)PIN(\s|$)/.test(String(o.flags||'')),ol:/(^|\s)OUTLIFT(\s|$)/.test(String(o.flags||''))}}).filter(function(r){return r.odds!==null&&r.odds>1});
+      HRS=LEANS.filter(function(r){return r.hr});PINS=LEANS.filter(function(r){return r.pin});OLS=LEANS.filter(function(r){return r.ol});LEANS=LEANS.filter(function(r){return !r.hr&&!r.pin&&!r.ol});renderHr();renderPin();renderOl();
       LEANFAIL=false;renderLeans();
-    }).catch(function(){LEANFAIL=true;renderLeans();renderHr();renderPin()});
+    }).catch(function(){LEANFAIL=true;renderLeans();renderHr();renderPin();renderOl()});
   }
   /* ---------- web-push alerts (sender: tools/nba_push.py in the slate task) ---------- */
   var VAPID_PUB='BAz_aD_630fWpE5YorIANph4tGZ4JUfxDRHYaX_2ljyWtFdlPUW7nxMeR_QDMbV1rJvCuM1BQQamnBDwg8gq444';
@@ -1240,7 +1265,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     .then(init).catch(slateFail);
   loadSched();loadHealth();
   renderTotals();loadTotals();
-  renderLeans();renderHr();renderPin();loadLeans();
+  renderLeans();renderHr();renderPin();renderOl();loadLeans();
   alertUI();clearBadge();loadChoices();
   foot();
 })();

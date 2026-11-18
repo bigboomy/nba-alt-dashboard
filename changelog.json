@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-18",
+   "version": "nba-session v3.26-p4",
+   "component": "pipeline",
+   "title": "OUTLIFT teammate-out tier (0u)",
+   "change": "When a key player (top-3 scorer, top rebounder or top passer) has a key teammate freshly ruled out, the highest-priced Pointsbet alt rung at $1.20-1.59 at or under his main line is logged as a 0u lean flagged OUTLIFT with its own record.",
+   "aim": "Test the critic's finding that key-player alt rungs hit 76% vs 73% needed in that spot: KILL if flat ROI is below 0 after 60 settled, CONFIRM above +5% (Mitch, 18 Nov)."
+  },
+  {
+   "date": "2026-11-18",
    "version": "nba-session v3.25-p4",
    "component": "pipeline",
    "title": "Display flags: OPP-OUT, REB-OPP, MAIN-U, BEST (no pick effect)",
