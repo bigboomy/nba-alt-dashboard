@@ -5323,9 +5323,815 @@
         "DEN": []
       },
       "tip": "13:30"
+    },
+    {
+      "abs": {
+        "PHX": [],
+        "SAC": []
+      },
+      "b2b": [],
+      "cov": {
+        "players": [
+          19,
+          19
+        ],
+        "skipped": [],
+        "stats": [
+          45,
+          45
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: Zach LaVine. Coverage: evaluated 19 of 19 players (45 of 45 player-stats); skipped: none",
+      "cx": {
+        "Domantas Sabonis|REB|11.5|lean": {
+          "best_book": "tabtouch",
+          "best_price": 1.6,
+          "mm_min": 31.88,
+          "mm_mu": 11.823,
+          "n_books": 15,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.5005,
+          "p_pin": 0.5691,
+          "p_wowy": 0.5005,
+          "pin_edge_pp": -7.2,
+          "pin_line": 12.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 11.823
+        },
+        "Miles Bridges|PTS|11.5|lean": {
+          "best_book": "tabtouch",
+          "best_price": 1.47,
+          "mm_min": 26.12,
+          "mm_mu": 14.22,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6989,
+          "p_pin": 0.666,
+          "p_wowy": 0.6989,
+          "pin_edge_pp": -2.8,
+          "pin_line": 13.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 14.22
+        },
+        "Zach LaVine|REB|2.5|lean": {
+          "best_book": "ladbrokes",
+          "best_price": 1.7,
+          "mm_min": 32.6,
+          "mm_mu": 3.092,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.5796,
+          "p_pin": "",
+          "p_wowy": 0.5796,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 3.092
+        }
+      },
+      "engine": "nba-session v3.27-p4",
+      "id": "PHX@SAC",
+      "leans": [
+        {
+          "alt": 11.5,
+          "e": 4.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "DOG7",
+            "MT-",
+            "C0.93",
+            "Z0.20",
+            "PIN-7.2"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.56,
+          "opp": "PHX 5th most REB allowed · pace -0.1",
+          "p": "Domantas Sabonis",
+          "s": "REB",
+          "st": "4",
+          "std": 12.5,
+          "t": "SAC"
+        },
+        {
+          "alt": 2.5,
+          "e": 3.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "DOG7",
+            "DNP-LAST",
+            "C0.82",
+            "Z0.45",
+            "BEST-ladbrokes@1.70"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.63,
+          "opp": "PHX 5th most REB allowed · pace -0.1",
+          "p": "Zach LaVine",
+          "s": "REB",
+          "st": "4",
+          "std": 2.5,
+          "t": "SAC"
+        },
+        {
+          "alt": 11.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "MT-",
+            "C0.74",
+            "Z0.73",
+            "PIN-2.8"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.44,
+          "opp": "SAC 1st most PTS allowed · pace -0.1",
+          "p": "Miles Bridges",
+          "s": "PTS",
+          "st": "4",
+          "std": 13.5,
+          "t": "PHX"
+        }
+      ],
+      "mkt": 226.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "mx": {
+        "exp_pace": 102.3,
+        "home_spread": 7.5,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.7,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.4
+        },
+        "teams": {
+          "PHX": {
+            "allow100": {
+              "3PM": 13.4,
+              "AST": 25.5,
+              "PTS": 112.4,
+              "REB": 43.7
+            },
+            "allow_rk": {
+              "3PM": 9,
+              "AST": 21,
+              "PTS": 9,
+              "REB": 5
+            },
+            "out": [],
+            "pace": 101.9,
+            "rk": {
+              "ast": 11,
+              "blk": 25,
+              "dreb": 29,
+              "fg3_pct": 9,
+              "fg3a": 17,
+              "fg3m": 14,
+              "fg_pct": 9,
+              "ft_pct": 22,
+              "fta": 28,
+              "net": 21,
+              "opp_fg3_pct": 25,
+              "opp_fg_pct": 20,
+              "oppg": 21,
+              "oreb": 19,
+              "pace": 23,
+              "pf": 14,
+              "ppg": 17,
+              "reb": 28,
+              "stl": 16,
+              "tov": 9,
+              "ts_pct": 11
+            },
+            "v": {
+              "ast": 27.2,
+              "ats": "4-9-0",
+              "ats_away": "1-3-0",
+              "ats_home": "3-6-0",
+              "ats_l10": "4-6-0",
+              "away": "1-3",
+              "blk": 4.2,
+              "dreb": 28.6,
+              "fg3_pct": 36.6,
+              "fg3a": 37.6,
+              "fg3m": 13.8,
+              "fg_pct": 46.8,
+              "ft_pct": 76.4,
+              "fta": 21.2,
+              "gp": 13,
+              "home": "5-4",
+              "l10": "5-5",
+              "net": -3.4,
+              "opp_fg3_pct": 37.1,
+              "opp_fg_pct": 46.9,
+              "oppg": 116.4,
+              "oreb": 11.5,
+              "ou": "7-6-0",
+              "ou_l10": "5-5-0",
+              "pace": 101.5,
+              "pf": 21.7,
+              "ppg": 113.0,
+              "reb": 40.1,
+              "rec": "6-7",
+              "stl": 8.0,
+              "tov": 14.4,
+              "ts_pct": 57.7
+            }
+          },
+          "SAC": {
+            "allow100": {
+              "3PM": 13.2,
+              "AST": 25.6,
+              "PTS": 114.4,
+              "REB": 42.6
+            },
+            "allow_rk": {
+              "3PM": 14,
+              "AST": 19,
+              "PTS": 1,
+              "REB": 20
+            },
+            "out": [],
+            "pace": 102.8,
+            "rk": {
+              "ast": 21,
+              "blk": 30,
+              "dreb": 26,
+              "fg3_pct": 17,
+              "fg3a": 20,
+              "fg3m": 22,
+              "fg_pct": 21,
+              "ft_pct": 19,
+              "fta": 24,
+              "net": 29,
+              "opp_fg3_pct": 24,
+              "opp_fg_pct": 30,
+              "oppg": 28,
+              "oreb": 29,
+              "pace": 8,
+              "pf": 22,
+              "ppg": 28,
+              "reb": 29,
+              "stl": 19,
+              "tov": 29,
+              "ts_pct": 23
+            },
+            "v": {
+              "ast": 25.2,
+              "ats": "4-9-0",
+              "ats_away": "1-4-0",
+              "ats_home": "3-5-0",
+              "ats_l10": "3-7-0",
+              "away": "1-4",
+              "blk": 3.5,
+              "dreb": 29.9,
+              "fg3_pct": 34.3,
+              "fg3a": 36.1,
+              "fg3m": 12.4,
+              "fg_pct": 45.5,
+              "ft_pct": 76.7,
+              "fta": 22.5,
+              "gp": 13,
+              "home": "0-8",
+              "l10": "1-9",
+              "net": -13.5,
+              "opp_fg3_pct": 36.9,
+              "opp_fg_pct": 49.4,
+              "oppg": 121.2,
+              "oreb": 9.8,
+              "ou": "7-6-0",
+              "ou_l10": "5-5-0",
+              "pace": 103.0,
+              "pf": 22.9,
+              "ppg": 107.8,
+              "reb": 39.7,
+              "rec": "1-12",
+              "stl": 7.8,
+              "tov": 17.5,
+              "ts_pct": 56.2
+            }
+          }
+        }
+      },
+      "out": {
+        "PHX": [
+          "Mark Williams (Williams underwent surgery Thursday to repair a torn labrum in his left shoulder and will miss an extended period of time, Shams Charania of ESPN reports.)"
+        ],
+        "SAC": [
+          "Ben Simmons (Simmons underwent successful surgery Tuesday to repair a torn right Achilles tendon, James Ham of ESPN 1320 Sacramento reports.)",
+          "Maxime Raynaud (Raynaud (knee) will remain on the inactive list for Wednesday's game against the Suns.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "PHX": [],
+        "SAC": []
+      },
+      "tip": "14:00"
+    },
+    {
+      "abs": {
+        "LAL": [
+          {
+            "min": 34.2,
+            "name": "Austin Reaves",
+            "roles": [
+              "SC2"
+            ]
+          }
+        ],
+        "UTA": []
+      },
+      "b2b": [
+        "UTA",
+        "LAL"
+      ],
+      "cov": {
+        "players": [
+          16,
+          16
+        ],
+        "skipped": [
+          "Jake LaRavia PTS (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          38,
+          39
+        ]
+      },
+      "ctx": "Out TOP3: Lauri Markkanen (UTA), Austin Reaves (LAL); Returning: none; Depleted: none; missed last game: Walker Kessler. Coverage: evaluated 16 of 16 players (38 of 39 player-stats); skipped: Jake LaRavia PTS (no rung priced 1.40+ at or below std)",
+      "cx": {
+        "Darryn Peterson|AST|3.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.63,
+          "mm_min": 29.82,
+          "mm_mu": 3.857,
+          "n_books": 10,
+          "opp_lift": 0.0,
+          "opp_out": "SC2:Austin Reaves",
+          "p_mm": 0.5328,
+          "p_pin": 0.5409,
+          "p_wowy": 0.5328,
+          "pin_edge_pp": -7.3,
+          "pin_line": 4.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 3.857
+        },
+        "Jake LaRavia|AST|1.5|lean": {
+          "best_book": "betdeluxe",
+          "best_price": 1.68,
+          "mm_min": 28.52,
+          "mm_mu": 2.937,
+          "n_books": 10,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7324,
+          "p_pin": "",
+          "p_wowy": 0.6775,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "wowy_L": 1.116,
+          "wowy_keys": "Austin Reaves",
+          "wowy_mu": 2.62
+        },
+        "Luka Doncic|PTS|34.5|OUTLIFT": {
+          "best_book": "pointsbet",
+          "best_price": 1.59,
+          "mm_min": 38.95,
+          "mm_mu": 45.877,
+          "n_books": 13,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8975,
+          "p_pin": 0.6135,
+          "p_wowy": 0.5989,
+          "pin_edge_pp": -1.5,
+          "pin_line": 36.5,
+          "wowy_L": 1.003,
+          "wowy_keys": "Austin Reaves",
+          "wowy_mu": 36.987
+        },
+        "Luka Doncic|REB|5.5|OUTLIFT": {
+          "best_book": "tabtouch",
+          "best_price": 1.37,
+          "mm_min": 38.95,
+          "mm_mu": 7.52,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6815,
+          "p_pin": 0.6969,
+          "p_wowy": 0.5026,
+          "pin_edge_pp": -6.6,
+          "pin_line": 7.5,
+          "wowy_L": 0.921,
+          "wowy_keys": "Austin Reaves",
+          "wowy_mu": 5.948
+        },
+        "Walker Kessler|PTS|11.5|OUTLIFT": {
+          "best_book": "betright",
+          "best_price": 1.42,
+          "mm_min": 33.36,
+          "mm_mu": 16.374,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8263,
+          "p_pin": 0.6862,
+          "p_wowy": 0.7076,
+          "pin_edge_pp": -4.9,
+          "pin_line": 13.5,
+          "wowy_L": 1.1,
+          "wowy_keys": "Austin Reaves",
+          "wowy_mu": 14.396
+        },
+        "Walker Kessler|REB|9.5|lean": {
+          "best_book": "bet365",
+          "best_price": 1.5,
+          "mm_min": 33.36,
+          "mm_mu": 13.207,
+          "n_books": 16,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8341,
+          "p_pin": 0.6316,
+          "p_wowy": 0.6949,
+          "pin_edge_pp": -4.4,
+          "pin_line": 10.5,
+          "wowy_L": 1.016,
+          "wowy_keys": "Austin Reaves",
+          "wowy_mu": 11.459
+        }
+      },
+      "engine": "nba-session v3.27-p4",
+      "id": "UTA@LAL",
+      "leans": [
+        {
+          "alt": 1.5,
+          "e": 4.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "[ROLE?]",
+            "B2B",
+            "OPP-B2B",
+            "MU-6%",
+            "OT-ADJ",
+            "C0.60",
+            "Z0.69",
+            "TMO",
+            "BEST-sportsbet@1.68"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.67,
+          "opp": "UTA 1st fewest AST allowed · pace +0.7",
+          "p": "Jake LaRavia",
+          "s": "AST",
+          "st": "2.5",
+          "std": 1.5,
+          "t": "LAL"
+        },
+        {
+          "alt": 3.5,
+          "e": 3.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "[ROLE?]",
+            "B2B",
+            "OPP-B2B",
+            "DOG7",
+            "OT-ADJ",
+            "C0.83",
+            "Z0.53",
+            "TMO",
+            "PIN-7.3",
+            "OPP-OUT:SC2",
+            "MAIN-U+2.5"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.63,
+          "opp": "LAL 13th most AST allowed · pace +0.7",
+          "p": "Darryn Peterson",
+          "s": "AST",
+          "st": "3.5",
+          "std": 3.5,
+          "t": "UTA"
+        },
+        {
+          "alt": 9.5,
+          "e": 3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[ROLE?]",
+            "B2B",
+            "OPP-B2B",
+            "DNP-LAST",
+            "C0.78",
+            "Z0.96",
+            "TMO",
+            "PIN-4.4"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.48,
+          "opp": "UTA 12th most REB allowed · pace +0.7",
+          "p": "Walker Kessler",
+          "s": "REB",
+          "st": "3.5",
+          "std": 10.5,
+          "t": "LAL"
+        },
+        {
+          "alt": 34.5,
+          "e": -0.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC2",
+            "[ROLE?]",
+            "B2B",
+            "OPP-B2B",
+            "OT-ADJ",
+            "C0.86",
+            "Z0.80",
+            "TMO",
+            "PIN-1.5"
+          ],
+          "h": "70% (7/10)",
+          "o": 1.59,
+          "opp": "UTA 10th most PTS allowed · pace +0.7",
+          "p": "Luka Doncic",
+          "s": "PTS",
+          "st": "2.5",
+          "std": 36.5,
+          "t": "LAL"
+        },
+        {
+          "alt": 11.5,
+          "e": -0.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC2",
+            "[ROLE?]",
+            "B2B",
+            "OPP-B2B",
+            "DNP-LAST",
+            "C0.82",
+            "Z0.76",
+            "TMO",
+            "PIN-4.9",
+            "BEST-ladbrokes@1.40"
+          ],
+          "h": "70% (7/10)",
+          "o": 1.36,
+          "opp": "UTA 10th most PTS allowed · pace +0.7",
+          "p": "Walker Kessler",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 14.5,
+          "t": "LAL"
+        },
+        {
+          "alt": 5.5,
+          "e": -4.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC2",
+            "[ROLE?]",
+            "B2B",
+            "OPP-B2B",
+            "OT-ADJ",
+            "C0.78",
+            "Z0.44",
+            "TMO",
+            "PIN-6.6",
+            "BEST-ladbrokes@1.32"
+          ],
+          "h": "60% (6/10)",
+          "o": 1.31,
+          "opp": "UTA 12th most REB allowed · pace +0.7",
+          "p": "Luka Doncic",
+          "s": "REB",
+          "st": "3.5",
+          "std": 7.5,
+          "t": "LAL"
+        }
+      ],
+      "mkt": 230.5,
+      "mkt_o": 1.83,
+      "mkt_u": 1.83,
+      "mx": {
+        "exp_pace": 103.1,
+        "home_spread": -11.5,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.7,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.4
+        },
+        "teams": {
+          "LAL": {
+            "allow100": {
+              "3PM": 13.9,
+              "AST": 26.0,
+              "PTS": 111.0,
+              "REB": 41.6
+            },
+            "allow_rk": {
+              "3PM": 3,
+              "AST": 13,
+              "PTS": 17,
+              "REB": 28
+            },
+            "out": [
+              {
+                "min": 34.2,
+                "name": "Austin Reaves",
+                "roles": [
+                  "SC2"
+                ]
+              }
+            ],
+            "pace": 102.8,
+            "rk": {
+              "ast": 25,
+              "blk": 3,
+              "dreb": 27,
+              "fg3_pct": 5,
+              "fg3a": 15,
+              "fg3m": 8,
+              "fg_pct": 1,
+              "ft_pct": 11,
+              "fta": 2,
+              "net": 6,
+              "opp_fg3_pct": 21,
+              "opp_fg_pct": 11,
+              "oppg": 18,
+              "oreb": 15,
+              "pace": 7,
+              "pf": 23,
+              "ppg": 1,
+              "reb": 26,
+              "stl": 1,
+              "tov": 24,
+              "ts_pct": 1
+            },
+            "v": {
+              "ast": 24.5,
+              "ats": "10-5-0",
+              "ats_away": "6-2-0",
+              "ats_home": "4-3-0",
+              "ats_l10": "7-3-0",
+              "away": "7-1",
+              "blk": 6.1,
+              "dreb": 29.5,
+              "fg3_pct": 38.1,
+              "fg3a": 37.9,
+              "fg3m": 14.5,
+              "fg_pct": 49.6,
+              "ft_pct": 79.2,
+              "fta": 30.1,
+              "gp": 15,
+              "home": "6-1",
+              "l10": "9-1",
+              "net": 7.7,
+              "opp_fg3_pct": 36.4,
+              "opp_fg_pct": 45.6,
+              "oppg": 114.8,
+              "oreb": 11.9,
+              "ou": "11-4-0",
+              "ou_l10": "8-2-0",
+              "pace": 103.1,
+              "pf": 23.1,
+              "ppg": 122.5,
+              "reb": 41.4,
+              "rec": "13-2",
+              "stl": 10.8,
+              "tov": 16.6,
+              "ts_pct": 62.4
+            }
+          },
+          "UTA": {
+            "allow100": {
+              "3PM": 12.6,
+              "AST": 24.0,
+              "PTS": 112.2,
+              "REB": 43.2
+            },
+            "allow_rk": {
+              "3PM": 24,
+              "AST": 30,
+              "PTS": 10,
+              "REB": 12
+            },
+            "out": [],
+            "pace": 102.7,
+            "rk": {
+              "ast": 23,
+              "blk": 4,
+              "dreb": 9,
+              "fg3_pct": 15,
+              "fg3a": 18,
+              "fg3m": 17,
+              "fg_pct": 27,
+              "ft_pct": 20,
+              "fta": 20,
+              "net": 26,
+              "opp_fg3_pct": 17,
+              "opp_fg_pct": 10,
+              "oppg": 22,
+              "oreb": 16,
+              "pace": 11,
+              "pf": 24,
+              "ppg": 27,
+              "reb": 14,
+              "stl": 29,
+              "tov": 22,
+              "ts_pct": 25
+            },
+            "v": {
+              "ast": 24.9,
+              "ats": "5-10-0",
+              "ats_away": "2-5-0",
+              "ats_home": "3-5-0",
+              "ats_l10": "4-6-0",
+              "away": "1-6",
+              "blk": 5.9,
+              "dreb": 32.7,
+              "fg3_pct": 35.1,
+              "fg3a": 36.9,
+              "fg3m": 12.9,
+              "fg_pct": 44.6,
+              "ft_pct": 76.6,
+              "fta": 23.9,
+              "gp": 15,
+              "home": "1-7",
+              "l10": "1-9",
+              "net": -8.5,
+              "opp_fg3_pct": 35.3,
+              "opp_fg_pct": 45.3,
+              "oppg": 117.3,
+              "oreb": 11.7,
+              "ou": "6-9-0",
+              "ou_l10": "4-6-0",
+              "pace": 102.8,
+              "pf": 23.3,
+              "ppg": 108.7,
+              "reb": 44.3,
+              "rec": "2-13",
+              "stl": 6.7,
+              "tov": 16.5,
+              "ts_pct": 55.9
+            }
+          }
+        }
+      },
+      "out": {
+        "LAL": [
+          "Austin Reaves (Reaves (heel) is out for Wednesday's game against the Jazz.)"
+        ],
+        "UTA": [
+          "Jaren Jackson Jr. (Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.)",
+          "Jusuf Nurkic (Nurkic (toe) has begun participating in on-court activities as he continues recovering from a right foot injury sustained during an Oct. 4 preseason game against Denver. He will be re-evaluated in two weeks, the Jazz announced Friday.)",
+          "Lauri Markkanen (Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "LAL": [],
+        "UTA": [
+          "Jaxson Hayes (Hayes (knee) is questionable for Wednesday's game against the Lakers.)"
+        ]
+      },
+      "tip": "14:00"
     }
   ],
-  "generated": "2026-11-19T01:00:02Z",
+  "generated": "2026-11-19T01:30:02Z",
   "totals": [
     [
       "HOU@IND",
@@ -5376,6 +6182,16 @@
       "BOS@DEN",
       null,
       219.5
+    ],
+    [
+      "PHX@SAC",
+      null,
+      226.5
+    ],
+    [
+      "UTA@LAL",
+      null,
+      230.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
