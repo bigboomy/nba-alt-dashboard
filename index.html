@@ -287,7 +287,7 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
   <tr data-re="^Mixed$"><td class="lgc">Mixed</td><td>Reasons roughly cancel out (score between −2 and +1.5). The sentence gives the best reason for and the biggest worry.</td><td class="lge">Display</td></tr>
   <tr data-re="^Caution$"><td class="lgc">Caution</td><td>More reasons against (score −2 or worse): e.g. Pinnacle disagrees (±2 at 2pp, ±3 beyond 4pp), REB-OPP, his average only just clears the line.</td><td class="lge">Display</td></tr>
   <tr><td class="lgc">Verdict test</td><td>Verdict v1, weights frozen for the test. Logged with every item. Judged at 300 settled (60+ each in Worth a look and Caution) on beating the price, within each kind: CONFIRM at +5pp with the gap clearly above zero, KILL at 1pp or less. Must also beat Pinnacle's sign alone. Never changes a stake.</td><td class="lge">0u test</td></tr>
-  <tr><td class="lgc">Matchup edge bar</td><td>Bars grow out from the centre line toward the team with the better rank; length = rank gap (full = 29). Short grey stub both sides = 2 ranks or less, no real edge. In the defence table the arrow points to the softer defence.</td><td class="lge">Display</td></tr>
+  <tr><td class="lgc">Matchup edge bar</td><td>Bars grow out from the centre line toward the team with the better rank; length = rank gap (full = 29). Short grey stub both sides = 2 ranks or less, no real edge. In the defence table the arrow points to the tighter defence.</td><td class="lge">Display</td></tr>
   <tr class="lgh"><th colspan="3">Bet type and stake</th></tr>
   <tr data-re="^U(1\.5|1|0\.5|0\.25)$"><td class="lgc">U1.5 · U1 · U0.5 · U0.25</td><td>Stake in units for a pick, set by its stars: 5★ 1.5u, 4★ 1u, 3★ 0.5u, 2★ or less 0.25u.</td><td class="lge">Stake</td></tr>
   <tr data-re="^(LEAN|U0)"><td class="lgc">LEAN / U0</td><td>Lean: tracked at 0u and never staked. A near-miss, or one of the 0u test tiers below.</td><td class="lge">0u</td></tr>
@@ -816,7 +816,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   var MXV={};
   function mxHtml(g){
     var m=g.mx,t=String(g.id).split('@'),A=t[0]||'',H=t[1]||'';
-    if(!m||!m.teams||!m.teams[A]||!m.teams[H]) return '<div class="none">No matchup data for this game (needs the v3.25+ slate run).</div>';
+    if(!m||!m.teams||!m.teams[A]||!m.teams[H]) return '<div class="mxh">Injuries and line</div>'+infoTable(g)+'<div class="none">No team stats for this game (needs the v3.25+ slate run).</div>';
     var a=m.teams[A],h=m.teams[H],av=a.v||{},hv=h.v||{};
     function rk(r){if(r===null||r===undefined||r==='')return '';var n=Number(r),c=n<=10?'g':(n>=21?'r':'');return '<span class="rk '+c+'">#'+n+'</span>'}
     function v(x,d){return x===null||x===undefined||x===''?'—':(typeof x==='number'?x.toFixed(d===undefined?1:d):esc(String(x)))}
@@ -838,10 +838,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var hs=m.home_spread,line=(hs===null||hs===undefined)?'—':(hs===0?'PK':(hs<0?esc(H)+' '+hs.toFixed(1):esc(A)+' '+(-hs).toFixed(1)));
     var html='<div class="mxh">Records</div>'+hd(esc(A),esc(H))+
       row('Record',wlp(av.rec),wlp(hv.rec))+row('Away / home',wlp(av.away)+' <span class="rk">away</span>',wlp(hv.home)+' <span class="rk">home</span>')+
-      row('Last 10',wlp(av.l10),wlp(hv.l10))+row('ATS',wlp(av.ats),wlp(hv.ats))+
-      row('ATS away / home',wlp(av.ats_away),wlp(hv.ats_home))+row('ATS last 10',wlp(av.ats_l10),wlp(hv.ats_l10))+
-      row('Over-under',wlp(av.ou),wlp(hv.ou))+row('O-U last 10',wlp(av.ou_l10),wlp(hv.ou_l10))+'</tbody></table>'+
-      '<p class="mxn">Tonight: spread '+line+' (Pointsbet) · total '+(g.mkt!==null?esc(fix(g.mkt,1)):'—')+' · expected pace '+v(m.exp_pace)+' v league '+v(m.lg&&m.lg.pace)+'. ATS and O-U use the DraftKings closing line from ESPN.</p>';
+      row('Last 10',wlp(av.l10),wlp(hv.l10))+'</tbody></table>'+
+      '<p class="mxn">Tonight: spread '+line+' (Pointsbet) · total '+(g.mkt!==null?esc(fix(g.mkt,1)):'—')+' · expected pace '+v(m.exp_pace)+' v league '+v(m.lg&&m.lg.pace)+'.</p>'+
+      '<div class="mxh">Injuries and line</div>'+infoTable(g);
     var M=[['Points','ppg'],['Points allowed','oppg'],['Margin /g','net'],['Pace','pace'],['FG%','fg_pct'],['3P%','fg3_pct'],['3PM','fg3m'],['FT%','ft_pct'],
       ['True shooting %','ts_pct'],['Rebounds','reb'],['Off. rebounds','oreb'],['Assists','ast'],['Steals','stl'],['Blocks','blk'],['Turnovers','tov'],
       ['Opp FG%','opp_fg_pct'],['Opp 3P%','opp_fg3_pct']];
@@ -850,10 +849,11 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         function cell(val,r,b){return (b?'<b>':'')+v(val)+(b?'</b>':'')+(neu?(r!==undefined?'<span class="rk">#'+r+'</span>':''):rk(r))}
         return row4(x[0],cell(av[k],ra,ba),ebar(ra,rh,neu),cell(hv[k],rh,bh))}).join('')+'</tbody></table>';
     var S=[['PTS','Points'],['REB','Rebounds'],['AST','Assists'],['3PM','Threes']];
-    html+='<div class="mxh">What each defence allows <span>(per 100 possessions, #1 = allows the most; arrow = the softer defence)</span></div>'+hd4(esc(A)+' D',esc(H)+' D')+
+    function rkD(r){if(r===null||r===undefined||r==='')return '';var n=Number(r),c=n>=21?'g':(n<=10?'r':'');return '<span class="rk '+c+'">#'+n+'</span>'}
+    html+='<div class="mxh">What each defence allows <span>(per 100 possessions, #1 = allows the most; arrow = the tighter defence)</span></div>'+hd4(esc(A)+' D',esc(H)+' D')+
       S.map(function(x){var k=x[0],lg=m.lg&&m.lg[k],qa=(a.allow_rk||{})[k],qh=(h.allow_rk||{})[k];return row4(x[1]+(lg!==undefined?' <span class="rk">lg '+v(lg)+'</span>':''),
-        v((a.allow100||{})[k])+rk(qa),ebar(qa,qh,false),v((h.allow100||{})[k])+rk(qh))}).join('')+'</tbody></table>'+
-      '<p class="mxn">Green = that defence gives up a lot of the stat (good for overs against it); red = stingy.</p>';
+        v((a.allow100||{})[k])+rkD(qa),ebar(qa==null?qa:-qa,qh==null?qh:-qh,false),v((h.allow100||{})[k])+rkD(qh))}).join('')+'</tbody></table>'+
+      '<p class="mxn">Same as every arrow here: it points to the team that is better at this. Red rank = a leaky defence, which is good for overs against it.</p>';
     function outs(o){return o&&o.length?o.map(function(x){return esc(x.name)+' <span class="rk">'+esc((x.roles||[]).join('/'))+(x.min?' · '+Number(x.min).toFixed(0)+' min':'')+'</span>'}).join('<br>'):'<span class="mu">—</span>'}
     html+='<div class="mxh">Key players freshly out</div>'+hd(esc(A),esc(H))+row('Out',outs(a.out),outs(h.out))+'</tbody></table>';
     return html;
@@ -888,11 +888,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
     var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · tracked, not bet · best first</span></summary>'+
       '<table class="pt">'+th+'<tbody>'+lb+'</tbody></table></details>':'';
-    var cur=MXV[g.id]==='mx'&&g.mx?'mx':MXV[g.id]==='info'?'info':'bets';
-    var views=[['bets','Bets']].concat(g.mx?[['mx','Matchup']]:[]).concat([['info','Injuries & line']]);
+    var cur=MXV[g.id]==='mx'||MXV[g.id]==='info'?'mx':'bets';
+    var views=[['bets','Bets'],['mx','Matchup']];
     var gseg='<div class="gseg" role="group" aria-label="Game view">'+views.map(function(x){return '<button type="button" class="tab" data-mxg="'+esc(g.id)+'" data-mxv="'+x[0]+'" aria-pressed="'+(cur===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
     if(cur==='mx') return '<section class="game">'+head+gseg+'<div class="gw">'+mxHtml(g)+'</div></section>';
-    if(cur==='info') return '<section class="game">'+head+gseg+'<div class="gw">'+infoTable(g)+'</div></section>';
     return '<section class="game">'+head+gseg+'<div class="gw gp">'+tbl+lf+'</div></section>';
   }
   /* Today's games (Mitch, 5 Nov): from the first slate run the slate shows today's games from schedule.json.
