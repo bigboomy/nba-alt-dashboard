@@ -3728,582 +3728,6 @@
     },
     {
       "abs": {
-        "DET": [
-          {
-            "min": 29.8,
-            "name": "Duncan Robinson",
-            "roles": [
-              "SC2"
-            ]
-          }
-        ],
-        "NOP": []
-      },
-      "b2b": [
-        "DET"
-      ],
-      "cov": {
-        "players": [
-          13,
-          13
-        ],
-        "skipped": [],
-        "stats": [
-          30,
-          30
-        ]
-      },
-      "ctx": "Out TOP3: Duncan Robinson (DET); Returning: none; Depleted: NOP (3 rotation out); missed last game: none. Coverage: evaluated 13 of 13 players (30 of 30 player-stats); skipped: none",
-      "cx": {
-        "Ausar Thompson|AST|5.5|OUTLIFT": {
-          "best_book": "dabble",
-          "best_price": 1.55,
-          "mm_min": 30.24,
-          "mm_mu": 6.774,
-          "n_books": 11,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.6092,
-          "p_pin": 0.607,
-          "p_wowy": 0.6255,
-          "pin_edge_pp": -6.0,
-          "pin_line": 6.5,
-          "wowy_L": 1.243,
-          "wowy_keys": "Duncan Robinson",
-          "wowy_mu": 6.916
-        },
-        "Ausar Thompson|REB|7.5|OUTLIFT": {
-          "best_book": "betdeluxe",
-          "best_price": 1.65,
-          "mm_min": 30.24,
-          "mm_mu": 9.917,
-          "n_books": 11,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.7321,
-          "p_pin": 0.5751,
-          "p_wowy": 0.6245,
-          "pin_edge_pp": -6.6,
-          "pin_line": 8.5,
-          "wowy_L": 1.024,
-          "wowy_keys": "Duncan Robinson",
-          "wowy_mu": 8.839
-        },
-        "Cade Cunningham|AST|5.5|OUTLIFT": {
-          "best_book": "ladbrokes",
-          "best_price": 1.24,
-          "mm_min": 39.45,
-          "mm_mu": 9.324,
-          "n_books": 11,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.9026,
-          "p_pin": "",
-          "p_wowy": 0.7558,
-          "pin_edge_pp": "",
-          "pin_line": "",
-          "wowy_L": 0.976,
-          "wowy_keys": "Duncan Robinson",
-          "wowy_mu": 7.475
-        },
-        "Cade Cunningham|PTS|21.5|OUTLIFT": {
-          "best_book": "ladbrokes",
-          "best_price": 1.42,
-          "mm_min": 39.45,
-          "mm_mu": 32.805,
-          "n_books": 5,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.8837,
-          "p_pin": "",
-          "p_wowy": 0.7524,
-          "pin_edge_pp": "",
-          "pin_line": "",
-          "wowy_L": 1.042,
-          "wowy_keys": "Duncan Robinson",
-          "wowy_mu": 28.079
-        },
-        "Cade Cunningham|REB|3.5|OUTLIFT": {
-          "best_book": "tabtouch",
-          "best_price": 1.33,
-          "mm_min": 39.45,
-          "mm_mu": 6.065,
-          "n_books": 11,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.8378,
-          "p_pin": "",
-          "p_wowy": 0.7614,
-          "pin_edge_pp": "",
-          "pin_line": "",
-          "wowy_L": 1.011,
-          "wowy_keys": "Duncan Robinson",
-          "wowy_mu": 5.337
-        },
-        "Daniss Jenkins|AST|5.5|OUTLIFT": {
-          "best_book": "ladbrokes",
-          "best_price": 1.4,
-          "mm_min": 36.51,
-          "mm_mu": 5.898,
-          "n_books": 11,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.5011,
-          "p_pin": 0.676,
-          "p_wowy": 0.3868,
-          "pin_edge_pp": -7.6,
-          "pin_line": 7.5,
-          "wowy_L": 1.042,
-          "wowy_keys": "Duncan Robinson",
-          "wowy_mu": 5.048
-        },
-        "Daniss Jenkins|PTS|15.5|OUTLIFT": {
-          "best_book": "tabtouch",
-          "best_price": 1.49,
-          "mm_min": 36.51,
-          "mm_mu": 17.519,
-          "n_books": 5,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.5644,
-          "p_pin": 0.6489,
-          "p_wowy": 0.537,
-          "pin_edge_pp": -4.6,
-          "pin_line": 17.5,
-          "wowy_L": 1.183,
-          "wowy_keys": "Duncan Robinson",
-          "wowy_mu": 17.024
-        },
-        "Derik Queen|PTS|7.5|lean": {
-          "best_book": "ladbrokes",
-          "best_price": 1.44,
-          "mm_min": 20.65,
-          "mm_mu": 11.268,
-          "n_books": 3,
-          "opp_lift": 0.074,
-          "opp_out": "SC2:Duncan Robinson",
-          "p_mm": 0.7865,
-          "p_pin": "",
-          "p_wowy": 0.7865,
-          "pin_edge_pp": "",
-          "pin_line": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 11.268
-        }
-      },
-      "engine": "nba-session v3.27-p4",
-      "id": "DET@NOP",
-      "leans": [
-        {
-          "alt": 7.5,
-          "e": 4.3,
-          "f": [
-            "LEAN",
-            "U0",
-            "MISS",
-            "[OUT]",
-            "OPP-B2B",
-            "OT-ADJ",
-            "C0.68",
-            "Z0.82",
-            "OPP-OUT:SC2",
-            "BEST-ladbrokes@1.44"
-          ],
-          "h": "89% (8/9)",
-          "o": 1.42,
-          "opp": "DET 5th fewest PTS allowed · pace +1.7",
-          "p": "Derik Queen",
-          "s": "PTS",
-          "st": "3",
-          "std": 9.5,
-          "t": "NOP"
-        },
-        {
-          "alt": 7.5,
-          "e": 0.1,
-          "f": [
-            "LEAN",
-            "U0",
-            "OUTLIFT",
-            "TM-OUT:SC2",
-            "[ROLE?]",
-            "B2B",
-            "OT-ADJ",
-            "C0.83",
-            "Z0.45",
-            "TMO",
-            "PIN-6.6",
-            "BEST-sportsbet@1.65"
-          ],
-          "h": "70% (7/10)",
-          "o": 1.56,
-          "opp": "NOP 15th most REB allowed · pace +1.7",
-          "p": "Ausar Thompson",
-          "s": "REB",
-          "st": "2.5",
-          "std": 8.5,
-          "t": "DET"
-        },
-        {
-          "alt": 5.5,
-          "e": -6.7,
-          "f": [
-            "LEAN",
-            "U0",
-            "OUTLIFT",
-            "TM-OUT:SC2",
-            "[ROLE?]",
-            "B2B",
-            "MU+5%",
-            "OT-ADJ",
-            "C0.95",
-            "Z0.09",
-            "TMO",
-            "PIN-6.0"
-          ],
-          "h": "40% (4/10)",
-          "o": 1.5,
-          "opp": "NOP 4th most AST allowed · pace +1.7",
-          "p": "Ausar Thompson",
-          "s": "AST",
-          "st": "2.5",
-          "std": 6.5,
-          "t": "DET"
-        },
-        {
-          "alt": 15.5,
-          "e": -8.3,
-          "f": [
-            "LEAN",
-            "U0",
-            "OUTLIFT",
-            "TM-OUT:SC2",
-            "[OUT]",
-            "[ROLE?]",
-            "B2B",
-            "MU+4%",
-            "OT-ADJ",
-            "MT+",
-            "C1.19",
-            "Z-0.29",
-            "TMO",
-            "PIN-4.6",
-            "BEST-ladbrokes@1.48"
-          ],
-          "h": "33% (3/9)",
-          "o": 1.44,
-          "opp": "NOP 2nd most PTS allowed · pace +1.7",
-          "p": "Daniss Jenkins",
-          "s": "PTS",
-          "st": "2.5",
-          "std": 17.5,
-          "t": "DET"
-        },
-        {
-          "alt": 21.5,
-          "e": -2.6,
-          "f": [
-            "LEAN",
-            "U0",
-            "OUTLIFT",
-            "TM-OUT:SC2",
-            "[ROLE?]",
-            "B2B",
-            "MU+4%",
-            "OT-ADJ",
-            "C0.79",
-            "Z0.65",
-            "TMO"
-          ],
-          "h": "60% (6/10)",
-          "o": 1.42,
-          "opp": "NOP 2nd most PTS allowed · pace +1.7",
-          "p": "Cade Cunningham",
-          "s": "PTS",
-          "st": "3.5",
-          "std": 24.5,
-          "t": "DET"
-        },
-        {
-          "alt": 5.5,
-          "e": -13.8,
-          "f": [
-            "LEAN",
-            "U0",
-            "OUTLIFT",
-            "TM-OUT:SC2",
-            "[Std?]",
-            "[ROLE?]",
-            "B2B",
-            "MU+5%",
-            "OT-ADJ",
-            "MT+",
-            "C1.24",
-            "Z-0.45",
-            "TMO",
-            "PIN-7.6",
-            "BEST-ladbrokes@1.40"
-          ],
-          "h": "20% (2/10)",
-          "o": 1.33,
-          "opp": "NOP 4th most AST allowed · pace +1.7",
-          "p": "Daniss Jenkins",
-          "s": "AST",
-          "st": "2.5",
-          "std": 6.5,
-          "t": "DET"
-        },
-        {
-          "alt": 3.5,
-          "e": 3.1,
-          "f": [
-            "LEAN",
-            "U0",
-            "OUTLIFT",
-            "TM-OUT:SC2",
-            "[Std?]",
-            "[ROLE?]",
-            "B2B",
-            "OT-ADJ",
-            "C0.65",
-            "Z1.03",
-            "TMO"
-          ],
-          "h": "90% (9/10)",
-          "o": 1.29,
-          "opp": "NOP 15th most REB allowed · pace +1.7",
-          "p": "Cade Cunningham",
-          "s": "REB",
-          "st": "4.5",
-          "std": 5.5,
-          "t": "DET"
-        },
-        {
-          "alt": 5.5,
-          "e": 1.8,
-          "f": [
-            "LEAN",
-            "U0",
-            "OUTLIFT",
-            "TM-OUT:SC2",
-            "[ROLE?]",
-            "B2B",
-            "MU+5%",
-            "OT-ADJ",
-            "C0.71",
-            "Z1.17",
-            "TMO",
-            "BEST-ladbrokes@1.24"
-          ],
-          "h": "90% (9/10)",
-          "o": 1.21,
-          "opp": "NOP 4th most AST allowed · pace +1.7",
-          "p": "Cade Cunningham",
-          "s": "AST",
-          "st": "4.5",
-          "std": 7.5,
-          "t": "DET"
-        }
-      ],
-      "mkt": 226.5,
-      "mkt_o": 1.87,
-      "mkt_u": 1.8,
-      "mx": {
-        "exp_pace": 104.1,
-        "home_spread": 4.5,
-        "lg": {
-          "3PM": 13.1,
-          "AST": 25.7,
-          "PTS": 111.1,
-          "REB": 42.9,
-          "pace": 102.4
-        },
-        "teams": {
-          "DET": {
-            "allow100": {
-              "3PM": 12.4,
-              "AST": 24.5,
-              "PTS": 108.5,
-              "REB": 43.5
-            },
-            "allow_rk": {
-              "3PM": 28,
-              "AST": 28,
-              "PTS": 26,
-              "REB": 6
-            },
-            "out": [
-              {
-                "min": 29.8,
-                "name": "Duncan Robinson",
-                "roles": [
-                  "SC2"
-                ]
-              }
-            ],
-            "pace": 102.3,
-            "rk": {
-              "ast": 4,
-              "blk": 2,
-              "dreb": 12,
-              "fg3_pct": 11,
-              "fg3a": 23,
-              "fg3m": 17,
-              "fg_pct": 10,
-              "ft_pct": 12,
-              "fta": 15,
-              "net": 9,
-              "opp_fg3_pct": 1,
-              "opp_fg_pct": 5,
-              "oppg": 6,
-              "oreb": 14,
-              "pace": 16,
-              "pf": 25,
-              "ppg": 12,
-              "reb": 14,
-              "stl": 5,
-              "tov": 6,
-              "ts_pct": 11
-            },
-            "v": {
-              "ast": 27.9,
-              "ats": "8-5-0",
-              "ats_away": "5-3-0",
-              "ats_home": "3-2-0",
-              "ats_l10": "5-5-0",
-              "away": "6-2",
-              "blk": 6.2,
-              "dreb": 32.1,
-              "fg3_pct": 36.0,
-              "fg3a": 35.9,
-              "fg3m": 12.9,
-              "fg_pct": 46.5,
-              "ft_pct": 78.8,
-              "fta": 24.7,
-              "gp": 13,
-              "home": "3-2",
-              "l10": "6-4",
-              "net": 5.9,
-              "opp_fg3_pct": 32.4,
-              "opp_fg_pct": 44.0,
-              "oppg": 108.9,
-              "oreb": 12.2,
-              "ou": "7-6-0",
-              "ou_l10": "5-5-0",
-              "pace": 102.2,
-              "pf": 23.4,
-              "ppg": 114.8,
-              "reb": 44.3,
-              "rec": "9-4",
-              "stl": 9.5,
-              "tov": 14.0,
-              "ts_pct": 57.7
-            }
-          },
-          "NOP": {
-            "allow100": {
-              "3PM": 12.9,
-              "AST": 26.5,
-              "PTS": 113.8,
-              "REB": 42.9
-            },
-            "allow_rk": {
-              "3PM": 18,
-              "AST": 4,
-              "PTS": 2,
-              "REB": 15
-            },
-            "out": [],
-            "pace": 104.2,
-            "rk": {
-              "ast": 26,
-              "blk": 11,
-              "dreb": 21,
-              "fg3_pct": 25,
-              "fg3a": 30,
-              "fg3m": 30,
-              "fg_pct": 13,
-              "ft_pct": 5,
-              "fta": 1,
-              "net": 24,
-              "opp_fg3_pct": 13,
-              "opp_fg_pct": 28,
-              "oppg": 29,
-              "oreb": 21,
-              "pace": 3,
-              "pf": 28,
-              "ppg": 10,
-              "reb": 22,
-              "stl": 3,
-              "tov": 16,
-              "ts_pct": 13
-            },
-            "v": {
-              "ast": 24.3,
-              "ats": "8-7-0",
-              "ats_away": "3-2-0",
-              "ats_home": "5-5-0",
-              "ats_l10": "5-5-0",
-              "away": "1-4",
-              "blk": 5.3,
-              "dreb": 31.0,
-              "fg3_pct": 33.3,
-              "fg3a": 29.5,
-              "fg3m": 9.8,
-              "fg_pct": 46.2,
-              "ft_pct": 81.6,
-              "fta": 31.5,
-              "gp": 15,
-              "home": "4-6",
-              "l10": "4-6",
-              "net": -7.1,
-              "opp_fg3_pct": 34.4,
-              "opp_fg_pct": 48.3,
-              "oppg": 122.9,
-              "oreb": 11.1,
-              "ou": "9-6-0",
-              "ou_l10": "5-5-0",
-              "pace": 105.4,
-              "pf": 24.4,
-              "ppg": 115.8,
-              "reb": 42.1,
-              "rec": "5-10",
-              "stl": 9.9,
-              "tov": 15.7,
-              "ts_pct": 57.4
-            }
-          }
-        }
-      },
-      "out": {
-        "DET": [
-          "Duncan Robinson (Robinson will be re-evaluated in one week due to a left quadriceps strain, Coty M. Davis of The Detroit News reports.)",
-          "Isaiah Joe (Joe (hip) is listed as questionable for Wednesday's game against the Pelicans.)",
-          "Jalen Duren (Duren (hamstring) has begun on-court activity and will be re-evaluated in two weeks, Hunter Patterson of The Athletic reports.)",
-          "Ronald Holland II (Holland (knee) is out for Wednesday's game against the Pelicans.)",
-          "Taurean Prince (Prince (knee) is out for Wednesday's game against the Pelicans.)"
-        ],
-        "NOP": [
-          "Bennedict Mathurin (Mathurin (foot) has been ruled out for Wednesday's game against Detroit.)",
-          "Bryce McGowens (McGowens (elbow) has been ruled out for Wednesday's game against Detroit.)",
-          "Dejounte Murray (Murray (ankle) is out for Friday's game against Memphis.)",
-          "Trendon Watford (Watford (ankle) has been ruled out for Wednesday's game against Detroit.)",
-          "Trey Murphy III (Murphy (knee) has been ruled out for Wednesday's game against Detroit.)"
-        ]
-      },
-      "picks": [],
-      "proj": null,
-      "q": {
-        "DET": [
-          "Cade Cunningham (Cunningham is questionable for Wednesday's game against the Pelicans due to right knee soreness)"
-        ],
-        "NOP": []
-      },
-      "tip": "12:00"
-    },
-    {
-      "abs": {
         "DAL": [],
         "GSW": [
           {
@@ -4953,6 +4377,636 @@
         ]
       },
       "tip": "12:00"
+    },
+    {
+      "abs": {
+        "DET": [
+          {
+            "min": 29.8,
+            "name": "Duncan Robinson",
+            "roles": [
+              "SC2"
+            ]
+          }
+        ],
+        "NOP": []
+      },
+      "b2b": [
+        "DET"
+      ],
+      "cov": {
+        "players": [
+          13,
+          13
+        ],
+        "skipped": [],
+        "stats": [
+          30,
+          30
+        ]
+      },
+      "ctx": "Out TOP3: Duncan Robinson (DET); Returning: none; Depleted: NOP (3 rotation out); missed last game: none. Coverage: evaluated 13 of 13 players (30 of 30 player-stats); skipped: none",
+      "cx": {
+        "Ausar Thompson|AST|5.5|OUTLIFT": {
+          "best_book": "dabble",
+          "best_price": 1.55,
+          "mm_min": 30.24,
+          "mm_mu": 6.774,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6092,
+          "p_pin": 0.607,
+          "p_wowy": 0.6255,
+          "pin_edge_pp": -6.0,
+          "pin_line": 6.5,
+          "wowy_L": 1.243,
+          "wowy_keys": "Duncan Robinson",
+          "wowy_mu": 6.916
+        },
+        "Ausar Thompson|REB|7.5|OUTLIFT": {
+          "best_book": "betdeluxe",
+          "best_price": 1.65,
+          "mm_min": 30.24,
+          "mm_mu": 9.917,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7321,
+          "p_pin": 0.5751,
+          "p_wowy": 0.6245,
+          "pin_edge_pp": -6.6,
+          "pin_line": 8.5,
+          "wowy_L": 1.024,
+          "wowy_keys": "Duncan Robinson",
+          "wowy_mu": 8.839
+        },
+        "Cade Cunningham|AST|5.5|OUTLIFT": {
+          "best_book": "ladbrokes",
+          "best_price": 1.24,
+          "mm_min": 39.45,
+          "mm_mu": 9.324,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9026,
+          "p_pin": "",
+          "p_wowy": 0.7558,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "wowy_L": 0.976,
+          "wowy_keys": "Duncan Robinson",
+          "wowy_mu": 7.475
+        },
+        "Cade Cunningham|PTS|21.5|OUTLIFT": {
+          "best_book": "ladbrokes",
+          "best_price": 1.42,
+          "mm_min": 39.45,
+          "mm_mu": 32.805,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8837,
+          "p_pin": "",
+          "p_wowy": 0.7524,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "wowy_L": 1.042,
+          "wowy_keys": "Duncan Robinson",
+          "wowy_mu": 28.079
+        },
+        "Cade Cunningham|REB|3.5|OUTLIFT": {
+          "best_book": "tabtouch",
+          "best_price": 1.33,
+          "mm_min": 39.45,
+          "mm_mu": 6.065,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8378,
+          "p_pin": "",
+          "p_wowy": 0.7614,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "wowy_L": 1.011,
+          "wowy_keys": "Duncan Robinson",
+          "wowy_mu": 5.337
+        },
+        "Daniss Jenkins|AST|5.5|OUTLIFT": {
+          "best_book": "ladbrokes",
+          "best_price": 1.4,
+          "mm_min": 36.51,
+          "mm_mu": 5.898,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.5011,
+          "p_pin": 0.676,
+          "p_wowy": 0.3868,
+          "pin_edge_pp": -7.6,
+          "pin_line": 7.5,
+          "wowy_L": 1.042,
+          "wowy_keys": "Duncan Robinson",
+          "wowy_mu": 5.048
+        },
+        "Daniss Jenkins|PTS|15.5|OUTLIFT": {
+          "best_book": "tabtouch",
+          "best_price": 1.49,
+          "mm_min": 36.51,
+          "mm_mu": 17.519,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.5644,
+          "p_pin": 0.6489,
+          "p_wowy": 0.537,
+          "pin_edge_pp": -4.6,
+          "pin_line": 17.5,
+          "wowy_L": 1.183,
+          "wowy_keys": "Duncan Robinson",
+          "wowy_mu": 17.024
+        },
+        "Derik Queen|PTS|7.5|lean": {
+          "best_book": "ladbrokes",
+          "best_price": 1.44,
+          "mm_min": 20.65,
+          "mm_mu": 11.268,
+          "n_books": 3,
+          "opp_lift": 0.074,
+          "opp_out": "SC2:Duncan Robinson",
+          "p_mm": 0.7865,
+          "p_pin": "",
+          "p_wowy": 0.7865,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 11.268
+        },
+        "Jeremiah Fears|REB|3.5|LSR": {
+          "best_book": "betdeluxe",
+          "best_price": 1.42,
+          "mm_min": 30.93,
+          "mm_mu": 5.112,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "SC2:Duncan Robinson;SC1/AST1:Cade Cunningham",
+          "p_mm": 0.7159,
+          "p_pin": 0.6685,
+          "p_wowy": 0.7159,
+          "pin_edge_pp": -4.6,
+          "pin_line": 4.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 5.112
+        }
+      },
+      "engine": "nba-session v3.27-p4",
+      "id": "DET@NOP",
+      "leans": [
+        {
+          "alt": 7.5,
+          "e": 4.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[OUT]",
+            "OPP-B2B",
+            "OT-ADJ",
+            "C0.68",
+            "Z0.82",
+            "OPP-OUT:SC2",
+            "BEST-ladbrokes@1.44"
+          ],
+          "h": "89% (8/9)",
+          "o": 1.42,
+          "opp": "DET 5th fewest PTS allowed · pace +1.7",
+          "p": "Derik Queen",
+          "s": "PTS",
+          "st": "3",
+          "std": 9.5,
+          "t": "NOP"
+        },
+        {
+          "alt": 7.5,
+          "e": 0.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC2",
+            "[ROLE?]",
+            "B2B",
+            "OT-ADJ",
+            "C0.83",
+            "Z0.45",
+            "TMO",
+            "PIN-6.6",
+            "BEST-sportsbet@1.65"
+          ],
+          "h": "70% (7/10)",
+          "o": 1.56,
+          "opp": "NOP 15th most REB allowed · pace +1.7",
+          "p": "Ausar Thompson",
+          "s": "REB",
+          "st": "2.5",
+          "std": 8.5,
+          "t": "DET"
+        },
+        {
+          "alt": 5.5,
+          "e": -6.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC2",
+            "[ROLE?]",
+            "B2B",
+            "MU+5%",
+            "OT-ADJ",
+            "C0.95",
+            "Z0.09",
+            "TMO",
+            "PIN-6.0"
+          ],
+          "h": "40% (4/10)",
+          "o": 1.5,
+          "opp": "NOP 4th most AST allowed · pace +1.7",
+          "p": "Ausar Thompson",
+          "s": "AST",
+          "st": "2.5",
+          "std": 6.5,
+          "t": "DET"
+        },
+        {
+          "alt": 15.5,
+          "e": -8.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC2",
+            "[OUT]",
+            "[ROLE?]",
+            "B2B",
+            "MU+4%",
+            "OT-ADJ",
+            "MT+",
+            "C1.19",
+            "Z-0.29",
+            "TMO",
+            "PIN-4.6",
+            "BEST-ladbrokes@1.48"
+          ],
+          "h": "33% (3/9)",
+          "o": 1.44,
+          "opp": "NOP 2nd most PTS allowed · pace +1.7",
+          "p": "Daniss Jenkins",
+          "s": "PTS",
+          "st": "2.5",
+          "std": 17.5,
+          "t": "DET"
+        },
+        {
+          "alt": 21.5,
+          "e": -2.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC2",
+            "[ROLE?]",
+            "B2B",
+            "MU+4%",
+            "OT-ADJ",
+            "C0.79",
+            "Z0.65",
+            "TMO"
+          ],
+          "h": "60% (6/10)",
+          "o": 1.42,
+          "opp": "NOP 2nd most PTS allowed · pace +1.7",
+          "p": "Cade Cunningham",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 24.5,
+          "t": "DET"
+        },
+        {
+          "alt": 5.5,
+          "e": -13.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC2",
+            "[Std?]",
+            "[ROLE?]",
+            "B2B",
+            "MU+5%",
+            "OT-ADJ",
+            "MT+",
+            "C1.24",
+            "Z-0.45",
+            "TMO",
+            "PIN-7.6",
+            "BEST-ladbrokes@1.40"
+          ],
+          "h": "20% (2/10)",
+          "o": 1.33,
+          "opp": "NOP 4th most AST allowed · pace +1.7",
+          "p": "Daniss Jenkins",
+          "s": "AST",
+          "st": "2.5",
+          "std": 6.5,
+          "t": "DET"
+        },
+        {
+          "alt": 3.5,
+          "e": 3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC2",
+            "[Std?]",
+            "[ROLE?]",
+            "B2B",
+            "OT-ADJ",
+            "C0.65",
+            "Z1.03",
+            "TMO"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.29,
+          "opp": "NOP 15th most REB allowed · pace +1.7",
+          "p": "Cade Cunningham",
+          "s": "REB",
+          "st": "4.5",
+          "std": 5.5,
+          "t": "DET"
+        },
+        {
+          "alt": 5.5,
+          "e": 1.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "OUTLIFT",
+            "TM-OUT:SC2",
+            "[ROLE?]",
+            "B2B",
+            "MU+5%",
+            "OT-ADJ",
+            "C0.71",
+            "Z1.17",
+            "TMO",
+            "BEST-ladbrokes@1.24"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.21,
+          "opp": "NOP 4th most AST allowed · pace +1.7",
+          "p": "Cade Cunningham",
+          "s": "AST",
+          "st": "4.5",
+          "std": 7.5,
+          "t": "DET"
+        },
+        {
+          "alt": 3.5,
+          "e": 4.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-LEAN",
+            "MISS",
+            "OPP-B2B",
+            "MU+3%",
+            "OT-ADJ",
+            "C0.67",
+            "Z0.86",
+            "PIN-4.6",
+            "OPP-OUT:SC1/SC2/AST1",
+            "BEST-sportsbet@1.42"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.4,
+          "opp": "DET 6th most REB allowed · pace +1.7",
+          "p": "Jeremiah Fears",
+          "s": "REB",
+          "st": "3",
+          "std": 4.5,
+          "t": "NOP"
+        }
+      ],
+      "lsr": [
+        {
+          "n": 1,
+          "out": [
+            "Cade Cunningham"
+          ],
+          "run": "20261119T004002Z_lsr_DET-NOP",
+          "utc": "2026-11-19T00:40:02Z"
+        }
+      ],
+      "mkt": 226.5,
+      "mkt_o": 1.87,
+      "mkt_u": 1.8,
+      "mx": {
+        "exp_pace": 104.1,
+        "home_spread": 4.5,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.7,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.4
+        },
+        "teams": {
+          "DET": {
+            "allow100": {
+              "3PM": 12.4,
+              "AST": 24.5,
+              "PTS": 108.5,
+              "REB": 43.5
+            },
+            "allow_rk": {
+              "3PM": 28,
+              "AST": 28,
+              "PTS": 26,
+              "REB": 6
+            },
+            "out": [
+              {
+                "min": 29.8,
+                "name": "Duncan Robinson",
+                "roles": [
+                  "SC2"
+                ]
+              }
+            ],
+            "pace": 102.3,
+            "rk": {
+              "ast": 4,
+              "blk": 2,
+              "dreb": 12,
+              "fg3_pct": 11,
+              "fg3a": 23,
+              "fg3m": 17,
+              "fg_pct": 10,
+              "ft_pct": 12,
+              "fta": 15,
+              "net": 9,
+              "opp_fg3_pct": 1,
+              "opp_fg_pct": 5,
+              "oppg": 6,
+              "oreb": 14,
+              "pace": 16,
+              "pf": 25,
+              "ppg": 12,
+              "reb": 14,
+              "stl": 5,
+              "tov": 6,
+              "ts_pct": 11
+            },
+            "v": {
+              "ast": 27.9,
+              "ats": "8-5-0",
+              "ats_away": "5-3-0",
+              "ats_home": "3-2-0",
+              "ats_l10": "5-5-0",
+              "away": "6-2",
+              "blk": 6.2,
+              "dreb": 32.1,
+              "fg3_pct": 36.0,
+              "fg3a": 35.9,
+              "fg3m": 12.9,
+              "fg_pct": 46.5,
+              "ft_pct": 78.8,
+              "fta": 24.7,
+              "gp": 13,
+              "home": "3-2",
+              "l10": "6-4",
+              "net": 5.9,
+              "opp_fg3_pct": 32.4,
+              "opp_fg_pct": 44.0,
+              "oppg": 108.9,
+              "oreb": 12.2,
+              "ou": "7-6-0",
+              "ou_l10": "5-5-0",
+              "pace": 102.2,
+              "pf": 23.4,
+              "ppg": 114.8,
+              "reb": 44.3,
+              "rec": "9-4",
+              "stl": 9.5,
+              "tov": 14.0,
+              "ts_pct": 57.7
+            }
+          },
+          "NOP": {
+            "allow100": {
+              "3PM": 12.9,
+              "AST": 26.5,
+              "PTS": 113.8,
+              "REB": 42.9
+            },
+            "allow_rk": {
+              "3PM": 18,
+              "AST": 4,
+              "PTS": 2,
+              "REB": 15
+            },
+            "out": [],
+            "pace": 104.2,
+            "rk": {
+              "ast": 26,
+              "blk": 11,
+              "dreb": 21,
+              "fg3_pct": 25,
+              "fg3a": 30,
+              "fg3m": 30,
+              "fg_pct": 13,
+              "ft_pct": 5,
+              "fta": 1,
+              "net": 24,
+              "opp_fg3_pct": 13,
+              "opp_fg_pct": 28,
+              "oppg": 29,
+              "oreb": 21,
+              "pace": 3,
+              "pf": 28,
+              "ppg": 10,
+              "reb": 22,
+              "stl": 3,
+              "tov": 16,
+              "ts_pct": 13
+            },
+            "v": {
+              "ast": 24.3,
+              "ats": "8-7-0",
+              "ats_away": "3-2-0",
+              "ats_home": "5-5-0",
+              "ats_l10": "5-5-0",
+              "away": "1-4",
+              "blk": 5.3,
+              "dreb": 31.0,
+              "fg3_pct": 33.3,
+              "fg3a": 29.5,
+              "fg3m": 9.8,
+              "fg_pct": 46.2,
+              "ft_pct": 81.6,
+              "fta": 31.5,
+              "gp": 15,
+              "home": "4-6",
+              "l10": "4-6",
+              "net": -7.1,
+              "opp_fg3_pct": 34.4,
+              "opp_fg_pct": 48.3,
+              "oppg": 122.9,
+              "oreb": 11.1,
+              "ou": "9-6-0",
+              "ou_l10": "5-5-0",
+              "pace": 105.4,
+              "pf": 24.4,
+              "ppg": 115.8,
+              "reb": 42.1,
+              "rec": "5-10",
+              "stl": 9.9,
+              "tov": 15.7,
+              "ts_pct": 57.4
+            }
+          }
+        }
+      },
+      "out": {
+        "DET": [
+          "Duncan Robinson (Robinson will be re-evaluated in one week due to a left quadriceps strain, Coty M. Davis of The Detroit News reports.)",
+          "Isaiah Joe (Joe (hip) is listed as questionable for Wednesday's game against the Pelicans.)",
+          "Jalen Duren (Duren (hamstring) has begun on-court activity and will be re-evaluated in two weeks, Hunter Patterson of The Athletic reports.)",
+          "Ronald Holland II (Holland (knee) is out for Wednesday's game against the Pelicans.)",
+          "Taurean Prince (Prince (knee) is out for Wednesday's game against the Pelicans.)"
+        ],
+        "NOP": [
+          "Bennedict Mathurin (Mathurin (foot) has been ruled out for Wednesday's game against Detroit.)",
+          "Bryce McGowens (McGowens (elbow) has been ruled out for Wednesday's game against Detroit.)",
+          "Dejounte Murray (Murray (ankle) is out for Friday's game against Memphis.)",
+          "Trendon Watford (Watford (ankle) has been ruled out for Wednesday's game against Detroit.)",
+          "Trey Murphy III (Murphy (knee) has been ruled out for Wednesday's game against Detroit.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "DET": [
+          "Cade Cunningham (Cunningham is questionable for Wednesday's game against the Pelicans due to right knee soreness)"
+        ],
+        "NOP": []
+      },
+      "tip": "12:00"
     }
   ],
   "generated": "2026-11-18T23:30:02Z",
@@ -4993,14 +5047,14 @@
       228.5
     ],
     [
-      "DET@NOP",
-      null,
-      226.5
-    ],
-    [
       "GSW@DAL",
       null,
       225.5
+    ],
+    [
+      "DET@NOP",
+      null,
+      226.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
