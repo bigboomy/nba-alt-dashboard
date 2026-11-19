@@ -219,6 +219,13 @@ table.mxt td b{font-weight:700}.rk{font-size:.66rem;color:var(--muted);margin-le
 .mxh{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600;margin:10px 0 4px}
 .mxh span{text-transform:none;font-weight:400}
 .mxn{font-size:.72rem;color:var(--muted);margin:-4px 0 10px}
+table.lg{width:100%;border-collapse:collapse;font-size:.78rem;line-height:1.4}
+table.lg th,table.lg td{padding:6px;border-top:1px solid var(--line);text-align:left;vertical-align:top;background:none}
+table.lg thead th{border-top:0;font-size:.68rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+table.lg tr.lgh th{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;padding-top:12px;color:var(--muted)}
+table.lg .lgc{font-weight:700;white-space:nowrap;width:1%}table.lg .lge{color:var(--muted);white-space:nowrap;width:1%}
+@media (max-width:520px){table.lg .lgc{white-space:normal;max-width:7.5rem}table.lg .lge{white-space:normal}}
+table.lg tr.lgf td{background:rgba(255,200,0,.22)}.chips .chip,.chips .res{cursor:help}
 </style>
 </head>
 <body><div class="wrap">
@@ -238,6 +245,69 @@ table.mxt td b{font-weight:700}.rk{font-size:.66rem;color:var(--muted);margin-le
     <div class="ts"><table id="totals" style="min-width:0;border:0"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table></div>
     </details>
   </section>
+
+  <details class="fold" id="legend"><summary><span>Legend <span class="meta">every code on the cards; tap a code on a card to jump here</span></span></summary>
+  <div class="lgw"><table class="lg"><thead><tr><th>Code</th><th>What it means</th><th>Effect</th></tr></thead><tbody>
+  <tr class="lgh"><th colspan="3">Bet type and stake</th></tr>
+  <tr data-re="^U(1\.5|1|0\.5|0\.25)$"><td class="lgc">U1.5 · U1 · U0.5 · U0.25</td><td>Stake in units for a pick, set by its stars: 5★ 1.5u, 4★ 1u, 3★ 0.5u, 2★ or less 0.25u.</td><td class="lge">Stake</td></tr>
+  <tr data-re="^(LEAN|U0)"><td class="lgc">LEAN / U0</td><td>Lean: tracked at 0u and never staked. A near-miss, or one of the 0u test tiers below.</td><td class="lge">0u</td></tr>
+  <tr><td class="lgc">★ stars</td><td>Confidence from the model&#x27;s hit probability, minus one for a depleted team (3+ rotation players out) or a back-to-back, then capped by sample size.</td><td class="lge">Sets stake</td></tr>
+  <tr data-re="^STACK$"><td class="lgc">STACK</td><td>This game has 4 or more picks, so they&#x27;re correlated (one bad game can sink several).</td><td class="lge">Caution</td></tr>
+  <tr data-re="^QUIET$"><td class="lgc">QUIET</td><td>Lean from a quiet day (fewer than 4 games), which uses a looser lean test.</td><td class="lge">0u</td></tr>
+  <tr class="lgh"><th colspan="3">Why a lean isn&#x27;t a pick</th></tr>
+  <tr data-re="^MISS$"><td class="lgc">MISS</td><td>Would have been a pick, but the sample has a miss. Picks need a perfect sample (v3.19).</td><td class="lge">0u</td></tr>
+  <tr data-re="^THIN$"><td class="lgc">THIN</td><td>Perfect sample, but the edge is under 6.0pp (v3.21).</td><td class="lge">0u</td></tr>
+  <tr data-re="^CUSH$"><td class="lgc">CUSH</td><td>Passed hit rate and edge, but the cushion (C) is over 0.70: the line sits too close to his average.</td><td class="lge">0u</td></tr>
+  <tr data-re="^CAP$"><td class="lgc">CAP</td><td>Passed, but the price is over the $1.85 cap.</td><td class="lge">0u</td></tr>
+  <tr><td class="lgc">(no tag)</td><td>A plain lean passed only the looser test (shrink m=20 instead of m=30).</td><td class="lge">0u</td></tr>
+  <tr class="lgh"><th colspan="3">0u test tiers (own records)</th></tr>
+  <tr data-re="^HR85$"><td class="lgc">HR85</td><td>Hit-rate tier: perfect sample of 8+ games, cushion 0.70 or less, price $1.20-1.39. Target 85%+; verdict at 40 settled.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^PIN$"><td class="lgc">PIN</td><td>Pinnacle-anchor tier: a held book&#x27;s alt rung at $1.20-3.00 paying 4pp+ over Pinnacle&#x27;s fair price. Verdict at 100.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^BK-"><td class="lgc">BK-pointsbet</td><td>Which book the PIN price is at.</td><td class="lge">Info</td></tr>
+  <tr data-re="^OUTLIFT$"><td class="lgc">OUTLIFT</td><td>Teammate-out tier: a key player with a key teammate freshly out; highest-priced rung at $1.20-1.59, at or under the main line. Verdict at 60.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^TM-OUT:"><td class="lgc">TM-OUT:SC1/REB1</td><td>Which key teammate roles are out for OUTLIFT (roles are explained under Opponent and matchup).</td><td class="lge">Info</td></tr>
+  <tr data-re="^LSR$"><td class="lgc">LSR</td><td>Late-scratch re-run: a new item after a watched player was ruled OUT 10+ min before tip and the game was re-run. Verdict at 40.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^LSR-"><td class="lgc">LSR-PICK · LSR-LEAN · LSR-HR85 …</td><td>What the re-run item would have been (pick, lean, HR85, PIN or OUTLIFT).</td><td class="lge">Info</td></tr>
+  <tr class="lgh"><th colspan="3">Sample and minutes</th></tr>
+  <tr data-re="^C\d"><td class="lgc">C0.82</td><td>Cushion = line ÷ his average over the sample games. Lower is safer; picks need 0.70 or less.</td><td class="lge">Gate</td></tr>
+  <tr data-re="^Z-?\d"><td class="lgc">Z1.00</td><td>How many standard deviations his sample average sits above the line. Higher is safer; 9.99 means no spread at all.</td><td class="lge">Info</td></tr>
+  <tr data-re="^\[n=3\]$"><td class="lgc">[n=3]</td><td>Only 3 games in the sample, so stars are capped at 3.</td><td class="lge">Stars cap</td></tr>
+  <tr data-re="^\[Std\?\]$"><td class="lgc">[Std?]</td><td>The standard line was inferred from the ladder with low confidence.</td><td class="lge">Caution</td></tr>
+  <tr data-re="^\[OUT\]$"><td class="lgc">[OUT]</td><td>One outlier high game was dropped from the sample (median well below the mean).</td><td class="lge">Info</td></tr>
+  <tr data-re="^\[MIN[↑↓]\]$"><td class="lgc">[MIN↑] / [MIN↓]</td><td>His minutes this season are 10%+ up / down on the prior sample, so the sample is scaled (limited to 0.80-1.25×).</td><td class="lge">Adjusts sample</td></tr>
+  <tr data-re="^MIN\d"><td class="lgc">MIN28→33</td><td>Average minutes: prior sample → this season.</td><td class="lge">Info</td></tr>
+  <tr data-re="^\[MIN\?\]$"><td class="lgc">[MIN?]</td><td>Under 2 games this season, so the minutes check couldn&#x27;t run.</td><td class="lge">Caution</td></tr>
+  <tr data-re="^MT[+-]$"><td class="lgc">MT+ / MT-</td><td>Minutes trend: last-5 average is 1.5+ above / below the last-10 (7+ games played).</td><td class="lge">Info</td></tr>
+  <tr data-re="^DNP-LAST$"><td class="lgc">DNP-LAST</td><td>He missed a team game in the last 3 days.</td><td class="lge">Caution</td></tr>
+  <tr data-re="^OT-ADJ$"><td class="lgc">OT-ADJ</td><td>The sample has overtime games; their stats are scaled back to 48 minutes.</td><td class="lge">Adjusts sample</td></tr>
+  <tr data-re="^\[ROLE\?\]$"><td class="lgc">[ROLE?]</td><td>A top-3 teammate is out (TMO), so his role and the line may have shifted. Check it.</td><td class="lge">Caution</td></tr>
+  <tr class="lgh"><th colspan="3">Team and teammates</th></tr>
+  <tr data-re="^TMO$"><td class="lgc">TMO</td><td>A top-3 scoring teammate is OUT tonight.</td><td class="lge">Info</td></tr>
+  <tr data-re="^TMO-Q$"><td class="lgc">TMO-Q</td><td>A top-3 teammate is questionable.</td><td class="lge">Info</td></tr>
+  <tr data-re="^RET$"><td class="lgc">RET</td><td>A top-3 teammate who missed 70%+ of the sample games is back tonight, so his usage may drop.</td><td class="lge">Caution</td></tr>
+  <tr data-re="^B2B"><td class="lgc">B2B</td><td>His team is on the second night of a back-to-back (minus one star).</td><td class="lge">Stars −1</td></tr>
+  <tr data-re="^OPP-B2B$"><td class="lgc">OPP-B2B</td><td>The opponent is on a back-to-back.</td><td class="lge">Display</td></tr>
+  <tr data-re="^DOG\d"><td class="lgc">DOG7</td><td>His team is a 7+ point underdog.</td><td class="lge">Display</td></tr>
+  <tr data-re="^DEPL"><td class="lgc">DEPL / DEPLETED</td><td>Older slates: his team had 3+ rotation players out.</td><td class="lge">Stars −1</td></tr>
+  <tr data-re="^GTD$"><td class="lgc">GTD</td><td>Older slates: game-time decision.</td><td class="lge">Caution</td></tr>
+  <tr class="lgh"><th colspan="3">Opponent and matchup</th></tr>
+  <tr data-re="^MU[+-]"><td class="lgc">MU+6% / MU-4%</td><td>Tonight&#x27;s environment for this stat against league average (pace and what the opponent allows). Shown at 3%+ either way.</td><td class="lge">Display</td></tr>
+  <tr data-re="^OPP-OUT:"><td class="lgc">OPP-OUT:SC1/REB1</td><td>The opponent has key players freshly out. History: about +7% PTS for this side when any key player sits.</td><td class="lge">Display</td></tr>
+  <tr data-re="^REB-OPP$"><td class="lgc">REB-OPP</td><td>Rebounds bet while the opponent&#x27;s top rebounder is freshly out. The market overreacts here: these alt rungs hit 41% against 55% needed.</td><td class="lge">Caution</td></tr>
+  <tr><td class="lgc">Roles: SC1-3 · REB1 · AST1</td><td>The team&#x27;s top 3 scorers, top rebounder and top assister.</td><td class="lge">Info</td></tr>
+  <tr><td class="lgc">Opp line</td><td>Opponent&#x27;s rank for allowing this stat (1st most … 30th) and expected pace against league.</td><td class="lge">Info</td></tr>
+  <tr class="lgh"><th colspan="3">Price and market</th></tr>
+  <tr data-re="^PIN[+\-±]\d"><td class="lgc">PIN+3.2 / PIN-1.5</td><td>Pinnacle (the sharp book) agrees (+) or disagrees (−): our price against Pinnacle&#x27;s fair price, in pp.</td><td class="lge">Display</td></tr>
+  <tr data-re="^MAIN-U"><td class="lgc">MAIN-U+2.5</td><td>A held book&#x27;s main-line UNDER pays 2pp+ over Pinnacle-fair: the sharp line leans under while we bet over.</td><td class="lge">Caution</td></tr>
+  <tr data-re="^BEST-"><td class="lgc">BEST-ladbrokes@1.62</td><td>Another held book pays more for the same line.</td><td class="lge">Shop it</td></tr>
+  <tr><td class="lgc">Safer: O6.5 @ 1.40</td><td>A lower rung on the same player, for a safer price.</td><td class="lge">Info</td></tr>
+  <tr class="lgh"><th colspan="3">Columns, context line and results</th></tr>
+  <tr><td class="lgc">Hit</td><td>Sample hit rate at this line (k of n games).</td><td class="lge"></td></tr>
+  <tr><td class="lgc">Edge</td><td>Model probability minus the price&#x27;s implied probability, in pp.</td><td class="lge"></td></tr>
+  <tr><td class="lgc">Context line</td><td>Minutes model %, with/without % (×lift), Pinnacle fair %, opponent outs, best book. Shadow numbers: they don&#x27;t move the pick.</td><td class="lge">Display</td></tr>
+  <tr data-re="^(W|L|PUSH|VOID)( ·|$)"><td class="lgc">W · L · PUSH · VOID</td><td>Settled result after the resolve, with the actual stat. VOID = did not play.</td><td class="lge">Result</td></tr>
+  <tr data-re="^(Taken|Passed)$"><td class="lgc">✅ Taken / 🚫 Passed</td><td>Your Took it / Pass choice on a pick.</td><td class="lge"></td></tr>
+  </tbody></table></div></details>
 
   <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
   <div id="ver"></div>
@@ -740,6 +810,15 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     html+='<div class="mxh">Key players freshly out</div>'+hd(esc(A),esc(H))+row('Out',outs(a.out),outs(h.out))+'</tbody></table>';
     return html;
   }
+  /* Legend (Mitch 19 Nov: "we need a legend reader"): tap a chip on a card -> open the legend at that code. */
+  document.addEventListener('click',function(ev){
+    var c=ev.target.closest&&ev.target.closest('.chips .chip,.chips .res');if(!c) return;
+    var t=c.textContent.trim().replace(/^\S*(Taken|Passed)$/,'$1'),lg=document.getElementById('legend');if(!lg) return;
+    var hit=null;Array.prototype.forEach.call(lg.querySelectorAll('tr[data-re]'),function(r){if(!hit){try{if(new RegExp(r.getAttribute('data-re')).test(t))hit=r}catch(e){}}});
+    if(!hit) return;
+    lg.open=true;Array.prototype.forEach.call(lg.querySelectorAll('tr.lgf'),function(r){r.classList.remove('lgf')});
+    hit.classList.add('lgf');hit.scrollIntoView({block:'center',behavior:'smooth'});
+  });
   var LOPEN={};
   function gameHtml(g,gi){
     var np=g.picks.length,nl=g.leans.length,nh=g.leans.filter(function(p){return p.f.indexOf('HR85')>=0}).length,
