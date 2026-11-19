@@ -225,7 +225,14 @@ table.lg thead th{border-top:0;font-size:.68rem;text-transform:uppercase;letter-
 table.lg tr.lgh th{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;padding-top:12px;color:var(--muted)}
 table.lg .lgc{font-weight:700;white-space:nowrap;width:1%}table.lg .lge{color:var(--muted);white-space:nowrap;width:1%}
 @media (max-width:520px){table.lg .lgc{white-space:normal;max-width:7.5rem}table.lg .lge{white-space:normal}}
-table.lg tr.lgf td{background:rgba(255,200,0,.22)}.chips .chip,.chips .res{cursor:help}
+table.lg tr.lgf td{background:rgba(255,200,0,.22)}.chips .chip,.chips .res,.vd .vb{cursor:help}
+.vd{margin:4px 0 2px;font-size:12.5px;line-height:1.4}.vb{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:6px;margin-right:6px;vertical-align:1px}
+.vb.look{background:#dcfae6;color:#067647}.vb.mixed{background:#fef0c7;color:#93370d}.vb.caution{background:#fee4e2;color:#b42318}
+@media (prefers-color-scheme:dark){.vb.look{background:#053321;color:#6ce9a6}.vb.mixed{background:#4e1d09;color:#fec84b}.vb.caution{background:#55160c;color:#ff8a80}}
+table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
+.ebar{display:flex;align-items:center;gap:2px;height:14px}.ebar.l{justify-content:flex-start}.ebar.r{justify-content:flex-end}.ebar.n{justify-content:center}
+.ebar i{display:block;height:6px;border-radius:3px;background:#12b76a}.ebar.n i{background:var(--line)}.ebar b{font-size:11px;line-height:1;color:#067647;font-weight:700}
+@media (prefers-color-scheme:dark){.ebar b{color:#6ce9a6}}
 </style>
 </head>
 <body><div class="wrap">
@@ -248,6 +255,12 @@ table.lg tr.lgf td{background:rgba(255,200,0,.22)}.chips .chip,.chips .res{curso
 
   <details class="fold" id="legend"><summary><span>Legend <span class="meta">every code on the cards; tap a code on a card to jump here</span></span></summary>
   <div class="lgw"><table class="lg"><thead><tr><th>Code</th><th>What it means</th><th>Effect</th></tr></thead><tbody>
+  <tr class="lgh"><th colspan="3">Verdict (plain English)</th></tr>
+  <tr data-re="^Worth a look$"><td class="lgc">Worth a look</td><td>More reasons for than against (score +1.5 or better): good matchup, Pinnacle agrees, his average clears the line well.</td><td class="lge">Display</td></tr>
+  <tr data-re="^Mixed$"><td class="lgc">Mixed</td><td>Reasons roughly cancel out (score between −2 and +1.5). The sentence gives the best reason for and the biggest worry.</td><td class="lge">Display</td></tr>
+  <tr data-re="^Caution$"><td class="lgc">Caution</td><td>More reasons against (score −2 or worse): e.g. REB-OPP, Pinnacle disagrees, line close to his average, soft-on-paper matchup that isn't.</td><td class="lge">Display</td></tr>
+  <tr><td class="lgc">Verdict test</td><td>Logged with every item. CONFIRM if Worth-a-look leans beat Caution leans by 5pp+ over 100 settled; KILL if not. Never changes a stake.</td><td class="lge">0u test</td></tr>
+  <tr><td class="lgc">Matchup edge bar</td><td>Arrow points to the team with the better rank; bar length = rank gap (full = 29). Short grey bar = 2 ranks or less, no real edge. In the defence table the arrow points to the softer defence.</td><td class="lge">Display</td></tr>
   <tr class="lgh"><th colspan="3">Bet type and stake</th></tr>
   <tr data-re="^U(1\.5|1|0\.5|0\.25)$"><td class="lgc">U1.5 · U1 · U0.5 · U0.25</td><td>Stake in units for a pick, set by its stars: 5★ 1.5u, 4★ 1u, 3★ 0.5u, 2★ or less 0.25u.</td><td class="lge">Stake</td></tr>
   <tr data-re="^(LEAN|U0)"><td class="lgc">LEAN / U0</td><td>Lean: tracked at 0u and never staked. A near-miss, or one of the 0u test tiers below.</td><td class="lge">0u</td></tr>
@@ -723,15 +736,21 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var u='';p.f.forEach(function(f){if(/^U\d/.test(f))u=f.slice(1)});
     var fl=p.f.filter(function(f){return !/^U\d/.test(f)&&f!=='LEAN'});
     var chips=(p.lean?'<span class="chip ln">LEAN 0u</span>':'')+pill+cc+fl.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'||f==='DNP-LAST'||f==='MISS'||f==='THIN'||f==='DOG7'||f==='REB-OPP'||/^MAIN-U/.test(f)?' w':'')+'">'+esc(f)+'</span>'}).join('');
-    var cxl=g?cxLine(g,p):'';
+    var cxl=g?cxLine(g,p):'',vdl=g?vLine(g,p):'';
     return '<tr class="pr'+rc+(p.lean?' lean':'')+'"><td><div class="who">'+esc(p.p)+'</div><div class="line">'+esc(p.s)+' O'+esc(p.alt)+' <span class="st">'+stars(p.stN)+'</span></div>'+(/[0-9]/.test(p.opp)?'<div class="opp">Opp '+esc(p.opp)+'</div>':'')+
       (p.sa!==null?'<div class="safe">Safer: O'+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
-      (chips?'<div class="chips">'+chips+'</div>':'')+cxl+cb+'</td>'+
+      vdl+(chips?'<div class="chips">'+chips+'</div>':'')+cxl+cb+'</td>'+
       '<td class="n">'+oddsSpan(p.o)+'</td><td class="n">'+esc(String(p.h).replace(/^.*\((.*)\).*$/,'$1'))+'</td><td class="n eg">+'+p.e.toFixed(1)+'</td><td class="n">'+(p.lean?'—':(u?esc(u)+'u':'—'))+'</td></tr>';
   }
   /* v3.25 live context (Mitch 18 Nov): minutes model, WOWY, opponent key players out, Pinnacle fair, best price.
      From game.cx, keyed player|stat|alt|kind. Display only: none of it moves a pick or stake. */
   function cxKind(p){return !p.lean?'pick':p.f.indexOf('LSR')>=0?'LSR':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':p.f.indexOf('OUTLIFT')>=0?'OUTLIFT':'lean'}
+  var VLAB={look:'Worth a look',mixed:'Mixed',caution:'Caution'};
+  function vLine(g,p){
+    var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];
+    if(!c||!VLAB[c.verdict]||!c.v_text) return '';
+    return '<div class="vd"><span class="vb '+c.verdict+'">'+VLAB[c.verdict]+'</span>'+esc(c.v_text)+'</div>';
+  }
   function cxLine(g,p){
     var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];if(!c) return '';
     function pc(v){return v===''||v===null||v===undefined?null:Math.round(Number(v)*100)+'%'}
@@ -787,6 +806,16 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     function wlp(x){if(!x)return '—';var p=String(x).split('-');return esc(p[0]+'-'+p[1])+(p[2]&&p[2]!=='0'?'-'+esc(p[2]):'')}
     function row(lbl,ka,kh){return '<tr><th scope="row">'+lbl+'</th><td>'+ka+'</td><td>'+kh+'</td></tr>'}
     function hd(x,y){return '<table class="mxt"><thead><tr><th></th><th>'+x+'</th><th>'+y+'</th></tr></thead><tbody>'}
+    function hd4(x,y){return '<table class="mxt e4"><thead><tr><th></th><th>'+x+'</th><th>Edge</th><th>'+y+'</th></tr></thead><tbody>'}
+    function row4(lbl,ka,e,kh){return '<tr><th scope="row">'+lbl+'</th><td>'+ka+'</td><td class="eg2">'+e+'</td><td>'+kh+'</td></tr>'}
+    /* ra, rh: ranks where LOWER is the side the arrow points to. gap <= 2 ranks = no real edge (short grey bar). */
+    function ebar(ra,rh,neu){
+      if(neu||ra===undefined||rh===undefined||ra===null||rh===null) return '<div class="ebar n" aria-label="no edge"><span class="mu">—</span></div>';
+      var gap=Math.abs(ra-rh),w=Math.max(8,Math.round(100*gap/29));
+      if(gap<=2) return '<div class="ebar n" aria-label="no real edge"><i style="width:12%"></i></div>';
+      return ra<rh?'<div class="ebar l" aria-label="edge left, '+gap+' ranks"><b>◀</b><i style="width:'+w+'%"></i></div>'
+                  :'<div class="ebar r" aria-label="edge right, '+gap+' ranks"><i style="width:'+w+'%"></i><b>▶</b></div>';
+    }
     var hs=m.home_spread,line=(hs===null||hs===undefined)?'—':(hs===0?'PK':(hs<0?esc(H)+' '+hs.toFixed(1):esc(A)+' '+(-hs).toFixed(1)));
     var html='<div class="mxh">Records</div>'+hd(esc(A),esc(H))+
       row('Record',wlp(av.rec),wlp(hv.rec))+row('Away / home',wlp(av.away)+' <span class="rk">away</span>',wlp(hv.home)+' <span class="rk">home</span>')+
@@ -797,14 +826,14 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var M=[['Points','ppg'],['Points allowed','oppg'],['Margin /g','net'],['Pace','pace'],['FG%','fg_pct'],['3P%','fg3_pct'],['3PM','fg3m'],['FT%','ft_pct'],
       ['True shooting %','ts_pct'],['Rebounds','reb'],['Off. rebounds','oreb'],['Assists','ast'],['Steals','stl'],['Blocks','blk'],['Turnovers','tov'],
       ['Opp FG%','opp_fg_pct'],['Opp 3P%','opp_fg3_pct']];
-    html+='<div class="mxh">Season team stats <span>(rank of 30, #1 = best; pace #1 = fastest)</span></div>'+hd(esc(A),esc(H))+
+    html+='<div class="mxh">Season team stats <span>(rank of 30, #1 = best; pace #1 = fastest; bar = size of the edge)</span></div>'+hd4(esc(A),esc(H))+
       M.map(function(x){var k=x[1],ra=(a.rk||{})[k],rh=(h.rk||{})[k],neu=k==='pace',has=ra!==undefined&&rh!==undefined,ba=!neu&&has&&ra<rh,bh=!neu&&has&&rh<ra;
         function cell(val,r,b){return (b?'<b>':'')+v(val)+(b?'</b>':'')+(neu?(r!==undefined?'<span class="rk">#'+r+'</span>':''):rk(r))}
-        return row(x[0],cell(av[k],ra,ba),cell(hv[k],rh,bh))}).join('')+'</tbody></table>';
+        return row4(x[0],cell(av[k],ra,ba),ebar(ra,rh,neu),cell(hv[k],rh,bh))}).join('')+'</tbody></table>';
     var S=[['PTS','Points'],['REB','Rebounds'],['AST','Assists'],['3PM','Threes']];
-    html+='<div class="mxh">What each defence allows <span>(per 100 possessions, #1 = allows the most)</span></div>'+hd(esc(A)+' D',esc(H)+' D')+
-      S.map(function(x){var k=x[0],lg=m.lg&&m.lg[k];return row(x[1]+(lg!==undefined?' <span class="rk">lg '+v(lg)+'</span>':''),
-        v((a.allow100||{})[k])+rk((a.allow_rk||{})[k]),v((h.allow100||{})[k])+rk((h.allow_rk||{})[k]))}).join('')+'</tbody></table>'+
+    html+='<div class="mxh">What each defence allows <span>(per 100 possessions, #1 = allows the most; arrow = the softer defence)</span></div>'+hd4(esc(A)+' D',esc(H)+' D')+
+      S.map(function(x){var k=x[0],lg=m.lg&&m.lg[k],qa=(a.allow_rk||{})[k],qh=(h.allow_rk||{})[k];return row4(x[1]+(lg!==undefined?' <span class="rk">lg '+v(lg)+'</span>':''),
+        v((a.allow100||{})[k])+rk(qa),ebar(qa,qh,false),v((h.allow100||{})[k])+rk(qh))}).join('')+'</tbody></table>'+
       '<p class="mxn">Green = that defence gives up a lot of the stat (good for overs against it); red = stingy.</p>';
     function outs(o){return o&&o.length?o.map(function(x){return esc(x.name)+' <span class="rk">'+esc((x.roles||[]).join('/'))+(x.min?' · '+Number(x.min).toFixed(0)+' min':'')+'</span>'}).join('<br>'):'<span class="mu">—</span>'}
     html+='<div class="mxh">Key players freshly out</div>'+hd(esc(A),esc(H))+row('Out',outs(a.out),outs(h.out))+'</tbody></table>';
@@ -812,7 +841,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   /* Legend (Mitch 19 Nov: "we need a legend reader"): tap a chip on a card -> open the legend at that code. */
   document.addEventListener('click',function(ev){
-    var c=ev.target.closest&&ev.target.closest('.chips .chip,.chips .res');if(!c) return;
+    var c=ev.target.closest&&ev.target.closest('.chips .chip,.chips .res,.vd .vb');if(!c) return;
     var t=c.textContent.trim().replace(/^\S*(Taken|Passed)$/,'$1'),lg=document.getElementById('legend');if(!lg) return;
     var hit=null;Array.prototype.forEach.call(lg.querySelectorAll('tr[data-re]'),function(r){if(!hit){try{if(new RegExp(r.getAttribute('data-re')).test(t))hit=r}catch(e){}}});
     if(!hit) return;

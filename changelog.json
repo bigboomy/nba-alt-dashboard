@@ -5,6 +5,14 @@
    "date": "2026-11-19",
    "version": "nba-session v3.27-p4",
    "component": "dashboard",
+   "title": "Plain-English verdict on every pick and lean; Matchup edge bars",
+   "change": "Each pick and lean shows a Worth a look / Mixed / Caution badge and one sentence built from its codes and tonight's matchup (pipeline 5587016); the Matchup tab gets an Edge column whose arrow points to the better team and whose bar shows the size of the rank gap.",
+   "aim": "Read a card in plain English and spot matchup edges at a glance; display only, the verdict is logged and tested (look vs caution, 5pp over 100 settled) but never moves a stake."
+  },
+  {
+   "date": "2026-11-19",
+   "version": "nba-session v3.27-p4",
+   "component": "dashboard",
    "title": "Legend of every card code",
    "change": "A collapsible Legend table explains every flag and code on the game cards (51 entries in 8 groups: stake, lean kinds, 0u tiers, sample and minutes, teammates, matchup, market, columns and results); tapping a code on a card opens the legend at that row.",
    "aim": "Mitch can read any card without remembering what each code means; display only."
