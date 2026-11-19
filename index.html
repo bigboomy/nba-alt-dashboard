@@ -256,10 +256,10 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
   <details class="fold" id="legend"><summary><span>Legend <span class="meta">every code on the cards; tap a code on a card to jump here</span></span></summary>
   <div class="lgw"><table class="lg"><thead><tr><th>Code</th><th>What it means</th><th>Effect</th></tr></thead><tbody>
   <tr class="lgh"><th colspan="3">Verdict (plain English)</th></tr>
-  <tr data-re="^Worth a look$"><td class="lgc">Worth a look</td><td>More reasons for than against (score +1.5 or better): good matchup, Pinnacle agrees, his average clears the line well.</td><td class="lge">Display</td></tr>
+  <tr data-re="^Worth a look$"><td class="lgc">Worth a look</td><td>More reasons for than against (score +1.5 or better): Pinnacle agrees, tonight's setup (MU) is good, his average clears the line well.</td><td class="lge">Display</td></tr>
   <tr data-re="^Mixed$"><td class="lgc">Mixed</td><td>Reasons roughly cancel out (score between −2 and +1.5). The sentence gives the best reason for and the biggest worry.</td><td class="lge">Display</td></tr>
-  <tr data-re="^Caution$"><td class="lgc">Caution</td><td>More reasons against (score −2 or worse): e.g. REB-OPP, Pinnacle disagrees, line close to his average, soft-on-paper matchup that isn't.</td><td class="lge">Display</td></tr>
-  <tr><td class="lgc">Verdict test</td><td>Logged with every item. CONFIRM if Worth-a-look leans beat Caution leans by 5pp+ over 100 settled; KILL if not. Never changes a stake.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^Caution$"><td class="lgc">Caution</td><td>More reasons against (score −2 or worse): e.g. Pinnacle disagrees (±2 at 2pp, ±3 beyond 4pp), REB-OPP, his average only just clears the line.</td><td class="lge">Display</td></tr>
+  <tr><td class="lgc">Verdict test</td><td>Verdict v1, weights frozen for the test. Logged with every item. Judged at 300 settled (60+ each in Worth a look and Caution) on beating the price, within each kind: CONFIRM at +5pp with the gap clearly above zero, KILL at 1pp or less. Must also beat Pinnacle's sign alone. Never changes a stake.</td><td class="lge">0u test</td></tr>
   <tr><td class="lgc">Matchup edge bar</td><td>Arrow points to the team with the better rank; bar length = rank gap (full = 29). Short grey bar = 2 ranks or less, no real edge. In the defence table the arrow points to the softer defence.</td><td class="lge">Display</td></tr>
   <tr class="lgh"><th colspan="3">Bet type and stake</th></tr>
   <tr data-re="^U(1\.5|1|0\.5|0\.25)$"><td class="lgc">U1.5 · U1 · U0.5 · U0.25</td><td>Stake in units for a pick, set by its stars: 5★ 1.5u, 4★ 1u, 3★ 0.5u, 2★ or less 0.25u.</td><td class="lge">Stake</td></tr>
