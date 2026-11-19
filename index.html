@@ -230,8 +230,9 @@ table.lg tr.lgf td{background:rgba(255,200,0,.22)}.chips .chip,.chips .res,.vd .
 .vb.look{background:#dcfae6;color:#067647}.vb.mixed{background:#fef0c7;color:#93370d}.vb.caution{background:#fee4e2;color:#b42318}
 @media (prefers-color-scheme:dark){.vb.look{background:#053321;color:#6ce9a6}.vb.mixed{background:#4e1d09;color:#fec84b}.vb.caution{background:#55160c;color:#ff8a80}}
 table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
-.ebar{display:flex;align-items:center;gap:2px;height:14px}.ebar.l{justify-content:flex-start}.ebar.r{justify-content:flex-end}.ebar.n{justify-content:center}
-.ebar i{display:block;height:6px;border-radius:3px;background:#12b76a}.ebar.n i{background:var(--line)}.ebar b{font-size:11px;line-height:1;color:#067647;font-weight:700}
+.ebar{display:grid;grid-template-columns:1fr 1px 1fr;align-items:center;height:14px}.ebar .ax{height:14px;background:var(--muted);opacity:.5}
+.ebar .eh{display:flex;align-items:center;gap:1px;min-width:0}.ebar .eh.l{justify-content:flex-end}.ebar .eh.r{justify-content:flex-start}
+.ebar i{display:block;height:6px;background:#12b76a}.ebar .eh.l i{border-radius:3px 0 0 3px}.ebar .eh.r i{border-radius:0 3px 3px 0}.ebar i.z{background:var(--line)}.ebar b{font-size:11px;line-height:1;color:#067647;font-weight:700}
 @media (prefers-color-scheme:dark){.ebar b{color:#6ce9a6}}
 .gh2 .vc{display:inline-flex;gap:3px;margin-left:auto}.gh2 .vc span{font-size:11px;font-weight:700;padding:0 6px;border-radius:6px}
 .vc .look{background:#dcfae6;color:#067647}.vc .mixed{background:#fef0c7;color:#93370d}.vc .caution{background:#fee4e2;color:#b42318}
@@ -286,7 +287,7 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
   <tr data-re="^Mixed$"><td class="lgc">Mixed</td><td>Reasons roughly cancel out (score between −2 and +1.5). The sentence gives the best reason for and the biggest worry.</td><td class="lge">Display</td></tr>
   <tr data-re="^Caution$"><td class="lgc">Caution</td><td>More reasons against (score −2 or worse): e.g. Pinnacle disagrees (±2 at 2pp, ±3 beyond 4pp), REB-OPP, his average only just clears the line.</td><td class="lge">Display</td></tr>
   <tr><td class="lgc">Verdict test</td><td>Verdict v1, weights frozen for the test. Logged with every item. Judged at 300 settled (60+ each in Worth a look and Caution) on beating the price, within each kind: CONFIRM at +5pp with the gap clearly above zero, KILL at 1pp or less. Must also beat Pinnacle's sign alone. Never changes a stake.</td><td class="lge">0u test</td></tr>
-  <tr><td class="lgc">Matchup edge bar</td><td>Arrow points to the team with the better rank; bar length = rank gap (full = 29). Short grey bar = 2 ranks or less, no real edge. In the defence table the arrow points to the softer defence.</td><td class="lge">Display</td></tr>
+  <tr><td class="lgc">Matchup edge bar</td><td>Bars grow out from the centre line toward the team with the better rank; length = rank gap (full = 29). Short grey stub both sides = 2 ranks or less, no real edge. In the defence table the arrow points to the softer defence.</td><td class="lge">Display</td></tr>
   <tr class="lgh"><th colspan="3">Bet type and stake</th></tr>
   <tr data-re="^U(1\.5|1|0\.5|0\.25)$"><td class="lgc">U1.5 · U1 · U0.5 · U0.25</td><td>Stake in units for a pick, set by its stars: 5★ 1.5u, 4★ 1u, 3★ 0.5u, 2★ or less 0.25u.</td><td class="lge">Stake</td></tr>
   <tr data-re="^(LEAN|U0)"><td class="lgc">LEAN / U0</td><td>Lean: tracked at 0u and never staked. A near-miss, or one of the 0u test tiers below.</td><td class="lge">0u</td></tr>
@@ -826,11 +827,13 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     function row4(lbl,ka,e,kh){return '<tr><th scope="row">'+lbl+'</th><td>'+ka+'</td><td class="eg2">'+e+'</td><td>'+kh+'</td></tr>'}
     /* ra, rh: ranks where LOWER is the side the arrow points to. gap <= 2 ranks = no real edge (short grey bar). */
     function ebar(ra,rh,neu){
-      if(neu||ra===undefined||rh===undefined||ra===null||rh===null) return '<div class="ebar n" aria-label="no edge"><span class="mu">—</span></div>';
-      var gap=Math.abs(ra-rh),w=Math.max(8,Math.round(100*gap/29));
-      if(gap<=2) return '<div class="ebar n" aria-label="no real edge"><i style="width:12%"></i></div>';
-      return ra<rh?'<div class="ebar l" aria-label="edge left, '+gap+' ranks"><b>◀</b><i style="width:'+w+'%"></i></div>'
-                  :'<div class="ebar r" aria-label="edge right, '+gap+' ranks"><i style="width:'+w+'%"></i><b>▶</b></div>';
+      /* Mitch 19 Nov: every bar starts at the same point -> bars grow out from a centre line toward the team with the edge */
+      function wrap(l,r,lab){return '<div class="ebar" aria-label="'+lab+'"><span class="eh l">'+l+'</span><span class="ax"></span><span class="eh r">'+r+'</span></div>'}
+      if(neu||ra===undefined||rh===undefined||ra===null||rh===null) return wrap('','','no edge');
+      var gap=Math.abs(ra-rh),w=Math.max(10,Math.round(100*gap/29));
+      if(gap<=2) return wrap('<i class="z" style="width:10%"></i>','<i class="z" style="width:10%"></i>','no real edge');
+      return ra<rh?wrap('<b>◀</b><i style="width:'+w+'%"></i>','','edge left, '+gap+' ranks')
+                  :wrap('','<i style="width:'+w+'%"></i><b>▶</b>','edge right, '+gap+' ranks');
     }
     var hs=m.home_spread,line=(hs===null||hs===undefined)?'—':(hs===0?'PK':(hs<0?esc(H)+' '+hs.toFixed(1):esc(A)+' '+(-hs).toFixed(1)));
     var html='<div class="mxh">Records</div>'+hd(esc(A),esc(H))+
@@ -883,7 +886,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       .forEach(function(x){try{lb+=pickRow(x.p,gi,x.i)}catch(e){}});
     var tbl=body?'<table class="pt">'+th+'<tbody>'+body+'</tbody></table>':'<div class="none">No pick cleared the gates.</div>';
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
-    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]||!body?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · tracked, not bet · best first</span></summary>'+
+    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · tracked, not bet · best first</span></summary>'+
       '<table class="pt">'+th+'<tbody>'+lb+'</tbody></table></details>':'';
     var cur=MXV[g.id]==='mx'&&g.mx?'mx':MXV[g.id]==='info'?'info':'bets';
     var views=[['bets','Bets']].concat(g.mx?[['mx','Matchup']]:[]).concat([['info','Injuries & line']]);
