@@ -5,6 +5,14 @@
    "date": "2026-11-19",
    "version": "nba-session v3.27-p4",
    "component": "dashboard",
+   "title": "Cleaner layout: compact game cards, one scoreboard, one guide",
+   "change": "Game cards show verdict counts in the header and switch between Bets, Matchup and Injuries & line, with leans ordered Worth a look first; one Scoreboard (picks plus every 0u tier with progress to its verdict) replaces the record and tier sections, which now sit in one Full record fold; Legend, How to read and What changed are merged into one Guide.",
+   "aim": "Less scrolling and one place for each job; rollback is git checkout pre-layout-c -- index.html."
+  },
+  {
+   "date": "2026-11-19",
+   "version": "nba-session v3.27-p4",
+   "component": "dashboard",
    "title": "Plain-English verdict on every pick and lean; Matchup edge bars",
    "change": "Each pick and lean shows a Worth a look / Mixed / Caution badge and one sentence built from its codes and tonight's matchup (pipeline 5587016); the Matchup tab gets an Edge column whose arrow points to the better team and whose bar shows the size of the rank gap.",
    "aim": "Read a card in plain English and spot matchup edges at a glance; display only, the verdict is logged and tested (look vs caution, 5pp over 100 settled) but never moves a stake."

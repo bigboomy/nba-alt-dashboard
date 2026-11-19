@@ -233,6 +233,17 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 .ebar{display:flex;align-items:center;gap:2px;height:14px}.ebar.l{justify-content:flex-start}.ebar.r{justify-content:flex-end}.ebar.n{justify-content:center}
 .ebar i{display:block;height:6px;border-radius:3px;background:#12b76a}.ebar.n i{background:var(--line)}.ebar b{font-size:11px;line-height:1;color:#067647;font-weight:700}
 @media (prefers-color-scheme:dark){.ebar b{color:#6ce9a6}}
+.gh2 .vc{display:inline-flex;gap:3px;margin-left:auto}.gh2 .vc span{font-size:11px;font-weight:700;padding:0 6px;border-radius:6px}
+.vc .look{background:#dcfae6;color:#067647}.vc .mixed{background:#fef0c7;color:#93370d}.vc .caution{background:#fee4e2;color:#b42318}
+@media (prefers-color-scheme:dark){.vc .look{background:#053321;color:#6ce9a6}.vc .mixed{background:#4e1d09;color:#fec84b}.vc .caution{background:#55160c;color:#ff8a80}}
+.gseg{padding:0 12px}.gseg .tab{flex:1}
+.board{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 12px}
+.board h2{font-size:1rem;margin:0 0 8px}.brow{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:8px 0;font:inherit;color:inherit;cursor:pointer}
+.brow:first-of-type{border-top:0}.brow .t{display:flex;justify-content:space-between;gap:8px;font-size:.86rem}.brow .t b{font-weight:600}
+.brow .m{color:var(--muted);font-size:.78rem}.brow .pos{color:#067647}.brow .neg{color:#b42318}
+@media (prefers-color-scheme:dark){.brow .pos{color:#6ce9a6}.brow .neg{color:#ff8a80}}
+.pbar{height:5px;border-radius:3px;background:var(--line);margin-top:5px;overflow:hidden}.pbar i{display:block;height:5px;background:#2e90fa}
+.board .cap{margin:6px 0 0}
 </style>
 </head>
 <body><div class="wrap">
@@ -253,7 +264,22 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
     </details>
   </section>
 
-  <details class="fold" id="legend"><summary><span>Legend <span class="meta">every code on the cards; tap a code on a card to jump here</span></span></summary>
+  <section class="board" id="board" aria-label="Scoreboard"><h2>Scoreboard</h2><p class="load">Loading…</p></section>
+
+  <details class="fold" id="moreRec"><summary><span>Full record and tier details <span class="meta">bands, stats, charts, every tier</span></span></summary>
+  <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
+  <div id="results"></div>
+  <div id="totalsSec"></div>
+  <div id="leansSec"></div>
+  <div id="hrSec"></div>
+  <div id="pinSec"></div>
+  <div id="olSec"></div>
+  <div id="lsSec"></div>
+  </details>
+
+  <details class="fold" id="guide"><summary><span>Guide <span class="meta">codes, how to read it, what changed</span></span></summary>
+  <div id="ver"></div>
+  <details class="fold inner" id="legend"><summary><span>Legend <span class="meta">every code on the cards; tap a code on a card to jump here</span></span></summary>
   <div class="lgw"><table class="lg"><thead><tr><th>Code</th><th>What it means</th><th>Effect</th></tr></thead><tbody>
   <tr class="lgh"><th colspan="3">Verdict (plain English)</th></tr>
   <tr data-re="^Worth a look$"><td class="lgc">Worth a look</td><td>More reasons for than against (score +1.5 or better): Pinnacle agrees, tonight's setup (MU) is good, his average clears the line well.</td><td class="lge">Display</td></tr>
@@ -322,20 +348,10 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
   <tr data-re="^(Taken|Passed)$"><td class="lgc">✅ Taken / 🚫 Passed</td><td>Your Took it / Pass choice on a pick.</td><td class="lge"></td></tr>
   </tbody></table></div></details>
 
-  <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
-  <div id="ver"></div>
-
-  <div id="results"></div>
-  <div id="totalsSec"></div>
-  <div id="leansSec"></div>
-  <div id="hrSec"></div>
-  <div id="pinSec"></div>
-  <div id="olSec"></div>
-  <div id="lsSec"></div>
-
-  <details class="legend" style="margin-top:16px">
-    <summary>How to read this</summary>
+  <details class="fold inner">
+    <summary><span>How to read the record</span></summary>
     <p><b>Settled</b> = W or L; void and push are excluded. <b>Units</b> are flat 1u (win = odds − 1, loss = −1). <b>Break-even</b> = 100 ÷ mean odds. <b>Gap</b> = hit% minus break-even, in percentage points. <b>CLV</b> is measured only on picks with a captured closing price; picks with no close, or no newer price than the board they were picked from (same board), count as not covered. Windows are calendar days ending on the latest settled day, clipped at the season start. Band colours: blue &lt; 1.55, orange 1.55–1.79, magenta 1.80+.</p>
+  </details>
   </details>
   <p class="foot"><b>Not betting advice.</b> Hit rate is not profit; prices move and players sit. Past results do not predict future ones. Only bet what you can afford to lose. If gambling is a problem for you or someone you know, contact your local support service (Australia: 1800 858 858, gamblinghelponline.org.au).</p>
   <p class="foot" id="src" style="margin-top:0"></p>
@@ -669,7 +685,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     Array.prototype.forEach.call(box.querySelectorAll('[data-w]'),function(b){b.onclick=function(){WIN=b.getAttribute('data-w');renderRecord()}});
     Array.prototype.forEach.call(box.querySelectorAll('[data-v]'),function(b){b.onclick=function(){RVIEW=b.getAttribute('data-v');renderRecord()}});
     $('results').innerHTML=resultsHtml(ROWS,asOf);
-    todayTiles();
+    todayTiles();renderBoard();
   }
 
   /* ---------- slate ---------- */
@@ -845,28 +861,36 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var t=c.textContent.trim().replace(/^\S*(Taken|Passed)$/,'$1'),lg=document.getElementById('legend');if(!lg) return;
     var hit=null;Array.prototype.forEach.call(lg.querySelectorAll('tr[data-re]'),function(r){if(!hit){try{if(new RegExp(r.getAttribute('data-re')).test(t))hit=r}catch(e){}}});
     if(!hit) return;
-    lg.open=true;Array.prototype.forEach.call(lg.querySelectorAll('tr.lgf'),function(r){r.classList.remove('lgf')});
+    lg.open=true;if($('guide'))$('guide').open=true;Array.prototype.forEach.call(lg.querySelectorAll('tr.lgf'),function(r){r.classList.remove('lgf')});
     hit.classList.add('lgf');hit.scrollIntoView({block:'center',behavior:'smooth'});
   });
   var LOPEN={};
+  var VRANK={look:0,mixed:1,caution:2};
+  function vOf(g,p){var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];return c&&VRANK[c.verdict]!==undefined?c.verdict:''}
   function gameHtml(g,gi){
     var np=g.picks.length,nl=g.leans.length,nh=g.leans.filter(function(p){return p.f.indexOf('HR85')>=0}).length,
         npn=g.leans.filter(function(p){return p.f.indexOf('PIN')>=0}).length,
         nol=g.leans.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length,
         nls=g.leans.filter(function(p){return p.f.indexOf('LSR')>=0}).length;
-    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span><span class="ct">'+np+' pick'+(np===1?'':'s')+(nl-nh-npn-nol-nls?' · '+(nl-nh-npn-nol-nls)+' lean'+(nl-nh-npn-nol-nls===1?'':'s'):'')+(nh?' · '+nh+' HR85':'')+(npn?' · '+npn+' PIN':'')+(nol?' · '+nol+' OUTLIFT':'')+(nls?' · '+nls+' re-run':'')+'</span></div>';
+    var vc={look:0,mixed:0,caution:0};g.picks.concat(g.leans).forEach(function(p){var v=vOf(g,p);if(v)vc[v]++});
+    var vch=(vc.look||vc.mixed||vc.caution)?'<span class="vc" aria-label="verdicts">'+['look','mixed','caution'].filter(function(k){return vc[k]}).map(function(k){return '<span class="'+k+'" title="'+VLAB[k]+'">'+vc[k]+'</span>'}).join('')+'</span>':'';
+    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span>'+vch+'<span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+nl+' lean'+(nl===1?'':'s')+(nh+npn+nol+nls?' <span class="mu">(incl. '+[[nh,'HR85'],[npn,'PIN'],[nol,'OUTLIFT'],[nls,'re-run']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+'</span></div>';
     var th='<thead><tr><th>Player · bet</th><th class="n">Odds</th><th class="n">Hit</th><th class="n">Edge</th><th class="n">Stake</th></tr></thead>';
     var body='',lb='';
     g.picks.forEach(function(p,i){try{body+=pickRow(p,gi,i)}catch(e){}});
-    g.leans.forEach(function(p,i){try{lb+=pickRow(p,gi,i)}catch(e){}});
+    /* layout C: leans ordered Worth a look -> Mixed -> Caution (stable within each) */
+    g.leans.map(function(p,i){return {p:p,i:i,r:(VRANK[vOf(g,p)]!==undefined?VRANK[vOf(g,p)]:3)}}).sort(function(a,b){return a.r-b.r||a.i-b.i})
+      .forEach(function(x){try{lb+=pickRow(x.p,gi,x.i)}catch(e){}});
     var tbl=body?'<table class="pt">'+th+'<tbody>'+body+'</tbody></table>':'<div class="none">No pick cleared the gates.</div>';
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
-    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · near-misses'+(nh?' and HR85 hit-rate tier':'')+(npn?(nh?',':' and')+' PIN Pinnacle-anchor tier':'')+(nol?((nh||npn)?',':' and')+' OUTLIFT teammate-out tier':'')+(nls?((nh||npn||nol)?',':' and')+' late-scratch re-run items':'')+', tracked not bet</span></summary>'+
-      '<p class="lfd">Just missed a pick rule (one miss in the sample, cushion, price cap or looser test). 0u.</p><table class="pt">'+th+'<tbody>'+lb+'</tbody></table></details>':'';
-    var mv=MXV[g.id]==='mx'&&g.mx;
-    var gseg=g.mx?'<div class="gseg" role="group" aria-label="Game view">'+[['bets','Bets'],['mx','Matchup']].map(function(x){return '<button type="button" class="tab" data-mxg="'+esc(g.id)+'" data-mxv="'+x[0]+'" aria-pressed="'+((mv?'mx':'bets')===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>':'';
-    if(mv) return '<section class="game">'+head+gseg+'<div class="gw">'+mxHtml(g)+'</div></section>';
-    return '<section class="game">'+head+gseg+'<div class="gw">'+infoTable(g)+'</div><div class="gw gp">'+tbl+lf+'</div></section>';
+    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]||!body?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · tracked, not bet · best first</span></summary>'+
+      '<table class="pt">'+th+'<tbody>'+lb+'</tbody></table></details>':'';
+    var cur=MXV[g.id]==='mx'&&g.mx?'mx':MXV[g.id]==='info'?'info':'bets';
+    var views=[['bets','Bets']].concat(g.mx?[['mx','Matchup']]:[]).concat([['info','Injuries & line']]);
+    var gseg='<div class="gseg" role="group" aria-label="Game view">'+views.map(function(x){return '<button type="button" class="tab" data-mxg="'+esc(g.id)+'" data-mxv="'+x[0]+'" aria-pressed="'+(cur===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
+    if(cur==='mx') return '<section class="game">'+head+gseg+'<div class="gw">'+mxHtml(g)+'</div></section>';
+    if(cur==='info') return '<section class="game">'+head+gseg+'<div class="gw">'+infoTable(g)+'</div></section>';
+    return '<section class="game">'+head+gseg+'<div class="gw gp">'+tbl+lf+'</div></section>';
   }
   /* Today's games (Mitch, 5 Nov): from the first slate run the slate shows today's games from schedule.json.
      A game not yet analysed shows as "picks ~HH:MM" (about 90 min before tip); once a tick analyses it, its card replaces that line.
@@ -943,6 +967,36 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       tile(sg(s.units,2)+'u','units','Flat 1 unit per pick at pick-time odds',cls(s.units))+
       tile(s.hit===null?'—':s.hit.toFixed(0)+'%','hit','Break-even at today\'s odds: '+fix(s.be,1)+'%',s.gap===null?'':(s.gap>=0?'pos':'neg'));
     box.hidden=false;
+  }
+  /* Layout C scoreboard: one card for the picks record and every 0u tier; a row opens its detail section. */
+  function renderBoard(){
+    var box=$('board');if(!box) return;
+    function pct(x){return x===null||x===undefined?'—':x.toFixed(0)+'%'}
+    function u(x){return (x>=0?'+':'')+x.toFixed(2)+'u'}
+    var rows=[];
+    if(ROWS){
+      var asOf=CORE.asOfDate(ROWS),s=asOf?CORE.summarize(CORE.inRange(ROWS,{from:SEASON_START,to:asOf})):null,
+          s7=asOf?CORE.summarize(CORE.inRange(ROWS,CORE.windowRange(asOf,7))):null;
+      if(s&&s.n) rows.push({k:'rec',t:'Picks (staked)',r:s.w+'-'+s.l+' · '+pct(s.hit)+' · <span class="'+(s.units>=0?'pos':'neg')+'">'+u(s.units)+'</span>',
+        m:'Season'+(s7&&s7.n?' · last 7 days '+s7.w+'-'+s7.l+' '+u(s7.units):'')});
+    } else if(CSVFAIL) rows.push({k:'rec',t:'Picks',r:'unavailable',m:'The Sheet could not be read'});
+    function tier(k,label,arr,goal,m){
+      if(!arr) return;var a=leanSum(arr);
+      rows.push({k:k,t:label,r:a.n?a.w+'-'+a.l+' · '+pct(a.hit)+' · <span class="'+(a.u>=0?'pos':'neg')+'">'+u(a.u)+'</span>':'no settled yet',
+        m:m+(goal?' · '+Math.min(a.n,goal)+' of '+goal+' for a verdict':''),g:goal?Math.min(1,a.n/goal):null});
+    }
+    tier('leansSec','Leans (0u)',LEANS,0,'Near-misses, notional 1u');
+    tier('hrSec','HR85 tier (0u)',typeof HRS!=='undefined'?HRS:null,40,'Target 85%+');
+    tier('pinSec','PIN tier (0u)',typeof PINS!=='undefined'?PINS:null,100,'Beat Pinnacle-fair by 4pp+');
+    tier('olSec','OUTLIFT tier (0u)',typeof OLS!=='undefined'?OLS:null,60,'Key teammate out');
+    tier('lsSec','Late-scratch re-run (0u)',typeof LSS!=='undefined'?LSS:null,40,'New items after a late OUT');
+    if(!rows.length){box.innerHTML='<h2>Scoreboard</h2><p class="load">Loading…</p>';return}
+    box.innerHTML='<h2>Scoreboard</h2>'+rows.map(function(r){return '<button type="button" class="brow" data-go="'+r.k+'"><div class="t"><b>'+r.t+'</b><span>'+r.r+'</span></div><div class="m">'+esc(r.m)+'</div>'+
+      (r.g!==null&&r.g!==undefined?'<div class="pbar"><i style="width:'+Math.round(100*r.g)+'%"></i></div>':'')+'</button>'}).join('')+
+      '<p class="cap">Flat 1u per bet. Tap a row for the full breakdown.</p>';
+    Array.prototype.forEach.call(box.querySelectorAll('[data-go]'),function(b){b.onclick=function(){
+      var mr=$('moreRec'),t=$(b.getAttribute('data-go'));if(mr)mr.open=true;
+      var f=t&&t.querySelector('details.fold');if(f)f.open=true;if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}});
   }
   function renderVer(){
     var box=$('ver');if(!box) return;
@@ -1333,7 +1387,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         return {date:String(o.date).trim(),game:String(o.game||'').trim(),player:String(o.player||''),stat:String(o.stat||'').trim().toUpperCase(),alt:numOrNull(o.alt),actual:String(o.actual||'').trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase(),hr:/(^|\s)HR85(\s|$)/.test(String(o.flags||'')),pin:/(^|\s)PIN(\s|$)/.test(String(o.flags||'')),ol:/(^|\s)OUTLIFT(\s|$)/.test(String(o.flags||'')),ls:/(^|\s)LSR(\s|$)/.test(String(o.flags||'')),lk:(String(o.flags||'').match(/(^|\s)LSR-([A-Z0-9]+)/)||[])[2]||''}}).filter(function(r){return r.odds!==null&&r.odds>1});
       LALL=LEANS.slice();
       HRS=LEANS.filter(function(r){return r.hr});PINS=LEANS.filter(function(r){return r.pin});OLS=LEANS.filter(function(r){return r.ol});LSS=LEANS.filter(function(r){return r.ls});LEANS=LEANS.filter(function(r){return !r.hr&&!r.pin&&!r.ol&&!r.ls});renderHr();renderPin();renderOl();renderLs();
-      LEANFAIL=false;renderLeans();if(D)games();
+      LEANFAIL=false;renderLeans();renderBoard();if(D)games();
     }).catch(function(){LEANFAIL=true;renderLeans();renderHr();renderPin();renderOl();renderLs()});
   }
   /* ---------- web-push alerts (sender: tools/nba_push.py in the slate task) ---------- */
