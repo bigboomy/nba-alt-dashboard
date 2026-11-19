@@ -5007,9 +5007,325 @@
         "NOP": []
       },
       "tip": "12:00"
+    },
+    {
+      "abs": {
+        "BOS": [],
+        "DEN": []
+      },
+      "b2b": [],
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "skipped": [],
+        "stats": [
+          39,
+          39
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: Neemias Queta. Coverage: evaluated 15 of 15 players (39 of 39 player-stats); skipped: none",
+      "cx": {
+        "Jamal Murray|REB|3.5|lean": {
+          "best_book": "tabtouch",
+          "best_price": 1.54,
+          "mm_min": 35.6,
+          "mm_mu": 4.735,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6651,
+          "p_pin": 0.583,
+          "p_wowy": 0.6651,
+          "pin_edge_pp": -7.1,
+          "pin_line": 4.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 4.735
+        },
+        "Neemias Queta|REB|5.5|lean": {
+          "best_book": "betdeluxe",
+          "best_price": 1.58,
+          "mm_min": 21.42,
+          "mm_mu": 6.834,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6748,
+          "p_pin": 0.5785,
+          "p_wowy": 0.6748,
+          "pin_edge_pp": -8.8,
+          "pin_line": 6.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 6.834
+        },
+        "Nikola Jokic|AST|7.5|lean": {
+          "best_book": "betdeluxe",
+          "best_price": 1.45,
+          "mm_min": 36.8,
+          "mm_mu": 9.327,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.713,
+          "p_pin": 0.6388,
+          "p_wowy": 0.713,
+          "pin_edge_pp": -7.5,
+          "pin_line": 9.5,
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 9.327
+        }
+      },
+      "engine": "nba-session v3.27-p4",
+      "id": "BOS@DEN",
+      "leans": [
+        {
+          "alt": 7.5,
+          "e": 4.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "MT+",
+            "C0.82",
+            "Z1.26",
+            "PIN-7.5",
+            "BEST-sportsbet@1.45"
+          ],
+          "h": "90% (9/10)",
+          "o": 1.4,
+          "opp": "BOS 15th fewest AST allowed · pace -3.3",
+          "p": "Nikola Jokic",
+          "s": "AST",
+          "st": "4",
+          "std": 8.5,
+          "t": "DEN"
+        },
+        {
+          "alt": 3.5,
+          "e": 4.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "C0.74",
+            "Z0.59",
+            "PIN-7.1"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.53,
+          "opp": "BOS 10th most REB allowed · pace -3.3",
+          "p": "Jamal Murray",
+          "s": "REB",
+          "st": "4",
+          "std": 4.5,
+          "t": "DEN"
+        },
+        {
+          "alt": 5.5,
+          "e": 3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "DNP-LAST",
+            "OT-ADJ",
+            "C0.78",
+            "Z0.47",
+            "PIN-8.8",
+            "BEST-sportsbet@1.58"
+          ],
+          "h": "80% (8/10)",
+          "o": 1.5,
+          "opp": "DEN 8th most REB allowed · pace -3.3",
+          "p": "Neemias Queta",
+          "s": "REB",
+          "st": "4",
+          "std": 6.5,
+          "t": "BOS"
+        }
+      ],
+      "mkt": 219.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "mx": {
+        "exp_pace": 99.1,
+        "home_spread": 2.5,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.7,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.4
+        },
+        "teams": {
+          "BOS": {
+            "allow100": {
+              "3PM": 13.8,
+              "AST": 25.9,
+              "PTS": 108.0,
+              "REB": 43.3
+            },
+            "allow_rk": {
+              "3PM": 4,
+              "AST": 16,
+              "PTS": 29,
+              "REB": 10
+            },
+            "out": [],
+            "pace": 100.3,
+            "rk": {
+              "ast": 14,
+              "blk": 18,
+              "dreb": 16,
+              "fg3_pct": 3,
+              "fg3a": 3,
+              "fg3m": 1,
+              "fg_pct": 18,
+              "ft_pct": 18,
+              "fta": 23,
+              "net": 1,
+              "opp_fg3_pct": 9,
+              "opp_fg_pct": 2,
+              "oppg": 1,
+              "oreb": 8,
+              "pace": 29,
+              "pf": 11,
+              "ppg": 12,
+              "reb": 10,
+              "stl": 11,
+              "tov": 9,
+              "ts_pct": 9
+            },
+            "v": {
+              "ast": 27.1,
+              "ats": "8-6-0",
+              "ats_away": "5-2-0",
+              "ats_home": "3-4-0",
+              "ats_l10": "6-4-0",
+              "away": "5-2",
+              "blk": 4.7,
+              "dreb": 31.8,
+              "fg3_pct": 38.2,
+              "fg3a": 43.9,
+              "fg3m": 16.8,
+              "fg_pct": 45.7,
+              "ft_pct": 77.4,
+              "fta": 22.7,
+              "gp": 14,
+              "home": "6-1",
+              "l10": "8-2",
+              "net": 11.5,
+              "opp_fg3_pct": 34.1,
+              "opp_fg_pct": 42.3,
+              "oppg": 103.3,
+              "oreb": 13.1,
+              "ou": "5-9-0",
+              "ou_l10": "3-7-0",
+              "pace": 98.9,
+              "pf": 21.3,
+              "ppg": 114.8,
+              "reb": 44.9,
+              "rec": "11-3",
+              "stl": 8.4,
+              "tov": 14.4,
+              "ts_pct": 58.6
+            }
+          },
+          "DEN": {
+            "allow100": {
+              "3PM": 13.6,
+              "AST": 26.7,
+              "PTS": 111.9,
+              "REB": 43.5
+            },
+            "allow_rk": {
+              "3PM": 7,
+              "AST": 3,
+              "PTS": 11,
+              "REB": 8
+            },
+            "out": [],
+            "pace": 101.2,
+            "rk": {
+              "ast": 11,
+              "blk": 23,
+              "dreb": 18,
+              "fg3_pct": 16,
+              "fg3a": 29,
+              "fg3m": 28,
+              "fg_pct": 2,
+              "ft_pct": 10,
+              "fta": 11,
+              "net": 15,
+              "opp_fg3_pct": 22,
+              "opp_fg_pct": 17,
+              "oppg": 15,
+              "oreb": 28,
+              "pace": 26,
+              "pf": 2,
+              "ppg": 16,
+              "reb": 23,
+              "stl": 8,
+              "tov": 4,
+              "ts_pct": 5
+            },
+            "v": {
+              "ast": 27.2,
+              "ats": "5-7-0",
+              "ats_away": "4-3-0",
+              "ats_home": "1-4-0",
+              "ats_l10": "5-5-0",
+              "away": "5-2",
+              "blk": 4.4,
+              "dreb": 31.7,
+              "fg3_pct": 34.5,
+              "fg3a": 30.9,
+              "fg3m": 10.7,
+              "fg_pct": 48.6,
+              "ft_pct": 79.4,
+              "fta": 25.8,
+              "gp": 12,
+              "home": "2-3",
+              "l10": "6-4",
+              "net": 0.7,
+              "opp_fg3_pct": 36.5,
+              "opp_fg_pct": 46.2,
+              "oppg": 113.2,
+              "oreb": 10.0,
+              "ou": "5-7-0",
+              "ou_l10": "4-6-0",
+              "pace": 100.2,
+              "pf": 19.3,
+              "ppg": 113.8,
+              "reb": 41.7,
+              "rec": "7-5",
+              "stl": 8.8,
+              "tov": 13.8,
+              "ts_pct": 59.1
+            }
+          }
+        }
+      },
+      "out": {
+        "BOS": [],
+        "DEN": [
+          "Julian Strawther (Strawther (knee) was diagnosed with a left knee sprain Friday and will be re-evaluated in six weeks, Vinny Benedetto of The Denver Gazette reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "BOS": [],
+        "DEN": []
+      },
+      "tip": "13:30"
     }
   ],
-  "generated": "2026-11-18T23:30:02Z",
+  "generated": "2026-11-19T01:00:02Z",
   "totals": [
     [
       "HOU@IND",
@@ -5055,6 +5371,11 @@
       "DET@NOP",
       null,
       226.5
+    ],
+    [
+      "BOS@DEN",
+      null,
+      219.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
