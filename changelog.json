@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-19",
+   "version": "nba-session v3.27-p4",
+   "component": "dashboard",
+   "title": "Leans show W/L on the game card",
+   "change": "After the resolve, each lean row (including HR85, PIN, OUTLIFT and re-run items) shows a W/L/PUSH/VOID pill with the actual stat, read from the Sheet's leans tab, the same way picks already did.",
+   "aim": "Mitch can see at a glance how the leans went; display only, leans stay 0u and no rule changes."
+  },
+  {
    "date": "2026-11-18",
    "version": "nba-session v3.27-p4",
    "component": "dashboard",
