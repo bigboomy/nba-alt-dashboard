@@ -5,6 +5,14 @@
    "date": "2026-11-20",
    "version": "nba-session v3.28-p4",
    "component": "dashboard",
+   "title": "When tonight's absentees sat",
+   "change": "Matchup shows, for each player out tonight, how his teammates did against their usual numbers in the games he missed this season; scout notes mention it when the player has 2+ such games.",
+   "aim": "Mitch 20 Nov: record whose numbers got the rise when a player is out (absence ledger, data only)."
+  },
+  {
+   "date": "2026-11-20",
+   "version": "nba-session v3.28-p4",
+   "component": "dashboard",
    "title": "Scout notes fold away",
    "change": "Each player's scout note sits behind a 'Scout note' toggle, collapsed by default.",
    "aim": "Mitch 20 Nov: less text on screen until wanted."

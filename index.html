@@ -264,6 +264,7 @@ details.cds>summary::before{content:"▸ "}details.cds[open]>summary::before{con
 .tdet .cbar{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
 .scn{margin:-2px 0 8px;font-size:12.5px;line-height:1.45;color:var(--muted)}.scn>summary{cursor:pointer;list-style:none;font-size:12px}.scn>summary::-webkit-details-marker{display:none}
 .scn>summary::before{content:"▸ "}.scn[open]>summary::before{content:"▾ "}.scn p{margin:3px 0 0}
+.abh{font-size:12.5px;margin:8px 0 4px;color:var(--muted)}.abh b{color:var(--text)}table.abt td{text-align:right;font-variant-numeric:tabular-nums}table.abt td.up{color:var(--good);font-weight:700}
 </style>
 </head>
 <body><div class="wrap">
@@ -875,7 +876,20 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       '<p class="mxn">Same as every arrow here: it points to the team that is better at this. Red rank = a leaky defence, which is good for overs against it.</p>';
     function outs(o){return o&&o.length?o.map(function(x){return esc(x.name)+' <span class="rk">'+esc((x.roles||[]).join('/'))+(x.min?' · '+Number(x.min).toFixed(0)+' min':'')+'</span>'}).join('<br>'):'<span class="mu">—</span>'}
     html+='<div class="mxh">Key players freshly out</div>'+hd(esc(A),esc(H))+row('Out',outs(a.out),outs(h.out))+'</tbody></table>';
+    html+=absHtml(g,A,H);
     return html;
+  }
+  function outNames(g,team){var r=[];((g.out&&g.out[team])||[]).forEach(function(x){r.push(String(x).replace(/\s*\(.*$/,'').trim())});
+    var m=String(g.ctx||'').match(/Out TOP3: ([^;]*)/);if(m)m[1].split(', ').forEach(function(x){var q=x.match(/^(.+) \((\w+)\)$/);if(q&&q[2]===team&&r.indexOf(q[1])<0)r.push(q[1])});return r}
+  function absHtml(g,A,H){
+    if(!ABSL) return '';
+    var blocks='';
+    [A,H].forEach(function(t){outNames(g,t).forEach(function(nm){var x=absOf(t,nm);if(!x||!x.mates.length)return;
+      blocks+='<div class="abh"><b>'+esc(nm)+'</b> ('+esc(t)+') sat '+x.games+' game'+(x.games===1?'':'s')+' this season. Teammates against their usual numbers with him:</div>'+
+        '<table class="mxt abt"><thead><tr><th></th><th>G</th><th>MIN</th><th>PTS</th><th>REB</th><th>AST</th></tr></thead><tbody>'+
+        x.mates.slice(0,6).map(function(m){return '<tr><th scope="row">'+esc(m.name)+'</th><td>'+m.n+'</td><td>'+sgn(m.min)+'</td><td'+(m.pts>=2?' class="up"':'')+'>'+sgn(m.pts)+'</td><td'+(m.reb>=1.5?' class="up"':'')+'>'+sgn(m.reb)+'</td><td'+(m.ast>=1.5?' class="up"':'')+'>'+sgn(m.ast)+'</td></tr>'}).join('')+
+        '</tbody></table>'})});
+    return blocks?'<div class="mxh">When tonight\'s absentees sat <span>(this season; per game against the same teammate\'s average with him; small samples, G = games)</span></div>'+blocks:'';
   }
   /* Legend (Mitch 19 Nov: "we need a legend reader"): tap a chip on a card -> open the legend at that code. */
   document.addEventListener('click',function(ev){
@@ -936,6 +950,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(mine.length&&theirs.length) out.push(t+' are without '+andList(mine)+', and '+opp+' are missing '+andList(theirs)+'.');
     else if(mine.length) out.push('With '+andList(mine)+' out, more of '+t+"'s load falls on him.");
     else if(theirs.length) out.push(opp+' are missing '+andList(theirs)+'.');
+    var hist=[];mine.forEach(function(x){var a=absOf(t,x);if(!a)return;var m=a.mates.filter(function(q){return q.name===P.n})[0];if(!m||m.n<2)return;
+      var bits=[];P.bs.forEach(function(b){var k=b.s.toLowerCase(),v=m[k];if(v!=null&&bits.indexOf(k)<0&&Math.abs(v)>=0.5)bits.push(k)});
+      if(bits.length) hist.push('When '+x+' sat this season ('+m.n+' games), he went '+andList(bits.map(function(k){return sgn(m[k])+' '+(SW[k.toUpperCase()]||k)}))+' against his usual.')});
+    out=out.concat(hist);
     var ar=g.mx&&g.mx.teams&&g.mx.teams[opp]&&g.mx.teams[opp].allow_rk,good=[],tough=[];
     var seen={};if(ar) P.bs.forEach(function(b){var r=ar[b.s],w=SW[b.s]||b.s;if(r==null||seen[b.s])return;seen[b.s]=1;
       if(r<=8&&good.indexOf(w)<0)good.push((r===1?'the most':'the '+ordn(r)+' most')+' '+w);
@@ -1236,6 +1254,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function reloadData(){
     REFRESH=null;REFRESH_AT=0;
     loadSched();loadHealth();
+    loadAbs();
     fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(init).catch(function(){runStatus()});
     fetch(CSV_URL,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){
       var rows=CORE.normRows(CORE.parseCSV(t));if(rows.length){ROWS=rows;FETCHED=new Date();foot();renderRecord();if(D){games();runStatus()}}
@@ -1289,6 +1308,14 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     }
     el.innerHTML=html;el.hidden=false;
   }
+  /* Absence ledger (Mitch 20 Nov): who picked up the numbers when a key player sat this season. Data only. */
+  var ABSL=null;
+  function loadAbs(){
+    fetch('absence.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
+      .then(function(j){ABSL=j&&j.teams?j:null;if(D&&ABSL)games()}).catch(function(){});
+  }
+  function absOf(team,name){return ABSL&&ABSL.teams[team]&&ABSL.teams[team][name]||null}
+  function sgn(v){return v===null||v===undefined?'—':(v>0?'+':'')+Number(v).toFixed(1)}
   function loadSched(){
     fetch('schedule.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
       .then(function(j){SCHED=j;if(D){init(LASTDATA);}else nextLine()}).catch(function(){});
@@ -1615,7 +1642,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   fetch('data.json?v='+Date.now(),{cache:'no-store'})
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
     .then(init).catch(slateFail);
-  loadSched();loadHealth();
+  loadSched();loadHealth();loadAbs();
   renderTotals();loadTotals();
   renderLeans();renderHr();renderPin();renderOl();renderLs();loadLeans();
   alertUI();clearBadge();loadChoices();
