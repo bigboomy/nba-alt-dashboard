@@ -5,6 +5,14 @@
       "date": "2026-11-20",
       "version": "nba-session v3.31-p4",
       "component": "dashboard",
+      "title": "Rings keep their colour; hit count moves into the player fold",
+      "change": "Settled rings keep their chance colour (grey-out reverted, Mitch). The 'L10 x/10' count under each ring is gone; each player's fold now lists every line with 'cleared in x of his last 10 games', above the last-5 averages when those are in the data (box5 and l5 start with the next slate). The fold is titled 'Recent form' until last-5 data exists.",
+      "aim": "Display only (Mitch, 20 Nov)."
+    },
+    {
+      "date": "2026-11-20",
+      "version": "nba-session v3.31-p4",
+      "component": "dashboard",
       "title": "Lost lines keep their normal colour",
       "change": "A lost line no longer turns orange; it stays the normal ink colour with the actual number in brackets underneath. Only a win turns the line green. Push and void stay grey.",
       "aim": "Display only (Mitch, 20 Nov)."

@@ -337,7 +337,6 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .jb:focus-visible{outline:3px solid var(--good);outline-offset:2px}
 
 /* 20 Nov round 3: settled rings grey, killed rows dimmed, L10 label, dark contrast, lighter view toggle */
-.ring.done .rf{stroke:var(--muted)!important;opacity:.55}
 .l10{white-space:nowrap}.l10 i{font-style:normal;font-size:9.5px;letter-spacing:.02em;opacity:.85}
 .bet.killed .rc,.bet.killed .sl .stn,.bet.killed .ln,.bet.killed .od{opacity:.5}
 .kx{font:600 .7rem/1.5 var(--body);color:var(--muted);border:1px solid var(--line);border-radius:9px;padding:0 6px}
@@ -346,6 +345,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .cbtn{min-height:44px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--pts:#1F5FB0;--reb:#6D3FB5;--ast:#B0357A;--tpm:#0F7A80}
   :root:not([data-theme="light"]) .tab[aria-pressed=true],:root:not([data-theme="light"]) .cbtn.main{color:var(--bg)}}
+.b5h{list-style:none;margin:2px 0 8px;padding:0;font-size:13px;color:var(--muted)}.b5h li{padding:2px 0}.b5h b{color:var(--text);font-weight:600}
 </style>
 </head>
 <body><div class="wrap">
@@ -1005,8 +1005,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         return '<div class="b5c'+cl+'"><b>'+c[2]+'</b><span>'+c[1]+'</span></div>'}).join('')+'</div>'+
         '<p class="b5n">Averages over his last '+b.n+' games. Tinted = tonight\'s bet stat'+(lowMin?'; amber minutes = 4+ under his season average':'')+'.</p>';
     }
-    if(!body&&!sn) return '';
-    return '<details class="scn b5"><summary>'+(body?'Last '+b.n+' games':'Scout note')+'</summary>'+body+
+    var hr=P.bs.map(function(x){var kn=hitKN(x.h);return kn?'<li><b>'+esc(STW[x.s]||x.s)+' '+esc(x.alt)+'+</b> cleared in '+kn[0]+' of his last '+kn[1]+' games</li>':''}).join('');
+    if(hr) hr='<ul class="b5h">'+hr+'</ul>';
+    if(!body&&!sn&&!hr) return '';
+    return '<details class="scn b5"><summary>'+(body?'Last '+b.n+' games':hr?'Recent form':'Scout note')+'</summary>'+body+hr+
       (sn?'<div class="b5s">'+(body?'<h4>Scout note</h4>':'')+'<p>'+esc(sn)+'</p></div>':'')+'</details>';
   }
   /* Scout note (Mitch 20 Nov: "a scout report style", facts only): 2-3 plain sentences per player built from data
@@ -1058,7 +1060,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function ringCol(r){return r>=.85?'#1E8C4E':r>=.8?'#7FA82E':r>=.75?'#D4A800':r>=.7?'#E57A00':'#C8352B'}
   function hitP(b){var v=1/b.o+b.e/100;return isFinite(v)?Math.max(0,Math.min(.99,v)):null}
   function ringHtml(b){var r=hitP(b),C=97.39;if(r===null) return '<span class="ring"></span>';var sc=(r*10).toFixed(1);
-    return '<span class="ring'+(resFor(b)?' done':'')+'" role="img" aria-label="Hit chance '+sc+' out of 10 (about '+Math.round(r*100)+'%)"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" class="rt"/>'+
+    return '<span class="ring" role="img" aria-label="Hit chance '+sc+' out of 10 (about '+Math.round(r*100)+'%)"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" class="rt"/>'+
       '<circle cx="18" cy="18" r="15.5" class="rf" style="stroke:'+ringCol(r)+'" stroke-dasharray="'+(C*r).toFixed(1)+' '+C+'"/></svg><b>'+sc+'</b></span>'}
   function knLine(b){var kn=hitKN(b.h);return kn?'<p class="kn">Last '+kn[1]+' games: cleared '+kn[0]+' of '+kn[1]+'. Hit chance '+(hitP(b)*10).toFixed(1)+'/10 is the engine\'s estimate (price plus edge).</p>':''}
   function stPill(s){return '<span class="stn '+(STC[s]||'oth')+'">'+esc(STW[s]||s)+'</span>'}
@@ -1099,7 +1101,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'';
       var rows=P.bs.map(function(b,j){var x=resFor(b),k=kindTag(b),det='';try{det='<p class="kt"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span> '+esc(KGLOSS[k]||'')+'</p>'+knLine(b)+tileDet(b,g,gi)+'<p class="gl">Edge = the model\'s chance minus the chance the price implies. Stars = confidence (5 is highest).</p>'}catch(e){}
         var kl=b.f.indexOf('OUTLIFT')>=0;
-        return '<button class="bet'+(kl?' killed':'')+'" type="button" aria-label="'+betLabel(b)+(kl?', killed OUTLIFT tier, record only':'')+'" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'"><span class="rc">'+ringHtml(b)+l10Of(b)+'</span>'+
+        return '<button class="bet'+(kl?' killed':'')+'" type="button" aria-label="'+betLabel(b)+(kl?', killed OUTLIFT tier, record only':'')+'" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'"><span class="rc">'+ringHtml(b)+'</span>'+
           '<span class="sl">'+stPill(b.s)+(kl?'<span class="kx">killed</span>':'')+l5Html(b)+'</span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span></button>'+
           '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+det+'</div>'}).join('');
       var sn='';try{sn=scoutNote(g,P)}catch(e){}
@@ -1176,7 +1178,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     box.innerHTML=(td===top.length?'<h2>Tonight\'s best leans: '+tw+'-'+tl+'</h2><p class="bsub">Settled. Highest chance first, tracked at 0u, never staked. Tap one to see it in its game.</p>'
       :'<h2>Best leans tonight</h2><p class="bsub">No pick cleared every gate. Highest chance first, tracked at 0u, never staked. Tap one to see it in its game.</p>')+
       '<div class="pls">'+ringKey(top.map(function(x){return x.b}))+BH+top.map(function(x){var b=x.b;
-        return '<button class="bet bl" type="button" aria-label="'+betLabel(b,x.g.id)+', open in its game" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'"><span class="rc">'+ringHtml(b)+l10Of(b)+'</span>'+
+        return '<button class="bet bl" type="button" aria-label="'+betLabel(b,x.g.id)+', open in its game" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'"><span class="rc">'+ringHtml(b)+'</span>'+
           '<span class="sl"><strong>'+esc(b.p)+'</strong><span class="bg">'+esc(x.g.id)+'</span></span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span>'+
           '<span class="kd">'+stPill(b.s)+l5Html(b)+'</span></button>'}).join('')+'</div>';
     box.hidden=false;
