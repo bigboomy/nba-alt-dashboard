@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-20",
+   "version": "nba-session v3.31-p4",
+   "component": "nba-session",
+   "title": "VERDICT retired",
+   "change": "The pipeline stops writing the plain-English verdict: new context rows leave verdict, v_score, v_text and verdict_ver blank; rows already written are kept.",
+   "aim": "Mitch 20 Nov (\"Retire it\"): the hit /10 ring does the job; golden test test_v331_verdict_retired_golden."
+  },
+  {
+   "date": "2026-11-20",
    "version": "nba-session v3.30-p4",
    "component": "dashboard",
    "title": "Verdict badges and sentences removed",
