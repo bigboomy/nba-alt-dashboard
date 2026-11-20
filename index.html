@@ -72,7 +72,7 @@ tr:last-child td{border-bottom:0}
 .gw{padding:0 6px 6px}.gw.gp{border-top:6px solid var(--bg);padding-top:2px}
 table.gi,table.pt{width:100%;border-collapse:collapse;font-size:.78rem;line-height:1.35;min-width:0;border:0}
 table.gi{table-layout:fixed}table.gi th,table.gi td,table.pt th,table.pt td{padding:6px;vertical-align:top;text-align:left;border:0;border-top:1px solid var(--line);background:none}
-table.gi thead th,table.pt thead th{border-top:0;font-size:.68rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+table.gi thead th,table.pt thead th{border-top:0;font-size:.8rem;color:var(--muted);font-weight:600}
 table.gi th[scope=row]{width:68px;color:var(--muted);font-weight:600}table.gi thead th:first-child{width:68px}
 .ij{padding:1px 0}.ij .n1{white-space:nowrap}.is{display:inline-block;font-size:.66rem;font-weight:700;padding:0 5px;border-radius:4px;margin-left:3px;vertical-align:1px}
 .isOut{background:#fde7e5;color:#b42318}.isQ,.isD{background:#fdf1d8;color:#8a5a00}.isP{background:#eef0f3;color:#5b6573}
@@ -347,7 +347,7 @@ details.cds>summary::before{content:"▸ "}details.cds[open]>summary::before{con
   <tr data-re="^Mixed$"><td class="lgc">Mixed</td><td>Reasons roughly cancel out (score between −2 and +1.5). The sentence gives the best reason for and the biggest worry.</td><td class="lge">Display</td></tr>
   <tr data-re="^Caution$"><td class="lgc">Caution</td><td>More reasons against (score −2 or worse): e.g. Pinnacle disagrees (±2 at 2pp, ±3 beyond 4pp), REB-OPP, his average only just clears the line.</td><td class="lge">Display</td></tr>
   <tr><td class="lgc">Verdict test</td><td>Verdict v1, weights frozen for the test. Logged with every item. Judged at 300 settled (60+ each in Worth a look and Caution) on beating the price, within each kind: CONFIRM at +5pp with the gap clearly above zero, KILL at 1pp or less. Must also beat Pinnacle's sign alone. Never changes a stake.</td><td class="lge">0u test</td></tr>
-  <tr><td class="lgc">Matchup edge bar</td><td>Bars grow out from the centre line toward the team with the better rank; length = rank gap (full = 29). Short grey stub both sides = 2 ranks or less, no real edge. In the defence table the arrow points to the tighter defence.</td><td class="lge">Display</td></tr>
+  <tr><td class="lgc">Matchup edge bar</td><td>Bars grow out from the centre line toward the team with the better rank; length = rank gap (full = 29). Short grey stub both sides = 2 ranks or less, no real edge. In the defence table the bar grows toward the tighter defence.</td><td class="lge">Display</td></tr>
   <tr class="lgh"><th colspan="3">Bet type and stake</th></tr>
   <tr data-re="^U(1\.5|1|0\.5|0\.25)$"><td class="lgc">U1.5 · U1 · U0.5 · U0.25</td><td>Stake in units for a pick, set by its stars: 5★ 1.5u, 4★ 1u, 3★ 0.5u, 2★ or less 0.25u.</td><td class="lge">Stake</td></tr>
   <tr data-re="^(LEAN|U0)"><td class="lgc">LEAN / U0</td><td>Lean: tracked at 0u and never staked. A near-miss, or one of the 0u test tiers below.</td><td class="lge">0u</td></tr>
@@ -884,18 +884,18 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     function v(x,d){return x===null||x===undefined||x===''?'—':(typeof x==='number'?x.toFixed(d===undefined?1:d):esc(String(x)))}
     function wlp(x){if(!x)return '—';var p=String(x).split('-');return esc(p[0]+'-'+p[1])+(p[2]&&p[2]!=='0'?'-'+esc(p[2]):'')}
     function row(lbl,ka,kh){return '<tr><th scope="row">'+lbl+'</th><td>'+ka+'</td><td>'+kh+'</td></tr>'}
-    function hd(x,y){return '<table class="mxt"><thead><tr><th></th><th>'+x+'</th><th>'+y+'</th></tr></thead><tbody>'}
-    function hd4(x,y){return '<table class="mxt e4"><thead><tr><th></th><th>'+x+'</th><th>Edge</th><th>'+y+'</th></tr></thead><tbody>'}
+    function hd(x,y){return '<table class="mxt"><thead><tr><th></th><th>'+x+' (away)</th><th>'+y+' (home)</th></tr></thead><tbody>'}
+    function hd4(x,y){return '<table class="mxt e4"><thead><tr><th></th><th>'+x+' (away)</th><th>Edge</th><th>'+y+' (home)</th></tr></thead><tbody>'}
     function row4(lbl,ka,e,kh){return '<tr><th scope="row">'+lbl+'</th><td>'+ka+'</td><td class="eg2">'+e+'</td><td>'+kh+'</td></tr>'}
-    /* ra, rh: ranks where LOWER is the side the arrow points to. gap <= 2 ranks = no real edge (short grey bar). */
+    /* ra, rh: ranks where LOWER is the side the bar grows toward. gap <= 2 ranks = no real edge (short grey bar). */
     function ebar(ra,rh,neu){
       /* Mitch 19 Nov: every bar starts at the same point -> bars grow out from a centre line toward the team with the edge */
       function wrap(l,r,lab){return '<div class="ebar" aria-label="'+lab+'"><span class="eh l">'+l+'</span><span class="ax"></span><span class="eh r">'+r+'</span></div>'}
       if(neu||ra===undefined||rh===undefined||ra===null||rh===null) return wrap('','','no edge');
       var gap=Math.abs(ra-rh),w=Math.max(10,Math.round(100*gap/29));
       if(gap<=2) return wrap('<i class="z" style="width:10%"></i>','<i class="z" style="width:10%"></i>','no real edge');
-      return ra<rh?wrap('<b>◀</b><i style="width:'+w+'%"></i>','','edge left, '+gap+' ranks')
-                  :wrap('','<i style="width:'+w+'%"></i><b>▶</b>','edge right, '+gap+' ranks');
+      return ra<rh?wrap('<i style="width:'+w+'%"></i>','','edge left, '+gap+' ranks')
+                  :wrap('','<i style="width:'+w+'%"></i>','edge right, '+gap+' ranks');
     }
     var hs=m.home_spread,line=(hs===null||hs===undefined)?'—':(hs===0?'PK':(hs<0?esc(H)+' '+hs.toFixed(1):esc(A)+' '+(-hs).toFixed(1)));
     var html='<div class="mxh">Records</div>'+hd(esc(A),esc(H))+
@@ -912,10 +912,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         return row4(x[0],cell(av[k],ra,ba),ebar(ra,rh,neu),cell(hv[k],rh,bh))}).join('')+'</tbody></table>';
     var S=[['PTS','Points'],['REB','Rebounds'],['AST','Assists'],['3PM','Threes']];
     function rkD(r){if(r===null||r===undefined||r==='')return '';var n=Number(r),c=n>=21?'g':(n<=10?'r':'');return '<span class="rk '+c+'">#'+n+'</span>'}
-    html+='<div class="mxh">What each defence allows <span>(per 100 possessions, #1 = allows the most; arrow = the tighter defence)</span></div>'+hd4(esc(A)+' D',esc(H)+' D')+
+    html+='<div class="mxh">What each defence allows <span>(per 100 possessions, #1 = allows the most; bar = the tighter defence)</span></div>'+hd4(esc(A),esc(H))+
       S.map(function(x){var k=x[0],lg=m.lg&&m.lg[k],qa=(a.allow_rk||{})[k],qh=(h.allow_rk||{})[k];return row4(stPill(k)+(lg!==undefined?'<span class="rk" style="display:block">league '+v(lg)+'</span>':''),
         v((a.allow100||{})[k])+rkD(qa),ebar(qa==null?qa:-qa,qh==null?qh:-qh,false),v((h.allow100||{})[k])+rkD(qh))}).join('')+'</tbody></table>'+
-      '<p class="mxn">Same as every arrow here: it points to the team that is better at this. Red rank = a leaky defence, which is good for overs against it.</p>';
+      '<p class="mxn">Same as every bar here: it grows toward the team that is better at this. Red rank = a leaky defence, which is good for overs against it.</p>';
     function outs(o){return o&&o.length?o.map(function(x){return esc(x.name)+' <span class="rk">'+esc((x.roles||[]).join('/'))+(x.min?' · '+Number(x.min).toFixed(0)+' min':'')+'</span>'}).join('<br>'):'<span class="mu">—</span>'}
     html+='<div class="mxh">Key players freshly out</div>'+hd(esc(A),esc(H))+row('Out',outs(a.out),outs(h.out))+'</tbody></table>';
     html+=absHtml(g,A,H);
@@ -1024,8 +1024,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function stPill(s){return '<span class="stn '+(STC[s]||'oth')+'">'+esc(STW[s]||s)+'</span>'}
   function l5Html(p){if(!p.l5||!p.l5.length) return '';
     return '<span class="l5" aria-label="Last '+p.l5.length+', newest first: '+p.l5.join(', ')+'">'+p.l5.map(function(v){return '<i class="'+(v>p.alt?'o':'u')+'">'+v+'</i>'}).join('')+'</span>'}
-  function ringKey(){return '<div class="rkey">Last 10: '+[[1,'10'],[.9,'9'],[.8,'8'],[.7,'7'],[0,'6 or fewer']].map(function(x){return '<span><i style="border-color:'+ringCol(x[0])+'"></i>'+x[1]+'</span>'}).join('')+
-    '<span>Last 5, newest first: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em></span></div>'}
+  function ringKey(){return '<div class="rkey"><span>Last 5, newest first: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em></span></div>'}
   var BH='<div class="bh"><span>Last 10</span><span>Line</span><span>Odds</span></div>';
   function playerBlocks(g,gi,list){
     var by={},order=[];
