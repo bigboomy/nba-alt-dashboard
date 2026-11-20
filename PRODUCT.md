@@ -12,11 +12,11 @@ Mitch, plus a few mates who follow the picks. All of them know the vocabulary: a
 
 ## Product Purpose
 
-A daily read-out of the NBA alt-over pipeline: tonight's stepped-down alt OVER player props (picks and leans), each with price, hit rate, edge and a plain-English verdict, plus the matchup context behind them and the running record.
+A daily read-out of the NBA alt-over pipeline: tonight's stepped-down alt OVER player props (picks and leans), each with price, a hit-chance ring (x/10), last-10 hit count and edge, plus the matchup context behind them and the running record.
 
 Two jobs, in this order:
 1. **Decide what to bet before tip.** Scan tonight's picks and leans, check the matchup, place bets.
-2. **Track results and tiers.** See the record, hit rates, and whether each 0u tier test (HR80, PIN, LSR, verdict) is heading for CONFIRM or KILL.
+2. **Track results and tiers.** See the record, hit rates, and whether each 0u tier test (HR80, PIN, LSR) is heading for CONFIRM or KILL.
 
 Success: a reader can tell in seconds which bets are worth taking tonight and why, and can trust the record without checking the Sheet.
 
@@ -42,7 +42,7 @@ A personal model's output, not a tipster site. Every bet on the page is somethin
 
 ## Brand Commitments
 
-Plain English over codes: every lean carries a verdict (Worth a look / Mixed / Caution) and one sentence. Codes stay available but secondary. Write for Mitch's mates as well as Mitch.
+Plain English over codes: the hit-chance ring replaced the Worth a look / Mixed / Caution verdicts on 20 Nov 2026 at Mitch's request. Each code gets a one-line meaning where it appears; codes stay available but secondary. Write for Mitch's mates as well as Mitch.
 
 ## Evidence on Hand
 
@@ -53,6 +53,6 @@ Plain English over codes: every lean carries a verdict (Worth a look / Mixed / C
 
 1. **Tonight first.** The pre-tip decision outranks everything else on first load.
 2. **Show the evidence, not the hype.** Hit counts, prices and the record carry the page; a reader can always see why a bet is there.
-3. **Honest about misses.** Losses, killed tiers and caution verdicts are as visible as wins.
+3. **Honest about misses.** Losses, killed tiers and below-break-even tiers are as visible as wins.
 4. **Never imply a rule the pipeline doesn't have.** Display only; nothing on the page changes the bet.
 5. **Readable on a phone at a glance, deep on desktop.**

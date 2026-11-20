@@ -311,28 +311,53 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .b5c.lo b{color:var(--warn)}
 .b5n{margin:2px 0 6px;font-size:12px;color:var(--muted)}
 .b5s{border-top:1px solid var(--line);padding-top:6px;margin-top:4px}.b5s h4{margin:0 0 2px;font-size:12.5px;color:var(--text)}.b5s p{margin:0}
+
+/* 20 Nov round 2: bigger names, result on the line, scoreboard direction, desktop columns */
+.pl .nm strong{font:700 22px/1.1 var(--disp);letter-spacing:.2px}.pl .nm .tm{font-size:13px}
+.best .bet .sl strong{font:700 19px/1.1 var(--disp)}
+.bet .ln.won{color:var(--good)}.bet .ln.lost{color:var(--lossc)}.bet .ln.push{color:var(--muted)}
+.bet .ln em{display:block;font:600 15px/1.1 var(--disp);font-style:normal;margin-top:1px;white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
+:root{--lossc:#C2410C}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--lossc:#FB923C}}
+.kt{font-size:12.5px;color:var(--muted)}.gl{margin:6px 0 0;font-size:12px;color:var(--muted)}
+.bcap{margin:-4px 0 6px}
+.brow{position:relative;padding-right:22px}
+.brow .go{position:absolute;right:6px;top:50%;width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:translateY(-50%) rotate(-45deg)}
+.dr{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;font-size:.78rem;color:var(--muted);margin-top:2px}
+.dt{font-weight:700}.dt.up{color:var(--good)}.dt.mid{color:var(--warn)}.dt.down{color:var(--lossc)}.dt.early{color:var(--muted)}
+.pbar.up i{background:var(--good)}.pbar.mid i{background:var(--warn)}.pbar.down i{background:var(--lossc)}.pbar.early i{background:var(--muted)}
+#slate .nextl{margin:4px 0 14px}
+@media (min-width:1100px){
+  .wrap{max-width:1240px}
+  .cols{display:grid;grid-template-columns:minmax(0,1fr) 420px;column-gap:28px;align-items:start}
+  .cols>.side{position:sticky;top:12px}
+}
 </style>
 </head>
 <body><div class="wrap">
   <h1>NBA Alt-Over Dashboard</h1>
   <p class="sub" id="sub">Loading slate…</p>
   <div class="stale" id="health" role="status" hidden></div>
+  <div class="cols">
   <section id="slate" aria-label="Today's slate" hidden>
     <h2 class="sec">Today's slate</h2>
     <div class="stale" id="stale" role="status" hidden></div>
-    <p class="nextl" id="nextl" hidden></p>
     <div class="stats" id="stats"></div>
     <div class="stats today" id="today" hidden></div>
     <section class="best" id="best" aria-label="Best leans tonight" hidden></section>
     <div class="tabs" id="tabs" role="group" aria-label="Filter by game"></div>
     <div id="games"></div>
+    <p class="nextl" id="nextl" hidden></p>
   </section>
 
+  <aside class="side">
   <div class="lockbar" id="lockbar" hidden></div>
   <section class="board" id="board" aria-label="Scoreboard"><h2>Scoreboard</h2><p class="load">Loading…</p></section>
     <details class="fold" id="projFold"><summary><span>Projected totals <span class="meta">interest only, not a bet</span></span></summary>
     <div class="ts"><table id="totals" style="min-width:0;border:0"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table></div>
     </details>
+  </aside>
+  </div>
 
   <details class="fold" id="moreRec"><summary><span>Full record and tier details <span class="meta">bands, stats, charts, every tier</span></span></summary>
   <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
@@ -1029,6 +1054,14 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       (has?'<span>· Last 5, newest first: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em></span>':'')+'</div>'}
   function l10Of(b){var kn=hitKN(b.h);return kn?'<span class="l10" aria-label="cleared '+kn[0]+' of last '+kn[1]+'">'+kn[0]+'/'+kn[1]+'</span>':''}
   function bid(g,b){return g.id+'|'+b.p+'|'+b.s+'|'+b.alt}
+  /* Line cell: once settled the line turns green (won) or orange (lost) with his actual number in brackets under it. */
+  var KGLOSS={PICK:'Staked pick: cleared every gate.',LEAN:'Lean: a near-miss, tracked at 0u, never staked.',HR80:'HR80 test tier: perfect recent sample at $1.20-1.29, tracked at 0u.',
+    HR85:'HR85: the earlier hit-rate tier (closed), tracked at 0u.',PIN:'PIN test tier: priced 4pp+ better than Pinnacle\'s fair price, tracked at 0u.',
+    OUTLIFT:'OUTLIFT: teammate-out tier, killed 20 Nov, kept for the record only.',LSR:'LSR: late-scratch re-run after a player was ruled out, tracked at 0u.'};
+  function lnHtml(b){var x=resFor(b),c=x?({W:'won',L:'lost',PUSH:'push',VOID:'push'}[x.result]||''):'';
+    var lab=x?({W:'won',L:'lost',PUSH:'push',VOID:'void'}[x.result]||x.result):'';
+    return '<span class="ln'+(c?' '+c:'')+'"'+(x?' aria-label="Line '+esc(b.alt)+', '+lab+(x.actual?' with '+esc(x.actual):'')+'"':'')+'>'+esc(b.alt)+
+      (x?'<em>'+(x.actual?'('+esc(x.actual)+')':lab)+'</em>':'')+'</span>'}
   var BH='<div class="bh"><span>Chance /10</span><span>Line</span><span>Odds</span></div>';
   function playerBlocks(g,gi,list){
     var by={},order=[];
@@ -1039,10 +1072,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       .sort(function(a,b){return (b.pk?1:0)-(a.pk?1:0)||a.best-b.best||b.bs.length-a.bs.length||a.i-b.i});
     return ps.map(function(P){
       var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'';
-      var rows=P.bs.map(function(b,j){var x=resFor(b),k=kindTag(b),det='';try{det='<p class="kt"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span></p>'+knLine(b)+tileDet(b,g,gi)}catch(e){}
+      var rows=P.bs.map(function(b,j){var x=resFor(b),k=kindTag(b),det='';try{det='<p class="kt"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span> '+esc(KGLOSS[k]||'')+'</p>'+knLine(b)+tileDet(b,g,gi)+'<p class="gl">Edge = the model\'s chance minus the chance the price implies. Stars = confidence (5 is highest).</p>'}catch(e){}
         return '<button class="bet" type="button" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'"><span class="rc">'+ringHtml(b)+l10Of(b)+'</span>'+
-          '<span class="sl">'+stPill(b.s)+l5Html(b)+'</span><span class="ln">'+esc(b.alt)+'</span><span class="od">'+b.o.toFixed(2)+'</span>'+
-          (x?'<span class="kd"><span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span></span>':'')+'</button>'+
+          '<span class="sl">'+stPill(b.s)+l5Html(b)+'</span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span></button>'+
           '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+det+'</div>'}).join('');
       var sn='';try{sn=scoutNote(g,P)}catch(e){}
       var b5='';try{b5=box5Html(g,P,sn)}catch(e){}
@@ -1071,7 +1103,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var top=g.picks.concat(g.leans.filter(function(p){return pkp[p.p]})),rest=g.leans.filter(function(p){return !pkp[p.p]});
     var body='',lb='';try{body=playerBlocks(g,gi,top)}catch(e){}try{lb=playerBlocks(g,gi,rest)}catch(e){}
     var np2=0;rest.forEach(function(p,i,a){if(a.findIndex(function(q){return q.p===p.p})===i)np2++});
-    var tbl=body?'<div class="pls">'+BH+body+'</div>':'<div class="none">No pick cleared the gates.</div>';
+    var tbl=body?'<div class="pls">'+BH+body+'</div>':(lb?'':'<div class="none">No pick or lean for this game.</div>');
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
     var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+rest.length+' · '+np2+' player'+(np2===1?'':'s')+')</b> · tracked, not bet · best first</span></summary>'+
       '<div class="pls">'+(body?'':ringKey(rest))+BH+lb+'</div></details>':'';
@@ -1109,10 +1141,12 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     G.forEach(function(g){g.leans.forEach(function(b){var h=hitP(b);if(h!==null)L.push({g:g,b:b,h:h})})});
     if(np||sel!=='ALL'||!L.length){box.hidden=true;box.innerHTML='';return}
     L.sort(function(a,b){return b.h-a.h});
-    box.innerHTML='<h2>Best leans tonight</h2><p class="bsub">No pick cleared every gate. Highest chance first, tracked at 0u. Tap one to see it in its game.</p>'+
-      '<div class="pls">'+ringKey(L.slice(0,5).map(function(x){return x.b}))+BH+L.slice(0,5).map(function(x){var b=x.b;
+    var top=L.slice(0,5),tw=0,tl=0,td=0;top.forEach(function(x){var r=resFor(x.b);if(r){td++;if(r.result==='W')tw++;else if(r.result==='L')tl++}});
+    box.innerHTML=(td===top.length?'<h2>Tonight\'s best leans: '+tw+'-'+tl+'</h2><p class="bsub">Settled. Highest chance first, tracked at 0u, never staked. Tap one to see it in its game.</p>'
+      :'<h2>Best leans tonight</h2><p class="bsub">No pick cleared every gate. Highest chance first, tracked at 0u, never staked. Tap one to see it in its game.</p>')+
+      '<div class="pls">'+ringKey(top.map(function(x){return x.b}))+BH+top.map(function(x){var b=x.b;
         return '<button class="bet bl" type="button" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'"><span class="rc">'+ringHtml(b)+l10Of(b)+'</span>'+
-          '<span class="sl"><strong>'+esc(b.p)+'</strong><span class="bg">'+esc(x.g.id)+'</span></span><span class="ln">'+esc(b.alt)+'</span><span class="od">'+b.o.toFixed(2)+'</span>'+
+          '<span class="sl"><strong>'+esc(b.p)+'</strong><span class="bg">'+esc(x.g.id)+'</span></span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span>'+
           '<span class="kd">'+stPill(b.s)+l5Html(b)+'</span></button>'}).join('')+'</div>';
     box.hidden=false;
     Array.prototype.forEach.call(box.querySelectorAll('[data-jump]'),function(el){el.onclick=function(){
@@ -1154,16 +1188,16 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var avg=all.length?(all.reduce(function(a,p){return a+Number(p.e)},0)/all.length).toFixed(1):'0.0';
     var gen=data.generated?new Date(data.generated):null,genOk=gen&&!isNaN(gen.getTime());
     var parts=[D.date,D.tz,D.book].filter(Boolean);
-    if(genOk&&!D.cleared)parts.push('updated '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}));
+    if(genOk&&!D.cleared)parts.push('picks posted '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}));
     $('sub').textContent=parts.join(' · ');
     runStatus();
     var gtxt=G.length+(todaySched()&&slateIso()===melNow().iso?'/'+Math.max(todaySched().length,G.length):'');
     /* 0-pick day (critique 20 Nov): one line instead of three tiles of zeros, so tonight's best leans sit higher. */
-    $('stats').className=all.length?'stats':'stats one';
+    $('stats').className='stats';$('stats').hidden=!all.length;   /* 0 picks: the status line already says it */
     $('stats').innerHTML=all.length?tile(all.length,'picks','Picks that cleared every gate today')+
       tile((avg>=0?'+':'')+esc(avg)+'pp','avg edge','Model hit % minus the price\'s implied %, averaged')+
       tile(gtxt,'games','Games analysed so far, of today\'s games')
-      :'<p><b>0 picks</b> · '+esc(gtxt)+' games analysed · no bet cleared every gate</p>';
+      :'';
     todayTiles();renderVer();
     $('slate').hidden=false;
     totals();tabs();games();
@@ -1191,23 +1225,34 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(ROWS){
       var asOf=CORE.asOfDate(ROWS),s=asOf?CORE.summarize(CORE.inRange(ROWS,{from:SEASON_START,to:asOf})):null,
           s7=asOf?CORE.summarize(CORE.inRange(ROWS,CORE.windowRange(asOf,7))):null;
+      var si=D&&slateIso(),lag=asOf&&si&&asOf<si?' · last pick settled '+fdate(asOf)+', none since':'';
       if(s&&s.n) rows.push({k:'rec',t:'Picks (staked)',r:s.w+'-'+s.l+' · '+pct(s.hit)+' · <span class="'+(s.units>=0?'pos':'neg')+'">'+u(s.units)+'</span>',
-        m:'Season'+(s7&&s7.n?' · last 7 days '+s7.w+'-'+s7.l+' '+u(s7.units):'')});
+        m:'Season'+(s7&&s7.n?' · last 7 days '+s7.w+'-'+s7.l+' '+u(s7.units):'')+lag,d:dir(s.n,s.hit,s.be,null)});
     } else if(CSVFAIL) rows.push({k:'rec',t:'Picks',r:'unavailable',m:'The Sheet could not be read'});
-    function tier(k,label,arr,goal,m){
+    /* Direction (critique 20 Nov): where the hit rate sits against break-even, or against the tier's own target
+       when it has one (HR80: keep 80%+, kill under 76%). Display only; verdicts stay in the weekly review. */
+    function dir(n,hit,be,tg){
+      if(!n||hit===null||hit===undefined) return null;
+      var bt=be===null||be===undefined?'':'break-even '+be.toFixed(0)+'%';
+      if(n<15) return {c:'early',t:'Too early',x:bt};
+      if(tg){return hit>=tg[0]?{c:'up',t:'On target',x:'target '+tg[0]+'%+'}:hit>=tg[1]?{c:'mid',t:'Below target',x:'target '+tg[0]+'%, kill under '+tg[1]+'%'}:{c:'down',t:'Kill zone',x:'kill under '+tg[1]+'%'}}
+      if(be===null||be===undefined) return null;
+      return hit>=be?{c:'up',t:'Above break-even',x:bt}:{c:'down',t:'Below break-even',x:bt};
+    }
+    function tier(k,label,arr,goal,m,tg){
       if(!arr) return;var a=leanSum(arr);
       rows.push({k:k,t:label,r:a.n?a.w+'-'+a.l+' · '+pct(a.hit)+' · <span class="'+(a.u>=0?'pos':'neg')+'">'+u(a.u)+'</span>':'no settled yet',
-        m:m+(goal?' · '+Math.min(a.n,goal)+' of '+goal+' for a verdict':''),g:goal&&a.n?Math.min(1,a.n/goal):null});
+        m:m+(goal?' · '+Math.min(a.n,goal)+' of '+goal+' for a verdict':''),g:goal&&a.n?Math.min(1,a.n/goal):null,d:dir(a.n,a.hit,a.impl,tg)});
     }
     tier('leansSec','Leans (0u)',LEANS,0,'Near-misses, notional 1u');
-    tier('hrSec','HR80 tier (0u)',typeof HRS!=='undefined'?HRS:null,60,'Target 80%+, $1.20-1.29');
+    tier('hrSec','HR80 tier (0u)',typeof HRS!=='undefined'?HRS:null,60,'Target 80%+, $1.20-1.29',[80,76]);
     tier('pinSec','PIN tier (0u)',typeof PINS!=='undefined'?PINS:null,100,'Beat Pinnacle-fair by 4pp+');
     tier('olSec','OUTLIFT tier (killed 20 Nov)',typeof OLS!=='undefined'?OLS:null,0,'Key teammate out · closed, no new items');
     tier('lsSec','Late-scratch re-run (0u)',typeof LSS!=='undefined'?LSS:null,40,'New items after a late OUT');
     if(!rows.length){box.innerHTML='<h2>Scoreboard</h2><p class="load">Loading…</p>';return}
-    box.innerHTML='<h2>Scoreboard</h2>'+rows.map(function(r){return '<button type="button" class="brow" data-go="'+r.k+'"><div class="t"><b>'+r.t+'</b><span>'+r.r+'</span></div><div class="m">'+esc(r.m)+'</div>'+
-      (r.g!==null&&r.g!==undefined?'<div class="pbar"><i style="width:'+Math.round(100*r.g)+'%"></i></div>':'')+'</button>'}).join('')+
-      '<p class="cap">Flat 1u per bet. Tap a row for the full breakdown.</p>';
+    box.innerHTML='<h2>Scoreboard</h2><p class="cap bcap">Flat 1u per bet. Tap a row for its full breakdown.</p>'+rows.map(function(r){return '<button type="button" class="brow" data-go="'+r.k+'"><div class="t"><b>'+r.t+'</b><span>'+r.r+'</span></div>'+
+      (r.d?'<div class="dr"><span class="dt '+r.d.c+'">'+r.d.t+'</span>'+(r.d.x?'<span>'+esc(r.d.x)+'</span>':'')+'</div>':'')+'<div class="m">'+esc(r.m)+'</div>'+
+      (r.g!==null&&r.g!==undefined?'<div class="pbar'+(r.d?' '+r.d.c:'')+'"><i style="width:'+Math.round(100*r.g)+'%"></i></div>':'')+'<span class="go" aria-hidden="true"></span></button>'}).join('');
     Array.prototype.forEach.call(box.querySelectorAll('[data-go]'),function(b){b.onclick=function(){
       var mr=$('moreRec'),t=$(b.getAttribute('data-go'));if(mr)mr.open=true;
       var f=t&&t.querySelector('details.fold');if(f)f.open=true;if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}});
@@ -1271,15 +1316,19 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     } else if(!ng&&ts&&ts.length){
       cls='';msg='<b>No games were analysed today.</b> '+ts.length+' game'+(ts.length===1?' was':'s were')+' on, so a slate run may have had a problem.';
     } else {
-      var settled=ROWS&&ROWS.some(function(r){return r.date===iso&&(r.result==='W'||r.result==='L')});
-      cls='info done';
-      msg='<b>Today\'s picks are complete.</b> '+ng+' game'+(ng===1?'':'s')+' analysed, '+np+' pick'+(np===1?'':'s')+(np?'':' (nothing cleared the gates; that can be a normal day)')+'. '+
-        (settled?'Results are in (tiles above).':'Results settle around '+hm(RUNS.resolve+3)+'.');
+      var R=resTally();cls='info done';
+      var lead=np?ng+' game'+(ng===1?'':'s')+' analysed, '+np+' pick'+(np===1?'':'s')+'.':'0 picks from '+ng+' game'+(ng===1?'':'s')+'; nothing cleared every gate, which can be a normal day.';
+      if(R.n&&R.done===R.n){msg='<b>Tonight\'s results are in.</b> '+lead+' '+(np?'Picks '+R.pw+'-'+R.pl+' · leans ':'Leans ')+R.lw+'-'+R.ll+' (tracked at 0u).'}
+      else if(R.done){cls='info live';msg='<b>Results coming in.</b> '+lead+' '+R.done+' of '+R.n+' settled so far.'}
+      else msg='<b>Tonight\'s picks are set.</b> '+lead+' Results settle around '+hm(RUNS.resolve+3)+'.';
     }
     box.className='stale '+cls;box.innerHTML='<span class="dot" aria-hidden="true"></span>'+msg;box.hidden=false;
     schedule(n,nx,today,inWindow);
     nextLine();
   }
+  function resTally(){var t={n:0,done:0,pw:0,pl:0,lw:0,ll:0};
+    G.forEach(function(g){g.picks.concat(g.leans).forEach(function(b){t.n++;var x=resFor(b);if(!x)return;t.done++;
+      if(x.result==='W'){if(b.lean)t.lw++;else t.pw++}else if(x.result==='L'){if(b.lean)t.ll++;else t.pl++}})});return t}
   function schedule(n,nx,today,inWindow){
     if(REFRESH&&REFRESH_AT>Date.now()) return;      // a reload is already booked; don't push it back
     var target=null;
@@ -1617,7 +1666,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         return {date:String(o.date).trim(),game:String(o.game||'').trim(),player:String(o.player||''),stat:String(o.stat||'').trim().toUpperCase(),alt:numOrNull(o.alt),actual:String(o.actual||'').trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase(),team:String(o.team||'').trim(),hr:/(^|\s)HR80(\s|$)/.test(String(o.flags||'')),hr85:/(^|\s)HR85(\s|$)/.test(String(o.flags||'')),pin:/(^|\s)PIN(\s|$)/.test(String(o.flags||'')),ol:/(^|\s)OUTLIFT(\s|$)/.test(String(o.flags||'')),ls:/(^|\s)LSR(\s|$)/.test(String(o.flags||'')),lk:(String(o.flags||'').match(/(^|\s)LSR-([A-Z0-9]+)/)||[])[2]||''}}).filter(function(r){return r.odds!==null&&r.odds>1});
       LALL=LEANS.slice();
       HRS=LEANS.filter(function(r){return r.hr});HR85S=LEANS.filter(function(r){return r.hr85});PINS=LEANS.filter(function(r){return r.pin});OLS=LEANS.filter(function(r){return r.ol});LSS=LEANS.filter(function(r){return r.ls});LEANS=LEANS.filter(function(r){return !r.hr&&!r.hr85&&!r.pin&&!r.ol&&!r.ls});renderHr();renderPin();renderOl();renderLs();
-      LEANFAIL=false;renderLeans();renderBoard();if(D)games();
+      LEANFAIL=false;renderLeans();renderBoard();if(D){games();runStatus()}
     }).catch(function(){LEANFAIL=true;renderLeans();renderHr();renderPin();renderOl();renderLs()});
   }
   /* ---------- web-push alerts (sender: tools/nba_push.py in the slate task) ---------- */
@@ -1714,7 +1763,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function slateFail(){$('slate').hidden=false;$('games').innerHTML='<div class="game err"><div class="none err">Could not load today\'s data.</div></div>'}
   function foot(){
     var t=FETCHED?FETCHED.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}):'not loaded';
-    $('src').textContent='Source: Google Sheet (cohort tab) · updated '+t;
+    $('src').textContent='Record read from the Google Sheet (cohort tab) at '+t+'.';
   }
 
   var CSV_URL="https://docs.google.com/spreadsheets/d/e/2PACX-1vRk37gFqBJkXc1gzISmNg3mHtoYKWgw1976R-8Pe3Imo66e5r09-2aC5M5jvHBjlAbqpzATPX4HCaRL/pub?gid=0&single=true&output=csv";

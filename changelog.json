@@ -1,6 +1,14 @@
 {
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
+    {
+      "date": "2026-11-20",
+      "version": "nba-session v3.31-p4",
+      "component": "dashboard",
+      "title": "Results on the line, bigger names, scoreboard direction, desktop columns",
+      "change": "Settled lines turn green (won) or orange (lost) with the actual number in brackets underneath; the W/L pill is gone. Player names 22px. Status line follows the night (set, coming in, results are in) and counts leans; settled best-leans strip shows its W-L. Header says when picks were posted; footer says when the record was read. Scoreboard rows show break-even and a direction tag (Too early under 15, above or below break-even; HR80 against its 80/76 target), bar coloured to match. Tier codes get a one-line meaning in the tap detail. Stats tiles hidden on 0-pick days, next-slate line moved below the games. Two columns at 1100px+ (slate left, scoreboard right).",
+      "aim": "Display only, from the 20 Nov re-score critique and Mitch's mock. No gate, tier, stake or price change."
+    },
   {
    "date": "2026-11-20",
    "version": "nba-session v3.31-p4",
