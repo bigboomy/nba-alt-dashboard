@@ -5,6 +5,14 @@
       "date": "2026-11-20",
       "version": "nba-session v3.31-p4",
       "component": "dashboard",
+      "title": "Lost lines keep their normal colour",
+      "change": "A lost line no longer turns orange; it stays the normal ink colour with the actual number in brackets underneath. Only a win turns the line green. Push and void stay grey.",
+      "aim": "Display only (Mitch, 20 Nov)."
+    },
+    {
+      "date": "2026-11-20",
+      "version": "nba-session v3.31-p4",
+      "component": "dashboard",
       "title": "Re-score fixes: honest lean tally, grey settled rings, killed rows dimmed, dark-mode contrast",
       "change": "Killed OUTLIFT no longer counts in the status-line lean tally or the best-leans strip. Once a bet settles its ring turns grey, so on a settled row colour means only the result. The last-10 count reads 'L10 7/10' so it isn't mistaken for a rating. Killed OUTLIFT rows are dimmed with a 'killed' tag. Settled game cards show 'Final · leans W-L' instead of the tip time. Bets/Matchup toggle is compact. Dark mode: pressed tabs and stat chips now pass 4.5:1. Mark my picks button is 44px. Tier glosses no longer repeat the code beside them.",
       "aim": "Display only, from the 20 Nov re-score (28/40). No gate, tier, stake or price change."
