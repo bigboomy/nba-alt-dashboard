@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-20",
+   "version": "nba-session v3.30-p4",
+   "component": "engine",
+   "title": "HR80 replaces HR85",
+   "change": "The hit-rate tier now takes only the best-priced perfect Pointsbet rung at $1.20-1.29 (was $1.20-1.39), flagged HR80, 0u; HR85 rows keep their own closed record.",
+   "aim": "Mitch 20 Nov (via the critic): target 80% hit; CONFIRM at 80%+ over 60 settled from 30+ team-games, KILL under 76% over 60."
+  },
+  {
+   "date": "2026-11-20",
    "version": "nba-session v3.29-p4",
    "component": "dashboard",
    "title": "Clearer Pinnacle wording",

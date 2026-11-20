@@ -321,13 +321,14 @@ details.cds>summary::before{content:"▸ "}details.cds[open]>summary::before{con
   <tr data-re="^CAP$"><td class="lgc">CAP</td><td>Passed, but the price is over the $1.85 cap.</td><td class="lge">0u</td></tr>
   <tr><td class="lgc">(no tag)</td><td>A plain lean passed only the looser test (shrink m=20 instead of m=30).</td><td class="lge">0u</td></tr>
   <tr class="lgh"><th colspan="3">0u test tiers (own records)</th></tr>
-  <tr data-re="^HR85$"><td class="lgc">HR85</td><td>Hit-rate tier: perfect sample of 8+ games, cushion 0.70 or less, price $1.20-1.39. Target 85%+; verdict at 40 settled.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^HR80$"><td class="lgc">HR80</td><td>Hit-rate tier (from 20 Nov): perfect sample of 8+ games, cushion 0.70 or less, price $1.20-1.29. Target 80%+; verdict at 60 settled from 30+ team-games.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^HR85$"><td class="lgc">HR85</td><td>The earlier hit-rate tier (17-20 Nov), price $1.20-1.39. Replaced by HR80; its record is kept apart.</td><td class="lge">Closed</td></tr>
   <tr data-re="^PIN$"><td class="lgc">PIN</td><td>Pinnacle-anchor tier: a held book&#x27;s alt rung at $1.20-3.00 paying 4pp+ over Pinnacle&#x27;s fair price. Verdict at 100.</td><td class="lge">0u test</td></tr>
   <tr data-re="^BK-"><td class="lgc">BK-pointsbet</td><td>Which book the PIN price is at.</td><td class="lge">Info</td></tr>
   <tr data-re="^OUTLIFT$"><td class="lgc">OUTLIFT</td><td>Teammate-out tier: a key player with a key teammate freshly out; highest-priced rung at $1.20-1.59, at or under the main line. Verdict at 60.</td><td class="lge">0u test</td></tr>
   <tr data-re="^TM-OUT:"><td class="lgc">TM-OUT:SC1/REB1</td><td>Which key teammate roles are out for OUTLIFT (roles are explained under Opponent and matchup).</td><td class="lge">Info</td></tr>
   <tr data-re="^LSR$"><td class="lgc">LSR</td><td>Late-scratch re-run: a new item after a watched player was ruled OUT 10+ min before tip and the game was re-run. Verdict at 40.</td><td class="lge">0u test</td></tr>
-  <tr data-re="^LSR-"><td class="lgc">LSR-PICK · LSR-LEAN · LSR-HR85 …</td><td>What the re-run item would have been (pick, lean, HR85, PIN or OUTLIFT).</td><td class="lge">Info</td></tr>
+  <tr data-re="^LSR-"><td class="lgc">LSR-PICK · LSR-LEAN · LSR-HR80 …</td><td>What the re-run item would have been (pick, lean, HR80, PIN or OUTLIFT).</td><td class="lge">Info</td></tr>
   <tr class="lgh"><th colspan="3">Sample and minutes</th></tr>
   <tr data-re="^C\d"><td class="lgc">C0.82</td><td>Cushion = line ÷ his average over the sample games. Lower is safer; picks need 0.70 or less.</td><td class="lge">Gate</td></tr>
   <tr data-re="^Z-?\d"><td class="lgc">Z1.00</td><td>How many standard deviations his sample average sits above the line. Higher is safer; 9.99 means no spread at all.</td><td class="lge">Info</td></tr>
@@ -781,7 +782,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   /* v3.25 live context (Mitch 18 Nov): minutes model, WOWY, opponent key players out, Pinnacle fair, best price.
      From game.cx, keyed player|stat|alt|kind. Display only: none of it moves a pick or stake. */
-  function cxKind(p){return !p.lean?'pick':p.f.indexOf('LSR')>=0?'LSR':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':p.f.indexOf('OUTLIFT')>=0?'OUTLIFT':'lean'}
+  function cxKind(p){return !p.lean?'pick':p.f.indexOf('LSR')>=0?'LSR':p.f.indexOf('HR80')>=0?'HR80':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':p.f.indexOf('OUTLIFT')>=0?'OUTLIFT':'lean'}
   var VLAB={look:'Worth a look',mixed:'Mixed',caution:'Caution'};
   function vLine(g,p){
     var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];
@@ -1000,13 +1001,13 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   var VRANK={look:0,mixed:1,caution:2};
   function vOf(g,p){var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];return c&&VRANK[c.verdict]!==undefined?c.verdict:''}
   function gameHtml(g,gi){
-    var np=g.picks.length,nl=g.leans.length,nh=g.leans.filter(function(p){return p.f.indexOf('HR85')>=0}).length,
+    var np=g.picks.length,nl=g.leans.length,nh=g.leans.filter(function(p){return p.f.indexOf('HR80')>=0||p.f.indexOf('HR85')>=0}).length,
         npn=g.leans.filter(function(p){return p.f.indexOf('PIN')>=0}).length,
         nol=g.leans.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length,
         nls=g.leans.filter(function(p){return p.f.indexOf('LSR')>=0}).length;
     var vc={look:0,mixed:0,caution:0};g.picks.concat(g.leans).forEach(function(p){var v=vOf(g,p);if(v)vc[v]++});
     var vch=(vc.look||vc.mixed||vc.caution)?'<span class="vc" aria-label="verdicts">'+['look','mixed','caution'].filter(function(k){return vc[k]}).map(function(k){return '<span class="'+k+'" title="'+VLAB[k]+'">'+vc[k]+'</span>'}).join('')+'</span>':'';
-    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span>'+vch+'<span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+nl+' lean'+(nl===1?'':'s')+(nh+npn+nol+nls?' <span class="mu">(incl. '+[[nh,'HR85'],[npn,'PIN'],[nol,'OUTLIFT'],[nls,'re-run']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+'</span></div>';
+    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span>'+vch+'<span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+nl+' lean'+(nl===1?'':'s')+(nh+npn+nol+nls?' <span class="mu">(incl. '+[[nh,'HR'],[npn,'PIN'],[nol,'OUTLIFT'],[nls,'re-run']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+'</span></div>';
     /* Player tiles (Mitch 20 Nov): a player with a pick brings all his bets into the picks area; the rest stay in the collapsed Leans fold. */
     var pkp={};g.picks.forEach(function(p){pkp[p.p]=1});
     var top=g.picks.concat(g.leans.filter(function(p){return pkp[p.p]})),rest=g.leans.filter(function(p){return !pkp[p.p]});
@@ -1116,7 +1117,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         m:m+(goal?' · '+Math.min(a.n,goal)+' of '+goal+' for a verdict':''),g:goal?Math.min(1,a.n/goal):null});
     }
     tier('leansSec','Leans (0u)',LEANS,0,'Near-misses, notional 1u');
-    tier('hrSec','HR85 tier (0u)',typeof HRS!=='undefined'?HRS:null,40,'Target 85%+');
+    tier('hrSec','HR80 tier (0u)',typeof HRS!=='undefined'?HRS:null,60,'Target 80%+, $1.20-1.29');
     tier('pinSec','PIN tier (0u)',typeof PINS!=='undefined'?PINS:null,100,'Beat Pinnacle-fair by 4pp+');
     tier('olSec','OUTLIFT tier (0u)',typeof OLS!=='undefined'?OLS:null,60,'Key teammate out');
     tier('lsSec','Late-scratch re-run (0u)',typeof LSS!=='undefined'?LSS:null,40,'New items after a late OUT');
@@ -1427,25 +1428,32 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     box.innerHTML=h;bindLean();
   }
   function bindLean(){var f=$('leanFold');if(f)f.addEventListener('toggle',function(){LEAN_OPEN=this.open})}
-  /* ---------- HR85 hit-rate tier (nba-session v3.23, 17 Nov): perfect adjusted samples at $1.20-1.39, 0u ----------
-     Rows in the Sheet's leans tab flagged HR85. Own record, never in the leans record or the staked record.
-     Test: KILL under 83% over 40 settled; CONFIRM at 85%+ over 40, then Mitch decides on staking. */
-  var HRS=null,HR_OPEN=false;
+  /* ---------- HR80 hit-rate tier (nba-session v3.30, 20 Nov; replaced HR85 of v3.23-v3.29): perfect adjusted
+     samples at $1.20-1.29, 0u. Rows in the Sheet's leans tab flagged HR80; old HR85 rows shown apart (closed).
+     Pre-registered test: CONFIRM at 80%+ over 60 settled from 30+ distinct team-games; KILL under 76% over 60.
+     ROI shown, not judged. */
+  var HRS=null,HR85S=null,HR_OPEN=false;
   function renderHr(){
     var box=$('hrSec');if(!box) return;
-    var head='<details class="fold" id="hrFold"'+(HR_OPEN?' open':'')+'><summary><span>Hit-rate tier HR85 (0u) <span class="meta">target 85%+ at $1.20-1.39</span></span></summary>';
+    var head='<details class="fold" id="hrFold"'+(HR_OPEN?' open':'')+'><summary><span>Hit-rate tier HR80 (0u) <span class="meta">target 80%+ at $1.20-1.29</span></span></summary>';
     if(LEANFAIL||!HRS){box.innerHTML=LEANFAIL?'':head+'<div class="none">Loading…</div></details>';bindHr();return}
     var settled=HRS.filter(function(r){return r.result==='W'||r.result==='L'}),asOf=null;
     settled.forEach(function(r){if(!asOf||r.date>asOf)asOf=r.date});
     var pend=HRS.filter(function(r){return !r.result}).length;
-    if(!asOf){box.innerHTML=head+'<div class="none">No settled HR85 rungs yet'+(pend?' ('+pend+' pending)':'')+'. The tier starts with the 17 Nov slate (v3.23).</div></details>';bindHr();return}
+    var row=function(label,s){return '<tr><td>'+label+'</td><td>'+s.n+'</td><td>'+s.w+'-'+s.l+'</td><td class="'+(s.hit===null?'':(s.hit>=80?'pos':(s.hit<76?'neg':'')))+'">'+(s.hit===null?'—':s.hit.toFixed(1)+'%')+'</td><td>'+(s.impl===null?'—':s.impl.toFixed(1)+'%')+'</td><td class="'+cls(s.u)+'">'+sg(s.u,2)+'u</td></tr>'};
+    var old=HR85S&&HR85S.length?leanSum(HR85S):null;
+    var oldRow=old&&old.n?row('HR85 (closed)',old):'';
+    var tbl=function(body){return '<div class="ts"><table style="min-width:0"><thead><tr><th></th><th>n</th><th>W-L</th><th>Hit</th><th>Implied</th><th>Units</th></tr></thead><tbody>'+body+'</tbody></table></div>'};
+    var note='HR85 (17-20 Nov, $1.20-1.39) is the earlier version of this tier; its record is kept apart and does not count toward HR80.';
+    if(!asOf){box.innerHTML=head+'<div class="none">No settled HR80 rungs yet'+(pend?' ('+pend+' pending)':'')+'. The tier starts with the 21 Nov slate (v3.30).</div>'+(oldRow?tbl(oldRow)+'<p class="cap">'+note+'</p>':'')+'</details>';bindHr();return}
     function win(nd){var lo=addDays(asOf,-(nd-1));return HRS.filter(function(r){return r.date>=lo&&r.date<=asOf})}
-    var row=function(label,s){return '<tr><td>'+label+'</td><td>'+s.n+'</td><td>'+s.w+'-'+s.l+'</td><td class="'+(s.hit===null?'':(s.hit>=85?'pos':(s.hit<83?'neg':'')))+'">'+(s.hit===null?'—':s.hit.toFixed(1)+'%')+'</td><td>'+(s.impl===null?'—':s.impl.toFixed(1)+'%')+'</td><td class="'+cls(s.u)+'">'+sg(s.u,2)+'u</td></tr>'};
-    var all=leanSum(HRS);
-    var verdict=all.n<40?'<b>Collecting: '+all.n+' of 40 settled.</b> ':(all.hit>=85?'<b>CONFIRM: 85%+ over '+all.n+'. Mitch decides on staking.</b> ':(all.hit<83?'<b>KILL: under 83% over '+all.n+'.</b> ':'<b>Between 83% and 85% over '+all.n+': keep collecting.</b> '));
-    box.innerHTML=head+'<div class="ts"><table style="min-width:0"><thead><tr><th></th><th>n</th><th>W-L</th><th>Hit</th><th>Implied</th><th>Units</th></tr></thead><tbody>'+
-      row('7d',leanSum(win(7)))+row('Since 17 Nov',all)+'</tbody></table></div>'+
-      '<p class="cap">'+verdict+'Best-priced Pointsbet rung at $1.20-1.39 where every game of the matchup-adjusted sample (8+ games) cleared the line, line at most 70% of the average. Break-even at $1.25 is 80%. Units are notional, flat 1u; nothing is staked. As of '+fdate(asOf)+(all.v?' · '+all.v+' void':'')+(pend?' · '+pend+' pending':'')+'.</p></details>';
+    var all=leanSum(HRS),tg={};
+    settled.forEach(function(r){tg[r.date+'|'+(r.team||r.game)]=1});var ntg=Object.keys(tg).length;
+    var verdict=all.n<60?'<b>Collecting: '+all.n+' of 60 settled, '+ntg+' of 30 team-games.</b> ':
+      (all.hit<76?'<b>KILL: under 76% over '+all.n+'.</b> ':
+      (all.hit>=80?(ntg>=30?'<b>CONFIRM: 80%+ over '+all.n+'. Mitch decides on staking.</b> ':'<b>80%+ but only '+ntg+' of 30 team-games: keep collecting.</b> '):'<b>Between 76% and 80% over '+all.n+': keep collecting.</b> '));
+    box.innerHTML=head+tbl(row('7d',leanSum(win(7)))+row('Since 21 Nov',all)+oldRow)+
+      '<p class="cap">'+verdict+'Best-priced Pointsbet rung at $1.20-1.29 where every game of the matchup-adjusted sample (8+ games) cleared the line, line at most 70% of the average. Break-even at $1.25 is 80%. ROI is shown, not judged. Units are notional, flat 1u; nothing is staked. '+note+' As of '+fdate(asOf)+(all.v?' · '+all.v+' void':'')+(pend?' · '+pend+' pending':'')+'.</p></details>';
     bindHr();
   }
   function bindHr(){var f=$('hrFold');if(f)f.addEventListener('toggle',function(){HR_OPEN=this.open})}
@@ -1513,8 +1521,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var all=leanSum(LSS),ra=roi(all);
     var verdict=all.n<40?'<b>Collecting: '+all.n+' of 40 settled.</b> ':(ra>5?'<b>CONFIRM: flat ROI above +5% over '+all.n+'. Mitch decides on staking.</b> ':(ra<0?'<b>KILL: flat ROI below 0 over '+all.n+'.</b> ':'<b>Flat ROI between 0 and +5% over '+all.n+': keep collecting.</b> '));
     box.innerHTML=head+'<div class="ts"><table style="min-width:0"><thead><tr><th></th><th>n</th><th>W-L</th><th>Hit</th><th>Implied</th><th>Units</th><th>ROI</th></tr></thead><tbody>'+
-      row('7d',leanSum(win(7)))+row('Since 19 Nov',all)+['PICK','LEAN','HR85','PIN','OUTLIFT'].map(function(k){var xs=LSS.filter(function(r){return r.lk===k});return xs.length?row('as '+k,leanSum(xs)):''}).join('')+'</tbody></table></div>'+
-      '<p class="cap">'+verdict+'When a watched player (top-3, rotation or questionable) turns OUT at least 10 min before tip, that game is re-run and anything new to it is logged here at 0u; LSR-PICK / LEAN / HR85 / PIN / OUTLIFT says what it would have been. The original picks and leans are never changed. Units are notional, flat 1u; nothing is staked. As of '+fdate(asOf)+(all.v?' · '+all.v+' void':'')+(pend?' · '+pend+' pending':'')+'.</p></details>';
+      row('7d',leanSum(win(7)))+row('Since 19 Nov',all)+['PICK','LEAN','HR80','HR85','PIN','OUTLIFT'].map(function(k){var xs=LSS.filter(function(r){return r.lk===k});return xs.length?row('as '+k,leanSum(xs)):''}).join('')+'</tbody></table></div>'+
+      '<p class="cap">'+verdict+'When a watched player (top-3, rotation or questionable) turns OUT at least 10 min before tip, that game is re-run and anything new to it is logged here at 0u; LSR-PICK / LEAN / HR80 / PIN / OUTLIFT says what it would have been. The original picks and leans are never changed. Units are notional, flat 1u; nothing is staked. As of '+fdate(asOf)+(all.v?' · '+all.v+' void':'')+(pend?' · '+pend+' pending':'')+'.</p></details>';
     bindLs();
   }
   function bindLs(){var f=$('lsFold');if(f)f.addEventListener('toggle',function(){LS_OPEN=this.open})}
@@ -1523,9 +1531,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       if(/^\s*</.test(t))throw 0;
       var objs=CORE.parseCSV(t);if(objs.length&&!('lean_id' in objs[0]))throw 0;
       LEANS=objs.filter(function(o){return String(o.lean_id||'').trim()&&/^\d{4}-\d{2}-\d{2}$/.test(String(o.date||'').trim())}).map(function(o){
-        return {date:String(o.date).trim(),game:String(o.game||'').trim(),player:String(o.player||''),stat:String(o.stat||'').trim().toUpperCase(),alt:numOrNull(o.alt),actual:String(o.actual||'').trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase(),hr:/(^|\s)HR85(\s|$)/.test(String(o.flags||'')),pin:/(^|\s)PIN(\s|$)/.test(String(o.flags||'')),ol:/(^|\s)OUTLIFT(\s|$)/.test(String(o.flags||'')),ls:/(^|\s)LSR(\s|$)/.test(String(o.flags||'')),lk:(String(o.flags||'').match(/(^|\s)LSR-([A-Z0-9]+)/)||[])[2]||''}}).filter(function(r){return r.odds!==null&&r.odds>1});
+        return {date:String(o.date).trim(),game:String(o.game||'').trim(),player:String(o.player||''),stat:String(o.stat||'').trim().toUpperCase(),alt:numOrNull(o.alt),actual:String(o.actual||'').trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase(),team:String(o.team||'').trim(),hr:/(^|\s)HR80(\s|$)/.test(String(o.flags||'')),hr85:/(^|\s)HR85(\s|$)/.test(String(o.flags||'')),pin:/(^|\s)PIN(\s|$)/.test(String(o.flags||'')),ol:/(^|\s)OUTLIFT(\s|$)/.test(String(o.flags||'')),ls:/(^|\s)LSR(\s|$)/.test(String(o.flags||'')),lk:(String(o.flags||'').match(/(^|\s)LSR-([A-Z0-9]+)/)||[])[2]||''}}).filter(function(r){return r.odds!==null&&r.odds>1});
       LALL=LEANS.slice();
-      HRS=LEANS.filter(function(r){return r.hr});PINS=LEANS.filter(function(r){return r.pin});OLS=LEANS.filter(function(r){return r.ol});LSS=LEANS.filter(function(r){return r.ls});LEANS=LEANS.filter(function(r){return !r.hr&&!r.pin&&!r.ol&&!r.ls});renderHr();renderPin();renderOl();renderLs();
+      HRS=LEANS.filter(function(r){return r.hr});HR85S=LEANS.filter(function(r){return r.hr85});PINS=LEANS.filter(function(r){return r.pin});OLS=LEANS.filter(function(r){return r.ol});LSS=LEANS.filter(function(r){return r.ls});LEANS=LEANS.filter(function(r){return !r.hr&&!r.hr85&&!r.pin&&!r.ol&&!r.ls});renderHr();renderPin();renderOl();renderLs();
       LEANFAIL=false;renderLeans();renderBoard();if(D)games();
     }).catch(function(){LEANFAIL=true;renderLeans();renderHr();renderPin();renderOl();renderLs()});
   }
