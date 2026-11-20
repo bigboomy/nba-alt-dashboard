@@ -5,6 +5,14 @@
    "date": "2026-11-20",
    "version": "nba-session v3.30-p4",
    "component": "dashboard",
+   "title": "Verdict badges and sentences removed",
+   "change": "The Worth a look / Mixed / Caution badges, their one-line sentences and the per-game verdict counts are gone from the cards; bets within a player now sort by hit chance, highest first.",
+   "aim": "Mitch 20 Nov: the hit /10 ring now does that job. The pipeline still logs the verdict to the context tab, so the frozen VERDICT test keeps running unseen."
+  },
+  {
+   "date": "2026-11-20",
+   "version": "nba-session v3.30-p4",
+   "component": "dashboard",
    "title": "Ring shows hit chance out of 10",
    "change": "Each bet's ring now shows the engine's hit chance out of 10 (1/price + edge, e.g. 7.8 = about 78%), coloured green at 8.5+ to red under 7; the last-10 count moved into the tap detail.",
    "aim": "Mitch 20 Nov: confidence out of 10 based on hit rate; on 4,172 settled board rungs the engine's estimate was calibrated (71.4% vs 70.8%) while the last-10 count barely predicted hits. Display only."

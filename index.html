@@ -221,19 +221,13 @@ table.lg thead th{border-top:0;font-size:.8rem;color:var(--muted)}
 table.lg tr.lgh th{font:700 1.05rem/1.2 var(--disp);padding-top:14px;color:var(--text)}
 table.lg .lgc{font-weight:700;white-space:nowrap;width:1%}table.lg .lge{color:var(--muted);white-space:nowrap;width:1%}
 @media (max-width:520px){table.lg .lgc{white-space:normal;max-width:7.5rem}table.lg .lge{white-space:normal}}
-table.lg tr.lgf td{background:rgba(255,200,0,.22)}.chips .chip,.chips .res,.vd .vb{cursor:help}
-.vd{margin:4px 0 2px;font-size:12.5px;line-height:1.4}.vb{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:6px;margin-right:6px;vertical-align:1px}
-.vb.look{background:#dcfae6;color:#067647}.vb.mixed{background:#fef0c7;color:#93370d}.vb.caution{background:#fee4e2;color:#b42318}
-@media (prefers-color-scheme:dark){.vb.look{background:#053321;color:#6ce9a6}.vb.mixed{background:#4e1d09;color:#fec84b}.vb.caution{background:#55160c;color:#ff8a80}}
+table.lg tr.lgf td{background:rgba(255,200,0,.22)}.chips .chip,.chips .res{cursor:help}
 table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 .ebar{display:grid;grid-template-columns:1fr 1px 1fr;align-items:center;height:14px}.ebar .ax{height:14px;background:var(--muted);opacity:.5}
 .ebar .eh{display:flex;align-items:center;gap:1px;min-width:0}.ebar .eh.l{justify-content:flex-end}.ebar .eh.r{justify-content:flex-start}
 .ebar i{display:block;height:6px;background:#12b76a}.ebar .eh.l i{border-radius:3px 0 0 3px}.ebar .eh.r i{border-radius:0 3px 3px 0}.ebar i.z{background:var(--line)}
 @media (prefers-color-scheme:dark){.ebar b{color:#6ce9a6}}
 .gh2 .tp{white-space:nowrap}
-.gh2 .vc{display:inline-flex;gap:3px;margin-left:auto}.gh2 .vc span{font-size:11px;font-weight:700;padding:0 6px;border-radius:6px}
-.vc .look{background:#dcfae6;color:#067647}.vc .mixed{background:#fef0c7;color:#93370d}.vc .caution{background:#fee4e2;color:#b42318}
-@media (prefers-color-scheme:dark){.vc .look{background:#053321;color:#6ce9a6}.vc .mixed{background:#4e1d09;color:#fec84b}.vc .caution{background:#55160c;color:#ff8a80}}
 .gseg{padding:0 12px}.gseg .tab{flex:1}
 .board{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 12px}
 .board h2{font-size:1.45rem;font-weight:700;margin:0 0 8px}.brow{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:8px 0;font:inherit;color:inherit;cursor:pointer}
@@ -260,12 +254,11 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 .bet .kd{grid-column:2/5;display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:12px;color:var(--muted)}
 .bet .kd .k{font-size:11px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:0 5px}
 .bet .kd .k.pk{color:var(--accent);border-color:var(--accent)}
-.bet .kd .vs{font-weight:700}.bet .kd .vs.look{color:var(--good)}.bet .kd .vs.caution{color:var(--bad)}
+
 .l5{display:flex;gap:2px}
 .l5 i{font:600 14px/1 var(--disp);font-style:normal;font-variant-numeric:tabular-nums;min-width:21px;text-align:center;padding:3px 0;border-radius:4px}
 .l5 i.o{background:var(--o5);color:var(--o5t)}.l5 i.u{background:var(--u5);color:var(--muted)}
-.pl .bwhy,.pl .tdet{margin-left:50px}
-.pl .bwhy .vd{margin:0 0 4px}
+.pl .tdet{margin-left:50px}
 .rkey{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:.8rem;color:var(--muted);margin:0 0 10px}
 .rkey span{display:inline-flex;align-items:center;gap:4px}.rkey i{width:12px;height:12px;border-radius:50%;border:3px solid}
 .rkey em{font:600 13px/1 var(--disp);font-style:normal;padding:2px 6px;border-radius:4px}
@@ -319,11 +312,8 @@ details.cds>summary::before{content:"▸ "}details.cds[open]>summary::before{con
   <div id="ver"></div>
   <details class="fold inner" id="legend"><summary><span>Legend <span class="meta">every code on the cards; tap a code on a card to jump here</span></span></summary>
   <div class="lgw"><table class="lg"><thead><tr><th>Code</th><th>What it means</th><th>Effect</th></tr></thead><tbody>
-  <tr class="lgh"><th colspan="3">Verdict (plain English)</th></tr>
-  <tr data-re="^Worth a look$"><td class="lgc">Worth a look</td><td>More reasons for than against (score +1.5 or better): Pinnacle agrees, tonight's setup (MU) is good, his average clears the line well.</td><td class="lge">Display</td></tr>
-  <tr data-re="^Mixed$"><td class="lgc">Mixed</td><td>Reasons roughly cancel out (score between −2 and +1.5). The sentence gives the best reason for and the biggest worry.</td><td class="lge">Display</td></tr>
-  <tr data-re="^Caution$"><td class="lgc">Caution</td><td>More reasons against (score −2 or worse): e.g. Pinnacle disagrees (±2 at 2pp, ±3 beyond 4pp), REB-OPP, his average only just clears the line.</td><td class="lge">Display</td></tr>
-  <tr><td class="lgc">Verdict test</td><td>Verdict v1, weights frozen for the test. Logged with every item. Judged at 300 settled (60+ each in Worth a look and Caution) on beating the price, within each kind: CONFIRM at +5pp with the gap clearly above zero, KILL at 1pp or less. Must also beat Pinnacle's sign alone. Never changes a stake.</td><td class="lge">0u test</td></tr>
+  <tr class="lgh"><th colspan="3">Reading the cards</th></tr>
+  <tr><td class="lgc">Hit /10</td><td>The ring: the engine's hit chance out of 10 (price plus edge), so 7.8 means about 78%. Green 8.5+, then 8, 7.5, 7, red under 7. Checked on 4,172 settled rungs (13-20 Nov): it predicted 71.4% against 70.8% actual. Tap a bet for its last-10 count.</td><td class="lge">Display</td></tr>
   <tr><td class="lgc">Matchup edge bar</td><td>Bars grow out from the centre line toward the team with the better rank; length = rank gap (full = 29). Short grey stub both sides = 2 ranks or less, no real edge. In the defence table the bar grows toward the tighter defence.</td><td class="lge">Display</td></tr>
   <tr class="lgh"><th colspan="3">Bet type and stake</th></tr>
   <tr data-re="^U(1\.5|1|0\.5|0\.25)$"><td class="lgc">U1.5 · U1 · U0.5 · U0.25</td><td>Stake in units for a pick, set by its stars: 5★ 1.5u, 4★ 1u, 3★ 0.5u, 2★ or less 0.25u.</td><td class="lge">Stake</td></tr>
@@ -776,12 +766,6 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     Array.prototype.forEach.call($('tabs').children,function(b){b.onclick=function(){sel=b.getAttribute('data-id');tabs();games()}});
   }
   function cxKind(p){return !p.lean?'pick':p.f.indexOf('LSR')>=0?'LSR':p.f.indexOf('HR80')>=0?'HR80':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':p.f.indexOf('OUTLIFT')>=0?'OUTLIFT':'lean'}
-  var VLAB={look:'Worth a look',mixed:'Mixed',caution:'Caution'};
-  function vLine(g,p){
-    var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];
-    if(!c||!VLAB[c.verdict]||!c.v_text) return '';
-    return '<div class="vd"><span class="vb '+c.verdict+'">'+VLAB[c.verdict]+'</span>'+esc(c.v_text)+'</div>';
-  }
   function cxLine(g,p){
     var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];if(!c) return '';
     function pc(v){return v===''||v===null||v===undefined?null:Math.round(Number(v)*100)+'%'}
@@ -887,7 +871,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   /* Legend (Mitch 19 Nov: "we need a legend reader"): tap a chip on a card -> open the legend at that code. */
   document.addEventListener('click',function(ev){
-    var c=ev.target.closest&&ev.target.closest('.chips .chip,.chips .res,.vd .vb');if(!c) return;
+    var c=ev.target.closest&&ev.target.closest('.chips .chip,.chips .res');if(!c) return;
     var t=c.textContent.trim().replace(/^\S*(Taken|Passed)$/,'$1'),lg=document.getElementById('legend');if(!lg) return;
     var hit=null;Array.prototype.forEach.call(lg.querySelectorAll('tr[data-re]'),function(r){if(!hit){try{if(new RegExp(r.getAttribute('data-re')).test(t))hit=r}catch(e){}}});
     if(!hit) return;
@@ -986,19 +970,17 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function playerBlocks(g,gi,list){
     var by={},order=[];
     list.forEach(function(p){if(!by[p.p]){by[p.p]=[];order.push(p.p)}by[p.p].push(p)});
-    function rk(p){var v=vOf(g,p);return VRANK[v]!==undefined?VRANK[v]:3}
+    function rk(p){var h=hitP(p);return h===null?1:-h}   /* highest hit chance first (verdicts removed 20 Nov) */
     var ps=order.map(function(n,i){var bs=by[n].slice().sort(function(a,b){return (a.lean?1:0)-(b.lean?1:0)||rk(a)-rk(b)});
       return {n:n,i:i,bs:bs,pk:bs.some(function(b){return !b.lean}),best:Math.min.apply(null,bs.map(rk))}})
       .sort(function(a,b){return (b.pk?1:0)-(a.pk?1:0)||a.best-b.best||b.bs.length-a.bs.length||a.i-b.i});
     return ps.map(function(P){
       var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'';
-      var rows=P.bs.map(function(b,j){var v=vOf(g,b),x=resFor(b),k=kindTag(b),det='';try{det=knLine(b)+tileDet(b,g,gi)}catch(e){}
-        var vl='';try{vl=vLine(g,b)}catch(e){}
-        return '<button class="bet '+v+'" type="button" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'">'+ringHtml(b)+
+      var rows=P.bs.map(function(b,j){var x=resFor(b),k=kindTag(b),det='';try{det=knLine(b)+tileDet(b,g,gi)}catch(e){}
+        return '<button class="bet" type="button" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'">'+ringHtml(b)+
           '<span class="sl">'+stPill(b.s)+l5Html(b)+'</span><span class="ln">'+esc(b.alt)+'</span><span class="od">'+b.o.toFixed(2)+'</span>'+
           '<span class="kd"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span>'+(x?'<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span>':'')+
           '<span>tap for codes</span></span></button>'+
-          (vl?'<div class="bwhy">'+vl+'</div>':'')+
           '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+det+'</div>'}).join('');
       var sn='';try{sn=scoutNote(g,P)}catch(e){}
       return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+(sn?'<details class="scn"><summary>Scout note</summary><p>'+esc(sn)+'</p></details>':'')+rows+'</div>'}).join('');
@@ -1015,16 +997,12 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   var TCOL={ATL:'#C8102E',BOS:'#007A33',BKN:'#000000',CHA:'#1D1160',CHI:'#CE1141',CLE:'#860038',DAL:'#00538C',DEN:'#0E2240',DET:'#C8102E',GSW:'#1D428A',
     HOU:'#CE1141',IND:'#002D62',LAC:'#C8102E',LAL:'#552583',MEM:'#5D76A9',MIA:'#98002E',MIL:'#00471B',MIN:'#0C2340',NOP:'#0C2340',NYK:'#F58426',
     OKC:'#007AC1',ORL:'#0077C0',PHI:'#006BB6',PHX:'#1D1160',POR:'#E03A3E',SAC:'#5A2D81',SAS:'#8A8D8F',TOR:'#CE1141',UTA:'#002B5C',WAS:'#002B5C'};
-  var VRANK={look:0,mixed:1,caution:2};
-  function vOf(g,p){var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];return c&&VRANK[c.verdict]!==undefined?c.verdict:''}
   function gameHtml(g,gi){
     var np=g.picks.length,nl=g.leans.length,nh=g.leans.filter(function(p){return p.f.indexOf('HR80')>=0||p.f.indexOf('HR85')>=0}).length,
         npn=g.leans.filter(function(p){return p.f.indexOf('PIN')>=0}).length,
         nol=g.leans.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length,
         nls=g.leans.filter(function(p){return p.f.indexOf('LSR')>=0}).length;
-    var vc={look:0,mixed:0,caution:0};g.picks.concat(g.leans).forEach(function(p){var v=vOf(g,p);if(v)vc[v]++});
-    var vch=(vc.look||vc.mixed||vc.caution)?'<span class="vc" aria-label="verdicts">'+['look','mixed','caution'].filter(function(k){return vc[k]}).map(function(k){return '<span class="'+k+'" title="'+VLAB[k]+'">'+vc[k]+'</span>'}).join('')+'</span>':'';
-    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span>'+vch+'<span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+nl+' lean'+(nl===1?'':'s')+(nh+npn+nol+nls?' <span class="mu">(incl. '+[[nh,'HR'],[npn,'PIN'],[nol,'OUTLIFT'],[nls,'re-run']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+'</span></div>';
+    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span><span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+nl+' lean'+(nl===1?'':'s')+(nh+npn+nol+nls?' <span class="mu">(incl. '+[[nh,'HR'],[npn,'PIN'],[nol,'OUTLIFT'],[nls,'re-run']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+'</span></div>';
     /* Player tiles (Mitch 20 Nov): a player with a pick brings all his bets into the picks area; the rest stay in the collapsed Leans fold. */
     var pkp={};g.picks.forEach(function(p){pkp[p.p]=1});
     var top=g.picks.concat(g.leans.filter(function(p){return pkp[p.p]})),rest=g.leans.filter(function(p){return !pkp[p.p]});
