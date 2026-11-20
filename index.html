@@ -252,7 +252,8 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 .ring{position:relative;width:40px;height:40px;grid-row:1/3;align-self:start}
 .ring svg{width:40px;height:40px;transform:rotate(-90deg)}
 .ring .rt{fill:none;stroke:var(--rtrack);stroke-width:4}.ring .rf{fill:none;stroke-width:4}
-.ring b{position:absolute;inset:0;display:grid;place-items:center;font:700 17px/1 var(--disp);color:var(--text)}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font:700 15px/1 var(--disp);color:var(--text);letter-spacing:-.02em}
+.kn{margin:0 0 6px;font-size:12.5px;color:var(--muted)}
 .bet .sl{display:flex;align-items:center;gap:6px;min-width:0;flex-wrap:wrap}
 .bet .stn{flex:none}
 .bet .ln,.bet .od{text-align:right;font:600 19px/1.1 var(--disp);font-variant-numeric:tabular-nums}
@@ -964,19 +965,24 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(risk.length){var r=andList(risk.slice(0,3));out.push(r.charAt(0).toUpperCase()+r.slice(1)+'.')}
     return out.join(' ');
   }
-  /* Ring + last 5 (Mitch 20 Nov redesign). Ring = k of n in the engine's sample, coloured green (all) to red (6 or fewer of 10).
+  /* Ring + last 5 (Mitch 20 Nov redesign). Ring = the engine's hit chance out of 10 (p = 1/price + edge; Mitch 20 Nov:
+     "confidence out of 10 based on hit rate"). On 4,172 settled Pointsbet rungs at $1.15-1.70 (13-20 Nov) p_eng predicted
+     71.4% vs 70.8% actual; the last-10 count barely separated (5/10 hit 70%, 9/10 73%), so k/n moved into the tap detail.
+     Display only: no tier, gate or stake reads it.
      Last 5 = raw box numbers, newest first, tinted when over tonight's line (data.json l5, from 20 Nov runs). */
   var STC={PTS:'pts',REB:'reb',AST:'ast','3PM':'tpm'},STW={PTS:'points',REB:'rebounds',AST:'assists','3PM':'threes'};
   function hitKN(h){var m=String(h).match(/\((\d+)\/(\d+)\)/);return m?[+m[1],+m[2]]:null}
-  function ringCol(r){return r>=1?'#1E8C4E':r>=.9?'#7FA82E':r>=.8?'#D4A800':r>=.7?'#E57A00':'#C8352B'}
-  function ringHtml(h){var kn=hitKN(h);if(!kn) return '<span class="ring"></span>';var k=kn[0],n=kn[1]||1,r=k/n,C=97.39;
-    return '<span class="ring" role="img" aria-label="'+k+' of last '+n+' cleared"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" class="rt"/>'+
-      '<circle cx="18" cy="18" r="15.5" class="rf" style="stroke:'+ringCol(r)+'" stroke-dasharray="'+(C*r).toFixed(1)+' '+C+'"/></svg><b>'+k+'</b></span>'}
+  function ringCol(r){return r>=.85?'#1E8C4E':r>=.8?'#7FA82E':r>=.75?'#D4A800':r>=.7?'#E57A00':'#C8352B'}
+  function hitP(b){var v=1/b.o+b.e/100;return isFinite(v)?Math.max(0,Math.min(.99,v)):null}
+  function ringHtml(b){var r=hitP(b),C=97.39;if(r===null) return '<span class="ring"></span>';var sc=(r*10).toFixed(1);
+    return '<span class="ring" role="img" aria-label="Hit chance '+sc+' out of 10 (about '+Math.round(r*100)+'%)"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" class="rt"/>'+
+      '<circle cx="18" cy="18" r="15.5" class="rf" style="stroke:'+ringCol(r)+'" stroke-dasharray="'+(C*r).toFixed(1)+' '+C+'"/></svg><b>'+sc+'</b></span>'}
+  function knLine(b){var kn=hitKN(b.h);return kn?'<p class="kn">Last '+kn[1]+' games: cleared '+kn[0]+' of '+kn[1]+'. Hit chance '+(hitP(b)*10).toFixed(1)+'/10 is the engine\'s estimate (price plus edge).</p>':''}
   function stPill(s){return '<span class="stn '+(STC[s]||'oth')+'">'+esc(STW[s]||s)+'</span>'}
   function l5Html(p){if(!p.l5||!p.l5.length) return '';
     return '<span class="l5" aria-label="Last '+p.l5.length+', newest first: '+p.l5.join(', ')+'">'+p.l5.map(function(v){return '<i class="'+(v>p.alt?'o':'u')+'">'+v+'</i>'}).join('')+'</span>'}
   function ringKey(){return '<div class="rkey"><span>Last 5, newest first: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em></span></div>'}
-  var BH='<div class="bh"><span>Last 10</span><span>Line</span><span>Odds</span></div>';
+  var BH='<div class="bh"><span>Hit /10</span><span>Line</span><span>Odds</span></div>';
   function playerBlocks(g,gi,list){
     var by={},order=[];
     list.forEach(function(p){if(!by[p.p]){by[p.p]=[];order.push(p.p)}by[p.p].push(p)});
@@ -986,9 +992,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       .sort(function(a,b){return (b.pk?1:0)-(a.pk?1:0)||a.best-b.best||b.bs.length-a.bs.length||a.i-b.i});
     return ps.map(function(P){
       var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'';
-      var rows=P.bs.map(function(b,j){var v=vOf(g,b),x=resFor(b),k=kindTag(b),det='';try{det=tileDet(b,g,gi)}catch(e){}
+      var rows=P.bs.map(function(b,j){var v=vOf(g,b),x=resFor(b),k=kindTag(b),det='';try{det=knLine(b)+tileDet(b,g,gi)}catch(e){}
         var vl='';try{vl=vLine(g,b)}catch(e){}
-        return '<button class="bet '+v+'" type="button" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'">'+ringHtml(b.h)+
+        return '<button class="bet '+v+'" type="button" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'">'+ringHtml(b)+
           '<span class="sl">'+stPill(b.s)+l5Html(b)+'</span><span class="ln">'+esc(b.alt)+'</span><span class="od">'+b.o.toFixed(2)+'</span>'+
           '<span class="kd"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span>'+(x?'<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span>':'')+
           '<span>tap for codes</span></span></button>'+
