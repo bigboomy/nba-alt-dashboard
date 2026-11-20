@@ -4,6 +4,22 @@
   {
    "date": "2026-11-20",
    "version": "nba-session v3.30-p4",
+   "component": "review",
+   "title": "30 team-game rule for tier verdicts",
+   "change": "Every 0u tier verdict (HR80, PIN, LSR, VERDICT) now also needs 30+ distinct team-games and shows an 80% CI clustered by team-game; the review also reads the verdict test from the context tab.",
+   "aim": "Mitch 20 Nov ('Yes, 30 team-games', critic C-2026-11-20-2): several rungs on one team's night are one piece of evidence, not several."
+  },
+  {
+   "date": "2026-11-20",
+   "version": "nba-session v3.30-p4",
+   "component": "engine",
+   "title": "OUTLIFT killed",
+   "change": "No new OUTLIFT items (or LSR-OUTLIFT from re-runs) from v3.30; the 52 logged rows stay as a closed record.",
+   "aim": "Mitch 20 Nov ('Kill now', critic C-2026-11-20-1): 48 settled at -11.43u, so the test could no longer pass."
+  },
+  {
+   "date": "2026-11-20",
+   "version": "nba-session v3.30-p4",
    "component": "engine",
    "title": "HR80 replaces HR85",
    "change": "The hit-rate tier now takes only the best-priced perfect Pointsbet rung at $1.20-1.29 (was $1.20-1.39), flagged HR80, 0u; HR85 rows keep their own closed record.",
