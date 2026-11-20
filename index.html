@@ -9,25 +9,35 @@
 <link rel="apple-touch-icon" href="icon-180.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="NBA Alts">
-<meta name="theme-color" content="#0e1116">
+<meta name="theme-color" content="#12233F">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#f6f7f9;--card:#fff;--text:#14171c;--muted:#5f6b7a;--line:#e3e7ec;--accent:#1d4ed8;--good:#0f7b3f;--warn:#b45309;--bad:#b91c1c;--chip:#eef2f7}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1116;--card:#171b22;--text:#e8ebf0;--muted:#97a3b3;--line:#262c36;--accent:#6ea0ff;--good:#4ade80;--warn:#fbbf24;--bad:#f87171;--chip:#202632}}
+/* Box-score redesign (Mitch 20 Nov): grey-blue page, navy ink, condensed scoreboard numbers. */
+:root{--bg:#EEF1F4;--card:#fff;--text:#12233F;--muted:#5A6577;--line:#D7DDE5;--accent:#1F4E8C;--good:#1E8C4E;--warn:#B45309;--bad:#B3261E;--chip:#E8EDF3;
+  --pts:#1F5FB0;--reb:#6D3FB5;--ast:#B0357A;--tpm:#0F7A80;--o5:#DCEFE3;--o5t:#14532D;--u5:#F1F3F6;--rtrack:#E3E8EF;
+  --disp:'Barlow Condensed','Arial Narrow',sans-serif;--body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1726;--card:#15223A;--text:#E8EDF5;--muted:#9AA8BD;--line:#26354F;--accent:#7DA8E8;
+  --good:#4ADE80;--warn:#FBBF24;--bad:#F87171;--chip:#1C2B45;--pts:#3B7DDB;--reb:#8B5FD6;--ast:#D0559A;--tpm:#1F9AA0;--o5:#123B26;--o5t:#8EE6B0;--u5:#1C2B45;--rtrack:#26354F}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 var(--body)}
+h1,h2,.stat b{font-family:var(--disp);letter-spacing:.2px}
+.num{font-family:var(--disp);font-variant-numeric:tabular-nums}
 .wrap{max-width:720px;margin:0 auto;padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-h1{font-size:1.25rem;margin:0}
+h1{font-size:1.9rem;font-weight:700;margin:0;line-height:1.1}
 .sub{color:var(--muted);font-size:.85rem;margin:2px 0 14px}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
-.stat b{display:block;font-size:1.15rem}
+.stat b{display:block;font-size:1.7rem;font-weight:700;line-height:1.1}
 .stat span{color:var(--muted);font-size:.75rem}
 .tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px;-webkit-overflow-scrolling:touch}
 .tab{flex:none;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:999px;padding:7px 13px;font:inherit;font-size:.85rem;cursor:pointer}
 .tab[aria-pressed=true]{background:var(--accent);border-color:var(--accent);color:#fff}
-.game{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.game{background:var(--card);border:0;border-top:4px solid var(--line);border-radius:4px;margin-bottom:14px;overflow:hidden;border-image:linear-gradient(90deg,var(--ta,var(--text)) 50%,var(--th,var(--text)) 50%) 1}
 .gh{padding:12px 14px;border-bottom:1px solid var(--line)}
-.gh h2{font-size:1rem;margin:0}
+.gh h2{font-size:1.45rem;font-weight:700;margin:0}
 .gh p{margin:3px 0 0;color:var(--muted);font-size:.8rem}
 .pick{padding:11px 14px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:2px 10px}
 .pick:last-child{border-bottom:0}
@@ -211,13 +221,17 @@ details.fold.inner{background:transparent;margin:10px 0}
 .gseg{display:flex;gap:6px;margin:0 0 8px}.gseg .tab{font-size:.75rem;padding:4px 10px}
 table.mxt{width:100%;border-collapse:collapse;font-size:.78rem;line-height:1.35;table-layout:fixed;margin:0 0 10px}
 table.mxt th,table.mxt td{padding:5px 6px;border-top:1px solid var(--line);text-align:center;background:none}
-table.mxt thead th{border-top:0;font-size:.68rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600}
+table.mxt thead th{border-top:0;font-size:.8rem;color:var(--muted);font-weight:600}
+table.mxt td{font-family:var(--disp);font-size:1rem;font-variant-numeric:tabular-nums}
+table.mxt td .rk,table.mxt td .mu{font-family:var(--body)}
+.stn{display:inline-block;font:600 .74rem/1.5 var(--body);color:#fff;padding:0 7px;border-radius:9px}
+.stn.pts{background:var(--pts)}.stn.reb{background:var(--reb)}.stn.ast{background:var(--ast)}.stn.tpm{background:var(--tpm)}.stn.oth{background:var(--muted)}
 table.mxt th[scope=row]{text-align:left;color:var(--muted);font-weight:600;width:38%}
 table.mxt td b{font-weight:700}.rk{font-size:.66rem;color:var(--muted);margin-left:3px}
 .rk.g{color:#067647}.rk.r{color:#b42318}
 @media (prefers-color-scheme:dark){.rk.g{color:#6ce9a6}.rk.r{color:#ff8a80}}
-.mxh{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);font-weight:600;margin:10px 0 4px}
-.mxh span{text-transform:none;font-weight:400}
+.mxh{font:700 1.15rem/1.2 var(--disp);color:var(--text);margin:14px 0 4px}
+.mxh span{font:400 .78rem var(--body);color:var(--muted)}
 .mxn{font-size:.72rem;color:var(--muted);margin:-4px 0 10px}
 table.lg{width:100%;border-collapse:collapse;font-size:.78rem;line-height:1.4}
 table.lg th,table.lg td{padding:6px;border-top:1px solid var(--line);text-align:left;vertical-align:top;background:none}
@@ -239,15 +253,41 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 @media (prefers-color-scheme:dark){.vc .look{background:#053321;color:#6ce9a6}.vc .mixed{background:#4e1d09;color:#fec84b}.vc .caution{background:#55160c;color:#ff8a80}}
 .gseg{padding:0 12px}.gseg .tab{flex:1}
 .board{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 12px}
-.board h2{font-size:1rem;margin:0 0 8px}.brow{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:8px 0;font:inherit;color:inherit;cursor:pointer}
+.board h2{font-size:1.45rem;font-weight:700;margin:0 0 8px}.brow{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:8px 0;font:inherit;color:inherit;cursor:pointer}
 .brow:first-of-type{border-top:0}.brow .t{display:flex;justify-content:space-between;gap:8px;font-size:.86rem}.brow .t b{font-weight:600}
 .brow .m{color:var(--muted);font-size:.78rem}.brow .pos{color:#067647}.brow .neg{color:#b42318}
 @media (prefers-color-scheme:dark){.brow .pos{color:#6ce9a6}.brow .neg{color:#ff8a80}}
 .pbar{height:5px;border-radius:3px;background:var(--line);margin-top:5px;overflow:hidden}.pbar i{display:block;height:5px;background:#2e90fa}
 .board .cap{margin:6px 0 0}
+/* Bet rows (Mitch 20 Nov redesign): each player once; one row per bet = ring (last-10 hits, green to red) | stat + last 5 | line | odds. */
+.bh,.bet{display:grid;grid-template-columns:40px minmax(0,1fr) 42px 40px;column-gap:8px}
+.bh{padding:4px 6px;border-bottom:1px solid var(--line);font-size:.8rem;font-weight:600;color:var(--muted)}
+.bh span:first-child{grid-column:1/3}.bh span:nth-child(2),.bh span:nth-child(3){text-align:right}
+.bet{width:100%;align-items:center;row-gap:3px;padding:7px 0;background:none;border:0;color:inherit;font:inherit;text-align:left;cursor:pointer;border-radius:6px}
+.bet:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.bet[aria-expanded=true]{background:var(--chip)}
+.ring{position:relative;width:40px;height:40px;grid-row:1/3;align-self:start}
+.ring svg{width:40px;height:40px;transform:rotate(-90deg)}
+.ring .rt{fill:none;stroke:var(--rtrack);stroke-width:4}.ring .rf{fill:none;stroke-width:4}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font:700 17px/1 var(--disp);color:var(--text)}
+.bet .sl{display:flex;align-items:center;gap:6px;min-width:0;flex-wrap:wrap}
+.bet .stn{flex:none}
+.bet .ln,.bet .od{text-align:right;font:600 19px/1.1 var(--disp);font-variant-numeric:tabular-nums}
+.bet .kd{grid-column:2/5;display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center;font-size:12px;color:var(--muted)}
+.bet .kd .k{font-size:11px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:0 5px}
+.bet .kd .k.pk{color:var(--accent);border-color:var(--accent)}
+.bet .kd .vs{font-weight:700}.bet .kd .vs.look{color:var(--good)}.bet .kd .vs.caution{color:var(--bad)}
+.l5{display:flex;gap:2px}
+.l5 i{font:600 14px/1 var(--disp);font-style:normal;font-variant-numeric:tabular-nums;min-width:21px;text-align:center;padding:3px 0;border-radius:4px}
+.l5 i.o{background:var(--o5);color:var(--o5t)}.l5 i.u{background:var(--u5);color:var(--muted)}
+.pl .bwhy,.pl .tdet{margin-left:50px}
+.pl .bwhy .vd{margin:0 0 4px}
+.rkey{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:.8rem;color:var(--muted);margin:0 0 10px}
+.rkey span{display:inline-flex;align-items:center;gap:4px}.rkey i{width:12px;height:12px;border-radius:50%;border:3px solid}
+.rkey em{font:600 13px/1 var(--disp);font-style:normal;padding:2px 6px;border-radius:4px}
 /* Player tiles (Mitch 20 Nov, design C): each player once, one tile per bet, tap a tile for its detail. */
 .pl{padding:10px 6px;border-top:1px solid var(--line)}.pl:first-child{border-top:0}
-.pl .nm{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:7px}.pl .nm strong{font-size:15px}.pl .nm .tm{color:var(--muted);font-size:12px}
+.pl .nm{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:2px}.pl .nm strong{font-size:16px;font-weight:700}.pl .nm .tm{color:var(--muted);font-size:12px}
 .tmo{display:inline-block;background:#fff4d6;color:#8a4b00;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px}
 @media (prefers-color-scheme:dark){.tmo{background:#3d2a05;color:#fcd34d}}
 .tiles{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.tiles::-webkit-scrollbar{display:none}
@@ -730,6 +770,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(!str(p.p,'')||!str(p.s,'')||alt===null||o===null||o<=0||e===null) return null;
     var st=num(p.st),sa=num(p.safe_alt),so=num(p.safe_o);
     return {p:String(p.p),t:str(p.t,''),s:String(p.s),alt:alt,o:o,e:e,h:str(p.h,'—'),stN:st===null?0:st,opp:str(p.opp,'—'),f:Array.isArray(p.f)?p.f.map(String):[],
+      l5:Array.isArray(p.l5)?p.l5.map(Number).filter(function(v){return isFinite(v)}).slice(0,5):[],
       sa:(sa!==null&&so!==null)?sa:null,so:(sa!==null&&so!==null)?so:null};
   }
   function normGame(g){
@@ -859,7 +900,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var hs=m.home_spread,line=(hs===null||hs===undefined)?'—':(hs===0?'PK':(hs<0?esc(H)+' '+hs.toFixed(1):esc(A)+' '+(-hs).toFixed(1)));
     var html='<div class="mxh">Records</div>'+hd(esc(A),esc(H))+
       row('Record',wlp(av.rec),wlp(hv.rec))+row('Away / home',wlp(av.away)+' <span class="rk">away</span>',wlp(hv.home)+' <span class="rk">home</span>')+
-      row('Last 10',wlp(av.l10),wlp(hv.l10))+'</tbody></table>'+
+      row('Last 10',wlp(av.l10),wlp(hv.l10))+row('Against the spread',wlp(av.ats),wlp(hv.ats))+row('Overs / unders',wlp(av.ou),wlp(hv.ou))+'</tbody></table>'+
       '<p class="mxn">Tonight: spread '+line+' (Pointsbet) · total '+(g.mkt!==null?esc(fix(g.mkt,1)):'—')+' · expected pace '+v(m.exp_pace)+' v league '+v(m.lg&&m.lg.pace)+'.</p>'+
       '<div class="mxh">Injuries and line</div>'+infoTable(g);
     var M=[['Points','ppg'],['Points allowed','oppg'],['Margin /g','net'],['Pace','pace'],['FG%','fg_pct'],['3P%','fg3_pct'],['3PM','fg3m'],['FT%','ft_pct'],
@@ -872,7 +913,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var S=[['PTS','Points'],['REB','Rebounds'],['AST','Assists'],['3PM','Threes']];
     function rkD(r){if(r===null||r===undefined||r==='')return '';var n=Number(r),c=n>=21?'g':(n<=10?'r':'');return '<span class="rk '+c+'">#'+n+'</span>'}
     html+='<div class="mxh">What each defence allows <span>(per 100 possessions, #1 = allows the most; arrow = the tighter defence)</span></div>'+hd4(esc(A)+' D',esc(H)+' D')+
-      S.map(function(x){var k=x[0],lg=m.lg&&m.lg[k],qa=(a.allow_rk||{})[k],qh=(h.allow_rk||{})[k];return row4(x[1]+(lg!==undefined?' <span class="rk">lg '+v(lg)+'</span>':''),
+      S.map(function(x){var k=x[0],lg=m.lg&&m.lg[k],qa=(a.allow_rk||{})[k],qh=(h.allow_rk||{})[k];return row4(stPill(k)+(lg!==undefined?'<span class="rk" style="display:block">league '+v(lg)+'</span>':''),
         v((a.allow100||{})[k])+rkD(qa),ebar(qa==null?qa:-qa,qh==null?qh:-qh,false),v((h.allow100||{})[k])+rkD(qh))}).join('')+'</tbody></table>'+
       '<p class="mxn">Same as every arrow here: it points to the team that is better at this. Red rank = a leaky defence, which is good for overs against it.</p>';
     function outs(o){return o&&o.length?o.map(function(x){return esc(x.name)+' <span class="rk">'+esc((x.roles||[]).join('/'))+(x.min?' · '+Number(x.min).toFixed(0)+' min':'')+'</span>'}).join('<br>'):'<span class="mu">—</span>'}
@@ -928,8 +969,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var x=resFor(p),pill=x?'<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span>':'';
     var fl=p.f.filter(function(f){return !/^U\d/.test(f)&&f!=='LEAN'});
     var chips=(p.lean?'<span class="chip ln">LEAN 0u</span>':'')+pill+cc+fl.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'||f==='DNP-LAST'||f==='MISS'||f==='THIN'||f==='DOG7'||f==='REB-OPP'||/^MAIN-U/.test(f)?' w':'')+'">'+esc(f)+'</span>'}).join('');
-    return (g?vLine(g,p):'')+
-      '<div class="row1"><span>Edge <b>'+(p.e>0?'+':'')+p.e.toFixed(1)+'</b></span><span>Hit <b>'+esc(p.h)+'</b></span><span>'+stars(p.stN)+'</span><span>Stake <b>'+(p.lean?'0u':(u?esc(u)+'u':'—'))+'</b></span></div>'+
+    return '<div class="row1"><span>Edge <b>'+(p.e>0?'+':'')+p.e.toFixed(1)+'</b></span><span>Hit <b>'+esc(p.h)+'</b></span><span>'+stars(p.stN)+'</span><span>Stake <b>'+(p.lean?'0u':(u?esc(u)+'u':'—'))+'</b></span></div>'+
       (/[0-9]/.test(p.opp)?'<div class="opp">Opp '+esc(p.opp)+'</div>':'')+
       (p.sa!==null?'<div class="safe">Safer: O'+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
       '<details class="cds"><summary>Codes and context</summary>'+(chips?'<div class="chips">'+chips+'</div>':'')+(g?cxLine(g,p):'')+'</details>'+cb;
@@ -973,6 +1013,20 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(risk.length){var r=andList(risk.slice(0,3));out.push(r.charAt(0).toUpperCase()+r.slice(1)+'.')}
     return out.join(' ');
   }
+  /* Ring + last 5 (Mitch 20 Nov redesign). Ring = k of n in the engine's sample, coloured green (all) to red (6 or fewer of 10).
+     Last 5 = raw box numbers, newest first, tinted when over tonight's line (data.json l5, from 20 Nov runs). */
+  var STC={PTS:'pts',REB:'reb',AST:'ast','3PM':'tpm'},STW={PTS:'points',REB:'rebounds',AST:'assists','3PM':'threes'};
+  function hitKN(h){var m=String(h).match(/\((\d+)\/(\d+)\)/);return m?[+m[1],+m[2]]:null}
+  function ringCol(r){return r>=1?'#1E8C4E':r>=.9?'#7FA82E':r>=.8?'#D4A800':r>=.7?'#E57A00':'#C8352B'}
+  function ringHtml(h){var kn=hitKN(h);if(!kn) return '<span class="ring"></span>';var k=kn[0],n=kn[1]||1,r=k/n,C=97.39;
+    return '<span class="ring" role="img" aria-label="'+k+' of last '+n+' cleared"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" class="rt"/>'+
+      '<circle cx="18" cy="18" r="15.5" class="rf" style="stroke:'+ringCol(r)+'" stroke-dasharray="'+(C*r).toFixed(1)+' '+C+'"/></svg><b>'+k+'</b></span>'}
+  function stPill(s){return '<span class="stn '+(STC[s]||'oth')+'">'+esc(STW[s]||s)+'</span>'}
+  function l5Html(p){if(!p.l5||!p.l5.length) return '';
+    return '<span class="l5" aria-label="Last '+p.l5.length+', newest first: '+p.l5.join(', ')+'">'+p.l5.map(function(v){return '<i class="'+(v>p.alt?'o':'u')+'">'+v+'</i>'}).join('')+'</span>'}
+  function ringKey(){return '<div class="rkey">Last 10: '+[[1,'10'],[.9,'9'],[.8,'8'],[.7,'7'],[0,'6 or fewer']].map(function(x){return '<span><i style="border-color:'+ringCol(x[0])+'"></i>'+x[1]+'</span>'}).join('')+
+    '<span>Last 5, newest first: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em></span></div>'}
+  var BH='<div class="bh"><span>Last 10</span><span>Line</span><span>Odds</span></div>';
   function playerBlocks(g,gi,list){
     var by={},order=[];
     list.forEach(function(p){if(!by[p.p]){by[p.p]=[];order.push(p.p)}by[p.p].push(p)});
@@ -982,22 +1036,29 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       .sort(function(a,b){return (b.pk?1:0)-(a.pk?1:0)||a.best-b.best||b.bs.length-a.bs.length||a.i-b.i});
     return ps.map(function(P){
       var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'';
-      var tiles=P.bs.map(function(b,j){var v=vOf(g,b),x=resFor(b),k=kindTag(b);
-        return '<button class="tile '+v+'" type="button" aria-pressed="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'">'+
-          '<div class="s">'+esc(b.s)+' O'+esc(b.alt)+'</div><div class="m">@'+b.o.toFixed(2)+' · '+esc(String(b.h).replace(/^.*\((.*)\).*$/,'$1'))+'</div>'+
-          '<div><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span>'+(x?'<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+'</span>':'')+'</div></button>'}).join('');
-      var dets=P.bs.map(function(b,j){var h='';try{h=tileDet(b,g,gi)}catch(e){}return '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+h+'</div>'}).join('');
+      var rows=P.bs.map(function(b,j){var v=vOf(g,b),x=resFor(b),k=kindTag(b),det='';try{det=tileDet(b,g,gi)}catch(e){}
+        var vl='';try{vl=vLine(g,b)}catch(e){}
+        return '<button class="bet '+v+'" type="button" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'">'+ringHtml(b.h)+
+          '<span class="sl">'+stPill(b.s)+l5Html(b)+'</span><span class="ln">'+esc(b.alt)+'</span><span class="od">'+b.o.toFixed(2)+'</span>'+
+          '<span class="kd"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span>'+(x?'<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span>':'')+
+          '<span>tap for codes</span></span></button>'+
+          (vl?'<div class="bwhy">'+vl+'</div>':'')+
+          '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+det+'</div>'}).join('');
       var sn='';try{sn=scoutNote(g,P)}catch(e){}
-      return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+(sn?'<details class="scn"><summary>Scout note</summary><p>'+esc(sn)+'</p></details>':'')+'<div class="tiles">'+tiles+'</div>'+dets+'</div>'}).join('');
+      return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+(sn?'<details class="scn"><summary>Scout note</summary><p>'+esc(sn)+'</p></details>':'')+rows+'</div>'}).join('');
   }
   document.addEventListener('click',function(ev){
-    var t=ev.target.closest&&ev.target.closest('.tile[data-tk]');if(!t) return;
+    var t=ev.target.closest&&ev.target.closest('.bet[data-tk]');if(!t) return;
     var key=t.getAttribute('data-tk'),j=+t.getAttribute('data-tj'),pl=t.closest('.pl'),on=TSEL[key]===j;
     TSEL[key]=on?undefined:j;
-    Array.prototype.forEach.call(pl.querySelectorAll('.tile'),function(x){x.setAttribute('aria-pressed',String(!on&&+x.getAttribute('data-tj')===j))});
+    Array.prototype.forEach.call(pl.querySelectorAll('.bet[data-tk]'),function(x){x.setAttribute('aria-expanded',String(!on&&+x.getAttribute('data-tj')===j))});
     Array.prototype.forEach.call(pl.querySelectorAll('.tdet'),function(x){x.hidden=on||+x.getAttribute('data-tj')!==j});
   });
   var LOPEN={};
+  /* Team primary colours for the card's top edge (away | home). */
+  var TCOL={ATL:'#C8102E',BOS:'#007A33',BKN:'#000000',CHA:'#1D1160',CHI:'#CE1141',CLE:'#860038',DAL:'#00538C',DEN:'#0E2240',DET:'#C8102E',GSW:'#1D428A',
+    HOU:'#CE1141',IND:'#002D62',LAC:'#C8102E',LAL:'#552583',MEM:'#5D76A9',MIA:'#98002E',MIL:'#00471B',MIN:'#0C2340',NOP:'#0C2340',NYK:'#F58426',
+    OKC:'#007AC1',ORL:'#0077C0',PHI:'#006BB6',PHX:'#1D1160',POR:'#E03A3E',SAC:'#5A2D81',SAS:'#8A8D8F',TOR:'#CE1141',UTA:'#002B5C',WAS:'#002B5C'};
   var VRANK={look:0,mixed:1,caution:2};
   function vOf(g,p){var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];return c&&VRANK[c.verdict]!==undefined?c.verdict:''}
   function gameHtml(g,gi){
@@ -1013,15 +1074,16 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var top=g.picks.concat(g.leans.filter(function(p){return pkp[p.p]})),rest=g.leans.filter(function(p){return !pkp[p.p]});
     var body='',lb='';try{body=playerBlocks(g,gi,top)}catch(e){}try{lb=playerBlocks(g,gi,rest)}catch(e){}
     var np2=0;rest.forEach(function(p,i,a){if(a.findIndex(function(q){return q.p===p.p})===i)np2++});
-    var tbl=body?'<div class="pls">'+body+'</div>':'<div class="none">No pick cleared the gates.</div>';
+    var tbl=body?'<div class="pls">'+BH+body+'</div>':'<div class="none">No pick cleared the gates.</div>';
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
     var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+rest.length+' · '+np2+' player'+(np2===1?'':'s')+')</b> · tracked, not bet · best first</span></summary>'+
-      '<div class="pls">'+lb+'</div></details>':'';
+      '<div class="pls">'+(body?'':ringKey())+BH+lb+'</div></details>':'';
     var cur=MXV[g.id]==='mx'||MXV[g.id]==='info'?'mx':'bets';
     var views=[['bets','Bets'],['mx','Matchup']];
     var gseg='<div class="gseg" role="group" aria-label="Game view">'+views.map(function(x){return '<button type="button" class="tab" data-mxg="'+esc(g.id)+'" data-mxv="'+x[0]+'" aria-pressed="'+(cur===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
-    if(cur==='mx') return '<section class="game">'+head+gseg+'<div class="gw">'+mxHtml(g)+'</div></section>';
-    return '<section class="game">'+head+gseg+'<div class="gw gp">'+tbl+lf+'</div></section>';
+    var tc=String(g.id).split('@'),sty=' style="--ta:'+(TCOL[tc[0]]||'#12233F')+';--th:'+(TCOL[tc[1]]||'#12233F')+'"';
+    if(cur==='mx') return '<section class="game"'+sty+'>'+head+gseg+'<div class="gw">'+mxHtml(g)+'</div></section>';
+    return '<section class="game"'+sty+'>'+head+gseg+'<div class="gw gp">'+(body?ringKey():'')+tbl+lf+'</div></section>';
   }
   /* Today's games (Mitch, 5 Nov): from the first slate run the slate shows today's games from schedule.json.
      A game not yet analysed shows as "picks ~HH:MM" (about 90 min before tip); once a tick analyses it, its card replaces that line.

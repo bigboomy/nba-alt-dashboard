@@ -4,6 +4,14 @@
   {
    "date": "2026-11-20",
    "version": "nba-session v3.30-p4",
+   "component": "dashboard",
+   "title": "Dashboard redesign: box score with hit-rate rings",
+   "change": "New look (condensed scoreboard numbers, team-colour edge per game); each bet is one aligned row: a last-10 ring coloured green to red, a coloured stat pill, the last 5 actual numbers (tinted when over the line), line and odds; Matchup adds against-the-spread and overs/unders records.",
+   "aim": "Mitch 20 Nov ('Yes, build it', design A with rings): faster to read on a phone. Display only: no gate, tier, stake or price changes (freeze to 27 Nov holds); last 5 shows from the next slate run."
+  },
+  {
+   "date": "2026-11-20",
+   "version": "nba-session v3.30-p4",
    "component": "review",
    "title": "30 team-game rule for tier verdicts",
    "change": "Every 0u tier verdict (HR80, PIN, LSR, VERDICT) now also needs 30+ distinct team-games and shows an 80% CI clustered by team-game; the review also reads the verdict test from the context tab.",
