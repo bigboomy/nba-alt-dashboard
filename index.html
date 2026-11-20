@@ -335,6 +335,17 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 
 .jb{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:30;min-height:44px;padding:0 18px;border-radius:999px;border:0;background:var(--accent);color:var(--bg);font:600 14px/1 var(--body);box-shadow:0 4px 14px rgba(18,35,63,.25);cursor:pointer}
 .jb:focus-visible{outline:3px solid var(--good);outline-offset:2px}
+
+/* 20 Nov round 3: settled rings grey, killed rows dimmed, L10 label, dark contrast, lighter view toggle */
+.ring.done .rf{stroke:var(--muted)!important;opacity:.55}
+.l10{white-space:nowrap}.l10 i{font-style:normal;font-size:9.5px;letter-spacing:.02em;opacity:.85}
+.bet.killed .rc,.bet.killed .sl .stn,.bet.killed .ln,.bet.killed .od{opacity:.5}
+.kx{font:600 .7rem/1.5 var(--body);color:var(--muted);border:1px solid var(--line);border-radius:9px;padding:0 6px}
+.tp.fin{font-weight:700;color:var(--text)}
+.gseg{justify-content:flex-start}.gseg .tab{flex:none;min-width:96px}
+.cbtn{min-height:44px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--pts:#1F5FB0;--reb:#6D3FB5;--ast:#B0357A;--tpm:#0F7A80}
+  :root:not([data-theme="light"]) .tab[aria-pressed=true],:root:not([data-theme="light"]) .cbtn.main{color:var(--bg)}}
 </style>
 </head>
 <body><div class="wrap">
@@ -1047,7 +1058,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function ringCol(r){return r>=.85?'#1E8C4E':r>=.8?'#7FA82E':r>=.75?'#D4A800':r>=.7?'#E57A00':'#C8352B'}
   function hitP(b){var v=1/b.o+b.e/100;return isFinite(v)?Math.max(0,Math.min(.99,v)):null}
   function ringHtml(b){var r=hitP(b),C=97.39;if(r===null) return '<span class="ring"></span>';var sc=(r*10).toFixed(1);
-    return '<span class="ring" role="img" aria-label="Hit chance '+sc+' out of 10 (about '+Math.round(r*100)+'%)"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" class="rt"/>'+
+    return '<span class="ring'+(resFor(b)?' done':'')+'" role="img" aria-label="Hit chance '+sc+' out of 10 (about '+Math.round(r*100)+'%)"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" class="rt"/>'+
       '<circle cx="18" cy="18" r="15.5" class="rf" style="stroke:'+ringCol(r)+'" stroke-dasharray="'+(C*r).toFixed(1)+' '+C+'"/></svg><b>'+sc+'</b></span>'}
   function knLine(b){var kn=hitKN(b.h);return kn?'<p class="kn">Last '+kn[1]+' games: cleared '+kn[0]+' of '+kn[1]+'. Hit chance '+(hitP(b)*10).toFixed(1)+'/10 is the engine\'s estimate (price plus edge).</p>':''}
   function stPill(s){return '<span class="stn '+(STC[s]||'oth')+'">'+esc(STW[s]||s)+'</span>'}
@@ -1063,15 +1074,15 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function ringKey(list){var has=(list||[]).some(function(b){return b.l5&&b.l5.length});
     if(!has||KEYDONE) return '';KEYDONE=true;
     return '<div class="rkey"><span>Last 5, newest first: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em></span></div>'}
-  function l10Of(b){var kn=hitKN(b.h);return kn?'<span class="l10" aria-label="cleared '+kn[0]+' of last '+kn[1]+'">'+kn[0]+'/'+kn[1]+'</span>':''}
+  function l10Of(b){var kn=hitKN(b.h);return kn?'<span class="l10" aria-label="cleared '+kn[0]+' of last '+kn[1]+'"><i>L'+kn[1]+'</i> '+kn[0]+'/'+kn[1]+'</span>':''}
   function bid(g,b){return g.id+'|'+b.p+'|'+b.s+'|'+b.alt}
   function betLabel(b,gid){var r=hitP(b),kn=hitKN(b.h),x=resFor(b);
     return esc(b.p+(gid?' ('+gid+')':'')+', '+(STW[b.s]||b.s)+' over '+b.alt+' at '+b.o.toFixed(2)+(r!==null?', hit chance '+(r*10).toFixed(1)+' of 10':'')+
       (kn?', cleared '+kn[0]+' of last '+kn[1]:'')+(x?', '+({W:'won',L:'lost',PUSH:'push',VOID:'void'}[x.result]||x.result)+(x.actual?' with '+x.actual:''):''))}
   /* Line cell: once settled the line turns green (won) or orange (lost) with his actual number in brackets under it. */
-  var KGLOSS={PICK:'Staked pick: cleared every gate.',LEAN:'Lean: a near-miss, tracked at 0u, never staked.',HR80:'HR80 test tier: perfect recent sample at $1.20-1.29, tracked at 0u.',
-    HR85:'HR85: the earlier hit-rate tier (closed), tracked at 0u.',PIN:'PIN test tier: priced 4pp+ better than Pinnacle\'s fair price, tracked at 0u.',
-    OUTLIFT:'OUTLIFT: teammate-out tier, killed 20 Nov, kept for the record only.',LSR:'LSR: late-scratch re-run after a player was ruled out, tracked at 0u.'};
+  var KGLOSS={PICK:'Staked: cleared every gate.',LEAN:'A near-miss, tracked at 0u, never staked.',HR80:'Test tier: perfect recent sample at $1.20-1.29, tracked at 0u.',
+    HR85:'The earlier hit-rate tier (closed), tracked at 0u.',PIN:'Test tier: priced 4pp+ better than Pinnacle\'s fair price, tracked at 0u.',
+    OUTLIFT:'Teammate-out tier, killed 20 Nov, kept for the record only.',LSR:'Late-scratch re-run after a player was ruled out, tracked at 0u.'};
   function lnHtml(b){var x=resFor(b),c=x?({W:'won',L:'lost',PUSH:'push',VOID:'push'}[x.result]||''):'';
     var lab=x?({W:'won',L:'lost',PUSH:'push',VOID:'void'}[x.result]||x.result):'';
     return '<span class="ln'+(c?' '+c:'')+'"'+(x?' aria-label="Line '+esc(b.alt)+', '+lab+(x.actual?' with '+esc(x.actual):'')+'"':'')+'>'+esc(b.alt)+
@@ -1087,8 +1098,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return ps.map(function(P){
       var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'';
       var rows=P.bs.map(function(b,j){var x=resFor(b),k=kindTag(b),det='';try{det='<p class="kt"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span> '+esc(KGLOSS[k]||'')+'</p>'+knLine(b)+tileDet(b,g,gi)+'<p class="gl">Edge = the model\'s chance minus the chance the price implies. Stars = confidence (5 is highest).</p>'}catch(e){}
-        return '<button class="bet" type="button" aria-label="'+betLabel(b)+'" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'"><span class="rc">'+ringHtml(b)+l10Of(b)+'</span>'+
-          '<span class="sl">'+stPill(b.s)+l5Html(b)+'</span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span></button>'+
+        var kl=b.f.indexOf('OUTLIFT')>=0;
+        return '<button class="bet'+(kl?' killed':'')+'" type="button" aria-label="'+betLabel(b)+(kl?', killed OUTLIFT tier, record only':'')+'" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'"><span class="rc">'+ringHtml(b)+l10Of(b)+'</span>'+
+          '<span class="sl">'+stPill(b.s)+(kl?'<span class="kx">killed</span>':'')+l5Html(b)+'</span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span></button>'+
           '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+det+'</div>'}).join('');
       var sn='';try{sn=scoutNote(g,P)}catch(e){}
       var b5='';try{b5=box5Html(g,P,sn)}catch(e){}
@@ -1111,7 +1123,11 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         npn=g.leans.filter(function(p){return p.f.indexOf('PIN')>=0}).length,
         nol=g.leans.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length,
         nls=g.leans.filter(function(p){return p.f.indexOf('LSR')>=0}).length;
-    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span><span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+(nl-nol)+' lean'+(nl-nol===1?'':'s')+(nh+npn+nls?' <span class="mu">(incl. '+[[nh,'HR80'],[npn,'PIN'],[nls,'LSR']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+
+    var gl=g.picks.concat(g.leans).filter(function(b){return b.f.indexOf('OUTLIFT')<0}),gd=0,gw={pw:0,pl:0,lw:0,ll:0};
+    gl.forEach(function(b){var x=resFor(b);if(!x)return;gd++;var k=(b.lean?'l':'p')+(x.result==='W'?'w':x.result==='L'?'l':'');if(gw[k]!==undefined)gw[k]++});
+    var allDone=g.picks.concat(g.leans).every(function(b){return resFor(b)});
+    var tpTxt=!gl.length&&allDone&&g.leans.length?'Final':gl.length&&gd===gl.length?'Final'+(np?' · picks '+gw.pw+'-'+gw.pl:'')+(gl.length>np?' · leans '+gw.lw+'-'+gw.ll:''):'tip '+esc(g.tip);
+    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp'+(tpTxt.charAt(0)==='F'?' fin':'')+'">'+tpTxt+'</span><span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+(nl-nol)+' lean'+(nl-nol===1?'':'s')+(nh+npn+nls?' <span class="mu">(incl. '+[[nh,'HR80'],[npn,'PIN'],[nls,'LSR']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+
       (nol?' <span class="mu">· '+nol+' killed OUTLIFT, record only</span>':'')+'</span></div>';
     /* Player tiles (Mitch 20 Nov): a player with a pick brings all his bets into the picks area; the rest stay in the collapsed Leans fold. */
     var pkp={};g.picks.forEach(function(p){pkp[p.p]=1});
@@ -1153,7 +1169,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function bestLeans(){
     var box=$('best');if(!box) return;
     var np=G.reduce(function(a,g){return a+g.picks.length},0),L=[];
-    G.forEach(function(g){g.leans.forEach(function(b){var h=hitP(b);if(h!==null)L.push({g:g,b:b,h:h})})});
+    G.forEach(function(g){g.leans.forEach(function(b){var h=hitP(b);if(h!==null&&b.f.indexOf('OUTLIFT')<0)L.push({g:g,b:b,h:h})})});
     if(np||sel!=='ALL'||!L.length){box.hidden=true;box.innerHTML='';return}
     L.sort(function(a,b){return b.h-a.h});
     var top=L.slice(0,5),tw=0,tl=0,td=0;top.forEach(function(x){var r=resFor(x.b);if(r){td++;if(r.result==='W')tw++;else if(r.result==='L')tl++}});
@@ -1343,7 +1359,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     nextLine();
   }
   function resTally(){var t={n:0,done:0,pw:0,pl:0,lw:0,ll:0};
-    G.forEach(function(g){g.picks.concat(g.leans).forEach(function(b){t.n++;var x=resFor(b);if(!x)return;t.done++;
+    G.forEach(function(g){g.picks.concat(g.leans).forEach(function(b){if(b.f.indexOf('OUTLIFT')>=0)return;t.n++;var x=resFor(b);if(!x)return;t.done++;
       if(x.result==='W'){if(b.lean)t.lw++;else t.pw++}else if(x.result==='L'){if(b.lean)t.ll++;else t.pl++}})});return t}
   function schedule(n,nx,today,inWindow){
     if(REFRESH&&REFRESH_AT>Date.now()) return;      // a reload is already booked; don't push it back
