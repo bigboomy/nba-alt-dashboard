@@ -633,14 +633,1663 @@
         "CHA": []
       },
       "tip": "11:00"
+    },
+    {
+      "abs": {
+        "CLE": [],
+        "IND": []
+      },
+      "b2b": [],
+      "box5": {
+        "Kelly Oubre Jr.": {
+          "gp": 13,
+          "l5": {
+            "ast": 1.0,
+            "blk": 0.8,
+            "fg3": 1.2,
+            "fg3a": 4.4,
+            "fg_pct": 53.4,
+            "fga": 11.6,
+            "fgm": 6.2,
+            "fta": 2.0,
+            "ftm": 1.8,
+            "min": 27.8,
+            "pts": 15.4,
+            "reb": 4.2,
+            "stl": 1.4,
+            "to": 1.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.2,
+            "blk": 0.8,
+            "fg3": 1.0,
+            "fg3a": 4.0,
+            "fg_pct": 47.1,
+            "fga": 9.2,
+            "fgm": 4.3,
+            "fta": 2.0,
+            "ftm": 1.5,
+            "min": 24.5,
+            "pts": 11.2,
+            "reb": 3.1,
+            "stl": 0.7,
+            "to": 0.9
+          }
+        },
+        "Peyton Watson": {
+          "gp": 12,
+          "l5": {
+            "ast": 2.0,
+            "blk": 1.4,
+            "fg3": 1.4,
+            "fg3a": 4.8,
+            "fg_pct": 36.5,
+            "fga": 10.4,
+            "fgm": 3.8,
+            "fta": 2.0,
+            "ftm": 1.0,
+            "min": 26.4,
+            "pts": 10.0,
+            "reb": 4.2,
+            "stl": 0.2,
+            "to": 1.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.5,
+            "blk": 1.5,
+            "fg3": 1.0,
+            "fg3a": 4.3,
+            "fg_pct": 37.5,
+            "fga": 10.7,
+            "fgm": 4.0,
+            "fta": 2.5,
+            "ftm": 1.7,
+            "min": 27.5,
+            "pts": 10.7,
+            "reb": 4.5,
+            "stl": 0.7,
+            "to": 1.8
+          }
+        },
+        "Sam Merrill": {
+          "gp": 10,
+          "l5": {
+            "ast": 1.8,
+            "blk": 0.2,
+            "fg3": 1.2,
+            "fg3a": 4.2,
+            "fg_pct": 32.1,
+            "fga": 5.6,
+            "fgm": 1.8,
+            "fta": 2.0,
+            "ftm": 1.4,
+            "min": 21.6,
+            "pts": 6.2,
+            "reb": 3.8,
+            "stl": 1.4,
+            "to": 0.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.0,
+            "blk": 0.1,
+            "fg3": 1.5,
+            "fg3a": 4.7,
+            "fg_pct": 38.1,
+            "fga": 6.3,
+            "fgm": 2.4,
+            "fta": 1.6,
+            "ftm": 1.3,
+            "min": 23.1,
+            "pts": 7.6,
+            "reb": 3.3,
+            "stl": 1.1,
+            "to": 0.3
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          11,
+          11
+        ],
+        "skipped": [],
+        "stats": [
+          29,
+          29
+        ]
+      },
+      "ctx": "Out TOP3: Tyrese Haliburton (IND), Evan Mobley (CLE); Returning: none; Depleted: none; missed last game: Peyton Watson. Coverage: evaluated 11 of 11 players (29 of 29 player-stats); skipped: none",
+      "cx": {
+        "Kelly Oubre Jr.|PTS|9.5|lean": {
+          "best_book": "tab",
+          "best_price": 1.45,
+          "mm_min": 26.68,
+          "mm_mu": 13.432,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7633,
+          "p_pin": 0.7222,
+          "p_wowy": 0.7633,
+          "pin_edge_pp": 1.8,
+          "pin_line": 12.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 13.432
+        },
+        "Peyton Watson|REB|3.5|lean": {
+          "best_book": "tabtouch",
+          "best_price": 1.56,
+          "mm_min": 29.79,
+          "mm_mu": 5.675,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.794,
+          "p_pin": "",
+          "p_wowy": 0.7173,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 5.04
+        },
+        "Sam Merrill|PTS|4.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.4,
+          "mm_min": 24.87,
+          "mm_mu": 8.644,
+          "n_books": 6,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8396,
+          "p_pin": "",
+          "p_wowy": 0.7447,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 7.308
+        }
+      },
+      "engine": "nba-session v3.31-p4",
+      "id": "IND@CLE",
+      "leans": [
+        {
+          "alt": 4.5,
+          "e": 4.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.60",
+            "Z0.76",
+            "TMO"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            7,
+            0,
+            10,
+            8,
+            6
+          ],
+          "o": 1.4,
+          "opp": "IND 15th most PTS allowed · pace +0.4",
+          "p": "Sam Merrill",
+          "s": "PTS",
+          "st": "4",
+          "std": 6.5,
+          "t": "CLE"
+        },
+        {
+          "alt": 3.5,
+          "e": 3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "[ROLE?]",
+            "MU+3%",
+            "DNP-LAST",
+            "OT-ADJ",
+            "C0.69",
+            "Z0.68",
+            "TMO",
+            "BEST-sportsbet@1.52"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            4,
+            4,
+            5,
+            2,
+            6
+          ],
+          "o": 1.5,
+          "opp": "IND 3rd most REB allowed · pace +0.4",
+          "p": "Peyton Watson",
+          "s": "REB",
+          "st": "4",
+          "std": 4.5,
+          "t": "CLE"
+        },
+        {
+          "alt": 9.5,
+          "e": 3.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "MT+",
+            "C0.75",
+            "Z0.64",
+            "TMO",
+            "PIN+1.8"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            17,
+            16,
+            16,
+            14,
+            14
+          ],
+          "o": 1.42,
+          "opp": "CLE 10th most PTS allowed · pace +0.4",
+          "p": "Kelly Oubre Jr.",
+          "s": "PTS",
+          "st": "4",
+          "std": 11.5,
+          "t": "IND"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 102.6,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.8,
+          "PTS": 111.2,
+          "REB": 42.7,
+          "pace": 102.3
+        },
+        "teams": {
+          "CLE": {
+            "allow100": {
+              "3PM": 13.4,
+              "AST": 26.4,
+              "PTS": 112.1,
+              "REB": 42.7
+            },
+            "allow_rk": {
+              "3PM": 13,
+              "AST": 10,
+              "PTS": 10,
+              "REB": 16
+            },
+            "out": [],
+            "pace": 102.5,
+            "rk": {
+              "ast": 11,
+              "blk": 13,
+              "dreb": 4,
+              "fg3_pct": 9,
+              "fg3a": 7,
+              "fg3m": 4,
+              "fg_pct": 6,
+              "ft_pct": 22,
+              "fta": 19,
+              "net": 12,
+              "opp_fg3_pct": 14,
+              "opp_fg_pct": 10,
+              "oppg": 22,
+              "oreb": 16,
+              "pace": 12,
+              "pf": 17,
+              "ppg": 4,
+              "reb": 6,
+              "stl": 22,
+              "tov": 5,
+              "ts_pct": 5
+            },
+            "v": {
+              "ast": 27.5,
+              "ats": "6-10-0",
+              "ats_away": "2-5-0",
+              "ats_home": "4-5-0",
+              "ats_l10": "4-6-0",
+              "away": "2-5",
+              "blk": 5.2,
+              "dreb": 34.3,
+              "fg3_pct": 36.7,
+              "fg3a": 41.1,
+              "fg3m": 15.1,
+              "fg_pct": 47.4,
+              "ft_pct": 76.4,
+              "fta": 23.8,
+              "gp": 16,
+              "home": "6-3",
+              "l10": "4-6",
+              "net": 1.9,
+              "opp_fg3_pct": 35.0,
+              "opp_fg_pct": 45.5,
+              "oppg": 116.3,
+              "oreb": 11.6,
+              "ou": "9-7-0",
+              "ou_l10": "6-4-0",
+              "pace": 102.6,
+              "pf": 21.9,
+              "ppg": 118.2,
+              "reb": 45.9,
+              "rec": "8-8",
+              "stl": 7.5,
+              "tov": 13.8,
+              "ts_pct": 59.1
+            }
+          },
+          "IND": {
+            "allow100": {
+              "3PM": 13.6,
+              "AST": 25.8,
+              "PTS": 111.3,
+              "REB": 44.0
+            },
+            "allow_rk": {
+              "3PM": 8,
+              "AST": 17,
+              "PTS": 15,
+              "REB": 3
+            },
+            "out": [],
+            "pace": 102.5,
+            "rk": {
+              "ast": 8,
+              "blk": 25,
+              "dreb": 14,
+              "fg3_pct": 27,
+              "fg3a": 21,
+              "fg3m": 26,
+              "fg_pct": 8,
+              "ft_pct": 20,
+              "fta": 20,
+              "net": 20,
+              "opp_fg3_pct": 24,
+              "opp_fg_pct": 14,
+              "oppg": 18,
+              "oreb": 30,
+              "pace": 12,
+              "pf": 5,
+              "ppg": 22,
+              "reb": 26,
+              "stl": 20,
+              "tov": 9,
+              "ts_pct": 17
+            },
+            "v": {
+              "ast": 27.6,
+              "ats": "9-6-0",
+              "ats_away": "5-2-0",
+              "ats_home": "4-4-0",
+              "ats_l10": "6-4-0",
+              "away": "3-4",
+              "blk": 4.3,
+              "dreb": 31.7,
+              "fg3_pct": 32.6,
+              "fg3a": 36.0,
+              "fg3m": 11.7,
+              "fg_pct": 47.2,
+              "ft_pct": 76.6,
+              "fta": 23.1,
+              "gp": 15,
+              "home": "2-6",
+              "l10": "3-7",
+              "net": -3.3,
+              "opp_fg3_pct": 37.2,
+              "opp_fg_pct": 46.1,
+              "oppg": 114.8,
+              "oreb": 9.5,
+              "ou": "5-10-0",
+              "ou_l10": "3-7-0",
+              "pace": 102.6,
+              "pf": 20.1,
+              "ppg": 111.5,
+              "reb": 41.2,
+              "rec": "5-10",
+              "stl": 7.6,
+              "tov": 14.4,
+              "ts_pct": 57.4
+            }
+          }
+        }
+      },
+      "out": {
+        "CLE": [
+          "Evan Mobley (Mobley will receive treatment and participate in rehab after the team confirmed a diagnosis of a right great toe sprain, and he'll be re-evaluated in the next 7-to-10 days.)",
+          "Jaylon Tyson (Tyson (ankle) has been ruled out for Friday's game against Indiana.)",
+          "Nae'Qwan Tomlin (Tomlin (back) will remain on the inactive list for Wednesday's game against the Grizzlies.)"
+        ],
+        "IND": [
+          "Ben Sheppard (Head coach Rick Carlise confirmed Sheppard will miss \"months\" after undergoing surgery to repair a torn meniscus in his left knee, Tony East of Forbes.com reports.)",
+          "Johnny Furphy (Furphy (knee) is practicing with the G League's Noblesville Boom, per Alex Golden of SI.com.)",
+          "Tyrese Haliburton (Haliburton (hamstring) is expected to miss at least two more weeks, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "CLE": [
+          "Peyton Watson (Watson (back) is questionable for Friday's game against the Pacers.)"
+        ],
+        "IND": [
+          "Andrew Nembhard (Nembhard (hip) is questionable for Friday's game in Cleveland.)",
+          "Braden Smith (Smith (ankle) is listed as questionable for Friday's game against Cleveland.)",
+          "T.J. McConnell (McConnell (hamstring) is listed as probable for Friday's game in Cleveland.)"
+        ]
+      },
+      "tip": "11:30"
+    },
+    {
+      "abs": {
+        "BKN": [],
+        "ORL": []
+      },
+      "b2b": [],
+      "box5": {
+        "Jalen Suggs": {
+          "gp": 6,
+          "l5": {
+            "ast": 4.6,
+            "blk": 0.8,
+            "fg3": 1.8,
+            "fg3a": 4.6,
+            "fg_pct": 41.3,
+            "fga": 9.2,
+            "fgm": 3.8,
+            "fta": 1.6,
+            "ftm": 0.8,
+            "min": 29.0,
+            "pts": 10.2,
+            "reb": 5.6,
+            "stl": 1.2,
+            "to": 2.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 4.7,
+            "blk": 0.7,
+            "fg3": 1.5,
+            "fg3a": 4.2,
+            "fg_pct": 38.9,
+            "fga": 9.0,
+            "fgm": 3.5,
+            "fta": 1.7,
+            "ftm": 1.0,
+            "min": 29.5,
+            "pts": 9.5,
+            "reb": 5.2,
+            "stl": 1.3,
+            "to": 2.7
+          }
+        },
+        "Moritz Wagner": {
+          "gp": 14,
+          "l5": {
+            "ast": 2.6,
+            "blk": 0.0,
+            "fg3": 1.4,
+            "fg3a": 1.8,
+            "fg_pct": 79.2,
+            "fga": 4.8,
+            "fgm": 3.8,
+            "fta": 2.8,
+            "ftm": 1.6,
+            "min": 16.6,
+            "pts": 10.6,
+            "reb": 3.8,
+            "stl": 0.2,
+            "to": 1.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.6,
+            "blk": 0.1,
+            "fg3": 1.2,
+            "fg3a": 1.9,
+            "fg_pct": 60.7,
+            "fga": 6.0,
+            "fgm": 3.6,
+            "fta": 2.6,
+            "ftm": 1.9,
+            "min": 17.9,
+            "pts": 10.4,
+            "reb": 3.4,
+            "stl": 0.6,
+            "to": 0.9
+          }
+        },
+        "Nolan Traore": {
+          "gp": 13,
+          "l5": {
+            "ast": 2.8,
+            "blk": 0.2,
+            "fg3": 1.4,
+            "fg3a": 4.2,
+            "fg_pct": 54.2,
+            "fga": 11.8,
+            "fgm": 6.4,
+            "fta": 2.6,
+            "ftm": 1.8,
+            "min": 23.4,
+            "pts": 16.0,
+            "reb": 1.0,
+            "stl": 1.4,
+            "to": 1.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.8,
+            "blk": 0.5,
+            "fg3": 1.6,
+            "fg3a": 3.8,
+            "fg_pct": 51.9,
+            "fga": 9.9,
+            "fgm": 5.2,
+            "fta": 2.3,
+            "ftm": 1.6,
+            "min": 22.6,
+            "pts": 13.5,
+            "reb": 1.8,
+            "stl": 1.2,
+            "to": 1.5
+          }
+        },
+        "Tristan Da Silva": {
+          "gp": 12,
+          "l5": {
+            "ast": 1.6,
+            "blk": 0.0,
+            "fg3": 3.2,
+            "fg3a": 9.0,
+            "fg_pct": 43.3,
+            "fga": 12.0,
+            "fgm": 5.2,
+            "fta": 1.4,
+            "ftm": 1.2,
+            "min": 31.6,
+            "pts": 14.8,
+            "reb": 4.6,
+            "stl": 0.8,
+            "to": 1.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.7,
+            "blk": 0.2,
+            "fg3": 3.2,
+            "fg3a": 8.1,
+            "fg_pct": 47.1,
+            "fga": 11.3,
+            "fgm": 5.3,
+            "fta": 0.8,
+            "ftm": 0.5,
+            "min": 30.2,
+            "pts": 14.4,
+            "reb": 3.9,
+            "stl": 0.5,
+            "to": 1.3
+          }
+        },
+        "Tristan da Silva": {
+          "gp": 12,
+          "l5": {
+            "ast": 1.6,
+            "blk": 0.0,
+            "fg3": 3.2,
+            "fg3a": 9.0,
+            "fg_pct": 43.3,
+            "fga": 12.0,
+            "fgm": 5.2,
+            "fta": 1.4,
+            "ftm": 1.2,
+            "min": 31.6,
+            "pts": 14.8,
+            "reb": 4.6,
+            "stl": 0.8,
+            "to": 1.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.7,
+            "blk": 0.2,
+            "fg3": 3.2,
+            "fg3a": 8.1,
+            "fg_pct": 47.1,
+            "fga": 11.3,
+            "fgm": 5.3,
+            "fta": 0.8,
+            "ftm": 0.5,
+            "min": 30.2,
+            "pts": 14.4,
+            "reb": 3.9,
+            "stl": 0.5,
+            "to": 1.3
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          18,
+          18
+        ],
+        "skipped": [
+          "Tristan Da Silva REB (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          39,
+          40
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 18 of 18 players (39 of 40 player-stats); skipped: Tristan Da Silva REB (no rung priced 1.40+ at or below std)",
+      "cx": {
+        "Jalen Suggs|AST|3.5|lean": {
+          "best_book": "ladbrokes",
+          "best_price": 1.48,
+          "mm_min": 29.2,
+          "mm_mu": 4.786,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6992,
+          "p_pin": 0.6165,
+          "p_wowy": 0.6992,
+          "pin_edge_pp": -5.9,
+          "pin_line": 4.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 4.786
+        },
+        "Moritz Wagner|PTS|4.5|PIN": {
+          "best_book": "pointsbet",
+          "best_price": 1.33,
+          "mm_min": 17.28,
+          "mm_mu": 9.715,
+          "n_books": 10,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9163,
+          "p_pin": 0.8042,
+          "p_wowy": 0.9163,
+          "pin_edge_pp": 5.2,
+          "pin_line": 7.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 9.715
+        },
+        "Moritz Wagner|PTS|5.5|lean": {
+          "best_book": "tabtouch",
+          "best_price": 1.5,
+          "mm_min": 17.28,
+          "mm_mu": 9.715,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8539,
+          "p_pin": 0.7168,
+          "p_wowy": 0.8539,
+          "pin_edge_pp": 4.1,
+          "pin_line": 7.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 9.715
+        },
+        "Nolan Traore|PTS|7.5|HR80": {
+          "best_book": "tabtouch",
+          "best_price": 1.3,
+          "mm_min": 23.87,
+          "mm_mu": 14.757,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9482,
+          "p_pin": 0.7832,
+          "p_wowy": 0.9482,
+          "pin_edge_pp": 0.8,
+          "pin_line": 11.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 14.757
+        },
+        "Nolan Traore|PTS|8.5|pick": {
+          "best_book": "pointsbet",
+          "best_price": 1.4,
+          "mm_min": 23.87,
+          "mm_mu": 14.757,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9132,
+          "p_pin": 0.7118,
+          "p_wowy": 0.9132,
+          "pin_edge_pp": -0.3,
+          "pin_line": 11.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 14.757
+        },
+        "Tristan Da Silva|PTS|7.5|HR80": {
+          "best_book": "tabtouch",
+          "best_price": 1.23,
+          "mm_min": 30.61,
+          "mm_mu": 16.011,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9556,
+          "p_pin": "",
+          "p_wowy": 0.9556,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 16.011
+        },
+        "Tristan da Silva|PTS|9.5|lean": {
+          "best_book": "tab",
+          "best_price": 1.48,
+          "mm_min": 30.61,
+          "mm_mu": 16.011,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8887,
+          "p_pin": 0.6877,
+          "p_wowy": 0.8887,
+          "pin_edge_pp": -0.7,
+          "pin_line": 11.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 16.011
+        }
+      },
+      "engine": "nba-session v3.31-p4",
+      "id": "ORL@BKN",
+      "leans": [
+        {
+          "alt": 5.5,
+          "e": 5.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "MT-",
+            "C0.53",
+            "Z1.16",
+            "PIN+4.1"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            11,
+            4,
+            10,
+            16,
+            12
+          ],
+          "o": 1.48,
+          "opp": "ORL 15th fewest PTS allowed · pace -0.6",
+          "p": "Moritz Wagner",
+          "s": "PTS",
+          "st": "4",
+          "std": 7.5,
+          "t": "BKN"
+        },
+        {
+          "alt": 9.5,
+          "e": 5.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "OT-ADJ",
+            "C0.60",
+            "Z1.19",
+            "PIN-0.7"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            12,
+            13,
+            12,
+            17.2,
+            18
+          ],
+          "o": 1.44,
+          "opp": "BKN 4th most PTS allowed · pace -0.6",
+          "p": "Tristan da Silva",
+          "s": "PTS",
+          "st": "4",
+          "std": 11.5,
+          "t": "ORL"
+        },
+        {
+          "alt": 3.5,
+          "e": 3.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "C0.72",
+            "Z1.00",
+            "PIN-5.9"
+          ],
+          "h": "83% (5/6)",
+          "l5": [
+            4,
+            4,
+            3,
+            6,
+            6
+          ],
+          "o": 1.48,
+          "opp": "BKN 9th most AST allowed · pace -0.6",
+          "p": "Jalen Suggs",
+          "s": "AST",
+          "st": "4",
+          "std": 4.5,
+          "t": "ORL"
+        },
+        {
+          "alt": 7.5,
+          "e": 5.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR80",
+            "OT-ADJ",
+            "C0.49",
+            "Z1.91",
+            "PIN+0.8"
+          ],
+          "h": "100% (10/10)",
+          "l5": [
+            13,
+            23,
+            11,
+            14,
+            19
+          ],
+          "o": 1.29,
+          "opp": "ORL 15th fewest PTS allowed · pace -0.6",
+          "p": "Nolan Traore",
+          "s": "PTS",
+          "st": "5",
+          "std": 11.5,
+          "t": "BKN"
+        },
+        {
+          "alt": 7.5,
+          "e": 4.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR80",
+            "[Std?]",
+            "OT-ADJ",
+            "C0.47",
+            "Z1.57"
+          ],
+          "h": "100% (10/10)",
+          "l5": [
+            12,
+            13,
+            12,
+            17.2,
+            18
+          ],
+          "o": 1.22,
+          "opp": "BKN 4th most PTS allowed · pace -0.6",
+          "p": "Tristan Da Silva",
+          "s": "PTS",
+          "st": "5",
+          "std": 13.5,
+          "t": "ORL"
+        },
+        {
+          "alt": 4.5,
+          "e": 3.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "PIN",
+            "BK-pointsbet",
+            "MT-",
+            "C0.44",
+            "Z1.41",
+            "PIN+5.2"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            11,
+            4,
+            10,
+            16,
+            12
+          ],
+          "o": 1.33,
+          "opp": "ORL 15th fewest PTS allowed · pace -0.6",
+          "p": "Moritz Wagner",
+          "s": "PTS",
+          "st": "4",
+          "std": 7.5,
+          "t": "BKN"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 101.7,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.8,
+          "PTS": 111.2,
+          "REB": 42.7,
+          "pace": 102.3
+        },
+        "teams": {
+          "BKN": {
+            "allow100": {
+              "3PM": 13.6,
+              "AST": 26.4,
+              "PTS": 113.4,
+              "REB": 41.7
+            },
+            "allow_rk": {
+              "3PM": 6,
+              "AST": 9,
+              "PTS": 4,
+              "REB": 27
+            },
+            "out": [],
+            "pace": 102.5,
+            "rk": {
+              "ast": 25,
+              "blk": 17,
+              "dreb": 25,
+              "fg3_pct": 13,
+              "fg3a": 11,
+              "fg3m": 9,
+              "fg_pct": 25,
+              "ft_pct": 26,
+              "fta": 5,
+              "net": 26,
+              "opp_fg3_pct": 21,
+              "opp_fg_pct": 24,
+              "oppg": 25,
+              "oreb": 18,
+              "pace": 11,
+              "pf": 30,
+              "ppg": 23,
+              "reb": 25,
+              "stl": 14,
+              "tov": 28,
+              "ts_pct": 14
+            },
+            "v": {
+              "ast": 24.4,
+              "ats": "7-7-0",
+              "ats_away": "6-2-0",
+              "ats_home": "1-5-0",
+              "ats_l10": "5-5-0",
+              "away": "2-6",
+              "blk": 4.9,
+              "dreb": 29.9,
+              "fg3_pct": 36.2,
+              "fg3a": 40.0,
+              "fg3m": 14.5,
+              "fg_pct": 44.9,
+              "ft_pct": 74.7,
+              "fta": 28.0,
+              "gp": 14,
+              "home": "1-5",
+              "l10": "3-7",
+              "net": -8.4,
+              "opp_fg3_pct": 36.6,
+              "opp_fg_pct": 47.7,
+              "oppg": 119.2,
+              "oreb": 11.4,
+              "ou": "9-5-0",
+              "ou_l10": "6-4-0",
+              "pace": 102.7,
+              "pf": 25.6,
+              "ppg": 110.9,
+              "reb": 41.3,
+              "rec": "3-11",
+              "stl": 8.3,
+              "tov": 17.5,
+              "ts_pct": 57.5
+            }
+          },
+          "ORL": {
+            "allow100": {
+              "3PM": 13.5,
+              "AST": 26.3,
+              "PTS": 111.3,
+              "REB": 41.8
+            },
+            "allow_rk": {
+              "3PM": 10,
+              "AST": 12,
+              "PTS": 16,
+              "REB": 26
+            },
+            "out": [],
+            "pace": 101.5,
+            "rk": {
+              "ast": 14,
+              "blk": 27,
+              "dreb": 10,
+              "fg3_pct": 17,
+              "fg3a": 10,
+              "fg3m": 13,
+              "fg_pct": 18,
+              "ft_pct": 18,
+              "fta": 23,
+              "net": 21,
+              "opp_fg3_pct": 28,
+              "opp_fg_pct": 18,
+              "oppg": 14,
+              "oreb": 24,
+              "pace": 25,
+              "pf": 19,
+              "ppg": 26,
+              "reb": 19,
+              "stl": 25,
+              "tov": 18,
+              "ts_pct": 17
+            },
+            "v": {
+              "ast": 26.7,
+              "ats": "6-8-0",
+              "ats_away": "6-2-0",
+              "ats_home": "0-6-0",
+              "ats_l10": "5-5-0",
+              "away": "5-3",
+              "blk": 4.2,
+              "dreb": 31.9,
+              "fg3_pct": 35.1,
+              "fg3a": 40.3,
+              "fg3m": 14.1,
+              "fg_pct": 45.7,
+              "ft_pct": 77.0,
+              "fta": 22.4,
+              "gp": 14,
+              "home": "1-5",
+              "l10": "5-5",
+              "net": -3.4,
+              "opp_fg3_pct": 37.9,
+              "opp_fg_pct": 46.6,
+              "oppg": 112.8,
+              "oreb": 10.8,
+              "ou": "7-7-0",
+              "ou_l10": "5-5-0",
+              "pace": 100.9,
+              "pf": 22.3,
+              "ppg": 109.4,
+              "reb": 42.7,
+              "rec": "6-8",
+              "stl": 7.4,
+              "tov": 16.1,
+              "ts_pct": 57.4
+            }
+          }
+        }
+      },
+      "out": {
+        "BKN": [
+          "Grant Nelson (Nelson (ankle) has been ruled out for Friday's game against Orlando.)"
+        ],
+        "ORL": [
+          "Izaiyah Nelson (Head coach Sean Sweeney said Wednesday that Nelson (ankle) has been doing \"some on-court stuff,\" though Sweeney added that the work has been \"minimal,\" Jason Beede of the Orlando Sentinel reports.)",
+          "Jonathan Isaac (Isaac (knee) has been ruled out for Monday's game against the Celtics.)",
+          "Noah Penda (Penda (hamstring) is making progress but remains without a timetable to return to game action, Jason Beede of the Orlando Sentinel reports.)",
+          "Paolo Banchero (Banchero is expected to be sidelined for the next four-to-six weeks due to a right high-ankle sprain, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [
+        {
+          "alt": 8.5,
+          "e": 7.1,
+          "f": [
+            "OT-ADJ",
+            "C0.56",
+            "Z1.66",
+            "PIN-0.3",
+            "U1"
+          ],
+          "h": "100% (10/10)",
+          "l5": [
+            13,
+            23,
+            11,
+            14,
+            19
+          ],
+          "o": 1.4,
+          "opp": "ORL 15th fewest PTS allowed · pace -0.6",
+          "p": "Nolan Traore",
+          "s": "PTS",
+          "st": "4",
+          "std": 11.5,
+          "t": "BKN"
+        }
+      ],
+      "proj": null,
+      "q": {
+        "BKN": [],
+        "ORL": []
+      },
+      "tip": "11:30"
+    },
+    {
+      "abs": {
+        "DET": [
+          {
+            "min": 29.8,
+            "name": "Duncan Robinson",
+            "roles": [
+              "SC2"
+            ]
+          }
+        ],
+        "TOR": [
+          {
+            "min": 35.3,
+            "name": "RJ Barrett",
+            "roles": [
+              "SC2"
+            ]
+          }
+        ]
+      },
+      "b2b": [],
+      "box5": {
+        "Ausar Thompson": {
+          "gp": 13,
+          "l5": {
+            "ast": 7.2,
+            "blk": 1.2,
+            "fg3": 0.0,
+            "fg3a": 0.4,
+            "fg_pct": 54.0,
+            "fga": 10.0,
+            "fgm": 5.4,
+            "fta": 1.2,
+            "ftm": 1.0,
+            "min": 30.4,
+            "pts": 11.8,
+            "reb": 8.0,
+            "stl": 2.8,
+            "to": 3.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 5.5,
+            "blk": 0.8,
+            "fg3": 0.0,
+            "fg3a": 0.4,
+            "fg_pct": 51.8,
+            "fga": 8.6,
+            "fgm": 4.5,
+            "fta": 2.1,
+            "ftm": 1.5,
+            "min": 28.3,
+            "pts": 10.4,
+            "reb": 8.5,
+            "stl": 1.7,
+            "to": 2.6
+          }
+        },
+        "Jamal Shead": {
+          "gp": 15,
+          "l5": {
+            "ast": 5.4,
+            "blk": 0.0,
+            "fg3": 1.2,
+            "fg3a": 4.0,
+            "fg_pct": 41.9,
+            "fga": 8.6,
+            "fgm": 3.6,
+            "fta": 2.2,
+            "ftm": 1.4,
+            "min": 22.8,
+            "pts": 9.8,
+            "reb": 1.4,
+            "stl": 0.4,
+            "to": 1.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 6.5,
+            "blk": 0.1,
+            "fg3": 1.0,
+            "fg3a": 3.5,
+            "fg_pct": 38.5,
+            "fga": 7.3,
+            "fgm": 2.8,
+            "fta": 2.0,
+            "ftm": 1.6,
+            "min": 23.8,
+            "pts": 8.2,
+            "reb": 1.9,
+            "stl": 1.1,
+            "to": 1.9
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          14,
+          14
+        ],
+        "skipped": [
+          "Ja'kobe Walter REB (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          33,
+          34
+        ]
+      },
+      "ctx": "Out TOP3: RJ Barrett (TOR), Duncan Robinson (DET); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 14 of 14 players (33 of 34 player-stats); skipped: Ja'kobe Walter REB (no rung priced 1.40+ at or below std)",
+      "cx": {
+        "Ausar Thompson|AST|3.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.53,
+          "mm_min": 32.97,
+          "mm_mu": 6.937,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "SC2:RJ Barrett",
+          "p_mm": 0.8544,
+          "p_pin": 0.612,
+          "p_wowy": 0.8386,
+          "pin_edge_pp": -4.2,
+          "pin_line": 4.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.178,
+          "wowy_keys": "Duncan Robinson",
+          "wowy_mu": 6.713
+        },
+        "Jamal Shead|AST|4.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.71,
+          "mm_min": 29.25,
+          "mm_mu": 8.816,
+          "n_books": 9,
+          "opp_lift": 0.0,
+          "opp_out": "SC2:Duncan Robinson",
+          "p_mm": 0.9289,
+          "p_pin": 0.5729,
+          "p_wowy": 0.8059,
+          "pin_edge_pp": -1.2,
+          "pin_line": 4.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.087,
+          "wowy_keys": "RJ Barrett",
+          "wowy_mu": 6.925
+        }
+      },
+      "engine": "nba-session v3.31-p4",
+      "id": "TOR@DET",
+      "leans": [
+        {
+          "alt": 3.5,
+          "e": 4.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.62",
+            "Z0.71",
+            "TMO",
+            "PIN-4.2",
+            "OPP-OUT:SC2"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            4,
+            12,
+            5,
+            9.1,
+            4
+          ],
+          "o": 1.53,
+          "opp": "TOR 11th fewest AST allowed · pace -0.9",
+          "p": "Ausar Thompson",
+          "s": "AST",
+          "st": "4",
+          "std": 4.5,
+          "t": "DET"
+        },
+        {
+          "alt": 4.5,
+          "e": 3.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "[ROLE?]",
+            "MU-6%",
+            "OT-ADJ",
+            "MT-",
+            "C0.67",
+            "Z0.67",
+            "TMO",
+            "PIN-1.2",
+            "OPP-OUT:SC2"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            6,
+            6,
+            3.6,
+            5,
+            6
+          ],
+          "o": 1.71,
+          "opp": "DET 3rd fewest AST allowed · pace -0.9",
+          "p": "Jamal Shead",
+          "s": "AST",
+          "st": "3",
+          "std": 4.5,
+          "t": "TOR"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 101.4,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.8,
+          "PTS": 111.2,
+          "REB": 42.7,
+          "pace": 102.3
+        },
+        "teams": {
+          "DET": {
+            "allow100": {
+              "3PM": 12.4,
+              "AST": 24.5,
+              "PTS": 108.6,
+              "REB": 43.2
+            },
+            "allow_rk": {
+              "3PM": 29,
+              "AST": 28,
+              "PTS": 25,
+              "REB": 8
+            },
+            "out": [
+              {
+                "min": 29.8,
+                "name": "Duncan Robinson",
+                "roles": [
+                  "SC2"
+                ]
+              }
+            ],
+            "pace": 102.0,
+            "rk": {
+              "ast": 5,
+              "blk": 2,
+              "dreb": 10,
+              "fg3_pct": 7,
+              "fg3a": 24,
+              "fg3m": 17,
+              "fg_pct": 9,
+              "ft_pct": 11,
+              "fta": 14,
+              "net": 6,
+              "opp_fg3_pct": 3,
+              "opp_fg_pct": 5,
+              "oppg": 6,
+              "oreb": 14,
+              "pace": 19,
+              "pf": 25,
+              "ppg": 11,
+              "reb": 15,
+              "stl": 6,
+              "tov": 7,
+              "ts_pct": 9
+            },
+            "v": {
+              "ast": 28.0,
+              "ats": "9-5-0",
+              "ats_away": "6-3-0",
+              "ats_home": "3-2-0",
+              "ats_l10": "6-4-0",
+              "away": "7-2",
+              "blk": 6.1,
+              "dreb": 31.9,
+              "fg3_pct": 37.1,
+              "fg3a": 35.6,
+              "fg3m": 13.2,
+              "fg_pct": 46.9,
+              "ft_pct": 79.3,
+              "fta": 24.9,
+              "gp": 14,
+              "home": "3-2",
+              "l10": "7-3",
+              "net": 6.4,
+              "opp_fg3_pct": 32.8,
+              "opp_fg_pct": 44.1,
+              "oppg": 108.9,
+              "oreb": 12.0,
+              "ou": "8-6-0",
+              "ou_l10": "6-4-0",
+              "pace": 101.9,
+              "pf": 23.5,
+              "ppg": 115.4,
+              "reb": 43.9,
+              "rec": "10-4",
+              "stl": 9.3,
+              "tov": 14.2,
+              "ts_pct": 58.4
+            }
+          },
+          "TOR": {
+            "allow100": {
+              "3PM": 12.8,
+              "AST": 25.6,
+              "PTS": 111.4,
+              "REB": 42.7
+            },
+            "allow_rk": {
+              "3PM": 21,
+              "AST": 20,
+              "PTS": 14,
+              "REB": 14
+            },
+            "out": [
+              {
+                "min": 35.3,
+                "name": "RJ Barrett",
+                "roles": [
+                  "SC2"
+                ]
+              }
+            ],
+            "pace": 101.6,
+            "rk": {
+              "ast": 6,
+              "blk": 21,
+              "dreb": 30,
+              "fg3_pct": 23,
+              "fg3a": 22,
+              "fg3m": 24,
+              "fg_pct": 21,
+              "ft_pct": 29,
+              "fta": 15,
+              "net": 16,
+              "opp_fg3_pct": 21,
+              "opp_fg_pct": 23,
+              "oppg": 12,
+              "oreb": 6,
+              "pace": 24,
+              "pf": 29,
+              "ppg": 20,
+              "reb": 27,
+              "stl": 3,
+              "tov": 4,
+              "ts_pct": 28
+            },
+            "v": {
+              "ast": 27.9,
+              "ats": "6-9-0",
+              "ats_away": "3-4-0",
+              "ats_home": "3-5-0",
+              "ats_l10": "3-7-0",
+              "away": "3-4",
+              "blk": 4.4,
+              "dreb": 27.4,
+              "fg3_pct": 33.6,
+              "fg3a": 35.9,
+              "fg3m": 12.1,
+              "fg_pct": 45.4,
+              "ft_pct": 71.1,
+              "fta": 24.7,
+              "gp": 15,
+              "home": "2-6",
+              "l10": "2-8",
+              "net": 0.0,
+              "opp_fg3_pct": 36.6,
+              "opp_fg_pct": 47.6,
+              "oppg": 112.0,
+              "oreb": 13.2,
+              "ou": "7-8-0",
+              "ou_l10": "5-5-0",
+              "pace": 101.2,
+              "pf": 25.0,
+              "ppg": 112.0,
+              "reb": 40.6,
+              "rec": "5-10",
+              "stl": 9.7,
+              "tov": 13.5,
+              "ts_pct": 55.1
+            }
+          }
+        }
+      },
+      "out": {
+        "DET": [
+          "Duncan Robinson (Robinson will be re-evaluated in one week due to a left quadriceps strain, Coty M. Davis of The Detroit News reports.)",
+          "Ebuka Okorie (Okorie (oblique) has been ruled out for Friday's game against Toronto.)",
+          "Jalen Duren (Duren (hamstring) has begun on-court activity and will be re-evaluated in two weeks, Hunter Patterson of The Athletic reports.)",
+          "Taurean Prince (Prince underwent right knee surgery and is listed as out for Friday's game against the Raptors.)"
+        ],
+        "TOR": [
+          "Collin Murray-Boyles (Murray-Boyles (concussion) has been ruled out for Friday's game against the Pistons.)",
+          "Kawhi Leonard (Leonard (knee) could return in the next few weeks, per Shams Charania of ESPN.)",
+          "Nate Bittle (Bittle (foot) has been ruled out for Sunday's game against the Knicks, Zulfi Sheikh of Sportsnet.ca reports.)",
+          "RJ Barrett (Barrett has been diagnosed with a right hamstring strain and will be re-evaluated in two weeks, Brett Siegel of ClutchPoints.com reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "DET": [
+          "Cade Cunningham (Cunningham (knee) is expected to play in Friday's game against the Raptors, Blake Murphy of Sportsnet.ca reports.)",
+          "Ronald Holland II (Holland (knee) has been upgraded to doubtful for Friday's game against Toronto, Hunter Patterson of The Athletic reports.)",
+          "Ugonna Onyenso (Onyenso agreed to a two-way contract with the Pistons on Thursday.)"
+        ],
+        "TOR": []
+      },
+      "tip": "11:30"
     }
   ],
-  "generated": "2026-11-20T22:30:02Z",
+  "generated": "2026-11-20T23:05:02Z",
   "totals": [
     [
       "CHA@ATL",
       null,
       219.5
+    ],
+    [
+      "IND@CLE",
+      null,
+      null
+    ],
+    [
+      "ORL@BKN",
+      null,
+      null
+    ],
+    [
+      "TOR@DET",
+      null,
+      null
     ]
   ],
   "tz": "Melbourne time (AEDT)"
