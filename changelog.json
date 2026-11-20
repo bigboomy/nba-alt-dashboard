@@ -4,6 +4,14 @@
   {
    "date": "2026-11-20",
    "version": "nba-session v3.29-p4",
+   "component": "dashboard",
+   "title": "Clearer Pinnacle wording",
+   "change": "Verdict and scout notes now say Pinnacle rates his chance X pp below (or above) what the price needs, instead of 'prices it worse than we get'.",
+   "aim": "Critic 20 Nov: the old wording read like a good deal when it was a warning."
+  },
+  {
+   "date": "2026-11-20",
+   "version": "nba-session v3.29-p4",
    "component": "engine",
    "title": "OUTLIFT 7/10 gate removed",
    "change": "OUTLIFT goes back to the highest-priced $1.20-1.59 rung at or under the main line, whatever its hit rate; the v3.28 gate never ran on a slate.",

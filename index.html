@@ -967,7 +967,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     else if(has('[MIN↑]')||has('MT+')) risk.push('his minutes are up');
     if(P.bs.some(function(b){return b.f.some(function(f){return /^B2B/.test(f)})})) risk.push(t+' are on the second night of a back-to-back');
     if(has('DOG7')) risk.push(t+' are big underdogs, so blowout minutes are a risk');
-    if(pins.length&&pins.every(function(v){return v<=-2})) risk.push('Pinnacle prices '+(pins.length>1?'all of these':'it')+' worse than we get');
+    if(pins.length&&pins.every(function(v){return v<=-2})) risk.push('Pinnacle rates '+(pins.length>1?'his chances below what these prices need':'his chance below what this price needs'));
     else if(pins.length&&pins.every(function(v){return v>=2})) risk.push('Pinnacle agrees');
     if(risk.length){var r=andList(risk.slice(0,3));out.push(r.charAt(0).toUpperCase()+r.slice(1)+'.')}
     return out.join(' ');
