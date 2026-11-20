@@ -4,6 +4,14 @@
   {
    "date": "2026-11-20",
    "version": "nba-session v3.28-p4",
+   "component": "dashboard",
+   "title": "Scout notes fold away",
+   "change": "Each player's scout note sits behind a 'Scout note' toggle, collapsed by default.",
+   "aim": "Mitch 20 Nov: less text on screen until wanted."
+  },
+  {
+   "date": "2026-11-20",
+   "version": "nba-session v3.28-p4",
    "component": "engine",
    "title": "OUTLIFT needs 7 of his last 10",
    "change": "An OUTLIFT item now needs its rung to have hit in at least 70% of the sample (7/10); the highest-priced band rung that passes is logged, otherwise none.",

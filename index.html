@@ -262,7 +262,8 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 details.cds{margin-top:5px}details.cds>summary{cursor:pointer;list-style:none;color:var(--muted);font-size:12px}details.cds>summary::-webkit-details-marker{display:none}
 details.cds>summary::before{content:"▸ "}details.cds[open]>summary::before{content:"▾ "}
 .tdet .cbar{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
-.scn{margin:-2px 0 8px;font-size:12.5px;line-height:1.45;color:var(--muted)}
+.scn{margin:-2px 0 8px;font-size:12.5px;line-height:1.45;color:var(--muted)}.scn>summary{cursor:pointer;list-style:none;font-size:12px}.scn>summary::-webkit-details-marker{display:none}
+.scn>summary::before{content:"▸ "}.scn[open]>summary::before{content:"▾ "}.scn p{margin:3px 0 0}
 </style>
 </head>
 <body><div class="wrap">
@@ -968,7 +969,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
           '<div><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span>'+(x?'<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+'</span>':'')+'</div></button>'}).join('');
       var dets=P.bs.map(function(b,j){var h='';try{h=tileDet(b,g,gi)}catch(e){}return '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+h+'</div>'}).join('');
       var sn='';try{sn=scoutNote(g,P)}catch(e){}
-      return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+(sn?'<p class="scn">'+esc(sn)+'</p>':'')+'<div class="tiles">'+tiles+'</div>'+dets+'</div>'}).join('');
+      return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+(sn?'<details class="scn"><summary>Scout note</summary><p>'+esc(sn)+'</p></details>':'')+'<div class="tiles">'+tiles+'</div>'+dets+'</div>'}).join('');
   }
   document.addEventListener('click',function(ev){
     var t=ev.target.closest&&ev.target.closest('.tile[data-tk]');if(!t) return;
