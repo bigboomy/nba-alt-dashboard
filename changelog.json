@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-20",
+   "version": "nba-session v3.31-p4",
+   "component": "dashboard",
+   "title": "Last 5 games dropdown per player",
+   "change": "Each player tile has a 'Last 5 games' dropdown with last-5 and season per-game averages: MIN, PTS, REB, AST, 3PM-A, FGM-A, FG%, FTM-A, STL, BLK, TO; tonight's bet stats shaded, minutes 4+ under season in amber.",
+   "aim": "Mitch 20 Nov (averages only); data from the ESPN game log the pipeline already fetches (data.json box5). Display only."
+  },
+  {
+   "date": "2026-11-20",
    "version": "nba-session v3.30-p4",
    "component": "dashboard",
    "title": "Dashboard critique fixes: best leans on top, clearer rings, thinner rows",
