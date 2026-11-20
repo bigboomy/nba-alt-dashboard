@@ -274,11 +274,6 @@ details.cds>summary::before{content:"▸ "}details.cds[open]>summary::before{con
 .tdet .cbar{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
 .scn{margin:-2px 0 8px;font-size:12.5px;line-height:1.45;color:var(--muted)}.scn>summary{cursor:pointer;list-style:none;font-size:12px}.scn>summary::-webkit-details-marker{display:none}
 .scn>summary::before{content:"▸ "}.scn[open]>summary::before{content:"▾ "}.scn p{margin:3px 0 0}
-table.b5t{width:100%;border-collapse:collapse;table-layout:fixed;font-size:12.5px;line-height:1.3;margin:4px 0 8px;color:var(--text)}
-table.b5t th,table.b5t td{padding:4px 3px;text-align:right;font-variant-numeric:tabular-nums;border-top:1px solid var(--line);white-space:nowrap}
-table.b5t thead th{border-top:0;font-size:11px;font-weight:600;color:var(--muted)}table.b5t th[scope=row]{text-align:left;font-weight:600;color:var(--muted);width:23%}
-table.b5t.sh th[scope=row]{width:20%}table.b5t.sh th:nth-child(2){width:22%}table.b5t.sh th:nth-child(4){width:18%}table.b5t.sh td{padding:4px 2px}
-table.b5t td.bt{font-weight:700;background:var(--chip)}table.b5t td.lo{color:var(--warn);font-weight:700}
 .b5n{margin:0 0 6px;font-size:11.5px;color:var(--muted)}
 .abh{font-size:12.5px;margin:8px 0 4px;color:var(--muted)}.abh b{color:var(--text)}table.abt td{text-align:right;font-variant-numeric:tabular-nums}table.abt td.up{color:var(--good);font-weight:700}
 
@@ -306,6 +301,16 @@ details.lf>summary::after,details.fold>summary::after,details.cds>summary::after
 details.lf[open]>summary::after,details.fold[open]>summary::after,details.cds[open]>summary::after,.scn[open]>summary::after{transform:rotate(45deg);content:""}
 details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::before,.scn[open]>summary::before{content:none}
 @media (prefers-reduced-motion:reduce){details>summary::after{transition:none}}
+
+/* Last 5 games strip (20 Nov redesign) */
+.b5g{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;margin:6px 0 4px}
+.b5c{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:5px 2px 4px;text-align:center;min-width:0}
+.b5c b{display:block;font:600 16px/1.1 var(--disp);color:var(--text);font-variant-numeric:tabular-nums;white-space:nowrap}
+.b5c span{display:block;font-size:11px;color:var(--muted);margin-top:1px}
+.b5c.bt{background:var(--o5);border-color:transparent}.b5c.bt b{color:var(--o5t)}
+.b5c.lo b{color:var(--warn)}
+.b5n{margin:2px 0 6px;font-size:12px;color:var(--muted)}
+.b5s{border-top:1px solid var(--line);padding-top:6px;margin-top:4px}.b5s h4{margin:0 0 2px;font-size:12.5px;color:var(--text)}.b5s p{margin:0}
 </style>
 </head>
 <body><div class="wrap">
@@ -945,22 +950,24 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
      data.json game.box5[player] = {n, gp, l5:{...}, season:{...}} from the ESPN game log (raw numbers, current season).
      Stats he has a bet on tonight are shaded; minutes 4+ under his season average are amber. Display only. */
   var B5S={PTS:'pts',REB:'reb',AST:'ast','3PM':'fg3'};
-  function box5Html(g,P){
-    var b=g.box5&&g.box5[P.n];if(!b||!b.l5||!b.season) return '';
-    var bet={};P.bs.forEach(function(x){if(B5S[x.s])bet[B5S[x.s]]=1});
-    function f1(v){return v===null||v===undefined?'—':Number(v).toFixed(1)}
-    function ma(o,m,a){return f1(o[m])+'-'+f1(o[a])}
-    var lowMin=b.l5.min<=b.season.min-4;
-    function row(lab,o,isL5,cols){return '<tr><th scope="row">'+lab+'</th>'+cols.map(function(c){
-      var cl=isL5&&bet[c[0]]?' class="bt"':(isL5&&c[0]==='min'&&lowMin?' class="lo"':'');return '<td'+cl+'>'+c[1](o)+'</td>'}).join('')+'</tr>'}
-    function tbl(cols,cl){return '<table class="b5t'+(cl?' '+cl:'')+'"><thead><tr><th></th>'+cols.map(function(c){return '<th scope="col">'+c[2]+'</th>'}).join('')+'</tr></thead><tbody>'+
-      row('Last '+b.n,b.l5,true,cols)+row('Season',b.season,false,cols)+'</tbody></table>'}
-    var A=[['min',function(o){return f1(o.min)},'MIN'],['pts',function(o){return f1(o.pts)},'PTS'],['reb',function(o){return f1(o.reb)},'REB'],
-           ['ast',function(o){return f1(o.ast)},'AST'],['fg3',function(o){return ma(o,'fg3','fg3a')},'3PM-A']];
-    var B=[['fg',function(o){return ma(o,'fgm','fga')},'FGM-A'],['fgp',function(o){return o.fg_pct===null||o.fg_pct===undefined?'—':Number(o.fg_pct).toFixed(0)+'%'},'FG%'],
-           ['ft',function(o){return ma(o,'ftm','fta')},'FTM-A'],['stl',function(o){return f1(o.stl)},'STL'],['blk',function(o){return f1(o.blk)},'BLK'],['to',function(o){return f1(o.to)},'TO']];
-    return '<details class="scn b5"><summary>Last '+b.n+' games</summary>'+tbl(A)+tbl(B,'sh')+
-      '<p class="b5n">Per-game averages. Season = '+b.gp+' game'+(b.gp===1?'':'s')+' this season. Shaded = tonight\'s bet stat'+(lowMin?'; amber = minutes 4+ under his season average':'')+'.</p></details>';
+  /* Last 5 games (Mitch 20 Nov redesign): last-5 averages only as a box-score strip (no season row, no TO/BLK),
+     tonight's bet stat tinted, the Scout note folded in at the bottom. Display only. */
+  function box5Html(g,P,sn){
+    var b=g.box5&&g.box5[P.n],body='';
+    if(b&&b.l5){
+      var L=b.l5,bet={};P.bs.forEach(function(x){if(B5S[x.s])bet[B5S[x.s]]=1});
+      function f1(v){return v===null||v===undefined?'—':Number(v).toFixed(1)}
+      function ma(m,a){return f1(L[m])+'-'+f1(L[a])}
+      var lowMin=b.season&&L.min!==undefined&&b.season.min!==undefined&&L.min<=b.season.min-4;
+      var C=[['min','MIN',f1(L.min)],['pts','PTS',f1(L.pts)],['reb','REB',f1(L.reb)],['ast','AST',f1(L.ast)],['fg3','3PM-A',ma('fg3','fg3a')],
+             ['fg','FGM-A',ma('fgm','fga')],['fgp','FG%',L.fg_pct===null||L.fg_pct===undefined?'—':Number(L.fg_pct).toFixed(0)+'%'],['ft','FTM-A',ma('ftm','fta')],['stl','STL',f1(L.stl)]];
+      body='<div class="b5g">'+C.map(function(c){var cl=bet[c[0]]?' bt':(c[0]==='min'&&lowMin?' lo':'');
+        return '<div class="b5c'+cl+'"><b>'+c[2]+'</b><span>'+c[1]+'</span></div>'}).join('')+'</div>'+
+        '<p class="b5n">Averages over his last '+b.n+' games. Tinted = tonight\'s bet stat'+(lowMin?'; amber minutes = 4+ under his season average':'')+'.</p>';
+    }
+    if(!body&&!sn) return '';
+    return '<details class="scn b5"><summary>'+(body?'Last '+b.n+' games':'Scout note')+'</summary>'+body+
+      (sn?'<div class="b5s">'+(body?'<h4>Scout note</h4>':'')+'<p>'+esc(sn)+'</p></div>':'')+'</details>';
   }
   /* Scout note (Mitch 20 Nov: "a scout report style", facts only): 2-3 plain sentences per player built from data
      already in the card (outs, what the opponent allows, form against the line, minutes, fatigue, Pinnacle).
@@ -1038,8 +1045,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
           (x?'<span class="kd"><span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span></span>':'')+'</button>'+
           '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+det+'</div>'}).join('');
       var sn='';try{sn=scoutNote(g,P)}catch(e){}
-      var b5='';try{b5=box5Html(g,P)}catch(e){}
-      return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+(sn?'<details class="scn"><summary>Scout note</summary><p>'+esc(sn)+'</p></details>':'')+b5+rows+'</div>'}).join('');
+      var b5='';try{b5=box5Html(g,P,sn)}catch(e){}
+      return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+b5+rows+'</div>'}).join('');
   }
   document.addEventListener('click',function(ev){
     var t=ev.target.closest&&ev.target.closest('.bet[data-tk]');if(!t) return;
