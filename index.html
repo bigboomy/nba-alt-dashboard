@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>NBA Alt-Over Dashboard v2</title>
+<title>NBA Alt-Over Dashboard</title>
 <meta name="description" content="Alt-over picks, results by odds band, calibration and today's slate.">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
@@ -16,7 +16,7 @@
 :root{--bg:#f6f7f9;--card:#fff;--text:#14171c;--muted:#5f6b7a;--line:#e3e7ec;--accent:#1d4ed8;--good:#0f7b3f;--warn:#b45309;--bad:#b91c1c;--chip:#eef2f7}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0e1116;--card:#171b22;--text:#e8ebf0;--muted:#97a3b3;--line:#262c36;--accent:#6ea0ff;--good:#4ade80;--warn:#fbbf24;--bad:#f87171;--chip:#202632}}
 /* Box-score redesign (Mitch 20 Nov): grey-blue page, navy ink, condensed scoreboard numbers. */
-:root{--bg:#EEF1F4;--card:#fff;--text:#12233F;--muted:#5A6577;--line:#D7DDE5;--accent:#1F4E8C;--good:#1E8C4E;--warn:#B45309;--bad:#B3261E;--chip:#E8EDF3;
+:root{--bg:#EEF1F4;--card:#fff;--text:#12233F;--muted:#5A6577;--line:#D7DDE5;--accent:#1F4E8C;--good:#17733F;--warn:#B45309;--bad:#B3261E;--chip:#E8EDF3;
   --pts:#1F5FB0;--reb:#6D3FB5;--ast:#B0357A;--tpm:#0F7A80;--o5:#DCEFE3;--o5t:#14532D;--u5:#F1F3F6;--rtrack:#E3E8EF;
   --disp:'Barlow Condensed','Arial Narrow',sans-serif;--body:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1726;--card:#15223A;--text:#E8EDF5;--muted:#9AA8BD;--line:#26354F;--accent:#7DA8E8;
@@ -143,7 +143,7 @@ details.lf>summary span{color:var(--muted)}details.lf>summary b{color:var(--text
 .gx .cc{border:0;padding:0}
 @media (prefers-reduced-motion:reduce){.gx summary::before{transition:none}}
 
-:root{--ca:#0072b2;--cb:#d98a00;--cc:#b83a8a;--up:22,163,74;--dn:220,38,38}
+:root{--ca:#0072b2;--cb:#9A6200;--cc:#b83a8a;--up:22,163,74;--dn:220,38,38}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ca:#56b4e9;--cb:#f0b429;--cc:#e58ac0;--up:74,222,128;--dn:248,113,113}}
 .seg{display:flex;gap:6px;margin:0 0 6px}
 .range{color:var(--muted);font-size:.75rem;margin:0 0 10px}
@@ -275,27 +275,53 @@ details.cds>summary::before{content:"▸ "}details.cds[open]>summary::before{con
 .scn{margin:-2px 0 8px;font-size:12.5px;line-height:1.45;color:var(--muted)}.scn>summary{cursor:pointer;list-style:none;font-size:12px}.scn>summary::-webkit-details-marker{display:none}
 .scn>summary::before{content:"▸ "}.scn[open]>summary::before{content:"▾ "}.scn p{margin:3px 0 0}
 .abh{font-size:12.5px;margin:8px 0 4px;color:var(--muted)}.abh b{color:var(--text)}table.abt td{text-align:right;font-variant-numeric:tabular-nums}table.abt td.up{color:var(--good);font-weight:700}
+
+/* Critique fixes (20 Nov): one-line KPI on 0-pick days, best-leans strip, ring + last-10, 44px targets, one chevron. */
+.stats.one{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:12px}
+.stats.one p{margin:0;font-size:.9rem;color:var(--muted)}.stats.one b{color:var(--text);font-family:var(--disp);font-size:1.15rem}
+.best{background:var(--card);border-radius:0;border-top:4px solid var(--accent);padding:12px 12px 6px;margin-bottom:14px}
+.best h2{font-size:1.45rem;font-weight:700;margin:0}.best .bsub{margin:2px 0 10px;font-size:.85rem;color:var(--muted)}
+.best .bet .sl strong{font-size:15px}.best .bet .bg{font-size:12px;color:var(--muted)}
+.best .bet .kd{display:flex;gap:6px;align-items:center}
+.bet .rc{grid-row:1/3;align-self:start;display:flex;flex-direction:column;align-items:center;gap:1px}
+.bet .rc .ring{grid-row:auto}
+.l10{font:600 11px/1 var(--body);color:var(--muted);font-variant-numeric:tabular-nums}
+.kt{margin:0 0 6px}.kt .k{font-size:11px;font-weight:700;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:1px 6px}.kt .k.pk{color:var(--accent);border-color:var(--accent)}
+.bet{min-height:52px}
+.stat em{font-size:.78rem}
+.foot{max-width:62ch}
+p,li,.bsub{text-wrap:pretty}h1,h2,h3,h4{text-wrap:balance}
+.tab{min-height:44px}
+details.lf>summary,details.fold>summary{min-height:44px}
+details.cds>summary,.scn>summary{display:inline-flex;align-items:center;gap:6px;min-height:44px}
+:where(.tab,.cbtn,summary,button):focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+/* one disclosure chevron everywhere (was three glyph styles) */
+details.lf>summary::after,details.fold>summary::after,details.cds>summary::after,.scn>summary::after{content:"";width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s;flex:none;margin:0 4px}
+details.lf[open]>summary::after,details.fold[open]>summary::after,details.cds[open]>summary::after,.scn[open]>summary::after{transform:rotate(45deg);content:""}
+details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::before,.scn[open]>summary::before{content:none}
+@media (prefers-reduced-motion:reduce){details>summary::after{transition:none}}
 </style>
 </head>
 <body><div class="wrap">
-  <h1>NBA Alt-Over Dashboard </h1>
+  <h1>NBA Alt-Over Dashboard</h1>
   <p class="sub" id="sub">Loading slate…</p>
   <div class="stale" id="health" role="status" hidden></div>
   <section id="slate" aria-label="Today's slate" hidden>
     <h2 class="sec">Today's slate</h2>
     <div class="stale" id="stale" role="status" hidden></div>
-    <div class="lockbar" id="lockbar" hidden></div>
     <p class="nextl" id="nextl" hidden></p>
     <div class="stats" id="stats"></div>
     <div class="stats today" id="today" hidden></div>
+    <section class="best" id="best" aria-label="Best leans tonight" hidden></section>
     <div class="tabs" id="tabs" role="group" aria-label="Filter by game"></div>
     <div id="games"></div>
-    <details class="fold inner" id="projFold"><summary><span>Projected totals <span class="meta">interest only, not a bet</span></span></summary>
-    <div class="ts"><table id="totals" style="min-width:0;border:0"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table></div>
-    </details>
   </section>
 
+  <div class="lockbar" id="lockbar" hidden></div>
   <section class="board" id="board" aria-label="Scoreboard"><h2>Scoreboard</h2><p class="load">Loading…</p></section>
+    <details class="fold" id="projFold"><summary><span>Projected totals <span class="meta">interest only, not a bet</span></span></summary>
+    <div class="ts"><table id="totals" style="min-width:0;border:0"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table></div>
+    </details>
 
   <details class="fold" id="moreRec"><summary><span>Full record and tier details <span class="meta">bands, stats, charts, every tier</span></span></summary>
   <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
@@ -705,7 +731,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       '<p class="range">'+fdateY(rg.from)+' → '+fdateY(rg.to)+' · as of latest settled day</p>'+
       '<h3>By odds band</h3>'+bandTable(rows)+shadowBlock(rows)+'<p class="cap">Green: hit rate above break-even; red: below. Intensity scales with the gap (capped at 15 pp); grey when n&lt;10.</p>'+
       '<h3>By stat</h3>'+stTable(rows)+
-      (CHOICES_OK?callsTable(allw):'')+
+      (CHOICES_OK&&Object.keys(CHOICES).length?callsTable(allw):'')+
       '<details class="fold inner" id="grFold"'+(GR_OPEN?' open':'')+'><summary><span>Over time <span class="meta">charts</span></span></summary>'+overTime(VR,rg)+'</details>'+
       '</details>';
     box.innerHTML=h;
@@ -794,7 +820,6 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     function kout(k){var v=(g.abs&&g.abs[k])||[];return v.length?v.map(function(o){return '<div class="ij">'+esc(o.name)+' <span class="mu">'+esc((o.roles||[]).join('/'))+'</span></div>'}).join(''):'<span class="mu">—</span>'}
     if(g.hasInfo){
       rows+='<tr><th scope="row">Injuries</th><td>'+inj(A)+'</td><td>'+inj(H)+'</td></tr>'+
-        (g.abs?'<tr><th scope="row">Key out<br><span class="mu">fresh</span></th><td>'+kout(A)+'</td><td>'+kout(H)+'</td></tr>':'')+
         (g.b2b?'<tr><th scope="row">B2B</th><td>'+(g.b2b.indexOf(A)>=0?'Yes':'—')+'</td><td>'+(g.b2b.indexOf(H)>=0?'Yes':'—')+'</td></tr>':'');
     }
     var tot='';
@@ -965,8 +990,12 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function stPill(s){return '<span class="stn '+(STC[s]||'oth')+'">'+esc(STW[s]||s)+'</span>'}
   function l5Html(p){if(!p.l5||!p.l5.length) return '';
     return '<span class="l5" aria-label="Last '+p.l5.length+', newest first: '+p.l5.join(', ')+'">'+p.l5.map(function(v){return '<i class="'+(v>p.alt?'o':'u')+'">'+v+'</i>'}).join('')+'</span>'}
-  function ringKey(){return '<div class="rkey"><span>Last 5, newest first: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em></span></div>'}
-  var BH='<div class="bh"><span>Hit /10</span><span>Line</span><span>Odds</span></div>';
+  function ringKey(list){var has=(list||[]).some(function(b){return b.l5&&b.l5.length});
+    return '<div class="rkey"><span>Chance /10:</span>'+[[.85,'8.5+'],[.8,'8'],[.75,'7.5'],[.7,'7'],[0,'under 7']].map(function(x){return '<span><i style="border-color:'+ringCol(x[0])+'"></i>'+x[1]+'</span>'}).join('')+
+      (has?'<span>· Last 5, newest first: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em></span>':'')+'</div>'}
+  function l10Of(b){var kn=hitKN(b.h);return kn?'<span class="l10" aria-label="cleared '+kn[0]+' of last '+kn[1]+'">'+kn[0]+'/'+kn[1]+'</span>':''}
+  function bid(g,b){return g.id+'|'+b.p+'|'+b.s+'|'+b.alt}
+  var BH='<div class="bh"><span>Chance /10</span><span>Line</span><span>Odds</span></div>';
   function playerBlocks(g,gi,list){
     var by={},order=[];
     list.forEach(function(p){if(!by[p.p]){by[p.p]=[];order.push(p.p)}by[p.p].push(p)});
@@ -976,11 +1005,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       .sort(function(a,b){return (b.pk?1:0)-(a.pk?1:0)||a.best-b.best||b.bs.length-a.bs.length||a.i-b.i});
     return ps.map(function(P){
       var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'';
-      var rows=P.bs.map(function(b,j){var x=resFor(b),k=kindTag(b),det='';try{det=knLine(b)+tileDet(b,g,gi)}catch(e){}
-        return '<button class="bet" type="button" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'">'+ringHtml(b)+
+      var rows=P.bs.map(function(b,j){var x=resFor(b),k=kindTag(b),det='';try{det='<p class="kt"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span></p>'+knLine(b)+tileDet(b,g,gi)}catch(e){}
+        return '<button class="bet" type="button" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'"><span class="rc">'+ringHtml(b)+l10Of(b)+'</span>'+
           '<span class="sl">'+stPill(b.s)+l5Html(b)+'</span><span class="ln">'+esc(b.alt)+'</span><span class="od">'+b.o.toFixed(2)+'</span>'+
-          '<span class="kd"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span>'+(x?'<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span>':'')+
-          '<span>tap for codes</span></span></button>'+
+          (x?'<span class="kd"><span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span></span>':'')+'</button>'+
           '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+det+'</div>'}).join('');
       var sn='';try{sn=scoutNote(g,P)}catch(e){}
       return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+(sn?'<details class="scn"><summary>Scout note</summary><p>'+esc(sn)+'</p></details>':'')+rows+'</div>'}).join('');
@@ -1002,7 +1030,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         npn=g.leans.filter(function(p){return p.f.indexOf('PIN')>=0}).length,
         nol=g.leans.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length,
         nls=g.leans.filter(function(p){return p.f.indexOf('LSR')>=0}).length;
-    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span><span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+nl+' lean'+(nl===1?'':'s')+(nh+npn+nol+nls?' <span class="mu">(incl. '+[[nh,'HR'],[npn,'PIN'],[nol,'OUTLIFT'],[nls,'re-run']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+'</span></div>';
+    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span><span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+nl+' lean'+(nl===1?'':'s')+(nh+npn+nol+nls?' <span class="mu">(incl. '+[[nh,'HR80'],[npn,'PIN'],[nol,'OUTLIFT, killed'],[nls,'LSR']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+'</span></div>';
     /* Player tiles (Mitch 20 Nov): a player with a pick brings all his bets into the picks area; the rest stay in the collapsed Leans fold. */
     var pkp={};g.picks.forEach(function(p){pkp[p.p]=1});
     var top=g.picks.concat(g.leans.filter(function(p){return pkp[p.p]})),rest=g.leans.filter(function(p){return !pkp[p.p]});
@@ -1011,13 +1039,13 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var tbl=body?'<div class="pls">'+BH+body+'</div>':'<div class="none">No pick cleared the gates.</div>';
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
     var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+rest.length+' · '+np2+' player'+(np2===1?'':'s')+')</b> · tracked, not bet · best first</span></summary>'+
-      '<div class="pls">'+(body?'':ringKey())+BH+lb+'</div></details>':'';
+      '<div class="pls">'+(body?'':ringKey(rest))+BH+lb+'</div></details>':'';
     var cur=MXV[g.id]==='mx'||MXV[g.id]==='info'?'mx':'bets';
     var views=[['bets','Bets'],['mx','Matchup']];
     var gseg='<div class="gseg" role="group" aria-label="Game view">'+views.map(function(x){return '<button type="button" class="tab" data-mxg="'+esc(g.id)+'" data-mxv="'+x[0]+'" aria-pressed="'+(cur===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
     var tc=String(g.id).split('@'),sty=' style="--ta:'+(TCOL[tc[0]]||'#12233F')+';--th:'+(TCOL[tc[1]]||'#12233F')+'"';
     if(cur==='mx') return '<section class="game"'+sty+'>'+head+gseg+'<div class="gw">'+mxHtml(g)+'</div></section>';
-    return '<section class="game"'+sty+'>'+head+gseg+'<div class="gw gp">'+(body?ringKey():'')+tbl+lf+'</div></section>';
+    return '<section class="game"'+sty+'>'+head+gseg+'<div class="gw gp">'+(body?ringKey(top):'')+tbl+lf+'</div></section>';
   }
   /* Today's games (Mitch, 5 Nov): from the first slate run the slate shows today's games from schedule.json.
      A game not yet analysed shows as "picks ~HH:MM" (about 90 min before tip); once a tick analyses it, its card replaces that line.
@@ -1038,7 +1066,27 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       left.map(function(x){var fr=firstRun(x.min),late=x.min-30<=n.min;
         return '<div class="prow"><b>'+esc(x.id)+'</b><span>tip '+hhmm(x.min)+'</span><span class="meta">'+(late?'tipped / inside 30 min, not analysed':fr===null?'outside the run window':fr<=n.min?'due now, posting soon':'picks ~'+hhmm(fr))+'</span></div>'}).join('')+'</section>';
   }
+  /* Best leans tonight (critique 20 Nov): on a 0-pick day the leans are the product, so the top 5 by chance sit above the games.
+     Tapping one opens its game's Leans fold and its row. Display only. */
+  function bestLeans(){
+    var box=$('best');if(!box) return;
+    var np=G.reduce(function(a,g){return a+g.picks.length},0),L=[];
+    G.forEach(function(g){g.leans.forEach(function(b){var h=hitP(b);if(h!==null)L.push({g:g,b:b,h:h})})});
+    if(np||sel!=='ALL'||!L.length){box.hidden=true;box.innerHTML='';return}
+    L.sort(function(a,b){return b.h-a.h});
+    box.innerHTML='<h2>Best leans tonight</h2><p class="bsub">No pick cleared every gate. Highest chance first, tracked at 0u. Tap one to see it in its game.</p>'+
+      '<div class="pls">'+ringKey(L.slice(0,5).map(function(x){return x.b}))+BH+L.slice(0,5).map(function(x){var b=x.b;
+        return '<button class="bet bl" type="button" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'"><span class="rc">'+ringHtml(b)+l10Of(b)+'</span>'+
+          '<span class="sl"><strong>'+esc(b.p)+'</strong><span class="bg">'+esc(x.g.id)+'</span></span><span class="ln">'+esc(b.alt)+'</span><span class="od">'+b.o.toFixed(2)+'</span>'+
+          '<span class="kd">'+stPill(b.s)+l5Html(b)+'</span></button>'}).join('')+'</div>';
+    box.hidden=false;
+    Array.prototype.forEach.call(box.querySelectorAll('[data-jump]'),function(el){el.onclick=function(){
+      LOPEN[el.getAttribute('data-g')]=true;MXV[el.getAttribute('data-g')]='bets';games();
+      var t=null;Array.prototype.forEach.call($('games').querySelectorAll('.bet[data-bid]'),function(x){if(x.getAttribute('data-bid')===el.getAttribute('data-jump'))t=x});
+      if(t){if(t.getAttribute('aria-expanded')!=='true')t.click();t.scrollIntoView({block:'center',behavior:'smooth'});t.focus({preventScroll:true})}}});
+  }
   function games(){
+    bestLeans();
     var html='';
     G.forEach(function(g,gi){if(sel!=='ALL'&&g.id!==sel)return;try{html+=gameHtml(g,gi)}catch(e){}});
     if(sel==='ALL') html+=pendHtml();
@@ -1074,9 +1122,13 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(genOk&&!D.cleared)parts.push('updated '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}));
     $('sub').textContent=parts.join(' · ');
     runStatus();
-    $('stats').innerHTML=tile(all.length,'picks','Picks that cleared every gate today')+
-      tile('+'+esc(avg)+'pp','avg edge','Model hit % minus the price\'s implied %, averaged')+
-      tile(G.length+(todaySched()&&slateIso()===melNow().iso?'/'+Math.max(todaySched().length,G.length):''),'games','Games analysed so far, of today\'s games');
+    var gtxt=G.length+(todaySched()&&slateIso()===melNow().iso?'/'+Math.max(todaySched().length,G.length):'');
+    /* 0-pick day (critique 20 Nov): one line instead of three tiles of zeros, so tonight's best leans sit higher. */
+    $('stats').className=all.length?'stats':'stats one';
+    $('stats').innerHTML=all.length?tile(all.length,'picks','Picks that cleared every gate today')+
+      tile((avg>=0?'+':'')+esc(avg)+'pp','avg edge','Model hit % minus the price\'s implied %, averaged')+
+      tile(gtxt,'games','Games analysed so far, of today\'s games')
+      :'<p><b>0 picks</b> · '+esc(gtxt)+' games analysed · no bet cleared every gate</p>';
     todayTiles();renderVer();
     $('slate').hidden=false;
     totals();tabs();games();
@@ -1110,7 +1162,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     function tier(k,label,arr,goal,m){
       if(!arr) return;var a=leanSum(arr);
       rows.push({k:k,t:label,r:a.n?a.w+'-'+a.l+' · '+pct(a.hit)+' · <span class="'+(a.u>=0?'pos':'neg')+'">'+u(a.u)+'</span>':'no settled yet',
-        m:m+(goal?' · '+Math.min(a.n,goal)+' of '+goal+' for a verdict':''),g:goal?Math.min(1,a.n/goal):null});
+        m:m+(goal?' · '+Math.min(a.n,goal)+' of '+goal+' for a verdict':''),g:goal&&a.n?Math.min(1,a.n/goal):null});
     }
     tier('leansSec','Leans (0u)',LEANS,0,'Near-misses, notional 1u');
     tier('hrSec','HR80 tier (0u)',typeof HRS!=='undefined'?HRS:null,60,'Target 80%+, $1.20-1.29');

@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-20",
+   "version": "nba-session v3.30-p4",
+   "component": "dashboard",
+   "title": "Dashboard critique fixes: best leans on top, clearer rings, thinner rows",
+   "change": "On a 0-pick day a Best leans tonight strip (top 5 by hit chance) sits above the games and the KPI tiles shrink to one line; ring header reads Chance /10 with the last-10 count under the ring and a colour key; tier chip and 'tap for codes' move into the tap detail; Mark my picks and Projected totals move below the slate; 44px tap targets, one chevron style, contrast fixes.",
+   "aim": "Mitch 20 Nov ('run them all', after the 25/40 impeccable critique): decide faster on a phone on quiet nights. Display only: no gate, tier, stake or price changes."
+  },
+  {
+   "date": "2026-11-20",
    "version": "nba-session v3.31-p4",
    "component": "nba-session",
    "title": "VERDICT retired",
