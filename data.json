@@ -2267,9 +2267,1029 @@
         "TOR": []
       },
       "tip": "11:30"
+    },
+    {
+      "abs": {
+        "NOP": [],
+        "OKC": []
+      },
+      "b2b": [],
+      "box5": {
+        "Aday Mara": {
+          "gp": 15,
+          "l5": {
+            "ast": 3.0,
+            "blk": 1.2,
+            "fg3": 0.0,
+            "fg3a": 0.0,
+            "fg_pct": 65.0,
+            "fga": 8.0,
+            "fgm": 5.2,
+            "fta": 1.8,
+            "ftm": 1.0,
+            "min": 26.4,
+            "pts": 11.4,
+            "reb": 7.6,
+            "stl": 0.0,
+            "to": 1.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.9,
+            "blk": 1.7,
+            "fg3": 0.1,
+            "fg3a": 0.1,
+            "fg_pct": 63.5,
+            "fga": 6.4,
+            "fgm": 4.1,
+            "fta": 1.7,
+            "ftm": 1.0,
+            "min": 22.0,
+            "pts": 9.2,
+            "reb": 6.5,
+            "stl": 0.1,
+            "to": 1.7
+          }
+        },
+        "Kenrich Williams": {
+          "gp": 15,
+          "l5": {
+            "ast": 1.8,
+            "blk": 0.6,
+            "fg3": 1.0,
+            "fg3a": 3.0,
+            "fg_pct": 45.9,
+            "fga": 7.4,
+            "fgm": 3.4,
+            "fta": 0.8,
+            "ftm": 0.6,
+            "min": 24.4,
+            "pts": 8.4,
+            "reb": 3.6,
+            "stl": 1.2,
+            "to": 0.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.4,
+            "blk": 0.3,
+            "fg3": 1.3,
+            "fg3a": 3.0,
+            "fg_pct": 46.6,
+            "fga": 5.9,
+            "fgm": 2.7,
+            "fta": 0.8,
+            "ftm": 0.6,
+            "min": 20.4,
+            "pts": 7.3,
+            "reb": 3.7,
+            "stl": 0.5,
+            "to": 0.3
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          12,
+          13
+        ],
+        "skipped": [
+          "Trey Murphy III PTS (ruled OUT)",
+          "Trey Murphy III REB (ruled OUT)",
+          "Trey Murphy III AST (ruled OUT)"
+        ],
+        "stats": [
+          28,
+          31
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: NOP (3 rotation out), OKC (3 rotation out); missed last game: none. Coverage: evaluated 12 of 13 players (28 of 31 player-stats); skipped: Trey Murphy III PTS (ruled OUT), Trey Murphy III REB (ruled OUT), Trey Murphy III AST (ruled OUT)",
+      "cx": {
+        "Aday Mara|PTS|6.5|HR80": {
+          "best_book": "ladbrokes",
+          "best_price": 1.26,
+          "mm_min": 25.84,
+          "mm_mu": 11.76,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8915,
+          "p_pin": 0.805,
+          "p_wowy": 0.8915,
+          "pin_edge_pp": 0.5,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 11.76
+        },
+        "Aday Mara|PTS|8.5|lean": {
+          "best_book": "ladbrokes",
+          "best_price": 1.5,
+          "mm_min": 25.84,
+          "mm_mu": 11.76,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7544,
+          "p_pin": 0.6537,
+          "p_wowy": 0.7544,
+          "pin_edge_pp": -2.2,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 11.76
+        },
+        "Kenrich Williams|PTS|6.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.59,
+          "mm_min": 24.44,
+          "mm_mu": 9.41,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7431,
+          "p_pin": 0.6373,
+          "p_wowy": 0.7431,
+          "pin_edge_pp": 0.8,
+          "pin_line": 8.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 9.41
+        }
+      },
+      "engine": "nba-session v3.31-p4",
+      "id": "NOP@OKC",
+      "leans": [
+        {
+          "alt": 8.5,
+          "e": 5.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "MU+4%",
+            "C0.75",
+            "Z0.86",
+            "PIN-2.2",
+            "BEST-ladbrokes@1.50"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            10,
+            16,
+            10,
+            11,
+            10
+          ],
+          "o": 1.48,
+          "opp": "NOP 3rd most PTS allowed · pace +1.5",
+          "p": "Aday Mara",
+          "s": "PTS",
+          "st": "3",
+          "std": 10.5,
+          "t": "OKC"
+        },
+        {
+          "alt": 6.5,
+          "e": 3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "MU+4%",
+            "C0.69",
+            "Z0.86",
+            "PIN+0.8"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            10,
+            10,
+            8,
+            11,
+            3
+          ],
+          "o": 1.59,
+          "opp": "NOP 3rd most PTS allowed · pace +1.5",
+          "p": "Kenrich Williams",
+          "s": "PTS",
+          "st": "3",
+          "std": 7.5,
+          "t": "OKC"
+        },
+        {
+          "alt": 6.5,
+          "e": 5.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR80",
+            "MU+4%",
+            "C0.57",
+            "Z1.46",
+            "PIN+0.5",
+            "BEST-ladbrokes@1.26"
+          ],
+          "h": "100% (10/10)",
+          "l5": [
+            10,
+            16,
+            10,
+            11,
+            10
+          ],
+          "o": 1.25,
+          "opp": "NOP 3rd most PTS allowed · pace +1.5",
+          "p": "Aday Mara",
+          "s": "PTS",
+          "st": "4",
+          "std": 10.5,
+          "t": "OKC"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 103.8,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.8,
+          "PTS": 111.2,
+          "REB": 42.7,
+          "pace": 102.3
+        },
+        "teams": {
+          "NOP": {
+            "allow100": {
+              "3PM": 13.0,
+              "AST": 26.7,
+              "PTS": 114.3,
+              "REB": 42.7
+            },
+            "allow_rk": {
+              "3PM": 17,
+              "AST": 4,
+              "PTS": 3,
+              "REB": 17
+            },
+            "out": [],
+            "pace": 103.9,
+            "rk": {
+              "ast": 27,
+              "blk": 14,
+              "dreb": 23,
+              "fg3_pct": 23,
+              "fg3a": 30,
+              "fg3m": 30,
+              "fg_pct": 17,
+              "ft_pct": 3,
+              "fta": 1,
+              "net": 25,
+              "opp_fg3_pct": 15,
+              "opp_fg_pct": 28,
+              "oppg": 29,
+              "oreb": 20,
+              "pace": 4,
+              "pf": 28,
+              "ppg": 11,
+              "reb": 23,
+              "stl": 3,
+              "tov": 16,
+              "ts_pct": 14
+            },
+            "v": {
+              "ast": 24.2,
+              "ats": "8-8-0",
+              "ats_away": "3-2-0",
+              "ats_home": "5-6-0",
+              "ats_l10": "4-6-0",
+              "away": "1-4",
+              "blk": 5.1,
+              "dreb": 30.7,
+              "fg3_pct": 33.6,
+              "fg3a": 29.4,
+              "fg3m": 9.9,
+              "fg_pct": 46.1,
+              "ft_pct": 81.8,
+              "fta": 31.3,
+              "gp": 16,
+              "home": "4-7",
+              "l10": "3-7",
+              "net": -7.4,
+              "opp_fg3_pct": 35.3,
+              "opp_fg_pct": 48.6,
+              "oppg": 122.8,
+              "oreb": 11.1,
+              "ou": "10-6-0",
+              "ou_l10": "6-4-0",
+              "pace": 104.9,
+              "pf": 24.2,
+              "ppg": 115.4,
+              "reb": 41.8,
+              "rec": "5-11",
+              "stl": 9.7,
+              "tov": 15.8,
+              "ts_pct": 57.5
+            }
+          },
+          "OKC": {
+            "allow100": {
+              "3PM": 14.0,
+              "AST": 25.3,
+              "PTS": 108.6,
+              "REB": 42.9
+            },
+            "allow_rk": {
+              "3PM": 2,
+              "AST": 24,
+              "PTS": 26,
+              "REB": 12
+            },
+            "out": [],
+            "pace": 102.2,
+            "rk": {
+              "ast": 29,
+              "blk": 11,
+              "dreb": 2,
+              "fg3_pct": 21,
+              "fg3a": 28,
+              "fg3m": 27,
+              "fg_pct": 15,
+              "ft_pct": 8,
+              "fta": 24,
+              "net": 10,
+              "opp_fg3_pct": 10,
+              "opp_fg_pct": 1,
+              "oppg": 5,
+              "oreb": 20,
+              "pace": 17,
+              "pf": 2,
+              "ppg": 19,
+              "reb": 6,
+              "stl": 15,
+              "tov": 3,
+              "ts_pct": 26
+            },
+            "v": {
+              "ast": 23.2,
+              "ats": "8-7-0",
+              "ats_away": "4-5-0",
+              "ats_home": "4-2-0",
+              "ats_l10": "5-5-0",
+              "away": "4-5",
+              "blk": 5.4,
+              "dreb": 34.8,
+              "fg3_pct": 34.2,
+              "fg3a": 31.6,
+              "fg3m": 10.8,
+              "fg_pct": 46.2,
+              "ft_pct": 79.9,
+              "fta": 22.2,
+              "gp": 15,
+              "home": "5-1",
+              "l10": "5-5",
+              "net": 4.4,
+              "opp_fg3_pct": 34.4,
+              "opp_fg_pct": 42.1,
+              "oppg": 107.7,
+              "oreb": 11.1,
+              "ou": "7-8-0",
+              "ou_l10": "6-4-0",
+              "pace": 102.1,
+              "pf": 18.9,
+              "ppg": 112.1,
+              "reb": 45.9,
+              "rec": "9-6",
+              "stl": 8.2,
+              "tov": 13.4,
+              "ts_pct": 55.9
+            }
+          }
+        }
+      },
+      "out": {
+        "NOP": [
+          "Bennedict Mathurin (Mathurin (foot) has been ruled out for Friday's game against the Thunder.)",
+          "Bryce McGowens (McGowens (elbow) has been ruled out for Friday's game against the Thunder.)",
+          "Dejounte Murray (Murray (ankle) is out for Friday's game against Memphis.)",
+          "Trendon Watford (Watford (ankle) has been ruled out for Friday's game against Oklahoma City.)",
+          "Trey Murphy III (Murphy (knee) is questionable for Friday's game against the Thunder.)"
+        ],
+        "OKC": [
+          "Cason Wallace (Wallace underwent surgery Friday to repair a torn labrum in his left shoulder and will be re-evaluated before the end of the regular season, Clemente Almanza of USA Today reports.)",
+          "Chet Holmgren (Holmgren underwent a biological treatment Friday to address a small patellar tendon tear and will miss at least 8-10 weeks, Nick Crain of Slam reports.)",
+          "Jalen Williams (Williams (leg) underwent successful surgery Wednesday to \"address a fractured left fibula and reconstruction of ankle ligaments following a fracture and dislocation.\" He will be re-evaluated before the end of the regular season, Tim MacMahon of ESPN.com reports.)",
+          "Nikola Topic (Topic (hip) is out for Friday's game against New Orleans.)",
+          "Thomas Sorber (Sorber underwent an arthroscopic knee procedure Tuesday to address inflammation at the patellofemoral joint in his right knee, and he's expected to return to on-court activities in 6-8 weeks, Steve McGehee of News 9 Oklahoma City reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "NOP": [],
+        "OKC": [
+          "Alex Caruso (Caruso is questionable for Friday's game against the Pelicans due to right hip soreness, Justin Martinez of The Oklahoman reports.)"
+        ]
+      },
+      "tip": "12:00"
+    },
+    {
+      "abs": {
+        "CHI": [
+          {
+            "min": 27.6,
+            "name": "Jalen Smith",
+            "roles": [
+              "REB1"
+            ]
+          }
+        ],
+        "WAS": []
+      },
+      "b2b": [],
+      "box5": {
+        "Alexandre Sarr": {
+          "gp": 15,
+          "l5": {
+            "ast": 1.6,
+            "blk": 1.8,
+            "fg3": 2.4,
+            "fg3a": 4.8,
+            "fg_pct": 62.5,
+            "fga": 9.6,
+            "fgm": 6.0,
+            "fta": 3.0,
+            "ftm": 1.4,
+            "min": 29.8,
+            "pts": 15.8,
+            "reb": 6.4,
+            "stl": 0.4,
+            "to": 1.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.7,
+            "blk": 1.3,
+            "fg3": 1.2,
+            "fg3a": 3.7,
+            "fg_pct": 53.9,
+            "fga": 8.5,
+            "fgm": 4.6,
+            "fta": 2.3,
+            "ftm": 1.5,
+            "min": 27.2,
+            "pts": 11.9,
+            "reb": 6.9,
+            "stl": 0.9,
+            "to": 1.3
+          }
+        },
+        "Anthony Davis": {
+          "gp": 14,
+          "l5": {
+            "ast": 2.2,
+            "blk": 1.6,
+            "fg3": 0.4,
+            "fg3a": 1.6,
+            "fg_pct": 49.4,
+            "fga": 16.6,
+            "fgm": 8.2,
+            "fta": 6.8,
+            "ftm": 5.8,
+            "min": 35.6,
+            "pts": 22.6,
+            "reb": 10.8,
+            "stl": 1.0,
+            "to": 1.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.1,
+            "blk": 1.2,
+            "fg3": 0.8,
+            "fg3a": 2.3,
+            "fg_pct": 52.0,
+            "fga": 17.9,
+            "fgm": 9.3,
+            "fta": 6.1,
+            "ftm": 5.2,
+            "min": 34.1,
+            "pts": 24.6,
+            "reb": 10.1,
+            "stl": 1.2,
+            "to": 2.0
+          }
+        },
+        "Kyshawn George": {
+          "gp": 16,
+          "l5": {
+            "ast": 3.4,
+            "blk": 0.8,
+            "fg3": 3.0,
+            "fg3a": 5.4,
+            "fg_pct": 48.5,
+            "fga": 13.2,
+            "fgm": 6.4,
+            "fta": 2.4,
+            "ftm": 1.8,
+            "min": 34.6,
+            "pts": 17.6,
+            "reb": 4.0,
+            "stl": 1.0,
+            "to": 2.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 4.4,
+            "blk": 1.2,
+            "fg3": 2.4,
+            "fg3a": 5.8,
+            "fg_pct": 48.6,
+            "fga": 13.5,
+            "fgm": 6.6,
+            "fta": 2.9,
+            "ftm": 2.2,
+            "min": 33.7,
+            "pts": 17.8,
+            "reb": 4.2,
+            "stl": 0.7,
+            "to": 2.8
+          }
+        },
+        "Matas Buzelis": {
+          "gp": 14,
+          "l5": {
+            "ast": 2.0,
+            "blk": 1.0,
+            "fg3": 3.2,
+            "fg3a": 6.6,
+            "fg_pct": 50.8,
+            "fga": 11.8,
+            "fgm": 6.0,
+            "fta": 2.8,
+            "ftm": 2.8,
+            "min": 30.2,
+            "pts": 18.0,
+            "reb": 5.2,
+            "stl": 0.8,
+            "to": 2.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.0,
+            "blk": 0.8,
+            "fg3": 2.1,
+            "fg3a": 5.5,
+            "fg_pct": 46.2,
+            "fga": 10.4,
+            "fgm": 4.8,
+            "fta": 4.0,
+            "ftm": 3.5,
+            "min": 27.4,
+            "pts": 15.1,
+            "reb": 4.7,
+            "stl": 0.6,
+            "to": 2.6
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          13,
+          14
+        ],
+        "skipped": [
+          "Jalen Smith PTS (ruled OUT)",
+          "Jalen Smith REB (ruled OUT)"
+        ],
+        "stats": [
+          31,
+          33
+        ]
+      },
+      "ctx": "Out TOP3: Caleb Wilson (CHI); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 13 of 14 players (31 of 33 player-stats); skipped: Jalen Smith PTS (ruled OUT), Jalen Smith REB (ruled OUT)",
+      "cx": {
+        "Alexandre Sarr|REB|6.5|lean": {
+          "best_book": "ladbrokes",
+          "best_price": 1.83,
+          "mm_min": 28.03,
+          "mm_mu": 8.102,
+          "n_books": 8,
+          "opp_lift": 0.067,
+          "opp_out": "REB1:Jalen Smith",
+          "p_mm": 0.6467,
+          "p_pin": "",
+          "p_wowy": 0.6467,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 8.102
+        },
+        "Anthony Davis|PTS|21.5|lean": {
+          "best_book": "tabtouch",
+          "best_price": 1.52,
+          "mm_min": 33.91,
+          "mm_mu": 26.412,
+          "n_books": 5,
+          "opp_lift": 0.074,
+          "opp_out": "REB1:Jalen Smith",
+          "p_mm": 0.7052,
+          "p_pin": 0.6387,
+          "p_wowy": 0.7052,
+          "pin_edge_pp": -5.6,
+          "pin_line": 24.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 26.412
+        },
+        "Kyshawn George|PTS|11.5|HR80": {
+          "best_book": "tabtouch",
+          "best_price": 1.27,
+          "mm_min": 34.0,
+          "mm_mu": 19.877,
+          "n_books": 7,
+          "opp_lift": 0.074,
+          "opp_out": "REB1:Jalen Smith",
+          "p_mm": 0.9249,
+          "p_pin": 0.7953,
+          "p_wowy": 0.9249,
+          "pin_edge_pp": -1.1,
+          "pin_line": 16.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 19.877
+        },
+        "Matas Buzelis|AST|1.5|lean": {
+          "best_book": "playup",
+          "best_price": 1.58,
+          "mm_min": 33.05,
+          "mm_mu": 2.745,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7433,
+          "p_pin": "",
+          "p_wowy": 0.7397,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.192,
+          "wowy_keys": "Jalen Smith",
+          "wowy_mu": 2.725
+        }
+      },
+      "engine": "nba-session v3.31-p4",
+      "id": "WAS@CHI",
+      "leans": [
+        {
+          "alt": 1.5,
+          "e": 4.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "[ROLE?]",
+            "MU+8%",
+            "OT-ADJ",
+            "MT+",
+            "C0.68",
+            "Z0.62",
+            "TMO"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            4,
+            0,
+            2,
+            1.8,
+            2
+          ],
+          "o": 1.57,
+          "opp": "WAS 1st most AST allowed · pace +3.0",
+          "p": "Matas Buzelis",
+          "s": "AST",
+          "st": "4",
+          "std": 1.5,
+          "t": "CHI"
+        },
+        {
+          "alt": 21.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "MU+5%",
+            "OT-ADJ",
+            "C0.82",
+            "Z0.55",
+            "PIN-5.6",
+            "OPP-OUT:REB1",
+            "BEST-ladbrokes@1.46"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            25,
+            23,
+            14,
+            24.8,
+            21
+          ],
+          "o": 1.44,
+          "opp": "CHI 5th most PTS allowed · pace +3.0",
+          "p": "Anthony Davis",
+          "s": "PTS",
+          "st": "4",
+          "std": 24.5,
+          "t": "WAS"
+        },
+        {
+          "alt": 6.5,
+          "e": 3.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "MU+3%",
+            "OT-ADJ",
+            "C0.81",
+            "Z0.46",
+            "OPP-OUT:REB1",
+            "REB-OPP",
+            "BEST-ladbrokes@1.83"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            2,
+            4,
+            9,
+            7.5,
+            8
+          ],
+          "o": 1.74,
+          "opp": "CHI 13th most REB allowed · pace +3.0",
+          "p": "Alexandre Sarr",
+          "s": "REB",
+          "st": "3",
+          "std": 6.5,
+          "t": "WAS"
+        },
+        {
+          "alt": 11.5,
+          "e": 4.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR80",
+            "MU+5%",
+            "OT-ADJ",
+            "C0.57",
+            "Z1.18",
+            "PIN-1.1",
+            "OPP-OUT:REB1",
+            "BEST-ladbrokes@1.25"
+          ],
+          "h": "100% (10/10)",
+          "l5": [
+            20,
+            18,
+            11,
+            11.6,
+            25
+          ],
+          "o": 1.24,
+          "opp": "CHI 5th most PTS allowed · pace +3.0",
+          "p": "Kyshawn George",
+          "s": "PTS",
+          "st": "5",
+          "std": 16.5,
+          "t": "WAS"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 105.3,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.8,
+          "PTS": 111.2,
+          "REB": 42.7,
+          "pace": 102.3
+        },
+        "teams": {
+          "CHI": {
+            "allow100": {
+              "3PM": 12.9,
+              "AST": 26.5,
+              "PTS": 113.4,
+              "REB": 42.9
+            },
+            "allow_rk": {
+              "3PM": 19,
+              "AST": 6,
+              "PTS": 5,
+              "REB": 13
+            },
+            "out": [
+              {
+                "min": 27.6,
+                "name": "Jalen Smith",
+                "roles": [
+                  "REB1"
+                ]
+              }
+            ],
+            "pace": 105.1,
+            "rk": {
+              "ast": 7,
+              "blk": 8,
+              "dreb": 20,
+              "fg3_pct": 28,
+              "fg3a": 6,
+              "fg3m": 17,
+              "fg_pct": 21,
+              "ft_pct": 24,
+              "fta": 6,
+              "net": 26,
+              "opp_fg3_pct": 18,
+              "opp_fg_pct": 26,
+              "oppg": 30,
+              "oreb": 9,
+              "pace": 1,
+              "pf": 24,
+              "ppg": 9,
+              "reb": 15,
+              "stl": 13,
+              "tov": 26,
+              "ts_pct": 21
+            },
+            "v": {
+              "ast": 27.8,
+              "ats": "8-6-0",
+              "ats_away": "4-5-0",
+              "ats_home": "4-1-0",
+              "ats_l10": "7-3-0",
+              "away": "3-6",
+              "blk": 5.6,
+              "dreb": 31.1,
+              "fg3_pct": 32.0,
+              "fg3a": 41.3,
+              "fg3m": 13.2,
+              "fg_pct": 45.4,
+              "ft_pct": 76.3,
+              "fta": 27.7,
+              "gp": 14,
+              "home": "1-4",
+              "l10": "3-7",
+              "net": -8.4,
+              "opp_fg3_pct": 36.0,
+              "opp_fg_pct": 48.1,
+              "oppg": 124.6,
+              "oreb": 12.9,
+              "ou": "6-8-0",
+              "ou_l10": "5-5-0",
+              "pace": 107.2,
+              "pf": 23.4,
+              "ppg": 116.2,
+              "reb": 43.9,
+              "rec": "4-10",
+              "stl": 8.4,
+              "tov": 17.2,
+              "ts_pct": 56.8
+            }
+          },
+          "WAS": {
+            "allow100": {
+              "3PM": 12.7,
+              "AST": 27.2,
+              "PTS": 112.9,
+              "REB": 44.6
+            },
+            "allow_rk": {
+              "3PM": 24,
+              "AST": 1,
+              "PTS": 6,
+              "REB": 2
+            },
+            "out": [],
+            "pace": 102.4,
+            "rk": {
+              "ast": 28,
+              "blk": 8,
+              "dreb": 18,
+              "fg3_pct": 29,
+              "fg3a": 27,
+              "fg3m": 28,
+              "fg_pct": 18,
+              "ft_pct": 10,
+              "fta": 7,
+              "net": 23,
+              "opp_fg3_pct": 6,
+              "opp_fg_pct": 15,
+              "oppg": 23,
+              "oreb": 23,
+              "pace": 16,
+              "pf": 6,
+              "ppg": 24,
+              "reb": 20,
+              "stl": 22,
+              "tov": 13,
+              "ts_pct": 22
+            },
+            "v": {
+              "ast": 23.8,
+              "ats": "7-9-0",
+              "ats_away": "4-5-0",
+              "ats_home": "3-4-0",
+              "ats_l10": "4-6-0",
+              "away": "3-6",
+              "blk": 5.6,
+              "dreb": 31.4,
+              "fg3_pct": 31.8,
+              "fg3a": 32.6,
+              "fg3m": 10.4,
+              "fg_pct": 45.7,
+              "ft_pct": 79.5,
+              "fta": 26.6,
+              "gp": 16,
+              "home": "2-5",
+              "l10": "2-8",
+              "net": -7.2,
+              "opp_fg3_pct": 33.5,
+              "opp_fg_pct": 46.4,
+              "oppg": 117.9,
+              "oreb": 10.9,
+              "ou": "6-10-0",
+              "ou_l10": "5-5-0",
+              "pace": 102.5,
+              "pf": 20.3,
+              "ppg": 110.8,
+              "reb": 42.3,
+              "rec": "5-11",
+              "stl": 7.5,
+              "tov": 14.7,
+              "ts_pct": 56.3
+            }
+          }
+        }
+      },
+      "out": {
+        "CHI": [
+          "Caleb Wilson (Wilson (hand) is expected to miss four to six weeks, Shams Charania of ESPN reports.)",
+          "Jalen Smith (Smith (illness) has been downgraded to questionable for Friday's game against the Wizards.)",
+          "Tobe Awaka (Awaka (back) has been ruled out for Wednesday's game against the Nets.)"
+        ],
+        "WAS": [
+          "Jamir Watkins (The Wizards announced Thursday that Watkins has undergone surgery for a torn ACL.)",
+          "Justin Champagnie (Champagnie (foot) is expected to miss several months, per Josh Robbins of The Athletic.)",
+          "Reece Beekman (The Wizards announced Monday that Beekman sustained a right acromioclavicular joint injury and will be re-evaluated in approximately three weeks.)",
+          "Tristan Vukcevic (Vukcevic (hip) has been ruled out for Monday's game against Memphis.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "CHI": [
+          "Noa Essengue (Essengue is listed as probable for Friday's game against Washington due to bilateral wrist soreness.)"
+        ],
+        "WAS": [
+          "Felix Okpara (Okpara (illness) is available for Friday's game against Toronto.)"
+        ]
+      },
+      "tip": "12:00"
     }
   ],
-  "generated": "2026-11-20T23:05:02Z",
+  "generated": "2026-11-20T23:30:02Z",
   "totals": [
     [
       "CHA@ATL",
@@ -2288,6 +3308,16 @@
     ],
     [
       "TOR@DET",
+      null,
+      null
+    ],
+    [
+      "NOP@OKC",
+      null,
+      null
+    ],
+    [
+      "WAS@CHI",
       null,
       null
     ]
