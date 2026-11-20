@@ -27,6 +27,9 @@ h1,h2,.stat b{font-family:var(--disp);letter-spacing:.2px}
 .num{font-family:var(--disp);font-variant-numeric:tabular-nums}
 .wrap{max-width:720px;margin:0 auto;padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 h1{font-size:1.9rem;font-weight:700;margin:0;line-height:1.1}
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.thm{flex:none;font:600 13px/1 var(--body,inherit);padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;min-height:32px}.thm:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:420px){.thm{padding:7px 9px;min-width:34px}.thm .tl{display:none}}
 .sub{color:var(--muted);font-size:.85rem;margin:2px 0 14px}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
@@ -347,9 +350,32 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   :root:not([data-theme="light"]) .tab[aria-pressed=true],:root:not([data-theme="light"]) .cbtn.main{color:var(--bg)}}
 .b5h{list-style:none;margin:2px 0 8px;padding:0;font-size:13px;color:var(--muted)}.b5h li{padding:2px 0}.b5h b{color:var(--text);font-weight:600}
 </style>
+<script>
+/* Light/dark toggle (Mitch 21 Nov: "I want the dashboard to be light for me"). Saved per device in localStorage;
+   nothing saved = follow the phone/browser setting. It works by switching every prefers-color-scheme:dark media
+   rule on ("all") or off ("not all"), so dark rules added later need no extra work. */
+(function(){
+  var MQ=window.matchMedia?matchMedia('(prefers-color-scheme: dark)'):null,R=[],T=null;
+  for(var i=0;i<document.styleSheets.length;i++){var rs;try{rs=document.styleSheets[i].cssRules}catch(e){continue}
+    for(var j=0;j<rs.length;j++){var m=rs[j];if(m.media&&/prefers-color-scheme\s*:\s*dark/.test(m.media.mediaText))R.push({r:m,o:m.media.mediaText})}}
+  try{T=localStorage.getItem('nba_theme')}catch(e){}
+  if(T!=='light'&&T!=='dark')T=null;
+  function cur(){return T||(MQ&&MQ.matches?'dark':'light')}
+  function apply(){
+    R.forEach(function(x){try{x.r.media.mediaText=T==='dark'?'all':T==='light'?'not all':x.o}catch(e){}});
+    var d=document.documentElement;if(T)d.setAttribute('data-theme',T);else d.removeAttribute('data-theme');d.style.colorScheme=T||'';
+    var b=document.getElementById('themeBtn');if(b){var dk=cur()==='dark';b.innerHTML=(dk?'\u263E':'\u2600')+'<span class="tl"> '+(dk?'Dark':'Light')+'</span>';b.title=dk?'Dark mode (tap for light)':'Light mode (tap for dark)';
+      b.setAttribute('aria-label','Theme is '+(dk?'dark':'light')+'. Switch to '+(dk?'light':'dark'))}
+  }
+  apply();
+  document.addEventListener('DOMContentLoaded',function(){var b=document.getElementById('themeBtn');if(!b)return;
+    b.onclick=function(){T=cur()==='dark'?'light':'dark';try{localStorage.setItem('nba_theme',T)}catch(e){}apply()};apply()});
+  if(MQ&&MQ.addEventListener)MQ.addEventListener('change',function(){if(!T)apply()});
+})();
+</script>
 </head>
 <body><div class="wrap">
-  <h1>NBA Alt-Over Dashboard</h1>
+  <div class="hrow"><h1>NBA Alt-Over Dashboard</h1><button class="thm" type="button" id="themeBtn">☀<span class="tl"> Light</span></button></div>
   <p class="sub" id="sub">Loading slate…</p>
   <div class="stale" id="health" role="status" hidden></div>
   <div class="cols">

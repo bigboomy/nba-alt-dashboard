@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
     {
+      "date": "2026-11-21",
+      "version": "nba-session v3.31-p4",
+      "component": "dashboard",
+      "title": "Light/dark toggle",
+      "change": "Button beside the title switches light and dark; the choice is saved on that device. With nothing saved the page still follows the phone or browser setting.",
+      "aim": "Mitch 21 Nov: phone and browser are dark, he wants the dashboard light. Display only."
+    },
+    {
       "date": "2026-11-20",
       "version": "nba-session v3.31-p4",
       "component": "dashboard",
