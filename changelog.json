@@ -3,6 +3,14 @@
  "changes": [
   {
    "date": "2026-11-20",
+   "version": "nba-session v3.29-p4",
+   "component": "engine",
+   "title": "OUTLIFT 7/10 gate removed",
+   "change": "OUTLIFT goes back to the highest-priced $1.20-1.59 rung at or under the main line, whatever its hit rate; the v3.28 gate never ran on a slate.",
+   "aim": "Mitch 20 Nov: two nights showed 7/10+ OUTLIFT items 9-11 against 25-16 for the rest; the OUTLIFT record carries on unbroken."
+  },
+  {
+   "date": "2026-11-20",
    "version": "nba-session v3.28-p4",
    "component": "dashboard",
    "title": "When tonight's absentees sat",
