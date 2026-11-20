@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
   {
+   "date": "2026-11-20",
+   "version": "nba-session v3.27-p4",
+   "component": "dashboard",
+   "title": "Each player shows once, one tile per bet",
+   "change": "Bets are grouped by player as tiles (top edge coloured by verdict); tap a tile for its verdict, numbers and folded codes, and an amber pill names the key teammate who is out.",
+   "aim": "Less scrolling and noise: Mitch 20 Nov, the same player appeared several times and the codes were noisy."
+  },
+  {
    "date": "2026-11-19",
    "version": "nba-session v3.27-p4",
    "component": "dashboard",

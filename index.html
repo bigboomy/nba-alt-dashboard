@@ -245,6 +245,23 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 @media (prefers-color-scheme:dark){.brow .pos{color:#6ce9a6}.brow .neg{color:#ff8a80}}
 .pbar{height:5px;border-radius:3px;background:var(--line);margin-top:5px;overflow:hidden}.pbar i{display:block;height:5px;background:#2e90fa}
 .board .cap{margin:6px 0 0}
+/* Player tiles (Mitch 20 Nov, design C): each player once, one tile per bet, tap a tile for its detail. */
+.pl{padding:10px 6px;border-top:1px solid var(--line)}.pl:first-child{border-top:0}
+.pl .nm{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:7px}.pl .nm strong{font-size:15px}.pl .nm .tm{color:var(--muted);font-size:12px}
+.tmo{display:inline-block;background:#fff4d6;color:#8a4b00;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px}
+@media (prefers-color-scheme:dark){.tmo{background:#3d2a05;color:#fcd34d}}
+.tiles{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 4px;-webkit-overflow-scrolling:touch;scrollbar-width:none}.tiles::-webkit-scrollbar{display:none}
+.tile{flex:1 0 96px;max-width:150px;border:1px solid var(--line);border-top:4px solid var(--line);border-radius:10px;padding:6px 9px 7px;background:var(--card);color:inherit;font:inherit;text-align:left;cursor:pointer}
+.tile.look{border-top-color:#12b76a}.tile.mixed{border-top-color:#f79009}.tile.caution{border-top-color:#f04438}
+.tile .s{font-weight:700;font-size:13px;white-space:nowrap}.tile .m{font-size:11.5px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.tile .k{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.03em;color:var(--muted);border:1px solid var(--line);border-radius:5px;padding:0 5px;margin-top:3px}
+.tile .k.pk{color:var(--accent);border-color:var(--accent)}.tile .res{font-size:10px;padding:0 5px;margin-left:4px}
+.tile[aria-pressed=true]{outline:2px solid var(--text);outline-offset:1px}
+.tdet{margin-top:8px;font-size:12.5px;border-left:3px solid var(--line);padding:2px 0 2px 9px}.tdet .row1{display:flex;flex-wrap:wrap;gap:4px 12px;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+.tdet .row1 b{color:var(--text)}.tdet .opp,.tdet .safe{font-size:12px;color:var(--muted);margin-top:3px}
+details.cds{margin-top:5px}details.cds>summary{cursor:pointer;list-style:none;color:var(--muted);font-size:12px}details.cds>summary::-webkit-details-marker{display:none}
+details.cds>summary::before{content:"▸ "}details.cds[open]>summary::before{content:"▾ "}
+.tdet .cbar{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
 </style>
 </head>
 <body><div class="wrap">
@@ -708,7 +725,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var alt=num(p.alt),o=num(p.o),e=num(p.e);
     if(!str(p.p,'')||!str(p.s,'')||alt===null||o===null||o<=0||e===null) return null;
     var st=num(p.st),sa=num(p.safe_alt),so=num(p.safe_o);
-    return {p:String(p.p),s:String(p.s),alt:alt,o:o,e:e,h:str(p.h,'—'),stN:st===null?0:st,opp:str(p.opp,'—'),f:Array.isArray(p.f)?p.f.map(String):[],
+    return {p:String(p.p),t:str(p.t,''),s:String(p.s),alt:alt,o:o,e:e,h:str(p.h,'—'),stN:st===null?0:st,opp:str(p.opp,'—'),f:Array.isArray(p.f)?p.f.map(String):[],
       sa:(sa!==null&&so!==null)?sa:null,so:(sa!==null&&so!==null)?so:null};
   }
   function normGame(g){
@@ -867,6 +884,62 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     lg.open=true;if($('guide'))$('guide').open=true;Array.prototype.forEach.call(lg.querySelectorAll('tr.lgf'),function(r){r.classList.remove('lgf')});
     hit.classList.add('lgf');hit.scrollIntoView({block:'center',behavior:'smooth'});
   });
+  /* Player tiles (Mitch 20 Nov, design C). A player with any pick shows in the picks area with ALL his bets
+     (leans as 0u tiles); everyone else sits in the collapsed Leans fold. Tap a tile for its detail. */
+  var TSEL={};
+  function kindTag(p){var k=cxKind(p);return k==='pick'?'PICK':k==='lean'?'LEAN':k}
+  function tmOut(g,p){
+    if(!p.f.some(function(f){return f==='TMO'||/^TM-OUT:/.test(f)||f==='[ROLE?]'})) return '';
+    var m=String(g.ctx||'').match(/Out TOP3: ([^;]*)/),names=[];
+    if(m) m[1].split(', ').forEach(function(x){var r=x.match(/^(.+) \((\w+)\)$/);if(r&&r[2]===p.t&&r[1]!==p.p)names.push(r[1])});
+    if(!names.length&&g.abs&&g.abs[p.t]) g.abs[p.t].forEach(function(o){if(o.name!==p.p)names.push(o.name)});
+    return names.length?'<span class="tmo">⚠ '+esc(names.join(', '))+' out</span>':'<span class="tmo">⚠ Key teammate out</span>';
+  }
+  function tileDet(p,g,gi){
+    var cb='',cc='',u='';
+    if(!p.lean&&CHOICE_URL&&g){
+      var pid=pidFor(g,p),ch=pid?(CHOICES[pid]||''):'',tipped=hasTipped(g);
+      if(ch==='TOOK')cc='<span class="chip took">✅ Taken</span>';
+      if(ch==='PASS')cc='<span class="chip pass">🚫 Passed</span>';
+      if(UNLOCKED){
+        if(!pid) cb='<div class="cbar"><span class="cap" style="margin:0">Recording to the Sheet…</span></div>';
+        else cb='<div class="cbar"><button class="cbtn'+(ch==='TOOK'?' on':'')+'" type="button" data-ch="TOOK" data-pid="'+esc(pid)+'">✅ Took it</button>'+
+          '<button class="cbtn'+(ch==='PASS'?' onp':'')+'" type="button" data-ch="PASS" data-pid="'+esc(pid)+'"'+(tipped?' disabled title="Locked at tip"':'')+'>🚫 Pass</button></div>';
+      }
+    }
+    p.f.forEach(function(f){if(/^U\d/.test(f))u=f.slice(1)});
+    var x=resFor(p),pill=x?'<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' · '+esc(x.actual):'')+'</span>':'';
+    var fl=p.f.filter(function(f){return !/^U\d/.test(f)&&f!=='LEAN'});
+    var chips=(p.lean?'<span class="chip ln">LEAN 0u</span>':'')+pill+cc+fl.map(function(f){return '<span class="chip'+(f==='B2B'||f==='DEPLETED'||f==='DNP-LAST'||f==='MISS'||f==='THIN'||f==='DOG7'||f==='REB-OPP'||/^MAIN-U/.test(f)?' w':'')+'">'+esc(f)+'</span>'}).join('');
+    return (g?vLine(g,p):'')+
+      '<div class="row1"><span>Edge <b>'+(p.e>0?'+':'')+p.e.toFixed(1)+'</b></span><span>Hit <b>'+esc(p.h)+'</b></span><span>'+stars(p.stN)+'</span><span>Stake <b>'+(p.lean?'0u':(u?esc(u)+'u':'—'))+'</b></span></div>'+
+      (/[0-9]/.test(p.opp)?'<div class="opp">Opp '+esc(p.opp)+'</div>':'')+
+      (p.sa!==null?'<div class="safe">Safer: O'+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
+      '<details class="cds"><summary>Codes and context</summary>'+(chips?'<div class="chips">'+chips+'</div>':'')+(g?cxLine(g,p):'')+'</details>'+cb;
+  }
+  function playerBlocks(g,gi,list){
+    var by={},order=[];
+    list.forEach(function(p){if(!by[p.p]){by[p.p]=[];order.push(p.p)}by[p.p].push(p)});
+    function rk(p){var v=vOf(g,p);return VRANK[v]!==undefined?VRANK[v]:3}
+    var ps=order.map(function(n,i){var bs=by[n].slice().sort(function(a,b){return (a.lean?1:0)-(b.lean?1:0)||rk(a)-rk(b)});
+      return {n:n,i:i,bs:bs,pk:bs.some(function(b){return !b.lean}),best:Math.min.apply(null,bs.map(rk))}})
+      .sort(function(a,b){return (b.pk?1:0)-(a.pk?1:0)||a.best-b.best||b.bs.length-a.bs.length||a.i-b.i});
+    return ps.map(function(P){
+      var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'';
+      var tiles=P.bs.map(function(b,j){var v=vOf(g,b),x=resFor(b),k=kindTag(b);
+        return '<button class="tile '+v+'" type="button" aria-pressed="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'">'+
+          '<div class="s">'+esc(b.s)+' O'+esc(b.alt)+'</div><div class="m">@'+b.o.toFixed(2)+' · '+esc(String(b.h).replace(/^.*\((.*)\).*$/,'$1'))+'</div>'+
+          '<div><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span>'+(x?'<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+'</span>':'')+'</div></button>'}).join('');
+      var dets=P.bs.map(function(b,j){var h='';try{h=tileDet(b,g,gi)}catch(e){}return '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+h+'</div>'}).join('');
+      return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div><div class="tiles">'+tiles+'</div>'+dets+'</div>'}).join('');
+  }
+  document.addEventListener('click',function(ev){
+    var t=ev.target.closest&&ev.target.closest('.tile[data-tk]');if(!t) return;
+    var key=t.getAttribute('data-tk'),j=+t.getAttribute('data-tj'),pl=t.closest('.pl'),on=TSEL[key]===j;
+    TSEL[key]=on?undefined:j;
+    Array.prototype.forEach.call(pl.querySelectorAll('.tile'),function(x){x.setAttribute('aria-pressed',String(!on&&+x.getAttribute('data-tj')===j))});
+    Array.prototype.forEach.call(pl.querySelectorAll('.tdet'),function(x){x.hidden=on||+x.getAttribute('data-tj')!==j});
+  });
   var LOPEN={};
   var VRANK={look:0,mixed:1,caution:2};
   function vOf(g,p){var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];return c&&VRANK[c.verdict]!==undefined?c.verdict:''}
@@ -878,16 +951,15 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var vc={look:0,mixed:0,caution:0};g.picks.concat(g.leans).forEach(function(p){var v=vOf(g,p);if(v)vc[v]++});
     var vch=(vc.look||vc.mixed||vc.caution)?'<span class="vc" aria-label="verdicts">'+['look','mixed','caution'].filter(function(k){return vc[k]}).map(function(k){return '<span class="'+k+'" title="'+VLAB[k]+'">'+vc[k]+'</span>'}).join('')+'</span>':'';
     var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp">tip '+esc(g.tip)+'</span>'+vch+'<span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+nl+' lean'+(nl===1?'':'s')+(nh+npn+nol+nls?' <span class="mu">(incl. '+[[nh,'HR85'],[npn,'PIN'],[nol,'OUTLIFT'],[nls,'re-run']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+'</span></div>';
-    var th='<thead><tr><th>Player · bet</th><th class="n">Odds</th><th class="n">Hit</th><th class="n">Edge</th><th class="n">Stake</th></tr></thead>';
-    var body='',lb='';
-    g.picks.forEach(function(p,i){try{body+=pickRow(p,gi,i)}catch(e){}});
-    /* layout C: leans ordered Worth a look -> Mixed -> Caution (stable within each) */
-    g.leans.map(function(p,i){return {p:p,i:i,r:(VRANK[vOf(g,p)]!==undefined?VRANK[vOf(g,p)]:3)}}).sort(function(a,b){return a.r-b.r||a.i-b.i})
-      .forEach(function(x){try{lb+=pickRow(x.p,gi,x.i)}catch(e){}});
-    var tbl=body?'<table class="pt">'+th+'<tbody>'+body+'</tbody></table>':'<div class="none">No pick cleared the gates.</div>';
+    /* Player tiles (Mitch 20 Nov): a player with a pick brings all his bets into the picks area; the rest stay in the collapsed Leans fold. */
+    var pkp={};g.picks.forEach(function(p){pkp[p.p]=1});
+    var top=g.picks.concat(g.leans.filter(function(p){return pkp[p.p]})),rest=g.leans.filter(function(p){return !pkp[p.p]});
+    var body='',lb='';try{body=playerBlocks(g,gi,top)}catch(e){}try{lb=playerBlocks(g,gi,rest)}catch(e){}
+    var np2=0;rest.forEach(function(p,i,a){if(a.findIndex(function(q){return q.p===p.p})===i)np2++});
+    var tbl=body?'<div class="pls">'+body+'</div>':'<div class="none">No pick cleared the gates.</div>';
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
-    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+nl+')</b> · tracked, not bet · best first</span></summary>'+
-      '<table class="pt">'+th+'<tbody>'+lb+'</tbody></table></details>':'';
+    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+rest.length+' · '+np2+' player'+(np2===1?'':'s')+')</b> · tracked, not bet · best first</span></summary>'+
+      '<div class="pls">'+lb+'</div></details>':'';
     var cur=MXV[g.id]==='mx'||MXV[g.id]==='info'?'mx':'bets';
     var views=[['bets','Bets'],['mx','Matchup']];
     var gseg='<div class="gseg" role="group" aria-label="Game view">'+views.map(function(x){return '<button type="button" class="tab" data-mxg="'+esc(g.id)+'" data-mxv="'+x[0]+'" aria-pressed="'+(cur===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
