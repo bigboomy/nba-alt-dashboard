@@ -3,6 +3,22 @@
  "changes": [
   {
    "date": "2026-11-20",
+   "version": "nba-session v3.28-p4",
+   "component": "engine",
+   "title": "OUTLIFT needs 7 of his last 10",
+   "change": "An OUTLIFT item now needs its rung to have hit in at least 70% of the sample (7/10); the highest-priced band rung that passes is logged, otherwise none.",
+   "aim": "Mitch 20 Nov: stop OUTLIFT logging players at 5/10 or worse; the OUTLIFT record restarts at v3.28 for its verdict."
+  },
+  {
+   "date": "2026-11-20",
+   "version": "nba-session v3.28-p4",
+   "component": "dashboard",
+   "title": "Scout note per player",
+   "change": "Each player gets 2-3 plain sentences built from the card's own facts: who is out, what the opponent gives up, form against the line, minutes, fatigue and Pinnacle.",
+   "aim": "Mitch 20 Nov: scout-report style reasons, facts only (no AI or news)."
+  },
+  {
+   "date": "2026-11-20",
    "version": "nba-session v3.27-p4",
    "component": "dashboard",
    "title": "Each player shows once, one tile per bet",

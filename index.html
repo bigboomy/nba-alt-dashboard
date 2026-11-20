@@ -262,6 +262,7 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 details.cds{margin-top:5px}details.cds>summary{cursor:pointer;list-style:none;color:var(--muted);font-size:12px}details.cds>summary::-webkit-details-marker{display:none}
 details.cds>summary::before{content:"▸ "}details.cds[open]>summary::before{content:"▾ "}
 .tdet .cbar{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap}
+.scn{margin:-2px 0 8px;font-size:12.5px;line-height:1.45;color:var(--muted)}
 </style>
 </head>
 <body><div class="wrap">
@@ -321,7 +322,7 @@ details.cds>summary::before{content:"▸ "}details.cds[open]>summary::before{con
   <tr data-re="^HR85$"><td class="lgc">HR85</td><td>Hit-rate tier: perfect sample of 8+ games, cushion 0.70 or less, price $1.20-1.39. Target 85%+; verdict at 40 settled.</td><td class="lge">0u test</td></tr>
   <tr data-re="^PIN$"><td class="lgc">PIN</td><td>Pinnacle-anchor tier: a held book&#x27;s alt rung at $1.20-3.00 paying 4pp+ over Pinnacle&#x27;s fair price. Verdict at 100.</td><td class="lge">0u test</td></tr>
   <tr data-re="^BK-"><td class="lgc">BK-pointsbet</td><td>Which book the PIN price is at.</td><td class="lge">Info</td></tr>
-  <tr data-re="^OUTLIFT$"><td class="lgc">OUTLIFT</td><td>Teammate-out tier: a key player with a key teammate freshly out; highest-priced rung at $1.20-1.59, at or under the main line. Verdict at 60.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^OUTLIFT$"><td class="lgc">OUTLIFT</td><td>Teammate-out tier: a key player with a key teammate freshly out; highest-priced rung at $1.20-1.59, at or under the main line, that hit in 7+ of his last 10 (v3.28, 20 Nov). Verdict at 60, counted from v3.28.</td><td class="lge">0u test</td></tr>
   <tr data-re="^TM-OUT:"><td class="lgc">TM-OUT:SC1/REB1</td><td>Which key teammate roles are out for OUTLIFT (roles are explained under Opponent and matchup).</td><td class="lge">Info</td></tr>
   <tr data-re="^LSR$"><td class="lgc">LSR</td><td>Late-scratch re-run: a new item after a watched player was ruled OUT 10+ min before tip and the game was re-run. Verdict at 40.</td><td class="lge">0u test</td></tr>
   <tr data-re="^LSR-"><td class="lgc">LSR-PICK · LSR-LEAN · LSR-HR85 …</td><td>What the re-run item would have been (pick, lean, HR85, PIN or OUTLIFT).</td><td class="lge">Info</td></tr>
@@ -917,6 +918,41 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       (p.sa!==null?'<div class="safe">Safer: O'+esc(p.sa)+' @ '+p.so.toFixed(2)+'</div>':'')+
       '<details class="cds"><summary>Codes and context</summary>'+(chips?'<div class="chips">'+chips+'</div>':'')+(g?cxLine(g,p):'')+'</details>'+cb;
   }
+  /* Scout note (Mitch 20 Nov: "a scout report style", facts only): 2-3 plain sentences per player built from data
+     already in the card (outs, what the opponent allows, form against the line, minutes, fatigue, Pinnacle).
+     No AI, no news. Display only. */
+  var SW={PTS:'points',REB:'rebounds',AST:'assists','3PM':'threes'};
+  function ordn(n){var s=['th','st','nd','rd'],v=n%100;return n+(s[(v-20)%10]||s[v]||s[0])}
+  function top3Out(g,team,self){var m=String(g.ctx||'').match(/Out TOP3: ([^;]*)/),r=[];
+    if(m) m[1].split(', ').forEach(function(x){var q=x.match(/^(.+) \((\w+)\)$/);if(q&&q[2]===team&&q[1]!==self)r.push(q[1])});
+    ((g.abs&&g.abs[team])||[]).forEach(function(o){if(o.name!==self&&r.indexOf(o.name)<0)r.push(o.name)});return r}
+  function andList(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+  function zOf(b){var z=null;b.f.forEach(function(f){var m=f.match(/^Z(-?\d+(?:\.\d+)?)$/);if(m)z=Number(m[1])});return z}
+  function pinOf(b){var v=null;b.f.forEach(function(f){var m=f.match(/^PIN([+-]\d+(?:\.\d+)?)$/);if(m)v=Number(m[1])});return v}
+  function scoutNote(g,P){
+    var b0=P.bs[0],t=b0.t||'',ids=String(g.id).split('@'),opp=t===ids[0]?ids[1]:t===ids[1]?ids[0]:'',out=[],has=function(f){return P.bs.some(function(b){return b.f.indexOf(f)>=0})};
+    var mine=top3Out(g,t,P.n),theirs=opp?top3Out(g,opp,''):[];
+    if(mine.length&&theirs.length) out.push(t+' are without '+andList(mine)+', and '+opp+' are missing '+andList(theirs)+'.');
+    else if(mine.length) out.push('With '+andList(mine)+' out, more of '+t+"'s load falls on him.");
+    else if(theirs.length) out.push(opp+' are missing '+andList(theirs)+'.');
+    var ar=g.mx&&g.mx.teams&&g.mx.teams[opp]&&g.mx.teams[opp].allow_rk,good=[],tough=[];
+    var seen={};if(ar) P.bs.forEach(function(b){var r=ar[b.s],w=SW[b.s]||b.s;if(r==null||seen[b.s])return;seen[b.s]=1;
+      if(r<=8&&good.indexOf(w)<0)good.push((r===1?'the most':'the '+ordn(r)+' most')+' '+w);
+      if(r>=23&&tough.indexOf(w)<0)tough.push((r===30?'the fewest':'the '+ordn(31-r)+' fewest')+' '+w)});
+    if(good.length||tough.length) out.push(opp+' give up '+andList(good.concat(tough))+(tough.length&&!good.length?', a tough matchup.':good.length&&!tough.length?', a soft spot.':'.'));
+    var zs=P.bs.map(zOf).filter(function(z){return z!==null}),pins=P.bs.map(pinOf).filter(function(v){return v!==null}),risk=[];
+    if(zs.length&&zs.every(function(z){return z<0.5})) risk.push(zs.length>1?'every line sits right on his recent average':'the line sits right on his recent average');
+    else if(zs.length&&zs.every(function(z){return z>=1.2})) risk.push('his recent average clears '+(zs.length>1?'every line':'the line')+' comfortably');
+    if(has('DNP-LAST')) risk.push('he missed a game in the last 3 days');
+    if(has('[MIN↓]')||has('MT-')) risk.push('his minutes are down');
+    else if(has('[MIN↑]')||has('MT+')) risk.push('his minutes are up');
+    if(P.bs.some(function(b){return b.f.some(function(f){return /^B2B/.test(f)})})) risk.push(t+' are on the second night of a back-to-back');
+    if(has('DOG7')) risk.push(t+' are big underdogs, so blowout minutes are a risk');
+    if(pins.length&&pins.every(function(v){return v<=-2})) risk.push('Pinnacle prices '+(pins.length>1?'all of these':'it')+' worse than we get');
+    else if(pins.length&&pins.every(function(v){return v>=2})) risk.push('Pinnacle agrees');
+    if(risk.length){var r=andList(risk.slice(0,3));out.push(r.charAt(0).toUpperCase()+r.slice(1)+'.')}
+    return out.join(' ');
+  }
   function playerBlocks(g,gi,list){
     var by={},order=[];
     list.forEach(function(p){if(!by[p.p]){by[p.p]=[];order.push(p.p)}by[p.p].push(p)});
@@ -931,7 +967,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
           '<div class="s">'+esc(b.s)+' O'+esc(b.alt)+'</div><div class="m">@'+b.o.toFixed(2)+' · '+esc(String(b.h).replace(/^.*\((.*)\).*$/,'$1'))+'</div>'+
           '<div><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span>'+(x?'<span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+'</span>':'')+'</div></button>'}).join('');
       var dets=P.bs.map(function(b,j){var h='';try{h=tileDet(b,g,gi)}catch(e){}return '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+h+'</div>'}).join('');
-      return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div><div class="tiles">'+tiles+'</div>'+dets+'</div>'}).join('');
+      var sn='';try{sn=scoutNote(g,P)}catch(e){}
+      return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+(sn?'<p class="scn">'+esc(sn)+'</p>':'')+'<div class="tiles">'+tiles+'</div>'+dets+'</div>'}).join('');
   }
   document.addEventListener('click',function(ev){
     var t=ev.target.closest&&ev.target.closest('.tile[data-tk]');if(!t) return;
