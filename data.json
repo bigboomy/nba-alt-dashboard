@@ -487,14 +487,660 @@
         ]
       },
       "tip": "05:00"
+    },
+    {
+      "abs": {
+        "NYK": [
+          {
+            "min": 35.2,
+            "name": "Karl-Anthony Towns",
+            "roles": [
+              "SC2",
+              "REB1"
+            ]
+          },
+          {
+            "min": 35.8,
+            "name": "OG Anunoby",
+            "roles": [
+              "SC3"
+            ]
+          }
+        ],
+        "POR": []
+      },
+      "b2b": [],
+      "box5": {
+        "Deni Avdija": {
+          "gp": 13,
+          "l5": {
+            "ast": 4.6,
+            "blk": 0.8,
+            "fg3": 2.8,
+            "fg3a": 5.6,
+            "fg_pct": 55.0,
+            "fga": 16.0,
+            "fgm": 8.8,
+            "fta": 6.2,
+            "ftm": 5.2,
+            "min": 31.6,
+            "pts": 25.6,
+            "reb": 5.4,
+            "stl": 1.4,
+            "to": 3.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 6.1,
+            "blk": 0.4,
+            "fg3": 2.1,
+            "fg3a": 5.4,
+            "fg_pct": 50.7,
+            "fga": 15.8,
+            "fgm": 8.0,
+            "fta": 8.5,
+            "ftm": 6.1,
+            "min": 32.5,
+            "pts": 24.2,
+            "reb": 6.2,
+            "stl": 1.1,
+            "to": 3.3
+          }
+        },
+        "Donovan Clingan": {
+          "gp": 15,
+          "l5": {
+            "ast": 2.4,
+            "blk": 2.4,
+            "fg3": 0.4,
+            "fg3a": 2.4,
+            "fg_pct": 51.2,
+            "fga": 8.2,
+            "fgm": 4.2,
+            "fta": 1.4,
+            "ftm": 0.6,
+            "min": 27.4,
+            "pts": 9.4,
+            "reb": 11.6,
+            "stl": 1.2,
+            "to": 1.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.8,
+            "blk": 2.2,
+            "fg3": 0.9,
+            "fg3a": 2.4,
+            "fg_pct": 55.5,
+            "fga": 7.9,
+            "fgm": 4.4,
+            "fta": 1.8,
+            "ftm": 1.1,
+            "min": 25.7,
+            "pts": 10.7,
+            "reb": 10.7,
+            "stl": 0.6,
+            "to": 1.5
+          }
+        },
+        "Jrue Holiday": {
+          "gp": 15,
+          "l5": {
+            "ast": 5.2,
+            "blk": 0.2,
+            "fg3": 2.8,
+            "fg3a": 6.0,
+            "fg_pct": 42.4,
+            "fga": 11.8,
+            "fgm": 5.0,
+            "fta": 3.8,
+            "ftm": 3.2,
+            "min": 28.8,
+            "pts": 16.0,
+            "reb": 3.8,
+            "stl": 1.8,
+            "to": 3.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 4.3,
+            "blk": 0.2,
+            "fg3": 2.5,
+            "fg3a": 5.7,
+            "fg_pct": 47.6,
+            "fga": 9.5,
+            "fgm": 4.5,
+            "fta": 2.7,
+            "ftm": 2.3,
+            "min": 26.8,
+            "pts": 13.9,
+            "reb": 3.5,
+            "stl": 1.2,
+            "to": 1.9
+          }
+        },
+        "Miles McBride": {
+          "gp": 15,
+          "l5": {
+            "ast": 0.8,
+            "blk": 0.2,
+            "fg3": 2.0,
+            "fg3a": 4.6,
+            "fg_pct": 46.4,
+            "fga": 5.6,
+            "fgm": 2.6,
+            "fta": 0.2,
+            "ftm": 0.2,
+            "min": 16.0,
+            "pts": 7.4,
+            "reb": 0.8,
+            "stl": 0.4,
+            "to": 0.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.0,
+            "blk": 0.3,
+            "fg3": 1.9,
+            "fg3a": 4.3,
+            "fg_pct": 43.9,
+            "fga": 5.5,
+            "fgm": 2.4,
+            "fta": 0.4,
+            "ftm": 0.3,
+            "min": 17.4,
+            "pts": 7.0,
+            "reb": 1.3,
+            "stl": 0.7,
+            "to": 0.3
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "skipped": [],
+        "stats": [
+          40,
+          40
+        ]
+      },
+      "ctx": "Out TOP3: Ja Morant (POR), Karl-Anthony Towns (NYK), OG Anunoby (NYK); Returning: none; Depleted: none; missed last game: Deni Avdija. Coverage: evaluated 15 of 15 players (40 of 40 player-stats); skipped: none",
+      "cx": {
+        "Deni Avdija|PTS|19.5|lean": {
+          "best_book": "bet365",
+          "best_price": 1.5,
+          "mm_min": 32.12,
+          "mm_mu": 23.149,
+          "n_books": 14,
+          "opp_lift": 0.074,
+          "opp_out": "SC2/REB1:Karl-Anthony Towns;SC3:OG Anunoby",
+          "p_mm": 0.7143,
+          "p_pin": 0.6353,
+          "p_wowy": 0.7143,
+          "pin_edge_pp": -3.1,
+          "pin_line": 22.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 23.149
+        },
+        "Donovan Clingan|REB|9.5|lean": {
+          "best_book": "betdeluxe",
+          "best_price": 1.69,
+          "mm_min": 27.4,
+          "mm_mu": 11.074,
+          "n_books": 15,
+          "opp_lift": 0.067,
+          "opp_out": "SC2/REB1:Karl-Anthony Towns;SC3:OG Anunoby",
+          "p_mm": 0.6621,
+          "p_pin": 0.5543,
+          "p_wowy": 0.6621,
+          "pin_edge_pp": -4.4,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 11.074
+        },
+        "Jrue Holiday|PTS|9.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.48,
+          "mm_min": 28.44,
+          "mm_mu": 14.33,
+          "n_books": 15,
+          "opp_lift": 0.074,
+          "opp_out": "SC2/REB1:Karl-Anthony Towns;SC3:OG Anunoby",
+          "p_mm": 0.8198,
+          "p_pin": 0.6924,
+          "p_wowy": 0.8198,
+          "pin_edge_pp": 1.7,
+          "pin_line": 12.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 14.33
+        },
+        "Miles McBride|PTS|4.5|PIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.35,
+          "mm_min": 22.09,
+          "mm_mu": 10.102,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9245,
+          "p_pin": 0.7979,
+          "p_wowy": 0.9457,
+          "pin_edge_pp": 5.7,
+          "pin_line": 8.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.6,
+          "wowy_keys": "Karl-Anthony Towns;OG Anunoby",
+          "wowy_mu": 10.846
+        }
+      },
+      "engine": "nba-session v3.31-p4",
+      "id": "POR@NYK",
+      "leans": [
+        {
+          "alt": 19.5,
+          "e": 5.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[ROLE?]",
+            "MU-4%",
+            "DNP-LAST",
+            "C0.82",
+            "Z0.91",
+            "TMO",
+            "PIN-3.1",
+            "OPP-OUT:SC2/SC3/REB1"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            27,
+            34,
+            28,
+            24,
+            15
+          ],
+          "o": 1.5,
+          "opp": "NYK 4th fewest PTS allowed · pace -1.9",
+          "p": "Deni Avdija",
+          "s": "PTS",
+          "st": "4",
+          "std": 21.5,
+          "t": "POR"
+        },
+        {
+          "alt": 9.5,
+          "e": 5.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[ROLE?]",
+            "MU-4%",
+            "C0.68",
+            "Z0.85",
+            "TMO",
+            "PIN+1.7",
+            "OPP-OUT:SC2/SC3/REB1"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            22,
+            23,
+            10,
+            6,
+            19
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            null,
+            null,
+            null
+          ],
+          "o": 1.48,
+          "opp": "NYK 4th fewest PTS allowed · pace -1.9",
+          "p": "Jrue Holiday",
+          "s": "PTS",
+          "st": "4",
+          "std": 11.5,
+          "t": "POR"
+        },
+        {
+          "alt": 9.5,
+          "e": 4.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[ROLE?]",
+            "MU-4%",
+            "C0.86",
+            "Z0.52",
+            "TMO",
+            "PIN-4.4",
+            "OPP-OUT:SC2/SC3/REB1",
+            "REB-OPP"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            13,
+            12,
+            10,
+            11,
+            12
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Robert Williams III",
+                "Deni Avdija"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            null,
+            null,
+            null
+          ],
+          "o": 1.67,
+          "opp": "NYK 8th fewest REB allowed · pace -1.9",
+          "p": "Donovan Clingan",
+          "s": "REB",
+          "st": "3",
+          "std": 10.5,
+          "t": "POR"
+        },
+        {
+          "alt": 4.5,
+          "e": -1.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "PIN",
+            "BK-ladbrokes",
+            "[ROLE?]",
+            "MU-3%",
+            "OT-ADJ",
+            "C0.63",
+            "Z0.55",
+            "TMO",
+            "PIN+5.7"
+          ],
+          "h": "70% (7/10)",
+          "l5": [
+            3,
+            3,
+            3,
+            9,
+            19
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-15",
+              "ot": 1
+            },
+            null,
+            null
+          ],
+          "o": 1.35,
+          "opp": "POR 7th fewest PTS allowed · pace -1.9",
+          "p": "Miles McBride",
+          "s": "PTS",
+          "st": "4",
+          "std": 7.5,
+          "t": "NYK"
+        }
+      ],
+      "mkt": 215.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "mx": {
+        "exp_pace": 100.3,
+        "home_spread": 1.5,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.8,
+          "PTS": 111.2,
+          "REB": 42.7,
+          "pace": 102.2
+        },
+        "teams": {
+          "NYK": {
+            "allow100": {
+              "3PM": 13.5,
+              "AST": 25.6,
+              "PTS": 108.6,
+              "REB": 41.9
+            },
+            "allow_rk": {
+              "3PM": 9,
+              "AST": 19,
+              "PTS": 27,
+              "REB": 23
+            },
+            "out": [
+              {
+                "min": 35.2,
+                "name": "Karl-Anthony Towns",
+                "roles": [
+                  "SC2",
+                  "REB1"
+                ]
+              },
+              {
+                "min": 35.8,
+                "name": "OG Anunoby",
+                "roles": [
+                  "SC3"
+                ]
+              }
+            ],
+            "pace": 99.8,
+            "rk": {
+              "ast": 16,
+              "blk": 25,
+              "dreb": 5,
+              "fg3_pct": 10,
+              "fg3a": 11,
+              "fg3m": 9,
+              "fg_pct": 28,
+              "ft_pct": 4,
+              "fta": 27,
+              "net": 8,
+              "opp_fg3_pct": 12,
+              "opp_fg_pct": 4,
+              "oppg": 2,
+              "oreb": 6,
+              "pace": 30,
+              "pf": 7,
+              "ppg": 26,
+              "reb": 3,
+              "stl": 27,
+              "tov": 13,
+              "ts_pct": 21
+            },
+            "v": {
+              "ast": 26.6,
+              "ats": "6-9-0",
+              "ats_away": "3-5-0",
+              "ats_home": "3-4-0",
+              "ats_l10": "5-5-0",
+              "away": "5-3",
+              "blk": 4.3,
+              "dreb": 33.9,
+              "fg3_pct": 36.5,
+              "fg3a": 39.9,
+              "fg3m": 14.5,
+              "fg_pct": 44.2,
+              "ft_pct": 81.0,
+              "fta": 21.4,
+              "gp": 15,
+              "home": "4-3",
+              "l10": "7-3",
+              "net": 5.9,
+              "opp_fg3_pct": 34.9,
+              "opp_fg_pct": 43.8,
+              "oppg": 103.5,
+              "oreb": 13.1,
+              "ou": "4-11-0",
+              "ou_l10": "3-7-0",
+              "pace": 98.3,
+              "pf": 20.5,
+              "ppg": 109.5,
+              "reb": 47.0,
+              "rec": "9-6",
+              "stl": 7.2,
+              "tov": 14.7,
+              "ts_pct": 56.3
+            }
+          },
+          "POR": {
+            "allow100": {
+              "3PM": 12.5,
+              "AST": 24.2,
+              "PTS": 109.9,
+              "REB": 41.9
+            },
+            "allow_rk": {
+              "3PM": 25,
+              "AST": 29,
+              "PTS": 24,
+              "REB": 24
+            },
+            "out": [],
+            "pace": 102.6,
+            "rk": {
+              "ast": 22,
+              "blk": 12,
+              "dreb": 7,
+              "fg3_pct": 12,
+              "fg3a": 4,
+              "fg3m": 2,
+              "fg_pct": 16,
+              "ft_pct": 16,
+              "fta": 4,
+              "net": 6,
+              "opp_fg3_pct": 9,
+              "opp_fg_pct": 5,
+              "oppg": 9,
+              "oreb": 17,
+              "pace": 6,
+              "pf": 22,
+              "ppg": 6,
+              "reb": 11,
+              "stl": 26,
+              "tov": 21,
+              "ts_pct": 4
+            },
+            "v": {
+              "ast": 24.9,
+              "ats": "10-5-0",
+              "ats_away": "7-3-0",
+              "ats_home": "3-2-0",
+              "ats_l10": "7-3-0",
+              "away": "7-3",
+              "blk": 5.3,
+              "dreb": 33.2,
+              "fg3_pct": 36.3,
+              "fg3a": 43.4,
+              "fg3m": 15.7,
+              "fg_pct": 46.2,
+              "ft_pct": 78.2,
+              "fta": 29.0,
+              "gp": 15,
+              "home": "3-2",
+              "l10": "6-4",
+              "net": 6.3,
+              "opp_fg3_pct": 33.6,
+              "opp_fg_pct": 44.1,
+              "oppg": 111.2,
+              "oreb": 11.5,
+              "ou": "6-9-0",
+              "ou_l10": "4-6-0",
+              "pace": 102.9,
+              "pf": 22.9,
+              "ppg": 117.5,
+              "reb": 44.7,
+              "rec": "10-5",
+              "stl": 7.4,
+              "tov": 16.6,
+              "ts_pct": 59.7
+            }
+          }
+        }
+      },
+      "out": {
+        "NYK": [
+          "Jordan Clarkson (Clarkson (foot) won't play in Saturday's game against Portland.)",
+          "Karl-Anthony Towns (Towns (illness) won't play in Saturday's game versus the Trail Blazers.)",
+          "OG Anunoby (Anunoby (calf) has been ruled out for Saturday's game against the Trail Blazers.)"
+        ],
+        "POR": [
+          "Chris Youngblood (Youngblood (heel) has been ruled out for Saturday's game against the Knicks.)",
+          "Ja Morant (Head coach Micah Nori said Morant met with a doctor in Los Angeles, who gave him a positive outlook on his recovery from the hamstring injury. While Nori declined to update Morant's timetable, he added Morant \"may not be out for as long as we thought,\" Trail Blazers Insider Sean Highkin reports.)",
+          "Shaedon Sharpe (Sharpe suffered a torn meniscus in his knee and is expected to miss six months, per Shams Charania of ESPN.)",
+          "Vit Krejci (Krejci underwent surgery on his fractured left ankle Wednesday and will be re-evaluated in eight weeks, Brett Siegel of ClutchPoints.com reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "NYK": [],
+        "POR": []
+      },
+      "tip": "11:30"
     }
   ],
-  "generated": "2026-11-21T16:30:02Z",
+  "generated": "2026-11-21T23:05:02Z",
   "totals": [
     [
       "MIL@PHI",
       null,
       228.5
+    ],
+    [
+      "POR@NYK",
+      null,
+      215.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
