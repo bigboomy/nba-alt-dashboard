@@ -1,5 +1,5 @@
 {
-  "generated": "2026-11-21T04:00:02Z",
+  "generated": "2026-11-21T07:07:53Z",
   "engine": "nba-session v3.31-p4",
   "jobs": {
     "tick": {
@@ -9,8 +9,8 @@
     },
     "resolve": {
       "status": "ok",
-      "detail": "cohort resolve: nothing; totals daily: nothing; leans settle: nothing; schedule.json: 9 games tomorrow; results: sent; backup: 4 tabs; board: 21221 rungs graded (4 games); perfect-sample Pointsbet run",
-      "last_run": "2026-11-20T07:07:35Z"
+      "detail": "cohort resolve: Settled 1 picks: 0-1, -1.00u - verified; totals daily: totals: 9 game(s) settled (9 same night), 9 new game(s) recorded (2026-11-21) - verified; leans settle: 32 new leans recorded; se",
+      "last_run": "2026-11-21T07:07:53Z"
     }
   }
 }
