@@ -274,6 +274,9 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 .pl .nm{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:2px}.pl .nm strong{font-size:16px;font-weight:700}.pl .nm .tm{color:var(--muted);font-size:12px}
 .tmo{display:inline-block;background:#fff4d6;color:#8a4b00;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px}
 @media (prefers-color-scheme:dark){.tmo{background:#3d2a05;color:#fcd34d}}
+/* 21 Nov (Mitch): key teammate back tonight (engine RET), next to the out pill */
+.tmr{display:inline-block;background:#e3eefb;color:#1f4e8c;font-size:11px;font-weight:700;padding:1px 8px;border-radius:999px}
+@media (prefers-color-scheme:dark){.tmr{background:#16304f;color:#9cc3f5}}
 .tdet{margin:4px 0 8px;font-size:12.5px;background:var(--chip);border-radius:8px;padding:9px 11px}.tdet .row1{display:flex;flex-wrap:wrap;gap:4px 12px;color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
 .tdet .row1 b{color:var(--text)}.tdet .opp,.tdet .safe{font-size:12px;color:var(--muted);margin-top:3px}
 details.cds{margin-top:5px}details.cds>summary{cursor:pointer;list-style:none;color:var(--muted);font-size:12px}details.cds>summary::-webkit-details-marker{display:none}
@@ -859,7 +862,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return {id:String(g.id),tip:str(g.tip,'—'),proj:num(g.proj),mkt:num(g.mkt),mo:num(g.mkt_o),mu:num(g.mkt_u),ctx:str(g.ctx,''),picks:picks,leans:leans,
       out:tl(g.out),q:tl(g.q),b2b:Array.isArray(g.b2b)?g.b2b.map(function(x){return String(x).toUpperCase()}):null,
       hasInfo:!!(g.out&&typeof g.out==='object'),
-      cx:(g.cx&&typeof g.cx==='object')?g.cx:{},box5:(g.box5&&typeof g.box5==='object')?g.box5:{},abs:(g.abs&&typeof g.abs==='object')?g.abs:null,mx:(g.mx&&typeof g.mx==='object')?g.mx:null,
+      cx:(g.cx&&typeof g.cx==='object')?g.cx:{},box5:(g.box5&&typeof g.box5==='object')?g.box5:{},abs:(g.abs&&typeof g.abs==='object')?g.abs:null,ret:(g.ret&&typeof g.ret==='object')?g.ret:null,mx:(g.mx&&typeof g.mx==='object')?g.mx:null,
       cov:cov&&Array.isArray(cov.players)&&Array.isArray(cov.stats)?{pl:cov.players,st:cov.stats,sk:Array.isArray(cov.skipped)?cov.skipped.map(String):[]}:null};
   }
   function normTotal(t){
@@ -995,6 +998,13 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(m) m[1].split(', ').forEach(function(x){var r=x.match(/^(.+) \((\w+)\)$/);if(r&&r[2]===p.t&&r[1]!==p.p)names.push(r[1])});
     if(!names.length&&g.abs&&g.abs[p.t]) g.abs[p.t].forEach(function(o){if(o.name!==p.p)names.push(o.name)});
     return names.length?'<span class="tmo">⚠ '+esc(names.join(', '))+' out</span>':'<span class="tmo">⚠ Key teammate out</span>';
+  }
+  /* Back tonight (Mitch 21 Nov): a top-3 teammate who missed 70%+ of his sample games plays tonight (RET), so the
+     usage he soaked up may go back. Names from data.json game.ret[team] (from 21 Nov runs). */
+  function tmBack(g,p){
+    if(p.f.indexOf('RET')<0) return '';
+    var names=((g.ret&&g.ret[p.t])||[]).filter(function(n){return n!==p.p});
+    return '<span class="tmr">\u21A9 '+(names.length?esc(names.join(', '))+' back':'Key teammate back')+'</span>';
   }
   function tileDet(p,g,gi){
     var cb='',cc='',u='';
@@ -1137,7 +1147,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       return {n:n,i:i,bs:bs,pk:bs.some(function(b){return !b.lean}),best:Math.min.apply(null,bs.map(rk))}})
       .sort(function(a,b){return (b.pk?1:0)-(a.pk?1:0)||a.best-b.best||b.bs.length-a.bs.length||a.i-b.i});
     return ps.map(function(P){
-      var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'';
+      var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=(P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'')+(P.bs.map(function(b){return tmBack(g,b)}).filter(Boolean)[0]||'');
       var rows=P.bs.map(function(b,j){var x=resFor(b),k=kindTag(b),det='';try{det='<p class="kt"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span> '+esc(KGLOSS[k]||'')+'</p>'+knLine(b)+tileDet(b,g,gi)+'<p class="gl">Edge = the model\'s chance minus the chance the price implies. Stars = confidence (5 is highest).</p>'}catch(e){}
         var kl=b.f.indexOf('OUTLIFT')>=0;
         return '<button class="bet'+(kl?' killed':'')+'" type="button" aria-label="'+betLabel(b)+(kl?', killed OUTLIFT tier, record only':'')+'" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'"><span class="rc">'+ringHtml(b)+'</span>'+

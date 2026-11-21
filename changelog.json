@@ -5,6 +5,14 @@
       "date": "2026-11-21",
       "version": "nba-session v3.31-p4",
       "component": "dashboard",
+      "title": "Key teammate back pill",
+      "change": "Next to the key-teammate-out pill, a blue 'back' pill names a top-3 teammate who missed most of his recent games and plays tonight (the RET code), so his share of the usage may drop.",
+      "aim": "Mitch 21 Nov. Display only; names from data.json game.ret (pipeline, from 21 Nov runs)."
+    },
+    {
+      "date": "2026-11-21",
+      "version": "nba-session v3.31-p4",
+      "component": "dashboard",
       "title": "Last 5: key teammate out (amber) and overtime (dot)",
       "change": "A last-5 number has an amber outline when one of his team's top two in that stat sat out that game, and a dot when it went to overtime. The numbers are now the real box score (OT games were shown scaled to 48 minutes). The player fold names who was out and which games went to OT.",
       "aim": "Mitch 21 Nov: see at a glance whether a clear came from extra minutes or opportunities. Display only; data from data.json l5x (pipeline l5tags)."
