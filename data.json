@@ -3287,9 +3287,214 @@
         ]
       },
       "tip": "12:00"
+    },
+    {
+      "abs": {
+        "PHX": [],
+        "UTA": []
+      },
+      "b2b": [],
+      "box5": {},
+      "cov": {
+        "players": [
+          14,
+          14
+        ],
+        "skipped": [
+          "Mo Bamba REB (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          34,
+          35
+        ]
+      },
+      "ctx": "Out TOP3: Lauri Markkanen (UTA); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 14 of 14 players (34 of 35 player-stats); skipped: Mo Bamba REB (no rung priced 1.40+ at or below std)",
+      "cx": {},
+      "engine": "nba-session v3.31-p4",
+      "id": "PHX@UTA",
+      "leans": [],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 102.2,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.8,
+          "PTS": 111.2,
+          "REB": 42.7,
+          "pace": 102.3
+        },
+        "teams": {
+          "PHX": {
+            "allow100": {
+              "3PM": 13.5,
+              "AST": 25.7,
+              "PTS": 112.3,
+              "REB": 43.4
+            },
+            "allow_rk": {
+              "3PM": 12,
+              "AST": 18,
+              "PTS": 9,
+              "REB": 5
+            },
+            "out": [],
+            "pace": 101.7,
+            "rk": {
+              "ast": 8,
+              "blk": 28,
+              "dreb": 29,
+              "fg3_pct": 7,
+              "fg3a": 17,
+              "fg3m": 16,
+              "fg_pct": 5,
+              "ft_pct": 22,
+              "fta": 28,
+              "net": 19,
+              "opp_fg3_pct": 23,
+              "opp_fg_pct": 20,
+              "oppg": 19,
+              "oreb": 20,
+              "pace": 23,
+              "pf": 11,
+              "ppg": 14,
+              "reb": 28,
+              "stl": 17,
+              "tov": 7,
+              "ts_pct": 9
+            },
+            "v": {
+              "ast": 27.6,
+              "ats": "5-9-0",
+              "ats_away": "2-3-0",
+              "ats_home": "3-6-0",
+              "ats_l10": "5-5-0",
+              "away": "2-3",
+              "blk": 4.1,
+              "dreb": 29.1,
+              "fg3_pct": 37.1,
+              "fg3a": 37.4,
+              "fg3m": 13.9,
+              "fg_pct": 47.5,
+              "ft_pct": 76.4,
+              "fta": 21.2,
+              "gp": 14,
+              "home": "5-4",
+              "l10": "6-4",
+              "net": -1.6,
+              "opp_fg3_pct": 37.0,
+              "opp_fg_pct": 46.9,
+              "oppg": 115.7,
+              "oreb": 11.1,
+              "ou": "8-6-0",
+              "ou_l10": "5-5-0",
+              "pace": 101.4,
+              "pf": 21.4,
+              "ppg": 114.1,
+              "reb": 40.2,
+              "rec": "7-7",
+              "stl": 8.0,
+              "tov": 14.2,
+              "ts_pct": 58.4
+            }
+          },
+          "UTA": {
+            "allow100": {
+              "3PM": 12.5,
+              "AST": 24.0,
+              "PTS": 111.6,
+              "REB": 43.0
+            },
+            "allow_rk": {
+              "3PM": 25,
+              "AST": 30,
+              "PTS": 12,
+              "REB": 10
+            },
+            "out": [],
+            "pace": 102.7,
+            "rk": {
+              "ast": 21,
+              "blk": 3,
+              "dreb": 8,
+              "fg3_pct": 15,
+              "fg3a": 19,
+              "fg3m": 20,
+              "fg_pct": 26,
+              "ft_pct": 19,
+              "fta": 16,
+              "net": 23,
+              "opp_fg3_pct": 12,
+              "opp_fg_pct": 8,
+              "oppg": 21,
+              "oreb": 18,
+              "pace": 7,
+              "pf": 23,
+              "ppg": 27,
+              "reb": 12,
+              "stl": 29,
+              "tov": 24,
+              "ts_pct": 25
+            },
+            "v": {
+              "ast": 25.1,
+              "ats": "6-10-0",
+              "ats_away": "3-5-0",
+              "ats_home": "3-5-0",
+              "ats_l10": "5-5-0",
+              "away": "2-6",
+              "blk": 5.8,
+              "dreb": 33.0,
+              "fg3_pct": 35.3,
+              "fg3a": 36.9,
+              "fg3m": 13.0,
+              "fg_pct": 44.8,
+              "ft_pct": 76.7,
+              "fta": 24.1,
+              "gp": 16,
+              "home": "1-7",
+              "l10": "2-8",
+              "net": -7.2,
+              "opp_fg3_pct": 34.8,
+              "opp_fg_pct": 44.8,
+              "oppg": 116.0,
+              "oreb": 11.4,
+              "ou": "6-10-0",
+              "ou_l10": "4-6-0",
+              "pace": 103.0,
+              "pf": 23.1,
+              "ppg": 108.8,
+              "reb": 44.4,
+              "rec": "3-13",
+              "stl": 7.0,
+              "tov": 16.9,
+              "ts_pct": 56.2
+            }
+          }
+        }
+      },
+      "out": {
+        "PHX": [
+          "Mark Williams (Williams underwent surgery Thursday to repair a torn labrum in his left shoulder and will miss an extended period of time, Shams Charania of ESPN reports.)"
+        ],
+        "UTA": [
+          "Jaren Jackson Jr. (Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.)",
+          "Jusuf Nurkic (Nurkic (foot) has been cleared for on-court work and will be re-evaluated in one week.)",
+          "Lauri Markkanen (Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "PHX": [],
+        "UTA": []
+      },
+      "tip": "13:30"
     }
   ],
-  "generated": "2026-11-20T23:30:02Z",
+  "generated": "2026-11-21T01:00:02Z",
   "totals": [
     [
       "CHA@ATL",
@@ -3318,6 +3523,11 @@
     ],
     [
       "WAS@CHI",
+      null,
+      null
+    ],
+    [
+      "PHX@UTA",
       null,
       null
     ]
