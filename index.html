@@ -84,6 +84,8 @@ details.lf>summary span{color:var(--muted)}details.lf>summary b{color:var(--text
 @media (prefers-color-scheme:dark){table.pt tr.lean td{background:rgba(255,255,255,.04)}.chip.ln{background:#2e2a52;color:#c9c3ff}table.gi tr.out td{color:#ff8a80}}
 .prow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:8px 14px;border-top:1px solid var(--line)}
 .prow .meta{margin-left:auto}
+/* 21 Nov (Mitch): upcoming matchups from schedule.json (written by the 18:07 resolve, before any odds) */
+.umx>p.ucap{margin:0;padding:0 14px 8px;font-size:.78rem;color:var(--muted)}details.umg{border-top:1px solid var(--line)}details.umg>summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center;min-height:44px;padding:4px 14px}details.umg>summary::-webkit-details-marker{display:none}details.umg>summary b{font-size:1rem}details.umg>summary span{color:var(--muted);font-size:.8rem}details.umg>summary::after{content:'';margin-left:auto;width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s;flex:none}details.umg[open]>summary::after{transform:rotate(45deg)}details.umg>.gw{padding:0 10px 10px}
 .gh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .cbtn.on{border-color:var(--good);color:var(--good);font-weight:700}
 .cbtn.onp{border-color:var(--warn);color:var(--warn);font-weight:700}
@@ -924,7 +926,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   var MXV={};
   function mxHtml(g){
     var m=g.mx,t=String(g.id).split('@'),A=t[0]||'',H=t[1]||'';
-    if(!m||!m.teams||!m.teams[A]||!m.teams[H]) return '<div class="mxh">Injuries and line</div>'+infoTable(g)+'<div class="none">No team stats for this game (needs the v3.25+ slate run).</div>';
+    if(!m||!m.teams||!m.teams[A]||!m.teams[H]) return '<div class="mxh">Injuries'+(g.sched?'':' and line')+'</div>'+infoTable(g)+'<div class="none">'+(g.sched?'No team stats for this game yet.':'No team stats for this game (needs the v3.25+ slate run).')+'</div>';
     var a=m.teams[A],h=m.teams[H],av=a.v||{},hv=h.v||{};
     function rk(r){if(r===null||r===undefined||r==='')return '';var n=Number(r),c=n<=10?'g':(n>=21?'r':'');return '<span class="rk '+c+'">#'+n+'</span>'}
     function v(x,d){return x===null||x===undefined||x===''?'—':(typeof x==='number'?x.toFixed(d===undefined?1:d):esc(String(x)))}
@@ -947,8 +949,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var html='<div class="mxh">Records</div>'+hd(esc(A),esc(H))+
       row('Record',wlp(av.rec),wlp(hv.rec))+row('Away / home',wlp(av.away)+' <span class="rk">away</span>',wlp(hv.home)+' <span class="rk">home</span>')+
       row('Last 10',wlp(av.l10),wlp(hv.l10))+row('Against the spread',wlp(av.ats),wlp(hv.ats))+row('Overs / unders',wlp(av.ou),wlp(hv.ou))+'</tbody></table>'+
-      '<p class="mxn">Tonight: spread '+line+' (Pointsbet) · total '+(g.mkt!==null?esc(fix(g.mkt,1)):'—')+' · expected pace '+v(m.exp_pace)+' v league '+v(m.lg&&m.lg.pace)+'.</p>'+
-      '<div class="mxh">Injuries and line</div>'+infoTable(g);
+      (g.sched?'<p class="mxn">Expected pace '+v(m.exp_pace)+' v league '+v(m.lg&&m.lg.pace)+'. No odds yet: the line, total and picks come with the slate run on game day.</p>'+
+        '<div class="mxh">Injuries <span>(ESPN, as at the resolve run)</span></div>'+infoTable(g)
+      :'<p class="mxn">Tonight: spread '+line+' (Pointsbet) · total '+(g.mkt!==null?esc(fix(g.mkt,1)):'—')+' · expected pace '+v(m.exp_pace)+' v league '+v(m.lg&&m.lg.pace)+'.</p>'+
+      '<div class="mxh">Injuries and line</div>'+infoTable(g));
     var M=[['Points','ppg'],['Points allowed','oppg'],['Margin /g','net'],['Pace','pace'],['FG%','fg_pct'],['3P%','fg3_pct'],['3PM','fg3m'],['FT%','ft_pct'],
       ['True shooting %','ts_pct'],['Rebounds','reb'],['Off. rebounds','oreb'],['Assists','ast'],['Steals','stl'],['Blocks','blk'],['Turnovers','tov'],
       ['Opp FG%','opp_fg_pct'],['Opp 3P%','opp_fg3_pct']];
@@ -963,7 +967,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         v((a.allow100||{})[k])+rkD(qa),ebar(qa==null?qa:-qa,qh==null?qh:-qh,false),v((h.allow100||{})[k])+rkD(qh))}).join('')+'</tbody></table>'+
       '<p class="mxn">Same as every bar here: it grows toward the team that is better at this. Red rank = a leaky defence, which is good for overs against it.</p>';
     function outs(o){return o&&o.length?o.map(function(x){return esc(x.name)+' <span class="rk">'+esc((x.roles||[]).join('/'))+(x.min?' · '+Number(x.min).toFixed(0)+' min':'')+'</span>'}).join('<br>'):'<span class="mu">—</span>'}
-    html+='<div class="mxh">Key players freshly out</div>'+hd(esc(A),esc(H))+row('Out',outs(a.out),outs(h.out))+'</tbody></table>';
+    if(!g.sched) html+='<div class="mxh">Key players freshly out</div>'+hd(esc(A),esc(H))+row('Out',outs(a.out),outs(h.out))+'</tbody></table>';
     html+=absHtml(g,A,H);
     return html;
   }
@@ -1215,6 +1219,35 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       left.map(function(x){var fr=firstRun(x.min),late=x.min-30<=n.min;
         return '<div class="prow"><b>'+esc(x.id)+'</b><span>tip '+hhmm(x.min)+'</span><span class="meta">'+(late?'tipped / inside 30 min, not analysed':fr===null?'outside the run window':fr<=n.min?'due now, posting soon':'picks ~'+hhmm(fr))+'</span></div>'}).join('')+'</section>';
   }
+  /* Upcoming matchups (Mitch 21 Nov: "I want the next day's matchups to show up when the resolve is run ... I don't think
+     that requires any odds"). Every schedule.json game still to tip that the slate hasn't analysed yet, as a tap-to-open
+     Matchup tab: season team table, ranks, pace, what each defence allows, ESPN injuries. Display only. */
+  var UOPEN={};
+  function schedGame(x){
+    var a=TEAMC[x.away]||x.away,h=TEAMC[x.home]||x.home,out={},q={};
+    [a,h].forEach(function(t){out[t]=[];q[t]=[];((x.inj&&x.inj[t])||[]).forEach(function(i){var st=String(i.status||'');
+      if(/^out$/i.test(st)) out[t].push(i.name); else q[t].push(i.name+' ('+st.toLowerCase()+')')})});
+    return {id:a+'@'+h,mx:x.mx||null,sched:true,hasInfo:true,out:out,q:q,b2b:null,mo:null,mu:null,proj:null,mkt:null,cov:null,ctx:'',abs:null};
+  }
+  function upHtml(){
+    if(!SCHED||!Array.isArray(SCHED.games)) return '';
+    var n=melNow(),done={},L=[];
+    if(D&&slateIso()===n.iso) G.forEach(function(g){done[g.id]=1});
+    SCHED.games.forEach(function(x){var d=new Date(x.tip_utc);if(isNaN(d)||d.getTime()<=Date.now())return;var m=melOf(d),sg=schedGame(x);
+      if(m.iso===n.iso&&done[sg.id])return;L.push({g:sg,m:m,t:d.getTime()})});
+    if(!L.length||!L.some(function(x){return x.g.mx})) return '';
+    L.sort(function(a,b){return a.t-b.t||(a.g.id<b.g.id?-1:1)});
+    var tom=addDays(n.iso,1);
+    return '<section class="game pend umx"><div class="gh"><div><h2>Matchups ahead</h2></div></div><p class="ucap">From the nightly resolve, before any odds. Tap a game for its team stats and injuries.</p>'+
+      L.map(function(x){var g=x.g,day=x.m.iso===n.iso?'Today':x.m.iso===tom?'Tomorrow':x.m.wd;
+        return '<details class="umg" data-u="'+esc(g.id)+'"'+(UOPEN[g.id]?' open':'')+'><summary><b>'+esc(g.id)+'</b><span>'+day+' · tip '+hhmm(x.m.min)+'</span></summary>'+
+          '<div class="gw">'+(UOPEN[g.id]?mxHtml(g):'')+'</div></details>'}).join('')+'</section>';
+  }
+  function upWire(){
+    Array.prototype.forEach.call($('games').querySelectorAll('details.umg'),function(d){d.addEventListener('toggle',function(){
+      var id=d.getAttribute('data-u');UOPEN[id]=d.open;
+      if(d.open&&!d.querySelector('.gw').innerHTML){var x=(SCHED.games||[]).map(schedGame).filter(function(g){return g.id===id})[0];if(x)d.querySelector('.gw').innerHTML=mxHtml(x)}})});
+  }
   /* Best leans tonight (critique 20 Nov): on a 0-pick day the leans are the product, so the top 5 by chance sit above the games.
      Tapping one opens its game's Leans fold and its row. Display only. */
   function bestLeans(){
@@ -1243,7 +1276,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     G.forEach(function(g,gi){if(sel!=='ALL'&&g.id!==sel)return;try{html+=gameHtml(g,gi)}catch(e){}});
     if(sel==='ALL') html+=pendHtml();
     if(!html&&D&&D.cleared){var ts=todaySched();html='<div class="game"><div class="none">'+(ts&&!ts.length?'No NBA games today.':'No games analysed yet today.')+'</div></div>'}
-    $('games').innerHTML=html;
+    if(sel==='ALL') html+=upHtml();
+    $('games').innerHTML=html;upWire();
     Array.prototype.forEach.call($('games').querySelectorAll('details.lf'),function(d){d.addEventListener('toggle',function(){LOPEN[d.getAttribute('data-g')]=d.open})});
     Array.prototype.forEach.call($('games').querySelectorAll('[data-ch]'),function(b){b.onclick=function(){setChoice(b)}});
     Array.prototype.forEach.call($('games').querySelectorAll('[data-mxv]'),function(b){b.onclick=function(){MXV[b.getAttribute('data-mxg')]=b.getAttribute('data-mxv');games()}});

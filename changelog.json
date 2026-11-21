@@ -5,6 +5,14 @@
       "date": "2026-11-21",
       "version": "nba-session v3.31-p4",
       "component": "dashboard",
+      "title": "Matchups ahead: tomorrow's games from the resolve run",
+      "change": "Below the games, a Matchups ahead section lists every scheduled game still to tip that the slate hasn't analysed yet. Tap one for its Matchup tab: records, season team stats with ranks and edge bars, what each defence allows, expected pace and the ESPN injury list. It appears after the 18:07 resolve, before any odds exist; once the slate run analyses a game, its full card takes over.",
+      "aim": "Mitch 21 Nov. Display only; data from schedule.json game.mx and game.inj (pipeline resolve, from 21 Nov)."
+    },
+    {
+      "date": "2026-11-21",
+      "version": "nba-session v3.31-p4",
+      "component": "dashboard",
       "title": "Key teammate back pill",
       "change": "Next to the key-teammate-out pill, a blue 'back' pill names a top-3 teammate who missed most of his recent games and plays tonight (the RET code), so his share of the usage may drop.",
       "aim": "Mitch 21 Nov. Display only; names from data.json game.ret (pipeline, from 21 Nov runs)."
