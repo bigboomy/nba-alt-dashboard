@@ -235,7 +235,8 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 .board{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:0 0 12px}
 .board h2{font-size:1.45rem;font-weight:700;margin:0 0 8px}.brow{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:8px 0;font:inherit;color:inherit;cursor:pointer}
 .brow:first-of-type{border-top:0}.brow .t{display:flex;justify-content:space-between;gap:8px;font-size:.86rem}.brow .t b{font-weight:600}
-.brow .m{color:var(--muted);font-size:.78rem}.brow .pos{color:#067647}.brow .neg{color:#b42318}
+.brow .m{color:var(--muted);font-size:.78rem}
+.brow .w{display:flex;justify-content:space-between;gap:8px;font-size:.84rem;font-variant-numeric:tabular-nums;margin-top:2px}.brow .w i{font-style:normal;color:var(--muted);font-size:.78rem}.brow .pos{color:#067647}.brow .neg{color:#b42318}
 @media (prefers-color-scheme:dark){.brow .pos{color:#6ce9a6}.brow .neg{color:#ff8a80}}
 .pbar{height:5px;border-radius:3px;background:var(--line);margin-top:5px;overflow:hidden}.pbar i{display:block;height:5px;background:#2e90fa}
 .board .cap{margin:6px 0 0}
@@ -1282,38 +1283,25 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var box=$('board');if(!box) return;
     function pct(x){return x===null||x===undefined?'—':x.toFixed(0)+'%'}
     function u(x){return (x>=0?'+':'')+x.toFixed(2)+'u'}
-    var rows=[];
-    if(ROWS){
-      var asOf=CORE.asOfDate(ROWS),s=asOf?CORE.summarize(CORE.inRange(ROWS,{from:SEASON_START,to:asOf})):null,
-          s7=asOf?CORE.summarize(CORE.inRange(ROWS,CORE.windowRange(asOf,7))):null;
-      var si=D&&slateIso(),lag=asOf&&si&&asOf<si?' · last pick settled '+fdate(asOf)+', none since':'';
-      if(s&&s.n) rows.push({k:'rec',t:'Picks (staked)',r:s.w+'-'+s.l+' · '+pct(s.hit)+' · <span class="'+(s.units>=0?'pos':'neg')+'">'+u(s.units)+'</span>',
-        m:'Season'+(s7&&s7.n?' · last 7 days '+s7.w+'-'+s7.l+' '+u(s7.units):'')+lag,d:dir(s.n,s.hit,s.be,null)});
-    } else if(CSVFAIL) rows.push({k:'rec',t:'Picks',r:'unavailable',m:'The Sheet could not be read'});
-    /* Direction (critique 20 Nov): where the hit rate sits against break-even, or against the tier's own target
-       when it has one (HR80: keep 80%+, kill under 76%). Display only; verdicts stay in the weekly review. */
-    function dir(n,hit,be,tg){
-      if(!n||hit===null||hit===undefined) return null;
-      var bt=be===null||be===undefined?'':'break-even '+be.toFixed(0)+'%';
-      if(n<15) return {c:'early',t:'Too early',x:bt};
-      if(tg){return hit>=tg[0]?{c:'up',t:'On target',x:'target '+tg[0]+'%+'}:hit>=tg[1]?{c:'mid',t:'Below target',x:'target '+tg[0]+'%, kill under '+tg[1]+'%'}:{c:'down',t:'Kill zone',x:'kill under '+tg[1]+'%'}}
-      if(be===null||be===undefined) return null;
-      return hit>=be?{c:'up',t:'Above break-even',x:bt}:{c:'down',t:'Below break-even',x:bt};
-    }
-    function tier(k,label,arr,goal,m,tg){
-      if(!arr) return;var a=leanSum(arr);
-      rows.push({k:k,t:label,r:a.n?a.w+'-'+a.l+' · '+pct(a.hit)+' · <span class="'+(a.u>=0?'pos':'neg')+'">'+u(a.u)+'</span>':'no settled yet',
-        m:m+(goal?' · '+Math.min(a.n,goal)+' of '+goal+' for a verdict':''),g:goal&&a.n?Math.min(1,a.n/goal):null,d:dir(a.n,a.hit,a.impl,tg)});
-    }
-    tier('leansSec','Leans (0u)',LEANS,0,'Near-misses, notional 1u');
-    tier('hrSec','HR80 tier (0u)',typeof HRS!=='undefined'?HRS:null,60,'Target 80%+, $1.20-1.29',[80,76]);
-    tier('pinSec','PIN tier (0u)',typeof PINS!=='undefined'?PINS:null,100,'Beat Pinnacle-fair by 4pp+');
-    tier('olSec','OUTLIFT tier (killed 20 Nov)',typeof OLS!=='undefined'?OLS:null,0,'Key teammate out · closed, no new items');
-    tier('lsSec','Late-scratch re-run (0u)',typeof LSS!=='undefined'?LSS:null,40,'New items after a late OUT');
+    /* Mitch 21 Nov: "I only want last 3 days and last 7 days stats to show". Every row covers the same dates:
+       counted back from the latest settled day across the picks and all 0u tiers. Season totals, direction tags and
+       verdict progress bars stay in each section's own breakdown (tap a row). Display only. */
+    var rows=[],L=typeof LALL!=='undefined'&&LALL?LALL:(LEANS||[]),end=null;
+    [ROWS||[],L].forEach(function(a){var d=CORE.asOfDate(a);if(d&&(end===null||d>end))end=d});
+    function win(a,days){var rg=end?CORE.windowRange(end,days):null;return rg?a.filter(function(r){return r.date>=rg.from&&r.date<=rg.to}):[]}
+    function line(lab,a){return '<div class="w"><i>'+lab+'</i><span>'+(a.n?a.w+'-'+a.l+' · '+pct(a.hit)+' · <span class="'+(a.u>=0?'pos':'neg')+'">'+u(a.u)+'</span>':'no settled bets')+'</span></div>'}
+    function add(k,label,a3,a7){rows.push({k:k,t:label,h:line('Last 3 days',a3)+line('Last 7 days',a7)})}
+    function pk(a){var x=CORE.summarize(a);return {n:x.n,w:x.w,l:x.l,hit:x.hit,u:x.units}}
+    if(ROWS) add('rec','Picks (staked)',pk(win(ROWS,3)),pk(win(ROWS,7)));
+    else if(CSVFAIL) rows.push({k:'rec',t:'Picks',h:'<div class="m">The Sheet could not be read</div>'});
+    function tier(k,label,arr){if(!arr) return;var a3=leanSum(win(arr,3)),a7=leanSum(win(arr,7));add(k,label,a3,a7)}
+    tier('leansSec','Leans (0u)',LEANS);
+    tier('hrSec','HR80 tier (0u)',typeof HRS!=='undefined'?HRS:null);
+    tier('pinSec','PIN tier (0u)',typeof PINS!=='undefined'?PINS:null);
+    tier('olSec','OUTLIFT tier (killed 20 Nov)',typeof OLS!=='undefined'?OLS:null);
+    tier('lsSec','Late-scratch re-run (0u)',typeof LSS!=='undefined'?LSS:null);
     if(!rows.length){box.innerHTML='<h2>Scoreboard</h2><p class="load">Loading…</p>';return}
-    box.innerHTML='<h2>Scoreboard</h2><p class="cap bcap">Flat 1u per bet. Tap a row for its full breakdown.</p>'+rows.map(function(r){return '<button type="button" class="brow" data-go="'+r.k+'"><div class="t"><b>'+r.t+'</b><span>'+r.r+'</span></div>'+
-      (r.d?'<div class="dr"><span class="dt '+r.d.c+'">'+r.d.t+'</span>'+(r.d.x?'<span>'+esc(r.d.x)+'</span>':'')+'</div>':'')+'<div class="m">'+esc(r.m)+'</div>'+
-      (r.g!==null&&r.g!==undefined?'<div class="pbar'+(r.d?' '+r.d.c:'')+'"><i style="width:'+Math.round(100*r.g)+'%"></i></div>':'')+'<span class="go" aria-hidden="true"></span></button>'}).join('');
+    box.innerHTML='<h2>Scoreboard</h2><p class="cap bcap">Flat 1u per bet'+(end?', up to '+fdate(end):'')+'. Tap a row for its full breakdown.</p>'+rows.map(function(r){return '<button type="button" class="brow" data-go="'+r.k+'"><div class="t"><b>'+r.t+'</b></div>'+r.h+'<span class="go" aria-hidden="true"></span></button>'}).join('');
     Array.prototype.forEach.call(box.querySelectorAll('[data-go]'),function(b){b.onclick=function(){
       var mr=$('moreRec'),t=$(b.getAttribute('data-go'));if(mr)mr.open=true;
       var f=t&&t.querySelector('details.fold');if(f)f.open=true;if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}});
