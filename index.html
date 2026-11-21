@@ -360,6 +360,12 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--pts:#1F5FB0;--reb:#6D3FB5;--ast:#B0357A;--tpm:#0F7A80}
   :root:not([data-theme="light"]) .tab[aria-pressed=true],:root:not([data-theme="light"]) .cbtn.main{color:var(--bg)}}
 .b5h{list-style:none;margin:2px 0 8px;padding:0;font-size:13px;color:var(--muted)}.b5h li{padding:2px 0}.b5h b{color:var(--text);font-weight:600}
+.aut{padding:0 0 12px}.aut h3{font-size:.9rem;margin:14px 0 6px}.aut-h{margin:0 0 4px;font-size:.88rem;line-height:1.45}
+.aut-m{padding:8px 0;border-top:1px solid var(--line)}.aut-t{font-size:.86rem;display:flex;flex-wrap:wrap;gap:4px 6px;align-items:baseline}
+.aut-c{margin-left:auto}.aut-w{font-size:.82rem;color:var(--muted);margin-top:3px;line-height:1.4}
+.aut-l{margin:0;padding-left:18px;font-size:.84rem;line-height:1.45}.aut-l li{margin:3px 0}
+.aut-n{font-size:.78rem;color:var(--muted);margin:0 0 6px}.aut-s{font-size:.78rem;font-weight:600;margin:10px 0 4px}
+.aut-bad{color:var(--bad)}.aut-good{color:var(--good)}.aut-cs{display:flex;flex-wrap:wrap;gap:4px}
 </style>
 <script>
 /* Light/dark toggle (Mitch 21 Nov: "I want the dashboard to be light for me"). Saved per device in localStorage;
@@ -410,6 +416,8 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
     </details>
   </aside>
   </div>
+
+  <div id="autopsySec"></div>
 
   <details class="fold" id="moreRec"><summary><span>Full record and tier details <span class="meta">bands, stats, charts, every tier</span></span></summary>
   <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
@@ -1549,6 +1557,46 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   /* Absence ledger (Mitch 20 Nov): who picked up the numbers when a key player sat this season. Data only. */
   var ABSL=null;
+  /* Lean autopsy (Mitch 21 Nov): why last night's leans missed, and which reasons repeat. Analysis only, never a rule. */
+  var AUT=null,AUT_OPEN=false;
+  function loadAut(){
+    fetch('autopsy.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
+      .then(function(j){AUT=j&&j.date?j:null;renderAut()}).catch(function(){});
+  }
+  function autDate(s){var d=new Date(s+'T12:00:00');return isNaN(d)?s:d.toLocaleDateString('en-AU',{weekday:'short',day:'numeric',month:'short'})}
+  var AUT_TAG={'MIN-BLOWOUT':'Sat in a blowout','MIN-FOULS':'Foul trouble','MIN-INJURY':'Injury (probable)','MIN-COACH':'Minutes cut',
+    'ROLE-RETURN':'Teammate back','USAGE-SHIFT':'Teammate took the shots','SHOOTING-COLD':'Cold shooting','PACE-SLOW':'Slow game',
+    'NEAR-MISS':'Near miss','NO-CLEAR-CAUSE':'No clear cause','DID-ITS-JOB':'Did its job'};
+  function renderAut(){
+    var box=$('autopsySec');if(!box||!AUT) return;
+    var a=AUT,h='<details class="fold" id="autFold"'+(AUT_OPEN||location.hash==='#autopsySec'?' open':'')+'><summary><span>Lean autopsy <span class="meta">'+
+      esc(autDate(a.date))+' · '+esc(a.record.all)+' · why they missed</span></span></summary><div class="aut">';
+    if(a.headline&&a.headline.length) h+='<p class="aut-h">'+a.headline.map(esc).join('<br>')+'</p>';
+    if(a.misses.length){
+      h+='<h3>Misses</h3>'+a.misses.map(function(m){
+        var by=m.short===null?'':' ('+(m.short>0?'+':'')+m.short+')';
+        return '<div class="aut-m"><div class="aut-t"><b>'+esc(m.player)+'</b> '+esc(m.stat)+' o'+esc(m.alt)+' @ '+esc(m.odds)+
+          ' <span class="mu">→ '+esc(m.actual)+by+'</span><span class="chip aut-c">'+esc(AUT_TAG[m.tag]||m.tag||'untagged')+'</span></div>'+
+          (m.why?'<div class="aut-w">'+esc(m.why)+'</div>':'')+'</div>';
+      }).join('');
+    } else h+='<p class="none">No misses.</p>';
+    if(a.adds&&a.adds.length) h+='<h3>What it adds</h3><ul class="aut-l">'+a.adds.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>';
+    if(a.hits_note&&a.hits_note.length) h+='<h3>Hits worth noting</h3><ul class="aut-l">'+a.hits_note.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul>';
+    var pre=(a.conditions||[]).filter(function(c){return !c.post&&c.status!=='watching'}).sort(function(x,y){return Math.abs(y.gap||0)-Math.abs(x.gap||0)});
+    var post=(a.conditions||[]).filter(function(c){return c.post&&c.status!=='watching'});
+    function ct(rows){return '<div class="ts"><table style="min-width:0"><thead><tr><th></th><th>With</th><th>Without</th><th>Gap</th><th>Status</th></tr></thead><tbody>'+
+      rows.map(function(c){return '<tr><td>'+esc(c.name.replace('[post] ','').replace(/>=/g,'≥').replace(/<=/g,'≤'))+' <span class="mu">'+c.n+' / '+c.tg+' tg</span></td><td>'+c.hit.toFixed(0)+'%</td><td>'+
+        (c.hit_without===null?'—':c.hit_without.toFixed(0)+'%')+'</td><td class="'+((c.gap||0)>0?'aut-bad':'aut-good')+'">'+(c.gap===null?'—':(c.gap>0?'−':'+')+Math.abs(c.gap).toFixed(0)+'pp')+
+        '</td><td>'+(c.status==='RELIABLE'?'<b>reliable</b>':esc(c.status))+'</td></tr>'}).join('')+'</tbody></table></div>'}
+    h+='<h3>Patterns so far <span class="meta">'+a.log.items+' items, '+a.log.team_games+' team-games since '+esc(autDate(a.log.from))+'</span></h3>'+
+      '<p class="aut-n">Hit rate with vs without each condition. Gap shows what the condition does to the hit rate. Reliable means 30+ team-games, a gap of 10pp or more and a confidence interval clear of zero. Tracking only: rules change only when you decide.</p>';
+    h+=pre.length?'<p class="aut-s">Known before tip</p>'+ct(pre):'';
+    h+=post.length?'<p class="aut-s">Only known after the game</p>'+ct(post):'';
+    if(a.causes&&a.causes.length) h+='<p class="aut-s">Main reason for each miss so far</p><div class="aut-cs">'+a.causes.map(function(c){return '<span class="chip">'+esc(AUT_TAG[c[0]]||c[0])+' '+c[1]+'</span>'}).join(' ')+'</div>';
+    box.innerHTML=h+'</div></details>';
+    var f=$('autFold');if(f) f.addEventListener('toggle',function(){AUT_OPEN=f.open});
+    if(location.hash==='#autopsySec'&&f) f.scrollIntoView({block:'start'});
+  }
   function loadAbs(){
     fetch('absence.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
       .then(function(j){ABSL=j&&j.teams?j:null;if(D&&ABSL)games()}).catch(function(){});
@@ -1888,7 +1936,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   fetch('data.json?v='+Date.now(),{cache:'no-store'})
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
     .then(init).catch(slateFail);
-  loadSched();loadHealth();loadAbs();
+  loadSched();loadHealth();loadAbs();loadAut();
   renderTotals();loadTotals();
   renderLeans();renderHr();renderPin();renderOl();renderLs();loadLeans();
   alertUI();clearBadge();loadChoices();
