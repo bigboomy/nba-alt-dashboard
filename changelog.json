@@ -5,6 +5,14 @@
       "date": "2026-11-21",
       "version": "nba-session v3.31-p4",
       "component": "dashboard",
+      "title": "Robot mascot: new app icon and header",
+      "change": "An original 8-bit robot (blue, visor, waving, basketball at the hip) is the new home-screen and notification icon, and sits beside the dashboard title.",
+      "aim": "Mitch 21 Nov. Display only. On iPhone, delete and re-add the home-screen app to pick up the new icon."
+    },
+    {
+      "date": "2026-11-21",
+      "version": "nba-session v3.31-p4",
+      "component": "dashboard",
       "title": "Losses in red",
       "change": "A lost bet now shows red on its result chip and on its line (and the actual it settled on); they were amber or plain.",
       "aim": "Mitch 21 Nov. Display only."
