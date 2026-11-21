@@ -1080,7 +1080,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
      "confidence out of 10 based on hit rate"). On 4,172 settled Pointsbet rungs at $1.15-1.70 (13-20 Nov) p_eng predicted
      71.4% vs 70.8% actual; the last-10 count barely separated (5/10 hit 70%, 9/10 73%), so k/n moved into the tap detail.
      Display only: no tier, gate or stake reads it.
-     Last 5 = raw box numbers, newest first, tinted when over tonight's line (data.json l5, from 20 Nov runs). */
+     Last 5 = raw box numbers, tinted when over tonight's line (data.json l5, from 20 Nov runs). data.json is newest first;
+     shown oldest to newest left to right (Mitch 21 Nov), so the newest game sits on the right. */
   var STC={PTS:'pts',REB:'reb',AST:'ast','3PM':'tpm'},STW={PTS:'points',REB:'rebounds',AST:'assists','3PM':'threes'};
   function hitKN(h){var m=String(h).match(/\((\d+)\/(\d+)\)/);return m?[+m[1],+m[2]]:null}
   function ringCol(r){return r>=.85?'#1E8C4E':r>=.8?'#7FA82E':r>=.75?'#D4A800':r>=.7?'#E57A00':'#C8352B'}
@@ -1090,8 +1091,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       '<circle cx="18" cy="18" r="15.5" class="rf" style="stroke:'+ringCol(r)+'" stroke-dasharray="'+(C*r).toFixed(1)+' '+C+'"/></svg><b>'+sc+'</b></span>'}
   function knLine(b){var kn=hitKN(b.h);return kn?'<p class="kn">Last '+kn[1]+' games: cleared '+kn[0]+' of '+kn[1]+'. Hit chance '+(hitP(b)*10).toFixed(1)+'/10 is the engine\'s estimate (price plus edge).</p>':''}
   function stPill(s){return '<span class="stn '+(STC[s]||'oth')+'">'+esc(STW[s]||s)+'</span>'}
-  function l5Html(p){if(!p.l5||!p.l5.length) return '';
-    return '<span class="l5" aria-label="Last '+p.l5.length+', newest first: '+p.l5.join(', ')+'">'+p.l5.map(function(v){return '<i class="'+(v>p.alt?'o':'u')+'">'+v+'</i>'}).join('')+'</span>'}
+  function l5Html(p){if(!p.l5||!p.l5.length) return '';var L=p.l5.slice().reverse();
+    return '<span class="l5" aria-label="Last '+L.length+', oldest to newest: '+L.join(', ')+'">'+L.map(function(v){return '<i class="'+(v>p.alt?'o':'u')+'">'+v+'</i>'}).join('')+'</span>'}
   var JBFROM=null,JBAT=0;
   document.addEventListener('click',function(e){if(e.target&&e.target.id==='jb'){var b=$('best');$('jb').hidden=true;if(!b)return;
     b.scrollIntoView({block:'start',behavior:'smooth'});var f=null;Array.prototype.forEach.call(b.querySelectorAll('[data-jump]'),function(x){if(x.getAttribute('data-jump')===JBFROM)f=x});
@@ -1101,7 +1102,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   var KEYDONE=false;   /* last-5 key shows once per render (reset in games()) */
   function ringKey(list){var has=(list||[]).some(function(b){return b.l5&&b.l5.length});
     if(!has||KEYDONE) return '';KEYDONE=true;
-    return '<div class="rkey"><span>Last 5, newest first: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em></span></div>'}
+    return '<div class="rkey"><span>Last 5, oldest \u2192 newest: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em></span></div>'}
   function l10Of(b){var kn=hitKN(b.h);return kn?'<span class="l10" aria-label="cleared '+kn[0]+' of last '+kn[1]+'"><i>L'+kn[1]+'</i> '+kn[0]+'/'+kn[1]+'</span>':''}
   function bid(g,b){return g.id+'|'+b.p+'|'+b.s+'|'+b.alt}
   function betLabel(b,gid){var r=hitP(b),kn=hitKN(b.h),x=resFor(b);
