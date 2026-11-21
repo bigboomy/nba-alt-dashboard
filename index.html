@@ -328,6 +328,8 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .pl .nm strong{font:700 22px/1.1 var(--disp);letter-spacing:.2px}.pl .nm .tm{font-size:13px}
 .best .bet .sl strong{font:700 19px/1.1 var(--disp)}
 .bet .ln.won{color:var(--good)}.bet .ln.push{color:var(--muted)}
+/* 21 Nov (Mitch): losses in red, the result chip and the line it settled on */
+.bet .ln.lost{color:var(--bad)}.res.L,.pill.L{color:var(--bad)}
 .bet .ln em{display:block;font:600 15px/1.1 var(--disp);font-style:normal;margin-top:1px;white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
 :root{--lossc:#C2410C}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--lossc:#FB923C}}
