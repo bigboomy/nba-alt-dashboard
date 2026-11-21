@@ -3492,9 +3492,1102 @@
         "UTA": []
       },
       "tip": "13:30"
+    },
+    {
+      "abs": {
+        "DEN": [],
+        "HOU": []
+      },
+      "b2b": [],
+      "box5": {
+        "Fred Vanvleet": {
+          "gp": 13,
+          "l5": {
+            "ast": 4.6,
+            "blk": 0.4,
+            "fg3": 3.0,
+            "fg3a": 6.2,
+            "fg_pct": 48.1,
+            "fga": 10.4,
+            "fgm": 5.0,
+            "fta": 1.4,
+            "ftm": 1.0,
+            "min": 29.4,
+            "pts": 14.0,
+            "reb": 2.4,
+            "stl": 1.0,
+            "to": 0.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 5.5,
+            "blk": 0.3,
+            "fg3": 2.8,
+            "fg3a": 7.2,
+            "fg_pct": 43.3,
+            "fga": 10.8,
+            "fgm": 4.7,
+            "fta": 1.7,
+            "ftm": 1.4,
+            "min": 29.8,
+            "pts": 13.6,
+            "reb": 3.0,
+            "stl": 1.2,
+            "to": 1.1
+          }
+        },
+        "Kevin Durant": {
+          "gp": 16,
+          "l5": {
+            "ast": 4.4,
+            "blk": 0.2,
+            "fg3": 2.2,
+            "fg3a": 4.4,
+            "fg_pct": 50.0,
+            "fga": 14.4,
+            "fgm": 7.2,
+            "fta": 6.0,
+            "ftm": 5.4,
+            "min": 31.6,
+            "pts": 22.0,
+            "reb": 3.0,
+            "stl": 0.2,
+            "to": 1.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 3.8,
+            "blk": 1.0,
+            "fg3": 1.6,
+            "fg3a": 4.0,
+            "fg_pct": 49.8,
+            "fga": 13.3,
+            "fgm": 6.6,
+            "fta": 7.4,
+            "ftm": 6.4,
+            "min": 33.5,
+            "pts": 21.3,
+            "reb": 5.2,
+            "stl": 0.5,
+            "to": 2.9
+          }
+        },
+        "Nikola Jokic": {
+          "gp": 13,
+          "l5": {
+            "ast": 8.6,
+            "blk": 1.0,
+            "fg3": 1.6,
+            "fg3a": 4.4,
+            "fg_pct": 57.3,
+            "fga": 17.8,
+            "fgm": 10.2,
+            "fta": 4.4,
+            "ftm": 4.0,
+            "min": 38.0,
+            "pts": 26.0,
+            "reb": 11.6,
+            "stl": 1.2,
+            "to": 3.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 8.9,
+            "blk": 1.1,
+            "fg3": 1.2,
+            "fg3a": 4.4,
+            "fg_pct": 51.7,
+            "fga": 18.2,
+            "fgm": 9.4,
+            "fta": 4.5,
+            "ftm": 4.1,
+            "min": 36.7,
+            "pts": 24.1,
+            "reb": 10.7,
+            "stl": 1.7,
+            "to": 3.3
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          15,
+          15
+        ],
+        "skipped": [
+          "Fred VanVleet PTS (no rung priced 1.40+ at or below std)",
+          "Fred VanVleet AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          35,
+          37
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 15 of 15 players (35 of 37 player-stats); skipped: Fred VanVleet PTS (no rung priced 1.40+ at or below std), Fred VanVleet AST (no rung priced 1.40+ at or below std)",
+      "cx": {
+        "Fred Vanvleet|PTS|11.5|lean": {
+          "best_book": "betr",
+          "best_price": 1.69,
+          "mm_min": 29.52,
+          "mm_mu": 14.985,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7271,
+          "p_pin": 0.5823,
+          "p_wowy": 0.7271,
+          "pin_edge_pp": -0.9,
+          "pin_line": 12.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 14.985
+        },
+        "Fred Vanvleet|PTS|7.5|HR80": {
+          "best_book": "pointsbet",
+          "best_price": 1.21,
+          "mm_min": 29.52,
+          "mm_mu": 14.985,
+          "n_books": 6,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9377,
+          "p_pin": 0.8499,
+          "p_wowy": 0.9377,
+          "pin_edge_pp": 2.3,
+          "pin_line": 12.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 14.985
+        },
+        "Kevin Durant|PTS|19.5|lean": {
+          "best_book": "betdeluxe",
+          "best_price": 1.67,
+          "mm_min": 32.04,
+          "mm_mu": 19.579,
+          "n_books": 15,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.4792,
+          "p_pin": 0.5874,
+          "p_wowy": 0.4792,
+          "pin_edge_pp": -1.9,
+          "pin_line": 21.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 19.579
+        },
+        "Nikola Jokic|AST|7.5|lean": {
+          "best_book": "betdeluxe",
+          "best_price": 1.45,
+          "mm_min": 37.32,
+          "mm_mu": 8.872,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6609,
+          "p_pin": 0.6313,
+          "p_wowy": 0.6609,
+          "pin_edge_pp": -6.3,
+          "pin_line": 8.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 8.872
+        }
+      },
+      "engine": "nba-session v3.31-p4",
+      "id": "HOU@DEN",
+      "leans": [
+        {
+          "alt": 7.5,
+          "e": 5.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "MU-6%",
+            "MT+",
+            "C0.87",
+            "Z1.02",
+            "PIN-6.3",
+            "BEST-sportsbet@1.45"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            9,
+            7,
+            10,
+            8,
+            9
+          ],
+          "o": 1.44,
+          "opp": "HOU 5th fewest AST allowed · pace -2.8",
+          "p": "Nikola Jokic",
+          "s": "AST",
+          "st": "4",
+          "std": 8.5,
+          "t": "DEN"
+        },
+        {
+          "alt": 19.5,
+          "e": 3.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.98",
+            "Z0.13",
+            "TMO-Q",
+            "PIN-1.9",
+            "BEST-sportsbet@1.67"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            21,
+            22,
+            25,
+            22,
+            20
+          ],
+          "o": 1.65,
+          "opp": "DEN 13th most PTS allowed · pace -2.8",
+          "p": "Kevin Durant",
+          "s": "PTS",
+          "st": "3",
+          "std": 20.5,
+          "t": "HOU"
+        },
+        {
+          "alt": 11.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.76",
+            "Z0.76",
+            "TMO-Q",
+            "PIN-0.9"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            15,
+            8,
+            17,
+            18,
+            12
+          ],
+          "o": 1.69,
+          "opp": "DEN 13th most PTS allowed · pace -2.8",
+          "p": "Fred Vanvleet",
+          "s": "PTS",
+          "st": "3",
+          "std": 12.5,
+          "t": "HOU"
+        },
+        {
+          "alt": 7.5,
+          "e": 4.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR80",
+            "C0.50",
+            "Z1.62",
+            "TMO-Q",
+            "PIN+2.3"
+          ],
+          "h": "100% (10/10)",
+          "l5": [
+            15,
+            8,
+            17,
+            18,
+            12
+          ],
+          "o": 1.21,
+          "opp": "DEN 13th most PTS allowed · pace -2.8",
+          "p": "Fred Vanvleet",
+          "s": "PTS",
+          "st": "5",
+          "std": 12.5,
+          "t": "HOU"
+        }
+      ],
+      "mkt": 227.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "mx": {
+        "exp_pace": 99.5,
+        "home_spread": -1.5,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.8,
+          "PTS": 111.2,
+          "REB": 42.7,
+          "pace": 102.3
+        },
+        "teams": {
+          "DEN": {
+            "allow100": {
+              "3PM": 13.5,
+              "AST": 26.5,
+              "PTS": 111.5,
+              "REB": 43.4
+            },
+            "allow_rk": {
+              "3PM": 9,
+              "AST": 5,
+              "PTS": 13,
+              "REB": 6
+            },
+            "out": [],
+            "pace": 101.1,
+            "rk": {
+              "ast": 16,
+              "blk": 21,
+              "dreb": 14,
+              "fg3_pct": 23,
+              "fg3a": 29,
+              "fg3m": 28,
+              "fg_pct": 3,
+              "ft_pct": 9,
+              "fta": 9,
+              "net": 14,
+              "opp_fg3_pct": 17,
+              "opp_fg_pct": 12,
+              "oppg": 13,
+              "oreb": 26,
+              "pace": 26,
+              "pf": 1,
+              "ppg": 16,
+              "reb": 22,
+              "stl": 7,
+              "tov": 6,
+              "ts_pct": 8
+            },
+            "v": {
+              "ast": 26.6,
+              "ats": "6-7-0",
+              "ats_away": "4-3-0",
+              "ats_home": "2-4-0",
+              "ats_l10": "6-4-0",
+              "away": "5-2",
+              "blk": 4.4,
+              "dreb": 31.7,
+              "fg3_pct": 33.6,
+              "fg3a": 30.9,
+              "fg3m": 10.4,
+              "fg_pct": 48.2,
+              "ft_pct": 79.6,
+              "fta": 26.1,
+              "gp": 13,
+              "home": "3-3",
+              "l10": "7-3",
+              "net": 0.9,
+              "opp_fg3_pct": 35.5,
+              "opp_fg_pct": 45.8,
+              "oppg": 112.2,
+              "oreb": 10.3,
+              "ou": "5-8-0",
+              "ou_l10": "3-7-0",
+              "pace": 100.3,
+              "pf": 18.8,
+              "ppg": 113.2,
+              "reb": 42.0,
+              "rec": "8-5",
+              "stl": 8.8,
+              "tov": 14.1,
+              "ts_pct": 58.6
+            }
+          },
+          "HOU": {
+            "allow100": {
+              "3PM": 12.9,
+              "AST": 24.9,
+              "PTS": 110.2,
+              "REB": 41.3
+            },
+            "allow_rk": {
+              "3PM": 18,
+              "AST": 26,
+              "PTS": 23,
+              "REB": 30
+            },
+            "out": [],
+            "pace": 100.7,
+            "rk": {
+              "ast": 8,
+              "blk": 8,
+              "dreb": 13,
+              "fg3_pct": 3,
+              "fg3a": 26,
+              "fg3m": 19,
+              "fg_pct": 4,
+              "ft_pct": 5,
+              "fta": 11,
+              "net": 5,
+              "opp_fg3_pct": 2,
+              "opp_fg_pct": 13,
+              "oppg": 7,
+              "oreb": 2,
+              "pace": 27,
+              "pf": 4,
+              "ppg": 5,
+              "reb": 8,
+              "stl": 20,
+              "tov": 12,
+              "ts_pct": 3
+            },
+            "v": {
+              "ast": 27.6,
+              "ats": "11-5-0",
+              "ats_away": "5-3-0",
+              "ats_home": "6-2-0",
+              "ats_l10": "6-4-0",
+              "away": "5-3",
+              "blk": 5.6,
+              "dreb": 31.8,
+              "fg3_pct": 38.2,
+              "fg3a": 34.4,
+              "fg3m": 13.1,
+              "fg_pct": 48.1,
+              "ft_pct": 80.8,
+              "fta": 25.4,
+              "gp": 16,
+              "home": "7-1",
+              "l10": "7-3",
+              "net": 8.7,
+              "opp_fg3_pct": 32.6,
+              "opp_fg_pct": 45.9,
+              "oppg": 109.2,
+              "oreb": 13.9,
+              "ou": "10-6-0",
+              "ou_l10": "5-5-0",
+              "pace": 99.7,
+              "pf": 19.9,
+              "ppg": 117.9,
+              "reb": 45.7,
+              "rec": "12-4",
+              "stl": 7.6,
+              "tov": 14.6,
+              "ts_pct": 59.7
+            }
+          }
+        }
+      },
+      "out": {
+        "DEN": [
+          "Julian Strawther (Strawther (knee) was diagnosed with a left knee sprain Friday and will be re-evaluated in six weeks, Vinny Benedetto of The Denver Gazette reports.)"
+        ],
+        "HOU": [
+          "Clint Capela (Capela (ankle) is out for Friday's game against Denver.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "DEN": [],
+        "HOU": [
+          "Alperen Sengun (Sengun (eye) is questionable for Friday's game against the Nuggets.)",
+          "Steven Adams (Adams (quadriceps) is listed as questionable for Friday's game against Denver.)"
+        ]
+      },
+      "tip": "14:00"
+    },
+    {
+      "abs": {
+        "LAL": [],
+        "SAC": []
+      },
+      "b2b": [],
+      "box5": {
+        "Darius Acuff": {
+          "gp": 14,
+          "l5": {
+            "ast": 6.8,
+            "blk": 0.4,
+            "fg3": 3.8,
+            "fg3a": 9.4,
+            "fg_pct": 44.4,
+            "fga": 21.6,
+            "fgm": 9.6,
+            "fta": 5.8,
+            "ftm": 5.0,
+            "min": 36.4,
+            "pts": 28.0,
+            "reb": 3.4,
+            "stl": 1.0,
+            "to": 4.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 7.0,
+            "blk": 0.2,
+            "fg3": 3.3,
+            "fg3a": 9.6,
+            "fg_pct": 41.6,
+            "fga": 22.6,
+            "fgm": 9.4,
+            "fta": 4.9,
+            "ftm": 4.1,
+            "min": 36.6,
+            "pts": 26.2,
+            "reb": 3.6,
+            "stl": 0.9,
+            "to": 3.9
+          }
+        },
+        "Darius Acuff Jr.": {
+          "gp": 14,
+          "l5": {
+            "ast": 6.8,
+            "blk": 0.4,
+            "fg3": 3.8,
+            "fg3a": 9.4,
+            "fg_pct": 44.4,
+            "fga": 21.6,
+            "fgm": 9.6,
+            "fta": 5.8,
+            "ftm": 5.0,
+            "min": 36.4,
+            "pts": 28.0,
+            "reb": 3.4,
+            "stl": 1.0,
+            "to": 4.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 7.0,
+            "blk": 0.2,
+            "fg3": 3.3,
+            "fg3a": 9.6,
+            "fg_pct": 41.6,
+            "fga": 22.6,
+            "fgm": 9.4,
+            "fta": 4.9,
+            "ftm": 4.1,
+            "min": 36.6,
+            "pts": 26.2,
+            "reb": 3.6,
+            "stl": 0.9,
+            "to": 3.9
+          }
+        },
+        "Walker Kessler": {
+          "gp": 15,
+          "l5": {
+            "ast": 3.0,
+            "blk": 1.4,
+            "fg3": 0.0,
+            "fg3a": 0.0,
+            "fg_pct": 56.8,
+            "fga": 8.8,
+            "fgm": 5.0,
+            "fta": 5.0,
+            "ftm": 3.4,
+            "min": 30.2,
+            "pts": 13.4,
+            "reb": 12.0,
+            "stl": 0.8,
+            "to": 2.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.8,
+            "blk": 2.1,
+            "fg3": 0.0,
+            "fg3a": 0.0,
+            "fg_pct": 66.7,
+            "fga": 8.8,
+            "fgm": 5.9,
+            "fta": 4.0,
+            "ftm": 2.5,
+            "min": 30.9,
+            "pts": 14.2,
+            "reb": 10.9,
+            "stl": 1.1,
+            "to": 1.7
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          20,
+          20
+        ],
+        "skipped": [
+          "Darius Acuff REB (no rung priced 1.40+ at or below std)",
+          "De'andre Hunter REB (no rung priced 1.40+ at or below std)",
+          "DeAndre Hunter PTS (no rung priced 1.40+ at or below std)",
+          "Jake LaRavia PTS (no rung priced 1.40+ at or below std)",
+          "Jake Laravia REB (no rung priced 1.40+ at or below std)",
+          "Zach LaVine AST (no rung priced 1.40+ at or below std)",
+          "Zach Lavine REB (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          40,
+          47
+        ]
+      },
+      "ctx": "Out TOP3: Austin Reaves (LAL); Returning: none; Depleted: none; missed last game: Walker Kessler. Coverage: evaluated 20 of 20 players (40 of 47 player-stats); skipped: Darius Acuff REB (no rung priced 1.40+ at or below std), De'andre Hunter REB (no rung priced 1.40+ at or below std), DeAndre Hunter PTS (no rung priced 1.40+ at or below std), Jake LaRavia PTS (no rung priced 1.40+ at or below std), Jake Laravia REB (no rung priced 1.40+ at or below std), Zach LaVine AST (no rung priced 1.40+ at or below std), Zach Lavine REB (no rung priced 1.40+ at or below std)",
+      "cx": {
+        "Darius Acuff Jr.|AST|5.5|lean": {
+          "best_book": "dabble",
+          "best_price": 1.55,
+          "mm_min": 36.86,
+          "mm_mu": 7.648,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7655,
+          "p_pin": "",
+          "p_wowy": 0.6535,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 6.712
+        },
+        "Darius Acuff|PTS|21.5|lean": {
+          "best_book": "tabtouch",
+          "best_price": 1.55,
+          "mm_min": 36.86,
+          "mm_mu": 28.932,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8341,
+          "p_pin": "",
+          "p_wowy": 0.6881,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 25.389
+        },
+        "Walker Kessler|PTS|9.5|HR80": {
+          "best_book": "ladbrokes",
+          "best_price": 1.28,
+          "mm_min": 27.96,
+          "mm_mu": 12.841,
+          "n_books": 14,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7544,
+          "p_pin": 0.7617,
+          "p_wowy": 0.7544,
+          "pin_edge_pp": -4.5,
+          "pin_line": 13.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 12.841
+        },
+        "Walker Kessler|REB|7.5|HR80": {
+          "best_book": "pointsbet",
+          "best_price": 1.24,
+          "mm_min": 27.96,
+          "mm_mu": 10.923,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8455,
+          "p_pin": 0.8191,
+          "p_wowy": 0.8455,
+          "pin_edge_pp": 1.3,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 10.923
+        },
+        "Walker Kessler|REB|9.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.59,
+          "mm_min": 27.96,
+          "mm_mu": 10.923,
+          "n_books": 14,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.646,
+          "p_pin": 0.6477,
+          "p_wowy": 0.646,
+          "pin_edge_pp": 1.9,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 10.923
+        }
+      },
+      "engine": "nba-session v3.31-p4",
+      "id": "SAC@LAL",
+      "leans": [
+        {
+          "alt": 21.5,
+          "e": 5.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[Std?]",
+            "DOG7",
+            "C0.76",
+            "Z1.00"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            36,
+            26,
+            17,
+            29,
+            32
+          ],
+          "o": 1.5,
+          "opp": "LAL 12th fewest PTS allowed · pace +0.9",
+          "p": "Darius Acuff",
+          "s": "PTS",
+          "st": "4",
+          "std": 25.5,
+          "t": "SAC"
+        },
+        {
+          "alt": 9.5,
+          "e": 4.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[ROLE?]",
+            "DNP-LAST",
+            "C0.78",
+            "Z1.05",
+            "TMO",
+            "PIN+1.9"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            11,
+            12,
+            11,
+            10,
+            16
+          ],
+          "o": 1.59,
+          "opp": "SAC 12th fewest REB allowed · pace +0.9",
+          "p": "Walker Kessler",
+          "s": "REB",
+          "st": "4",
+          "std": 10.5,
+          "t": "LAL"
+        },
+        {
+          "alt": 5.5,
+          "e": 4.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[Std?]",
+            "[OUT]",
+            "DOG7",
+            "C0.75",
+            "Z0.83"
+          ],
+          "h": "89% (8/9)",
+          "l5": [
+            6,
+            6,
+            6,
+            6,
+            10
+          ],
+          "o": 1.53,
+          "opp": "LAL 13th most AST allowed · pace +0.9",
+          "p": "Darius Acuff Jr.",
+          "s": "AST",
+          "st": "4",
+          "std": 5.5,
+          "t": "SAC"
+        },
+        {
+          "alt": 9.5,
+          "e": 4.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR80",
+            "[ROLE?]",
+            "MU+4%",
+            "DNP-LAST",
+            "C0.67",
+            "Z1.34",
+            "TMO",
+            "PIN-4.5",
+            "BEST-ladbrokes@1.28"
+          ],
+          "h": "100% (10/10)",
+          "l5": [
+            10,
+            14,
+            10,
+            21,
+            12
+          ],
+          "o": 1.24,
+          "opp": "SAC 1st most PTS allowed · pace +0.9",
+          "p": "Walker Kessler",
+          "s": "PTS",
+          "st": "5",
+          "std": 13.5,
+          "t": "LAL"
+        },
+        {
+          "alt": 7.5,
+          "e": 4.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR80",
+            "[ROLE?]",
+            "DNP-LAST",
+            "C0.62",
+            "Z1.85",
+            "TMO",
+            "PIN+1.3"
+          ],
+          "h": "100% (10/10)",
+          "l5": [
+            11,
+            12,
+            11,
+            10,
+            16
+          ],
+          "o": 1.24,
+          "opp": "SAC 12th fewest REB allowed · pace +0.9",
+          "p": "Walker Kessler",
+          "s": "REB",
+          "st": "5",
+          "std": 10.5,
+          "t": "LAL"
+        }
+      ],
+      "mkt": 229.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "mx": {
+        "exp_pace": 103.1,
+        "home_spread": -14.5,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.8,
+          "PTS": 111.2,
+          "REB": 42.7,
+          "pace": 102.3
+        },
+        "teams": {
+          "LAL": {
+            "allow100": {
+              "3PM": 13.9,
+              "AST": 26.1,
+              "PTS": 110.8,
+              "REB": 41.6
+            },
+            "allow_rk": {
+              "3PM": 4,
+              "AST": 13,
+              "PTS": 19,
+              "REB": 28
+            },
+            "out": [],
+            "pace": 102.9,
+            "rk": {
+              "ast": 25,
+              "blk": 3,
+              "dreb": 27,
+              "fg3_pct": 4,
+              "fg3a": 16,
+              "fg3m": 13,
+              "fg_pct": 1,
+              "ft_pct": 14,
+              "fta": 2,
+              "net": 6,
+              "opp_fg3_pct": 20,
+              "opp_fg_pct": 11,
+              "oppg": 17,
+              "oreb": 14,
+              "pace": 6,
+              "pf": 21,
+              "ppg": 2,
+              "reb": 24,
+              "stl": 1,
+              "tov": 23,
+              "ts_pct": 1
+            },
+            "v": {
+              "ast": 24.4,
+              "ats": "10-6-0",
+              "ats_away": "6-2-0",
+              "ats_home": "4-4-0",
+              "ats_l10": "7-3-0",
+              "away": "7-1",
+              "blk": 5.8,
+              "dreb": 29.4,
+              "fg3_pct": 37.5,
+              "fg3a": 37.6,
+              "fg3m": 14.1,
+              "fg_pct": 48.9,
+              "ft_pct": 78.8,
+              "fta": 30.0,
+              "gp": 16,
+              "home": "6-2",
+              "l10": "9-1",
+              "net": 6.4,
+              "opp_fg3_pct": 36.4,
+              "opp_fg_pct": 45.7,
+              "oppg": 114.4,
+              "oreb": 12.0,
+              "ou": "11-5-0",
+              "ou_l10": "8-2-0",
+              "pace": 103.2,
+              "pf": 22.9,
+              "ppg": 120.9,
+              "reb": 41.4,
+              "rec": "13-3",
+              "stl": 10.8,
+              "tov": 16.7,
+              "ts_pct": 61.5
+            }
+          },
+          "SAC": {
+            "allow100": {
+              "3PM": 13.3,
+              "AST": 25.9,
+              "PTS": 114.9,
+              "REB": 42.5
+            },
+            "allow_rk": {
+              "3PM": 14,
+              "AST": 16,
+              "PTS": 1,
+              "REB": 19
+            },
+            "out": [],
+            "pace": 102.6,
+            "rk": {
+              "ast": 20,
+              "blk": 30,
+              "dreb": 25,
+              "fg3_pct": 18,
+              "fg3a": 20,
+              "fg3m": 22,
+              "fg_pct": 20,
+              "ft_pct": 21,
+              "fta": 26,
+              "net": 30,
+              "opp_fg3_pct": 25,
+              "opp_fg_pct": 30,
+              "oppg": 28,
+              "oreb": 28,
+              "pace": 9,
+              "pf": 20,
+              "ppg": 29,
+              "reb": 29,
+              "stl": 18,
+              "tov": 27,
+              "ts_pct": 22
+            },
+            "v": {
+              "ast": 25.4,
+              "ats": "4-10-0",
+              "ats_away": "1-4-0",
+              "ats_home": "3-6-0",
+              "ats_l10": "3-7-0",
+              "away": "1-4",
+              "blk": 3.4,
+              "dreb": 29.9,
+              "fg3_pct": 34.4,
+              "fg3a": 36.4,
+              "fg3m": 12.5,
+              "fg_pct": 45.6,
+              "ft_pct": 76.5,
+              "fta": 21.9,
+              "gp": 14,
+              "home": "0-9",
+              "l10": "1-9",
+              "net": -14.0,
+              "opp_fg3_pct": 37.4,
+              "opp_fg_pct": 49.9,
+              "oppg": 121.7,
+              "oreb": 9.9,
+              "ou": "8-6-0",
+              "ou_l10": "5-5-0",
+              "pace": 102.8,
+              "pf": 22.5,
+              "ppg": 107.7,
+              "reb": 39.7,
+              "rec": "1-13",
+              "stl": 7.9,
+              "tov": 17.4,
+              "ts_pct": 56.3
+            }
+          }
+        }
+      },
+      "out": {
+        "LAL": [
+          "Austin Reaves (Reaves (heel) is listed as out for Friday's game against the Kings.)"
+        ],
+        "SAC": [
+          "Ben Simmons (Simmons underwent successful surgery Tuesday to repair a torn right Achilles tendon, James Ham of ESPN 1320 Sacramento reports.)",
+          "Maxime Raynaud (Raynaud (knee) will remain on the inactive list for Wednesday's game against the Suns.)",
+          "Precious Achiuwa (Achiuwa (lower leg) has been ruled out for Friday's game against the Lakers.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "LAL": [],
+        "SAC": [
+          "De'Andre Hunter (Hunter (hip) is listed as questionable for Friday's game against the Lakers.)"
+        ]
+      },
+      "tip": "14:00"
     }
   ],
-  "generated": "2026-11-21T01:00:02Z",
+  "generated": "2026-11-21T01:35:02Z",
   "totals": [
     [
       "CHA@ATL",
@@ -3530,6 +4623,16 @@
       "PHX@UTA",
       null,
       null
+    ],
+    [
+      "HOU@DEN",
+      null,
+      227.5
+    ],
+    [
+      "SAC@LAL",
+      null,
+      229.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
