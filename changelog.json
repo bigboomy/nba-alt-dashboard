@@ -5,6 +5,14 @@
       "date": "2026-11-21",
       "version": "nba-session v3.31-p4",
       "component": "dashboard",
+      "title": "Last 5: key teammate out (amber) and overtime (dot)",
+      "change": "A last-5 number has an amber outline when one of his team's top two in that stat sat out that game, and a dot when it went to overtime. The numbers are now the real box score (OT games were shown scaled to 48 minutes). The player fold names who was out and which games went to OT.",
+      "aim": "Mitch 21 Nov: see at a glance whether a clear came from extra minutes or opportunities. Display only; data from data.json l5x (pipeline l5tags)."
+    },
+    {
+      "date": "2026-11-21",
+      "version": "nba-session v3.31-p4",
+      "component": "dashboard",
       "title": "Scoreboard shows last 3 and last 7 days only",
       "change": "Each scoreboard row (picks and every 0u tier) shows two lines, last 3 days and last 7 days (W-L, hit %, units), counted back from the latest settled day. Season totals, direction tags and verdict progress bars moved off the scoreboard; they stay in each section's breakdown.",
       "aim": "Mitch 21 Nov. Display only."
