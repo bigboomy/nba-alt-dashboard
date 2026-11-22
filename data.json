@@ -1058,6 +1058,48 @@
           "wowy_keys": "",
           "wowy_mu": 12.39
         },
+        "Aday Mara|PTS|8.5|LSR": {
+          "best_book": "ladbrokes",
+          "best_price": 1.26,
+          "mm_min": 32.24,
+          "mm_mu": 16.745,
+          "n_books": 2,
+          "opp_lift": 0.074,
+          "opp_out": "SC1/REB1:Giannis Antetokounmpo",
+          "p_mm": 0.953,
+          "p_pin": 0.7839,
+          "p_wowy": 0.8214,
+          "pin_edge_pp": -1.0,
+          "pin_line": 12.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.04,
+          "wowy_keys": "Shai Gilgeous-Alexander",
+          "wowy_mu": 12.885
+        },
+        "Bam Adebayo|PTS|19.5|LSR": {
+          "best_book": "sportsbet",
+          "best_price": 1.86,
+          "mm_min": 36.75,
+          "mm_mu": 24.261,
+          "n_books": 9,
+          "opp_lift": 0.074,
+          "opp_out": "SC1/AST1:Shai Gilgeous-Alexander",
+          "p_mm": 0.6917,
+          "p_pin": 0.635,
+          "p_wowy": 0.5152,
+          "pin_edge_pp": 9.7,
+          "pin_line": 21.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.04,
+          "wowy_keys": "Giannis Antetokounmpo",
+          "wowy_mu": 20.596
+        },
         "Davion Mitchell|AST|7.5|LSR": {
           "best_book": "pointsbet",
           "best_price": 1.63,
@@ -1078,6 +1120,27 @@
           "wowy_L": 1.0,
           "wowy_keys": "",
           "wowy_mu": 9.337
+        },
+        "Davion Mitchell|AST|8.5|LSR": {
+          "best_book": "sportsbet",
+          "best_price": 2.08,
+          "mm_min": 41.22,
+          "mm_mu": 11.438,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "SC1/AST1:Shai Gilgeous-Alexander",
+          "p_mm": 0.7795,
+          "p_pin": 0.5738,
+          "p_wowy": 0.5941,
+          "pin_edge_pp": 9.3,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.02,
+          "wowy_keys": "Giannis Antetokounmpo",
+          "wowy_mu": 9.524
         },
         "Davion Mitchell|PTS|14.5|lean": {
           "best_book": "pointsbet",
@@ -1163,6 +1226,90 @@
           "wowy_keys": "",
           "wowy_mu": 12.677
         },
+        "Isaiah Hartenstein|REB|8.5|LSR": {
+          "best_book": "tabtouch",
+          "best_price": 1.34,
+          "mm_min": 32.8,
+          "mm_mu": 15.515,
+          "n_books": 4,
+          "opp_lift": 0.067,
+          "opp_out": "SC1/REB1:Giannis Antetokounmpo",
+          "p_mm": 0.9268,
+          "p_pin": 0.7203,
+          "p_wowy": 0.8251,
+          "pin_edge_pp": -8.0,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.02,
+          "wowy_keys": "Shai Gilgeous-Alexander",
+          "wowy_mu": 12.93
+        },
+        "Jared McCain|PTS|18.5|LSR": {
+          "best_book": "pointsbet",
+          "best_price": 1.95,
+          "mm_min": 36.2,
+          "mm_mu": 21.898,
+          "n_books": 1,
+          "opp_lift": 0.074,
+          "opp_out": "SC1/REB1:Giannis Antetokounmpo",
+          "p_mm": 0.6466,
+          "p_pin": 0.597,
+          "p_wowy": 0.3881,
+          "pin_edge_pp": 8.4,
+          "pin_line": 20.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.04,
+          "wowy_keys": "Shai Gilgeous-Alexander",
+          "wowy_mu": 17.272
+        },
+        "Klay Thompson|AST|1.5|LSR": {
+          "best_book": "goldbet",
+          "best_price": 1.7,
+          "mm_min": 29.21,
+          "mm_mu": 2.992,
+          "n_books": 10,
+          "opp_lift": 0.0,
+          "opp_out": "SC1/AST1:Shai Gilgeous-Alexander",
+          "p_mm": 0.7786,
+          "p_pin": "",
+          "p_wowy": 0.7361,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.12,
+          "wowy_keys": "Giannis Antetokounmpo",
+          "wowy_mu": 2.735
+        },
+        "Klay Thompson|PTS|9.5|LSR": {
+          "best_book": "sportsbet",
+          "best_price": 1.28,
+          "mm_min": 29.21,
+          "mm_mu": 21.015,
+          "n_books": 14,
+          "opp_lift": 0.074,
+          "opp_out": "SC1/AST1:Shai Gilgeous-Alexander",
+          "p_mm": 0.937,
+          "p_pin": 0.8445,
+          "p_wowy": 0.9542,
+          "pin_edge_pp": 6.3,
+          "pin_line": 15.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.3,
+          "wowy_keys": "Giannis Antetokounmpo",
+          "wowy_mu": 22.3
+        },
         "Pelle Larsson|PTS|8.5|lean": {
           "best_book": "ladbrokes",
           "best_price": 1.48,
@@ -1183,6 +1330,27 @@
           "wowy_L": 1.0,
           "wowy_keys": "",
           "wowy_mu": 10.965
+        },
+        "Pelle Larsson|PTS|9.5|LSR": {
+          "best_book": "goldbet",
+          "best_price": 1.68,
+          "mm_min": 30.92,
+          "mm_mu": 13.433,
+          "n_books": 9,
+          "opp_lift": 0.074,
+          "opp_out": "SC1/AST1:Shai Gilgeous-Alexander",
+          "p_mm": 0.7559,
+          "p_pin": 0.6066,
+          "p_wowy": 0.6144,
+          "pin_edge_pp": 0.4,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.04,
+          "wowy_keys": "Giannis Antetokounmpo",
+          "wowy_mu": 11.404
         },
         "Shai Gilgeous-Alexander|PTS|25.5|MM90": {
           "best_book": "tabtouch",
@@ -1612,6 +1780,345 @@
           "st": "4",
           "std": 8.5,
           "t": "MIA"
+        },
+        {
+          "alt": 1.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-LEAN",
+            "[Std?]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.62",
+            "Z0.87",
+            "TMO",
+            "OPP-OUT:SC1/AST1",
+            "BK-sportsbet"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            1,
+            2,
+            4,
+            2,
+            4
+          ],
+          "o": 1.68,
+          "opp": "OKC 7th fewest AST allowed · pace +1.9",
+          "p": "Klay Thompson",
+          "s": "AST",
+          "st": "3",
+          "std": 1.5,
+          "t": "MIA"
+        },
+        {
+          "alt": 9.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-LEAN",
+            "[ROLE?]",
+            "OT-ADJ",
+            "MT-",
+            "C0.82",
+            "Z0.48",
+            "TMO",
+            "PIN+0.4",
+            "OPP-OUT:SC1/AST1",
+            "BK-sportsbet"
+          ],
+          "h": "70% (7/10)",
+          "l5": [
+            4,
+            14,
+            11,
+            13,
+            7
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-04",
+              "ot": 1
+            }
+          ],
+          "o": 1.66,
+          "opp": "OKC 5th fewest PTS allowed · pace +1.9",
+          "p": "Pelle Larsson",
+          "s": "PTS",
+          "st": "3",
+          "std": 11.5,
+          "t": "MIA"
+        },
+        {
+          "alt": 19.5,
+          "e": 6.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-PIN",
+            "BK-sportsbet",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.96",
+            "Z0.08",
+            "TMO",
+            "PIN+9.7",
+            "OPP-OUT:SC1/AST1"
+          ],
+          "h": "50% (5/10)",
+          "l5": [
+            26,
+            4,
+            20,
+            37,
+            11
+          ],
+          "o": 1.86,
+          "opp": "OKC 5th fewest PTS allowed · pace +1.9",
+          "p": "Bam Adebayo",
+          "s": "PTS",
+          "st": "3",
+          "std": 21.5,
+          "t": "MIA"
+        },
+        {
+          "alt": 8.5,
+          "e": 10.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-PIN",
+            "BK-sportsbet",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.91",
+            "Z0.31",
+            "TMO",
+            "PIN+9.3",
+            "OPP-OUT:SC1/AST1"
+          ],
+          "h": "60% (6/10)",
+          "l5": [
+            6,
+            10,
+            9,
+            17,
+            8
+          ],
+          "l5x": [
+            null,
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Pelle Larsson"
+              ]
+            },
+            {
+              "d": "2026-11-14",
+              "out": [
+                "Pelle Larsson"
+              ]
+            },
+            {
+              "d": "2026-11-13",
+              "out": [
+                "Pelle Larsson"
+              ]
+            },
+            null
+          ],
+          "o": 2.08,
+          "opp": "OKC 7th fewest AST allowed · pace +1.9",
+          "p": "Davion Mitchell",
+          "s": "AST",
+          "st": "3",
+          "std": 9.5,
+          "t": "MIA"
+        },
+        {
+          "alt": 18.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-PIN",
+            "BK-pointsbet",
+            "[ROLE?]",
+            "MU+3%",
+            "MT+",
+            "C1.16",
+            "Z-0.44",
+            "TMO",
+            "PIN+8.4",
+            "OPP-OUT:SC1/REB1"
+          ],
+          "h": "40% (4/10)",
+          "l5": [
+            18,
+            18,
+            12,
+            23,
+            10
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-13",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            },
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            }
+          ],
+          "o": 1.95,
+          "opp": "MIA 7th most PTS allowed · pace +1.9",
+          "p": "Jared McCain",
+          "s": "PTS",
+          "st": "1",
+          "std": 18.5,
+          "t": "OKC"
+        },
+        {
+          "alt": 9.5,
+          "e": 7.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-PIN",
+            "BK-sportsbet",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.56",
+            "Z0.97",
+            "TMO",
+            "PIN+6.3",
+            "OPP-OUT:SC1/AST1",
+            "MM90-ALSO",
+            "PMM0.94"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            13,
+            17,
+            26,
+            11,
+            23
+          ],
+          "o": 1.28,
+          "opp": "OKC 5th fewest PTS allowed · pace +1.9",
+          "p": "Klay Thompson",
+          "s": "PTS",
+          "st": "5",
+          "std": 14.5,
+          "t": "MIA"
+        },
+        {
+          "alt": 8.5,
+          "e": 4.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.95",
+            "[OUT]",
+            "[ROLE?]",
+            "MU+3%",
+            "MT+",
+            "C0.73",
+            "Z0.96",
+            "TMO",
+            "PIN-1.0",
+            "OPP-OUT:SC1/REB1",
+            "BK-ladbrokes"
+          ],
+          "h": "100% (9/9)",
+          "l5": [
+            22,
+            10,
+            16,
+            10,
+            11
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-13",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            },
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            }
+          ],
+          "o": 1.26,
+          "opp": "MIA 7th most PTS allowed · pace +1.9",
+          "p": "Aday Mara",
+          "s": "PTS",
+          "st": "4",
+          "std": 12.5,
+          "t": "OKC"
+        },
+        {
+          "alt": 8.5,
+          "e": -6.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.93",
+            "[ROLE?]",
+            "MT+",
+            "C0.69",
+            "Z1.02",
+            "TMO",
+            "PIN-8.0",
+            "OPP-OUT:SC1/REB1",
+            "REB-OPP",
+            "BK-ladbrokes"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            8,
+            17,
+            11,
+            16,
+            11
+          ],
+          "o": 1.25,
+          "opp": "MIA 14th most REB allowed · pace +1.9",
+          "p": "Isaiah Hartenstein",
+          "s": "REB",
+          "st": "3",
+          "std": 11.5,
+          "t": "OKC"
         }
       ],
       "lsr": [
@@ -1622,6 +2129,14 @@
           ],
           "run": "20261122T215002Z_lsr_OKC-MIA",
           "utc": "2026-11-22T21:50:02Z"
+        },
+        {
+          "n": 8,
+          "out": [
+            "Giannis Antetokounmpo"
+          ],
+          "run": "20261122T222502Z_lsr_OKC-MIA",
+          "utc": "2026-11-22T22:25:02Z"
         }
       ],
       "mkt": null,
