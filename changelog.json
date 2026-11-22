@@ -5,6 +5,14 @@
       "date": "2026-11-23",
       "version": "nba-session v3.32-p4",
       "component": "dashboard",
+      "title": "Late returns flagged",
+      "change": "A player who was OUT at the run and is no longer OUT on ESPN before tip gets a Late return note on his game and a Telegram alert. The bets on that game were built with him out.",
+      "aim": "Mitch 23 Nov (Norman Powell). Alert and display only: no re-run, stake or rule change."
+    },
+    {
+      "date": "2026-11-23",
+      "version": "nba-session v3.32-p4",
+      "component": "dashboard",
       "title": "Last 5 counts team games, missed games shown as a dash",
       "change": "The last-5 boxes beside each bet are now his team's last 5 games; a game he did not play shows as a dash. The Last 5 games averages cover the games he played in that window and say how many he missed. A traded player's games before he joined are not counted as missed.",
       "aim": "Mitch 23 Nov. Display only: the engine's hit-rate sample (last 10 games played) is unchanged."
