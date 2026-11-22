@@ -267,6 +267,7 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 .l5{display:flex;gap:2px}
 .l5 i{font:600 14px/1 var(--disp);font-style:normal;font-variant-numeric:tabular-nums;min-width:21px;text-align:center;padding:3px 0;border-radius:4px}
 .l5 i.o{background:var(--o5);color:var(--o5t)}.l5 i.u{background:var(--u5);color:var(--muted)}
+.l5 i.m,.rkey em.m{background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)}
 /* 21 Nov (Mitch): amber outline = one of his team's top two in that stat sat out; dot = went to overtime */
 .l5 i{position:relative}.l5 i.ko{box-shadow:inset 0 0 0 2px var(--amb)}.l5 i.ot::after{content:'';position:absolute;top:-3px;right:-3px;width:7px;height:7px;border-radius:50%;background:var(--text);box-shadow:0 0 0 1.5px var(--card)}
 .rkey em.ko{background:none!important;box-shadow:inset 0 0 0 2px var(--amb)}.rkey em.ot{position:relative;padding-right:12px}.rkey em.ot::after{content:'';position:absolute;top:50%;right:3px;margin-top:-3.5px;width:7px;height:7px;border-radius:50%;background:var(--text)}
@@ -877,7 +878,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(!str(p.p,'')||!str(p.s,'')||alt===null||o===null||o<=0||e===null) return null;
     var st=num(p.st),sa=num(p.safe_alt),so=num(p.safe_o);
     return {p:String(p.p),t:str(p.t,''),s:String(p.s),alt:alt,o:o,e:e,h:str(p.h,'—'),stN:st===null?0:st,opp:str(p.opp,'—'),f:Array.isArray(p.f)?p.f.map(String):[],
-      l5:Array.isArray(p.l5)?p.l5.map(Number).filter(function(v){return isFinite(v)}).slice(0,5):[],
+      l5:Array.isArray(p.l5)?p.l5.map(function(v){return v===null?null:Number(v)}).filter(function(v){return v===null||isFinite(v)}).slice(0,5):[],
       l5x:Array.isArray(p.l5x)&&Array.isArray(p.l5)&&p.l5x.length===p.l5.length?p.l5x.slice(0,5):[],
       sa:(sa!==null&&so!==null)?sa:null,so:(sa!==null&&so!==null)?so:null};
   }
@@ -1076,16 +1077,17 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
              ['fg','FGM-A',ma('fgm','fga')],['fgp','FG%',L.fg_pct===null||L.fg_pct===undefined?'—':Number(L.fg_pct).toFixed(0)+'%'],['ft','FTM-A',ma('ftm','fta')],['stl','STL',f1(L.stl)]];
       body='<div class="b5g">'+C.map(function(c){var cl=bet[c[0]]?' bt':(c[0]==='min'&&lowMin?' lo':'');
         return '<div class="b5c'+cl+'"><b>'+c[2]+'</b><span>'+c[1]+'</span></div>'}).join('')+'</div>'+
-        '<p class="b5n">Averages over his last '+b.n+' games. Tinted = tonight\'s bet stat'+(lowMin?'; amber minutes = 4+ under his season average':'')+'.</p>';
+        '<p class="b5n">'+(b.tg?'Averages over the '+b.n+' he played of his team\'s last '+b.tg+' games'+(b.n<b.tg?' (missed '+(b.tg-b.n)+')':'')+'.':'Averages over his last '+b.n+' games.')+' Tinted = tonight\'s bet stat'+(lowMin?'; amber minutes = 4+ under his season average':'')+'.</p>';
     }
     var hr=P.bs.map(function(x){var kn=hitKN(x.h);return kn?'<li><b>'+esc(STW[x.s]||x.s)+' '+esc(x.alt)+'+</b> cleared in '+kn[0]+' of his last '+kn[1]+' games</li>':''}).join('');
     /* 21 Nov: which of the last 5 had a top-two teammate in that stat out, or went to overtime (oldest first) */
     var seen={};P.bs.forEach(function(x){if(!x.l5x||!x.l5x.length||seen[x.s])return;seen[x.s]=1;
-      var a=[];x.l5x.slice().reverse().forEach(function(t,i){var n=l5Note(t);if(n)a.push((t.d?fdate(t.d):'game '+(i+1))+' '+n+' ('+x.l5[x.l5.length-1-i]+')')});
+      var a=[];x.l5x.slice().reverse().forEach(function(t,i){var n=l5Note(t);if(n&&!t.dnp)a.push((t.d?fdate(t.d):'game '+(i+1))+' '+n+' ('+x.l5[x.l5.length-1-i]+')')});
       if(a.length)hr+='<li><b>'+esc(STW[x.s]||x.s)+' last 5:</b> '+esc(a.join(' · '))+'</li>'});
     if(hr) hr='<ul class="b5h">'+hr+'</ul>';
+    if(!body&&b&&b.tg&&!b.n) body='<p class="b5n">Didn\'t play in any of his team\'s last '+b.tg+' games.</p>';
     if(!body&&!sn&&!hr) return '';
-    return '<details class="scn b5"><summary>'+(body?'Last '+b.n+' games':hr?'Recent form':'Scout note')+'</summary>'+body+hr+
+    return '<details class="scn b5"><summary>'+(body?'Last '+(b.tg||b.n)+' games':hr?'Recent form':'Scout note')+'</summary>'+body+hr+
       (sn?'<div class="b5s">'+(body?'<h4>Scout note</h4>':'')+'<p>'+esc(sn)+'</p></div>':'')+'</details>';
   }
   /* Scout note (Mitch 20 Nov: "a scout report style", facts only): 2-3 plain sentences per player built from data
@@ -1142,11 +1144,11 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       '<circle cx="18" cy="18" r="15.5" class="rf" style="stroke:'+ringCol(r)+'" stroke-dasharray="'+(C*r).toFixed(1)+' '+C+'"/></svg><b>'+sc+'</b></span>'}
   function knLine(b){var kn=hitKN(b.h);return kn?'<p class="kn">Last '+kn[1]+' games: cleared '+kn[0]+' of '+kn[1]+'. Hit chance '+(hitP(b)*10).toFixed(1)+'/10 is the engine\'s estimate (price plus edge).</p>':''}
   function stPill(s){return '<span class="stn '+(STC[s]||'oth')+'">'+esc(STW[s]||s)+'</span>'}
-  function l5Note(t){if(!t) return '';var a=[];if(t.out&&t.out.length)a.push(t.out.join(' and ')+' out');if(t.ot)a.push(t.ot>1?t.ot+' overtimes':'overtime');return a.join(', ')}
+  function l5Note(t){if(!t) return '';if(t.dnp) return 'did not play';var a=[];if(t.out&&t.out.length)a.push(t.out.join(' and ')+' out');if(t.ot)a.push(t.ot>1?t.ot+' overtimes':'overtime');return a.join(', ')}
   function l5Html(p){if(!p.l5||!p.l5.length) return '';var L=p.l5.slice().reverse(),X=(p.l5x&&p.l5x.length===p.l5.length?p.l5x:[]).slice().reverse();
-    return '<span class="l5" aria-label="Last '+L.length+', oldest to newest: '+L.map(function(v,i){var n=l5Note(X[i]);return v+(n?' ('+n+')':'')}).join(', ')+'">'+
-      L.map(function(v,i){var t=X[i]||null,c=(v>p.alt?'o':'u')+(t&&t.out&&t.out.length?' ko':'')+(t&&t.ot?' ot':''),n=l5Note(t);
-        return '<i class="'+c+'"'+(n?' title="'+esc((t.d?fdate(t.d)+': ':'')+n)+'"':'')+'>'+v+'</i>'}).join('')+'</span>'}
+    return '<span class="l5" aria-label="Last '+L.length+', oldest to newest: '+L.map(function(v,i){var n=l5Note(X[i]);return v===null?'did not play':v+(n?' ('+n+')':'')}).join(', ')+'">'+
+      L.map(function(v,i){var t=X[i]||null,c=(v===null?'m':v>p.alt?'o':'u')+(t&&t.out&&t.out.length?' ko':'')+(t&&t.ot?' ot':''),n=l5Note(t);
+        return '<i class="'+c+'"'+(n?' title="'+esc((t.d?fdate(t.d)+': ':'')+n)+'"':'')+'>'+(v===null?'\u2013':v)+'</i>'}).join('')+'</span>'}
   var JBFROM=null,JBAT=0;
   document.addEventListener('click',function(e){if(e.target&&e.target.id==='jb'){var b=$('best');$('jb').hidden=true;if(!b)return;
     b.scrollIntoView({block:'start',behavior:'smooth'});var f=null;Array.prototype.forEach.call(b.querySelectorAll('[data-jump]'),function(x){if(x.getAttribute('data-jump')===JBFROM)f=x});
@@ -1156,7 +1158,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   var KEYDONE=false;   /* last-5 key shows once per render (reset in games()) */
   function ringKey(list){var has=(list||[]).some(function(b){return b.l5&&b.l5.length});
     if(!has||KEYDONE) return '';KEYDONE=true;
-    return '<div class="rkey"><span>Last 5, oldest \u2192 newest: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em><em class="ko">key mate out</em><em class="ot">OT</em></span></div>'}
+    return '<div class="rkey"><span>Last 5, oldest \u2192 newest: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:var(--u5);color:var(--muted)">under</em><em class="ko">key mate out</em><em class="ot">OT</em><em class="m">\u2013 did not play</em></span></div>'}
   function l10Of(b){var kn=hitKN(b.h);return kn?'<span class="l10" aria-label="cleared '+kn[0]+' of last '+kn[1]+'"><i>L'+kn[1]+'</i> '+kn[0]+'/'+kn[1]+'</span>':''}
   function bid(g,b){return g.id+'|'+b.p+'|'+b.s+'|'+b.alt}
   function betLabel(b,gid){var r=hitP(b),kn=hitKN(b.h),x=resFor(b);
