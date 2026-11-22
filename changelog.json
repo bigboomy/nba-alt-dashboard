@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-23",
+      "version": "nba-session v3.33-p4",
+      "component": "engine",
+      "title": "L5P tier (0u test)",
+      "change": "New tracked tier shown as leans: for points, rebounds and assists, the highest best-held price at $1.50-1.99 that he went over in each of his last 5 games played. If another item already has that line, that item carries L5P-ALSO instead. Verdict at 60 team-games: confirm at break-even or better with the 80% range above -2pp; reject at 3pp or more under.",
+      "aim": "Mitch 23 Nov. Backtest 13-22 Nov: a perfect 10 of 10 ran about 10pp under its price (76 rungs); a perfect last 5 at $1.50-1.99 about level (107 rungs) against about -4pp for an average rung there. The perfect-10 pick rule is unchanged."
+    },
+    {
+      "date": "2026-11-23",
       "version": "nba-session v3.32-p4",
       "component": "dashboard",
       "title": "Late returns flagged",

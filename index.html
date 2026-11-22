@@ -441,6 +441,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <div id="hrSec"></div>
   <div id="pinSec"></div>
   <div id="mmSec"></div>
+  <div id="l5Sec"></div>
   <div id="olSec"></div>
   <div id="lsSec"></div>
   </details>
@@ -469,6 +470,9 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <tr data-re="^HR85$"><td class="lgc">HR85</td><td>The earlier hit-rate tier (17-20 Nov), price $1.20-1.39. Replaced by HR80; its record is kept apart.</td><td class="lge">Closed</td></tr>
   <tr data-re="^PIN$"><td class="lgc">PIN</td><td>Pinnacle-anchor tier: a held book&#x27;s alt rung at $1.20-3.00 paying 4pp+ over Pinnacle&#x27;s fair price. Verdict at 100.</td><td class="lge">0u test</td></tr>
   <tr data-re="^MM90$"><td class="lgc">MM90</td><td>MM90 tier (from 22 Nov): $1.20-1.29 at the best held price, minutes-model P(over) 90%+. Verdict at 60 team-games.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^L5P$"><td class="lgc">L5P</td><td>L5P tier (from 23 Nov): the highest best-held price at $1.50-1.99 that he went over in each of his last 5 games played (points, rebounds, assists). Verdict at 60 team-games.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^L5LOW"><td class="lgc">L5LOW23</td><td>His lowest number in those last 5 games (always above the line).</td><td class="lge">Info</td></tr>
+  <tr data-re="^L5P-ALSO$"><td class="lgc">L5P-ALSO</td><td>This rung also meets the L5P rule (another tier or lean already has the line).</td><td class="lge">Info</td></tr>
   <tr data-re="^MM90-ALSO$"><td class="lgc">MM90-ALSO</td><td>This rung also meets the MM90 rule (another tier already has the line).</td><td class="lge">Info</td></tr>
   <tr data-re="^PMM"><td class="lgc">PMM0.93</td><td>Minutes-model P(over) for MM90 items.</td><td class="lge">Info</td></tr>
   <tr data-re="^BK-"><td class="lgc">BK-ladbrokes</td><td>The book whose price is taken and settled, when it isn't Pointsbet. Every item takes the best price across Pointsbet, Ladbrokes and Sportsbet (from 22 Nov).</td><td class="lge">Info</td></tr>
@@ -909,7 +913,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     $('tabs').innerHTML=ids.map(function(id){return '<button class="tab" data-id="'+esc(id)+'" aria-pressed="'+(id===sel)+'">'+(id==='ALL'?'All games':esc(id))+'</button>'}).join('');
     Array.prototype.forEach.call($('tabs').children,function(b){b.onclick=function(){sel=b.getAttribute('data-id');tabs();games()}});
   }
-  function cxKind(p){return !p.lean?'pick':p.f.indexOf('LSR')>=0?'LSR':p.f.indexOf('HR80')>=0?'HR80':p.f.indexOf('MM90')>=0?'MM90':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':p.f.indexOf('OUTLIFT')>=0?'OUTLIFT':'lean'}
+  function cxKind(p){return !p.lean?'pick':p.f.indexOf('LSR')>=0?'LSR':p.f.indexOf('HR80')>=0?'HR80':p.f.indexOf('MM90')>=0?'MM90':p.f.indexOf('L5P')>=0?'L5P':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':p.f.indexOf('OUTLIFT')>=0?'OUTLIFT':'lean'}
   function cxLine(g,p){
     var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];if(!c) return '';
     function pc(v){return v===''||v===null||v===undefined?null:Math.round(Number(v)*100)+'%'}
@@ -1168,7 +1172,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       (kn?', cleared '+kn[0]+' of last '+kn[1]:'')+(x?', '+({W:'won',L:'lost',PUSH:'push',VOID:'void'}[x.result]||x.result)+(x.actual?' with '+x.actual:''):''))}
   /* Line cell: once settled the line turns green (won) or orange (lost) with his actual number in brackets under it. */
   var KGLOSS={PICK:'Staked: cleared every gate.',LEAN:'A near-miss, tracked at 0u, never staked.',HR80:'Test tier: perfect recent sample at $1.20-1.29, tracked at 0u.',
-    HR85:'The earlier hit-rate tier (closed), tracked at 0u.',MM90:'Test tier: $1.20-1.29 with the minutes model at 90%+, tracked at 0u.',PIN:'Test tier: priced 4pp+ better than Pinnacle\'s fair price, tracked at 0u.',
+    HR85:'The earlier hit-rate tier (closed), tracked at 0u.',MM90:'Test tier: $1.20-1.29 with the minutes model at 90%+, tracked at 0u.',L5P:'Test tier: $1.50-1.99, cleared in each of his last 5 games played, tracked at 0u.',PIN:'Test tier: priced 4pp+ better than Pinnacle\'s fair price, tracked at 0u.',
     OUTLIFT:'Teammate-out tier, killed 20 Nov, kept for the record only.',LSR:'Late-scratch re-run after a player was ruled out, tracked at 0u.'};
   function lnHtml(b){var x=resFor(b),c=x?({W:'won',L:'lost',PUSH:'push',VOID:'push'}[x.result]||''):'';
     var lab=x?({W:'won',L:'lost',PUSH:'push',VOID:'void'}[x.result]||x.result):'';
@@ -1210,13 +1214,14 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var np=g.picks.length,nl=g.leans.length,nh=g.leans.filter(function(p){return p.f.indexOf('HR80')>=0||p.f.indexOf('HR85')>=0}).length,
         npn=g.leans.filter(function(p){return p.f.indexOf('PIN')>=0}).length,
         nmm=g.leans.filter(function(p){return p.f.indexOf('MM90')>=0}).length,
+        nl5=g.leans.filter(function(p){return p.f.indexOf('L5P')>=0}).length,
         nol=g.leans.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length,
         nls=g.leans.filter(function(p){return p.f.indexOf('LSR')>=0}).length;
     var gl=g.picks.concat(g.leans).filter(function(b){return b.f.indexOf('OUTLIFT')<0}),gd=0,gw={pw:0,pl:0,lw:0,ll:0};
     gl.forEach(function(b){var x=resFor(b);if(!x)return;gd++;var k=(b.lean?'l':'p')+(x.result==='W'?'w':x.result==='L'?'l':'');if(gw[k]!==undefined)gw[k]++});
     var allDone=g.picks.concat(g.leans).every(function(b){return resFor(b)});
     var tpTxt=!gl.length&&allDone&&g.leans.length?'Final':gl.length&&gd===gl.length?'Final'+(np?' · picks '+gw.pw+'-'+gw.pl:'')+(gl.length>np?' · leans '+gw.lw+'-'+gw.ll:''):'tip '+esc(g.tip);
-    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp'+(tpTxt.charAt(0)==='F'?' fin':'')+'">'+tpTxt+'</span><span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+(nl-nol)+' lean'+(nl-nol===1?'':'s')+(nh+nmm+npn+nls?' <span class="mu">(incl. '+[[nh,'HR80'],[nmm,'MM90'],[npn,'PIN'],[nls,'LSR']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+
+    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp'+(tpTxt.charAt(0)==='F'?' fin':'')+'">'+tpTxt+'</span><span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+(nl-nol)+' lean'+(nl-nol===1?'':'s')+(nh+nmm+nl5+npn+nls?' <span class="mu">(incl. '+[[nh,'HR80'],[nmm,'MM90'],[nl5,'L5P'],[npn,'PIN'],[nls,'LSR']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+
       (nol?' <span class="mu">· '+nol+' killed OUTLIFT, record only</span>':'')+'</span></div>';
     /* Late return (Mitch 23 Nov): a player OUT at the run is back in. These bets were built with him out. */
     var rt=RETS[g.id]||[];
@@ -1394,6 +1399,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     tier('leansSec','Leans (0u)',LEANS);
     tier('hrSec','HR80 tier (0u)',typeof HRS!=='undefined'?HRS:null);
     tier('mmSec','MM90 tier (0u)',typeof MMS!=='undefined'?MMS:null);
+    tier('l5Sec','L5P tier (0u)',typeof L5S!=='undefined'?L5S:null);
     tier('pinSec','PIN tier (0u)',typeof PINS!=='undefined'?PINS:null);
     tier('olSec','OUTLIFT tier (killed 20 Nov)',typeof OLS!=='undefined'?OLS:null);
     tier('lsSec','Late-scratch re-run (0u)',typeof LSS!=='undefined'?LSS:null);
@@ -1844,6 +1850,33 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     bindMm();
   }
   function bindMm(){var f=$('mmFold');if(f)f.addEventListener('toggle',function(){MM_OPEN=this.open})}
+  /* ---------- L5P tier (nba-session v3.33, Mitch 23 Nov): highest best-held rung at $1.50-1.99 cleared in each of his
+     last 5 games played, PTS/REB/AST, 0u. Rows in the leans tab flagged L5P. Same pre-registered verdict as MM90. */
+  var L5S=null,L5_OPEN=false;
+  function renderL5(){
+    var box=$('l5Sec');if(!box) return;
+    var head='<details class="fold" id="l5Fold"'+(L5_OPEN?' open':'')+'><summary><span>L5P tier (0u) <span class="meta">perfect last 5 at $1.50-1.99</span></span></summary>';
+    if(LEANFAIL||!L5S){box.innerHTML=LEANFAIL?'':head+'<div class="none">Loading…</div></details>';bindL5();return}
+    var settled=L5S.filter(function(r){return r.result==='W'||r.result==='L'}),asOf=null;
+    settled.forEach(function(r){if(!asOf||r.date>asOf)asOf=r.date});
+    var pend=L5S.filter(function(r){return !r.result}).length;
+    if(!asOf){box.innerHTML=head+'<div class="none">No settled L5P rungs yet'+(pend?' ('+pend+' pending)':'')+'. The tier starts with the 23 Nov slate (v3.33).</div></details>';bindL5();return}
+    function win(nd){var lo=addDays(asOf,-(nd-1));return L5S.filter(function(r){return r.date>=lo&&r.date<=asOf})}
+    var row=function(label,s){return '<tr><td>'+label+'</td><td>'+s.n+'</td><td>'+s.w+'-'+s.l+'</td><td>'+(s.hit===null?'—':s.hit.toFixed(1)+'%')+'</td><td>'+(s.impl===null?'—':s.impl.toFixed(1)+'%')+'</td><td class="'+cls(s.gap)+'">'+(s.gap===null?'—':sg(s.gap,1)+'pp')+'</td><td class="'+cls(s.u)+'">'+sg(s.u,2)+'u</td></tr>'};
+    var all=leanSum(L5S),tg={};
+    settled.forEach(function(r){tg[r.date+'|'+(r.team||r.game)]=1});var ntg=Object.keys(tg).length;
+    var rs=['PTS','REB','AST'].map(function(k){var s=leanSum(L5S.filter(function(r){return r.stat===k}));return s.n?row(k,s):''}).join('');
+    var q=all.hit/100,lo80=all.n?all.gap-128.16*Math.sqrt(q*(1-q)/all.n):null;
+    var verdict=ntg<60?'<b>Collecting: '+ntg+' of 60 team-games ('+all.n+' settled).</b> ':
+      (all.gap<=-3?'<b>REJECT: '+sg(all.gap,1)+'pp under break-even over '+ntg+' team-games.</b> ':
+      (all.gap>=0&&lo80>-2?'<b>CONFIRM: at or above break-even over '+ntg+' team-games, 80% CI floor '+sg(lo80,1)+'pp. Mitch decides on staking.</b> ':
+      '<b>Not settled either way over '+ntg+' team-games (gap '+sg(all.gap,1)+'pp, 80% CI floor '+sg(lo80,1)+'pp): keep collecting.</b> '));
+    box.innerHTML=head+'<div class="ts"><table style="min-width:0"><thead><tr><th></th><th>n</th><th>W-L</th><th>Hit</th><th>Break-even</th><th>Gap</th><th>Units</th></tr></thead><tbody>'+
+      row('7d',leanSum(win(7)))+row('Since 23 Nov',all)+(rs?'<tr class="sh"><td colspan="7">By stat</td></tr>'+rs:'')+'</tbody></table></div>'+
+      '<p class="cap">'+verdict+'Backtest 13-22 Nov: a perfect 10/10 ran about 10pp under its price, a perfect last 5 at $1.50-1.99 about level (107 rungs). Best price across Pointsbet, Ladbrokes and Sportsbet. CONFIRM needs 60+ team-games, hit at or above break-even and the 80% CI floor above −2pp; REJECT is 3pp+ under at 60 team-games. Units are notional, flat 1u; nothing is staked. As of '+fdate(asOf)+(all.v?' · '+all.v+' void':'')+(pend?' · '+pend+' pending':'')+'.</p></details>';
+    bindL5();
+  }
+  function bindL5(){var f=$('l5Fold');if(f)f.addEventListener('toggle',function(){L5_OPEN=this.open})}
   /* ---------- PIN Pinnacle-anchor tier (nba-session v3.24, 18 Nov): a held book's alt rung at $1.20-3.00 paying
      4pp+ over Pinnacle-fair (margin-stripped two-way line, negative-binomial fit), 0u. Rows in the leans tab
      flagged PIN. Own record. Test: KILL if flat ROI < 0 after 100 settled; CONFIRM if > +5% over 100. */
@@ -1918,11 +1951,11 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       if(/^\s*</.test(t))throw 0;
       var objs=CORE.parseCSV(t);if(objs.length&&!('lean_id' in objs[0]))throw 0;
       LEANS=objs.filter(function(o){return String(o.lean_id||'').trim()&&/^\d{4}-\d{2}-\d{2}$/.test(String(o.date||'').trim())}).map(function(o){
-        return {date:String(o.date).trim(),game:String(o.game||'').trim(),player:String(o.player||''),stat:String(o.stat||'').trim().toUpperCase(),alt:numOrNull(o.alt),actual:String(o.actual||'').trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase(),team:String(o.team||'').trim(),hr:/(^|\s)HR80(\s|$)/.test(String(o.flags||'')),hr85:/(^|\s)HR85(\s|$)/.test(String(o.flags||'')),pin:/(^|\s)PIN(\s|$)/.test(String(o.flags||'')),mm:/(^|\s)MM90(\s|$)/.test(String(o.flags||'')),mma:/(^|\s)MM90-ALSO(\s|$)/.test(String(o.flags||'')),ol:/(^|\s)OUTLIFT(\s|$)/.test(String(o.flags||'')),ls:/(^|\s)LSR(\s|$)/.test(String(o.flags||'')),lk:(String(o.flags||'').match(/(^|\s)LSR-([A-Z0-9]+)/)||[])[2]||''}}).filter(function(r){return r.odds!==null&&r.odds>1});
+        return {date:String(o.date).trim(),game:String(o.game||'').trim(),player:String(o.player||''),stat:String(o.stat||'').trim().toUpperCase(),alt:numOrNull(o.alt),actual:String(o.actual||'').trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase(),team:String(o.team||'').trim(),hr:/(^|\s)HR80(\s|$)/.test(String(o.flags||'')),hr85:/(^|\s)HR85(\s|$)/.test(String(o.flags||'')),pin:/(^|\s)PIN(\s|$)/.test(String(o.flags||'')),mm:/(^|\s)MM90(\s|$)/.test(String(o.flags||'')),mma:/(^|\s)MM90-ALSO(\s|$)/.test(String(o.flags||'')),l5:/(^|\s)L5P(\s|$)/.test(String(o.flags||'')),ol:/(^|\s)OUTLIFT(\s|$)/.test(String(o.flags||'')),ls:/(^|\s)LSR(\s|$)/.test(String(o.flags||'')),lk:(String(o.flags||'').match(/(^|\s)LSR-([A-Z0-9]+)/)||[])[2]||''}}).filter(function(r){return r.odds!==null&&r.odds>1});
       LALL=LEANS.slice();
-      HRS=LEANS.filter(function(r){return r.hr});HR85S=LEANS.filter(function(r){return r.hr85});PINS=LEANS.filter(function(r){return r.pin});MMS=LEANS.filter(function(r){return r.mm&&!r.ls});MMA=LEANS.filter(function(r){return r.mma&&!r.mm&&!r.ls});OLS=LEANS.filter(function(r){return r.ol});LSS=LEANS.filter(function(r){return r.ls});LEANS=LEANS.filter(function(r){return !r.hr&&!r.hr85&&!r.pin&&!r.mm&&!r.ol&&!r.ls});renderHr();renderPin();renderMm();renderOl();renderLs();
+      HRS=LEANS.filter(function(r){return r.hr});HR85S=LEANS.filter(function(r){return r.hr85});PINS=LEANS.filter(function(r){return r.pin});MMS=LEANS.filter(function(r){return r.mm&&!r.ls});MMA=LEANS.filter(function(r){return r.mma&&!r.mm&&!r.ls});OLS=LEANS.filter(function(r){return r.ol});LSS=LEANS.filter(function(r){return r.ls});L5S=LEANS.filter(function(r){return r.l5&&!r.ls});LEANS=LEANS.filter(function(r){return !r.hr&&!r.hr85&&!r.pin&&!r.mm&&!r.l5&&!r.ol&&!r.ls});renderHr();renderPin();renderMm();renderL5();renderOl();renderLs();
       LEANFAIL=false;renderLeans();renderBoard();if(D){games();runStatus()}
-    }).catch(function(){LEANFAIL=true;renderLeans();renderHr();renderPin();renderMm();renderOl();renderLs()});
+    }).catch(function(){LEANFAIL=true;renderLeans();renderHr();renderPin();renderMm();renderL5();renderOl();renderLs()});
   }
   /* ---------- web-push alerts (sender: tools/nba_push.py in the slate task) ---------- */
   var VAPID_PUB='BAz_aD_630fWpE5YorIANph4tGZ4JUfxDRHYaX_2ljyWtFdlPUW7nxMeR_QDMbV1rJvCuM1BQQamnBDwg8gq444';
