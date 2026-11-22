@@ -4,6 +4,13 @@
     {
       "date": "2026-11-22",
       "version": "nba-session v3.32-p4",
+      "component": "dashboard",
+      "title": "MM90 tier shown on its own",
+      "detail": "MM90 leans are kept out of the regular lean counts and record and get their own fold and scoreboard row with the pre-registered verdict; legend rows added for MM90, MM90-ALSO, PMM, BIGEDGE?, RET-ADJ and BK-, and the header names the three-book best price from v3.32."
+    },
+    {
+      "date": "2026-11-22",
+      "version": "nba-session v3.32-p4",
       "component": "engine",
       "title": "Return discount for a key teammate back (switched on)",
       "change": "When a key teammate (top-3 scorer, top rebounder or top passer, 24+ min) plays tonight, every recent game the player had without him is scaled down by 75% of the player's own with/without difference, shrunk to a league prior. Points, rebounds and assists only; nothing changes when that teammate is out. The RET-ADJ flag shows when 3 or more of the sample games are affected.",
