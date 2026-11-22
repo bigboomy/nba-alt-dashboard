@@ -2,6 +2,54 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
     {
+      "date": "2026-11-22",
+      "version": "nba-session v3.32-p4",
+      "component": "engine",
+      "title": "Return discount for a key teammate back (switched on)",
+      "change": "When a key teammate (top-3 scorer, top rebounder or top passer, 24+ min) plays tonight, every recent game the player had without him is scaled down by 75% of the player's own with/without difference, shrunk to a league prior. Points, rebounds and assists only; nothing changes when that teammate is out. The RET-ADJ flag shows when 3 or more of the sample games are affected.",
+      "aim": "Mitch 22 Nov via the critic (2 seasons, 1,476 games: padded samples clear the 80% line 4-8pp less often). Replay 13-22 Nov: about break-even, too few bets to judge."
+    },
+    {
+      "date": "2026-11-22",
+      "version": "nba-session v3.32-p4",
+      "component": "engine",
+      "title": "Rebound and assist estimates with a key player out, refitted",
+      "change": "Starting estimates for a teammate's lift when the key rebounder or passer sits: rebounds x1.24 to x1.15 (starters) and x1.31 to x1.25 (bench); assists x1.36 to x1.28 (starters). Points unchanged. Used by the shadow model and the return discount.",
+      "aim": "Mitch 22 Nov via the critic (same 1,476 games)."
+    },
+    {
+      "date": "2026-11-22",
+      "version": "nba-session v3.32-p4",
+      "component": "engine",
+      "title": "Best price across the books Mitch holds",
+      "change": "Every pick, lean and tier item now takes, logs and settles at the best price for that line across Pointsbet, Ladbrokes and Sportsbet. A BK- flag names the book when it isn't Pointsbet.",
+      "aim": "Mitch 22 Nov via the critic: the best price is worth about 2pp on its own (179,122 settled rungs, 13-22 Nov)."
+    },
+    {
+      "date": "2026-11-22",
+      "version": "nba-session v3.32-p4",
+      "component": "engine",
+      "title": "Pinnacle as the starting probability",
+      "change": "Where Pinnacle has a two-way line for the prop, the engine's probability starts from Pinnacle's fair chance at that line instead of the local price less a margin. With no Pinnacle line nothing changes.",
+      "aim": "Mitch 22 Nov via the critic: Pinnacle is the only signal better calibrated than the local price."
+    },
+    {
+      "date": "2026-11-22",
+      "version": "nba-session v3.32-p4",
+      "component": "engine",
+      "title": "BIGEDGE? caution",
+      "change": "An item whose edge over the price is more than 10 points gets a BIGEDGE? flag, and that edge no longer pushes it up the order. Big disagreements with the market were the worst buckets (-7 to -20pp).",
+      "aim": "Mitch 22 Nov via the critic. Display and ordering only."
+    },
+    {
+      "date": "2026-11-22",
+      "version": "nba-session v3.32-p4",
+      "component": "engine",
+      "title": "MM90 tier (0u test)",
+      "change": "New tracked tier beside HR80: the highest-priced rung at $1.20-1.29 (best held price) where the minutes model gives 90%+. If another item already has that line, that item carries MM90-ALSO instead. Verdict at 60 team-games: confirm at break-even or better with the 80% range above -2pp; reject at 3pp or more under.",
+      "aim": "Mitch 22 Nov via the critic: the only positive pocket on the board (+3.4pp, 156 props), a candidate rather than proof."
+    },
+    {
       "date": "2026-11-21",
       "version": "nba-session v3.31-p4",
       "component": "dashboard",
