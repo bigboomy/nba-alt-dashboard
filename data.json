@@ -835,12 +835,906 @@
         ]
       },
       "tip": "07:30"
+    },
+    {
+      "abs": {
+        "MIA": [],
+        "OKC": []
+      },
+      "b2b": [],
+      "box5": {
+        "Aday Mara": {
+          "gp": 16,
+          "l5": {
+            "ast": 3.0,
+            "blk": 1.4,
+            "fg3": 0.0,
+            "fg3a": 0.0,
+            "fg_pct": 69.6,
+            "fga": 9.2,
+            "fgm": 6.4,
+            "fta": 1.6,
+            "ftm": 1.0,
+            "min": 27.0,
+            "pts": 13.8,
+            "reb": 8.8,
+            "stl": 0.0,
+            "to": 2.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.9,
+            "blk": 1.7,
+            "fg3": 0.1,
+            "fg3a": 0.1,
+            "fg_pct": 64.9,
+            "fga": 6.9,
+            "fgm": 4.5,
+            "fta": 1.6,
+            "ftm": 0.9,
+            "min": 22.4,
+            "pts": 10.0,
+            "reb": 7.1,
+            "stl": 0.1,
+            "to": 1.7
+          }
+        },
+        "Davion Mitchell": {
+          "gp": 15,
+          "l5": {
+            "ast": 10.0,
+            "blk": 0.8,
+            "fg3": 3.2,
+            "fg3a": 6.4,
+            "fg_pct": 51.7,
+            "fga": 12.0,
+            "fgm": 6.2,
+            "fta": 4.2,
+            "ftm": 3.6,
+            "min": 35.6,
+            "pts": 19.2,
+            "reb": 3.8,
+            "stl": 1.6,
+            "to": 2.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 9.0,
+            "blk": 0.7,
+            "fg3": 2.5,
+            "fg3a": 5.8,
+            "fg_pct": 51.1,
+            "fga": 12.3,
+            "fgm": 6.3,
+            "fta": 2.8,
+            "ftm": 2.1,
+            "min": 35.5,
+            "pts": 17.2,
+            "reb": 2.4,
+            "stl": 1.3,
+            "to": 2.5
+          }
+        },
+        "Isaiah Hartenstein": {
+          "gp": 16,
+          "l5": {
+            "ast": 4.8,
+            "blk": 0.6,
+            "fg3": 0.0,
+            "fg3a": 0.0,
+            "fg_pct": 75.8,
+            "fga": 6.6,
+            "fgm": 5.0,
+            "fta": 1.4,
+            "ftm": 1.0,
+            "min": 27.4,
+            "pts": 11.0,
+            "reb": 12.6,
+            "stl": 0.8,
+            "to": 2.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 3.9,
+            "blk": 0.4,
+            "fg3": 0.0,
+            "fg3a": 0.1,
+            "fg_pct": 54.9,
+            "fga": 6.4,
+            "fgm": 3.5,
+            "fta": 1.5,
+            "ftm": 1.2,
+            "min": 25.2,
+            "pts": 8.2,
+            "reb": 10.8,
+            "stl": 1.0,
+            "to": 1.8
+          }
+        },
+        "Pelle Larsson": {
+          "gp": 12,
+          "l5": {
+            "ast": 3.0,
+            "blk": 0.0,
+            "fg3": 1.8,
+            "fg3a": 3.2,
+            "fg_pct": 46.9,
+            "fga": 6.4,
+            "fgm": 3.0,
+            "fta": 2.4,
+            "ftm": 2.0,
+            "min": 26.4,
+            "pts": 9.8,
+            "reb": 3.2,
+            "stl": 1.4,
+            "to": 2.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 3.4,
+            "blk": 0.1,
+            "fg3": 1.3,
+            "fg3a": 2.8,
+            "fg_pct": 46.8,
+            "fga": 6.6,
+            "fgm": 3.1,
+            "fta": 3.7,
+            "ftm": 3.2,
+            "min": 28.3,
+            "pts": 10.8,
+            "reb": 3.3,
+            "stl": 1.2,
+            "to": 2.0
+          }
+        },
+        "Shai Gilgeous-Alexander": {
+          "gp": 16,
+          "l5": {
+            "ast": 4.0,
+            "blk": 0.6,
+            "fg3": 2.2,
+            "fg3a": 5.8,
+            "fg_pct": 54.6,
+            "fga": 23.8,
+            "fgm": 13.0,
+            "fta": 10.6,
+            "ftm": 8.2,
+            "min": 35.6,
+            "pts": 36.4,
+            "reb": 3.6,
+            "stl": 0.8,
+            "to": 2.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 4.5,
+            "blk": 0.9,
+            "fg3": 2.4,
+            "fg3a": 6.4,
+            "fg_pct": 48.3,
+            "fga": 23.3,
+            "fgm": 11.2,
+            "fta": 8.2,
+            "ftm": 6.8,
+            "min": 33.5,
+            "pts": 31.7,
+            "reb": 4.1,
+            "stl": 0.9,
+            "to": 2.2
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          12,
+          12
+        ],
+        "skipped": [],
+        "stats": [
+          34,
+          34
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: OKC (5 rotation out); missed last game: none. Coverage: evaluated 12 of 12 players (34 of 34 player-stats); skipped: none",
+      "cx": {
+        "Aday Mara|PTS|7.5|HR80": {
+          "best_book": "ladbrokes",
+          "best_price": 1.26,
+          "mm_min": 31.3,
+          "mm_mu": 15.922,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.963,
+          "p_pin": 0.7958,
+          "p_wowy": 0.8602,
+          "pin_edge_pp": 0.2,
+          "pin_line": 11.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 12.39
+        },
+        "Davion Mitchell|PTS|14.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 2.0,
+          "mm_min": 35.72,
+          "mm_mu": 16.908,
+          "n_books": 13,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6538,
+          "p_pin": 0.4898,
+          "p_wowy": 0.6538,
+          "pin_edge_pp": -1.0,
+          "pin_line": 14.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 16.908
+        },
+        "Davion Mitchell|PTS|9.5|HR80": {
+          "best_book": "betdeluxe",
+          "best_price": 1.25,
+          "mm_min": 35.72,
+          "mm_mu": 16.908,
+          "n_books": 15,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9331,
+          "p_pin": 0.8144,
+          "p_wowy": 0.9331,
+          "pin_edge_pp": -0.5,
+          "pin_line": 14.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 16.908
+        },
+        "Isaiah Hartenstein|AST|2.5|MM90": {
+          "best_book": "tabtouch",
+          "best_price": 1.26,
+          "mm_min": 31.97,
+          "mm_mu": 6.722,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.95,
+          "p_pin": 0.7401,
+          "p_wowy": 0.8702,
+          "pin_edge_pp": -9.3,
+          "pin_line": 4.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 5.231
+        },
+        "Isaiah Hartenstein|REB|7.5|MM90": {
+          "best_book": "goldbet",
+          "best_price": 1.25,
+          "mm_min": 31.97,
+          "mm_mu": 15.123,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9504,
+          "p_pin": 0.7703,
+          "p_wowy": 0.8755,
+          "pin_edge_pp": -3.0,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 12.677
+        },
+        "Pelle Larsson|PTS|8.5|lean": {
+          "best_book": "ladbrokes",
+          "best_price": 1.48,
+          "mm_min": 26.79,
+          "mm_mu": 10.965,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6724,
+          "p_pin": 0.6894,
+          "p_wowy": 0.6724,
+          "pin_edge_pp": 1.4,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 10.965
+        },
+        "Shai Gilgeous-Alexander|PTS|25.5|MM90": {
+          "best_book": "tabtouch",
+          "best_price": 1.26,
+          "mm_min": 40.96,
+          "mm_mu": 46.636,
+          "n_books": 4,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9975,
+          "p_pin": 0.7871,
+          "p_wowy": 0.9469,
+          "pin_edge_pp": -3.3,
+          "pin_line": 31.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 36.952
+        },
+        "Shai Gilgeous-Alexander|PTS|32.5|lean": {
+          "best_book": "sportsbet",
+          "best_price": 1.93,
+          "mm_min": 40.96,
+          "mm_mu": 46.636,
+          "n_books": 6,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9626,
+          "p_pin": 0.4885,
+          "p_wowy": 0.7155,
+          "pin_edge_pp": -3.0,
+          "pin_line": 31.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 36.952
+        }
+      },
+      "engine": "nba-session v3.32-p4",
+      "id": "OKC@MIA",
+      "leans": [
+        {
+          "alt": 14.5,
+          "e": 9.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "CAP",
+            "OT-ADJ",
+            "C0.85",
+            "Z0.62",
+            "TMO-Q",
+            "PIN-1.0"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            24,
+            16,
+            15,
+            22,
+            19
+          ],
+          "o": 2.0,
+          "opp": "OKC 5th fewest PTS allowed · pace +1.9",
+          "p": "Davion Mitchell",
+          "s": "PTS",
+          "st": "3",
+          "std": 14.5,
+          "t": "MIA"
+        },
+        {
+          "alt": 8.5,
+          "e": 4.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "OT-ADJ",
+            "MT-",
+            "C0.73",
+            "Z0.71",
+            "TMO-Q",
+            "PIN+1.4",
+            "BK-ladbrokes"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            4,
+            14,
+            11,
+            13,
+            7
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-04",
+              "ot": 1
+            }
+          ],
+          "o": 1.48,
+          "opp": "OKC 5th fewest PTS allowed · pace +1.9",
+          "p": "Pelle Larsson",
+          "s": "PTS",
+          "st": "4",
+          "std": 10.5,
+          "t": "MIA"
+        },
+        {
+          "alt": 32.5,
+          "e": 4.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "MU+3%",
+            "MT+",
+            "C0.90",
+            "Z0.58",
+            "PIN-3.0",
+            "BK-sportsbet"
+          ],
+          "h": "70% (7/10)",
+          "l5": [
+            40,
+            34,
+            37,
+            40,
+            31
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-13",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            },
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            }
+          ],
+          "o": 1.93,
+          "opp": "MIA 7th most PTS allowed · pace +1.9",
+          "p": "Shai Gilgeous-Alexander",
+          "s": "PTS",
+          "st": "2",
+          "std": 32.5,
+          "t": "OKC"
+        },
+        {
+          "alt": 7.5,
+          "e": 4.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR80",
+            "[OUT]",
+            "MU+3%",
+            "MT+",
+            "C0.64",
+            "Z1.27",
+            "TMO-Q",
+            "PIN+0.2",
+            "BK-ladbrokes",
+            "MM90-ALSO",
+            "PMM0.96"
+          ],
+          "h": "100% (9/9)",
+          "l5": [
+            22,
+            10,
+            16,
+            10,
+            11
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-13",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            },
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            }
+          ],
+          "o": 1.26,
+          "opp": "MIA 7th most PTS allowed · pace +1.9",
+          "p": "Aday Mara",
+          "s": "PTS",
+          "st": "4",
+          "std": 11.5,
+          "t": "OKC"
+        },
+        {
+          "alt": 9.5,
+          "e": 4.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR80",
+            "OT-ADJ",
+            "C0.56",
+            "Z1.87",
+            "TMO-Q",
+            "PIN-0.5",
+            "BK-sportsbet",
+            "MM90-ALSO",
+            "PMM0.93"
+          ],
+          "h": "100% (10/10)",
+          "l5": [
+            24,
+            16,
+            15,
+            22,
+            19
+          ],
+          "o": 1.22,
+          "opp": "OKC 5th fewest PTS allowed · pace +1.9",
+          "p": "Davion Mitchell",
+          "s": "PTS",
+          "st": "5",
+          "std": 14.5,
+          "t": "MIA"
+        },
+        {
+          "alt": 7.5,
+          "e": 0.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.95",
+            "MT+",
+            "C0.61",
+            "Z1.29",
+            "TMO-Q",
+            "PIN-3.0",
+            "BK-sportsbet"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            8,
+            17,
+            11,
+            16,
+            11
+          ],
+          "o": 1.25,
+          "opp": "MIA 14th most REB allowed · pace +1.9",
+          "p": "Isaiah Hartenstein",
+          "s": "REB",
+          "st": "4",
+          "std": 10.5,
+          "t": "OKC"
+        },
+        {
+          "alt": 25.5,
+          "e": 2.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM1.00",
+            "MU+3%",
+            "MT+",
+            "C0.71",
+            "Z1.76",
+            "PIN-3.3",
+            "BK-ladbrokes"
+          ],
+          "h": "100% (10/10)",
+          "l5": [
+            40,
+            34,
+            37,
+            40,
+            31
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-13",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            },
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            }
+          ],
+          "o": 1.22,
+          "opp": "MIA 7th most PTS allowed · pace +1.9",
+          "p": "Shai Gilgeous-Alexander",
+          "s": "PTS",
+          "st": "4",
+          "std": 32.5,
+          "t": "OKC"
+        },
+        {
+          "alt": 2.5,
+          "e": -5.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.95",
+            "[Std?]",
+            "MU+6%",
+            "MT+",
+            "C0.49",
+            "Z1.67",
+            "TMO-Q",
+            "PIN-9.3",
+            "BK-ladbrokes"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            4,
+            6,
+            2,
+            6,
+            6
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-13",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            },
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Ajay Mitchell"
+              ]
+            }
+          ],
+          "o": 1.2,
+          "opp": "MIA 2nd most AST allowed · pace +1.9",
+          "p": "Isaiah Hartenstein",
+          "s": "AST",
+          "st": "3",
+          "std": 4.5,
+          "t": "OKC"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 104.0,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.8,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.1
+        },
+        "teams": {
+          "MIA": {
+            "allow100": {
+              "3PM": 13.9,
+              "AST": 26.8,
+              "PTS": 112.8,
+              "REB": 43.0
+            },
+            "allow_rk": {
+              "3PM": 4,
+              "AST": 2,
+              "PTS": 7,
+              "REB": 14
+            },
+            "out": [],
+            "pace": 104.0,
+            "rk": {
+              "ast": 2,
+              "blk": 3,
+              "dreb": 16,
+              "fg3_pct": 16,
+              "fg3a": 8,
+              "fg3m": 11,
+              "fg_pct": 8,
+              "ft_pct": 28,
+              "fta": 2,
+              "net": 15,
+              "opp_fg3_pct": 29,
+              "opp_fg_pct": 26,
+              "oppg": 27,
+              "oreb": 25,
+              "pace": 3,
+              "pf": 11,
+              "ppg": 1,
+              "reb": 22,
+              "stl": 16,
+              "tov": 10,
+              "ts_pct": 7
+            },
+            "v": {
+              "ast": 29.6,
+              "ats": "5-10-0",
+              "ats_away": "1-6-0",
+              "ats_home": "4-4-0",
+              "ats_l10": "4-6-0",
+              "away": "4-3",
+              "blk": 5.7,
+              "dreb": 31.5,
+              "fg3_pct": 35.2,
+              "fg3a": 40.7,
+              "fg3m": 14.3,
+              "fg_pct": 47.3,
+              "ft_pct": 74.4,
+              "fta": 29.5,
+              "gp": 15,
+              "home": "5-3",
+              "l10": "8-2",
+              "net": 0.7,
+              "opp_fg3_pct": 37.9,
+              "opp_fg_pct": 47.8,
+              "oppg": 119.9,
+              "oreb": 10.7,
+              "ou": "8-7-0",
+              "ou_l10": "6-4-0",
+              "pace": 105.2,
+              "pf": 21.3,
+              "ppg": 120.5,
+              "reb": 42.2,
+              "rec": "9-6",
+              "stl": 7.9,
+              "tov": 14.4,
+              "ts_pct": 59.1
+            }
+          },
+          "OKC": {
+            "allow100": {
+              "3PM": 14.1,
+              "AST": 25.2,
+              "PTS": 108.7,
+              "REB": 42.9
+            },
+            "allow_rk": {
+              "3PM": 1,
+              "AST": 24,
+              "PTS": 26,
+              "REB": 15
+            },
+            "out": [],
+            "pace": 102.1,
+            "rk": {
+              "ast": 28,
+              "blk": 8,
+              "dreb": 3,
+              "fg3_pct": 18,
+              "fg3a": 28,
+              "fg3m": 27,
+              "fg_pct": 11,
+              "ft_pct": 10,
+              "fta": 25,
+              "net": 10,
+              "opp_fg3_pct": 13,
+              "opp_fg_pct": 1,
+              "oppg": 5,
+              "oreb": 22,
+              "pace": 17,
+              "pf": 2,
+              "ppg": 16,
+              "reb": 5,
+              "stl": 15,
+              "tov": 3,
+              "ts_pct": 21
+            },
+            "v": {
+              "ast": 23.4,
+              "ats": "8-8-0",
+              "ats_away": "4-5-0",
+              "ats_home": "4-3-0",
+              "ats_l10": "5-5-0",
+              "away": "4-5",
+              "blk": 5.5,
+              "dreb": 34.7,
+              "fg3_pct": 34.5,
+              "fg3a": 31.9,
+              "fg3m": 11.0,
+              "fg_pct": 46.7,
+              "ft_pct": 79.3,
+              "fta": 22.1,
+              "gp": 16,
+              "home": "6-1",
+              "l10": "6-4",
+              "net": 4.5,
+              "opp_fg3_pct": 34.9,
+              "opp_fg_pct": 42.3,
+              "oppg": 108.5,
+              "oreb": 11.1,
+              "ou": "8-8-0",
+              "ou_l10": "7-3-0",
+              "pace": 102.1,
+              "pf": 19.1,
+              "ppg": 113.0,
+              "reb": 45.8,
+              "rec": "10-6",
+              "stl": 8.1,
+              "tov": 13.2,
+              "ts_pct": 56.3
+            }
+          }
+        }
+      },
+      "out": {
+        "MIA": [],
+        "OKC": [
+          "Alex Caruso (Caruso (hip) won't play Sunday against the Heat.)",
+          "Cason Wallace (Wallace underwent surgery Friday to repair a torn labrum in his left shoulder and will be re-evaluated before the end of the regular season, Clemente Almanza of USA Today reports.)",
+          "Chet Holmgren (Holmgren underwent a biological treatment Friday to address a small patellar tendon tear and will miss at least 8-10 weeks, Nick Crain of Slam reports.)",
+          "Jalen Williams (Williams (leg) underwent successful surgery Wednesday to \"address a fractured left fibula and reconstruction of ankle ligaments following a fracture and dislocation.\" He will be re-evaluated before the end of the regular season, Tim MacMahon of ESPN.com reports.)",
+          "Jaylin Williams (Williams (back) is listed as out for Sunday's game against Miami.)",
+          "Nikola Topic (Topic (hip) is listed as out for Sunday's game versus the Heat.)",
+          "Thomas Sorber (Sorber underwent an arthroscopic knee procedure Tuesday to address inflammation at the patellofemoral joint in his right knee, and he's expected to return to on-court activities in 6-8 weeks, Steve McGehee of News 9 Oklahoma City reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "MIA": [
+          "Giannis Antetokounmpo (Antetokounmpo (groin) is listed as questionable for Sunday's game against Oklahoma City, Ira Winderman of the South Florida Sun Sentinel reports.)"
+        ],
+        "OKC": [
+          "Shai Gilgeous-Alexander (Gilgeous-Alexander (back/neck) is listed as questionable for Sunday's game versus Miami.)"
+        ]
+      },
+      "tip": "10:00"
     }
   ],
-  "generated": "2026-11-22T19:00:02Z",
+  "generated": "2026-11-22T21:30:02Z",
   "totals": [
     [
       "DET@ATL",
+      null,
+      null
+    ],
+    [
+      "OKC@MIA",
       null,
       null
     ]
