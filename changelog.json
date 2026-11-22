@@ -3,6 +3,22 @@
  "changes": [
     {
       "date": "2026-11-23",
+      "version": "nba-session v3.34-p4",
+      "component": "engine",
+      "title": "Rebound and assist picks logged at 0u",
+      "change": "A pick on rebounds or assists is now logged as a 0u lean flagged STAT0U, on the same rung. Points picks stake as before. Test tiers are unchanged.",
+      "aim": "Mitch 23 Nov (queued for 27 Nov, checked first). 13-22 Nov our REB/AST picks and leans: assists -23pp, rebounds -8pp v price; points -2pp. Re-stake when REB/AST get within 2pp of break-even over 30+ team-games."
+    },
+    {
+      "date": "2026-11-23",
+      "version": "nba-session v3.34-p4",
+      "component": "engine",
+      "title": "REB-ANC flag (display only)",
+      "change": "Rebound items against an opponent whose top rebounder takes 17.8+ boards per 48 get a REB-ANC flag. Nothing else changes.",
+      "aim": "Mitch 23 Nov (queued for 27 Nov). The proposed one-rung haircut was not shipped: against the price these rungs ran -5.4pp v -4.8pp otherwise, so the books already price it."
+    },
+    {
+      "date": "2026-11-23",
       "version": "nba-session v3.33-p4",
       "component": "engine",
       "title": "L5P tier (0u test)",
