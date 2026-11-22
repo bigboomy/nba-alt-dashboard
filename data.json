@@ -2327,321 +2327,6 @@
     },
     {
       "abs": {
-        "DAL": [],
-        "UTA": []
-      },
-      "b2b": [
-        "DAL"
-      ],
-      "box5": {
-        "Caleb Martin": {
-          "gp": 12,
-          "l5": {
-            "ast": 3.8,
-            "blk": 0.0,
-            "fg3": 1.6,
-            "fg3a": 3.0,
-            "fg_pct": 53.3,
-            "fga": 6.0,
-            "fgm": 3.2,
-            "fta": 0.4,
-            "ftm": 0.4,
-            "min": 25.6,
-            "pts": 8.4,
-            "reb": 4.8,
-            "stl": 1.4,
-            "to": 1.2
-          },
-          "n": 5,
-          "season": {
-            "ast": 2.3,
-            "blk": 0.0,
-            "fg3": 1.1,
-            "fg3a": 2.1,
-            "fg_pct": 50.0,
-            "fga": 4.2,
-            "fgm": 2.1,
-            "fta": 0.3,
-            "ftm": 0.3,
-            "min": 21.4,
-            "pts": 5.6,
-            "reb": 3.3,
-            "stl": 0.8,
-            "to": 0.8
-          }
-        }
-      },
-      "cov": {
-        "players": [
-          13,
-          13
-        ],
-        "skipped": [],
-        "stats": [
-          31,
-          31
-        ]
-      },
-      "ctx": "Out TOP3: Lauri Markkanen (UTA); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 13 of 13 players (31 of 31 player-stats); skipped: none",
-      "cx": {
-        "Caleb Martin|AST|1.5|lean": {
-          "best_book": "tab",
-          "best_price": 1.6,
-          "mm_min": 23.36,
-          "mm_mu": 2.751,
-          "n_books": 11,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.6979,
-          "p_pin": "",
-          "p_wowy": 0.6979,
-          "pin_edge_pp": "",
-          "pin_line": "",
-          "v_score": "",
-          "v_text": "",
-          "verdict": "",
-          "verdict_ver": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 2.751
-        }
-      },
-      "engine": "nba-session v3.32-p4",
-      "id": "DAL@UTA",
-      "leans": [
-        {
-          "alt": 1.5,
-          "e": 3.1,
-          "f": [
-            "LEAN",
-            "U0",
-            "MISS",
-            "[Std?]",
-            "B2B",
-            "MU-7%",
-            "RET-ADJ",
-            "MT+",
-            "C0.58",
-            "Z0.61",
-            "TMO-Q"
-          ],
-          "h": "80% (8/10)",
-          "l5": [
-            3,
-            3,
-            5,
-            3,
-            5
-          ],
-          "l5x": [
-            null,
-            null,
-            {
-              "d": "2026-11-15",
-              "out": [
-                "Kyrie Irving"
-              ]
-            },
-            null,
-            null
-          ],
-          "o": 1.48,
-          "opp": "UTA 1st fewest AST allowed · pace +0.1",
-          "p": "Caleb Martin",
-          "s": "AST",
-          "st": "3.5",
-          "std": 1.5,
-          "t": "DAL"
-        }
-      ],
-      "mkt": null,
-      "mkt_o": null,
-      "mkt_u": null,
-      "mx": {
-        "exp_pace": 102.2,
-        "home_spread": null,
-        "lg": {
-          "3PM": 13.1,
-          "AST": 25.8,
-          "PTS": 111.1,
-          "REB": 42.9,
-          "pace": 102.1
-        },
-        "teams": {
-          "DAL": {
-            "allow100": {
-              "3PM": 12.8,
-              "AST": 26.3,
-              "PTS": 110.7,
-              "REB": 43.1
-            },
-            "allow_rk": {
-              "3PM": 19,
-              "AST": 11,
-              "PTS": 21,
-              "REB": 11
-            },
-            "out": [],
-            "pace": 101.8,
-            "rk": {
-              "ast": 18,
-              "blk": 8,
-              "dreb": 24,
-              "fg3_pct": 21,
-              "fg3a": 15,
-              "fg3m": 18,
-              "fg_pct": 14,
-              "ft_pct": 16,
-              "fta": 19,
-              "net": 17,
-              "opp_fg3_pct": 7,
-              "opp_fg_pct": 14,
-              "oppg": 12,
-              "oreb": 9,
-              "pace": 18,
-              "pf": 12,
-              "ppg": 19,
-              "reb": 15,
-              "stl": 7,
-              "tov": 17,
-              "ts_pct": 18
-            },
-            "v": {
-              "ast": 26.4,
-              "ats": "9-7-0",
-              "ats_away": "3-4-0",
-              "ats_home": "6-3-0",
-              "ats_l10": "5-5-0",
-              "away": "2-5",
-              "blk": 5.5,
-              "dreb": 31.0,
-              "fg3_pct": 34.4,
-              "fg3a": 37.6,
-              "fg3m": 12.9,
-              "fg_pct": 46.0,
-              "ft_pct": 77.7,
-              "fta": 23.5,
-              "gp": 16,
-              "home": "7-2",
-              "l10": "5-5",
-              "net": -0.2,
-              "opp_fg3_pct": 33.4,
-              "opp_fg_pct": 46.4,
-              "oppg": 112.4,
-              "oreb": 12.8,
-              "ou": "6-10-0",
-              "ou_l10": "4-6-0",
-              "pace": 101.7,
-              "pf": 21.6,
-              "ppg": 112.2,
-              "reb": 43.8,
-              "rec": "9-7",
-              "stl": 8.8,
-              "tov": 15.8,
-              "ts_pct": 57.0
-            }
-          },
-          "UTA": {
-            "allow100": {
-              "3PM": 12.4,
-              "AST": 24.0,
-              "PTS": 111.6,
-              "REB": 43.3
-            },
-            "allow_rk": {
-              "3PM": 26,
-              "AST": 30,
-              "PTS": 13,
-              "REB": 9
-            },
-            "out": [],
-            "pace": 102.4,
-            "rk": {
-              "ast": 22,
-              "blk": 3,
-              "dreb": 8,
-              "fg3_pct": 17,
-              "fg3a": 19,
-              "fg3m": 21,
-              "fg_pct": 26,
-              "ft_pct": 25,
-              "fta": 14,
-              "net": 24,
-              "opp_fg3_pct": 10,
-              "opp_fg_pct": 8,
-              "oppg": 21,
-              "oreb": 16,
-              "pace": 9,
-              "pf": 24,
-              "ppg": 28,
-              "reb": 11,
-              "stl": 29,
-              "tov": 25,
-              "ts_pct": 26
-            },
-            "v": {
-              "ast": 24.8,
-              "ats": "6-11-0",
-              "ats_away": "3-5-0",
-              "ats_home": "3-6-0",
-              "ats_l10": "5-5-0",
-              "away": "2-6",
-              "blk": 5.7,
-              "dreb": 33.1,
-              "fg3_pct": 34.7,
-              "fg3a": 37.0,
-              "fg3m": 12.8,
-              "fg_pct": 44.6,
-              "ft_pct": 75.5,
-              "fta": 24.7,
-              "gp": 17,
-              "home": "1-8",
-              "l10": "2-8",
-              "net": -7.4,
-              "opp_fg3_pct": 34.5,
-              "opp_fg_pct": 44.9,
-              "oppg": 115.7,
-              "oreb": 11.7,
-              "ou": "6-11-0",
-              "ou_l10": "4-6-0",
-              "pace": 102.7,
-              "pf": 23.1,
-              "ppg": 108.3,
-              "reb": 44.8,
-              "rec": "3-14",
-              "stl": 6.9,
-              "tov": 16.8,
-              "ts_pct": 55.9
-            }
-          }
-        }
-      },
-      "out": {
-        "DAL": [
-          "Dereck Lively II (Head coach Dusty May said Friday that Lively (foot) is moving well and progressing in his recovery, and the big man told May he's \"close\" to returning, Mike Curtis of The Dallas Morning News reports.)",
-          "Sergio de Larrea (De Larrea (knee) is listed as out for Wednesday's game against the Warriors.)",
-          "Tarik Biberovic (Biberovic (heel) is out for Wednesday's game against the Warriors.)",
-          "Tobi Lawal (Lawal (groin) has been ruled out for Sunday's game against the Jazz.)"
-        ],
-        "UTA": [
-          "Jaren Jackson Jr. (Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.)",
-          "Jusuf Nurkic (Nurkic (foot) has been cleared for on-court work and will be re-evaluated in one week.)",
-          "Lauri Markkanen (Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.)"
-        ]
-      },
-      "picks": [],
-      "proj": null,
-      "q": {
-        "DAL": [
-          "P.J. Washington (Washington (illness) is doubtful to play Sunday's game against the Jazz.)",
-          "Walter Clayton Jr. (Clayton (knee) is listed as questionable for Sunday's game against the Jazz.)"
-        ],
-        "UTA": []
-      },
-      "tip": "11:00"
-    },
-    {
-      "abs": {
         "CHI": [
           {
             "min": 30.0,
@@ -4017,6 +3702,396 @@
         ]
       },
       "tip": "11:00"
+    },
+    {
+      "abs": {
+        "DAL": [],
+        "UTA": []
+      },
+      "b2b": [
+        "DAL"
+      ],
+      "box5": {
+        "Caleb Martin": {
+          "gp": 12,
+          "l5": {
+            "ast": 3.8,
+            "blk": 0.0,
+            "fg3": 1.6,
+            "fg3a": 3.0,
+            "fg_pct": 53.3,
+            "fga": 6.0,
+            "fgm": 3.2,
+            "fta": 0.4,
+            "ftm": 0.4,
+            "min": 25.6,
+            "pts": 8.4,
+            "reb": 4.8,
+            "stl": 1.4,
+            "to": 1.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.3,
+            "blk": 0.0,
+            "fg3": 1.1,
+            "fg3a": 2.1,
+            "fg_pct": 50.0,
+            "fga": 4.2,
+            "fgm": 2.1,
+            "fta": 0.3,
+            "ftm": 0.3,
+            "min": 21.4,
+            "pts": 5.6,
+            "reb": 3.3,
+            "stl": 0.8,
+            "to": 0.8
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          13,
+          13
+        ],
+        "skipped": [],
+        "stats": [
+          31,
+          31
+        ]
+      },
+      "ctx": "Out TOP3: Lauri Markkanen (UTA); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 13 of 13 players (31 of 31 player-stats); skipped: none",
+      "cx": {
+        "Caleb Martin|AST|1.5|lean": {
+          "best_book": "tab",
+          "best_price": 1.6,
+          "mm_min": 23.36,
+          "mm_mu": 2.751,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6979,
+          "p_pin": "",
+          "p_wowy": 0.6979,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 2.751
+        },
+        "Kyrie Irving|PTS|17.5|LSR": {
+          "best_book": "pointsbet",
+          "best_price": 1.25,
+          "mm_min": 35.81,
+          "mm_mu": 27.844,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9139,
+          "p_pin": 0.8002,
+          "p_wowy": 0.8331,
+          "pin_edge_pp": 0.0,
+          "pin_line": 23.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.054,
+          "wowy_keys": "P.J. Washington",
+          "wowy_mu": 24.782
+        }
+      },
+      "engine": "nba-session v3.32-p4",
+      "id": "DAL@UTA",
+      "leans": [
+        {
+          "alt": 1.5,
+          "e": 3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "B2B",
+            "MU-7%",
+            "RET-ADJ",
+            "MT+",
+            "C0.58",
+            "Z0.61",
+            "TMO-Q"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            3,
+            3,
+            5,
+            3,
+            5
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Kyrie Irving"
+              ]
+            },
+            null,
+            null
+          ],
+          "o": 1.48,
+          "opp": "UTA 1st fewest AST allowed · pace +0.1",
+          "p": "Caleb Martin",
+          "s": "AST",
+          "st": "3.5",
+          "std": 1.5,
+          "t": "DAL"
+        },
+        {
+          "alt": 17.5,
+          "e": -5.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.91",
+            "[ROLE?]",
+            "B2B",
+            "C0.74",
+            "Z0.66",
+            "TMO",
+            "PIN±0.0"
+          ],
+          "h": "60% (6/10)",
+          "l5": [
+            25,
+            17,
+            34,
+            10,
+            35
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-21",
+              "out": [
+                "P.J. Washington"
+              ]
+            },
+            null,
+            null,
+            null,
+            null
+          ],
+          "o": 1.25,
+          "opp": "UTA 13th most PTS allowed · pace +0.1",
+          "p": "Kyrie Irving",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 23.5,
+          "t": "DAL"
+        }
+      ],
+      "lsr": [
+        {
+          "n": 1,
+          "out": [
+            "P.J. Washington"
+          ],
+          "run": "20261122T223502Z_lsr_DAL-UTA",
+          "utc": "2026-11-22T22:35:02Z"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 102.2,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.8,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.1
+        },
+        "teams": {
+          "DAL": {
+            "allow100": {
+              "3PM": 12.8,
+              "AST": 26.3,
+              "PTS": 110.7,
+              "REB": 43.1
+            },
+            "allow_rk": {
+              "3PM": 19,
+              "AST": 11,
+              "PTS": 21,
+              "REB": 11
+            },
+            "out": [],
+            "pace": 101.8,
+            "rk": {
+              "ast": 18,
+              "blk": 8,
+              "dreb": 24,
+              "fg3_pct": 21,
+              "fg3a": 15,
+              "fg3m": 18,
+              "fg_pct": 14,
+              "ft_pct": 16,
+              "fta": 19,
+              "net": 17,
+              "opp_fg3_pct": 7,
+              "opp_fg_pct": 14,
+              "oppg": 12,
+              "oreb": 9,
+              "pace": 18,
+              "pf": 12,
+              "ppg": 19,
+              "reb": 15,
+              "stl": 7,
+              "tov": 17,
+              "ts_pct": 18
+            },
+            "v": {
+              "ast": 26.4,
+              "ats": "9-7-0",
+              "ats_away": "3-4-0",
+              "ats_home": "6-3-0",
+              "ats_l10": "5-5-0",
+              "away": "2-5",
+              "blk": 5.5,
+              "dreb": 31.0,
+              "fg3_pct": 34.4,
+              "fg3a": 37.6,
+              "fg3m": 12.9,
+              "fg_pct": 46.0,
+              "ft_pct": 77.7,
+              "fta": 23.5,
+              "gp": 16,
+              "home": "7-2",
+              "l10": "5-5",
+              "net": -0.2,
+              "opp_fg3_pct": 33.4,
+              "opp_fg_pct": 46.4,
+              "oppg": 112.4,
+              "oreb": 12.8,
+              "ou": "6-10-0",
+              "ou_l10": "4-6-0",
+              "pace": 101.7,
+              "pf": 21.6,
+              "ppg": 112.2,
+              "reb": 43.8,
+              "rec": "9-7",
+              "stl": 8.8,
+              "tov": 15.8,
+              "ts_pct": 57.0
+            }
+          },
+          "UTA": {
+            "allow100": {
+              "3PM": 12.4,
+              "AST": 24.0,
+              "PTS": 111.6,
+              "REB": 43.3
+            },
+            "allow_rk": {
+              "3PM": 26,
+              "AST": 30,
+              "PTS": 13,
+              "REB": 9
+            },
+            "out": [],
+            "pace": 102.4,
+            "rk": {
+              "ast": 22,
+              "blk": 3,
+              "dreb": 8,
+              "fg3_pct": 17,
+              "fg3a": 19,
+              "fg3m": 21,
+              "fg_pct": 26,
+              "ft_pct": 25,
+              "fta": 14,
+              "net": 24,
+              "opp_fg3_pct": 10,
+              "opp_fg_pct": 8,
+              "oppg": 21,
+              "oreb": 16,
+              "pace": 9,
+              "pf": 24,
+              "ppg": 28,
+              "reb": 11,
+              "stl": 29,
+              "tov": 25,
+              "ts_pct": 26
+            },
+            "v": {
+              "ast": 24.8,
+              "ats": "6-11-0",
+              "ats_away": "3-5-0",
+              "ats_home": "3-6-0",
+              "ats_l10": "5-5-0",
+              "away": "2-6",
+              "blk": 5.7,
+              "dreb": 33.1,
+              "fg3_pct": 34.7,
+              "fg3a": 37.0,
+              "fg3m": 12.8,
+              "fg_pct": 44.6,
+              "ft_pct": 75.5,
+              "fta": 24.7,
+              "gp": 17,
+              "home": "1-8",
+              "l10": "2-8",
+              "net": -7.4,
+              "opp_fg3_pct": 34.5,
+              "opp_fg_pct": 44.9,
+              "oppg": 115.7,
+              "oreb": 11.7,
+              "ou": "6-11-0",
+              "ou_l10": "4-6-0",
+              "pace": 102.7,
+              "pf": 23.1,
+              "ppg": 108.3,
+              "reb": 44.8,
+              "rec": "3-14",
+              "stl": 6.9,
+              "tov": 16.8,
+              "ts_pct": 55.9
+            }
+          }
+        }
+      },
+      "out": {
+        "DAL": [
+          "Dereck Lively II (Head coach Dusty May said Friday that Lively (foot) is moving well and progressing in his recovery, and the big man told May he's \"close\" to returning, Mike Curtis of The Dallas Morning News reports.)",
+          "Sergio de Larrea (De Larrea (knee) is listed as out for Wednesday's game against the Warriors.)",
+          "Tarik Biberovic (Biberovic (heel) is out for Wednesday's game against the Warriors.)",
+          "Tobi Lawal (Lawal (groin) has been ruled out for Sunday's game against the Jazz.)"
+        ],
+        "UTA": [
+          "Jaren Jackson Jr. (Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.)",
+          "Jusuf Nurkic (Nurkic (foot) has been cleared for on-court work and will be re-evaluated in one week.)",
+          "Lauri Markkanen (Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "DAL": [
+          "P.J. Washington (Washington (illness) is doubtful to play Sunday's game against the Jazz.)",
+          "Walter Clayton Jr. (Clayton (knee) is listed as questionable for Sunday's game against the Jazz.)"
+        ],
+        "UTA": []
+      },
+      "tip": "11:00"
     }
   ],
   "generated": "2026-11-22T22:30:02Z",
@@ -4032,17 +4107,17 @@
       null
     ],
     [
-      "DAL@UTA",
-      null,
-      null
-    ],
-    [
       "DEN@CHI",
       null,
       null
     ],
     [
       "ORL@WAS",
+      null,
+      null
+    ],
+    [
+      "DAL@UTA",
       null,
       null
     ]
