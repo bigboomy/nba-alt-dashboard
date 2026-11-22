@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
     {
+      "date": "2026-11-23",
+      "version": "nba-session v3.32-p4",
+      "component": "dashboard",
+      "title": "Late scratches struck through",
+      "change": "When a player with a pick or lean is ruled OUT between the run and tip, his name, line and odds are struck through with a Late scratch tag. Anyone with an item is now always on the late-scratch watch list.",
+      "aim": "Mitch 23 Nov. Display only: no stake, rule or record change (books normally void these)."
+    },
+    {
       "date": "2026-11-22",
       "version": "nba-session v3.32-p4",
       "component": "dashboard",

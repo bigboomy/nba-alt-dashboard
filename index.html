@@ -358,6 +358,11 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .l10{white-space:nowrap}.l10 i{font-style:normal;font-size:9.5px;letter-spacing:.02em;opacity:.85}
 .bet.killed .rc,.bet.killed .sl .stn,.bet.killed .ln,.bet.killed .od{opacity:.5}
 .kx{font:600 .7rem/1.5 var(--body);color:var(--muted);border:1px solid var(--line);border-radius:9px;padding:0 6px}
+/* Late scratch (Mitch 23 Nov): the player was ruled OUT after the run, so his items are struck through. */
+.bet.scr .ln,.bet.scr .od,.bet.bl.scr .sl strong{text-decoration:line-through;text-decoration-thickness:2px}
+.bet.scr .rc,.bet.scr .sl,.bet.scr .ln,.bet.scr .od{opacity:.5}
+.pl.scr .nm strong{text-decoration:line-through;text-decoration-thickness:2px}
+.sx{font:700 .7rem/1.5 var(--body);color:var(--warn);border:1px solid currentColor;border-radius:9px;padding:0 6px;margin-left:6px;text-decoration:none}
 .tp.fin{font-weight:700;color:var(--text)}
 .gseg{justify-content:flex-start}.gseg .tab{flex:none;min-width:96px}
 .cbtn{min-height:44px}
@@ -466,6 +471,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <tr data-re="^BK-"><td class="lgc">BK-ladbrokes</td><td>The book whose price is taken and settled, when it isn't Pointsbet. Every item takes the best price across Pointsbet, Ladbrokes and Sportsbet (from 22 Nov).</td><td class="lge">Info</td></tr>
   <tr data-re="^OUTLIFT$"><td class="lgc">OUTLIFT</td><td>Teammate-out tier: a key player with a key teammate freshly out; highest-priced rung at $1.20-1.59, at or under the main line. Killed 20 Nov (48 settled, −11.43u); no new items.</td><td class="lge">Closed</td></tr>
   <tr data-re="^TM-OUT:"><td class="lgc">TM-OUT:SC1/REB1</td><td>Which key teammate roles are out for OUTLIFT (roles are explained under Opponent and matchup).</td><td class="lge">Info</td></tr>
+  <tr><td class="lgc"><s>Line</s></td><td>Late scratch: the player was ruled OUT after the run, so the item is struck through (books normally void it).</td><td class="lge">display</td></tr>
   <tr data-re="^LSR$"><td class="lgc">LSR</td><td>Late-scratch re-run: a new item after a watched player was ruled OUT 10+ min before tip and the game was re-run. Verdict at 40.</td><td class="lge">0u test</td></tr>
   <tr data-re="^LSR-"><td class="lgc">LSR-PICK · LSR-LEAN · LSR-HR80 …</td><td>What the re-run item would have been (pick, lean, HR80, MM90, PIN or OUTLIFT).</td><td class="lge">Info</td></tr>
   <tr class="lgh"><th colspan="3">Sample and minutes</th></tr>
@@ -1175,13 +1181,14 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return ps.map(function(P){
       var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=(P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'')+(P.bs.map(function(b){return tmBack(g,b)}).filter(Boolean)[0]||'');
       var rows=P.bs.map(function(b,j){var x=resFor(b),k=kindTag(b),det='';try{det='<p class="kt"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span> '+esc(KGLOSS[k]||'')+'</p>'+knLine(b)+tileDet(b,g,gi)+'<p class="gl">Edge = the model\'s chance minus the chance the price implies. Stars = confidence (5 is highest).</p>'}catch(e){}
-        var kl=b.f.indexOf('OUTLIFT')>=0;
-        return '<button class="bet'+(kl?' killed':'')+'" type="button" aria-label="'+betLabel(b)+(kl?', killed OUTLIFT tier, record only':'')+'" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'"><span class="rc">'+ringHtml(b)+'</span>'+
+        var kl=b.f.indexOf('OUTLIFT')>=0,sx=scrOf(g,b.p);
+        return '<button class="bet'+(kl?' killed':'')+(sx?' scr':'')+'" type="button" aria-label="'+betLabel(b)+(kl?', killed OUTLIFT tier, record only':'')+(sx?', late scratch, ruled out':'')+'" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'"><span class="rc">'+ringHtml(b)+'</span>'+
           '<span class="sl">'+stPill(b.s)+(kl?'<span class="kx">killed</span>':'')+l5Html(b)+'</span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span></button>'+
           '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+det+'</div>'}).join('');
       var sn='';try{sn=scoutNote(g,P)}catch(e){}
       var b5='';try{b5=box5Html(g,P,sn)}catch(e){}
-      return '<div class="pl"><div class="nm"><strong>'+esc(P.n)+'</strong><span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+b5+rows+'</div>'}).join('');
+      var sx=scrOf(g,P.n);
+      return '<div class="pl'+(sx?' scr':'')+'"><div class="nm"><strong>'+esc(P.n)+'</strong>'+(sx?'<span class="sx" title="Ruled '+esc(sx.status||'OUT')+(sx.mins_to_tip!=null?', '+esc(sx.mins_to_tip)+' min before tip':'')+'">Late scratch</span>':'')+'<span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+b5+rows+'</div>'}).join('');
   }
   document.addEventListener('click',function(ev){
     var t=ev.target.closest&&ev.target.closest('.bet[data-tk]');if(!t) return;
@@ -1283,7 +1290,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     box.innerHTML=(td===top.length?'<h2>Tonight\'s best leans: '+tw+'-'+tl+'</h2><p class="bsub">Settled. Highest chance first, tracked at 0u, never staked. Tap one to see it in its game.</p>'
       :'<h2>Best leans tonight</h2><p class="bsub">No pick cleared every gate. Highest chance first, tracked at 0u, never staked. Tap one to see it in its game.</p>')+
       '<div class="pls">'+ringKey(top.map(function(x){return x.b}))+BH+top.map(function(x){var b=x.b;
-        return '<button class="bet bl" type="button" aria-label="'+betLabel(b,x.g.id)+', open in its game" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'"><span class="rc">'+ringHtml(b)+'</span>'+
+        var sx=scrOf(x.g,b.p);
+        return '<button class="bet bl'+(sx?' scr':'')+'" type="button" aria-label="'+betLabel(b,x.g.id)+(sx?', late scratch, ruled out':'')+', open in its game" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'"><span class="rc">'+ringHtml(b)+'</span>'+
           '<span class="sl"><strong>'+esc(b.p)+'</strong><span class="bg">'+esc(x.g.id)+'</span></span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span>'+
           '<span class="kd">'+stPill(b.s)+l5Html(b)+'</span></button>'}).join('')+'</div>';
     box.hidden=false;
@@ -1517,7 +1525,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function reloadData(){
     REFRESH=null;REFRESH_AT=0;
     loadSched();loadHealth();
-    loadAbs();
+    loadAbs();loadScr();
     fetch('data.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(init).catch(function(){runStatus()});
     fetch(CSV_URL,{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.text()}).then(function(t){
       var rows=CORE.normRows(CORE.parseCSV(t));if(rows.length){ROWS=rows;FETCHED=new Date();foot();renderRecord();if(D){games();runStatus()}}
@@ -1572,7 +1580,15 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     el.innerHTML=html;el.hidden=false;
   }
   /* Absence ledger (Mitch 20 Nov): who picked up the numbers when a key player sat this season. Data only. */
-  var ABSL=null;
+  var ABSL=null,SCR={};
+  /* Late scratches (Mitch 23 Nov): scratch.json is written by the tick when a watched player (always including
+     anyone with a pick or lean) is ruled OUT between the run and tip. Their items are struck through. Display only. */
+  function loadScr(){
+    fetch('scratch.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
+      .then(function(j){var m={};((j&&j.out)||[]).forEach(function(o){m[o.game+'|'+o.player]=o;if(o.espn_name)m[o.game+'|'+o.espn_name]=o});
+        SCR=m;if(D)games()}).catch(function(){});
+  }
+  function scrOf(g,name){return SCR[g.id+'|'+name]||null}
   /* Lean autopsy (Mitch 21 Nov): why last night's leans missed, and which reasons repeat. Analysis only, never a rule. */
   var AUT=null,AUT_OPEN=false;
   function loadAut(){
@@ -2011,7 +2027,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   fetch('data.json?v='+Date.now(),{cache:'no-store'})
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json()})
     .then(init).catch(slateFail);
-  loadSched();loadHealth();loadAbs();loadAut();
+  loadSched();loadHealth();loadAbs();loadScr();loadAut();
   renderTotals();loadTotals();
   renderLeans();renderHr();renderPin();renderOl();renderLs();loadLeans();
   alertUI();clearBadge();loadChoices();
