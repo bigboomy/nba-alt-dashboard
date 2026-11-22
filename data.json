@@ -1058,6 +1058,27 @@
           "wowy_keys": "",
           "wowy_mu": 12.39
         },
+        "Davion Mitchell|AST|7.5|LSR": {
+          "best_book": "pointsbet",
+          "best_price": 1.63,
+          "mm_min": 35.72,
+          "mm_mu": 9.337,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "SC1/AST1:Shai Gilgeous-Alexander",
+          "p_mm": 0.6966,
+          "p_pin": 0.5751,
+          "p_wowy": 0.6966,
+          "pin_edge_pp": -3.8,
+          "pin_line": 8.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 9.337
+        },
         "Davion Mitchell|PTS|14.5|lean": {
           "best_book": "pointsbet",
           "best_price": 2.0,
@@ -1537,6 +1558,70 @@
           "st": "3",
           "std": 4.5,
           "t": "OKC"
+        },
+        {
+          "alt": 7.5,
+          "e": 3.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-LEAN",
+            "[Std?]",
+            "OT-ADJ",
+            "C0.80",
+            "Z0.66",
+            "TMO-Q",
+            "PIN-3.8",
+            "OPP-OUT:SC1/AST1"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            6,
+            10,
+            9,
+            17,
+            8
+          ],
+          "l5x": [
+            null,
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Pelle Larsson"
+              ]
+            },
+            {
+              "d": "2026-11-14",
+              "out": [
+                "Pelle Larsson"
+              ]
+            },
+            {
+              "d": "2026-11-13",
+              "out": [
+                "Pelle Larsson"
+              ]
+            },
+            null
+          ],
+          "o": 1.63,
+          "opp": "OKC 7th fewest AST allowed · pace +1.9",
+          "p": "Davion Mitchell",
+          "s": "AST",
+          "st": "4",
+          "std": 8.5,
+          "t": "MIA"
+        }
+      ],
+      "lsr": [
+        {
+          "n": 1,
+          "out": [
+            "Shai Gilgeous-Alexander"
+          ],
+          "run": "20261122T215002Z_lsr_OKC-MIA",
+          "utc": "2026-11-22T21:50:02Z"
         }
       ],
       "mkt": null,
