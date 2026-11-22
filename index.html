@@ -369,6 +369,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .aut-l{margin:0;padding-left:18px;font-size:.84rem;line-height:1.45}.aut-l li{margin:3px 0}
 .aut-n{font-size:.78rem;color:var(--muted);margin:0 0 6px}.aut-s{font-size:.78rem;font-weight:600;margin:10px 0 4px}
 .aut-bad{color:var(--bad)}.aut-good{color:var(--good)}.aut-cs{display:flex;flex-wrap:wrap;gap:4px}
+.cd-m{font-size:.74rem;color:var(--muted);line-height:1.3;margin-top:2px;max-width:30ch}
 </style>
 <script>
 /* Light/dark toggle (Mitch 21 Nov: "I want the dashboard to be light for me"). Saved per device in localStorage;
@@ -421,6 +422,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   </div>
 
   <div id="autopsySec"></div>
+  <div id="codeSec"></div>
 
   <details class="fold" id="moreRec"><summary><span>Full record and tier details <span class="meta">bands, stats, charts, every tier</span></span></summary>
   <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
@@ -1599,6 +1601,33 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     box.innerHTML=h+'</div></details>';
     var f=$('autFold');if(f) f.addEventListener('toggle',function(){AUT_OPEN=f.open});
     if(location.hash==='#autopsySec'&&f) f.scrollIntoView({block:'start'});
+    renderCodes();
+  }
+  /* Hit rate by card code (Mitch 22 Nov). From autopsy.json "codes": every settled pick and lean in the Sheet.
+     Meanings come from the Legend rows (data-re), so the two never disagree. Tracking only. */
+  var CODE_OPEN=false;
+  function codeMeaning(tok){
+    var rows=document.querySelectorAll('#legend tr[data-re]');
+    for(var i=0;i<rows.length;i++){try{if(new RegExp(rows[i].getAttribute('data-re')).test(tok)) return rows[i].cells[1].textContent.split(/(?<=\.)\s/)[0]}catch(e){}}
+    return '';
+  }
+  function renderCodes(){
+    var box=$('codeSec'),c=AUT&&AUT.codes;if(!box||!c||!c.rows||!c.rows.length) return;
+    var al=c.all,ld=autDate(c.last);
+    var h='<details class="fold" id="codeFold"'+(CODE_OPEN||location.hash==='#codeSec'?' open':'')+'><summary><span>Hit rate by code <span class="meta">'+
+      al.n+' settled picks and leans · last night '+esc(ld)+'</span></span></summary><div class="aut">'+
+      '<p class="aut-n">Every settled pick and lean with that code on its card. A code earns money only when its hit rate beats break-even, the hit rate its prices need (1u flat; the 0u leans are notional). '+
+      'Rungs on the same player count separately, so tg (team-games) is the real sample: under about 30 tg, treat it as a story. All items: '+al.hit.toFixed(0)+'% v '+al.be.toFixed(0)+'% break-even, '+(al.units>0?'+':'')+al.units.toFixed(1)+'u.</p>'+
+      '<div class="ts"><table style="min-width:0"><thead><tr><th>Code</th><th>Hit</th><th>Needs</th><th>Edge</th><th>Units</th><th>Last</th></tr></thead><tbody>'+
+      c.rows.map(function(r){
+        var e=r.hit-r.be,mn=codeMeaning(r.sample);
+        return '<tr><td><b>'+esc(r.code)+'</b> <span class="mu">'+r.n+' / '+r.tg+' tg</span>'+(mn?'<div class="cd-m">'+esc(mn)+'</div>':'')+'</td>'+
+          '<td>'+r.hit.toFixed(0)+'%</td><td>'+r.be.toFixed(0)+'%</td><td class="'+(e>=0?'aut-good':'aut-bad')+'">'+(e>=0?'+':'−')+Math.abs(e).toFixed(0)+'pp</td>'+
+          '<td>'+(r.units>0?'+':'')+r.units.toFixed(1)+'</td><td>'+(r.last?esc(r.last):'—')+'</td></tr>'}).join('')+
+      '</tbody></table></div></div></details>';
+    box.innerHTML=h;
+    var f=$('codeFold');if(f) f.addEventListener('toggle',function(){CODE_OPEN=f.open});
+    if(location.hash==='#codeSec'&&f) f.scrollIntoView({block:'start'});
   }
   function loadAbs(){
     fetch('absence.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
