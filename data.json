@@ -2324,9 +2324,1702 @@
         ]
       },
       "tip": "10:00"
+    },
+    {
+      "abs": {
+        "DAL": [],
+        "UTA": []
+      },
+      "b2b": [
+        "DAL"
+      ],
+      "box5": {
+        "Caleb Martin": {
+          "gp": 12,
+          "l5": {
+            "ast": 3.8,
+            "blk": 0.0,
+            "fg3": 1.6,
+            "fg3a": 3.0,
+            "fg_pct": 53.3,
+            "fga": 6.0,
+            "fgm": 3.2,
+            "fta": 0.4,
+            "ftm": 0.4,
+            "min": 25.6,
+            "pts": 8.4,
+            "reb": 4.8,
+            "stl": 1.4,
+            "to": 1.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.3,
+            "blk": 0.0,
+            "fg3": 1.1,
+            "fg3a": 2.1,
+            "fg_pct": 50.0,
+            "fga": 4.2,
+            "fgm": 2.1,
+            "fta": 0.3,
+            "ftm": 0.3,
+            "min": 21.4,
+            "pts": 5.6,
+            "reb": 3.3,
+            "stl": 0.8,
+            "to": 0.8
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          13,
+          13
+        ],
+        "skipped": [],
+        "stats": [
+          31,
+          31
+        ]
+      },
+      "ctx": "Out TOP3: Lauri Markkanen (UTA); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 13 of 13 players (31 of 31 player-stats); skipped: none",
+      "cx": {
+        "Caleb Martin|AST|1.5|lean": {
+          "best_book": "tab",
+          "best_price": 1.6,
+          "mm_min": 23.36,
+          "mm_mu": 2.751,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6979,
+          "p_pin": "",
+          "p_wowy": 0.6979,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 2.751
+        }
+      },
+      "engine": "nba-session v3.32-p4",
+      "id": "DAL@UTA",
+      "leans": [
+        {
+          "alt": 1.5,
+          "e": 3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "B2B",
+            "MU-7%",
+            "RET-ADJ",
+            "MT+",
+            "C0.58",
+            "Z0.61",
+            "TMO-Q"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            3,
+            3,
+            5,
+            3,
+            5
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Kyrie Irving"
+              ]
+            },
+            null,
+            null
+          ],
+          "o": 1.48,
+          "opp": "UTA 1st fewest AST allowed · pace +0.1",
+          "p": "Caleb Martin",
+          "s": "AST",
+          "st": "3.5",
+          "std": 1.5,
+          "t": "DAL"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 102.2,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.8,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.1
+        },
+        "teams": {
+          "DAL": {
+            "allow100": {
+              "3PM": 12.8,
+              "AST": 26.3,
+              "PTS": 110.7,
+              "REB": 43.1
+            },
+            "allow_rk": {
+              "3PM": 19,
+              "AST": 11,
+              "PTS": 21,
+              "REB": 11
+            },
+            "out": [],
+            "pace": 101.8,
+            "rk": {
+              "ast": 18,
+              "blk": 8,
+              "dreb": 24,
+              "fg3_pct": 21,
+              "fg3a": 15,
+              "fg3m": 18,
+              "fg_pct": 14,
+              "ft_pct": 16,
+              "fta": 19,
+              "net": 17,
+              "opp_fg3_pct": 7,
+              "opp_fg_pct": 14,
+              "oppg": 12,
+              "oreb": 9,
+              "pace": 18,
+              "pf": 12,
+              "ppg": 19,
+              "reb": 15,
+              "stl": 7,
+              "tov": 17,
+              "ts_pct": 18
+            },
+            "v": {
+              "ast": 26.4,
+              "ats": "9-7-0",
+              "ats_away": "3-4-0",
+              "ats_home": "6-3-0",
+              "ats_l10": "5-5-0",
+              "away": "2-5",
+              "blk": 5.5,
+              "dreb": 31.0,
+              "fg3_pct": 34.4,
+              "fg3a": 37.6,
+              "fg3m": 12.9,
+              "fg_pct": 46.0,
+              "ft_pct": 77.7,
+              "fta": 23.5,
+              "gp": 16,
+              "home": "7-2",
+              "l10": "5-5",
+              "net": -0.2,
+              "opp_fg3_pct": 33.4,
+              "opp_fg_pct": 46.4,
+              "oppg": 112.4,
+              "oreb": 12.8,
+              "ou": "6-10-0",
+              "ou_l10": "4-6-0",
+              "pace": 101.7,
+              "pf": 21.6,
+              "ppg": 112.2,
+              "reb": 43.8,
+              "rec": "9-7",
+              "stl": 8.8,
+              "tov": 15.8,
+              "ts_pct": 57.0
+            }
+          },
+          "UTA": {
+            "allow100": {
+              "3PM": 12.4,
+              "AST": 24.0,
+              "PTS": 111.6,
+              "REB": 43.3
+            },
+            "allow_rk": {
+              "3PM": 26,
+              "AST": 30,
+              "PTS": 13,
+              "REB": 9
+            },
+            "out": [],
+            "pace": 102.4,
+            "rk": {
+              "ast": 22,
+              "blk": 3,
+              "dreb": 8,
+              "fg3_pct": 17,
+              "fg3a": 19,
+              "fg3m": 21,
+              "fg_pct": 26,
+              "ft_pct": 25,
+              "fta": 14,
+              "net": 24,
+              "opp_fg3_pct": 10,
+              "opp_fg_pct": 8,
+              "oppg": 21,
+              "oreb": 16,
+              "pace": 9,
+              "pf": 24,
+              "ppg": 28,
+              "reb": 11,
+              "stl": 29,
+              "tov": 25,
+              "ts_pct": 26
+            },
+            "v": {
+              "ast": 24.8,
+              "ats": "6-11-0",
+              "ats_away": "3-5-0",
+              "ats_home": "3-6-0",
+              "ats_l10": "5-5-0",
+              "away": "2-6",
+              "blk": 5.7,
+              "dreb": 33.1,
+              "fg3_pct": 34.7,
+              "fg3a": 37.0,
+              "fg3m": 12.8,
+              "fg_pct": 44.6,
+              "ft_pct": 75.5,
+              "fta": 24.7,
+              "gp": 17,
+              "home": "1-8",
+              "l10": "2-8",
+              "net": -7.4,
+              "opp_fg3_pct": 34.5,
+              "opp_fg_pct": 44.9,
+              "oppg": 115.7,
+              "oreb": 11.7,
+              "ou": "6-11-0",
+              "ou_l10": "4-6-0",
+              "pace": 102.7,
+              "pf": 23.1,
+              "ppg": 108.3,
+              "reb": 44.8,
+              "rec": "3-14",
+              "stl": 6.9,
+              "tov": 16.8,
+              "ts_pct": 55.9
+            }
+          }
+        }
+      },
+      "out": {
+        "DAL": [
+          "Dereck Lively II (Head coach Dusty May said Friday that Lively (foot) is moving well and progressing in his recovery, and the big man told May he's \"close\" to returning, Mike Curtis of The Dallas Morning News reports.)",
+          "Sergio de Larrea (De Larrea (knee) is listed as out for Wednesday's game against the Warriors.)",
+          "Tarik Biberovic (Biberovic (heel) is out for Wednesday's game against the Warriors.)",
+          "Tobi Lawal (Lawal (groin) has been ruled out for Sunday's game against the Jazz.)"
+        ],
+        "UTA": [
+          "Jaren Jackson Jr. (Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.)",
+          "Jusuf Nurkic (Nurkic (foot) has been cleared for on-court work and will be re-evaluated in one week.)",
+          "Lauri Markkanen (Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "DAL": [
+          "P.J. Washington (Washington (illness) is doubtful to play Sunday's game against the Jazz.)",
+          "Walter Clayton Jr. (Clayton (knee) is listed as questionable for Sunday's game against the Jazz.)"
+        ],
+        "UTA": []
+      },
+      "tip": "11:00"
+    },
+    {
+      "abs": {
+        "CHI": [
+          {
+            "min": 30.0,
+            "name": "Norman Powell",
+            "roles": [
+              "SC1"
+            ]
+          }
+        ],
+        "DEN": []
+      },
+      "b2b": [],
+      "box5": {
+        "Jalen Smith": {
+          "gp": 13,
+          "l5": {
+            "ast": 2.8,
+            "blk": 1.2,
+            "fg3": 2.6,
+            "fg3a": 5.4,
+            "fg_pct": 60.0,
+            "fga": 11.0,
+            "fgm": 6.6,
+            "fta": 1.8,
+            "ftm": 1.4,
+            "min": 28.2,
+            "pts": 17.2,
+            "reb": 8.2,
+            "stl": 1.2,
+            "to": 1.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.2,
+            "blk": 1.0,
+            "fg3": 1.8,
+            "fg3a": 5.1,
+            "fg_pct": 52.8,
+            "fga": 9.8,
+            "fgm": 5.2,
+            "fta": 1.6,
+            "ftm": 1.2,
+            "min": 24.6,
+            "pts": 13.4,
+            "reb": 7.9,
+            "stl": 0.7,
+            "to": 1.0
+          }
+        },
+        "Jamal Murray": {
+          "gp": 14,
+          "l5": {
+            "ast": 6.0,
+            "blk": 1.2,
+            "fg3": 1.6,
+            "fg3a": 4.8,
+            "fg_pct": 51.9,
+            "fga": 15.8,
+            "fgm": 8.2,
+            "fta": 5.8,
+            "ftm": 5.2,
+            "min": 35.8,
+            "pts": 23.2,
+            "reb": 4.8,
+            "stl": 1.2,
+            "to": 2.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 5.8,
+            "blk": 0.9,
+            "fg3": 3.1,
+            "fg3a": 6.8,
+            "fg_pct": 50.2,
+            "fga": 16.5,
+            "fgm": 8.3,
+            "fta": 5.9,
+            "ftm": 5.1,
+            "min": 36.4,
+            "pts": 24.9,
+            "reb": 5.0,
+            "stl": 1.1,
+            "to": 2.5
+          }
+        },
+        "Josh Giddey": {
+          "gp": 15,
+          "l5": {
+            "ast": 8.6,
+            "blk": 1.0,
+            "fg3": 1.4,
+            "fg3a": 4.0,
+            "fg_pct": 41.9,
+            "fga": 8.6,
+            "fgm": 3.6,
+            "fta": 1.6,
+            "ftm": 0.8,
+            "min": 28.0,
+            "pts": 9.4,
+            "reb": 8.4,
+            "stl": 0.2,
+            "to": 3.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 8.4,
+            "blk": 0.5,
+            "fg3": 1.1,
+            "fg3a": 3.7,
+            "fg_pct": 41.9,
+            "fga": 9.1,
+            "fgm": 3.8,
+            "fta": 1.9,
+            "ftm": 1.2,
+            "min": 27.8,
+            "pts": 9.9,
+            "reb": 5.9,
+            "stl": 0.4,
+            "to": 3.3
+          }
+        },
+        "Nikola Jokic": {
+          "gp": 14,
+          "l5": {
+            "ast": 9.0,
+            "blk": 0.6,
+            "fg3": 1.8,
+            "fg3a": 4.0,
+            "fg_pct": 60.2,
+            "fga": 16.6,
+            "fgm": 10.0,
+            "fta": 4.8,
+            "ftm": 4.4,
+            "min": 37.8,
+            "pts": 26.2,
+            "reb": 9.8,
+            "stl": 1.0,
+            "to": 3.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 9.1,
+            "blk": 1.0,
+            "fg3": 1.3,
+            "fg3a": 4.3,
+            "fg_pct": 52.6,
+            "fga": 17.9,
+            "fgm": 9.4,
+            "fta": 4.5,
+            "ftm": 4.1,
+            "min": 36.8,
+            "pts": 24.2,
+            "reb": 10.4,
+            "stl": 1.6,
+            "to": 3.4
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          15,
+          16
+        ],
+        "skipped": [
+          "DeMar DeRozan AST (no rung priced 1.40+ at or below std)",
+          "Norman Powell PTS (ruled OUT)",
+          "Norman Powell REB (ruled OUT)",
+          "Norman Powell AST (ruled OUT)"
+        ],
+        "stats": [
+          36,
+          40
+        ]
+      },
+      "ctx": "Out TOP3: Norman Powell (CHI), Caleb Wilson (CHI); Returning: none; Depleted: CHI (3 rotation out); missed last game: Jalen Smith. Coverage: evaluated 15 of 16 players (36 of 40 player-stats); skipped: DeMar DeRozan AST (no rung priced 1.40+ at or below std), Norman Powell PTS (ruled OUT), Norman Powell REB (ruled OUT), Norman Powell AST (ruled OUT)",
+      "cx": {
+        "Jalen Smith|PTS|9.5|MM90": {
+          "best_book": "bet365",
+          "best_price": 1.33,
+          "mm_min": 32.56,
+          "mm_mu": 18.763,
+          "n_books": 14,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.948,
+          "p_pin": 0.7764,
+          "p_wowy": 0.6811,
+          "pin_edge_pp": 0.1,
+          "pin_line": 13.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 0.882,
+          "wowy_keys": "Norman Powell",
+          "wowy_mu": 12.272
+        },
+        "Jalen Smith|REB|5.5|MM90": {
+          "best_book": "tab",
+          "best_price": 1.25,
+          "mm_min": 32.56,
+          "mm_mu": 10.148,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9197,
+          "p_pin": 0.7748,
+          "p_wowy": 0.6528,
+          "pin_edge_pp": -4.5,
+          "pin_line": 7.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 0.824,
+          "wowy_keys": "Norman Powell",
+          "wowy_mu": 6.821
+        },
+        "Jamal Murray|PTS|22.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.87,
+          "mm_min": 35.72,
+          "mm_mu": 27.144,
+          "n_books": 1,
+          "opp_lift": 0.074,
+          "opp_out": "SC1:Norman Powell",
+          "p_mm": 0.6823,
+          "p_pin": 0.5154,
+          "p_wowy": 0.6823,
+          "pin_edge_pp": -1.9,
+          "pin_line": 23.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 27.144
+        },
+        "Josh Giddey|AST|5.5|MM90": {
+          "best_book": "tabtouch",
+          "best_price": 1.21,
+          "mm_min": 33.53,
+          "mm_mu": 11.503,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9668,
+          "p_pin": 0.7729,
+          "p_wowy": 0.915,
+          "pin_edge_pp": -6.0,
+          "pin_line": 7.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.141,
+          "wowy_keys": "Norman Powell",
+          "wowy_mu": 9.797
+        },
+        "Josh Giddey|PTS|7.5|MM90": {
+          "best_book": "ladbrokes",
+          "best_price": 1.2,
+          "mm_min": 33.53,
+          "mm_mu": 14.73,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9032,
+          "p_pin": 0.8469,
+          "p_wowy": 0.9614,
+          "pin_edge_pp": 1.4,
+          "pin_line": 12.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.6,
+          "wowy_keys": "Norman Powell",
+          "wowy_mu": 17.592
+        },
+        "Nikola Jokic|PTS|25.5|lean": {
+          "best_book": "tabtouch",
+          "best_price": 1.87,
+          "mm_min": 37.36,
+          "mm_mu": 26.804,
+          "n_books": 6,
+          "opp_lift": 0.074,
+          "opp_out": "SC1:Norman Powell",
+          "p_mm": 0.5457,
+          "p_pin": 0.5253,
+          "p_wowy": 0.5457,
+          "pin_edge_pp": -1.5,
+          "pin_line": 25.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 26.804
+        }
+      },
+      "engine": "nba-session v3.32-p4",
+      "id": "DEN@CHI",
+      "leans": [
+        {
+          "alt": 25.5,
+          "e": 5.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "MU+3%",
+            "C0.97",
+            "Z0.19",
+            "PIN-1.5",
+            "OPP-OUT:SC1",
+            "BK-ladbrokes"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            26,
+            24,
+            28,
+            26,
+            27
+          ],
+          "o": 1.85,
+          "opp": "CHI 5th most PTS allowed · pace +1.8",
+          "p": "Nikola Jokic",
+          "s": "PTS",
+          "st": "3",
+          "std": 25.5,
+          "t": "DEN"
+        },
+        {
+          "alt": 22.5,
+          "e": 4.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "MU+3%",
+            "C0.83",
+            "Z0.45",
+            "PIN-1.9",
+            "OPP-OUT:SC1"
+          ],
+          "h": "70% (7/10)",
+          "l5": [
+            14,
+            21,
+            28,
+            23,
+            30
+          ],
+          "o": 1.87,
+          "opp": "CHI 5th most PTS allowed · pace +1.8",
+          "p": "Jamal Murray",
+          "s": "PTS",
+          "st": "3",
+          "std": 22.5,
+          "t": "DEN"
+        },
+        {
+          "alt": 9.5,
+          "e": -1.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.95",
+            "[ROLE?]",
+            "DNP-LAST",
+            "OT-ADJ",
+            "MT+",
+            "C0.73",
+            "Z0.57",
+            "TMO",
+            "PIN+0.1"
+          ],
+          "h": "70% (7/10)",
+          "l5": [
+            14,
+            17,
+            15,
+            23,
+            17
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-13",
+              "ot": 1,
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Norman Powell"
+              ]
+            },
+            {
+              "d": "2026-11-08",
+              "out": [
+                "Norman Powell"
+              ]
+            }
+          ],
+          "o": 1.29,
+          "opp": "DEN 12th most PTS allowed · pace +1.8",
+          "p": "Jalen Smith",
+          "s": "PTS",
+          "st": "3",
+          "std": 13.5,
+          "t": "CHI"
+        },
+        {
+          "alt": 5.5,
+          "e": -3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.92",
+            "[ROLE?]",
+            "DNP-LAST",
+            "OT-ADJ",
+            "MT+",
+            "C0.71",
+            "Z0.68",
+            "TMO",
+            "PIN-4.5"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            6,
+            11,
+            12,
+            4,
+            8
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-13",
+              "ot": 1,
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            null,
+            null
+          ],
+          "o": 1.22,
+          "opp": "DEN 10th most REB allowed · pace +1.8",
+          "p": "Jalen Smith",
+          "s": "REB",
+          "st": "3",
+          "std": 8.5,
+          "t": "CHI"
+        },
+        {
+          "alt": 7.5,
+          "e": 0.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.90",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.67",
+            "Z0.68",
+            "TMO",
+            "PIN+1.4",
+            "BK-ladbrokes"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            2,
+            18,
+            4,
+            8,
+            15
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-14",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-13",
+              "ot": 1,
+              "out": [
+                "Caleb Wilson"
+              ]
+            }
+          ],
+          "o": 1.2,
+          "opp": "DEN 12th most PTS allowed · pace +1.8",
+          "p": "Josh Giddey",
+          "s": "PTS",
+          "st": "4",
+          "std": 12.5,
+          "t": "CHI"
+        },
+        {
+          "alt": 5.5,
+          "e": -2.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.97",
+            "[Std?]",
+            "[ROLE?]",
+            "MU+5%",
+            "OT-ADJ",
+            "C0.63",
+            "Z0.98",
+            "TMO",
+            "PIN-6.0",
+            "BK-sportsbet"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            7,
+            9,
+            8,
+            5,
+            14
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-13",
+              "ot": 1
+            }
+          ],
+          "o": 1.2,
+          "opp": "DEN 5th most AST allowed · pace +1.8",
+          "p": "Josh Giddey",
+          "s": "AST",
+          "st": "4",
+          "std": 8.5,
+          "t": "CHI"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 103.9,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.8,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.1
+        },
+        "teams": {
+          "CHI": {
+            "allow100": {
+              "3PM": 12.7,
+              "AST": 26.3,
+              "PTS": 112.8,
+              "REB": 43.1
+            },
+            "allow_rk": {
+              "3PM": 22,
+              "AST": 9,
+              "PTS": 5,
+              "REB": 13
+            },
+            "out": [
+              {
+                "min": 30.0,
+                "name": "Norman Powell",
+                "roles": [
+                  "SC1"
+                ]
+              }
+            ],
+            "pace": 104.9,
+            "rk": {
+              "ast": 8,
+              "blk": 8,
+              "dreb": 21,
+              "fg3_pct": 29,
+              "fg3a": 8,
+              "fg3m": 18,
+              "fg_pct": 23,
+              "ft_pct": 19,
+              "fta": 7,
+              "net": 26,
+              "opp_fg3_pct": 20,
+              "opp_fg_pct": 26,
+              "oppg": 30,
+              "oreb": 10,
+              "pace": 1,
+              "pf": 26,
+              "ppg": 11,
+              "reb": 15,
+              "stl": 14,
+              "tov": 26,
+              "ts_pct": 21
+            },
+            "v": {
+              "ast": 27.5,
+              "ats": "8-7-0",
+              "ats_away": "4-5-0",
+              "ats_home": "4-2-0",
+              "ats_l10": "6-4-0",
+              "away": "3-6",
+              "blk": 5.5,
+              "dreb": 31.1,
+              "fg3_pct": 31.8,
+              "fg3a": 40.7,
+              "fg3m": 12.9,
+              "fg_pct": 45.1,
+              "ft_pct": 76.5,
+              "fta": 26.9,
+              "gp": 15,
+              "home": "1-5",
+              "l10": "3-7",
+              "net": -8.1,
+              "opp_fg3_pct": 35.9,
+              "opp_fg_pct": 47.8,
+              "oppg": 122.8,
+              "oreb": 12.7,
+              "ou": "6-9-0",
+              "ou_l10": "4-6-0",
+              "pace": 106.7,
+              "pf": 23.2,
+              "ppg": 114.7,
+              "reb": 43.8,
+              "rec": "4-11",
+              "stl": 8.3,
+              "tov": 17.0,
+              "ts_pct": 56.3
+            }
+          },
+          "DEN": {
+            "allow100": {
+              "3PM": 13.3,
+              "AST": 26.6,
+              "PTS": 111.7,
+              "REB": 43.3
+            },
+            "allow_rk": {
+              "3PM": 13,
+              "AST": 5,
+              "PTS": 12,
+              "REB": 10
+            },
+            "out": [],
+            "pace": 101.1,
+            "rk": {
+              "ast": 12,
+              "blk": 23,
+              "dreb": 16,
+              "fg3_pct": 22,
+              "fg3a": 29,
+              "fg3m": 28,
+              "fg_pct": 2,
+              "ft_pct": 4,
+              "fta": 8,
+              "net": 14,
+              "opp_fg3_pct": 16,
+              "opp_fg_pct": 14,
+              "oppg": 15,
+              "oreb": 28,
+              "pace": 25,
+              "pf": 3,
+              "ppg": 12,
+              "reb": 24,
+              "stl": 7,
+              "tov": 6,
+              "ts_pct": 4
+            },
+            "v": {
+              "ast": 27.3,
+              "ats": "7-7-0",
+              "ats_away": "4-3-0",
+              "ats_home": "3-4-0",
+              "ats_l10": "6-4-0",
+              "away": "5-2",
+              "blk": 4.4,
+              "dreb": 31.5,
+              "fg3_pct": 34.3,
+              "fg3a": 30.9,
+              "fg3m": 10.6,
+              "fg_pct": 48.7,
+              "ft_pct": 80.7,
+              "fta": 26.2,
+              "gp": 14,
+              "home": "4-3",
+              "l10": "7-3",
+              "net": 1.5,
+              "opp_fg3_pct": 35.4,
+              "opp_fg_pct": 46.4,
+              "oppg": 113.1,
+              "oreb": 10.1,
+              "ou": "6-8-0",
+              "ou_l10": "4-6-0",
+              "pace": 100.5,
+              "pf": 19.3,
+              "ppg": 114.6,
+              "reb": 41.6,
+              "rec": "9-5",
+              "stl": 8.8,
+              "tov": 13.8,
+              "ts_pct": 59.3
+            }
+          }
+        }
+      },
+      "out": {
+        "CHI": [
+          "Caleb Wilson (Wilson (hand) is expected to miss four to six weeks, Shams Charania of ESPN reports.)",
+          "Nic Claxton (Claxton (illness) won't play in Sunday's game against the Nuggets.)",
+          "Norman Powell (Powell has been diagnosed with a mild right hamstring strain and will be re-evaluated later this week.)"
+        ],
+        "DEN": [
+          "Julian Strawther (Strawther (knee) was diagnosed with a left knee sprain Friday and will be re-evaluated in six weeks, Vinny Benedetto of The Denver Gazette reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "CHI": [],
+        "DEN": []
+      },
+      "tip": "11:00"
+    },
+    {
+      "abs": {
+        "ORL": [],
+        "WAS": []
+      },
+      "b2b": [],
+      "box5": {
+        "Anthony Davis": {
+          "gp": 15,
+          "l5": {
+            "ast": 2.8,
+            "blk": 1.2,
+            "fg3": 0.4,
+            "fg3a": 1.0,
+            "fg_pct": 56.2,
+            "fga": 17.8,
+            "fgm": 10.0,
+            "fta": 6.8,
+            "ftm": 5.2,
+            "min": 35.6,
+            "pts": 25.6,
+            "reb": 10.4,
+            "stl": 0.8,
+            "to": 2.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.1,
+            "blk": 1.1,
+            "fg3": 0.7,
+            "fg3a": 2.1,
+            "fg_pct": 52.9,
+            "fga": 18.4,
+            "fgm": 9.7,
+            "fta": 6.3,
+            "ftm": 5.1,
+            "min": 34.1,
+            "pts": 25.3,
+            "reb": 10.1,
+            "stl": 1.1,
+            "to": 2.1
+          }
+        },
+        "Desmond Bane": {
+          "gp": 14,
+          "l5": {
+            "ast": 3.2,
+            "blk": 0.2,
+            "fg3": 5.6,
+            "fg3a": 10.2,
+            "fg_pct": 52.9,
+            "fga": 13.6,
+            "fgm": 7.2,
+            "fta": 1.2,
+            "ftm": 1.2,
+            "min": 35.4,
+            "pts": 21.2,
+            "reb": 4.2,
+            "stl": 2.0,
+            "to": 1.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.7,
+            "blk": 0.5,
+            "fg3": 4.3,
+            "fg3a": 10.0,
+            "fg_pct": 42.5,
+            "fga": 14.3,
+            "fgm": 6.1,
+            "fta": 2.6,
+            "ftm": 2.2,
+            "min": 34.9,
+            "pts": 18.6,
+            "reb": 4.1,
+            "stl": 1.2,
+            "to": 2.0
+          }
+        },
+        "Franz Wagner": {
+          "gp": 15,
+          "l5": {
+            "ast": 8.0,
+            "blk": 1.0,
+            "fg3": 1.8,
+            "fg3a": 5.8,
+            "fg_pct": 52.2,
+            "fga": 22.6,
+            "fgm": 11.8,
+            "fta": 6.6,
+            "ftm": 5.8,
+            "min": 37.0,
+            "pts": 31.2,
+            "reb": 7.6,
+            "stl": 0.8,
+            "to": 2.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 8.4,
+            "blk": 0.3,
+            "fg3": 1.3,
+            "fg3a": 5.1,
+            "fg_pct": 47.5,
+            "fga": 19.7,
+            "fgm": 9.3,
+            "fta": 6.1,
+            "ftm": 5.1,
+            "min": 36.7,
+            "pts": 25.1,
+            "reb": 6.8,
+            "stl": 1.2,
+            "to": 3.9
+          }
+        },
+        "Wendell Carter Jr.": {
+          "gp": 15,
+          "l5": {
+            "ast": 1.8,
+            "blk": 0.8,
+            "fg3": 0.8,
+            "fg3a": 2.8,
+            "fg_pct": 46.2,
+            "fga": 7.8,
+            "fgm": 3.6,
+            "fta": 3.0,
+            "ftm": 2.8,
+            "min": 30.6,
+            "pts": 10.8,
+            "reb": 6.8,
+            "stl": 0.2,
+            "to": 1.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.3,
+            "blk": 0.9,
+            "fg3": 1.0,
+            "fg3a": 2.6,
+            "fg_pct": 56.2,
+            "fga": 8.1,
+            "fgm": 4.5,
+            "fta": 3.7,
+            "ftm": 2.9,
+            "min": 32.5,
+            "pts": 13.0,
+            "reb": 8.7,
+            "stl": 0.8,
+            "to": 1.5
+          }
+        }
+      },
+      "cov": {
+        "players": [
+          12,
+          13
+        ],
+        "skipped": [
+          "Tristan da Silva PTS (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          32,
+          33
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 12 of 13 players (32 of 33 player-stats); skipped: Tristan da Silva PTS (no rung priced 1.40+ at or below std)",
+      "cx": {
+        "Anthony Davis|PTS|23.5|lean": {
+          "best_book": "sportsbet",
+          "best_price": 1.93,
+          "mm_min": 33.91,
+          "mm_mu": 26.698,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6276,
+          "p_pin": 0.4945,
+          "p_wowy": 0.6276,
+          "pin_edge_pp": -2.4,
+          "pin_line": 24.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 26.698
+        },
+        "Desmond Bane|PTS|14.5|HR80": {
+          "best_book": "bet365",
+          "best_price": 1.31,
+          "mm_min": 35.64,
+          "mm_mu": 20.403,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8413,
+          "p_pin": 0.7688,
+          "p_wowy": 0.8413,
+          "pin_edge_pp": -1.9,
+          "pin_line": 19.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 20.403
+        },
+        "Franz Wagner|AST|6.5|lean": {
+          "best_book": "tabtouch",
+          "best_price": 1.65,
+          "mm_min": 37.21,
+          "mm_mu": 9.317,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7458,
+          "p_pin": 0.5731,
+          "p_wowy": 0.7458,
+          "pin_edge_pp": -6.4,
+          "pin_line": 7.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 9.317
+        },
+        "Wendell Carter Jr.|REB|7.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.67,
+          "mm_min": 31.37,
+          "mm_mu": 8.606,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6176,
+          "p_pin": 0.5888,
+          "p_wowy": 0.6176,
+          "pin_edge_pp": -1.0,
+          "pin_line": 8.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 8.606
+        }
+      },
+      "engine": "nba-session v3.32-p4",
+      "id": "ORL@WAS",
+      "leans": [
+        {
+          "alt": 6.5,
+          "e": 4.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "MU+4%",
+            "OT-ADJ",
+            "C0.69",
+            "Z0.70",
+            "PIN-6.4",
+            "BK-ladbrokes"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            7,
+            11,
+            9,
+            12,
+            1
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Jalen Suggs"
+              ]
+            }
+          ],
+          "o": 1.57,
+          "opp": "WAS 1st most AST allowed · pace -0.6",
+          "p": "Franz Wagner",
+          "s": "AST",
+          "st": "4",
+          "std": 7.5,
+          "t": "ORL"
+        },
+        {
+          "alt": 23.5,
+          "e": 4.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "OT-ADJ",
+            "C0.89",
+            "Z0.37",
+            "PIN-2.4",
+            "BK-sportsbet"
+          ],
+          "h": "70% (7/10)",
+          "l5": [
+            36,
+            25,
+            23,
+            14,
+            30
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-12",
+              "ot": 2
+            }
+          ],
+          "o": 1.93,
+          "opp": "ORL 14th fewest PTS allowed · pace -0.6",
+          "p": "Anthony Davis",
+          "s": "PTS",
+          "st": "3",
+          "std": 23.5,
+          "t": "WAS"
+        },
+        {
+          "alt": 7.5,
+          "e": 4.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[Std?]",
+            "MU+3%",
+            "OT-ADJ",
+            "MT-",
+            "C0.84",
+            "Z0.52",
+            "PIN-1.0"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            8,
+            8,
+            3,
+            8,
+            7
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Jalen Suggs"
+              ]
+            }
+          ],
+          "o": 1.67,
+          "opp": "WAS 2nd most REB allowed · pace -0.6",
+          "p": "Wendell Carter Jr.",
+          "s": "REB",
+          "st": "3",
+          "std": 8.5,
+          "t": "ORL"
+        },
+        {
+          "alt": 14.5,
+          "e": 3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR80",
+            "C0.70",
+            "Z1.29",
+            "PIN-1.9"
+          ],
+          "h": "100% (10/10)",
+          "l5": [
+            21,
+            15,
+            24,
+            21,
+            25
+          ],
+          "o": 1.27,
+          "opp": "WAS 8th most PTS allowed · pace -0.6",
+          "p": "Desmond Bane",
+          "s": "PTS",
+          "st": "5",
+          "std": 19.5,
+          "t": "ORL"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 101.5,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.8,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.1
+        },
+        "teams": {
+          "ORL": {
+            "allow100": {
+              "3PM": 13.4,
+              "AST": 26.2,
+              "PTS": 111.2,
+              "REB": 41.8
+            },
+            "allow_rk": {
+              "3PM": 8,
+              "AST": 14,
+              "PTS": 17,
+              "REB": 26
+            },
+            "out": [],
+            "pace": 101.3,
+            "rk": {
+              "ast": 15,
+              "blk": 26,
+              "dreb": 11,
+              "fg3_pct": 14,
+              "fg3a": 10,
+              "fg3m": 10,
+              "fg_pct": 18,
+              "ft_pct": 19,
+              "fta": 22,
+              "net": 20,
+              "opp_fg3_pct": 26,
+              "opp_fg_pct": 14,
+              "oppg": 14,
+              "oreb": 23,
+              "pace": 24,
+              "pf": 21,
+              "ppg": 25,
+              "reb": 19,
+              "stl": 19,
+              "tov": 19,
+              "ts_pct": 13
+            },
+            "v": {
+              "ast": 26.5,
+              "ats": "6-9-0",
+              "ats_away": "6-3-0",
+              "ats_home": "0-6-0",
+              "ats_l10": "4-6-0",
+              "away": "6-3",
+              "blk": 4.3,
+              "dreb": 31.7,
+              "fg3_pct": 35.7,
+              "fg3a": 40.5,
+              "fg3m": 14.5,
+              "fg_pct": 45.8,
+              "ft_pct": 76.5,
+              "fta": 22.4,
+              "gp": 15,
+              "home": "1-5",
+              "l10": "5-5",
+              "net": -3.1,
+              "opp_fg3_pct": 37.5,
+              "opp_fg_pct": 46.4,
+              "oppg": 112.7,
+              "oreb": 10.9,
+              "ou": "7-8-0",
+              "ou_l10": "4-6-0",
+              "pace": 100.8,
+              "pf": 22.5,
+              "ppg": 109.6,
+              "reb": 42.6,
+              "rec": "7-8",
+              "stl": 7.6,
+              "tov": 16.2,
+              "ts_pct": 57.7
+            }
+          },
+          "WAS": {
+            "allow100": {
+              "3PM": 12.6,
+              "AST": 27.1,
+              "PTS": 112.3,
+              "REB": 44.6
+            },
+            "allow_rk": {
+              "3PM": 25,
+              "AST": 1,
+              "PTS": 8,
+              "REB": 2
+            },
+            "out": [],
+            "pace": 102.3,
+            "rk": {
+              "ast": 27,
+              "blk": 7,
+              "dreb": 13,
+              "fg3_pct": 28,
+              "fg3a": 27,
+              "fg3m": 29,
+              "fg_pct": 19,
+              "ft_pct": 14,
+              "fta": 9,
+              "net": 22,
+              "opp_fg3_pct": 5,
+              "opp_fg_pct": 12,
+              "oppg": 22,
+              "oreb": 23,
+              "pace": 11,
+              "pf": 7,
+              "ppg": 24,
+              "reb": 20,
+              "stl": 19,
+              "tov": 14,
+              "ts_pct": 24
+            },
+            "v": {
+              "ast": 23.8,
+              "ats": "8-9-0",
+              "ats_away": "5-5-0",
+              "ats_home": "3-4-0",
+              "ats_l10": "4-6-0",
+              "away": "4-6",
+              "blk": 5.6,
+              "dreb": 31.6,
+              "fg3_pct": 31.9,
+              "fg3a": 32.2,
+              "fg3m": 10.3,
+              "fg_pct": 45.7,
+              "ft_pct": 78.5,
+              "fta": 26.0,
+              "gp": 17,
+              "home": "2-5",
+              "l10": "2-8",
+              "net": -6.5,
+              "opp_fg3_pct": 33.2,
+              "opp_fg_pct": 46.1,
+              "oppg": 116.5,
+              "oreb": 10.9,
+              "ou": "6-11-0",
+              "ou_l10": "5-5-0",
+              "pace": 102.4,
+              "pf": 20.4,
+              "ppg": 110.0,
+              "reb": 42.5,
+              "rec": "6-11",
+              "stl": 7.6,
+              "tov": 14.7,
+              "ts_pct": 56.0
+            }
+          }
+        }
+      },
+      "out": {
+        "ORL": [
+          "Izaiyah Nelson (Head coach Sean Sweeney said Wednesday that Nelson (ankle) has been doing \"some on-court stuff,\" though Sweeney added that the work has been \"minimal,\" Jason Beede of the Orlando Sentinel reports.)",
+          "Jonathan Isaac (Isaac (knee) is out for Sunday's game against the Wizards.)",
+          "Noah Penda (Penda (hamstring) is making progress but remains without a timetable to return to game action, Jason Beede of the Orlando Sentinel reports.)",
+          "Paolo Banchero (Banchero is expected to be sidelined for the next four-to-six weeks due to a right high-ankle sprain, Shams Charania of ESPN reports.)"
+        ],
+        "WAS": [
+          "Jamir Watkins (The Wizards announced Thursday that Watkins has undergone surgery for a torn ACL.)",
+          "Justin Champagnie (Champagnie (foot) is expected to miss several months, per Josh Robbins of The Athletic.)",
+          "Reece Beekman (The Wizards announced Monday that Beekman sustained a right acromioclavicular joint injury and will be re-evaluated in approximately three weeks.)",
+          "Tristan Vukcevic (Vukcevic (hip) has been ruled out for Monday's game against Memphis.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "ORL": [],
+        "WAS": [
+          "Bub Carrington (Carrington (illness) has been downgraded to questionable for Sunday's game against the Magic.)",
+          "Deandre Ayton (Ayton (illness) is questionable to play in Sunday's game against Orlando.)"
+        ]
+      },
+      "tip": "11:00"
     }
   ],
-  "generated": "2026-11-22T21:30:02Z",
+  "generated": "2026-11-22T22:30:02Z",
   "totals": [
     [
       "DET@ATL",
@@ -2335,6 +4028,21 @@
     ],
     [
       "OKC@MIA",
+      null,
+      null
+    ],
+    [
+      "DAL@UTA",
+      null,
+      null
+    ],
+    [
+      "DEN@CHI",
+      null,
+      null
+    ],
+    [
+      "ORL@WAS",
       null,
       null
     ]
