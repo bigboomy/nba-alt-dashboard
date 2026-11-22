@@ -5,6 +5,13 @@
       "date": "2026-11-22",
       "version": "nba-session v3.32-p4",
       "component": "dashboard",
+      "title": "MM90 fold: results by stat",
+      "detail": "The MM90 fold now splits hit, break-even, gap and units by stat, with MM90-ALSO rungs (held by HR80, PIN or leans) shown apart and never counted in MM90; display only, the verdict stays on the whole tier."
+    },
+    {
+      "date": "2026-11-22",
+      "version": "nba-session v3.32-p4",
+      "component": "dashboard",
       "title": "MM90 tier shown on its own",
       "detail": "MM90 leans are kept out of the regular lean counts and record and get their own fold and scoreboard row with the pre-registered verdict; legend rows added for MM90, MM90-ALSO, PMM, BIGEDGE?, RET-ADJ and BK-, and the header names the three-book best price from v3.32."
     },
