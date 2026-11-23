@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-24",
+      "version": "nba-session v3.40-p4",
+      "component": "engine",
+      "title": "Conference seed and expected win % on every matchup",
+      "change": "Each game's matchup block now carries both teams' conference seed and record, plus an expected win %: from the market handicap once odds exist, otherwise from net ratings plus home court.",
+      "why": "Mitch 24 Nov: see the standings and who should win on the still-to-come list. Display only, nothing feeds a pick or lean."
+    },
+    {
+      "date": "2026-11-24",
       "version": "dashboard",
       "component": "dashboard",
       "title": "Windows scorecard shows the alone record",
