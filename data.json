@@ -1555,6 +1555,27 @@
       },
       "ctx": "Out TOP3: Ja Morant (POR); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 13 of 13 players (34 of 35 player-stats); skipped: VJ Edgecombe AST (no rung priced 1.40+ at or below std)",
       "cx": {
+        "Deni Avdija|REB|4.5|LSR": {
+          "best_book": "ladbrokes",
+          "best_price": 1.24,
+          "mm_min": 33.72,
+          "mm_mu": 6.23,
+          "n_books": 6,
+          "opp_lift": 0.067,
+          "opp_out": "SC3/REB1:Joel Embiid",
+          "p_mm": 0.722,
+          "p_pin": 0.7517,
+          "p_wowy": 0.722,
+          "pin_edge_pp": -5.5,
+          "pin_line": 6.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 6.23
+        },
         "Donovan Clingan|REB|10.5|lean": {
           "best_book": "ladbrokes",
           "best_price": 1.82,
@@ -1576,6 +1597,216 @@
           "wowy_keys": "",
           "wowy_mu": 11.074
         },
+        "Donovan Clingan|REB|8.5|LSR": {
+          "best_book": "tabtouch",
+          "best_price": 1.28,
+          "mm_min": 27.48,
+          "mm_mu": 11.074,
+          "n_books": 4,
+          "opp_lift": 0.067,
+          "opp_out": "SC3/REB1:Joel Embiid",
+          "p_mm": 0.7745,
+          "p_pin": 0.7281,
+          "p_wowy": 0.7745,
+          "pin_edge_pp": -7.8,
+          "pin_line": 11.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 11.074
+        },
+        "Jabari Walker|PTS|3.5|LSR": {
+          "best_book": "pointsbet",
+          "best_price": 1.27,
+          "mm_min": 20.06,
+          "mm_mu": 10.732,
+          "n_books": 1,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9518,
+          "p_pin": "",
+          "p_wowy": 0.9822,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.502,
+          "wowy_keys": "Joel Embiid",
+          "wowy_mu": 13.045
+        },
+        "Jabari Walker|REB|3.5|LSR": {
+          "best_book": "pointsbet",
+          "best_price": 1.4,
+          "mm_min": 20.06,
+          "mm_mu": 8.072,
+          "n_books": 4,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9121,
+          "p_pin": "",
+          "p_wowy": 0.9475,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.31,
+          "wowy_keys": "Joel Embiid",
+          "wowy_mu": 9.108
+        },
+        "Jabari Walker|REB|4.5|LSR": {
+          "best_book": "pointsbet",
+          "best_price": 1.71,
+          "mm_min": 20.06,
+          "mm_mu": 8.072,
+          "n_books": 2,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8376,
+          "p_pin": "",
+          "p_wowy": 0.8954,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.31,
+          "wowy_keys": "Joel Embiid",
+          "wowy_mu": 9.108
+        },
+        "Jaylen Brown|PTS|15.5|LSR": {
+          "best_book": "pointsbet",
+          "best_price": 1.24,
+          "mm_min": 38.27,
+          "mm_mu": 26.843,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9439,
+          "p_pin": 0.8294,
+          "p_wowy": 0.8047,
+          "pin_edge_pp": 2.3,
+          "pin_line": 22.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 0.992,
+          "wowy_keys": "Joel Embiid",
+          "wowy_mu": 21.548
+        },
+        "Jaylen Brown|PTS|18.5|LSR": {
+          "best_book": "pointsbet",
+          "best_price": 1.56,
+          "mm_min": 38.27,
+          "mm_mu": 26.843,
+          "n_books": 1,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8647,
+          "p_pin": 0.6876,
+          "p_wowy": 0.6449,
+          "pin_edge_pp": 4.7,
+          "pin_line": 22.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 0.992,
+          "wowy_keys": "Joel Embiid",
+          "wowy_mu": 21.548
+        },
+        "Jaylen Brown|PTS|20.5|LSR": {
+          "best_book": "pointsbet",
+          "best_price": 1.9,
+          "mm_min": 38.27,
+          "mm_mu": 26.843,
+          "n_books": 1,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7878,
+          "p_pin": 0.5801,
+          "p_wowy": 0.5275,
+          "pin_edge_pp": 5.4,
+          "pin_line": 22.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 0.992,
+          "wowy_keys": "Joel Embiid",
+          "wowy_mu": 21.548
+        },
+        "Jrue Holiday|REB|2.5|LSR": {
+          "best_book": "tabtouch",
+          "best_price": 1.23,
+          "mm_min": 28.56,
+          "mm_mu": 3.592,
+          "n_books": 5,
+          "opp_lift": 0.067,
+          "opp_out": "SC3/REB1:Joel Embiid",
+          "p_mm": 0.6123,
+          "p_pin": 0.7401,
+          "p_wowy": 0.6123,
+          "pin_edge_pp": -9.3,
+          "pin_line": 4.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 3.592
+        },
+        "LeBron James|AST|4.5|LSR": {
+          "best_book": "bet365",
+          "best_price": 1.22,
+          "mm_min": 37.48,
+          "mm_mu": 8.054,
+          "n_books": 4,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8725,
+          "p_pin": 0.7316,
+          "p_wowy": 0.7936,
+          "pin_edge_pp": -10.2,
+          "pin_line": 6.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.078,
+          "wowy_keys": "Joel Embiid",
+          "wowy_mu": 7.026
+        },
+        "LeBron James|REB|4.5|LSR": {
+          "best_book": "bet365",
+          "best_price": 1.29,
+          "mm_min": 37.48,
+          "mm_mu": 7.51,
+          "n_books": 4,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8478,
+          "p_pin": 0.7469,
+          "p_wowy": 0.7505,
+          "pin_edge_pp": -5.3,
+          "pin_line": 6.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "Joel Embiid",
+          "wowy_mu": 6.469
+        },
         "Sidy Cissoko|PTS|5.5|lean": {
           "best_book": "pointsbet",
           "best_price": 1.77,
@@ -1596,6 +1827,27 @@
           "wowy_L": 1.0,
           "wowy_keys": "",
           "wowy_mu": 8.412
+        },
+        "Toumani Camara|REB|2.5|LSR": {
+          "best_book": "betright",
+          "best_price": 1.2,
+          "mm_min": 32.76,
+          "mm_mu": 4.356,
+          "n_books": 5,
+          "opp_lift": 0.067,
+          "opp_out": "SC3/REB1:Joel Embiid",
+          "p_mm": 0.7617,
+          "p_pin": 0.7675,
+          "p_wowy": 0.7617,
+          "pin_edge_pp": -6.6,
+          "pin_line": 4.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 4.356
         }
       },
       "engine": "nba-session v3.40-p4",
@@ -1701,6 +1953,682 @@
           "st": "3",
           "std": 5.5,
           "t": "POR"
+        },
+        {
+          "alt": 18.5,
+          "e": 5.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-LEAN",
+            "CUSH",
+            "[ROLE?]",
+            "DNP-LAST",
+            "RET-ADJ",
+            "C0.83",
+            "Z0.59",
+            "TMO",
+            "PIN+4.7",
+            "MAIN-U+3.1"
+          ],
+          "gs": 3,
+          "h": "70% (7/10)",
+          "l5": [
+            null,
+            null,
+            31,
+            31,
+            18
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-21",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-18",
+              "dnp": 1
+            },
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Joel Embiid"
+              ]
+            },
+            null
+          ],
+          "o": 1.56,
+          "opp": "POR 8th fewest PTS allowed · pace -0.2",
+          "p": "Jaylen Brown",
+          "pmx": 0.825,
+          "s": "PTS",
+          "st": "4",
+          "std": 20.5,
+          "t": "PHI"
+        },
+        {
+          "alt": 3.5,
+          "e": 4.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-LEAN",
+            "MISS",
+            "[Std?]",
+            "[ROLE?]",
+            "REB-ANC",
+            "RET-ADJ",
+            "MT+",
+            "C0.54",
+            "Z0.99",
+            "TMO"
+          ],
+          "gs": 1,
+          "h": "90% (9/10)",
+          "l5": [
+            7,
+            5,
+            5,
+            7,
+            8
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-16",
+              "out": [
+                "LeBron James"
+              ]
+            },
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Joel Embiid"
+              ]
+            },
+            {
+              "d": "2026-11-12",
+              "out": [
+                "LeBron James"
+              ]
+            }
+          ],
+          "o": 1.4,
+          "opp": "POR 7th fewest REB allowed · pace -0.2",
+          "p": "Jabari Walker",
+          "pmx": 0.8804,
+          "s": "REB",
+          "st": "4",
+          "std": 4.5,
+          "t": "PHI"
+        },
+        {
+          "alt": 20.5,
+          "e": 3.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-PIN",
+            "BK-pointsbet",
+            "[ROLE?]",
+            "DNP-LAST",
+            "RET-ADJ",
+            "C0.92",
+            "Z0.28",
+            "TMO",
+            "PIN+5.4",
+            "MAIN-U+3.1"
+          ],
+          "gs": 3,
+          "h": "50% (5/10)",
+          "l5": [
+            null,
+            null,
+            31,
+            31,
+            18
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-21",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-18",
+              "dnp": 1
+            },
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Joel Embiid"
+              ]
+            },
+            null
+          ],
+          "o": 1.9,
+          "opp": "POR 8th fewest PTS allowed · pace -0.2",
+          "p": "Jaylen Brown",
+          "pmx": 0.7465,
+          "s": "PTS",
+          "st": "3",
+          "std": 20.5,
+          "t": "PHI"
+        },
+        {
+          "alt": 3.5,
+          "e": 0.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.95",
+            "[ROLE?]",
+            "RET-ADJ",
+            "MT+",
+            "C0.43",
+            "Z1.09",
+            "TMO",
+            "RET2:James"
+          ],
+          "gs": 1,
+          "h": "80% (8/10)",
+          "l5": [
+            9,
+            6,
+            12,
+            11,
+            9
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Jaylen Brown"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Tyrese Maxey",
+                "Jaylen Brown"
+              ]
+            },
+            null,
+            null,
+            null
+          ],
+          "o": 1.27,
+          "opp": "POR 8th fewest PTS allowed · pace -0.2",
+          "p": "Jabari Walker",
+          "pmx": 0.9261,
+          "s": "PTS",
+          "st": "4",
+          "std": 6.5,
+          "t": "PHI"
+        },
+        {
+          "alt": 15.5,
+          "e": 1.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.94",
+            "[ROLE?]",
+            "DNP-LAST",
+            "RET-ADJ",
+            "C0.70",
+            "Z1.06",
+            "TMO",
+            "PIN+2.3",
+            "MAIN-U+3.1"
+          ],
+          "gs": 3,
+          "h": "80% (8/10)",
+          "l5": [
+            null,
+            null,
+            31,
+            31,
+            18
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-21",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-18",
+              "dnp": 1
+            },
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Joel Embiid"
+              ]
+            },
+            null
+          ],
+          "o": 1.24,
+          "opp": "POR 8th fewest PTS allowed · pace -0.2",
+          "p": "Jaylen Brown",
+          "pmx": 0.9148,
+          "s": "PTS",
+          "st": "5",
+          "std": 20.5,
+          "t": "PHI"
+        },
+        {
+          "alt": 4.5,
+          "e": 1.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-L5P",
+            "L5LOW5",
+            "[Std?]",
+            "[ROLE?]",
+            "REB-ANC",
+            "RET-ADJ",
+            "MT+",
+            "C0.69",
+            "Z0.66",
+            "TMO"
+          ],
+          "gs": 1,
+          "h": "80% (8/10)",
+          "l5": [
+            7,
+            5,
+            5,
+            7,
+            8
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-16",
+              "out": [
+                "LeBron James"
+              ]
+            },
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Joel Embiid"
+              ]
+            },
+            {
+              "d": "2026-11-12",
+              "out": [
+                "LeBron James"
+              ]
+            }
+          ],
+          "o": 1.71,
+          "opp": "POR 7th fewest REB allowed · pace -0.2",
+          "p": "Jabari Walker",
+          "pmx": 0.8033,
+          "s": "REB",
+          "st": "3",
+          "std": 4.5,
+          "t": "PHI"
+        },
+        {
+          "alt": 8.5,
+          "e": -3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-WIN",
+            "WIN:REB-OPPOUT",
+            "[ROLE?]",
+            "C0.77",
+            "Z1.07",
+            "TMO",
+            "PIN-7.8",
+            "OPP-OUT:SC3/REB1",
+            "REB-OPP",
+            "RET2:Avdija",
+            "BK-ladbrokes"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            13,
+            13,
+            12,
+            10,
+            11
+          ],
+          "l5x": [
+            null,
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Deni Avdija",
+                "Robert Williams III"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            null,
+            null
+          ],
+          "o": 1.24,
+          "opp": "PHI 7th most REB allowed · pace -0.2",
+          "p": "Donovan Clingan",
+          "pmx": 0.7016,
+          "s": "REB",
+          "st": "4",
+          "std": 11.5,
+          "t": "POR"
+        },
+        {
+          "alt": 4.5,
+          "e": -1.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-FO",
+            "[ROLE?]",
+            "REB-ANC",
+            "RET-ADJ",
+            "C0.69",
+            "Z0.99",
+            "TMO",
+            "PIN-5.3",
+            "FO:Embiid",
+            "BK-ladbrokes"
+          ],
+          "gs": 3,
+          "h": "90% (9/10)",
+          "l5": [
+            6,
+            3,
+            null,
+            7,
+            null
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Jaylen Brown"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Jaylen Brown"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Joel Embiid"
+              ]
+            },
+            {
+              "d": "2026-11-12",
+              "dnp": 1
+            }
+          ],
+          "o": 1.25,
+          "opp": "POR 7th fewest REB allowed · pace -0.2",
+          "p": "LeBron James",
+          "pmx": 0.8239,
+          "s": "REB",
+          "st": "4",
+          "std": 6.5,
+          "t": "PHI"
+        },
+        {
+          "alt": 4.5,
+          "e": -6.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-WIN",
+            "WIN:REB-OPPOUT",
+            "[ROLE?]",
+            "C0.73",
+            "Z0.69",
+            "TMO",
+            "PIN-5.5",
+            "OPP-OUT:SC3/REB1",
+            "REB-OPP",
+            "BK-ladbrokes"
+          ],
+          "gs": 3,
+          "h": "70% (7/10)",
+          "l5": [
+            9,
+            null,
+            null,
+            8,
+            6
+          ],
+          "l5x": [
+            null,
+            {
+              "d": "2026-11-19",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-17",
+              "dnp": 1
+            },
+            null,
+            null
+          ],
+          "o": 1.24,
+          "opp": "PHI 7th most REB allowed · pace -0.2",
+          "p": "Deni Avdija",
+          "pmx": 0.6992,
+          "s": "REB",
+          "st": "4",
+          "std": 6.5,
+          "t": "POR"
+        },
+        {
+          "alt": 4.5,
+          "e": -8.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-FO",
+            "[ROLE?]",
+            "MU-6%",
+            "RET-ADJ",
+            "C0.69",
+            "Z0.85",
+            "TMO",
+            "PIN-10.2",
+            "FO:Embiid"
+          ],
+          "gs": 3,
+          "h": "80% (8/10)",
+          "l5": [
+            6,
+            6,
+            null,
+            11,
+            null
+          ],
+          "l5x": [
+            null,
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Tyrese Maxey"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Joel Embiid"
+              ]
+            },
+            {
+              "d": "2026-11-12",
+              "dnp": 1
+            }
+          ],
+          "o": 1.2,
+          "opp": "POR 2nd fewest AST allowed · pace -0.2",
+          "p": "LeBron James",
+          "pmx": 0.8501,
+          "s": "AST",
+          "st": "4",
+          "std": 6.5,
+          "t": "PHI"
+        },
+        {
+          "alt": 2.5,
+          "e": -12.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-WIN",
+            "WIN:REB-OPPOUT",
+            "[Std?]",
+            "[ROLE?]",
+            "C0.71",
+            "Z0.36",
+            "TMO",
+            "PIN-9.3",
+            "OPP-OUT:SC3/REB1",
+            "REB-OPP",
+            "BK-ladbrokes"
+          ],
+          "gs": 0,
+          "h": "60% (6/10)",
+          "l5": [
+            9,
+            2,
+            5,
+            4,
+            5
+          ],
+          "l5x": [
+            null,
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            null,
+            null
+          ],
+          "o": 1.2,
+          "opp": "PHI 7th most REB allowed · pace -0.2",
+          "p": "Jrue Holiday",
+          "pmx": 0.5998,
+          "s": "REB",
+          "st": "4",
+          "std": 4.5,
+          "t": "POR"
+        },
+        {
+          "alt": 2.5,
+          "e": -5.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-WIN",
+            "WIN:REB-OPPOUT",
+            "[ROLE?]",
+            "MT+",
+            "C0.59",
+            "Z0.82",
+            "TMO",
+            "PIN-6.6",
+            "OPP-OUT:SC3/REB1",
+            "REB-OPP",
+            "RET2:Williams/Avdija",
+            "BK-ladbrokes"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            5,
+            6,
+            8,
+            0,
+            2
+          ],
+          "l5x": [
+            null,
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            null,
+            null
+          ],
+          "o": 1.2,
+          "opp": "PHI 7th most REB allowed · pace -0.2",
+          "p": "Toumani Camara",
+          "pmx": 0.7453,
+          "s": "REB",
+          "st": "4",
+          "std": 4.5,
+          "t": "POR"
+        }
+      ],
+      "lsr": [
+        {
+          "n": 12,
+          "out": [
+            "Joel Embiid"
+          ],
+          "run": "20261123T230502Z_lsr_POR-PHI",
+          "utc": "2026-11-23T23:05:02Z"
         }
       ],
       "mkt": null,
