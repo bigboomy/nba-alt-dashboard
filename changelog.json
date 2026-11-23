@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-24",
+      "version": "nba-session v3.40-p4",
+      "component": "engine",
+      "title": "One player, one name across bookies",
+      "change": "When bookies spell a player differently (Diabate / Diabaté, Day'ron / Day'Ron), all spellings now become one player, so he gets one set of leans and results count once.",
+      "why": "Mitch's 24 Nov manual run showed the same player listed twice with duplicate leans."
+    },
+    {
+      "date": "2026-11-24",
       "version": "dashboard",
       "component": "dashboard",
       "title": "Seed and win chance on games",
