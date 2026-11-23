@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>NBA Alt-Over Dashboard</title>
+<title>bigboomy's NBA piggy bank</title>
 <meta name="description" content="Alt-over picks, results by odds band, calibration and today's slate.">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icon-180.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="NBA Alts">
+<meta name="apple-mobile-web-app-title" content="piggy bank">
 <meta name="theme-color" content="#12233F">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -88,7 +88,7 @@ details.lf>summary span{color:var(--muted)}details.lf>summary b{color:var(--text
 .prow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:8px 14px;border-top:1px solid var(--line)}
 .prow .meta{margin-left:auto}.gsd{padding:0 12px 6px}.sdl{display:block;flex-basis:100%;font-size:.8rem;color:var(--muted);line-height:1.35}.sdl b{color:var(--text);font-weight:600}.sdl .sdw{color:var(--text);white-space:nowrap}.sdl .sdr{white-space:nowrap}
 /* 21 Nov (Mitch): upcoming matchups from schedule.json (written by the 18:07 resolve, before any odds) */
-.umx>p.ucap{margin:0;padding:0 14px 8px;font-size:.78rem;color:var(--muted)}details.umg{border-top:1px solid var(--line)}details.umg>summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center;min-height:44px;padding:4px 14px}details.umg>summary::-webkit-details-marker{display:none}details.umg>summary b{font-size:1rem}details.umg>summary span{color:var(--muted);font-size:.8rem}details.umg>summary::after{content:'';margin-left:auto;width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s;flex:none}details.umg[open]>summary::after{transform:rotate(45deg)}details.umg>.gw{padding:0 10px 10px}
+.umx>p.ucap{margin:0;padding:0 14px 8px;font-size:.78rem;color:var(--muted)}details.umg{border-top:1px solid var(--line)}details.umg>summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center;min-height:44px;padding:4px 14px}details.umg>summary::-webkit-details-marker{display:none}details.umg>summary b{font-size:1rem}details.umg>summary span{color:var(--muted);font-size:.8rem}details.umg>summary::after{content:'';margin-left:auto;width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s;flex:none}details.umg[open]>summary::after{transform:rotate(45deg)}details.umg>.gw{padding:0 10px 10px}details.umg .umt{flex:1;min-width:0;padding:4px 0}details.umg .umt>b{margin-right:10px}details.umg .sdl{margin-top:2px}details.umg .sdl b{font-size:inherit}details.umg .sdl span{font-size:inherit}details.umg .sdl .sdw{color:var(--text)}
 .gh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
 .cbtn.on{border-color:var(--good);color:var(--good);font-weight:700}
 .cbtn.onp{border-color:var(--warn);color:var(--warn);font-weight:700}
@@ -475,7 +475,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 </script>
 </head>
 <body><div class="wrap">
-  <div class="hrow"><div class="brand"><img class="mascot" src="mascot.png" alt="" width="40" height="40"><h1>NBA Alt-Over Dashboard</h1></div><button class="thm" type="button" id="themeBtn">☀<span class="tl"> Light</span></button></div>
+  <div class="hrow"><div class="brand"><img class="mascot" src="mascot.png" alt="" width="40" height="40"><h1>bigboomy's NBA piggy bank</h1></div><button class="thm" type="button" id="themeBtn">☀<span class="tl"> Light</span></button></div>
   <p class="sub" id="sub">Loading slate…</p>
   <div class="stale" id="health" role="status" hidden></div>
   <div class="cols">
@@ -1463,7 +1463,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var tom=addDays(n.iso,1);
     return '<section class="game pend umx"><div class="gh"><div><h2>Matchups ahead</h2></div></div><p class="ucap">From the nightly resolve, before any odds. Tap a game for its team stats and injuries.</p>'+
       L.map(function(x){var g=x.g,day=x.m.iso===n.iso?'Today':x.m.iso===tom?'Tomorrow':x.m.wd;
-        return '<details class="umg" data-u="'+esc(g.id)+'"'+(UOPEN[g.id]?' open':'')+'><summary><b>'+esc(g.id)+'</b><span>'+day+' · tip '+hhmm(x.m.min)+'</span></summary>'+
+        return '<details class="umg" data-u="'+esc(g.id)+'"'+(UOPEN[g.id]?' open':'')+'><summary><div class="umt"><b>'+esc(g.id)+'</b><span>'+day+' · tip '+hhmm(x.m.min)+'</span>'+seedLine(g.id,g.mx)+'</div></summary>'+
           '<div class="gw">'+(UOPEN[g.id]?mxHtml(g):'')+'</div></details>'}).join('')+'</section>';
   }
   function upWire(){
@@ -2254,7 +2254,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
             '<p class="cap">Send the device code to the Architect once; it goes into the slate task, not the public site.</p>';
           $('sample').onclick=function(){reg.showNotification('NBA picks: 2 new',{body:'BOS@ORL 07:40 · Tatum PTS O24.5 @1.83',tag:'nba-sample',icon:'icon-192.png'});if(navigator.setAppBadge)navigator.setAppBadge(2)};
         } else if(Notification.permission==='denied'){
-          box.innerHTML='<p>Notifications are blocked for this app. Turn them on in iPhone Settings → Notifications → NBA Alts, then reopen.</p>';
+          box.innerHTML='<p>Notifications are blocked for this app. Turn them on in iPhone Settings → Notifications → piggy bank, then reopen.</p>';
         } else {
           box.innerHTML='<p>Get an alert and an icon badge when a slate run makes picks.</p><p><button class="cbtn main" id="enableAlerts" type="button">Enable alerts</button></p>';
           $('enableAlerts').onclick=function(){

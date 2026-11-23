@@ -3,6 +3,13 @@
  "changes": [
     {
       "date": "2026-11-24",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "Renamed to bigboomy's NBA piggy bank",
+      "detail": "New name in the page header, browser tab and home-screen app (icon label: piggy bank). Matchups ahead rows now show the same seed and win-chance line as Still to come."
+    },
+    {
+      "date": "2026-11-24",
       "version": "nba-session v3.40-p4",
       "component": "engine",
       "title": "One player, one name across bookies",

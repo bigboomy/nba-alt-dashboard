@@ -1,6 +1,6 @@
 {
-  "name": "NBA Alt-Over Dashboard",
-  "short_name": "NBA Alts",
+  "name": "bigboomy's NBA piggy bank",
+  "short_name": "piggy bank",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
