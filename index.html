@@ -481,7 +481,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <tr data-re="^OUTLIFT$"><td class="lgc">OUTLIFT</td><td>Teammate-out tier: a key player with a key teammate freshly out; highest-priced rung at $1.20-1.59, at or under the main line. Killed 20 Nov (48 settled, −11.43u); no new items.</td><td class="lge">Closed</td></tr>
   <tr data-re="^TM-OUT:"><td class="lgc">TM-OUT:SC1/REB1</td><td>Which key teammate roles are out for OUTLIFT (roles are explained under Opponent and matchup).</td><td class="lge">Info</td></tr>
   <tr><td class="lgc"><s>Line</s></td><td>Late scratch: the player was ruled OUT after the run, so the item is struck through (books normally void it).</td><td class="lge">display</td></tr>
-  <tr data-re="^LSR$"><td class="lgc">LSR</td><td>Late-scratch re-run: a new item after a watched player was ruled OUT 10+ min before tip and the game was re-run. Verdict at 40.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^LSR$"><td class="lgc">LSR</td><td>Late-scratch re-run: a new item after a watched player was ruled OUT, or a player OUT at the run came back (from 23 Nov), 10+ min before tip and the game was re-run. Verdict at 40.</td><td class="lge">0u test</td></tr>
   <tr data-re="^LSR-"><td class="lgc">LSR-PICK · LSR-LEAN · LSR-HR80 …</td><td>What the re-run item would have been (pick, lean, HR80, MM90, PIN or OUTLIFT).</td><td class="lge">Info</td></tr>
   <tr class="lgh"><th colspan="3">Sample and minutes</th></tr>
   <tr data-re="^C\d"><td class="lgc">C0.82</td><td>Cushion = line ÷ his average over the sample games. Lower is safer; picks need 0.70 or less.</td><td class="lge">Gate</td></tr>
@@ -1842,13 +1842,15 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       var rs=ks.map(function(k){var s=leanSum(arr.filter(function(r){return r.stat===k}));return s.n?row(k,s):''}).join('');
       return rs?'<tr class="sh"><td colspan="7">'+label+'</td></tr>'+rs:''}
     var q=all.hit/100,lo80=all.n?all.gap-128.16*Math.sqrt(q*(1-q)/all.n):null;
+    /* Mitch 23 Nov: an unclear result at 60 team-games extends the same test to 120. */
     var verdict=ntg<60?'<b>Collecting: '+ntg+' of 60 team-games ('+all.n+' settled).</b> ':
       (all.gap<=-3?'<b>REJECT: '+sg(all.gap,1)+'pp under break-even over '+ntg+' team-games.</b> ':
       (all.gap>=0&&lo80>-2?'<b>CONFIRM: at or above break-even over '+ntg+' team-games, 80% CI floor '+sg(lo80,1)+'pp. Mitch decides on staking.</b> ':
-      '<b>Not settled either way over '+ntg+' team-games (gap '+sg(all.gap,1)+'pp, 80% CI floor '+sg(lo80,1)+'pp): keep collecting.</b> '));
+      (ntg<120?'<b>Unclear at 60, extended to 120: '+ntg+' of 120 team-games (gap '+sg(all.gap,1)+'pp, 80% CI floor '+sg(lo80,1)+'pp).</b> ':
+      '<b>Still unclear at '+ntg+' team-games (gap '+sg(all.gap,1)+'pp, 80% CI floor '+sg(lo80,1)+'pp): Mitch decides.</b> ')));
     box.innerHTML=head+'<div class="ts"><table style="min-width:0"><thead><tr><th></th><th>n</th><th>W-L</th><th>Hit</th><th>Break-even</th><th>Gap</th><th>Units</th></tr></thead><tbody>'+
       row('7d',leanSum(win(7)))+row('Since 22 Nov',all)+byStat(MMS,'By stat (tier)')+byStat(MMA||[],'Also met MM90 (recorded in HR80 / PIN / leans, not here)')+'</tbody></table></div>'+
-      '<p class="cap">'+verdict+'By-stat rows are display only; the verdict is on the whole tier. The also-met rows are rungs another tier already holds; they count in that tier’s record, never in MM90’s. Best price across Pointsbet, Ladbrokes and Sportsbet at $1.20-1.29 where the minutes model puts P(over) at 90% or more. Break-even is the mean 1 ÷ odds. CONFIRM needs 60+ team-games, hit at or above break-even and the 80% CI floor of the gap above −2pp; REJECT is 3pp+ under break-even at 60 team-games. Units are notional, flat 1u; nothing is staked. As of '+fdate(asOf)+(all.v?' · '+all.v+' void':'')+(pend?' · '+pend+' pending':'')+'.</p></details>';
+      '<p class="cap">'+verdict+'By-stat rows are display only; the verdict is on the whole tier. The also-met rows are rungs another tier already holds; they count in that tier’s record, never in MM90’s. Best price across Pointsbet, Ladbrokes and Sportsbet at $1.20-1.29 where the minutes model puts P(over) at 90% or more. Break-even is the mean 1 ÷ odds. CONFIRM needs 60+ team-games, hit at or above break-even and the 80% CI floor of the gap above −2pp; REJECT is 3pp+ under break-even at 60 team-games; anything in between is judged again at 120. Units are notional, flat 1u; nothing is staked. As of '+fdate(asOf)+(all.v?' · '+all.v+' void':'')+(pend?' · '+pend+' pending':'')+'.</p></details>';
     bindMm();
   }
   function bindMm(){var f=$('mmFold');if(f)f.addEventListener('toggle',function(){MM_OPEN=this.open})}

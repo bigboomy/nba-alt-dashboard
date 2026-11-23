@@ -3,6 +3,30 @@
  "changes": [
     {
       "date": "2026-11-23",
+      "version": "nba-session v3.35-p4",
+      "component": "engine",
+      "title": "Late returns re-run the game",
+      "change": "When a player who was OUT at the run is no longer OUT 10+ minutes before tip, the game is re-run like a late scratch: anything new is logged as a 0u LSR lean. Original picks and leans stand.",
+      "aim": "Mitch 23 Nov (Norman Powell)."
+    },
+    {
+      "date": "2026-11-23",
+      "version": "nba-session v3.35-p4",
+      "component": "dashboard",
+      "title": "MM90 test extended to 120 when unclear",
+      "change": "If MM90 is neither confirmed nor rejected at 60 team-games, the same test runs again at 120 before Mitch decides.",
+      "aim": "Mitch 23 Nov."
+    },
+    {
+      "date": "2026-11-23",
+      "version": "nba-session v3.35-p4",
+      "component": "engine",
+      "title": "Calibrated minutes-model chance logged (p_mm_cal)",
+      "change": "The board file now also logs the minutes model's chance corrected per stat. At 90%+ the raw model claimed about 95% and landed about 89%; the corrected figure says about 90%. Logging only: MM90 still selects on the raw figure.",
+      "aim": "Mitch 23 Nov. Refit monthly."
+    },
+    {
+      "date": "2026-11-23",
       "version": "nba-session v3.34-p4",
       "component": "engine",
       "title": "Rebound and assist picks logged at 0u",
