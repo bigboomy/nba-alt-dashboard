@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-23",
+      "version": "nba-session v3.39-p4",
+      "component": "engine",
+      "title": "Assists blocked for a few nights after a teammate returns",
+      "change": "When a rotation teammate came back 1-3 games ago and the player's assists ran 15%+ higher without him, assist overs can't be a staked pick or an MM90/HR80/L5P item: logged as a 0u lean tagged RET2:<name> AVOID. Points and rebounds stay display only. Switches itself off if it loses to doing nothing.",
+      "aim": "Mitch 23 Nov (critic: the Davion Mitchell case)."
+    },
+    {
+      "date": "2026-11-23",
       "version": "nba-session v3.38-p4",
       "component": "telegram",
       "title": "Results message shows hit % only, leans first",
