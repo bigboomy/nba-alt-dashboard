@@ -3,6 +3,13 @@
  "changes": [
     {
       "date": "2026-11-24",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "Windows scorecard shows the alone record",
+      "detail": "Each window can now show its alone record (picks where only that window fired) under its name. When the engine gives a promotion verdict, the scorecard uses it: Ready to promote, Passed but waiting on alone sample, or Passed but the alone record does not beat the price."
+    },
+    {
+      "date": "2026-11-24",
       "version": "nba-session v3.40-p4",
       "component": "engine",
       "title": "Windows must earn promotion on their own nights",

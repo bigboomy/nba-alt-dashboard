@@ -408,9 +408,9 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .c3 .pkt{background:var(--accent);color:var(--card);border-radius:5px;padding:1px 6px;letter-spacing:.02em}
 .c3 .avt{background:var(--bad);color:var(--card);border-radius:5px;padding:1px 6px;letter-spacing:.02em}
 .c3.av{box-shadow:inset 0 0 0 2px var(--bad)}
-#winSec tr.woff td{opacity:.6}#winSec tr.wsig td:first-child,#winSec tr.wrdy td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
+#winSec tr.woff td{opacity:.6}#winSec tr.wsig td:first-child,#winSec tr.wrdy td:first-child,#winSec tr.whld td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
 #winSec td{white-space:nowrap;font-variant-numeric:tabular-nums}#winSec td:first-child{white-space:normal;min-width:8em}#winSec th,#winSec td{padding-left:6px;padding-right:6px}#winSec .wmo{font-size:12px;color:var(--muted)}#winSec .wfl{display:inline-block;white-space:nowrap;font:700 11px/1.3 var(--body);border-radius:5px;padding:1px 6px;background:var(--accent);color:var(--card)}
-#winSec tr.woff .wfl{background:var(--muted)}#winSec tr.wpnd .wfl{background:var(--warn);color:var(--card)}
+#winSec tr.woff .wfl{background:var(--muted)}#winSec tr.wpnd .wfl{background:var(--warn);color:var(--card)}#winSec tr.whld .wfl{background:var(--chip);color:var(--text);white-space:normal}
 .c3 b{font:700 25px/1 var(--disp);font-variant-numeric:tabular-nums}
 .c3 i{font:700 18px/1 var(--disp);font-style:normal;font-variant-numeric:tabular-nums;color:var(--text);opacity:.85}
 .c3 em{position:absolute;right:6px;bottom:-9px;font:700 13.5px/1 var(--disp);font-style:normal;color:#fff;background:var(--rc);border-radius:7px;padding:3px 7px;box-shadow:0 0 0 2px var(--card)}
@@ -2127,16 +2127,19 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var rows=codes.map(function(c){var w=WJ.windows[c]||{},r=w.rec||{},n=+r.n||0,act=w.mode==='action';
       var hit=pc(r.hit),be=pc(r.be),gap=pc(r.gap);
       var P=act?w.p_beat:r.p_above,Pv=P===undefined||P===null||P===''?null:+P;
-      var st=w.mode==='off'?'off':w.mode==='pending'?'pnd':(!act&&n>=30&&Pv!==null&&(Pv>.8||Pv<.2))?'sig':(act&&n>=30&&Pv!==null&&Pv>.8)?'rdy':'';if(st)flag++;
-      var lab={pnd:'Waiting for Mitch\u2019s OK',off:'Switched off'+(w.off_at?' '+esc(fdate(String(w.off_at).slice(0,10))):''),sig:'Signal',rdy:'Ready to promote'}[st]||'';
-      return '<tr class="'+(st?'w'+st:'')+'"><td><b>'+esc(c)+'</b> <span class="wmo">'+esc(w.mode||'')+(w.direction&&w.direction!=='watch'?' · '+esc(w.direction):'')+'</span>'+(lab?' <span class="wfl">'+lab+'</span>':'')+(w.text?'<div class="cd-m">'+esc(w.text)+'</div>':'')+'</td>'+
+      var st=w.mode==='off'?'off':w.mode==='pending'?'pnd':(!act&&n>=30&&Pv!==null&&(Pv>.8||Pv<.2))?'sig':(act&&n>=30&&Pv!==null&&Pv>.8)?'rdy':'';
+      var pm=w.promote;if(pm&&st!=='off'&&st!=='pnd')st=pm==='ready'?'rdy':'hld';if(st)flag++;
+      var al=w.alone||{},an=+al.n||0,aw=+al.w||0,alo=+al.l||0,ab=pc(al.be),ap=al.p_beat===undefined||al.p_beat===null||al.p_beat===''?null:+al.p_beat;
+      var alTxt=an?'<div class="cd-m">Alone '+aw+'-'+alo+(al.tg!=null?' ('+(+al.tg)+' tg)':'')+(aw+alo?', '+(100*aw/(aw+alo)).toFixed(0)+'%':'')+(ab!==null?' v '+ab.toFixed(0)+'%':'')+(ap!==null?', P '+ap.toFixed(2):'')+'</div>':'';
+      var lab={pnd:'Waiting for Mitch\u2019s OK',off:'Switched off'+(w.off_at?' '+esc(fdate(String(w.off_at).slice(0,10))):''),sig:'Signal',rdy:'Ready to promote',hld:pm==='waiting on alone sample'?'Passed, waiting on alone sample':'Passed, but alone record doesn’t beat the price'}[st]||'';
+      return '<tr class="'+(st?'w'+st:'')+'"><td><b>'+esc(c)+'</b> <span class="wmo">'+esc(w.mode||'')+(w.direction&&w.direction!=='watch'?' · '+esc(w.direction):'')+'</span>'+(lab?' <span class="wfl">'+lab+'</span>':'')+(w.text?'<div class="cd-m">'+esc(w.text)+'</div>':'')+alTxt+'</td>'+
         '<td>'+(n?(+r.w||0)+'-'+(+r.l||0)+'<div class="mu">'+(+r.tg||0)+' tg</div>':'—')+'</td>'+
         '<td>'+(n&&hit!==null?hit.toFixed(0)+'%':'—')+(n&&be!==null?'<div class="mu">v '+be.toFixed(0)+'%</div>':'')+'</td>'+
         '<td class="'+(gap===null||!n?'':gap>=0?'aut-good':'aut-bad')+'">'+(n&&gap!==null?(gap>=0?'+':'−')+Math.abs(gap).toFixed(1)+'pp':'—')+'</td>'+
         '<td>'+(n&&Pv!==null?Pv.toFixed(2):'—')+'</td></tr>'}).join('');
     box.innerHTML=head+'<div class="aut"><p class="aut-n">One row per window. <b>Action</b> windows change what gets logged (RET1 blocks a pick, FO adds a 0u tier); <b>watch</b> windows only count how items in that situation do. '+
       'W-L counts items, with team-games (tg, the real sample) under it; hit is against break-even (the hit rate the prices need). P is the chance the true hit rate beats break-even (action) or beats the items outside the window (watch). '+
-      'Pending rows are blocks waiting for Mitch\u2019s OK. Highlighted: switched off; watch rows at 30+ items with P over 0.80 or under 0.20 (signal); action rows at 30+ items with P over 0.80 (ready to promote). Mitch decides any change.'+(flag?'':' Nothing highlighted yet.')+'</p>'+
+      'Pending rows are blocks waiting for Mitch\u2019s OK. Highlighted: switched off; watch rows at 30+ items with P over 0.80 or under 0.20 (signal); action rows at 30+ items with P over 0.80 (ready to promote). Where the engine gives its own promotion verdict, that wins: a window that passed on its full record is only ready if its alone record (picks where no other window fired, shown as Alone under the name) also beats the price. Mitch decides any change.'+(flag?'':' Nothing highlighted yet.')+'</p>'+
       '<div class="ts"><table style="min-width:0"><thead><tr><th>Window</th><th>W-L</th><th>Hit</th><th>Gap</th><th>P</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
       '<p class="cap">Updated '+esc(String(WJ.updated||'').replace('T',' ').slice(0,16))+'. Display only.</p></div></details>';
     bindWin();
