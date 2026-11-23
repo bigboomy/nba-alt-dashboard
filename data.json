@@ -1,7 +1,7 @@
 {
   "book": "Pointsbet AU, decimal odds",
   "date": "Mon 23 Nov 2026",
-  "engine": "nba-session v3.33-p4",
+  "engine": "nba-session v3.35-p4",
   "games": [
     {
       "abs": {
@@ -5201,9 +5201,713 @@
         ]
       },
       "tip": "12:00"
+    },
+    {
+      "abs": {
+        "BOS": [
+          {
+            "min": 30.2,
+            "name": "Paul George",
+            "roles": [
+              "SC2"
+            ]
+          }
+        ],
+        "GSW": []
+      },
+      "b2b": [
+        "BOS"
+      ],
+      "box5": {
+        "Neemias Queta": {
+          "gp": 15,
+          "l5": {
+            "ast": 2.2,
+            "blk": 1.5,
+            "fg3": 0.8,
+            "fg3a": 1.0,
+            "fg_pct": 60.0,
+            "fga": 7.5,
+            "fgm": 4.5,
+            "fta": 5.2,
+            "ftm": 3.0,
+            "min": 25.8,
+            "pts": 12.8,
+            "reb": 9.0,
+            "stl": 0.8,
+            "to": 2.2
+          },
+          "n": 4,
+          "season": {
+            "ast": 1.9,
+            "blk": 1.3,
+            "fg3": 0.3,
+            "fg3a": 0.5,
+            "fg_pct": 57.1,
+            "fga": 6.5,
+            "fgm": 3.7,
+            "fta": 3.7,
+            "ftm": 2.2,
+            "min": 22.8,
+            "pts": 10.0,
+            "reb": 6.9,
+            "stl": 0.3,
+            "to": 1.3
+          },
+          "tg": 5
+        },
+        "Sam Hauser": {
+          "gp": 16,
+          "l5": {
+            "ast": 1.2,
+            "blk": 0.2,
+            "fg3": 3.0,
+            "fg3a": 6.0,
+            "fg_pct": 48.6,
+            "fga": 7.0,
+            "fgm": 3.4,
+            "fta": 0.4,
+            "ftm": 0.4,
+            "min": 21.6,
+            "pts": 10.2,
+            "reb": 3.8,
+            "stl": 1.0,
+            "to": 0.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.2,
+            "blk": 0.1,
+            "fg3": 2.5,
+            "fg3a": 5.5,
+            "fg_pct": 47.6,
+            "fga": 6.4,
+            "fgm": 3.1,
+            "fta": 0.1,
+            "ftm": 0.1,
+            "min": 21.0,
+            "pts": 8.8,
+            "reb": 3.2,
+            "stl": 0.4,
+            "to": 0.1
+          },
+          "tg": 5
+        },
+        "Will Richard": {
+          "gp": 15,
+          "l5": {
+            "ast": 1.0,
+            "blk": 0.0,
+            "fg3": 1.4,
+            "fg3a": 3.8,
+            "fg_pct": 54.8,
+            "fga": 8.4,
+            "fgm": 4.6,
+            "fta": 2.2,
+            "ftm": 1.8,
+            "min": 25.2,
+            "pts": 12.4,
+            "reb": 3.2,
+            "stl": 1.4,
+            "to": 1.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.0,
+            "blk": 0.2,
+            "fg3": 1.1,
+            "fg3a": 2.7,
+            "fg_pct": 51.2,
+            "fga": 5.5,
+            "fgm": 2.8,
+            "fta": 1.1,
+            "ftm": 0.9,
+            "min": 19.8,
+            "pts": 7.5,
+            "reb": 2.3,
+            "stl": 0.7,
+            "to": 0.9
+          },
+          "tg": 5
+        }
+      },
+      "cov": {
+        "players": [
+          18,
+          19
+        ],
+        "skipped": [
+          "De'Anthony Melton PTS (no rung priced 1.40+ at or below std)",
+          "Hugo Gonzalez Pena PTS (no ESPN match)",
+          "Hugo Gonzalez Pena REB (no ESPN match)",
+          "Hugo Gonzalez Pena AST (no ESPN match)"
+        ],
+        "stats": [
+          44,
+          48
+        ]
+      },
+      "ctx": "Out TOP3: Paul George (BOS), Stephen Curry (GSW); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 18 of 19 players (44 of 48 player-stats); skipped: De'Anthony Melton PTS (no rung priced 1.40+ at or below std), Hugo Gonzalez Pena PTS (no ESPN match), Hugo Gonzalez Pena REB (no ESPN match), Hugo Gonzalez Pena AST (no ESPN match)",
+      "cx": {
+        "Neemias Queta|PTS|6.5|MM90": {
+          "best_book": "ladbrokes",
+          "best_price": 1.24,
+          "mm_min": 28.76,
+          "mm_mu": 13.542,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9244,
+          "p_pin": 0.7944,
+          "p_wowy": 0.9233,
+          "pin_edge_pp": -1.2,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.336,
+          "wowy_keys": "Paul George",
+          "wowy_mu": 13.501
+        },
+        "Sam Hauser|PTS|4.5|MM90": {
+          "best_book": "betr",
+          "best_price": 1.22,
+          "mm_min": 25.68,
+          "mm_mu": 11.57,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.942,
+          "p_pin": 0.8425,
+          "p_wowy": 0.8652,
+          "pin_edge_pp": 2.3,
+          "pin_line": 8.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.082,
+          "wowy_keys": "Paul George",
+          "wowy_mu": 9.343
+        },
+        "Sam Hauser|PTS|6.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.53,
+          "mm_min": 25.68,
+          "mm_mu": 11.57,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8437,
+          "p_pin": 0.6781,
+          "p_wowy": 0.7053,
+          "pin_edge_pp": 2.5,
+          "pin_line": 8.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.082,
+          "wowy_keys": "Paul George",
+          "wowy_mu": 9.343
+        },
+        "Sam Hauser|PTS|7.5|L5P": {
+          "best_book": "tabtouch",
+          "best_price": 1.72,
+          "mm_min": 25.68,
+          "mm_mu": 11.57,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7763,
+          "p_pin": 0.5883,
+          "p_wowy": 0.6141,
+          "pin_edge_pp": -1.8,
+          "pin_line": 8.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.082,
+          "wowy_keys": "Paul George",
+          "wowy_mu": 9.343
+        },
+        "Will Richard|PTS|6.5|L5P": {
+          "best_book": "pointsbet",
+          "best_price": 1.63,
+          "mm_min": 23.75,
+          "mm_mu": 8.719,
+          "n_books": 3,
+          "opp_lift": 0.074,
+          "opp_out": "SC2:Paul George",
+          "p_mm": 0.6482,
+          "p_pin": "",
+          "p_wowy": 0.6482,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 8.719
+        }
+      },
+      "engine": "nba-session v3.35-p4",
+      "id": "BOS@GSW",
+      "leans": [
+        {
+          "alt": 6.5,
+          "e": 8.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[ROLE?]",
+            "B2B",
+            "C0.73",
+            "Z0.78",
+            "TMO",
+            "PIN+2.5"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            14,
+            9,
+            12,
+            8,
+            8
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Jayson Tatum"
+              ]
+            },
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Paul George"
+              ]
+            }
+          ],
+          "o": 1.53,
+          "opp": "GSW 15th fewest PTS allowed · pace -2.0",
+          "p": "Sam Hauser",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 8.5,
+          "t": "BOS"
+        },
+        {
+          "alt": 6.5,
+          "e": -1.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.92",
+            "[ROLE?]",
+            "B2B",
+            "C0.62",
+            "Z0.85",
+            "TMO",
+            "PIN-1.2"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            15,
+            17,
+            null,
+            8,
+            11
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Jayson Tatum"
+              ]
+            },
+            null,
+            {
+              "d": "2026-11-16",
+              "dnp": 1
+            },
+            null,
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Paul George"
+              ]
+            }
+          ],
+          "o": 1.24,
+          "opp": "GSW 15th fewest PTS allowed · pace -2.0",
+          "p": "Neemias Queta",
+          "s": "PTS",
+          "st": "3.5",
+          "std": 10.5,
+          "t": "BOS"
+        },
+        {
+          "alt": 4.5,
+          "e": 3.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.94",
+            "[ROLE?]",
+            "B2B",
+            "C0.51",
+            "Z1.43",
+            "TMO",
+            "PIN+2.3"
+          ],
+          "h": "90% (9/10)",
+          "l5": [
+            14,
+            9,
+            12,
+            8,
+            8
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Jayson Tatum"
+              ]
+            },
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Paul George"
+              ]
+            }
+          ],
+          "o": 1.22,
+          "opp": "GSW 15th fewest PTS allowed · pace -2.0",
+          "p": "Sam Hauser",
+          "s": "PTS",
+          "st": "4.5",
+          "std": 8.5,
+          "t": "BOS"
+        },
+        {
+          "alt": 7.5,
+          "e": 3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "L5P",
+            "L5LOW8",
+            "[ROLE?]",
+            "B2B",
+            "C0.84",
+            "Z0.45",
+            "TMO",
+            "PIN-1.8"
+          ],
+          "h": "80% (8/10)",
+          "l5": [
+            14,
+            9,
+            12,
+            8,
+            8
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Jayson Tatum"
+              ]
+            },
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-11",
+              "out": [
+                "Paul George"
+              ]
+            }
+          ],
+          "o": 1.65,
+          "opp": "GSW 15th fewest PTS allowed · pace -2.0",
+          "p": "Sam Hauser",
+          "s": "PTS",
+          "st": "2.5",
+          "std": 8.5,
+          "t": "BOS"
+        },
+        {
+          "alt": 6.5,
+          "e": -3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "L5P",
+            "L5LOW7",
+            "[ROLE?]",
+            "OPP-B2B",
+            "MU-5%",
+            "DOG7",
+            "OT-ADJ",
+            "MT+",
+            "C0.82",
+            "Z0.28",
+            "TMO",
+            "OPP-OUT:SC2"
+          ],
+          "h": "60% (6/10)",
+          "l5": [
+            15,
+            20,
+            11,
+            7,
+            9
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Stephen Curry"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Stephen Curry"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Stephen Curry"
+              ]
+            },
+            {
+              "d": "2026-11-13",
+              "out": [
+                "Stephen Curry"
+              ]
+            },
+            null
+          ],
+          "o": 1.63,
+          "opp": "BOS 2nd fewest PTS allowed · pace -2.0",
+          "p": "Will Richard",
+          "s": "PTS",
+          "st": "3",
+          "std": 7.5,
+          "t": "GSW"
+        }
+      ],
+      "mkt": 210.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "mx": {
+        "exp_pace": 100.1,
+        "home_spread": 8.5,
+        "lg": {
+          "3PM": 13.1,
+          "AST": 25.8,
+          "PTS": 111.1,
+          "REB": 42.9,
+          "pace": 102.1
+        },
+        "teams": {
+          "BOS": {
+            "allow100": {
+              "3PM": 13.4,
+              "AST": 25.3,
+              "PTS": 107.5,
+              "REB": 43.6
+            },
+            "allow_rk": {
+              "3PM": 10,
+              "AST": 22,
+              "PTS": 29,
+              "REB": 6
+            },
+            "out": [
+              {
+                "min": 30.2,
+                "name": "Paul George",
+                "roles": [
+                  "SC2"
+                ]
+              }
+            ],
+            "pace": 100.3,
+            "rk": {
+              "ast": 15,
+              "blk": 17,
+              "dreb": 13,
+              "fg3_pct": 11,
+              "fg3a": 2,
+              "fg3m": 1,
+              "fg_pct": 27,
+              "ft_pct": 21,
+              "fta": 24,
+              "net": 2,
+              "opp_fg3_pct": 5,
+              "opp_fg_pct": 1,
+              "oppg": 1,
+              "oreb": 2,
+              "pace": 28,
+              "pf": 18,
+              "ppg": 17,
+              "reb": 8,
+              "stl": 10,
+              "tov": 9,
+              "ts_pct": 19
+            },
+            "v": {
+              "ast": 26.5,
+              "ats": "8-8-0",
+              "ats_away": "5-4-0",
+              "ats_home": "3-4-0",
+              "ats_l10": "5-5-0",
+              "away": "5-4",
+              "blk": 4.7,
+              "dreb": 31.6,
+              "fg3_pct": 36.1,
+              "fg3a": 44.8,
+              "fg3m": 16.2,
+              "fg_pct": 44.5,
+              "ft_pct": 76.3,
+              "fta": 22.2,
+              "gp": 16,
+              "home": "6-1",
+              "l10": "6-4",
+              "net": 9.8,
+              "opp_fg3_pct": 33.2,
+              "opp_fg_pct": 42.3,
+              "oppg": 103.0,
+              "oreb": 13.9,
+              "ou": "5-11-0",
+              "ou_l10": "3-7-0",
+              "pace": 99.2,
+              "pf": 22.1,
+              "ppg": 112.8,
+              "reb": 45.4,
+              "rec": "11-5",
+              "stl": 8.5,
+              "tov": 14.2,
+              "ts_pct": 56.9
+            }
+          },
+          "GSW": {
+            "allow100": {
+              "3PM": 13.1,
+              "AST": 26.6,
+              "PTS": 111.2,
+              "REB": 42.8
+            },
+            "allow_rk": {
+              "3PM": 16,
+              "AST": 4,
+              "PTS": 16,
+              "REB": 18
+            },
+            "out": [],
+            "pace": 101.8,
+            "rk": {
+              "ast": 13,
+              "blk": 3,
+              "dreb": 21,
+              "fg3_pct": 10,
+              "fg3a": 7,
+              "fg3m": 6,
+              "fg_pct": 25,
+              "ft_pct": 4,
+              "fta": 11,
+              "net": 18,
+              "opp_fg3_pct": 14,
+              "opp_fg_pct": 18,
+              "oppg": 16,
+              "oreb": 7,
+              "pace": 18,
+              "pf": 15,
+              "ppg": 18,
+              "reb": 14,
+              "stl": 10,
+              "tov": 23,
+              "ts_pct": 13
+            },
+            "v": {
+              "ast": 27.1,
+              "ats": "8-8-0",
+              "ats_away": "3-6-0",
+              "ats_home": "5-2-0",
+              "ats_l10": "4-6-0",
+              "away": "2-7",
+              "blk": 5.7,
+              "dreb": 31.1,
+              "fg3_pct": 36.4,
+              "fg3a": 40.9,
+              "fg3m": 14.9,
+              "fg_pct": 44.7,
+              "ft_pct": 80.7,
+              "fta": 25.3,
+              "gp": 16,
+              "home": "6-1",
+              "l10": "5-5",
+              "net": -0.9,
+              "opp_fg3_pct": 35.3,
+              "opp_fg_pct": 46.5,
+              "oppg": 113.6,
+              "oreb": 12.9,
+              "ou": "7-9-0",
+              "ou_l10": "4-6-0",
+              "pace": 101.7,
+              "pf": 21.8,
+              "ppg": 112.7,
+              "reb": 44.1,
+              "rec": "8-8",
+              "stl": 8.5,
+              "tov": 16.6,
+              "ts_pct": 57.7
+            }
+          }
+        }
+      },
+      "out": {
+        "BOS": [
+          "Mitchell Robinson (Robinson (illness) has been ruled out for Sunday's game against Golden State, Justin Turpin of WEEI.com reports.)",
+          "Paul George (George (rest) has been ruled out for Sunday's game against Golden State, Justin Turpin of WEEI.com reports.)"
+        ],
+        "GSW": [
+          "Brandon Williams (Williams (hamstring) is out for Sunday's game against the Celtics.)",
+          "Jimmy Butler III (Butler (knee) could return sometime between January and February as he continues recovering from a torn right ACL, Anthony Slater of ESPN reports.)",
+          "Kristaps Porzingis (Porzingis announced on his social media that he's stepping away from basketball.)",
+          "Moses Moody (Moody (knee) is progressing toward a potential return between December and January after rupturing his left patellar tendon in March, Anthony Slater of ESPN reports.)",
+          "Stephen Curry (Curry has been diagnosed with an oblique abdominal tear and will be re-evaluated in two weeks, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "BOS": [],
+        "GSW": []
+      },
+      "tip": "12:30"
     }
   ],
-  "generated": "2026-11-22T23:30:02Z",
+  "generated": "2026-11-23T00:05:02Z",
   "totals": [
     [
       "DET@ATL",
@@ -5234,6 +5938,11 @@
       "IND@NYK",
       null,
       212.5
+    ],
+    [
+      "BOS@GSW",
+      null,
+      210.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
