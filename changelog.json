@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
     {
+      "date": "2026-11-23",
+      "version": "nba-session v3.38-p4",
+      "component": "telegram",
+      "title": "Results message shows hit % only, leans first",
+      "change": "The nightly results message now opens with All (today's hits and %, plus the rolling 3-day %), then Leans, then Picks, then the best and worst lean type for the day. No break-even, pp, units or ROI.",
+      "aim": "Mitch 23 Nov: picks are rare, so leans get the attention."
+    },
+    {
       "date": "2026-11-24",
       "version": "dashboard",
       "component": "dashboard",
