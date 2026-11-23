@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
     {
+      "date": "2026-11-23",
+      "version": "nba-session v3.38-p4",
+      "component": "engine",
+      "title": "Condition windows: PTS-TOUGH, REB-OPPOUT, sweep candidates",
+      "change": "Points overs v a tough matchup (env <= 0.97) and rebound overs when an opposing key player is out each log the highest short rung ($1.20-1.34) as a 0u WIN lean tagged WIN:<id>. Windows the daily critic sweep starts apply automatically when they add 0u leans; a sweep window that would block picks waits for Mitch's OK. All switch themselves off if they lose to doing nothing.",
+      "aim": "Mitch 23 Nov: act on what the board scan finds, with the kill switch as the guard."
+    },
+    {
       "date": "2026-11-24",
       "version": "dashboard",
       "component": "dashboard",
