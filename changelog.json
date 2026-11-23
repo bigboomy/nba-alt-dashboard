@@ -3,6 +3,22 @@
  "changes": [
     {
       "date": "2026-11-23",
+      "version": "nba-session v3.36-p4",
+      "component": "engine",
+      "title": "Window layer: RET1 block and FO REB/AST leans",
+      "change": "RET1: when a rotation teammate is back tonight after missing the last game and the player's stat ran 15%+ higher without him, overs on that stat can't be a staked pick or an MM90/HR80/L5P item (logged as a 0u lean tagged RET1:<name> AVOID). FO: when a 20+ minute teammate is out for the first time, the highest REB/AST rung at $1.20-1.34 is logged as a 0u lean. Every window and display flag keeps its own record from 24 Nov; an action window that loses to its counterfactual (15+ items, 6+ team-games, P < 0.2) switches itself off with a Telegram note.",
+      "aim": "Mitch 23 Nov (critic WINDOW-2026-11-23): returning players' impact should have been caught; no silent display flags."
+    },
+    {
+      "date": "2026-11-23",
+      "version": "nba-session v3.35-p4",
+      "component": "engine",
+      "title": "p_mm_mix calibration column",
+      "change": "Board and data.json (pmx) log a minutes-mixture P(over): the minutes model averaged over how actual minutes have varied from projection, fitted on the engine's own projections. Display and logging only.",
+      "aim": "Critic MM-MIX-2026-11-23 (Mitch's go-ahead)."
+    },
+    {
+      "date": "2026-11-23",
       "version": "dashboard",
       "component": "dashboard",
       "title": "Tile layout for picks and leans",
