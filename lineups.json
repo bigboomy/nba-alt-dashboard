@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-23T23:35:02Z",
+ "generated": "2026-11-23T23:40:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Brandon Miller",
     "Sion James",
@@ -11,7 +11,7 @@
     "Naz Reid",
     "Moussa Diabaté"
    ],
-   "at": "2026-11-23T22:30:02Z"
+   "at": "2026-11-23T23:40:02Z"
   },
   "MEM": {
    "confirmed": false,
@@ -158,6 +158,9 @@
   }
  },
  "items": {
+  "Naz Reid|CHA": 1,
+  "Moussa Diabate|CHA": 1,
+  "Ryan Kalkbrenner|CHA": 0,
   "Sidy Cissoko|POR": 1,
   "Donovan Clingan|POR": 1
  }
