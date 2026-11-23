@@ -2,6 +2,13 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
     {
+      "date": "2026-11-24",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "v3.36 windows on the dashboard",
+      "detail": "Adds the FO tier (own fold and scoreboard row), a red Avoid pill on AVOID items, code meanings for FO, RET1, AVOID, RET2 and RU, the minutes-mixture figure beside PMM, and a Windows scorecard fold from windows.json that highlights switched-off, signal and ready-to-promote rows."
+    },
+    {
       "date": "2026-11-23",
       "version": "nba-session v3.37-p4",
       "component": "engine",
