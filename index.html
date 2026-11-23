@@ -86,7 +86,7 @@ details.lf>summary::-webkit-details-marker{display:none}details.lf>summary::afte
 details.lf>summary span{color:var(--muted)}details.lf>summary b{color:var(--text)}table.pt .opp{font-size:.74rem;color:var(--muted)}p.lfd{margin:0 6px 4px;font-size:.74rem;color:var(--muted)}
 @media (prefers-color-scheme:dark){table.pt tr.lean td{background:rgba(255,255,255,.04)}.chip.ln{background:#2e2a52;color:#c9c3ff}table.gi tr.out td{color:#ff8a80}}
 .prow{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;padding:8px 14px;border-top:1px solid var(--line)}
-.prow .meta{margin-left:auto}
+.prow .meta{margin-left:auto}.gsd{padding:0 12px 6px}.sdl{display:block;flex-basis:100%;font-size:.8rem;color:var(--muted);line-height:1.35}.sdl b{color:var(--text);font-weight:600}.sdl .sdw{color:var(--text);white-space:nowrap}.sdl .sdr{white-space:nowrap}
 /* 21 Nov (Mitch): upcoming matchups from schedule.json (written by the 18:07 resolve, before any odds) */
 .umx>p.ucap{margin:0;padding:0 14px 8px;font-size:.78rem;color:var(--muted)}details.umg{border-top:1px solid var(--line)}details.umg>summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center;min-height:44px;padding:4px 14px}details.umg>summary::-webkit-details-marker{display:none}details.umg>summary b{font-size:1rem}details.umg>summary span{color:var(--muted);font-size:.8rem}details.umg>summary::after{content:'';margin-left:auto;width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s;flex:none}details.umg[open]>summary::after{transform:rotate(45deg)}details.umg>.gw{padding:0 10px 10px}
 .gh{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
@@ -1392,7 +1392,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var allDone=g.picks.concat(g.leans).every(function(b){return resFor(b)});
     var tpTxt=!gl.length&&allDone&&g.leans.length?'Final':gl.length&&gd===gl.length?'Final'+(np?' · picks '+gw.pw+'-'+gw.pl:'')+(gl.length>np?' · leans '+gw.lw+'-'+gw.ll:''):'tip '+esc(g.tip);
     var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp'+(tpTxt.charAt(0)==='F'?' fin':'')+'">'+tpTxt+'</span><span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+(nl-nol)+' lean'+(nl-nol===1?'':'s')+(nh+nmm+nl5+nfo+nwt+npn+nls?' <span class="mu">(incl. '+[[nh,'HR80'],[nmm,'MM90'],[nl5,'L5P'],[nfo,'FO'],[nwt,'WIN'],[npn,'PIN'],[nls,'LSR']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+
-      (nol?' <span class="mu">· '+nol+' killed OUTLIFT, record only</span>':'')+'</span></div>';
+      (nol?' <span class="mu">· '+nol+' killed OUTLIFT, record only</span>':'')+'</span></div>'+(function(x){return x?'<div class="gsd">'+x+'</div>':''})(seedLine(g.id,g.mx));
     /* Late return (Mitch 23 Nov): a player OUT at the run is back in. These bets were built with him out. */
     var rt=RETS[g.id]||[];
     if(rt.length) head+='<p class="lret" role="note"><b>Late return:</b> '+rt.map(function(o){return esc(o.player)+' ('+esc(o.team)+')'}).join(', ')+
@@ -1416,11 +1416,21 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   /* Today's games (Mitch, 5 Nov): from the first slate run the slate shows today's games from schedule.json.
      A game not yet analysed shows as "picks ~HH:MM" (about 90 min before tip); once a tick analyses it, its card replaces that line.
      The previous day's games are cleared at the first run; a day with no games shows "No NBA games today". */
+  /* Seed and expected win % (Mitch 24 Nov, pipeline a7a5c1e): mx.seed {TEAM:{conf,seed,rec}}, mx.win {home,away,src}. Both optional. */
+  function ordn(n){n=+n;var v=n%100;return n+((v>10&&v<14)?'th':({1:'st',2:'nd',3:'rd'}[n%10]||'th'))}
+  function seedLine(id,m){
+    if(!m) return '';var t=String(id).split('@'),A=t[0]||'',H=t[1]||'',sd=m.seed||{},w=m.win||null,parts=[];
+    function one(k){var x=sd[k];if(!x||x.seed==null) return esc(k);return '<b>'+esc(k)+'</b> '+ordn(x.seed)+(x.conf?' '+esc(x.conf):'')+(x.rec?' <span class="sdr">('+esc(x.rec)+')</span>':'')}
+    if(sd[A]||sd[H]) parts.push(one(A)+' v '+one(H));
+    if(w&&w.home!=null&&w.away!=null){var hf=+w.home>=+w.away,f=hf?H:A,pc=hf?+w.home:+w.away;
+      parts.push('<span class="sdw">'+esc(f)+' '+pc.toFixed(0)+'% to win'+(w.src==='market'?' (market)':w.src==='model'?' (est.)':'')+'</span>')}
+    return parts.length?'<span class="sdl">'+parts.join(' · ')+'</span>':'';
+  }
   function todaySched(){
     if(!SCHED||!Array.isArray(SCHED.games)) return null;
     var n=melNow(),out=[];
     SCHED.games.forEach(function(x){var d=new Date(x.tip_utc);if(isNaN(d))return;var m=melOf(d);if(m.iso!==n.iso)return;
-      out.push({id:(TEAMC[x.away]||x.away)+'@'+(TEAMC[x.home]||x.home),min:m.min})});
+      out.push({id:(TEAMC[x.away]||x.away)+'@'+(TEAMC[x.home]||x.home),min:m.min,mx:x.mx||null})});
     return out.sort(function(a,b){return a.min-b.min});
   }
   function pendHtml(){
@@ -1430,7 +1440,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(!left.length) return '';
     return '<section class="game pend"><div class="gh"><div><h2>Still to come</h2><p>'+left.length+' game'+(left.length===1?'':'s')+' not analysed yet</p></div></div>'+
       left.map(function(x){var fr=firstRun(x.min),late=x.min-30<=n.min;
-        return '<div class="prow"><b>'+esc(x.id)+'</b><span>tip '+hhmm(x.min)+'</span><span class="meta">'+(late?'tipped / inside 30 min, not analysed':fr===null?'outside the run window':fr<=n.min?'due now, posting soon':'picks ~'+hhmm(fr))+'</span></div>'}).join('')+'</section>';
+        return '<div class="prow"><b>'+esc(x.id)+'</b><span>tip '+hhmm(x.min)+'</span><span class="meta">'+(late?'tipped / inside 30 min, not analysed':fr===null?'outside the run window':fr<=n.min?'due now, posting soon':'picks ~'+hhmm(fr))+'</span>'+seedLine(x.id,x.mx)+'</div>'}).join('')+'</section>';
   }
   /* Upcoming matchups (Mitch 21 Nov: "I want the next day's matchups to show up when the resolve is run ... I don't think
      that requires any odds"). Every schedule.json game still to tip that the slate hasn't analysed yet, as a tap-to-open

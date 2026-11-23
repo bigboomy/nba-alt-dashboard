@@ -3,6 +3,13 @@
  "changes": [
     {
       "date": "2026-11-24",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "Seed and win chance on games",
+      "detail": "Still to come rows and game cards show each team's conference seed and record, and the favourite's chance to win, marked market or est. Nothing shows when the slate files have no seed or win data."
+    },
+    {
+      "date": "2026-11-24",
       "version": "nba-session v3.40-p4",
       "component": "engine",
       "title": "Conference seed and expected win % on every matchup",
