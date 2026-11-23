@@ -388,6 +388,11 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .cl.took{color:var(--good)}.cl.pass{color:var(--warn)}
 .bet .rc{cursor:pointer}
 .ctoast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(72px + env(safe-area-inset-bottom,0px));z-index:31;max-width:min(92vw,420px);padding:10px 16px;border-radius:10px;background:var(--text);color:var(--bg);font:600 14px/1.35 var(--body);text-align:center}
+
+/* 23 Nov (Mitch): starter badge. Outline = regular starter (4+ of last 5), filled = confirmed starting, warn = confirmed bench */
+.sb{flex:none;display:inline-block;margin-left:6px;font:700 .7rem/1.5 var(--body);border:1.5px solid var(--accent);color:var(--accent);border-radius:9px;padding:0 6px;vertical-align:2px}
+.sb.on{background:var(--accent);color:var(--card)}
+.sb.off{border-color:var(--warn);color:var(--warn)}
 </style>
 <script>
 /* Light/dark toggle (Mitch 21 Nov: "I want the dashboard to be light for me"). Saved per device in localStorage;
@@ -534,6 +539,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <tr><td class="lgc">Context line</td><td>Minutes model %, with/without % (×lift), Pinnacle fair %, opponent outs, best book. Shadow numbers: they don&#x27;t move the pick.</td><td class="lge">Display</td></tr>
   <tr data-re="^(W|L|PUSH|VOID)( ·|$)"><td class="lgc">W · L · PUSH · VOID</td><td>Settled result after the resolve, with the actual stat. VOID = did not play.</td><td class="lge">Result</td></tr>
   <tr data-re="^(Taken|Passed)$"><td class="lgc">✅ Taken / 🚫 Passed</td><td>Your call on a pick or lean. Tap the ring to cycle: taken, passed, no call. A pass locks at tip.</td><td class="lge"></td></tr>
+  <tr data-re="^(Starter|Starting|Bench tonight)$"><td class="lgc">Starter / Starting / Bench tonight</td><td>Starter = started 4 or more of his team's last 5. Starting = in tonight's confirmed starting five (about 30 min before tip). Bench tonight = lineups confirmed and he's not in them.</td><td class="lge"></td></tr>
   </tbody></table></div></details>
 
   <details class="fold inner">
@@ -898,7 +904,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return {p:String(p.p),t:str(p.t,''),s:String(p.s),alt:alt,o:o,e:e,h:str(p.h,'—'),stN:st===null?0:st,opp:str(p.opp,'—'),f:Array.isArray(p.f)?p.f.map(String):[],
       l5:Array.isArray(p.l5)?p.l5.map(function(v){return v===null?null:Number(v)}).filter(function(v){return v===null||isFinite(v)}).slice(0,5):[],
       l5x:Array.isArray(p.l5x)&&Array.isArray(p.l5)&&p.l5x.length===p.l5.length?p.l5x.slice(0,5):[],
-      sa:(sa!==null&&so!==null)?sa:null,so:(sa!==null&&so!==null)?so:null};
+      sa:(sa!==null&&so!==null)?sa:null,so:(sa!==null&&so!==null)?so:null,
+      gs:(function(v){return v!==null&&v>=0&&v<=5?v:null})(num(p.gs)),lu:p.lu===1||p.lu===0?p.lu:null};
   }
   function normGame(g){
     if(!g||typeof g!=='object'||!str(g.id,'')) return null;
@@ -1161,6 +1168,15 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return '<span class="ring" role="img" aria-label="Hit chance '+sc+' out of 10 (about '+Math.round(r*100)+'%)"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.5" class="rt"/>'+
       '<circle cx="18" cy="18" r="15.5" class="rf" style="stroke:'+ringCol(r)+'" stroke-dasharray="'+(C*r).toFixed(1)+' '+C+'"/></svg><b>'+sc+'</b></span>'}
   function knLine(b){var kn=hitKN(b.h);return kn?'<p class="kn">Last '+kn[1]+' games: cleared '+kn[0]+' of '+kn[1]+'. Hit chance '+(hitP(b)*10).toFixed(1)+'/10 is the engine\'s estimate (price plus edge).</p>':''}
+  /* Mitch 23 Nov: starter badge. gs = starts in team's last 5 (set at posting), lu = confirmed lineup (1 in, 0 out; pre-tip tick).
+     Confirmed lineup wins over the recent-starts guess. Nothing shows while the fields are missing. */
+  function stState(arr){var gs=null,lu=null;arr.forEach(function(b){if(b.gs!==null&&b.gs!==undefined)gs=Math.max(gs===null?0:gs,b.gs);if(b.lu!==null&&b.lu!==undefined)lu=b.lu});
+    return lu===1?'on':lu===0&&gs!==null&&gs>=4?'off':lu===null&&gs!==null&&gs>=4?'reg':''}
+  function sbHtml(arr){var k=stState(arr),gs=null;arr.forEach(function(b){if(b.gs!=null)gs=b.gs});
+    return k==='on'?'<span class="sb on" title="In tonight\u2019s confirmed starting five">Starting</span>':
+      k==='off'?'<span class="sb off" title="Lineups confirmed: not starting tonight'+(gs!==null?' (started '+gs+' of last 5)':'')+'">Bench tonight</span>':
+      k==='reg'?'<span class="sb reg" title="Started '+gs+' of his team\u2019s last 5. Lineup not confirmed yet">Starter</span>':''}
+  function sbAria(arr){var k=stState(arr);return k==='on'?', starting tonight':k==='off'?', not starting tonight':k==='reg'?', regular starter':''}
   function stPill(s){return '<span class="stn '+(STC[s]||'oth')+'">'+esc(STW[s]||s)+'</span>'}
   function l5Note(t){if(!t) return '';if(t.dnp) return 'did not play';var a=[];if(t.out&&t.out.length)a.push(t.out.join(' and ')+' out');if(t.ot)a.push(t.ot>1?t.ot+' overtimes':'overtime');return a.join(', ')}
   function l5Html(p){if(!p.l5||!p.l5.length) return '';var L=p.l5.slice().reverse(),X=(p.l5x&&p.l5x.length===p.l5.length?p.l5x:[]).slice().reverse();
@@ -1202,13 +1218,13 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=(P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'')+(P.bs.map(function(b){return tmBack(g,b)}).filter(Boolean)[0]||'');
       var rows=P.bs.map(function(b,j){var x=resFor(b),k=kindTag(b),det='';try{det='<p class="kt"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span> '+esc(KGLOSS[k]||'')+'</p>'+knLine(b)+tileDet(b,g,gi)+'<p class="gl">Edge = the model\'s chance minus the chance the price implies. Stars = confidence (5 is highest).</p>'}catch(e){}
         var kl=b.f.indexOf('OUTLIFT')>=0,sx=scrOf(g,b.p),cl=callOf(g,b);
-        return '<button class="bet'+(kl?' killed':'')+(sx?' scr':'')+callCls(cl)+'" type="button" aria-label="'+betLabel(b)+(kl?', killed OUTLIFT tier, record only':'')+(sx?', late scratch, ruled out':'')+callAria(cl)+'" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'" data-g="'+esc(g.id)+'"><span class="rc">'+ringHtml(b)+'</span>'+
+        return '<button class="bet'+(kl?' killed':'')+(sx?' scr':'')+callCls(cl)+'" type="button" aria-label="'+betLabel(b)+(kl?', killed OUTLIFT tier, record only':'')+(sx?', late scratch, ruled out':'')+callAria(cl)+sbAria([b])+'" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'" data-g="'+esc(g.id)+'"><span class="rc">'+ringHtml(b)+'</span>'+
           '<span class="sl">'+stPill(b.s)+(kl?'<span class="kx">killed</span>':'')+callPill(cl)+l5Html(b)+'</span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span></button>'+
           '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+det+'</div>'}).join('');
       var sn='';try{sn=scoutNote(g,P)}catch(e){}
       var b5='';try{b5=box5Html(g,P,sn)}catch(e){}
       var sx=scrOf(g,P.n);
-      return '<div class="pl'+(sx?' scr':'')+'"><div class="nm"><strong>'+esc(P.n)+'</strong>'+(sx?'<span class="sx" title="Ruled '+esc(sx.status||'OUT')+(sx.mins_to_tip!=null?', '+esc(sx.mins_to_tip)+' min before tip':'')+'">Late scratch</span>':'')+'<span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+b5+rows+'</div>'}).join('');
+      return '<div class="pl'+(sx?' scr':'')+'"><div class="nm"><strong>'+esc(P.n)+'</strong>'+sbHtml(P.bs)+(sx?'<span class="sx" title="Ruled '+esc(sx.status||'OUT')+(sx.mins_to_tip!=null?', '+esc(sx.mins_to_tip)+' min before tip':'')+'">Late scratch</span>':'')+'<span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+b5+rows+'</div>'}).join('');
   }
   document.addEventListener('click',function(ev){
     var t=ev.target.closest&&ev.target.closest('.bet[data-tk]');if(!t) return;
@@ -1316,8 +1332,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       :'<h2>Best leans tonight</h2><p class="bsub">No pick cleared every gate. Highest chance first, tracked at 0u, never staked. Tap one to see it in its game.</p>')+
       '<div class="pls">'+ringKey(top.map(function(x){return x.b}))+BH+top.map(function(x){var b=x.b;
         var sx=scrOf(x.g,b.p),cl=callOf(x.g,b);
-        return '<button class="bet bl'+(sx?' scr':'')+callCls(cl)+'" type="button" aria-label="'+betLabel(b,x.g.id)+(sx?', late scratch, ruled out':'')+callAria(cl)+', open in its game" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'"><span class="rc">'+ringHtml(b)+'</span>'+
-          '<span class="sl"><strong>'+esc(b.p)+'</strong><span class="bg">'+esc(x.g.id)+'</span>'+callPill(cl)+'</span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span>'+
+        return '<button class="bet bl'+(sx?' scr':'')+callCls(cl)+'" type="button" aria-label="'+betLabel(b,x.g.id)+(sx?', late scratch, ruled out':'')+callAria(cl)+sbAria([b])+', open in its game" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'"><span class="rc">'+ringHtml(b)+'</span>'+
+          '<span class="sl"><strong>'+esc(b.p)+'</strong>'+sbHtml([b])+'<span class="bg">'+esc(x.g.id)+'</span>'+callPill(cl)+'</span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span>'+
           '<span class="kd">'+stPill(b.s)+l5Html(b)+'</span></button>'}).join('')+'</div>';
     box.hidden=false;
     Array.prototype.forEach.call(box.querySelectorAll('[data-jump]'),function(el){el.onclick=function(){
