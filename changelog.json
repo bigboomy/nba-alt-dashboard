@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-24",
+      "version": "nba-session v3.40-p4",
+      "component": "engine",
+      "title": "Windows must earn promotion on their own nights",
+      "change": "A condition window is flagged ready to promote only if its full record passes (30+, P(beats) > 0.8) and its record on nights no other window fired also beats the price (10+ results, P(beats) > 0.5); under 10 it shows waiting on alone sample.",
+      "why": "Mitch 24 Nov, critic proposal: a window that only wins when another window also fires is a duplicate, not a second edge. The kill switch is unchanged."
+    },
+    {
+      "date": "2026-11-24",
       "version": "dashboard",
       "component": "dashboard",
       "title": "RET2-BLK and windows scorecard fix",
