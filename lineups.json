@@ -1,0 +1,51 @@
+{
+ "generated": "2026-11-23T22:30:02Z",
+ "date": "2026-11-23",
+ "teams": {
+  "CHA": {
+   "confirmed": false,
+   "starters": [
+    "Brandon Miller",
+    "Sion James",
+    "Coby White",
+    "Naz Reid",
+    "Moussa Diabaté"
+   ],
+   "at": "2026-11-23T22:30:02Z"
+  },
+  "MEM": {
+   "confirmed": false,
+   "starters": [
+    "Jahmai Mashack",
+    "Cedric Coward",
+    "Ty Jerome",
+    "Jaylen Wells",
+    "Zach Edey"
+   ],
+   "at": "2026-11-23T22:30:02Z"
+  },
+  "PHI": {
+   "confirmed": false,
+   "starters": [
+    "VJ Edgecombe",
+    "Jaylen Brown",
+    "Tyrese Maxey",
+    "LeBron James",
+    "Joel Embiid"
+   ],
+   "at": "2026-11-23T22:30:02Z"
+  },
+  "POR": {
+   "confirmed": false,
+   "starters": [
+    "Sidy Cissoko",
+    "Toumani Camara",
+    "Damian Lillard",
+    "Deni Avdija",
+    "Donovan Clingan"
+   ],
+   "at": "2026-11-23T22:30:02Z"
+  }
+ },
+ "items": {}
+}
