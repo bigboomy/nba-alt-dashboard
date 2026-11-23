@@ -31,9 +31,14 @@ function doGet() {
 }
 
 function tipOf(pickId) {
-  const c = SpreadsheetApp.openById(SHEET_ID).getSheetByName('cohort');
-  const v = c.getRange(2, 1, Math.max(c.getLastRow() - 1, 1), 3).getValues();
-  for (let i = 0; i < v.length; i++) if (String(v[i][0]) === pickId) return String(v[i][2] || '');
+  // Picks live in cohort, leans (23 Nov) in leans. Both tabs: id in column A, tip_utc in column C.
+  const ss = SpreadsheetApp.openById(SHEET_ID);
+  for (const name of ['cohort', 'leans']) {
+    const c = ss.getSheetByName(name);
+    if (!c || c.getLastRow() < 2) continue;
+    const v = c.getRange(2, 1, c.getLastRow() - 1, 3).getValues();
+    for (let i = 0; i < v.length; i++) if (String(v[i][0]) === pickId) return String(v[i][2] || '');
+  }
   return null;
 }
 

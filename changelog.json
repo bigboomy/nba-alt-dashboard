@@ -4,6 +4,13 @@
     {
       "date": "2026-11-23",
       "version": "nba-session v3.35-p4",
+      "component": "dashboard",
+      "title": "Tap the ring to mark a pick or lean taken or passed",
+      "detail": "Each tap on the ring cycles taken, passed, no call; the ring stays as it is, and a green or amber bar plus a Taken / Passed pill show the call. Saves to the choices tab like Took it / Pass, now on leans too (needs the updated Apps Script); a pass locks at tip."
+    },
+    {
+      "date": "2026-11-23",
+      "version": "nba-session v3.35-p4",
       "component": "engine",
       "title": "Late returns re-run the game",
       "change": "When a player who was OUT at the run is no longer OUT 10+ minutes before tip, the game is re-run like a late scratch: anything new is logged as a 0u LSR lean. Original picks and leans stand.",
