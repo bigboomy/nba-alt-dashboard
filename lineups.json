@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T23:15:02Z",
+ "generated": "2026-11-23T23:30:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -111,6 +111,50 @@
     "Isaiah Hartenstein"
    ],
    "at": "2026-11-23T23:05:02Z"
+  },
+  "CHI": {
+   "confirmed": false,
+   "starters": [
+    "Buddy Hield",
+    "Isaac Okoro",
+    "Josh Giddey",
+    "Matas Buzelis",
+    "Jalen Smith"
+   ],
+   "at": "2026-11-23T23:30:02Z"
+  },
+  "CLE": {
+   "confirmed": false,
+   "starters": [
+    "Donovan Mitchell",
+    "Jaylon Tyson",
+    "James Harden",
+    "Peyton Watson",
+    "Jarrett Allen"
+   ],
+   "at": "2026-11-23T23:30:02Z"
+  },
+  "NOP": {
+   "confirmed": false,
+   "starters": [
+    "Herbert Jones",
+    "Saddiq Bey",
+    "Jeremiah Fears",
+    "Zion Williamson",
+    "Yves Missi"
+   ],
+   "at": "2026-11-23T23:30:02Z"
+  },
+  "PHX": {
+   "confirmed": false,
+   "starters": [
+    "Jalen Green",
+    "Dillon Brooks",
+    "Devin Booker",
+    "Miles Bridges",
+    "Oso Ighodaro"
+   ],
+   "at": "2026-11-23T23:30:02Z"
   }
  },
  "items": {}
