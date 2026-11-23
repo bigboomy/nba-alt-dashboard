@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T23:40:02Z",
+ "generated": "2026-11-23T23:50:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -14,15 +14,15 @@
    "at": "2026-11-23T23:40:02Z"
   },
   "MEM": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Jahmai Mashack",
     "Cedric Coward",
-    "Ty Jerome",
     "Jaylen Wells",
+    "Ty Jerome",
+    "Kris Murray",
     "Zach Edey"
    ],
-   "at": "2026-11-23T22:30:02Z"
+   "at": "2026-11-23T23:50:02Z"
   },
   "PHI": {
    "confirmed": true,
@@ -161,6 +161,11 @@
   "Naz Reid|CHA": 1,
   "Moussa Diabate|CHA": 1,
   "Ryan Kalkbrenner|CHA": 0,
+  "Ty Jerome|MEM": 1,
+  "Isaiah Stewart|MEM": 0,
+  "Cam Spencer|MEM": 0,
+  "Zach Edey|MEM": 1,
+  "Cedric Coward|MEM": 1,
   "Sidy Cissoko|POR": 1,
   "Donovan Clingan|POR": 1
  }
