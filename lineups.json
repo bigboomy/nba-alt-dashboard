@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T22:50:02Z",
+ "generated": "2026-11-23T23:05:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -45,6 +45,72 @@
     "Donovan Clingan"
    ],
    "at": "2026-11-23T22:30:02Z"
+  },
+  "BKN": {
+   "confirmed": false,
+   "starters": [
+    "Michael Porter Jr.",
+    "Danny Wolf",
+    "Egor Dëmin",
+    "Julius Randle",
+    "Day'Ron Sharpe"
+   ],
+   "at": "2026-11-23T23:05:02Z"
+  },
+  "MIN": {
+   "confirmed": false,
+   "starters": [
+    "Ayo Dosunmu",
+    "Jonathan Kuminga",
+    "LaMelo Ball",
+    "Jaden McDaniels",
+    "Rudy Gobert"
+   ],
+   "at": "2026-11-23T23:05:02Z"
+  },
+  "MIL": {
+   "confirmed": false,
+   "starters": [
+    "Tyler Herro",
+    "Jaime Jaquez Jr.",
+    "Ryan Rollins",
+    "Kyle Kuzma",
+    "Myles Turner"
+   ],
+   "at": "2026-11-23T23:05:02Z"
+  },
+  "TOR": {
+   "confirmed": false,
+   "starters": [
+    "Ja'Kobe Walter",
+    "Allen Graves",
+    "Immanuel Quickley",
+    "Scottie Barnes",
+    "Collin Murray-Boyles"
+   ],
+   "at": "2026-11-23T23:05:02Z"
+  },
+  "IND": {
+   "confirmed": false,
+   "starters": [
+    "Quenton Jackson",
+    "Kelly Oubre Jr.",
+    "Andrew Nembhard",
+    "Pascal Siakam",
+    "Ivica Zubac"
+   ],
+   "at": "2026-11-23T23:05:02Z"
+  },
+  "OKC": {
+   "confirmed": false,
+   "starters": [
+    "Jared McCain",
+    "Ajay Mitchell",
+    "Shai Gilgeous-Alexander",
+    "Kenrich Williams",
+    "Isaiah Hartenstein"
+   ],
+   "at": "2026-11-23T23:05:02Z"
   }
  },
  "items": {}
