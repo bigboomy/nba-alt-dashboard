@@ -556,7 +556,8 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <tr data-re="^RET1$"><td class="lgc">RET1</td><td>Would have been a pick, but it is the first night a key teammate is back, so it drops to a lean (v3.36).</td><td class="lge">0u</td></tr>
   <tr data-re="^RET1:"><td class="lgc">RET1:Surname</td><td>First night back for that teammate: the usage he soaked up while out may go back to him.</td><td class="lge">Caution</td></tr>
   <tr data-re="^AVOID$"><td class="lgc">AVOID</td><td>Verdict Avoid: this player and stat is on a teammate's first night back (RET1 window on). Shown as an Avoid pill on the tile.</td><td class="lge">Avoid</td></tr>
-  <tr data-re="^RET2:"><td class="lgc">RET2:Surname</td><td>Nights 2-3 after that teammate came back. Watched, no effect.</td><td class="lge">Info</td></tr>
+  <tr data-re="^RET2:"><td class="lgc">RET2:Surname</td><td>Nights 2-4 after that teammate came back (his first 1-3 games back). From v3.39, assists here drop to a 0u lean (see RET2-BLK).</td><td class="lge">Info</td></tr>
+  <tr data-re="^RET2-BLK$"><td class="lgc">RET2-BLK</td><td>Assists on nights 2-4 of a rotation teammate's return: would have been a pick, drops to a 0u lean with Avoid (v3.39, window RET2-AST).</td><td class="lge">0u</td></tr>
   <tr data-re="^RU$"><td class="lgc">RU</td><td>Role up: his last-3 average minutes are at least 4 above his last-10 average. From v3.37 it blocks a pick (see RU-BLK).</td><td class="lge">Caution</td></tr>
   <tr data-re="^RU-BLK$"><td class="lgc">RU-BLK</td><td>Would have been a pick, but his minutes just jumped (RU), so it drops to a 0u lean (v3.37).</td><td class="lge">0u</td></tr>
   <tr data-re="^WIN$"><td class="lgc">WIN</td><td>WIN tier (from v3.38): an item inside a condition window the engine adds at 0u, such as points overs against a tough defence. Outside the lean cap.</td><td class="lge">0u test</td></tr>
@@ -1332,10 +1333,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if((m=f.match(/^MU([+-]\d+)%$/))) return +m[1]>=0?['Good matchup for this stat','g']:['Tough matchup for this stat','w'];
     if(f==='MT+') return ['Minutes going up','g'];if(f==='MT-') return ['Minutes going down','w'];
     if(f==='MM90-ALSO') return ['Also meets MM90','g'];
-    if(f==='AVOID') return ['Avoid','w'];if(f==='RU-BLK') return ['Dropped from a pick to a lean: his minutes just jumped','w'];if(f==='WIN-BLK') return ['Dropped from a pick to a lean: a blocking window applies','w'];
+    if(f==='AVOID') return ['Avoid','w'];if(f==='RU-BLK') return ['Dropped from a pick to a lean: his minutes just jumped','w'];if(f==='WIN-BLK') return ['Dropped from a pick to a lean: a blocking window applies','w'];if(f==='RET2-BLK') return ['Dropped from a pick to a lean: assists while a teammate is just back','w'];
     if((m=f.match(/^WIN:(.+)$/))){var ww=WJ&&WJ.windows?(WJ.windows[f]||WJ.windows[m[1]]):null;return [ww&&ww.text?ww.text:'Condition window '+m[1],ww&&ww.direction==='block'?'w':'g']}if(f==='RET1') return ['Dropped from a pick to a lean','w'];if(f==='RU') return ['Minutes going up lately','g'];
     if((m=f.match(/^RET1:(.+)$/))) return ['First night back for '+m[1].split('/').join(' and '),'w'];
-    if((m=f.match(/^RET2:(.+)$/))) return [m[1].split('/').join(' and ')+' back 2-3 nights','w'];
+    if((m=f.match(/^RET2:(.+)$/))) return ['Back for 1-3 games: '+m[1].split('/').join(' and '),'w'];
     if((m=f.match(/^FO:(.+)$/))) return ['First night without '+m[1].split('/').join(' and '),'g'];
     if(CAUT.indexOf(f)>=0) return ['Check this','w'];
     return null}
@@ -2119,12 +2120,12 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var head='<details class="fold" id="winFold"'+(WIN_OPEN||location.hash==='#winSec'?' open':'')+'><summary><span>Windows scorecard <span class="meta">'+
       (WJ?'situations the engine acts on or watches, since '+esc(fdate(WJ.since||'2026-11-24')):'situations the engine acts on or watches')+'</span></span></summary>';
     if(!WJ){box.innerHTML=head+'<div class="none">'+(WINFAIL?'No scorecard yet. It is written after each resolve, from the 24 Nov slate.':'Loading…')+'</div></details>';bindWin();return}
-    function pc(x){return x===null||x===undefined||x===''?null:(Math.abs(x)<=1?x*100:+x)}
+    function pc(x){return x===null||x===undefined||x===''?null:+x}
     var codes=Object.keys(WJ.windows),AO={action:0,pending:1,watch:2,off:3};
     codes.sort(function(a,b){var A=WJ.windows[a],B=WJ.windows[b];return (AO[A.mode]==null?3:AO[A.mode])-(AO[B.mode]==null?3:AO[B.mode])||a.localeCompare(b)});
     var flag=0;
     var rows=codes.map(function(c){var w=WJ.windows[c]||{},r=w.rec||{},n=+r.n||0,act=w.mode==='action';
-      var hit=pc(r.hit),be=pc(r.be),gap=r.gap===undefined||r.gap===null?null:(Math.abs(r.gap)<1&&hit!==null&&Math.abs(r.hit)<=1?r.gap*100:+r.gap);
+      var hit=pc(r.hit),be=pc(r.be),gap=pc(r.gap);
       var P=act?w.p_beat:r.p_above,Pv=P===undefined||P===null||P===''?null:+P;
       var st=w.mode==='off'?'off':w.mode==='pending'?'pnd':(!act&&n>=30&&Pv!==null&&(Pv>.8||Pv<.2))?'sig':(act&&n>=30&&Pv!==null&&Pv>.8)?'rdy':'';if(st)flag++;
       var lab={pnd:'Waiting for Mitch\u2019s OK',off:'Switched off'+(w.off_at?' '+esc(fdate(String(w.off_at).slice(0,10))):''),sig:'Signal',rdy:'Ready to promote'}[st]||'';

@@ -2,6 +2,13 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
     {
+      "date": "2026-11-24",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "RET2-BLK and windows scorecard fix",
+      "detail": "Adds the RET2-BLK meaning, RET2 now reads Back for 1-3 games, and the windows scorecard reads hit, break-even and gap as percentages always, so a small gap like -0.4pp is no longer scaled up."
+    },
+    {
       "date": "2026-11-23",
       "version": "nba-session v3.39-p4",
       "component": "engine",
