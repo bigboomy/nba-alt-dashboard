@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-23",
+      "version": "nba-session v3.37-p4",
+      "component": "engine",
+      "title": "RU block, RET1 on every pick stat",
+      "change": "When a player's last-3 minutes are 4+ above his L10 average (and no teammate is newly out), his overs can't be a staked pick or an MM90/HR80/L5P item: logged as a 0u lean tagged RU AVOID. RET1 now covers every pick stat, and a late-scratch re-run never surfaces an AVOID item. Both switch themselves off if they lose to doing nothing.",
+      "aim": "Mitch 23 Nov: act on the windows, not just log them (critic addendum)."
+    },
+    {
+      "date": "2026-11-23",
       "version": "nba-session v3.36-p4",
       "component": "engine",
       "title": "Window layer: RET1 block and FO REB/AST leans",
