@@ -3,6 +3,13 @@
  "changes": [
     {
       "date": "2026-11-23",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "Tile layout for picks and leans",
+      "detail": "Each player stat is one row of tiles in fixed Shortest/Longer/Longest columns (line, $price, hit score badge, grey-to-green shade, solid PICK tag); lines under 7 show as outlined ghost tiles; tapping a tile opens what each code means with Took it / Pass inside, and the toast offers Undo."
+    },
+    {
+      "date": "2026-11-23",
       "version": "nba-session v3.35-p4",
       "component": "dashboard",
       "title": "Starter badge on picks and leans",
