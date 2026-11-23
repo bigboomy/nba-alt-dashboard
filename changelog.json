@@ -6,7 +6,7 @@
       "version": "nba-session v3.35-p4",
       "component": "dashboard",
       "title": "Starter badge on picks and leans",
-      "detail": "Shows Starter (4+ of last 5 starts), Starting (confirmed lineup) or Bench tonight beside the player; reads optional gs and lu fields from data.json and shows nothing until the pipeline adds them."
+      "detail": "Shows Starter (4+ of last 5 starts), Starting (confirmed lineup) or Bench (confirmed not starting) beside the player; reads optional gs and lu fields from data.json and shows nothing until the pipeline adds them."
     },
     {
       "date": "2026-11-23",

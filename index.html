@@ -389,7 +389,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .bet .rc{cursor:pointer}
 .ctoast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(72px + env(safe-area-inset-bottom,0px));z-index:31;max-width:min(92vw,420px);padding:10px 16px;border-radius:10px;background:var(--text);color:var(--bg);font:600 14px/1.35 var(--body);text-align:center}
 
-/* 23 Nov (Mitch): starter badge. Outline = regular starter (4+ of last 5), filled = confirmed starting, warn = confirmed bench */
+/* 23 Nov (Mitch): starter badge. Outline = regular starter (4+ of last 5), filled = confirmed starting, warn = Bench (confirmed not starting) */
 .sb{flex:none;display:inline-block;margin-left:6px;font:700 .7rem/1.5 var(--body);border:1.5px solid var(--accent);color:var(--accent);border-radius:9px;padding:0 6px;vertical-align:2px}
 .sb.on{background:var(--accent);color:var(--card)}
 .sb.off{border-color:var(--warn);color:var(--warn)}
@@ -539,7 +539,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <tr><td class="lgc">Context line</td><td>Minutes model %, with/without % (×lift), Pinnacle fair %, opponent outs, best book. Shadow numbers: they don&#x27;t move the pick.</td><td class="lge">Display</td></tr>
   <tr data-re="^(W|L|PUSH|VOID)( ·|$)"><td class="lgc">W · L · PUSH · VOID</td><td>Settled result after the resolve, with the actual stat. VOID = did not play.</td><td class="lge">Result</td></tr>
   <tr data-re="^(Taken|Passed)$"><td class="lgc">✅ Taken / 🚫 Passed</td><td>Your call on a pick or lean. Tap the ring to cycle: taken, passed, no call. A pass locks at tip.</td><td class="lge"></td></tr>
-  <tr data-re="^(Starter|Starting|Bench tonight)$"><td class="lgc">Starter / Starting / Bench tonight</td><td>Starter = started 4 or more of his team's last 5. Starting = in tonight's confirmed starting five (about 30 min before tip). Bench tonight = lineups confirmed and he's not in them.</td><td class="lge"></td></tr>
+  <tr data-re="^(Starter|Starting|Bench)$"><td class="lgc">Starter / Starting / Bench</td><td>Starter = started 4 or more of his team's last 5. Starting = in tonight's confirmed starting five (about 30 min before tip). Bench = lineups confirmed and he's not in them.</td><td class="lge"></td></tr>
   </tbody></table></div></details>
 
   <details class="fold inner">
@@ -1174,7 +1174,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     return lu===1?'on':lu===0&&gs!==null&&gs>=4?'off':lu===null&&gs!==null&&gs>=4?'reg':''}
   function sbHtml(arr){var k=stState(arr),gs=null;arr.forEach(function(b){if(b.gs!=null)gs=b.gs});
     return k==='on'?'<span class="sb on" title="In tonight\u2019s confirmed starting five">Starting</span>':
-      k==='off'?'<span class="sb off" title="Lineups confirmed: not starting tonight'+(gs!==null?' (started '+gs+' of last 5)':'')+'">Bench tonight</span>':
+      k==='off'?'<span class="sb off" title="Lineups confirmed: not starting tonight'+(gs!==null?' (started '+gs+' of last 5)':'')+'">Bench</span>':
       k==='reg'?'<span class="sb reg" title="Started '+gs+' of his team\u2019s last 5. Lineup not confirmed yet">Starter</span>':''}
   function sbAria(arr){var k=stState(arr);return k==='on'?', starting tonight':k==='off'?', not starting tonight':k==='reg'?', regular starter':''}
   function stPill(s){return '<span class="stn '+(STC[s]||'oth')+'">'+esc(STW[s]||s)+'</span>'}
