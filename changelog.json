@@ -2,6 +2,13 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
     {
+      "date": "2026-11-24",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "Scoreboard All block, WIN tier, RU-BLK and WIN-BLK",
+      "detail": "Scoreboard opens with All bets (picks plus every lean: last slate day and last 3 slate days as hits of settled), then leans, then picks, then each lean tier; adds the WIN tier fold, code meanings for WIN, WIN:<id>, RU-BLK and WIN-BLK, pending windows in the scorecard, and fixes the Record window defaulting to season."
+    },
+    {
       "date": "2026-11-23",
       "version": "nba-session v3.38-p4",
       "component": "engine",

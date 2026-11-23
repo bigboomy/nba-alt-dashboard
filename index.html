@@ -241,6 +241,8 @@ table.mxt.e4 th[scope=row]{width:28%}table.mxt.e4 td.eg2{padding:5px 2px}
 .board h2{font-size:1.45rem;font-weight:700;margin:0 0 8px}.brow{display:block;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:8px 0;font:inherit;color:inherit;cursor:pointer}
 .brow:first-of-type{border-top:0}.brow .t{display:flex;justify-content:space-between;gap:8px;font-size:.86rem}.brow .t b{font-weight:600}
 .brow .m{color:var(--muted);font-size:.78rem}
+.brow.ball{cursor:default;padding-bottom:10px}.brow.ball .t b{font-size:1rem}.brow .bsub{font-weight:400;color:var(--muted);font-size:.78rem}.brow .w.ba span{font-size:1rem;font-weight:700}
+.board .brow:not(.ball){border-top:1px solid var(--line)}.board .bhd{margin:12px 0 0;padding-top:8px;border-top:1px solid var(--line);font-size:.74rem;font-weight:700;color:var(--muted);letter-spacing:.02em}.board .bhd+.brow{border-top:0}
 .brow .w{display:flex;justify-content:space-between;gap:8px;font-size:.84rem;font-variant-numeric:tabular-nums;margin-top:2px}.brow .w i{font-style:normal;color:var(--muted);font-size:.78rem}.brow .pos{color:#067647}.brow .neg{color:#b42318}
 @media (prefers-color-scheme:dark){.brow .pos{color:#6ce9a6}.brow .neg{color:#ff8a80}}
 .pbar{height:5px;border-radius:3px;background:var(--line);margin-top:5px;overflow:hidden}.pbar i{display:block;height:5px;background:#2e90fa}
@@ -408,7 +410,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .c3.av{box-shadow:inset 0 0 0 2px var(--bad)}
 #winSec tr.woff td{opacity:.6}#winSec tr.wsig td:first-child,#winSec tr.wrdy td:first-child{box-shadow:inset 3px 0 0 var(--accent)}
 #winSec td{white-space:nowrap;font-variant-numeric:tabular-nums}#winSec td:first-child{white-space:normal;min-width:8em}#winSec th,#winSec td{padding-left:6px;padding-right:6px}#winSec .wmo{font-size:12px;color:var(--muted)}#winSec .wfl{display:inline-block;white-space:nowrap;font:700 11px/1.3 var(--body);border-radius:5px;padding:1px 6px;background:var(--accent);color:var(--card)}
-#winSec tr.woff .wfl{background:var(--muted)}
+#winSec tr.woff .wfl{background:var(--muted)}#winSec tr.wpnd .wfl{background:var(--warn);color:var(--card)}
 .c3 b{font:700 25px/1 var(--disp);font-variant-numeric:tabular-nums}
 .c3 i{font:700 18px/1 var(--disp);font-style:normal;font-variant-numeric:tabular-nums;color:var(--text);opacity:.85}
 .c3 em{position:absolute;right:6px;bottom:-9px;font:700 13.5px/1 var(--disp);font-style:normal;color:#fff;background:var(--rc);border-radius:7px;padding:3px 7px;box-shadow:0 0 0 2px var(--card)}
@@ -512,6 +514,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <div id="mmSec"></div>
   <div id="l5Sec"></div>
   <div id="foSec"></div>
+  <div id="wtSec"></div>
   <div id="olSec"></div>
   <div id="lsSec"></div>
   <div id="winSec"></div>
@@ -554,7 +557,11 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <tr data-re="^RET1:"><td class="lgc">RET1:Surname</td><td>First night back for that teammate: the usage he soaked up while out may go back to him.</td><td class="lge">Caution</td></tr>
   <tr data-re="^AVOID$"><td class="lgc">AVOID</td><td>Verdict Avoid: this player and stat is on a teammate's first night back (RET1 window on). Shown as an Avoid pill on the tile.</td><td class="lge">Avoid</td></tr>
   <tr data-re="^RET2:"><td class="lgc">RET2:Surname</td><td>Nights 2-3 after that teammate came back. Watched, no effect.</td><td class="lge">Info</td></tr>
-  <tr data-re="^RU$"><td class="lgc">RU</td><td>Role up: his last-3 average minutes are at least 4 above his last-10 average.</td><td class="lge">Info</td></tr>
+  <tr data-re="^RU$"><td class="lgc">RU</td><td>Role up: his last-3 average minutes are at least 4 above his last-10 average. From v3.37 it blocks a pick (see RU-BLK).</td><td class="lge">Caution</td></tr>
+  <tr data-re="^RU-BLK$"><td class="lgc">RU-BLK</td><td>Would have been a pick, but his minutes just jumped (RU), so it drops to a 0u lean (v3.37).</td><td class="lge">0u</td></tr>
+  <tr data-re="^WIN$"><td class="lgc">WIN</td><td>WIN tier (from v3.38): an item inside a condition window the engine adds at 0u, such as points overs against a tough defence. Outside the lean cap.</td><td class="lge">0u test</td></tr>
+  <tr data-re="^WIN:"><td class="lgc">WIN:PTS-TOUGH</td><td>Which condition window the item sits in. Each one is listed in the Windows scorecard.</td><td class="lge">Info</td></tr>
+  <tr data-re="^WIN-BLK$"><td class="lgc">WIN-BLK</td><td>Would have been a pick, but a blocking condition window applies, so it drops to a 0u lean (v3.38).</td><td class="lge">0u</td></tr>
   <tr data-re="^BK-"><td class="lgc">BK-ladbrokes</td><td>The book whose price is taken and settled, when it isn't Pointsbet. Every item takes the best price across Pointsbet, Ladbrokes and Sportsbet (from 22 Nov).</td><td class="lge">Info</td></tr>
   <tr data-re="^OUTLIFT$"><td class="lgc">OUTLIFT</td><td>Teammate-out tier: a key player with a key teammate freshly out; highest-priced rung at $1.20-1.59, at or under the main line. Killed 20 Nov (48 settled, −11.43u); no new items.</td><td class="lge">Closed</td></tr>
   <tr data-re="^TM-OUT:"><td class="lgc">TM-OUT:SC1/REB1</td><td>Which key teammate roles are out for OUTLIFT (roles are explained under Opponent and matchup).</td><td class="lge">Info</td></tr>
@@ -995,7 +1002,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     $('tabs').innerHTML=ids.map(function(id){return '<button class="tab" data-id="'+esc(id)+'" aria-pressed="'+(id===sel)+'">'+(id==='ALL'?'All games':esc(id))+'</button>'}).join('');
     Array.prototype.forEach.call($('tabs').children,function(b){b.onclick=function(){sel=b.getAttribute('data-id');tabs();games()}});
   }
-  function cxKind(p){return !p.lean?'pick':p.f.indexOf('LSR')>=0?'LSR':p.f.indexOf('HR80')>=0?'HR80':p.f.indexOf('MM90')>=0?'MM90':p.f.indexOf('L5P')>=0?'L5P':p.f.indexOf('FO')>=0?'FO':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':p.f.indexOf('OUTLIFT')>=0?'OUTLIFT':'lean'}
+  function cxKind(p){return !p.lean?'pick':p.f.indexOf('LSR')>=0?'LSR':p.f.indexOf('HR80')>=0?'HR80':p.f.indexOf('MM90')>=0?'MM90':p.f.indexOf('L5P')>=0?'L5P':p.f.indexOf('FO')>=0?'FO':p.f.indexOf('WIN')>=0?'WIN':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':p.f.indexOf('OUTLIFT')>=0?'OUTLIFT':'lean'}
   function cxLine(g,p){
     var c=g.cx&&g.cx[p.p+'|'+p.s+'|'+String(Number(p.alt))+'|'+cxKind(p)];if(!c) return '';
     function pc(v){return v===''||v===null||v===undefined?null:Math.round(Number(v)*100)+'%'}
@@ -1263,7 +1270,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       (kn?', cleared '+kn[0]+' of last '+kn[1]:'')+(x?', '+({W:'won',L:'lost',PUSH:'push',VOID:'void'}[x.result]||x.result)+(x.actual?' with '+x.actual:''):''))}
   /* Line cell: once settled the line turns green (won) or orange (lost) with his actual number in brackets under it. */
   var KGLOSS={PICK:'Staked: cleared every gate.',LEAN:'A near-miss, tracked at 0u, never staked.',HR80:'Test tier: perfect recent sample at $1.20-1.29, tracked at 0u.',
-    HR85:'The earlier hit-rate tier (closed), tracked at 0u.',MM90:'Test tier: $1.20-1.29 with the minutes model at 90%+, tracked at 0u.',L5P:'Test tier: $1.50-1.99, cleared in each of his last 5 games played, tracked at 0u.',FO:'Test tier: first night a rotation teammate (20+ min) is out, rebounds or assists short rung, tracked at 0u.',PIN:'Test tier: priced 4pp+ better than Pinnacle\'s fair price, tracked at 0u.',
+    HR85:'The earlier hit-rate tier (closed), tracked at 0u.',MM90:'Test tier: $1.20-1.29 with the minutes model at 90%+, tracked at 0u.',L5P:'Test tier: $1.50-1.99, cleared in each of his last 5 games played, tracked at 0u.',WIN:'Test tier: inside a condition window the engine adds at 0u, tracked at 0u.',FO:'Test tier: first night a rotation teammate (20+ min) is out, rebounds or assists short rung, tracked at 0u.',PIN:'Test tier: priced 4pp+ better than Pinnacle\'s fair price, tracked at 0u.',
     OUTLIFT:'Teammate-out tier, killed 20 Nov, kept for the record only.',LSR:'Late-scratch re-run after a player was ruled out, tracked at 0u.'};
   function lnHtml(b){var x=resFor(b),c=x?({W:'won',L:'lost',PUSH:'push',VOID:'push'}[x.result]||''):'';
     var lab=x?({W:'won',L:'lost',PUSH:'push',VOID:'void'}[x.result]||x.result):'';
@@ -1325,7 +1332,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if((m=f.match(/^MU([+-]\d+)%$/))) return +m[1]>=0?['Good matchup for this stat','g']:['Tough matchup for this stat','w'];
     if(f==='MT+') return ['Minutes going up','g'];if(f==='MT-') return ['Minutes going down','w'];
     if(f==='MM90-ALSO') return ['Also meets MM90','g'];
-    if(f==='AVOID') return ['Avoid','w'];if(f==='RET1') return ['Dropped from a pick to a lean','w'];if(f==='RU') return ['Minutes going up lately','g'];
+    if(f==='AVOID') return ['Avoid','w'];if(f==='RU-BLK') return ['Dropped from a pick to a lean: his minutes just jumped','w'];if(f==='WIN-BLK') return ['Dropped from a pick to a lean: a blocking window applies','w'];
+    if((m=f.match(/^WIN:(.+)$/))){var ww=WJ&&WJ.windows?(WJ.windows[f]||WJ.windows[m[1]]):null;return [ww&&ww.text?ww.text:'Condition window '+m[1],ww&&ww.direction==='block'?'w':'g']}if(f==='RET1') return ['Dropped from a pick to a lean','w'];if(f==='RU') return ['Minutes going up lately','g'];
     if((m=f.match(/^RET1:(.+)$/))) return ['First night back for '+m[1].split('/').join(' and '),'w'];
     if((m=f.match(/^RET2:(.+)$/))) return [m[1].split('/').join(' and ')+' back 2-3 nights','w'];
     if((m=f.match(/^FO:(.+)$/))) return ['First night without '+m[1].split('/').join(' and '),'g'];
@@ -1375,14 +1383,14 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var np=g.picks.length,nl=g.leans.length,nh=g.leans.filter(function(p){return p.f.indexOf('HR80')>=0||p.f.indexOf('HR85')>=0}).length,
         npn=g.leans.filter(function(p){return p.f.indexOf('PIN')>=0}).length,
         nmm=g.leans.filter(function(p){return p.f.indexOf('MM90')>=0}).length,
-        nl5=g.leans.filter(function(p){return p.f.indexOf('L5P')>=0}).length,nfo=g.leans.filter(function(p){return p.f.indexOf('FO')>=0}).length,
+        nl5=g.leans.filter(function(p){return p.f.indexOf('L5P')>=0}).length,nfo=g.leans.filter(function(p){return p.f.indexOf('FO')>=0}).length,nwt=g.leans.filter(function(p){return p.f.indexOf('WIN')>=0}).length,
         nol=g.leans.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length,
         nls=g.leans.filter(function(p){return p.f.indexOf('LSR')>=0}).length;
     var gl=g.picks.concat(g.leans).filter(function(b){return b.f.indexOf('OUTLIFT')<0}),gd=0,gw={pw:0,pl:0,lw:0,ll:0};
     gl.forEach(function(b){var x=resFor(b);if(!x)return;gd++;var k=(b.lean?'l':'p')+(x.result==='W'?'w':x.result==='L'?'l':'');if(gw[k]!==undefined)gw[k]++});
     var allDone=g.picks.concat(g.leans).every(function(b){return resFor(b)});
     var tpTxt=!gl.length&&allDone&&g.leans.length?'Final':gl.length&&gd===gl.length?'Final'+(np?' · picks '+gw.pw+'-'+gw.pl:'')+(gl.length>np?' · leans '+gw.lw+'-'+gw.ll:''):'tip '+esc(g.tip);
-    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp'+(tpTxt.charAt(0)==='F'?' fin':'')+'">'+tpTxt+'</span><span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+(nl-nol)+' lean'+(nl-nol===1?'':'s')+(nh+nmm+nl5+nfo+npn+nls?' <span class="mu">(incl. '+[[nh,'HR80'],[nmm,'MM90'],[nl5,'L5P'],[nfo,'FO'],[npn,'PIN'],[nls,'LSR']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+
+    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp'+(tpTxt.charAt(0)==='F'?' fin':'')+'">'+tpTxt+'</span><span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+(nl-nol)+' lean'+(nl-nol===1?'':'s')+(nh+nmm+nl5+nfo+nwt+npn+nls?' <span class="mu">(incl. '+[[nh,'HR80'],[nmm,'MM90'],[nl5,'L5P'],[nfo,'FO'],[nwt,'WIN'],[npn,'PIN'],[nls,'LSR']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+
       (nol?' <span class="mu">· '+nol+' killed OUTLIFT, record only</span>':'')+'</span></div>';
     /* Late return (Mitch 23 Nov): a player OUT at the run is back in. These bets were built with him out. */
     var rt=RETS[g.id]||[];
@@ -1553,19 +1561,33 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     function line(lab,a){return '<div class="w"><i>'+lab+'</i><span>'+(a.n?a.w+'-'+a.l+' · '+pct(a.hit)+' · <span class="'+(a.u>=0?'pos':'neg')+'">'+u(a.u)+'</span>':'no settled bets')+'</span></div>'}
     function add(k,label,a3,a7){rows.push({k:k,t:label,h:line('Last 3 days',a3)+line('Last 7 days',a7)})}
     function pk(a){var x=CORE.summarize(a);return {n:x.n,w:x.w,l:x.l,hit:x.hit,u:x.units}}
+    /* Mitch 24 Nov: "an all scorecard, then have it broken down ... leans above the picks, because they just simply happen
+       more often". All = picks plus every 0u item: hits only (no break-even, pp or ROI). Rolling 3 days = the last 3 slate
+       days with results, pooled. */
+    var allR=(ROWS||[]).concat(L).filter(function(r){return r.result==='W'||r.result==='L'});
+    if(allR.length){
+      var ds=[];allR.forEach(function(r){if(ds.indexOf(r.date)<0)ds.push(r.date)});ds.sort().reverse();
+      var d0=ds[0],d3=ds.slice(0,3);
+      function hx(a){var w=a.filter(function(r){return r.result==='W'}).length;return w+' of '+a.length+' \u00B7 '+(a.length?Math.round(100*w/a.length):0)+'%'}
+      var t0=allR.filter(function(r){return r.date===d0}),t3=allR.filter(function(r){return d3.indexOf(r.date)>=0});
+      rows.push({k:'',all:1,t:'All bets <span class="bsub">picks and leans</span>',h:'<div class="w ba"><i>'+esc(fdate(d0))+'</i><span>'+hx(t0)+'</span></div><div class="w ba"><i>Last 3 slate days</i><span>'+hx(t3)+'</span></div>'});
+    }
+    function tier(k,label,arr){if(!arr) return;var a3=leanSum(win(arr,3)),a7=leanSum(win(arr,7));add(k,label,a3,a7)}
+    if(L&&L.length) tier('','Leans (0u, every tier)',L);
     if(ROWS) add('rec','Picks (staked)',pk(win(ROWS,3)),pk(win(ROWS,7)));
     else if(CSVFAIL) rows.push({k:'rec',t:'Picks',h:'<div class="m">The Sheet could not be read</div>'});
-    function tier(k,label,arr){if(!arr) return;var a3=leanSum(win(arr,3)),a7=leanSum(win(arr,7));add(k,label,a3,a7)}
-    tier('leansSec','Leans (0u)',LEANS);
+    rows.push({hd:'Leans by tier'});
+    tier('leansSec','Plain leans (0u)',LEANS);
     tier('hrSec','HR80 tier (0u)',typeof HRS!=='undefined'?HRS:null);
     tier('mmSec','MM90 tier (0u)',typeof MMS!=='undefined'?MMS:null);
     tier('l5Sec','L5P tier (0u)',typeof L5S!=='undefined'?L5S:null);
     tier('foSec','FO tier (0u)',typeof FOS!=='undefined'?FOS:null);
+    tier('wtSec','WIN tier (0u)',typeof WTS!=='undefined'?WTS:null);
     tier('pinSec','PIN tier (0u)',typeof PINS!=='undefined'?PINS:null);
     tier('olSec','OUTLIFT tier (killed 20 Nov)',typeof OLS!=='undefined'?OLS:null);
     tier('lsSec','Late-scratch re-run (0u)',typeof LSS!=='undefined'?LSS:null);
     if(!rows.length){box.innerHTML='<h2>Scoreboard</h2><p class="load">Loading…</p>';return}
-    box.innerHTML='<h2>Scoreboard</h2><p class="cap bcap">Flat 1u per bet'+(end?', up to '+fdate(end):'')+'. Tap a row for its full breakdown.</p>'+rows.map(function(r){return '<button type="button" class="brow" data-go="'+r.k+'"><div class="t"><b>'+r.t+'</b></div>'+r.h+'<span class="go" aria-hidden="true"></span></button>'}).join('');
+    box.innerHTML='<h2>Scoreboard</h2><p class="cap bcap">Flat 1u per bet'+(end?', up to '+fdate(end):'')+'. Tap a row for its full breakdown.</p>'+rows.map(function(r){if(r.hd) return '<p class="bhd">'+esc(r.hd)+'</p>';if(!r.k) return '<div class="brow'+(r.all?' ball':'')+'"><div class="t"><b>'+r.t+'</b></div>'+r.h+'</div>';return '<button type="button" class="brow" data-go="'+r.k+'"><div class="t"><b>'+r.t+'</b></div>'+r.h+'<span class="go" aria-hidden="true"></span></button>'}).join('');
     Array.prototype.forEach.call(box.querySelectorAll('[data-go]'),function(b){b.onclick=function(){
       var mr=$('moreRec'),t=$(b.getAttribute('data-go'));if(mr)mr.open=true;
       var f=t&&t.querySelector('details.fold');if(f)f.open=true;if(t)t.scrollIntoView({behavior:'smooth',block:'start'})}});
@@ -2062,27 +2084,50 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     bindFo();
   }
   function bindFo(){var f=$('foFold');if(f)f.addEventListener('toggle',function(){FO_OPEN=this.open})}
+  /* ---------- WIN tier (nba-session v3.38): items inside a condition window the engine adds at 0u (WIN:<id>),
+     outside the lean cap. Rows in the leans tab flagged WIN; broken down by window id. */
+  var WTS=null,WT_OPEN=false;
+  function renderWt(){
+    var box=$('wtSec');if(!box) return;
+    var head='<details class="fold" id="wtFold"'+(WT_OPEN?' open':'')+'><summary><span>WIN tier (0u) <span class="meta">condition windows the engine adds, by window</span></span></summary>';
+    if(LEANFAIL||!WTS){box.innerHTML=LEANFAIL?'':head+'<div class="none">Loading…</div></details>';bindWt();return}
+    var settled=WTS.filter(function(r){return r.result==='W'||r.result==='L'}),asOf=null;
+    settled.forEach(function(r){if(!asOf||r.date>asOf)asOf=r.date});
+    var pend=WTS.filter(function(r){return !r.result}).length;
+    if(!asOf){box.innerHTML=head+'<div class="none">No settled WIN items yet'+(pend?' ('+pend+' pending)':'')+'. The tier starts with v3.38.</div></details>';bindWt();return}
+    function win(nd){var lo=addDays(asOf,-(nd-1));return WTS.filter(function(r){return r.date>=lo&&r.date<=asOf})}
+    var row=function(label,s){return '<tr><td>'+label+'</td><td>'+s.n+'</td><td>'+s.w+'-'+s.l+'</td><td>'+(s.hit===null?'—':s.hit.toFixed(1)+'%')+'</td><td>'+(s.impl===null?'—':s.impl.toFixed(1)+'%')+'</td><td class="'+cls(s.gap)+'">'+(s.gap===null?'—':sg(s.gap,1)+'pp')+'</td><td class="'+cls(s.u)+'">'+sg(s.u,2)+'u</td></tr>'};
+    var all=leanSum(WTS),tg={},ids=[];
+    settled.forEach(function(r){tg[r.date+'|'+(r.team||r.game)]=1});var ntg=Object.keys(tg).length;
+    WTS.forEach(function(r){var k=r.wid||'(no id)';if(ids.indexOf(k)<0)ids.push(k)});ids.sort();
+    var rs=ids.map(function(k){var s=leanSum(WTS.filter(function(r){return (r.wid||'(no id)')===k}));return s.n?row(esc(k),s):''}).join('');
+    box.innerHTML=head+'<div class="ts"><table style="min-width:0"><thead><tr><th></th><th>n</th><th>W-L</th><th>Hit</th><th>Break-even</th><th>Gap</th><th>Units</th></tr></thead><tbody>'+
+      row('7d',leanSum(win(7)))+row('All',all)+(rs?'<tr class="sh"><td colspan="7">By window</td></tr>'+rs:'')+'</tbody></table></div>'+
+      '<p class="cap"><b>'+ntg+' team-games ('+all.n+' settled).</b> What each window means and its promotion test are in the Windows scorecard. Units are notional, flat 1u; nothing is staked. As of '+fdate(asOf)+(all.v?' · '+all.v+' void':'')+(pend?' · '+pend+' pending':'')+'.</p></details>';
+    bindWt();
+  }
+  function bindWt(){var f=$('wtFold');if(f)f.addEventListener('toggle',function(){WT_OPEN=this.open})}
   /* ---------- Windows scorecard (nba-session v3.36). windows.json, written after each resolve: one row per window code.
      Action windows change what is logged (RET1 blocks picks, FO adds a tier); watch windows only count. Display only. */
-  var WIN=null,WIN_OPEN=false,WINFAIL=false;
+  var WJ=null,WIN_OPEN=false,WINFAIL=false;
   function loadWin(){
     fetch('windows.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
-      .then(function(j){WIN=j&&j.windows?j:null;WINFAIL=!WIN;renderWin()}).catch(function(){WINFAIL=true;renderWin()});
+      .then(function(j){WJ=j&&j.windows?j:null;WINFAIL=!WJ;renderWin()}).catch(function(){WINFAIL=true;renderWin()});
   }
   function renderWin(){
     var box=$('winSec');if(!box) return;
     var head='<details class="fold" id="winFold"'+(WIN_OPEN||location.hash==='#winSec'?' open':'')+'><summary><span>Windows scorecard <span class="meta">'+
-      (WIN?'situations the engine acts on or watches, since '+esc(fdate(WIN.since||'2026-11-24')):'situations the engine acts on or watches')+'</span></span></summary>';
-    if(!WIN){box.innerHTML=head+'<div class="none">'+(WINFAIL?'No scorecard yet. It is written after each resolve, from the 24 Nov slate.':'Loading…')+'</div></details>';bindWin();return}
+      (WJ?'situations the engine acts on or watches, since '+esc(fdate(WJ.since||'2026-11-24')):'situations the engine acts on or watches')+'</span></span></summary>';
+    if(!WJ){box.innerHTML=head+'<div class="none">'+(WINFAIL?'No scorecard yet. It is written after each resolve, from the 24 Nov slate.':'Loading…')+'</div></details>';bindWin();return}
     function pc(x){return x===null||x===undefined||x===''?null:(Math.abs(x)<=1?x*100:+x)}
-    var codes=Object.keys(WIN.windows),AO={action:0,watch:1,off:2};
-    codes.sort(function(a,b){var A=WIN.windows[a],B=WIN.windows[b];return (AO[A.mode]==null?3:AO[A.mode])-(AO[B.mode]==null?3:AO[B.mode])||a.localeCompare(b)});
+    var codes=Object.keys(WJ.windows),AO={action:0,pending:1,watch:2,off:3};
+    codes.sort(function(a,b){var A=WJ.windows[a],B=WJ.windows[b];return (AO[A.mode]==null?3:AO[A.mode])-(AO[B.mode]==null?3:AO[B.mode])||a.localeCompare(b)});
     var flag=0;
-    var rows=codes.map(function(c){var w=WIN.windows[c]||{},r=w.rec||{},n=+r.n||0,act=w.mode==='action';
+    var rows=codes.map(function(c){var w=WJ.windows[c]||{},r=w.rec||{},n=+r.n||0,act=w.mode==='action';
       var hit=pc(r.hit),be=pc(r.be),gap=r.gap===undefined||r.gap===null?null:(Math.abs(r.gap)<1&&hit!==null&&Math.abs(r.hit)<=1?r.gap*100:+r.gap);
       var P=act?w.p_beat:r.p_above,Pv=P===undefined||P===null||P===''?null:+P;
-      var st=w.mode==='off'?'off':(!act&&n>=30&&Pv!==null&&(Pv>.8||Pv<.2))?'sig':(act&&n>=30&&Pv!==null&&Pv>.8)?'rdy':'';if(st)flag++;
-      var lab={off:'Switched off'+(w.off_at?' '+esc(fdate(String(w.off_at).slice(0,10))):''),sig:'Signal',rdy:'Ready to promote'}[st]||'';
+      var st=w.mode==='off'?'off':w.mode==='pending'?'pnd':(!act&&n>=30&&Pv!==null&&(Pv>.8||Pv<.2))?'sig':(act&&n>=30&&Pv!==null&&Pv>.8)?'rdy':'';if(st)flag++;
+      var lab={pnd:'Waiting for Mitch\u2019s OK',off:'Switched off'+(w.off_at?' '+esc(fdate(String(w.off_at).slice(0,10))):''),sig:'Signal',rdy:'Ready to promote'}[st]||'';
       return '<tr class="'+(st?'w'+st:'')+'"><td><b>'+esc(c)+'</b> <span class="wmo">'+esc(w.mode||'')+(w.direction&&w.direction!=='watch'?' · '+esc(w.direction):'')+'</span>'+(lab?' <span class="wfl">'+lab+'</span>':'')+(w.text?'<div class="cd-m">'+esc(w.text)+'</div>':'')+'</td>'+
         '<td>'+(n?(+r.w||0)+'-'+(+r.l||0)+'<div class="mu">'+(+r.tg||0)+' tg</div>':'—')+'</td>'+
         '<td>'+(n&&hit!==null?hit.toFixed(0)+'%':'—')+(n&&be!==null?'<div class="mu">v '+be.toFixed(0)+'%</div>':'')+'</td>'+
@@ -2090,9 +2135,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
         '<td>'+(n&&Pv!==null?Pv.toFixed(2):'—')+'</td></tr>'}).join('');
     box.innerHTML=head+'<div class="aut"><p class="aut-n">One row per window. <b>Action</b> windows change what gets logged (RET1 blocks a pick, FO adds a 0u tier); <b>watch</b> windows only count how items in that situation do. '+
       'W-L counts items, with team-games (tg, the real sample) under it; hit is against break-even (the hit rate the prices need). P is the chance the true hit rate beats break-even (action) or beats the items outside the window (watch). '+
-      'Highlighted: switched off; watch rows at 30+ items with P over 0.80 or under 0.20 (signal); action rows at 30+ items with P over 0.80 (ready to promote). Mitch decides any change.'+(flag?'':' Nothing highlighted yet.')+'</p>'+
+      'Pending rows are blocks waiting for Mitch\u2019s OK. Highlighted: switched off; watch rows at 30+ items with P over 0.80 or under 0.20 (signal); action rows at 30+ items with P over 0.80 (ready to promote). Mitch decides any change.'+(flag?'':' Nothing highlighted yet.')+'</p>'+
       '<div class="ts"><table style="min-width:0"><thead><tr><th>Window</th><th>W-L</th><th>Hit</th><th>Gap</th><th>P</th></tr></thead><tbody>'+rows+'</tbody></table></div>'+
-      '<p class="cap">Updated '+esc(String(WIN.updated||'').replace('T',' ').slice(0,16))+'. Display only.</p></div></details>';
+      '<p class="cap">Updated '+esc(String(WJ.updated||'').replace('T',' ').slice(0,16))+'. Display only.</p></div></details>';
     bindWin();
   }
   function bindWin(){var f=$('winFold');if(f)f.addEventListener('toggle',function(){WIN_OPEN=this.open})}
@@ -2170,11 +2215,11 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       if(/^\s*</.test(t))throw 0;
       var objs=CORE.parseCSV(t);if(objs.length&&!('lean_id' in objs[0]))throw 0;
       LEANS=objs.filter(function(o){return String(o.lean_id||'').trim()&&/^\d{4}-\d{2}-\d{2}$/.test(String(o.date||'').trim())}).map(function(o){
-        return {id:String(o.lean_id||'').trim(),date:String(o.date).trim(),game:String(o.game||'').trim(),player:String(o.player||''),stat:String(o.stat||'').trim().toUpperCase(),alt:numOrNull(o.alt),actual:String(o.actual||'').trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase(),team:String(o.team||'').trim(),hr:/(^|\s)HR80(\s|$)/.test(String(o.flags||'')),hr85:/(^|\s)HR85(\s|$)/.test(String(o.flags||'')),pin:/(^|\s)PIN(\s|$)/.test(String(o.flags||'')),mm:/(^|\s)MM90(\s|$)/.test(String(o.flags||'')),mma:/(^|\s)MM90-ALSO(\s|$)/.test(String(o.flags||'')),l5:/(^|\s)L5P(\s|$)/.test(String(o.flags||'')),fo:/(^|\s)FO(\s|$)/.test(String(o.flags||'')),ol:/(^|\s)OUTLIFT(\s|$)/.test(String(o.flags||'')),ls:/(^|\s)LSR(\s|$)/.test(String(o.flags||'')),lk:(String(o.flags||'').match(/(^|\s)LSR-([A-Z0-9]+)/)||[])[2]||''}}).filter(function(r){return r.odds!==null&&r.odds>1});
+        return {id:String(o.lean_id||'').trim(),date:String(o.date).trim(),game:String(o.game||'').trim(),player:String(o.player||''),stat:String(o.stat||'').trim().toUpperCase(),alt:numOrNull(o.alt),actual:String(o.actual||'').trim(),odds:numOrNull(o.odds),result:String(o.result||'').trim().toUpperCase(),team:String(o.team||'').trim(),hr:/(^|\s)HR80(\s|$)/.test(String(o.flags||'')),hr85:/(^|\s)HR85(\s|$)/.test(String(o.flags||'')),pin:/(^|\s)PIN(\s|$)/.test(String(o.flags||'')),mm:/(^|\s)MM90(\s|$)/.test(String(o.flags||'')),mma:/(^|\s)MM90-ALSO(\s|$)/.test(String(o.flags||'')),l5:/(^|\s)L5P(\s|$)/.test(String(o.flags||'')),fo:/(^|\s)FO(\s|$)/.test(String(o.flags||'')),wt:/(^|\s)WIN(\s|$)/.test(String(o.flags||'')),wid:(String(o.flags||'').match(/(^|\s)WIN:(\S+)/)||[])[2]||'',ol:/(^|\s)OUTLIFT(\s|$)/.test(String(o.flags||'')),ls:/(^|\s)LSR(\s|$)/.test(String(o.flags||'')),lk:(String(o.flags||'').match(/(^|\s)LSR-([A-Z0-9]+)/)||[])[2]||''}}).filter(function(r){return r.odds!==null&&r.odds>1});
       LALL=LEANS.slice();
-      HRS=LEANS.filter(function(r){return r.hr});HR85S=LEANS.filter(function(r){return r.hr85});PINS=LEANS.filter(function(r){return r.pin});MMS=LEANS.filter(function(r){return r.mm&&!r.ls});MMA=LEANS.filter(function(r){return r.mma&&!r.mm&&!r.ls});OLS=LEANS.filter(function(r){return r.ol});LSS=LEANS.filter(function(r){return r.ls});L5S=LEANS.filter(function(r){return r.l5&&!r.ls});FOS=LEANS.filter(function(r){return r.fo&&!r.l5&&!r.mm&&!r.hr&&!r.ls});LEANS=LEANS.filter(function(r){return !r.hr&&!r.hr85&&!r.pin&&!r.mm&&!r.l5&&!r.fo&&!r.ol&&!r.ls});renderHr();renderPin();renderMm();renderL5();renderFo();renderOl();renderLs();
+      HRS=LEANS.filter(function(r){return r.hr});HR85S=LEANS.filter(function(r){return r.hr85});PINS=LEANS.filter(function(r){return r.pin});MMS=LEANS.filter(function(r){return r.mm&&!r.ls});MMA=LEANS.filter(function(r){return r.mma&&!r.mm&&!r.ls});OLS=LEANS.filter(function(r){return r.ol});LSS=LEANS.filter(function(r){return r.ls});L5S=LEANS.filter(function(r){return r.l5&&!r.ls});FOS=LEANS.filter(function(r){return r.fo&&!r.l5&&!r.mm&&!r.hr&&!r.ls});WTS=LEANS.filter(function(r){return r.wt&&!r.fo&&!r.l5&&!r.mm&&!r.hr&&!r.ls});LEANS=LEANS.filter(function(r){return !r.hr&&!r.hr85&&!r.pin&&!r.mm&&!r.l5&&!r.fo&&!r.wt&&!r.ol&&!r.ls});renderHr();renderPin();renderMm();renderL5();renderFo();renderWt();renderOl();renderLs();
       LEANFAIL=false;renderLeans();renderBoard();if(D){games();runStatus()}
-    }).catch(function(){LEANFAIL=true;renderLeans();renderHr();renderPin();renderMm();renderL5();renderFo();renderOl();renderLs()});
+    }).catch(function(){LEANFAIL=true;renderLeans();renderHr();renderPin();renderMm();renderL5();renderFo();renderWt();renderOl();renderLs()});
   }
   /* ---------- web-push alerts (sender: tools/nba_push.py in the slate task) ---------- */
   var VAPID_PUB='BAz_aD_630fWpE5YorIANph4tGZ4JUfxDRHYaX_2ljyWtFdlPUW7nxMeR_QDMbV1rJvCuM1BQQamnBDwg8gq444';
