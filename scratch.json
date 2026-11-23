@@ -1,7 +1,8 @@
 {
- "generated": "2026-11-22T22:55:02Z",
+ "generated": "2026-11-23T23:05:02Z",
  "out": [
   {
+   "kind": "out",
    "date": "2026-11-22",
    "game": "OKC@MIA",
    "id": "5174983",
@@ -11,6 +12,18 @@
    "status": "Out",
    "utc": "2026-11-22T22:50:02Z",
    "mins_to_tip": 9
+  },
+  {
+   "kind": "out",
+   "date": "2026-11-23",
+   "game": "POR@PHI",
+   "id": "3059318",
+   "player": "Joel Embiid",
+   "espn_name": "Joel Embiid",
+   "team": "PHI",
+   "status": "Out",
+   "utc": "2026-11-23T23:05:02Z",
+   "mins_to_tip": 54
   }
  ]
 }
