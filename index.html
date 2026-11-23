@@ -393,6 +393,55 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .sb{flex:none;display:inline-block;margin-left:6px;font:700 .7rem/1.5 var(--body);border:1.5px solid var(--accent);color:var(--accent);border-radius:9px;padding:0 6px;vertical-align:2px}
 .sb.on{background:var(--accent);color:var(--card)}
 .sb.off{border-color:var(--warn);color:var(--warn)}
+
+/* B3 tiles (Mitch 23 Nov): fixed rung columns, ghost tiles under 7, tap for codes */
+.colh{display:grid;grid-template-columns:104px repeat(var(--nc,2),minmax(0,1fr));gap:6px;position:sticky;top:env(safe-area-inset-top,0px);z-index:2;background:var(--card);font:700 13px/1 var(--body);color:var(--muted);padding:8px 0 6px;border-bottom:1px solid var(--line);text-align:center}
+.r3{display:grid;grid-template-columns:104px minmax(0,1fr);gap:6px;align-items:center;padding:7px 0 9px}
+.lh3{display:flex;flex-direction:column;gap:4px;align-items:flex-start;min-width:0}.lh3 .l5 i{min-width:18px}
+.t3{display:grid;grid-template-columns:repeat(var(--nc,2),minmax(0,1fr));gap:8px 6px}
+.c3{position:relative;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 6px;padding:6px 10px 12px;min-height:56px;border-radius:7px;
+  background:color-mix(in srgb,var(--rc) 16%,transparent);border:0;border-bottom:3px solid var(--rc);color:var(--text);font:inherit;text-align:left;cursor:pointer;width:100%;min-width:0}
+.c3 small.tg{flex-basis:100%;display:flex;gap:6px;align-items:center;font:700 11px/1.3 var(--body);color:var(--muted)}
+.c3 .rs{margin-left:auto;font-weight:700}.c3.rW .rs{color:var(--good)}.c3.rL .rs{color:var(--bad)}
+.c3 .pkt{background:var(--accent);color:var(--card);border-radius:5px;padding:1px 6px;letter-spacing:.02em}
+.c3 b{font:700 25px/1 var(--disp);font-variant-numeric:tabular-nums}
+.c3 i{font:700 18px/1 var(--disp);font-style:normal;font-variant-numeric:tabular-nums;color:var(--text);opacity:.85}
+.c3 em{position:absolute;right:6px;bottom:-9px;font:700 13.5px/1 var(--disp);font-style:normal;color:#fff;background:var(--rc);border-radius:7px;padding:3px 7px;box-shadow:0 0 0 2px var(--card)}
+.c3 em.dk{color:#12233F}
+.c3 u{position:absolute;right:6px;top:-8px;text-decoration:none;font:700 11px/1 var(--body);padding:2px 6px;border-radius:7px;color:var(--card);box-shadow:0 0 0 2px var(--card)}
+.c3.pk{box-shadow:inset 0 0 0 2px var(--accent)}
+.c3.took{box-shadow:inset 0 0 0 2.5px var(--good)}.c3.took u{background:var(--good)}
+.c3.pass{background:var(--chip);border-bottom-color:var(--muted);box-shadow:inset 0 0 0 2px var(--muted)}.c3.pass u,.c3.pass em{background:var(--muted);color:var(--card)}
+.c3.pass b,.c3.pass i{color:var(--muted);opacity:1}
+.c3.gh{background:none;box-shadow:inset 0 0 0 1.5px var(--line);border-bottom:1.5px solid var(--line)}
+.c3.gh b,.c3.gh i{color:var(--muted);opacity:1}.c3.gh b{font-size:22px}.c3.gh i{font-size:17px}
+.c3.gh em{background:var(--card);color:var(--muted);box-shadow:inset 0 0 0 1.5px var(--line),0 0 0 2px var(--card)}
+.c3.gh.took{box-shadow:inset 0 0 0 2.5px var(--good)}
+.c3.sel{outline:2.5px solid var(--accent);outline-offset:1px}
+.c3.killed b,.c3.killed i,.c3.scr b,.c3.scr i{text-decoration:line-through;text-decoration-thickness:2px}
+.c3:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.nm .dt{margin-left:auto;border:0;background:none;color:var(--accent);font:600 14px/1 var(--body);min-height:44px;padding:0 0 0 12px;cursor:pointer}
+.pl .b5>summary{display:none}
+.cp{margin:2px 0 10px;padding:10px 12px 12px;border-radius:10px;background:var(--chip)}
+.cph{margin:0 0 4px;font-size:14px;color:var(--muted)}.cph b{color:var(--text);font:700 17px/1.2 var(--disp)}
+.cp .kt{margin:2px 0 6px}
+.cdl{display:grid;grid-template-columns:auto 1fr;gap:5px 10px;margin:8px 0;font-size:13.5px;line-height:1.35}
+.cdl dt{font:700 13px/1.4 var(--body);color:var(--text);white-space:nowrap}.cdl dd{margin:0;color:var(--muted);text-wrap:pretty}
+.cdl .v{font-weight:700}.cdl .v.g{color:var(--good)}.cdl .v.w{color:var(--warn)}
+.cpb{display:flex;gap:8px;align-items:center;margin-top:10px}
+.cpb .cbtn{flex:1;min-height:44px;font-size:15px;font-weight:700}
+.cpb .cptk{background:var(--good);border-color:var(--good);color:var(--card)}
+.cpb .cpps{background:var(--card);color:var(--muted)}
+.cpb .cpu{flex:0 0 auto;padding:0 18px}
+.cps{flex:1;font-weight:700}.cps.tk{color:var(--good)}.cps.ps{color:var(--muted)}
+.cpn{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ctoast .cun{margin-left:12px;border:0;background:none;color:inherit;font:700 14px/1 var(--body);text-decoration:underline;min-height:32px;cursor:pointer}
+.blr{display:grid;grid-template-columns:minmax(0,1fr) 128px;grid-template-rows:auto auto;column-gap:10px;row-gap:4px;align-items:center;width:100%;padding:10px 0;background:none;border:0;border-bottom:1px solid var(--line);color:inherit;font:inherit;text-align:left;cursor:pointer}
+.blr:last-child{border-bottom:0}
+.blr .bln{display:flex;flex-wrap:wrap;align-items:center;gap:4px 6px;min-width:0}.blr .bln strong{font:700 19px/1.1 var(--disp)}.blr .bg{font-size:12px;color:var(--muted)}
+.blr .blk{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center}
+.blr .c3{grid-column:2;grid-row:1/3;cursor:inherit}
+.blr:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </style>
 <script>
 /* Light/dark toggle (Mitch 21 Nov: "I want the dashboard to be light for me"). Saved per device in localStorage;
@@ -466,7 +515,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <details class="fold inner" id="legend"><summary><span>Legend <span class="meta">every code on the cards; tap a code on a card to jump here</span></span></summary>
   <div class="lgw"><table class="lg"><thead><tr><th>Code</th><th>What it means</th><th>Effect</th></tr></thead><tbody>
   <tr class="lgh"><th colspan="3">Reading the cards</th></tr>
-  <tr><td class="lgc">Hit /10</td><td>The ring: the engine's hit chance out of 10 (price plus edge), so 7.8 means about 78%. Green 8.5+, then 8, 7.5, 7, red under 7. Checked on 4,172 settled rungs (13-20 Nov): it predicted 71.4% against 70.8% actual. Tap a bet for its last-10 count.</td><td class="lge">Display</td></tr>
+  <tr><td class="lgc">Hit /10</td><td>The badge on each tile: the engine's hit chance out of 10 (price plus edge), so 7.8 means about 78%. Tiles shade from grey (7) to dark green (8.5+); under 7 is a plain outlined tile. Checked on 4,172 settled rungs (13-20 Nov): it predicted 71.4% against 70.8% actual. Tap a bet for its last-10 count.</td><td class="lge">Display</td></tr>
   <tr><td class="lgc">Matchup edge bar</td><td>Bars grow out from the centre line toward the team with the better rank; length = rank gap (full = 29). Short grey stub both sides = 2 ranks or less, no real edge. In the defence table the bar grows toward the tighter defence.</td><td class="lge">Display</td></tr>
   <tr class="lgh"><th colspan="3">Bet type and stake</th></tr>
   <tr data-re="^U(1\.5|1|0\.5|0\.25)$"><td class="lgc">U1.5 · U1 · U0.5 · U0.25</td><td>Stake in units for a pick, set by its stars: 5★ 1.5u, 4★ 1u, 3★ 0.5u, 2★ or less 0.25u.</td><td class="lge">Stake</td></tr>
@@ -538,8 +587,8 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <tr><td class="lgc">Edge</td><td>Model probability minus the price&#x27;s implied probability, in pp.</td><td class="lge"></td></tr>
   <tr><td class="lgc">Context line</td><td>Minutes model %, with/without % (×lift), Pinnacle fair %, opponent outs, best book. Shadow numbers: they don&#x27;t move the pick.</td><td class="lge">Display</td></tr>
   <tr data-re="^(W|L|PUSH|VOID)( ·|$)"><td class="lgc">W · L · PUSH · VOID</td><td>Settled result after the resolve, with the actual stat. VOID = did not play.</td><td class="lge">Result</td></tr>
-  <tr data-re="^(Taken|Passed)$"><td class="lgc">✅ Taken / 🚫 Passed</td><td>Your call on a pick or lean. Tap the ring to cycle: taken, passed, no call. A pass locks at tip.</td><td class="lge"></td></tr>
-  <tr data-re="^(Starter|Starting|Bench)$"><td class="lgc">Starter / Starting / Bench</td><td>Starter = started 4 or more of his team's last 5. Starting = in tonight's confirmed starting five (about 30 min before tip). Bench = lineups confirmed and he's not in them.</td><td class="lge"></td></tr>
+  <tr data-re="^(Taken|Passed)$"><td class="lgc">✅ Taken / 🚫 Passed</td><td>Your call on a pick or lean. Tap its tile, then Took it or Pass. Undo from the message that pops up, or from the tile. A pass locks at tip.</td><td class="lge"></td></tr>
+  <tr data-re="^(Usual starter|Starting|Bench)$"><td class="lgc">Usual starter / Starting / Bench</td><td>Usual starter = started 4 or more of his team's last 5. Starting = in tonight's confirmed starting five (about 30 min before tip). Bench = lineups confirmed and he's not in them.</td><td class="lge"></td></tr>
   </tbody></table></div></details>
 
   <details class="fold inner">
@@ -1175,7 +1224,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function sbHtml(arr){var k=stState(arr),gs=null;arr.forEach(function(b){if(b.gs!=null)gs=b.gs});
     return k==='on'?'<span class="sb on" title="In tonight\u2019s confirmed starting five">Starting</span>':
       k==='off'?'<span class="sb off" title="Lineups confirmed: not starting tonight'+(gs!==null?' (started '+gs+' of last 5)':'')+'">Bench</span>':
-      k==='reg'?'<span class="sb reg" title="Started '+gs+' of his team\u2019s last 5. Lineup not confirmed yet">Starter</span>':''}
+      k==='reg'?'<span class="sb reg" title="Started '+gs+' of his team\u2019s last 5. Lineup not confirmed yet">Usual starter</span>':''}
   function sbAria(arr){var k=stState(arr);return k==='on'?', starting tonight':k==='off'?', not starting tonight':k==='reg'?', regular starter':''}
   function stPill(s){return '<span class="stn '+(STC[s]||'oth')+'">'+esc(STW[s]||s)+'</span>'}
   function l5Note(t){if(!t) return '';if(t.dnp) return 'did not play';var a=[];if(t.out&&t.out.length)a.push(t.out.join(' and ')+' out');if(t.ot)a.push(t.ot>1?t.ot+' overtimes':'overtime');return a.join(', ')}
@@ -1206,7 +1255,6 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var lab=x?({W:'won',L:'lost',PUSH:'push',VOID:'void'}[x.result]||x.result):'';
     return '<span class="ln'+(c?' '+c:'')+'"'+(x?' aria-label="Line '+esc(b.alt)+', '+lab+(x.actual?' with '+esc(x.actual):'')+'"':'')+'>'+esc(b.alt)+
       (x?'<em>'+(x.actual?'('+esc(x.actual)+')':lab)+'</em>':'')+'</span>'}
-  var BH='<div class="bh"><span></span><span>Line</span><span>Odds</span></div>';
   function playerBlocks(g,gi,list){
     var by={},order=[];
     list.forEach(function(p){if(!by[p.p]){by[p.p]=[];order.push(p.p)}by[p.p].push(p)});
@@ -1214,24 +1262,90 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var ps=order.map(function(n,i){var bs=by[n].slice().sort(function(a,b){return (a.lean?1:0)-(b.lean?1:0)||rk(a)-rk(b)});
       return {n:n,i:i,bs:bs,pk:bs.some(function(b){return !b.lean}),best:Math.min.apply(null,bs.map(rk))}})
       .sort(function(a,b){return (b.pk?1:0)-(a.pk?1:0)||a.best-b.best||b.bs.length-a.bs.length||a.i-b.i});
-    return ps.map(function(P){
+    /* B3 layout (Mitch 23 Nov): per player, one row per stat; its lines sit in fixed columns, shortest first.
+       Tap a tile to open what its codes mean, with Took it / Pass. Lines under 7/10 are ghost tiles. */
+    if(!ps.length) return '';
+    var NC=1;ps.forEach(function(P){var c={};P.bs.forEach(function(b){c[b.s]=(c[b.s]||0)+1;if(c[b.s]>NC)NC=c[b.s]})});NC=Math.min(NC,3);
+    var hdr='<div class="colh" style="--nc:'+NC+'" aria-hidden="true"><span></span>'+['Shortest','Longer','Longest'].slice(0,NC).map(function(h){return '<span>'+h+'</span>'}).join('')+'</div>';
+    return hdr+ps.map(function(P){
       var key=g.id+'|'+P.n,sel=TSEL[key],b0=P.bs[0],tm=(P.bs.map(function(b){return tmOut(g,b)}).filter(Boolean)[0]||'')+(P.bs.map(function(b){return tmBack(g,b)}).filter(Boolean)[0]||'');
-      var rows=P.bs.map(function(b,j){var x=resFor(b),k=kindTag(b),det='';try{det='<p class="kt"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span> '+esc(KGLOSS[k]||'')+'</p>'+knLine(b)+tileDet(b,g,gi)+'<p class="gl">Edge = the model\'s chance minus the chance the price implies. Stars = confidence (5 is highest).</p>'}catch(e){}
-        var kl=b.f.indexOf('OUTLIFT')>=0,sx=scrOf(g,b.p),cl=callOf(g,b);
-        return '<button class="bet'+(kl?' killed':'')+(sx?' scr':'')+callCls(cl)+'" type="button" aria-label="'+betLabel(b)+(kl?', killed OUTLIFT tier, record only':'')+(sx?', late scratch, ruled out':'')+callAria(cl)+sbAria([b])+'" aria-expanded="'+(sel===j)+'" data-tk="'+esc(key)+'" data-tj="'+j+'" data-bid="'+esc(bid(g,b))+'" data-g="'+esc(g.id)+'"><span class="rc">'+ringHtml(b)+'</span>'+
-          '<span class="sl">'+stPill(b.s)+(kl?'<span class="kx">killed</span>':'')+callPill(cl)+l5Html(b)+'</span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span></button>'+
-          '<div class="tdet" data-td="'+esc(key)+'" data-tj="'+j+'"'+(sel===j?'':' hidden')+'>'+det+'</div>'}).join('');
+      var st={},so=[];P.bs.forEach(function(b,j){if(!st[b.s]){st[b.s]=[];so.push(b.s)}st[b.s].push({b:b,j:j})});
+      function bh(a){return Math.max.apply(null,a.map(function(o){var h=hitP(o.b);return h===null?0:h}))}
+      so.sort(function(a,c){return bh(st[c])-bh(st[a])});
+      var rows=so.map(function(sk){var R=st[sk].slice().sort(function(a,c){return a.b.alt-c.b.alt});
+        R.forEach(function(o){o.id='cp'+(++CPN)});
+        var tiles=R.map(function(o){return tileHtml(g,o.b,{key:key,j:o.j,on:sel===o.j,id:o.id})}).join('');
+        var pans=R.map(function(o){var det='';try{det=panelHtml(g,o.b)}catch(e){}
+          return '<div class="cp" id="'+o.id+'" data-td="'+esc(key)+'" data-tj="'+o.j+'"'+(sel===o.j?'':' hidden')+'>'+det+'</div>'}).join('');
+        return '<div class="r3"><span class="lh3">'+stPill(sk)+l5Html(R[0].b)+'</span><div class="t3" style="--nc:'+NC+'">'+tiles+'</div></div>'+pans}).join('');
       var sn='';try{sn=scoutNote(g,P)}catch(e){}
       var b5='';try{b5=box5Html(g,P,sn)}catch(e){}
+      if(b5) b5=b5.replace('<details class="scn b5"','<details class="scn b5" data-dd="'+esc(key)+'"'+(DOPEN[key]?' open':''));
       var sx=scrOf(g,P.n);
-      return '<div class="pl'+(sx?' scr':'')+'"><div class="nm"><strong>'+esc(P.n)+'</strong>'+sbHtml(P.bs)+(sx?'<span class="sx" title="Ruled '+esc(sx.status||'OUT')+(sx.mins_to_tip!=null?', '+esc(sx.mins_to_tip)+' min before tip':'')+'">Late scratch</span>':'')+'<span class="tm">'+esc(b0.t||'')+'</span>'+tm+'</div>'+b5+rows+'</div>'}).join('');
+      return '<div class="pl'+(sx?' scr':'')+'"><div class="nm"><strong>'+esc(P.n)+'</strong>'+sbHtml(P.bs)+(sx?'<span class="sx" title="Ruled '+esc(sx.status||'OUT')+(sx.mins_to_tip!=null?', '+esc(sx.mins_to_tip)+' min before tip':'')+'">Late scratch</span>':'')+'<span class="tm">'+esc(b0.t||'')+'</span>'+tm+
+        (b5?'<button type="button" class="dt" data-dk="'+esc(key)+'" aria-expanded="'+(DOPEN[key]?'true':'false')+'">Details <span aria-hidden="true">\u203A</span></button>':'')+'</div>'+b5+rows+'</div>'}).join('');
+  }
+  var CPN=0,DOPEN={},GHOST=.7;
+  /* Tile colour (critique 23 Nov, Mitch chose neutral to green): no warm colours on a shown tile. */
+  function tband(r){return r===null||r<GHOST?{c:'#AEB8C4',dk:1}:r>=.85?{c:'#17733F',dk:0}:r>=.8?{c:'#5FAE45',dk:1}:r>=.75?{c:'#9CC77E',dk:1}:{c:'#AEB8C4',dk:1}}
+  function tileFace(g,b){
+    var r=hitP(b),x=resFor(b),cl=callOf(g,b),k=kindTag(b),kl=b.f.indexOf('OUTLIFT')>=0,sx=scrOf(g,b.p),bd=tband(r);
+    var cls='c3'+((r===null||r<GHOST)&&!cl?' gh':'')+(cl==='TOOK'?' took':cl==='PASS'?' pass':'')+(b.lean?'':' pk')+(kl?' killed':'')+(sx?' scr':'')+(x?' r'+x.result:'');
+    var rl=x?({W:'Won',L:'Lost',PUSH:'Push',VOID:'Void'}[x.result]||x.result)+(x.actual?' '+x.actual:''):'';
+    var inner=(cl?'<u>'+(cl==='TOOK'?'Taken':'Passed')+'</u>':'')+
+      '<small class="tg">'+(b.lean?esc(k==='LEAN'?'Lean':k):'<span class="pkt">PICK</span>')+(kl?' \u00B7 killed':'')+(sx?' \u00B7 scratched':'')+(rl?'<span class="rs">'+esc(rl)+'</span>':'')+'</small>'+
+      '<b>'+esc(b.alt)+'</b><i>$'+b.o.toFixed(2)+'</i>'+(r!==null?'<em'+(bd.dk?' class="dk"':'')+'>'+(r*10).toFixed(1)+'</em>':'');
+    return {cls:cls,sty:' style="--rc:'+bd.c+'"',inner:inner,
+      aria:betLabel(b)+', '+(b.lean?(k==='LEAN'?'lean':k):'pick')+(kl?', killed OUTLIFT tier, record only':'')+(sx?', late scratch, ruled out':'')+callAria(cl)+sbAria([b])};
+  }
+  function tileHtml(g,b,o){var t=tileFace(g,b);
+    return '<button type="button" class="'+t.cls+(o.on?' sel':'')+'"'+t.sty+' aria-label="'+t.aria+'" aria-expanded="'+(o.on?'true':'false')+'" aria-controls="'+o.id+'" data-tk="'+esc(o.key)+'" data-tj="'+o.j+'" data-bid="'+esc(bid(g,b))+'" data-g="'+esc(g.id)+'">'+t.inner+'</button>'}
+  /* A plain verdict for tonight's value of each code (critique 23 Nov): the legend says what a code is, this says what it means here. */
+  var CAUT=['TMO','TMO-Q','[ROLE?]','[Std?]','[OUT]','CUSH','CAP','B2B','DEPLETED','DNP-LAST','MISS','THIN','DOG7','REB-OPP','BIGEDGE?'];
+  function codeVerdict(f){var m;
+    if((m=f.match(/^C(\d+(?:\.\d+)?)$/))){var c=+m[1];return c<=.70?['Inside the 0.70 pick limit','g']:c<=.75?['Just over the 0.70 pick limit','w']:['Well over the 0.70 pick limit','w']}
+    if((m=f.match(/^Z(-?\d+(?:\.\d+)?)$/))){var z=+m[1];return z>=1.5?['Comfortably above the line','g']:z>=1?['Above the line','g']:z>=0?['Only just above the line','w']:['His average is below the line','w']}
+    if((m=f.match(/^PIN([+-]\d+(?:\.\d+)?)$/))){var v=+m[1];return v>=0?['Pinnacle agrees, by '+v.toFixed(1)+'pp','g']:['Pinnacle disagrees, by '+Math.abs(v).toFixed(1)+'pp','w']}
+    if((m=f.match(/^PMM(\d(?:\.\d+)?)$/))){var q=Math.round(+m[1]*100);return [q+'% by the minutes model',q>=90?'g':'w']}
+    if((m=f.match(/^MU([+-]\d+)%$/))) return +m[1]>=0?['Good matchup for this stat','g']:['Tough matchup for this stat','w'];
+    if(f==='MT+') return ['Minutes going up','g'];if(f==='MT-') return ['Minutes going down','w'];
+    if(f==='MM90-ALSO') return ['Also meets MM90','g'];
+    if(CAUT.indexOf(f)>=0) return ['Check this','w'];
+    return null}
+  function panelHtml(g,b){
+    var r=hitP(b),x=resFor(b),k=kindTag(b),u='';b.f.forEach(function(f){if(/^U\d/.test(f))u=f.slice(1)});
+    var codes=b.f.filter(function(f){return f!=='LEAN'&&!/^U\d/.test(f)&&f!==k}).map(function(f){var mm='';try{mm=codeMeaning(f)}catch(e){}var v=codeVerdict(f);
+      return '<dt>'+esc(f)+'</dt><dd>'+(v?'<b class="v '+v[1]+'">'+esc(v[0])+'.</b> ':'')+esc(mm||'Not in the legend yet.')+'</dd>'}).join('');
+    var cx='';try{cx=g?cxLine(g,b):''}catch(e){}
+    return '<p class="cph"><b>'+esc(b.p)+', '+esc(STW[b.s]||b.s)+' over '+esc(b.alt)+'</b>'+(r!==null?' \u00B7 '+(r*10).toFixed(1)+' out of 10':'')+
+      (x?' \u00B7 <span class="res '+({W:'W',L:'L',PUSH:'P',VOID:'V'}[x.result]||'')+'">'+esc(x.result)+(x.actual?' '+esc(x.actual):'')+'</span>':'')+'</p>'+
+      '<p class="kt"><span class="k'+(b.lean?'':' pk')+'">'+esc(k)+'</span> '+esc(KGLOSS[k]||'')+'</p>'+knLine(b)+
+      (codes?'<dl class="cdl">'+codes+'</dl>':'')+
+      '<div class="row1"><span>Edge <b>'+(b.e>0?'+':'')+b.e.toFixed(1)+'</b></span><span>Hit <b>'+esc(b.h)+'</b></span><span>'+stars(b.stN)+'</span><span>Stake <b>'+(b.lean?'0u':(u?esc(u)+'u':'\u2014'))+'</b></span></div>'+
+      (/[0-9]/.test(b.opp)?'<div class="opp">Opp '+esc(b.opp)+'</div>':'')+(b.sa!==null?'<div class="safe">Safer: O'+esc(b.sa)+' @ '+b.so.toFixed(2)+'</div>':'')+
+      (cx?'<details class="cds"><summary>Game context</summary>'+cx+'</details>':'')+callBar(g,b);
+  }
+  function callBar(g,b){
+    if(!CHOICE_URL||!g) return '';
+    var pid=callId(g,b),ch=pid?(CHOICES[pid]||''):'',tp=hasTipped(g);
+    if(!UNLOCKED) return '<p class="cpn">Unlock with your PIN to mark this taken or passed.</p>';
+    if(!pid) return '<p class="cpn">Still being recorded to the Sheet. Try again shortly.</p>';
+    if(ch) return '<div class="cpb"><span class="cps '+(ch==='TOOK'?'tk':'ps')+'">'+(ch==='TOOK'?'You took this':'You passed')+'</span>'+
+      (ch==='PASS'&&tp?'<span class="cpn">Locked at tip</span>':'<button class="cbtn cpu" type="button" data-ch="'+ch+'" data-pid="'+esc(pid)+'">Undo</button>')+'</div>';
+    return '<div class="cpb"><button class="cbtn cptk" type="button" data-ch="TOOK" data-pid="'+esc(pid)+'">Took it</button>'+
+      '<button class="cbtn cpps" type="button" data-ch="PASS" data-pid="'+esc(pid)+'"'+(tp?' disabled title="Locked at tip"':'')+'>Pass</button></div>';
   }
   document.addEventListener('click',function(ev){
-    var t=ev.target.closest&&ev.target.closest('.bet[data-tk]');if(!t) return;
+    var t=ev.target.closest&&ev.target.closest('.c3[data-tk]');if(!t) return;
     var key=t.getAttribute('data-tk'),j=+t.getAttribute('data-tj'),pl=t.closest('.pl'),on=TSEL[key]===j;
     TSEL[key]=on?undefined:j;
-    Array.prototype.forEach.call(pl.querySelectorAll('.bet[data-tk]'),function(x){x.setAttribute('aria-expanded',String(!on&&+x.getAttribute('data-tj')===j))});
-    Array.prototype.forEach.call(pl.querySelectorAll('.tdet'),function(x){x.hidden=on||+x.getAttribute('data-tj')!==j});
+    Array.prototype.forEach.call(pl.querySelectorAll('.c3[data-tk]'),function(x){var o=!on&&+x.getAttribute('data-tj')===j;x.setAttribute('aria-expanded',String(o));x.classList.toggle('sel',o)});
+    Array.prototype.forEach.call(pl.querySelectorAll('.cp[data-td]'),function(x){x.hidden=on||+x.getAttribute('data-tj')!==j});
+  });
+  document.addEventListener('click',function(ev){
+    var d=ev.target.closest&&ev.target.closest('.dt[data-dk]');if(!d) return;
+    var key=d.getAttribute('data-dk'),pl=d.closest('.pl'),det=pl&&pl.querySelector('details.b5');if(!det) return;
+    det.open=!det.open;DOPEN[key]=det.open;d.setAttribute('aria-expanded',String(det.open));
   });
   var LOPEN={};
   /* Team primary colours for the card's top edge (away | home). */
@@ -1260,10 +1374,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var top=g.picks.concat(g.leans.filter(function(p){return pkp[p.p]})),rest=g.leans.filter(function(p){return !pkp[p.p]});
     var body='',lb='';try{body=playerBlocks(g,gi,top)}catch(e){}try{lb=playerBlocks(g,gi,rest)}catch(e){}
     var np2=0;rest.forEach(function(p,i,a){if(a.findIndex(function(q){return q.p===p.p})===i)np2++});
-    var tbl=body?'<div class="pls">'+BH+body+'</div>':(lb?'':'<div class="none">No pick or lean for this game.</div>');
+    var tbl=body?'<div class="pls">'+body+'</div>':(lb?'':'<div class="none">No pick or lean for this game.</div>');
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
     var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+(function(){var k=rest.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length;return (rest.length-k)+(k?' + '+k+' killed':'')})()+' · '+np2+' player'+(np2===1?'':'s')+')</b> · tracked, not bet · best first</span></summary>'+
-      '<div class="pls">'+(body?'':ringKey(rest))+BH+lb+'</div></details>':'';
+      '<div class="pls">'+(body?'':ringKey(rest))+lb+'</div></details>':'';
     var cur=MXV[g.id]==='mx'||MXV[g.id]==='info'?'mx':'bets';
     var views=[['bets','Bets'],['mx','Matchup']];
     var gseg='<div class="gseg" role="group" aria-label="Game view">'+views.map(function(x){return '<button type="button" class="tab" data-mxg="'+esc(g.id)+'" data-mxv="'+x[0]+'" aria-pressed="'+(cur===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
@@ -1330,15 +1444,14 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var top=L.slice(0,5),tw=0,tl=0,td=0;top.forEach(function(x){var r=resFor(x.b);if(r){td++;if(r.result==='W')tw++;else if(r.result==='L')tl++}});
     box.innerHTML=(td===top.length?'<h2>Tonight\'s best leans: '+tw+'-'+tl+'</h2><p class="bsub">Settled. Highest chance first, tracked at 0u, never staked. Tap one to see it in its game.</p>'
       :'<h2>Best leans tonight</h2><p class="bsub">No pick cleared every gate. Highest chance first, tracked at 0u, never staked. Tap one to see it in its game.</p>')+
-      '<div class="pls">'+ringKey(top.map(function(x){return x.b}))+BH+top.map(function(x){var b=x.b;
-        var sx=scrOf(x.g,b.p),cl=callOf(x.g,b);
-        return '<button class="bet bl'+(sx?' scr':'')+callCls(cl)+'" type="button" aria-label="'+betLabel(b,x.g.id)+(sx?', late scratch, ruled out':'')+callAria(cl)+sbAria([b])+', open in its game" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'"><span class="rc">'+ringHtml(b)+'</span>'+
-          '<span class="sl"><strong>'+esc(b.p)+'</strong>'+sbHtml([b])+'<span class="bg">'+esc(x.g.id)+'</span>'+callPill(cl)+'</span>'+lnHtml(b)+'<span class="od">'+b.o.toFixed(2)+'</span>'+
-          '<span class="kd">'+stPill(b.s)+l5Html(b)+'</span></button>'}).join('')+'</div>';
+      '<div class="pls">'+ringKey(top.map(function(x){return x.b}))+top.map(function(x){var b=x.b,t=tileFace(x.g,b);
+        return '<button class="blr" type="button" aria-label="'+t.aria+', open in its game" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'">'+
+          '<span class="bln"><strong>'+esc(b.p)+'</strong>'+sbHtml([b])+'<span class="bg">'+esc(x.g.id)+'</span></span>'+
+          '<span class="blk">'+stPill(b.s)+l5Html(b)+'</span><span class="'+t.cls+'"'+t.sty+' aria-hidden="true">'+t.inner+'</span></button>'}).join('')+'</div>';
     box.hidden=false;
     Array.prototype.forEach.call(box.querySelectorAll('[data-jump]'),function(el){el.onclick=function(){
       LOPEN[el.getAttribute('data-g')]=true;MXV[el.getAttribute('data-g')]='bets';games();
-      var t=null;Array.prototype.forEach.call($('games').querySelectorAll('.bet[data-bid]'),function(x){if(x.getAttribute('data-bid')===el.getAttribute('data-jump'))t=x});
+      var t=null;Array.prototype.forEach.call($('games').querySelectorAll('.c3[data-bid]'),function(x){if(x.getAttribute('data-bid')===el.getAttribute('data-jump'))t=x});
       if(t){if(t.getAttribute('aria-expanded')!=='true')t.click();t.scrollIntoView({block:'center',behavior:'smooth'});t.focus({preventScroll:true});
         var jb=$('jb');JBFROM=el.getAttribute('data-jump');jb.hidden=false;JBAT=Date.now()}}});
   }
@@ -2043,27 +2156,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function callPill(c){return c==='TOOK'?'<span class="cl took">Taken</span>':c==='PASS'?'<span class="cl pass">Passed</span>':''}
   function callAria(c){return c==='TOOK'?', you took it':c==='PASS'?', you passed':''}
   var CTT=null;
-  function ctoast(t){var e=$('ctoast');if(!e)return;e.textContent=t;e.hidden=false;clearTimeout(CTT);CTT=setTimeout(function(){e.hidden=true},3500)}
-  function cycleCall(btn){
-    var gid=btn.getAttribute('data-g'),bk=btn.getAttribute('data-bid')||btn.getAttribute('data-jump'),g=null,b=null;
-    G.forEach(function(x){if(x.id===gid)g=x});if(!g)return;
-    g.picks.concat(g.leans).forEach(function(x){if(bid(g,x)===bk)b=x});if(!b)return;
-    if(!CHOICE_URL)return;
-    if(!UNLOCKED){ctoast('Unlock with your PIN to record calls');return}
-    var id=callId(g,b);if(!id){ctoast('Still being recorded to the Sheet. Try again shortly.');return}
-    var cur=CHOICES[id]||'',tipped=hasTipped(g);
-    if(tipped&&cur==='PASS'){ctoast('Locked: the game has tipped, so a pass can\u2019t change');return}
-    var next=cur===''?'TOOK':cur==='TOOK'?(tipped?'':'PASS'):'';
-    CHOICES[id]=next;games();renderRecord();
-    post({op:'set',pin:PIN,pick_id:id,choice:next}).then(function(j){
-      if(!j.ok){CHOICES[id]=cur;games();renderRecord();ctoast(j.error==='pick not in the Sheet yet'&&b.lean?'Lean calls need the updated Sheet script':(j.error||'Not saved'))}
-    }).catch(function(){CHOICES[id]=cur;games();renderRecord();ctoast('Could not reach the Sheet. Not saved.')});
-  }
-  document.addEventListener('click',function(ev){
-    var r=ev.target.closest&&ev.target.closest('.bet .rc');if(!r)return;
-    var btn=r.closest('.bet');if(!btn||!btn.getAttribute('data-g'))return;
-    ev.stopPropagation();ev.preventDefault();cycleCall(btn);
-  },true);
+  function ctoast(t,undo){var e=$('ctoast');if(!e)return;e.textContent=t;
+    if(undo){var u=document.createElement('button');u.type='button';u.className='cun';u.textContent='Undo';u.onclick=function(){e.hidden=true;clearTimeout(CTT);undo()};e.appendChild(u)}
+    e.hidden=false;clearTimeout(CTT);CTT=setTimeout(function(){e.hidden=true},undo?6000:3500)}
   function hasTipped(g){
     var iso=slateIso(),n=melNow();if(!iso)return true;if(iso<n.iso)return true;if(iso>n.iso)return false;
     var m=/^(\d{1,2}):(\d{2})/.exec(g.tip||'');return m?n.min>=(+m[1])*60+(+m[2]):false;
@@ -2096,7 +2191,11 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var next=CHOICES[pid]===want?'':want,prev=CHOICES[pid]||'';
     CHOICES[pid]=next;games();
     post({op:'set',pin:PIN,pick_id:pid,choice:next}).then(function(j){
-      if(!j.ok){CHOICES[pid]=prev;games();alertMsg(j.error||'Not saved')}else renderRecord();
+      if(!j.ok){CHOICES[pid]=prev;games();alertMsg(j.error||'Not saved')}
+      else{renderRecord();ctoast(next==='TOOK'?'Marked taken':next==='PASS'?'Marked passed':'Call cleared',function(){
+        var cur=CHOICES[pid]||'';CHOICES[pid]=prev;games();
+        post({op:'set',pin:PIN,pick_id:pid,choice:prev}).then(function(k){if(!k.ok){CHOICES[pid]=cur;games();ctoast(k.error||'Undo not saved')}else renderRecord()})
+          .catch(function(){CHOICES[pid]=cur;games();ctoast('Could not reach the Sheet. Undo not saved.')})})}
     }).catch(function(){CHOICES[pid]=prev;games();alertMsg('Could not reach the Sheet — not saved')});
   }
   function alertMsg(t){var b=$('lockbar');if(!b)return;var m=document.createElement('span');m.className='neg';m.textContent=t;b.appendChild(m);setTimeout(function(){if(m.parentNode)m.parentNode.removeChild(m)},5000)}
