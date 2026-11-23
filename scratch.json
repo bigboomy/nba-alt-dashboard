@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T23:05:02Z",
+ "generated": "2026-11-23T23:20:02Z",
  "out": [
   {
    "kind": "out",
@@ -12,6 +12,17 @@
    "status": "Out",
    "utc": "2026-11-22T22:50:02Z",
    "mins_to_tip": 9
+  },
+  {
+   "kind": "in",
+   "date": "2026-11-23",
+   "game": "POR@PHI",
+   "id": "5105637",
+   "player": "Adem Bona",
+   "team": "PHI",
+   "status": "",
+   "utc": "2026-11-23T23:20:02Z",
+   "mins_to_tip": 39
   },
   {
    "kind": "out",
