@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-24",
+      "version": "nba-session v3.42-p4",
+      "component": "engine",
+      "title": "Lean tier rules put hit % first",
+      "change": "A tier now allows a type up to 10pp under its price (was 5) at 70%+ hits, and C needs 10 settled leans (was 15); LSR moves from C to B.",
+      "why": "Mitch 24 Nov, critic recommendation: the v3.41 rules would have dropped FO and HR85 out of Core on 1 Dec despite 71-72% hits. The new rules reproduce the seed on the 30-day record."
+    },
+    {
+      "date": "2026-11-24",
       "version": "dashboard",
       "component": "dashboard",
       "title": "Leans tier filter A / B / C",
