@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T00:15:02Z",
+ "generated": "2026-11-24T00:20:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -168,15 +168,15 @@
    "at": "2026-11-24T00:05:02Z"
   },
   "LAC": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Max Strus",
     "Brandon Ingram",
+    "Derrick Jones Jr.",
     "Darius Garland",
     "Rui Hachimura",
     "Brook Lopez"
    ],
-   "at": "2026-11-24T00:05:02Z"
+   "at": "2026-11-24T00:20:02Z"
   }
  },
  "items": {
@@ -190,6 +190,11 @@
   "Ayo Dosunmu|MIN": 1,
   "Jaden McDaniels|MIN": 1,
   "LaMelo Ball|MIN": 1,
+  "Brook Lopez|LAC": 1,
+  "Derrick Jones Jr.|LAC": 1,
+  "Max Strus|LAC": 0,
+  "Rui Hachimura|LAC": 1,
+  "Keaton Wagler|LAC": 0,
   "Naz Reid|CHA": 1,
   "Moussa Diabate|CHA": 1,
   "Ryan Kalkbrenner|CHA": 0,
