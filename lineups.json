@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T00:20:02Z",
+ "generated": "2026-11-24T00:40:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -113,40 +113,40 @@
    "at": "2026-11-24T00:10:02Z"
   },
   "CHI": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Buddy Hield",
-    "Isaac Okoro",
-    "Josh Giddey",
     "Matas Buzelis",
+    "Josh Giddey",
+    "Isaac Okoro",
     "Jalen Smith"
    ],
-   "at": "2026-11-23T23:30:02Z"
+   "at": "2026-11-24T00:40:02Z"
   },
   "CLE": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Donovan Mitchell",
-    "Jaylon Tyson",
+    "Sam Merrill",
     "James Harden",
     "Peyton Watson",
     "Jarrett Allen"
    ],
-   "at": "2026-11-23T23:30:02Z"
+   "at": "2026-11-24T00:40:02Z"
   },
   "NOP": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Herbert Jones",
-    "Saddiq Bey",
+    "Trey Murphy III",
     "Jeremiah Fears",
     "Zion Williamson",
     "Yves Missi"
    ],
-   "at": "2026-11-23T23:30:02Z"
+   "at": "2026-11-24T00:40:02Z"
   },
   "PHX": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Jalen Green",
     "Dillon Brooks",
@@ -154,7 +154,7 @@
     "Miles Bridges",
     "Oso Ighodaro"
    ],
-   "at": "2026-11-23T23:30:02Z"
+   "at": "2026-11-24T00:40:02Z"
   },
   "HOU": {
    "confirmed": false,
@@ -190,6 +190,13 @@
   "Ayo Dosunmu|MIN": 1,
   "Jaden McDaniels|MIN": 1,
   "LaMelo Ball|MIN": 1,
+  "Nic Claxton|CHI": 0,
+  "Jalen Smith|CHI": 1,
+  "Isaac Okoro|CHI": 1,
+  "Matas Buzelis|CHI": 1,
+  "Josh Giddey|CHI": 1,
+  "Tyrese Proctor|CLE": 0,
+  "Meleek Thomas|CLE": 0,
   "Brook Lopez|LAC": 1,
   "Derrick Jones Jr.|LAC": 1,
   "Max Strus|LAC": 0,
@@ -218,6 +225,9 @@
   "Isaiah Hartenstein|OKC": 1,
   "Shai Gilgeous-Alexander|OKC": 1,
   "Bennett Stirtz|OKC": 0,
+  "Trey Murphy III|NOP": 1,
+  "Derik Queen|NOP": 0,
+  "Jordan Goodwin|PHX": 0,
   "Sidy Cissoko|POR": 1,
   "Donovan Clingan|POR": 1
  }
