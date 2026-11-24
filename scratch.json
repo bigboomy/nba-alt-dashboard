@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T23:20:02Z",
+ "generated": "2026-11-24T00:40:02Z",
  "out": [
   {
    "kind": "out",
@@ -12,6 +12,17 @@
    "status": "Out",
    "utc": "2026-11-22T22:50:02Z",
    "mins_to_tip": 9
+  },
+  {
+   "kind": "in",
+   "date": "2026-11-23",
+   "game": "CLE@CHI",
+   "id": "4683747",
+   "player": "Jaylon Tyson",
+   "team": "CLE",
+   "status": "",
+   "utc": "2026-11-24T00:40:02Z",
+   "mins_to_tip": 19
   },
   {
    "kind": "in",
