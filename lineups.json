@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-24T23:30:02Z",
+ "generated": "2026-11-24T23:40:02Z",
  "date": "2026-11-24",
  "teams": {
   "DET": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Daniss Jenkins",
     "Kevin Huerter",
@@ -11,18 +11,18 @@
     "Ausar Thompson",
     "John Collins"
    ],
-   "at": "2026-11-24T22:30:02Z"
+   "at": "2026-11-24T23:40:02Z"
   },
   "ORL": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Anthony Black",
     "Desmond Bane",
+    "Anthony Black",
     "Jalen Suggs",
     "Franz Wagner",
     "Wendell Carter Jr."
    ],
-   "at": "2026-11-24T22:30:02Z"
+   "at": "2026-11-24T23:40:02Z"
   },
   "BOS": {
    "confirmed": false,
@@ -47,5 +47,13 @@
    "at": "2026-11-24T23:30:02Z"
   }
  },
- "items": {}
+ "items": {
+  "Paul Reed|DET": 0,
+  "Desmond Bane|ORL": 1,
+  "Wendell Carter Jr.|ORL": 1,
+  "Jalen Suggs|ORL": 1,
+  "Franz Wagner|ORL": 1,
+  "Tristan da Silva|ORL": 0,
+  "Anthony Black|ORL": 1
+ }
 }
