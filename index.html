@@ -299,7 +299,7 @@ details.cds>summary::before{content:"▸ "}details.cds[open]>summary::before{con
 .stats.one{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:12px}
 .stats.one p{margin:0;font-size:.9rem;color:var(--muted)}.stats.one b{color:var(--text);font-family:var(--disp);font-size:1.15rem}
 .best{background:var(--card);border-radius:0;border-top:4px solid var(--accent);padding:12px 12px 6px;margin-bottom:14px}
-.best h2{font-size:1.45rem;font-weight:700;margin:0}.best h2 .ctn{font-size:1rem;color:var(--muted);font-weight:600}.best .cmore{display:block;width:100%;min-height:44px;margin:4px 0 8px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--text);font:600 .9rem/1 var(--body);cursor:pointer}.best details.cml{margin-top:4px}.best .cmh{margin:10px 0 6px;font-size:1rem;font-weight:700}.best .cmh span{font-size:.8rem;font-weight:400;color:var(--muted)}.best .bsub{margin:2px 0 10px;font-size:.85rem;color:var(--muted)}
+.best h2{font-size:1.45rem;font-weight:700;margin:0}.best h2 .ctn{font-size:1rem;color:var(--muted);font-weight:600}.best .tseg{display:flex;gap:6px;margin:0 0 10px}.best .tseg .tab{flex:1;min-height:44px;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;font-size:.9rem;padding:4px 6px}.best .tseg .tab b{font-size:1rem}.best .tseg .tsh{font-size:.72rem;opacity:.8}.best .bsub{margin:2px 0 10px;font-size:.85rem;color:var(--muted)}
 .best .bet .sl strong{font-size:15px}.best .bet .bg{font-size:12px;color:var(--muted)}
 .best .bet .kd{display:flex;gap:6px;align-items:center}
 .bet .rc{grid-row:1/3;align-self:start;display:flex;flex-direction:column;align-items:center;gap:1px}
@@ -1476,7 +1476,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   /* v3.41 lean tiers (Mitch approved 24 Nov, pipeline a759778): every lean carries tier A|B|C. Core = tier A, shortest
      price first, top 20 then "show all"; B and C sit in a collapsed More leans fold with counts and 30-day hit %.
      30-day hit from tiers.json (stats per kind, pooled by tier) or, until it exists, from the Sheet's leans tab. */
-  var TJ=null,CORE_ALL=false,MORE_OPEN=false,CORE_N=20;
+  var TJ=null,LTIER='A';
   function loadTiers(){fetch('tiers.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
     .then(function(j){if(j&&j.stats&&typeof j.stats==='object'){TJ=j;if(D)games()}}).catch(function(){})}
   function tierHit(t){
@@ -1502,16 +1502,16 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     function by(t){return L.filter(function(x){return x.b.tier===t}).sort(function(a,b){return a.b.o-b.b.o||b.h-a.h})}
     function rec(list,sen){var w=0,l=0;list.forEach(function(x){var r=resFor(x.b);if(r){if(r.result==='W')w++;else if(r.result==='L')l++}});return w+l?(sen?' Tonight '+w+'-'+l+'.':' \u00b7 tonight '+w+'-'+l):''}
     function h30(t){var x=tierHit(t);return x?'30-day hit '+x.hit.toFixed(0)+'% (n '+x.n+')':''}
-    var A=by('A'),B=by('B'),C=by('C'),shown=CORE_ALL?A:A.slice(0,CORE_N),ha=h30('A');
-    var h='<h2>Core leans <span class="ctn">'+A.length+'</span></h2><p class="bsub">Tier A, shortest price first. Tracked at 0u, never staked. Tap one to see it in its game.'+(ha?' '+ha.charAt(0).toUpperCase()+ha.slice(1)+'.':'')+esc(rec(A,1))+'</p>'+
-      (A.length?'<div class="pls">'+ringKey(shown.map(function(x){return x.b}))+shown.map(blRow).join('')+'</div>':'<div class="none">No core leans tonight.</div>')+
-      (A.length>CORE_N?'<button type="button" class="cmore" id="coreAll">'+(CORE_ALL?'Show top '+CORE_N:'Show all '+A.length+' core leans')+'</button>':'');
-    function grp(t,list){var x=h30(t);return '<div class="cmg"><h3 class="cmh">Tier '+t+' <span>'+list.length+' lean'+(list.length===1?'':'s')+(x?' \u00b7 '+x:'')+esc(rec(list))+'</span></h3>'+
-      (list.length?'<div class="pls">'+list.map(blRow).join('')+'</div>':'')+'</div>'}
-    if(B.length||C.length) h+='<details class="lf cml" id="moreLeans"'+(MORE_OPEN?' open':'')+'><summary><span><b>More leans ('+(B.length+C.length)+')</b> \u00b7 tier B '+B.length+', tier C '+C.length+'</span></summary>'+grp('B',B)+grp('C',C)+'</details>';
+    /* Mitch 24 Nov: tiers "exposed like a filter at the top", A by default, one tier at a time, shortest price first, no cap.
+       The choice lives for this page load only, so a fresh load is always A. */
+    var T={A:by('A'),B:by('B'),C:by('C')},cur=T[LTIER]?LTIER:'A',list=T[cur];
+    var seg='<div class="tseg" role="group" aria-label="Lean tier">'+['A','B','C'].map(function(t){var x=tierHit(t);
+      return '<button type="button" class="tab" data-tier="'+t+'" aria-pressed="'+(cur===t)+'"><b>'+t+'</b> '+T[t].length+(x?'<span class="tsh">'+x.hit.toFixed(0)+'% 30d</span>':'')+'</button>'}).join('')+'</div>';
+    var h30t=h30(cur);
+    var h='<h2>Leans</h2><p class="bsub">Tier '+cur+', shortest price first. Tracked at 0u, never staked. Tap one to see it in its game.'+(h30t?' '+h30t.charAt(0).toUpperCase()+h30t.slice(1)+'.':'')+esc(rec(list,1))+'</p>'+seg+
+      (list.length?'<div class="pls">'+ringKey(list.map(function(x){return x.b}))+list.map(blRow).join('')+'</div>':'<div class="none">No tier '+cur+' leans tonight.</div>');
     box.innerHTML=h;box.hidden=false;
-    var ca=$('coreAll');if(ca)ca.onclick=function(){CORE_ALL=!CORE_ALL;bestLeans()};
-    var ml=$('moreLeans');if(ml)ml.addEventListener('toggle',function(){MORE_OPEN=this.open});
+    Array.prototype.forEach.call(box.querySelectorAll('[data-tier]'),function(b){b.onclick=function(){LTIER=b.getAttribute('data-tier');bestLeans()}});
     bestJump(box);
   }
   function bestLeans(){
