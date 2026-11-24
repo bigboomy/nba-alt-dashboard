@@ -3,6 +3,13 @@
  "changes": [
     {
       "date": "2026-11-24",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "Core leans and More leans (v3.41 tiers)",
+      "detail": "When leans carry a tier, the top box shows Core leans (tier A), shortest price first, top 20 with a Show all button. Tier B and C sit in a collapsed More leans fold with counts and 30-day hit %, from tiers.json or the leans tab until that file exists. The TIER flag is hidden from the pills. Days without tiers look as before."
+    },
+    {
+      "date": "2026-11-24",
       "version": "nba-session v3.41-p4",
       "component": "engine",
       "title": "Leans sorted into Core, More and Noise tiers",
