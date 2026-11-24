@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T01:50:02Z",
+ "generated": "2026-11-24T02:40:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -179,15 +179,15 @@
    "at": "2026-11-24T00:20:02Z"
   },
   "SAC": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Zach LaVine",
-    "De'Andre Hunter",
-    "Darius Acuff Jr.",
     "Keegan Murray",
+    "Darius Acuff Jr.",
+    "De'Andre Hunter",
     "Domantas Sabonis"
    ],
-   "at": "2026-11-24T01:30:02Z"
+   "at": "2026-11-24T02:40:02Z"
   },
   "SAS": {
    "confirmed": true,
@@ -201,18 +201,18 @@
    "at": "2026-11-24T01:50:02Z"
   },
   "LAL": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Quentin Grimes",
     "Matisse Thybulle",
     "Luka Dončić",
-    "Ziaire Williams",
+    "Jake LaRavia",
     "Walker Kessler"
    ],
-   "at": "2026-11-24T01:30:02Z"
+   "at": "2026-11-24T02:40:02Z"
   },
   "UTA": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Darryn Peterson",
     "Josh Green",
@@ -220,7 +220,7 @@
     "Ace Bailey",
     "Mo Bamba"
    ],
-   "at": "2026-11-24T01:30:02Z"
+   "at": "2026-11-24T02:40:02Z"
   }
  },
  "items": {
@@ -276,10 +276,19 @@
   "Jordan Goodwin|PHX": 0,
   "Sidy Cissoko|POR": 1,
   "Donovan Clingan|POR": 1,
+  "Domantas Sabonis|SAC": 1,
+  "De'Andre Hunter|SAC": 1,
+  "Precious Achiuwa|SAC": 0,
+  "Darius Acuff Jr.|SAC": 1,
   "Luke Kornet|SAS": 1,
   "Devin Vassell|SAS": 1,
   "Keldon Johnson|SAS": 0,
   "Julian Champagnie|SAS": 1,
-  "Stephon Castle|SAS": 1
+  "Stephon Castle|SAS": 1,
+  "Walker Kessler|LAL": 1,
+  "Keyonte George|UTA": 1,
+  "Ace Bailey|UTA": 1,
+  "Darryn Peterson|UTA": 1,
+  "Brice Sensabaugh|UTA": 0
  }
 }
