@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T00:10:02Z",
+ "generated": "2026-11-24T00:15:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -58,15 +58,15 @@
    "at": "2026-11-24T00:10:02Z"
   },
   "MIN": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Ayo Dosunmu",
-    "Jonathan Kuminga",
-    "LaMelo Ball",
     "Jaden McDaniels",
+    "LaMelo Ball",
+    "Jonathan Kuminga",
     "Rudy Gobert"
    ],
-   "at": "2026-11-23T23:05:02Z"
+   "at": "2026-11-24T00:15:02Z"
   },
   "MIL": {
    "confirmed": true,
@@ -187,6 +187,9 @@
   "Mikel Brown Jr.|BKN": 1,
   "Danny Wolf|BKN": 1,
   "Egor Demin|BKN": 0,
+  "Ayo Dosunmu|MIN": 1,
+  "Jaden McDaniels|MIN": 1,
+  "LaMelo Ball|MIN": 1,
   "Naz Reid|CHA": 1,
   "Moussa Diabate|CHA": 1,
   "Ryan Kalkbrenner|CHA": 0,
