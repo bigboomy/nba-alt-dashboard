@@ -1,18 +1,6 @@
 {
- "generated": "2026-11-24T00:40:02Z",
+ "generated": "2026-11-24T23:45:02Z",
  "out": [
-  {
-   "kind": "out",
-   "date": "2026-11-22",
-   "game": "OKC@MIA",
-   "id": "5174983",
-   "player": "Aday Mara",
-   "espn_name": "Aday Mara",
-   "team": "OKC",
-   "status": "Out",
-   "utc": "2026-11-22T22:50:02Z",
-   "mins_to_tip": 9
-  },
   {
    "kind": "in",
    "date": "2026-11-23",
@@ -46,6 +34,18 @@
    "status": "Out",
    "utc": "2026-11-23T23:05:02Z",
    "mins_to_tip": 54
+  },
+  {
+   "kind": "out",
+   "date": "2026-11-24",
+   "game": "DET@ORL",
+   "id": "4432166",
+   "player": "Cade Cunningham",
+   "espn_name": "Cade Cunningham",
+   "team": "DET",
+   "status": "Out",
+   "utc": "2026-11-24T23:45:02Z",
+   "mins_to_tip": 14
   }
  ]
 }
