@@ -1,0 +1,532 @@
+{
+ "windows": {
+  "RET1": {
+   "mode": "action",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 37,
+    "tg": 6,
+    "w": 31,
+    "l": 6,
+    "hit": 83.8,
+    "be": 79.1,
+    "gap": 4.7,
+    "u": 2.27,
+    "p_above": 0.451
+   },
+   "p_beat": 0.549,
+   "direction": "block",
+   "text": "Rotation teammate back tonight after missing the last game; stat ran 15%+ higher without him"
+  },
+  "FO": {
+   "mode": "action",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 12,
+    "tg": 3,
+    "w": 8,
+    "l": 4,
+    "hit": 66.7,
+    "be": 79.5,
+    "gap": -12.9,
+    "u": -2.02,
+    "p_above": 0.184
+   },
+   "p_beat": 0.184,
+   "direction": "add",
+   "text": "Rotation teammate (20+ min) out for the first time tonight: REB/AST short rung at 0u"
+  },
+  "RET2": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 139,
+    "tg": 13,
+    "w": 110,
+    "l": 29,
+    "hit": 79.1,
+    "be": 78.9,
+    "gap": 0.2,
+    "u": 0.38,
+    "p_above": 0.404
+   },
+   "p_beat": 0.404,
+   "direction": "watch",
+   "text": "Nights 2-4 after a rotation teammate's return (same lift condition)"
+  },
+  "RET2-AST": {
+   "mode": "action",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 18,
+    "tg": 10,
+    "w": 13,
+    "l": 5,
+    "hit": 72.2,
+    "be": 78.9,
+    "gap": -6.7,
+    "u": -1.55,
+    "p_above": 0.234
+   },
+   "p_beat": 0.766,
+   "direction": "block",
+   "text": "Assists, nights 2-4 after a rotation teammate's return (overs blocked)"
+  },
+  "FO-PTS": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 13,
+    "tg": 3,
+    "w": 12,
+    "l": 1,
+    "hit": 92.3,
+    "be": 77.4,
+    "gap": 14.9,
+    "u": 2.48,
+    "p_above": 0.534
+   },
+   "p_beat": 0.534,
+   "direction": "watch",
+   "text": "First night a rotation teammate is out, points overs"
+  },
+  "RU": {
+   "mode": "action",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 31,
+    "tg": 9,
+    "w": 24,
+    "l": 7,
+    "hit": 77.4,
+    "be": 79.4,
+    "gap": -2.0,
+    "u": -0.63,
+    "p_above": 0.341
+   },
+   "p_beat": 0.659,
+   "direction": "block",
+   "text": "Role up: last-3 minutes at least 4 above his L10 average (overs blocked)"
+  },
+  "REB-ANC": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 15,
+    "tg": 5,
+    "w": 12,
+    "l": 3,
+    "hit": 80.0,
+    "be": 79.3,
+    "gap": 0.7,
+    "u": 0.03,
+    "p_above": 0.364
+   },
+   "p_beat": 0.364,
+   "direction": "watch",
+   "text": "Elite opposing rebounder (top quarter REB per 48)"
+  },
+  "OPP-OUT": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 117,
+    "tg": 5,
+    "w": 90,
+    "l": 27,
+    "hit": 76.9,
+    "be": 79.3,
+    "gap": -2.3,
+    "u": -3.38,
+    "p_above": 0.318
+   },
+   "p_beat": 0.318,
+   "direction": "watch",
+   "text": "Opponent missing a key player (fresh absence)"
+  },
+  "OPP-B2B": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 80,
+    "tg": 4,
+    "w": 63,
+    "l": 17,
+    "hit": 78.8,
+    "be": 79.2,
+    "gap": -0.4,
+    "u": -0.33,
+    "p_above": 0.326
+   },
+   "p_beat": 0.326,
+   "direction": "watch",
+   "text": "Opponent on a back-to-back"
+  },
+  "DOG7": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 11,
+    "tg": 3,
+    "w": 9,
+    "l": 2,
+    "hit": 81.8,
+    "be": 77.8,
+    "gap": 4.1,
+    "u": 0.5,
+    "p_above": 0.378
+   },
+   "p_beat": 0.378,
+   "direction": "watch",
+   "text": "His team a 7+ point underdog"
+  },
+  "MAIN-U": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 1,
+    "tg": 1,
+    "w": 1,
+    "l": 0,
+    "hit": 100.0,
+    "be": 78.1,
+    "gap": 21.9,
+    "u": 0.28,
+    "p_above": 0.406
+   },
+   "p_beat": 0.406,
+   "direction": "watch",
+   "text": "Held-book main-line under beats Pinnacle-fair"
+  },
+  "L5X": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 272,
+    "tg": 17,
+    "w": 212,
+    "l": 60,
+    "hit": 77.9,
+    "be": 78.8,
+    "gap": -0.9,
+    "u": -3.03,
+    "p_above": 0.377
+   },
+   "p_beat": 0.377,
+   "direction": "watch",
+   "text": "A stat leader missed one of the team's last 5 games"
+  },
+  "GS4": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 276,
+    "tg": 20,
+    "w": 219,
+    "l": 57,
+    "hit": 79.3,
+    "be": 78.9,
+    "gap": 0.4,
+    "u": 1.26,
+    "p_above": 0.432
+   },
+   "p_beat": 0.432,
+   "direction": "watch",
+   "text": "Started 4+ of the team's last 5"
+  },
+  "LU0": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [
+    "signal-down"
+   ],
+   "rec": {
+    "n": 88,
+    "tg": 20,
+    "w": 62,
+    "l": 26,
+    "hit": 70.5,
+    "be": 78.4,
+    "gap": -8.0,
+    "u": -8.69,
+    "p_above": 0.155
+   },
+   "p_beat": 0.155,
+   "direction": "watch",
+   "text": "Confirmed lineup: not starting tonight"
+  },
+  "PIN+": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 44,
+    "tg": 19,
+    "w": 33,
+    "l": 11,
+    "hit": 75.0,
+    "be": 78.6,
+    "gap": -3.6,
+    "u": -2.09,
+    "p_above": 0.29
+   },
+   "p_beat": 0.29,
+   "direction": "watch",
+   "text": "Pinnacle-fair P(over) at or above this price's break-even"
+  },
+  "PIN-": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 49,
+    "tg": 20,
+    "w": 36,
+    "l": 13,
+    "hit": 73.5,
+    "be": 79.4,
+    "gap": -5.9,
+    "u": -3.56,
+    "p_above": 0.209
+   },
+   "p_beat": 0.209,
+   "direction": "watch",
+   "text": "Pinnacle-fair P(over) 5pp+ under break-even (tested as a block: not shipped)"
+  },
+  "MIX90": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 22,
+    "tg": 6,
+    "w": 21,
+    "l": 1,
+    "hit": 95.5,
+    "be": 79.6,
+    "gap": 15.8,
+    "u": 4.43,
+    "p_above": 0.709
+   },
+   "p_beat": 0.709,
+   "direction": "watch",
+   "text": "Minutes-mixture P(over) (p_mm_mix) at .90 or more"
+  },
+  "BEST-pointsbet": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 215,
+    "tg": 20,
+    "w": 169,
+    "l": 46,
+    "hit": 78.6,
+    "be": 78.7,
+    "gap": -0.1,
+    "u": -0.48,
+    "p_above": 0.411
+   },
+   "p_beat": 0.411,
+   "direction": "watch",
+   "text": "Best held price is at Pointsbet"
+  },
+  "BEST-ladbrokes": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 192,
+    "tg": 20,
+    "w": 144,
+    "l": 48,
+    "hit": 75.0,
+    "be": 79.0,
+    "gap": -4.0,
+    "u": -9.6,
+    "p_above": 0.27
+   },
+   "p_beat": 0.27,
+   "direction": "watch",
+   "text": "Best held price is at Ladbrokes"
+  },
+  "BEST-sportsbet": {
+   "mode": "watch",
+   "launched": "2026-11-24",
+   "notified": [],
+   "rec": {
+    "n": 8,
+    "tg": 6,
+    "w": 8,
+    "l": 0,
+    "hit": 100.0,
+    "be": 78.6,
+    "gap": 21.4,
+    "u": 2.19,
+    "p_above": 0.819
+   },
+   "p_beat": 0.819,
+   "direction": "watch",
+   "text": "Best held price is at Sportsbet"
+  },
+  "PTS-TOUGH": {
+   "launched": "2026-11-24",
+   "notified": [],
+   "mode": "action",
+   "rec": {
+    "n": 11,
+    "tg": 2,
+    "w": 9,
+    "l": 2,
+    "hit": 81.8,
+    "be": 78.8,
+    "gap": 3.0,
+    "u": 0.39,
+    "p_above": 0.339
+   },
+   "rest": {
+    "n": 103,
+    "tg": 18,
+    "w": 78,
+    "l": 25,
+    "hit": 75.7,
+    "be": 78.3,
+    "gap": -2.6,
+    "u": -3.61,
+    "p_above": 0.323
+   },
+   "p_beat": 0.339,
+   "direction": "add",
+   "text": "Points overs v a tough matchup (env <= 0.97): the market over-penalises tough defence",
+   "stat": "PTS",
+   "cond": "tough matchup (env <= 0.97)",
+   "sign": "+",
+   "sweep": false,
+   "counterfactual_gap": 5.6,
+   "overlap": {},
+   "alone": {
+    "n": 11,
+    "w": 9,
+    "l": 2,
+    "tg": 2,
+    "be": 78.8,
+    "p_beat": 0.339
+   }
+  },
+  "REB-OPPOUT": {
+   "launched": "2026-11-24",
+   "notified": [],
+   "mode": "action",
+   "rec": {
+    "n": 18,
+    "tg": 5,
+    "w": 13,
+    "l": 5,
+    "hit": 72.2,
+    "be": 79.1,
+    "gap": -6.8,
+    "u": -1.69,
+    "p_above": 0.258
+   },
+   "rest": {
+    "n": 49,
+    "tg": 15,
+    "w": 39,
+    "l": 10,
+    "hit": 79.6,
+    "be": 78.7,
+    "gap": 0.9,
+    "u": 0.47,
+    "p_above": 0.438
+   },
+   "p_beat": 0.258,
+   "direction": "add",
+   "text": "Rebound overs when an opposing key player is out (exempt from STAT0U)",
+   "stat": "REB",
+   "cond": "opponent key player out",
+   "sign": "+",
+   "sweep": false,
+   "counterfactual_gap": -7.7,
+   "overlap": {
+    "REB|underdog by 7+|+": {
+     "n": 1,
+     "w": 0,
+     "l": 1
+    }
+   },
+   "alone": {
+    "n": 17,
+    "w": 13,
+    "l": 4,
+    "tg": 5,
+    "be": 79.3,
+    "p_beat": 0.31
+   }
+  },
+  "REB|underdog by 7+|+": {
+   "launched": "2026-11-23",
+   "notified": [],
+   "mode": "action",
+   "rec": {
+    "n": 12,
+    "tg": 5,
+    "w": 11,
+    "l": 1,
+    "hit": 91.7,
+    "be": 79.9,
+    "gap": 11.7,
+    "u": 1.7,
+    "p_above": 0.574
+   },
+   "rest": {
+    "n": 112,
+    "tg": 32,
+    "w": 88,
+    "l": 24,
+    "hit": 78.6,
+    "be": 79.2,
+    "gap": -0.6,
+    "u": -1.01,
+    "p_above": 0.395
+   },
+   "p_beat": 0.574,
+   "direction": "add",
+   "text": "All rungs +6.7 (CI +1.2..+11.8; last 7 +9.6 on 247); short picks agree +4.9 (last 7 +6.9). Our own autopsy agrees: team dog by 10+ hits 72% v 57%. Trailing teams keep their starters on the floor, and the opponent takes more shots, so more boards to collect.",
+   "stat": "REB",
+   "cond": "underdog by 7+",
+   "sign": "+",
+   "sweep": true,
+   "counterfactual_gap": 12.3,
+   "overlap": {
+    "REB-OPPOUT": {
+     "n": 1,
+     "w": 0,
+     "l": 1
+    }
+   },
+   "alone": {
+    "n": 11,
+    "w": 11,
+    "l": 0,
+    "tg": 4,
+    "be": 80.4,
+    "p_beat": 0.671
+   }
+  }
+ },
+ "updated": "2026-11-24T07:08:04Z",
+ "since": "2026-11-24"
+}
