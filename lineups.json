@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T22:30:02Z",
+ "generated": "2026-11-24T23:30:02Z",
  "date": "2026-11-24",
  "teams": {
   "DET": {
@@ -23,6 +23,28 @@
     "Wendell Carter Jr."
    ],
    "at": "2026-11-24T22:30:02Z"
+  },
+  "BOS": {
+   "confirmed": false,
+   "starters": [
+    "Jordan Walsh",
+    "Jayson Tatum",
+    "Derrick White",
+    "Paul George",
+    "Neemias Queta"
+   ],
+   "at": "2026-11-24T23:30:02Z"
+  },
+  "WAS": {
+   "confirmed": false,
+   "starters": [
+    "Kyshawn George",
+    "AJ Dybantsa",
+    "Trae Young",
+    "Anthony Davis",
+    "Alex Sarr"
+   ],
+   "at": "2026-11-24T23:30:02Z"
   }
  },
  "items": {}
