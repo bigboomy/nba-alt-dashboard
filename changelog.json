@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-24",
+      "version": "nba-session v3.41-p4",
+      "component": "engine",
+      "title": "Leans sorted into Core, More and Noise tiers",
+      "change": "Every lean gets a tier: A Core (MM90, WIN, HR85, FO), C noise (CUSH, OUTLIFT, LSR, L5P, HR80, any Avoid), B the rest; tiers are recomputed weekly from each type's 30-day record and published as tiers.json, the Telegram run summary counts Core leans only, and the results message adds a tier hit % line.",
+      "why": "Mitch 24 Nov: 112 leans in a day is too many to read. Before 24 Nov the split was A 74.3% (35), B 60.1% (188), C 53.2% (158). Display only: every lean is still 0u and recorded."
+    },
+    {
+      "date": "2026-11-24",
       "version": "dashboard",
       "component": "dashboard",
       "title": "Renamed to bigboomy's NBA piggy bank",
