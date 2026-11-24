@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T01:35:02Z",
+ "generated": "2026-11-24T01:50:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -190,15 +190,15 @@
    "at": "2026-11-24T01:30:02Z"
   },
   "SAS": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Julian Champagnie",
-    "Keldon Johnson",
-    "Stephon Castle",
     "Devin Vassell",
+    "Julian Champagnie",
+    "Stephon Castle",
+    "Harrison Barnes",
     "Luke Kornet"
    ],
-   "at": "2026-11-24T01:35:02Z"
+   "at": "2026-11-24T01:50:02Z"
   },
   "LAL": {
    "confirmed": false,
@@ -275,6 +275,11 @@
   "Derik Queen|NOP": 0,
   "Jordan Goodwin|PHX": 0,
   "Sidy Cissoko|POR": 1,
-  "Donovan Clingan|POR": 1
+  "Donovan Clingan|POR": 1,
+  "Luke Kornet|SAS": 1,
+  "Devin Vassell|SAS": 1,
+  "Keldon Johnson|SAS": 0,
+  "Julian Champagnie|SAS": 1,
+  "Stephon Castle|SAS": 1
  }
 }
