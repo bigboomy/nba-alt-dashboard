@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T01:30:02Z",
+ "generated": "2026-11-24T01:35:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -192,13 +192,13 @@
   "SAS": {
    "confirmed": false,
    "starters": [
-    "Stephon Castle",
     "Julian Champagnie",
-    "Jordan McLaughlin",
+    "Keldon Johnson",
+    "Stephon Castle",
     "Devin Vassell",
     "Luke Kornet"
    ],
-   "at": "2026-11-24T01:30:02Z"
+   "at": "2026-11-24T01:35:02Z"
   },
   "LAL": {
    "confirmed": false,
