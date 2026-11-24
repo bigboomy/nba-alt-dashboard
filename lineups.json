@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T00:40:02Z",
+ "generated": "2026-11-24T01:10:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -157,7 +157,7 @@
    "at": "2026-11-24T00:40:02Z"
   },
   "HOU": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Amen Thompson",
     "Kevin Durant",
@@ -165,7 +165,7 @@
     "Jabari Smith Jr.",
     "Alperen Sengun"
    ],
-   "at": "2026-11-24T00:05:02Z"
+   "at": "2026-11-24T01:10:02Z"
   },
   "LAC": {
    "confirmed": true,
@@ -197,6 +197,8 @@
   "Josh Giddey|CHI": 1,
   "Tyrese Proctor|CLE": 0,
   "Meleek Thomas|CLE": 0,
+  "Kevin Durant|HOU": 1,
+  "Amen Thompson|HOU": 1,
   "Brook Lopez|LAC": 1,
   "Derrick Jones Jr.|LAC": 1,
   "Max Strus|LAC": 0,
