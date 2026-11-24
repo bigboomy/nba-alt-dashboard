@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T23:50:02Z",
+ "generated": "2026-11-24T00:05:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -155,6 +155,28 @@
     "Oso Ighodaro"
    ],
    "at": "2026-11-23T23:30:02Z"
+  },
+  "HOU": {
+   "confirmed": false,
+   "starters": [
+    "Amen Thompson",
+    "Kevin Durant",
+    "Fred VanVleet",
+    "Jabari Smith Jr.",
+    "Alperen Sengun"
+   ],
+   "at": "2026-11-24T00:05:02Z"
+  },
+  "LAC": {
+   "confirmed": false,
+   "starters": [
+    "Max Strus",
+    "Brandon Ingram",
+    "Darius Garland",
+    "Rui Hachimura",
+    "Brook Lopez"
+   ],
+   "at": "2026-11-24T00:05:02Z"
   }
  },
  "items": {
