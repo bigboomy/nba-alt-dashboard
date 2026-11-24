@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T01:10:02Z",
+ "generated": "2026-11-24T01:30:02Z",
  "date": "2026-11-23",
  "teams": {
   "CHA": {
@@ -177,6 +177,50 @@
     "Brook Lopez"
    ],
    "at": "2026-11-24T00:20:02Z"
+  },
+  "SAC": {
+   "confirmed": false,
+   "starters": [
+    "Zach LaVine",
+    "De'Andre Hunter",
+    "Darius Acuff Jr.",
+    "Keegan Murray",
+    "Domantas Sabonis"
+   ],
+   "at": "2026-11-24T01:30:02Z"
+  },
+  "SAS": {
+   "confirmed": false,
+   "starters": [
+    "Stephon Castle",
+    "Julian Champagnie",
+    "Jordan McLaughlin",
+    "Devin Vassell",
+    "Luke Kornet"
+   ],
+   "at": "2026-11-24T01:30:02Z"
+  },
+  "LAL": {
+   "confirmed": false,
+   "starters": [
+    "Quentin Grimes",
+    "Matisse Thybulle",
+    "Luka Dončić",
+    "Ziaire Williams",
+    "Walker Kessler"
+   ],
+   "at": "2026-11-24T01:30:02Z"
+  },
+  "UTA": {
+   "confirmed": false,
+   "starters": [
+    "Darryn Peterson",
+    "Josh Green",
+    "Keyonte George",
+    "Ace Bailey",
+    "Mo Bamba"
+   ],
+   "at": "2026-11-24T01:30:02Z"
   }
  },
  "items": {
