@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-25",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "Dashboard critique fixes",
+      "change": "Game filter sits above the leans list. On a 0-pick night a 'No bets tonight' box comes first. The leans list shows the top 5 with a Show all button. Tier buttons read A strong, B middling, C weak, and the line under Leans says what the tier means. The banner says 'All leans', and the list names its tier. Tiles show a tick or cross and his number instead of 'Won 10'. A 0-pick game's tab says Leans. Lean autopsy and Hit rate by code moved inside Full record (their links still open them) and say when tonight's isn't in yet. Mark my picks moved to the bottom. A failed load shows the last saved copy with a Retry button. Smaller fixes: heading sizes, shorter tier buttons, outlined under chips in the last 5, larger L10 text.",
+      "why": "Tell in seconds what to bet tonight, with numbers that match (Mitch approved the critique fixes 25 Nov)."
+    },
+    {
+      "date": "2026-11-25",
       "version": "nba-session v3.42-p4",
       "component": "windows",
       "title": "Bench-points block on, starter window swapped",
