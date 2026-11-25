@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T00:45:02Z",
+ "generated": "2026-11-25T01:30:02Z",
  "date": "2026-11-24",
  "teams": {
   "DET": {
@@ -45,6 +45,28 @@
     "Alex Sarr"
    ],
    "at": "2026-11-25T00:40:02Z"
+  },
+  "DAL": {
+   "confirmed": false,
+   "starters": [
+    "Caleb Martin",
+    "Cooper Flagg",
+    "Kyrie Irving",
+    "P.J. Washington",
+    "Daniel Gafford"
+   ],
+   "at": "2026-11-25T01:30:02Z"
+  },
+  "DEN": {
+   "confirmed": false,
+   "starters": [
+    "Christian Braun",
+    "Cameron Johnson",
+    "Jamal Murray",
+    "Aaron Gordon",
+    "Nikola Jokić"
+   ],
+   "at": "2026-11-25T01:30:02Z"
   }
  },
  "items": {
