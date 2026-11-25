@@ -1482,7 +1482,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(TJ&&TJ.stats){var n=0,w=0;Object.keys(TJ.stats).forEach(function(k){var x=TJ.stats[k]||{},tt=x.tier||(TJ.table&&TJ.table[k]);
       if(tt!==t||!(+x.n>0)||x.hit==null)return;var h=+x.hit;if(h<=1)h*=100;n+=+x.n;w+=h*(+x.n)});
       if(n) return {n:n,hit:w/n}}
-    if(!LEANS) return null;var rows=LEANS.filter(function(r){return r.tier===t&&(r.result==='W'||r.result==='L')});if(!rows.length) return null;
+    var LS=(typeof LALL!=='undefined'&&LALL)||LEANS;if(!LS) return null;var rows=LS.filter(function(r){return r.tier===t&&(r.result==='W'||r.result==='L')});if(!rows.length) return null;
     var mx=rows.reduce(function(a,r){return r.date>a?r.date:a},''),lo=addDays(mx,-29);rows=rows.filter(function(r){return r.date>=lo});
     var ww=rows.filter(function(r){return r.result==='W'}).length;return rows.length?{n:rows.length,hit:100*ww/rows.length}:null;
   }
