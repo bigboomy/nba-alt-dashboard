@@ -3223,9 +3223,850 @@
         ]
       },
       "tip": "12:00"
+    },
+    {
+      "abs": {
+        "DAL": [],
+        "DEN": []
+      },
+      "b2b": [],
+      "box5": {
+        "Cooper Flagg": {
+          "gp": 16,
+          "l5": {
+            "ast": 6.0,
+            "blk": 0.6,
+            "fg3": 2.2,
+            "fg3a": 6.0,
+            "fg_pct": 43.9,
+            "fga": 16.4,
+            "fgm": 7.2,
+            "fta": 8.8,
+            "ftm": 7.0,
+            "min": 33.2,
+            "pts": 23.6,
+            "reb": 5.0,
+            "stl": 1.2,
+            "to": 3.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 6.4,
+            "blk": 0.7,
+            "fg3": 1.6,
+            "fg3a": 5.0,
+            "fg_pct": 47.8,
+            "fga": 17.1,
+            "fgm": 8.2,
+            "fta": 7.4,
+            "ftm": 6.3,
+            "min": 33.4,
+            "pts": 24.3,
+            "reb": 6.3,
+            "stl": 1.9,
+            "to": 3.2
+          },
+          "tg": 5
+        },
+        "Kyrie Irving": {
+          "gp": 14,
+          "l5": {
+            "ast": 5.5,
+            "blk": 0.2,
+            "fg3": 3.8,
+            "fg3a": 10.2,
+            "fg_pct": 41.6,
+            "fga": 19.2,
+            "fgm": 8.0,
+            "fta": 4.0,
+            "ftm": 3.2,
+            "min": 32.0,
+            "pts": 23.0,
+            "reb": 4.8,
+            "stl": 1.5,
+            "to": 0.8
+          },
+          "n": 4,
+          "season": {
+            "ast": 4.6,
+            "blk": 0.4,
+            "fg3": 3.4,
+            "fg3a": 8.8,
+            "fg_pct": 45.9,
+            "fga": 17.3,
+            "fgm": 7.9,
+            "fta": 3.2,
+            "ftm": 2.8,
+            "min": 30.7,
+            "pts": 22.0,
+            "reb": 3.6,
+            "stl": 1.2,
+            "to": 1.5
+          },
+          "tg": 5
+        },
+        "Naji Marshall": {
+          "gp": 14,
+          "l5": {
+            "ast": 2.8,
+            "blk": 0.0,
+            "fg3": 1.2,
+            "fg3a": 3.8,
+            "fg_pct": 35.9,
+            "fga": 7.8,
+            "fgm": 2.8,
+            "fta": 3.0,
+            "ftm": 2.6,
+            "min": 23.8,
+            "pts": 9.4,
+            "reb": 2.6,
+            "stl": 2.0,
+            "to": 1.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 3.9,
+            "blk": 0.1,
+            "fg3": 1.0,
+            "fg3a": 3.4,
+            "fg_pct": 43.3,
+            "fga": 9.1,
+            "fgm": 3.9,
+            "fta": 2.5,
+            "ftm": 1.8,
+            "min": 24.3,
+            "pts": 10.6,
+            "reb": 2.7,
+            "stl": 1.6,
+            "to": 1.8
+          },
+          "tg": 5
+        },
+        "Nikola Jokic": {
+          "gp": 15,
+          "l5": {
+            "ast": 9.6,
+            "blk": 0.6,
+            "fg3": 1.8,
+            "fg3a": 4.0,
+            "fg_pct": 60.7,
+            "fga": 17.8,
+            "fgm": 10.8,
+            "fta": 5.2,
+            "ftm": 4.8,
+            "min": 38.8,
+            "pts": 28.2,
+            "reb": 11.2,
+            "stl": 1.0,
+            "to": 4.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 9.2,
+            "blk": 1.0,
+            "fg3": 1.3,
+            "fg3a": 4.2,
+            "fg_pct": 53.5,
+            "fga": 18.2,
+            "fgm": 9.7,
+            "fta": 4.9,
+            "ftm": 4.3,
+            "min": 37.1,
+            "pts": 25.1,
+            "reb": 10.9,
+            "stl": 1.5,
+            "to": 3.3
+          },
+          "tg": 5
+        },
+        "P.J. Washington": {
+          "gp": 15,
+          "l5": {
+            "ast": 2.3,
+            "blk": 1.7,
+            "fg3": 2.3,
+            "fg3a": 5.7,
+            "fg_pct": 43.3,
+            "fga": 10.0,
+            "fgm": 4.3,
+            "fta": 2.3,
+            "ftm": 2.0,
+            "min": 25.3,
+            "pts": 13.0,
+            "reb": 4.3,
+            "stl": 0.3,
+            "to": 1.3
+          },
+          "n": 3,
+          "season": {
+            "ast": 1.3,
+            "blk": 1.1,
+            "fg3": 2.3,
+            "fg3a": 6.3,
+            "fg_pct": 42.1,
+            "fga": 10.9,
+            "fgm": 4.6,
+            "fta": 3.4,
+            "ftm": 2.5,
+            "min": 30.9,
+            "pts": 14.0,
+            "reb": 6.7,
+            "stl": 0.6,
+            "to": 1.6
+          },
+          "tg": 5
+        }
+      },
+      "cov": {
+        "players": [
+          13,
+          13
+        ],
+        "skipped": [
+          "Christian Braun AST (no rung priced 1.40+ at or below std)",
+          "Naji Marshall REB (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          28,
+          30
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: P.J. Washington. Coverage: evaluated 13 of 13 players (28 of 30 player-stats); skipped: Christian Braun AST (no rung priced 1.40+ at or below std), Naji Marshall REB (no rung priced 1.40+ at or below std)",
+      "cx": {
+        "Cooper Flagg|REB|4.5|WIN": {
+          "best_book": "tabtouch",
+          "best_price": 1.3,
+          "mm_min": 32.41,
+          "mm_mu": 6.533,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7589,
+          "p_pin": 0.7167,
+          "p_wowy": 0.7589,
+          "pin_edge_pp": -6.5,
+          "pin_line": 6.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 6.533
+        },
+        "Kyrie Irving|REB|2.5|WIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.32,
+          "mm_min": 30.65,
+          "mm_mu": 3.619,
+          "n_books": 6,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6527,
+          "p_pin": 0.7063,
+          "p_wowy": 0.6527,
+          "pin_edge_pp": -5.1,
+          "pin_line": 3.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 3.619
+        },
+        "Naji Marshall|REB|1.5|WIN": {
+          "best_book": "pointsbet",
+          "best_price": 1.21,
+          "mm_min": 23.6,
+          "mm_mu": 2.569,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6744,
+          "p_pin": 0.7596,
+          "p_wowy": 0.6744,
+          "pin_edge_pp": -6.7,
+          "pin_line": 3.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 2.569
+        },
+        "Nikola Jokic|PTS|23.5|L5P": {
+          "best_book": "ladbrokes",
+          "best_price": 1.57,
+          "mm_min": 36.59,
+          "mm_mu": 26.338,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6419,
+          "p_pin": 0.6068,
+          "p_wowy": 0.6419,
+          "pin_edge_pp": -3.0,
+          "pin_line": 25.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 26.338
+        },
+        "Nikola Jokic|PTS|24.5|lean": {
+          "best_book": "betdeluxe",
+          "best_price": 1.7,
+          "mm_min": 36.59,
+          "mm_mu": 26.338,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.5835,
+          "p_pin": 0.5564,
+          "p_wowy": 0.5835,
+          "pin_edge_pp": -3.2,
+          "pin_line": 25.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 26.338
+        },
+        "P.J. Washington|REB|3.5|WIN": {
+          "best_book": "tabtouch",
+          "best_price": 1.27,
+          "mm_min": 26.4,
+          "mm_mu": 5.57,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8053,
+          "p_pin": 0.7357,
+          "p_wowy": 0.8053,
+          "pin_edge_pp": -5.2,
+          "pin_line": 5.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 5.57
+        }
+      },
+      "engine": "nba-session v3.42-p4",
+      "id": "DAL@DEN",
+      "leans": [
+        {
+          "alt": 24.5,
+          "e": 5.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "QUIET",
+            "CUSH",
+            "OT-ADJ",
+            "C0.92",
+            "Z0.53",
+            "PIN-3.2",
+            "BK-sportsbet",
+            "TIER-B"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            37,
+            26,
+            24,
+            28,
+            26
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-22",
+              "ot": 1
+            },
+            null,
+            null,
+            null,
+            null
+          ],
+          "o": 1.7,
+          "opp": "DAL 12th fewest PTS allowed · pace -0.6",
+          "p": "Nikola Jokic",
+          "pmx": 0.5524,
+          "s": "PTS",
+          "st": "3",
+          "std": 25.5,
+          "t": "DEN",
+          "tier": "B"
+        },
+        {
+          "alt": 23.5,
+          "e": 4.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "L5P",
+            "L5LOW24",
+            "QUIET",
+            "OT-ADJ",
+            "C0.89",
+            "Z0.80",
+            "PIN-3.0",
+            "BK-ladbrokes",
+            "TIER-B"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            37,
+            26,
+            24,
+            28,
+            26
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-22",
+              "ot": 1
+            },
+            null,
+            null,
+            null,
+            null
+          ],
+          "o": 1.57,
+          "opp": "DAL 12th fewest PTS allowed · pace -0.6",
+          "p": "Nikola Jokic",
+          "pmx": 0.6045,
+          "s": "PTS",
+          "st": "4",
+          "std": 25.5,
+          "t": "DEN",
+          "tier": "B"
+        },
+        {
+          "alt": 4.5,
+          "e": -4.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:REB|underdog by 7+|+",
+            "QUIET",
+            "DOG7",
+            "RET-ADJ",
+            "C0.67",
+            "Z0.83",
+            "TMO-Q",
+            "PIN-6.5",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            3,
+            6,
+            5,
+            3,
+            8
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-22",
+              "out": [
+                "P.J. Washington"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "P.J. Washington"
+              ]
+            },
+            null,
+            null,
+            null
+          ],
+          "o": 1.28,
+          "opp": "DEN 14th most REB allowed · pace -0.6",
+          "p": "Cooper Flagg",
+          "pmx": 0.7356,
+          "s": "REB",
+          "st": "4",
+          "std": 6.5,
+          "t": "DAL",
+          "tier": "A"
+        },
+        {
+          "alt": 3.5,
+          "e": -3.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:REB|underdog by 7+|+",
+            "QUIET",
+            "[Std?]",
+            "DOG7",
+            "DNP-LAST",
+            "MT-",
+            "C0.56",
+            "Z1.02",
+            "PIN-5.2",
+            "TIER-A"
+          ],
+          "gs": 3,
+          "h": "80% (8/10)",
+          "l5": [
+            null,
+            null,
+            5,
+            5,
+            3
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-22",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-21",
+              "dnp": 1
+            },
+            null,
+            null,
+            null
+          ],
+          "o": 1.27,
+          "opp": "DEN 14th most REB allowed · pace -0.6",
+          "p": "P.J. Washington",
+          "pmx": 0.751,
+          "s": "REB",
+          "st": "4",
+          "std": 9.5,
+          "t": "DAL",
+          "tier": "A"
+        },
+        {
+          "alt": 2.5,
+          "e": -5.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:REB|underdog by 7+|+",
+            "QUIET",
+            "DOG7",
+            "C0.66",
+            "Z0.54",
+            "TMO-Q",
+            "PIN-5.1",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 4,
+          "h": "70% (7/10)",
+          "l5": [
+            1,
+            6,
+            6,
+            null,
+            6
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-22",
+              "out": [
+                "P.J. Washington"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "P.J. Washington"
+              ]
+            },
+            null,
+            {
+              "d": "2026-11-15",
+              "dnp": 1
+            },
+            null
+          ],
+          "o": 1.32,
+          "opp": "DEN 14th most REB allowed · pace -0.6",
+          "p": "Kyrie Irving",
+          "pmx": 0.6387,
+          "s": "REB",
+          "st": "4",
+          "std": 3.5,
+          "t": "DAL",
+          "tier": "A"
+        },
+        {
+          "alt": 1.5,
+          "e": -10.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:REB|underdog by 7+|+",
+            "QUIET",
+            "[Std?]",
+            "DOG7",
+            "RET-ADJ",
+            "C0.59",
+            "Z0.55",
+            "TMO-Q",
+            "PIN-6.7",
+            "TIER-A"
+          ],
+          "gs": 1,
+          "h": "60% (6/10)",
+          "l5": [
+            0,
+            3,
+            5,
+            2,
+            3
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-22",
+              "out": [
+                "P.J. Washington"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "P.J. Washington"
+              ]
+            },
+            null,
+            null,
+            null
+          ],
+          "o": 1.21,
+          "opp": "DEN 14th most REB allowed · pace -0.6",
+          "p": "Naji Marshall",
+          "pmx": 0.6458,
+          "s": "REB",
+          "st": "4",
+          "std": 1.5,
+          "t": "DAL",
+          "tier": "A"
+        }
+      ],
+      "mkt": 234.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "mx": {
+        "exp_pace": 101.4,
+        "home_spread": -8.5,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.9,
+          "PTS": 111.3,
+          "REB": 42.9,
+          "pace": 102.0
+        },
+        "seed": {
+          "DAL": {
+            "conf": "W",
+            "rec": "10-7",
+            "seed": 8
+          },
+          "DEN": {
+            "conf": "W",
+            "rec": "10-5",
+            "seed": 6
+          }
+        },
+        "teams": {
+          "DAL": {
+            "allow100": {
+              "3PM": 13.0,
+              "AST": 26.5,
+              "PTS": 110.8,
+              "REB": 43.3
+            },
+            "allow_rk": {
+              "3PM": 18,
+              "AST": 9,
+              "PTS": 19,
+              "REB": 10
+            },
+            "out": [],
+            "pace": 101.8,
+            "rk": {
+              "ast": 14,
+              "blk": 13,
+              "dreb": 23,
+              "fg3_pct": 20,
+              "fg3a": 14,
+              "fg3m": 18,
+              "fg_pct": 15,
+              "ft_pct": 15,
+              "fta": 21,
+              "net": 16,
+              "opp_fg3_pct": 8,
+              "opp_fg_pct": 17,
+              "oppg": 13,
+              "oreb": 10,
+              "pace": 19,
+              "pf": 13,
+              "ppg": 17,
+              "reb": 16,
+              "stl": 6,
+              "tov": 16,
+              "ts_pct": 17
+            },
+            "v": {
+              "ast": 26.8,
+              "ats": "9-8-0",
+              "ats_away": "3-5-0",
+              "ats_home": "6-3-0",
+              "ats_l10": "5-5-0",
+              "away": "3-5",
+              "blk": 5.2,
+              "dreb": 30.8,
+              "fg3_pct": 34.6,
+              "fg3a": 37.9,
+              "fg3m": 13.1,
+              "fg_pct": 46.1,
+              "ft_pct": 77.9,
+              "fta": 23.1,
+              "gp": 17,
+              "home": "7-2",
+              "l10": "6-4",
+              "net": -0.1,
+              "opp_fg3_pct": 33.8,
+              "opp_fg_pct": 46.6,
+              "oppg": 112.5,
+              "oreb": 12.5,
+              "ou": "7-10-0",
+              "ou_l10": "5-5-0",
+              "pace": 101.6,
+              "pf": 21.4,
+              "ppg": 112.4,
+              "reb": 43.2,
+              "rec": "10-7",
+              "stl": 9.2,
+              "tov": 15.6,
+              "ts_pct": 57.2
+            }
+          },
+          "DEN": {
+            "allow100": {
+              "3PM": 13.7,
+              "AST": 27.0,
+              "PTS": 112.3,
+              "REB": 43.0
+            },
+            "allow_rk": {
+              "3PM": 9,
+              "AST": 2,
+              "PTS": 9,
+              "REB": 14
+            },
+            "out": [],
+            "pace": 101.6,
+            "rk": {
+              "ast": 8,
+              "blk": 22,
+              "dreb": 16,
+              "fg3_pct": 16,
+              "fg3a": 29,
+              "fg3m": 28,
+              "fg_pct": 1,
+              "ft_pct": 4,
+              "fta": 7,
+              "net": 12,
+              "opp_fg3_pct": 23,
+              "opp_fg_pct": 19,
+              "oppg": 19,
+              "oreb": 27,
+              "pace": 20,
+              "pf": 3,
+              "ppg": 7,
+              "reb": 24,
+              "stl": 9,
+              "tov": 5,
+              "ts_pct": 4
+            },
+            "v": {
+              "ast": 27.7,
+              "ats": "7-8-0",
+              "ats_away": "4-4-0",
+              "ats_home": "3-4-0",
+              "ats_l10": "5-5-0",
+              "away": "6-2",
+              "blk": 4.5,
+              "dreb": 31.5,
+              "fg3_pct": 35.3,
+              "fg3a": 31.1,
+              "fg3m": 11.0,
+              "fg_pct": 49.0,
+              "ft_pct": 81.1,
+              "fta": 26.5,
+              "gp": 15,
+              "home": "4-3",
+              "l10": "7-3",
+              "net": 1.8,
+              "opp_fg3_pct": 36.4,
+              "opp_fg_pct": 46.8,
+              "oppg": 115.2,
+              "oreb": 10.4,
+              "ou": "7-8-0",
+              "ou_l10": "4-6-0",
+              "pace": 101.4,
+              "pf": 19.6,
+              "ppg": 117.0,
+              "reb": 41.9,
+              "rec": "10-5",
+              "stl": 8.8,
+              "tov": 13.7,
+              "ts_pct": 59.8
+            }
+          }
+        },
+        "win": {
+          "away": 24.8,
+          "home": 75.2,
+          "src": "market"
+        }
+      },
+      "out": {
+        "DAL": [
+          "Dereck Lively II (Head coach Dusty May said Friday that Lively (foot) is moving well and progressing in his recovery, and the big man told May he's \"close\" to returning, Mike Curtis of The Dallas Morning News reports.)",
+          "Sergio de Larrea (De Larrea (knee) is listed as out for Wednesday's game against the Warriors.)",
+          "Tarik Biberovic (Biberovic (heel) is out for Wednesday's game against the Warriors.)",
+          "Tobi Lawal (Lawal (groin) is out for Tuesday's game against Denver.)"
+        ],
+        "DEN": []
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "DAL": [
+          "P.J. Washington (Washington (illness) is questionable for Tuesday's game against the Nuggets.)"
+        ],
+        "DEN": []
+      },
+      "tip": "14:00"
     }
   ],
-  "generated": "2026-11-24T23:30:02Z",
+  "generated": "2026-11-25T01:30:02Z",
   "totals": [
     [
       "DET@ORL",
@@ -3236,6 +4077,11 @@
       "BOS@WAS",
       null,
       218.5
+    ],
+    [
+      "DAL@DEN",
+      null,
+      234.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
