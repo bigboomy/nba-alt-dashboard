@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T01:30:02Z",
+ "generated": "2026-11-25T02:45:02Z",
  "date": "2026-11-24",
  "teams": {
   "DET": {
@@ -47,18 +47,18 @@
    "at": "2026-11-25T00:40:02Z"
   },
   "DAL": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Caleb Martin",
     "Cooper Flagg",
+    "Caleb Martin",
     "Kyrie Irving",
-    "P.J. Washington",
+    "Zaccharie Risacher",
     "Daniel Gafford"
    ],
-   "at": "2026-11-25T01:30:02Z"
+   "at": "2026-11-25T02:45:02Z"
   },
   "DEN": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Christian Braun",
     "Cameron Johnson",
@@ -66,7 +66,7 @@
     "Aaron Gordon",
     "Nikola Jokić"
    ],
-   "at": "2026-11-25T01:30:02Z"
+   "at": "2026-11-25T02:45:02Z"
   }
  },
  "items": {
@@ -77,6 +77,11 @@
   "Alexandre Sarr|WAS": 1,
   "Kyshawn George|WAS": 1,
   "Anthony Davis|WAS": 1,
+  "P.J. Washington|DAL": 0,
+  "Naji Marshall|DAL": 0,
+  "Cooper Flagg|DAL": 1,
+  "Kyrie Irving|DAL": 1,
+  "Nikola Jokic|DEN": 1,
   "Paul Reed|DET": 0,
   "Desmond Bane|ORL": 1,
   "Wendell Carter Jr.|ORL": 1,
