@@ -3,8 +3,11 @@
  "changes": [
     {
       "date": "2026-11-25",
-      "title": "Window decisions: bench-points block on, starter window swapped",
-      "detail": "Points overs on bench players (5 or fewer starts in the last 10) are now blocked: 21-11 live against a 77.9% break-even. The confirmed-starter window is replaced by AST regular starter, because lineups are only known after the run. The new assists soft-matchup and rebounds L10 blocks are recorded but not applied until they have a live record."
+      "version": "nba-session v3.42-p4",
+      "component": "windows",
+      "title": "Bench-points block on, starter window swapped",
+      "change": "Points overs on bench players (gs <= 1) are now blocked. The [late] confirmed-starting window is stopped and AST regular starter (gs >= 4) replaces it. The AST soft-matchup and REB L10 <= 70% blocks are recorded but not applied yet.",
+      "why": "Mitch 25 Nov: the bench block is 21-11 live against a 77.9% break-even. The [late] window could never fire because lineups are only known after the run. The two new blocks have no live record yet."
     },
     {
       "date": "2026-11-24",
