@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T23:40:02Z",
+ "generated": "2026-11-25T00:40:02Z",
  "date": "2026-11-24",
  "teams": {
   "DET": {
@@ -36,7 +36,7 @@
    "at": "2026-11-24T23:30:02Z"
   },
   "WAS": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Kyshawn George",
     "AJ Dybantsa",
@@ -44,10 +44,15 @@
     "Anthony Davis",
     "Alex Sarr"
    ],
-   "at": "2026-11-24T23:30:02Z"
+   "at": "2026-11-25T00:40:02Z"
   }
  },
  "items": {
+  "Trae Young|WAS": 1,
+  "AJ Dybantsa|WAS": 1,
+  "Alexandre Sarr|WAS": 1,
+  "Kyshawn George|WAS": 1,
+  "Anthony Davis|WAS": 1,
   "Paul Reed|DET": 0,
   "Desmond Bane|ORL": 1,
   "Wendell Carter Jr.|ORL": 1,
