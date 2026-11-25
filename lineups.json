@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T23:30:03Z",
+ "generated": "2026-11-25T23:45:03Z",
  "date": "2026-11-25",
  "teams": {
   "MIA": {
@@ -25,7 +25,7 @@
    "at": "2026-11-25T21:40:03Z"
   },
   "CHA": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Brandon Miller",
     "Sion James",
@@ -33,18 +33,18 @@
     "Naz Reid",
     "Moussa Diabaté"
    ],
-   "at": "2026-11-25T22:30:03Z"
+   "at": "2026-11-25T23:45:03Z"
   },
   "CHI": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Buddy Hield",
-    "Isaac Okoro",
-    "Josh Giddey",
     "Matas Buzelis",
+    "Josh Giddey",
+    "Isaac Okoro",
     "Nic Claxton"
    ],
-   "at": "2026-11-25T22:30:03Z"
+   "at": "2026-11-25T23:45:03Z"
   },
   "CLE": {
    "confirmed": false,
@@ -136,6 +136,11 @@
   }
  },
  "items": {
+  "Moussa Diabate|CHA": 1,
+  "Sion James|CHA": 1,
+  "Isaac Okoro|CHI": 1,
+  "Matas Buzelis|CHI": 1,
+  "Josh Giddey|CHI": 1,
   "Giannis Antetokounmpo|MIA": 1,
   "Bam Adebayo|MIA": 1,
   "Davion Mitchell|MIA": 1,
