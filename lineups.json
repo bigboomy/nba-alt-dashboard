@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-25T20:30:04Z",
+ "generated": "2026-11-25T21:40:03Z",
  "date": "2026-11-25",
  "teams": {
   "MIA": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Klay Thompson",
     "Pelle Larsson",
@@ -11,10 +11,10 @@
     "Giannis Antetokounmpo",
     "Bam Adebayo"
    ],
-   "at": "2026-11-25T20:30:04Z"
+   "at": "2026-11-25T21:40:03Z"
   },
   "PHI": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "VJ Edgecombe",
     "Jaylen Brown",
@@ -22,8 +22,18 @@
     "LeBron James",
     "Jabari Walker"
    ],
-   "at": "2026-11-25T20:30:04Z"
+   "at": "2026-11-25T21:40:03Z"
   }
  },
- "items": {}
+ "items": {
+  "Giannis Antetokounmpo|MIA": 1,
+  "Bam Adebayo|MIA": 1,
+  "Davion Mitchell|MIA": 1,
+  "Pelle Larsson|MIA": 1,
+  "Klay Thompson|MIA": 1,
+  "LeBron James|PHI": 1,
+  "Jaylen Brown|PHI": 1,
+  "Tyrese Maxey|PHI": 1,
+  "VJ Edgecombe|PHI": 1
+ }
 }
