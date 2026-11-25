@@ -1315,14 +1315,1117 @@
         "PHI": []
       },
       "tip": "09:00"
+    },
+    {
+      "abs": {
+        "CHA": [],
+        "CHI": [
+          {
+            "min": 30.0,
+            "name": "Norman Powell",
+            "roles": [
+              "SC1"
+            ]
+          },
+          {
+            "min": 26.8,
+            "name": "Jalen Smith",
+            "roles": [
+              "REB1"
+            ]
+          }
+        ]
+      },
+      "b2b": [],
+      "box5": {
+        "Isaac Okoro": {
+          "gp": 17,
+          "l5": {
+            "ast": 2.4,
+            "blk": 0.2,
+            "fg3": 2.6,
+            "fg3a": 5.8,
+            "fg_pct": 46.2,
+            "fga": 7.8,
+            "fgm": 3.6,
+            "fta": 2.0,
+            "ftm": 1.6,
+            "min": 31.0,
+            "pts": 11.4,
+            "reb": 4.2,
+            "stl": 1.6,
+            "to": 1.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.9,
+            "blk": 0.3,
+            "fg3": 1.1,
+            "fg3a": 3.4,
+            "fg_pct": 41.2,
+            "fga": 5.7,
+            "fgm": 2.4,
+            "fta": 2.6,
+            "ftm": 2.1,
+            "min": 24.6,
+            "pts": 7.8,
+            "reb": 2.6,
+            "stl": 0.8,
+            "to": 0.8
+          },
+          "tg": 5
+        },
+        "Josh Giddey": {
+          "gp": 17,
+          "l5": {
+            "ast": 11.4,
+            "blk": 0.6,
+            "fg3": 0.8,
+            "fg3a": 3.4,
+            "fg_pct": 43.1,
+            "fga": 10.2,
+            "fgm": 4.4,
+            "fta": 1.0,
+            "ftm": 0.6,
+            "min": 27.6,
+            "pts": 10.2,
+            "reb": 8.0,
+            "stl": 0.4,
+            "to": 4.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 9.4,
+            "blk": 0.6,
+            "fg3": 1.1,
+            "fg3a": 3.7,
+            "fg_pct": 42.1,
+            "fga": 9.6,
+            "fgm": 4.1,
+            "fta": 1.8,
+            "ftm": 1.1,
+            "min": 28.2,
+            "pts": 10.4,
+            "reb": 6.1,
+            "stl": 0.4,
+            "to": 3.4
+          },
+          "tg": 5
+        },
+        "Matas Buzelis": {
+          "gp": 17,
+          "l5": {
+            "ast": 1.6,
+            "blk": 0.8,
+            "fg3": 3.4,
+            "fg3a": 7.6,
+            "fg_pct": 49.3,
+            "fga": 13.4,
+            "fgm": 6.6,
+            "fta": 2.4,
+            "ftm": 2.0,
+            "min": 30.2,
+            "pts": 18.6,
+            "reb": 4.8,
+            "stl": 1.0,
+            "to": 1.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.9,
+            "blk": 0.8,
+            "fg3": 2.2,
+            "fg3a": 5.9,
+            "fg_pct": 45.6,
+            "fga": 10.7,
+            "fgm": 4.9,
+            "fta": 3.6,
+            "ftm": 3.1,
+            "min": 27.8,
+            "pts": 15.1,
+            "reb": 4.8,
+            "stl": 0.6,
+            "to": 2.4
+          },
+          "tg": 5
+        },
+        "Moussa Diabate": {
+          "gp": 14,
+          "l5": {
+            "ast": 2.2,
+            "blk": 1.4,
+            "fg3": 0.0,
+            "fg3a": 0.0,
+            "fg_pct": 64.7,
+            "fga": 6.8,
+            "fgm": 4.4,
+            "fta": 3.0,
+            "ftm": 2.2,
+            "min": 32.2,
+            "pts": 11.0,
+            "reb": 13.2,
+            "stl": 0.6,
+            "to": 2.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.1,
+            "blk": 1.1,
+            "fg3": 0.0,
+            "fg3a": 0.0,
+            "fg_pct": 64.0,
+            "fga": 6.1,
+            "fgm": 3.9,
+            "fta": 2.4,
+            "ftm": 1.8,
+            "min": 30.0,
+            "pts": 9.6,
+            "reb": 10.6,
+            "stl": 1.2,
+            "to": 2.1
+          },
+          "tg": 5
+        },
+        "Sion James": {
+          "gp": 16,
+          "l5": {
+            "ast": 4.0,
+            "blk": 0.0,
+            "fg3": 0.6,
+            "fg3a": 3.4,
+            "fg_pct": 32.1,
+            "fga": 5.6,
+            "fgm": 1.8,
+            "fta": 1.0,
+            "ftm": 0.4,
+            "min": 31.4,
+            "pts": 4.6,
+            "reb": 5.4,
+            "stl": 1.0,
+            "to": 2.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 3.1,
+            "blk": 0.0,
+            "fg3": 1.1,
+            "fg3a": 4.3,
+            "fg_pct": 33.3,
+            "fga": 6.2,
+            "fgm": 2.1,
+            "fta": 0.9,
+            "ftm": 0.6,
+            "min": 27.4,
+            "pts": 5.8,
+            "reb": 3.8,
+            "stl": 0.9,
+            "to": 1.4
+          },
+          "tg": 5
+        }
+      },
+      "cov": {
+        "players": [
+          13,
+          14
+        ],
+        "skipped": [
+          "Grayson Allen PTS (ruled OUT)",
+          "Naz Reid AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          35,
+          37
+        ]
+      },
+      "ctx": "Out TOP3: Norman Powell (CHI), Caleb Wilson (CHI), Grayson Allen (CHA); Returning: none; Depleted: CHI (3 rotation out), CHA (3 rotation out); missed last game: none. Coverage: evaluated 13 of 14 players (35 of 37 player-stats); skipped: Grayson Allen PTS (ruled OUT), Naz Reid AST (no rung priced 1.40+ at or below std)",
+      "cx": {
+        "Isaac Okoro|PTS|5.5|MM90": {
+          "best_book": "tabtouch",
+          "best_price": 1.22,
+          "mm_min": 35.41,
+          "mm_mu": 13.148,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9435,
+          "p_pin": 0.8424,
+          "p_wowy": 0.8994,
+          "pin_edge_pp": 0.9,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.164,
+          "wowy_keys": "Norman Powell;Jalen Smith",
+          "wowy_mu": 11.555
+        },
+        "Isaac Okoro|PTS|8.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.59,
+          "mm_min": 35.41,
+          "mm_mu": 13.148,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7974,
+          "p_pin": 0.6107,
+          "p_wowy": 0.6999,
+          "pin_edge_pp": -1.8,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.164,
+          "wowy_keys": "Norman Powell;Jalen Smith",
+          "wowy_mu": 11.555
+        },
+        "Josh Giddey|AST|6.5|MM90": {
+          "best_book": "bet365",
+          "best_price": 1.25,
+          "mm_min": 33.35,
+          "mm_mu": 11.823,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.93,
+          "p_pin": 0.7463,
+          "p_wowy": 0.8772,
+          "pin_edge_pp": -6.0,
+          "pin_line": 8.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.202,
+          "wowy_keys": "Norman Powell;Jalen Smith",
+          "wowy_mu": 10.595
+        },
+        "Matas Buzelis|PTS|11.5|MM90": {
+          "best_book": "tabtouch",
+          "best_price": 1.24,
+          "mm_min": 35.36,
+          "mm_mu": 21.537,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9563,
+          "p_pin": 0.8122,
+          "p_wowy": 0.853,
+          "pin_edge_pp": -0.7,
+          "pin_line": 16.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.076,
+          "wowy_keys": "Norman Powell;Jalen Smith",
+          "wowy_mu": 17.493
+        },
+        "Moussa Diabate|AST|1.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.53,
+          "mm_min": 31.07,
+          "mm_mu": 2.295,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "SC1:Norman Powell;REB1:Jalen Smith",
+          "p_mm": 0.668,
+          "p_pin": "",
+          "p_wowy": 0.668,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 2.295
+        },
+        "Moussa Diabate|REB|8.5|WIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.32,
+          "mm_min": 31.07,
+          "mm_mu": 11.379,
+          "n_books": 4,
+          "opp_lift": 0.067,
+          "opp_out": "SC1:Norman Powell;REB1:Jalen Smith",
+          "p_mm": 0.7775,
+          "p_pin": 0.7316,
+          "p_wowy": 0.7775,
+          "pin_edge_pp": -2.6,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 11.379
+        },
+        "Moussa Diabate|REB|9.5|L5P": {
+          "best_book": "pointsbet",
+          "best_price": 1.53,
+          "mm_min": 31.07,
+          "mm_mu": 11.379,
+          "n_books": 14,
+          "opp_lift": 0.067,
+          "opp_out": "SC1:Norman Powell;REB1:Jalen Smith",
+          "p_mm": 0.6795,
+          "p_pin": 0.6398,
+          "p_wowy": 0.6795,
+          "pin_edge_pp": -1.4,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 11.379
+        },
+        "Sion James|REB|2.5|WIN": {
+          "best_book": "tabtouch",
+          "best_price": 1.24,
+          "mm_min": 29.63,
+          "mm_mu": 4.475,
+          "n_books": 4,
+          "opp_lift": 0.067,
+          "opp_out": "SC1:Norman Powell;REB1:Jalen Smith",
+          "p_mm": 0.7792,
+          "p_pin": "",
+          "p_wowy": 0.7792,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 4.475
+        }
+      },
+      "engine": "nba-session v3.42-p4",
+      "id": "CHI@CHA",
+      "leans": [
+        {
+          "alt": 1.5,
+          "e": 5.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.67",
+            "Z1.15",
+            "TMO",
+            "OPP-OUT:SC1/REB1",
+            "L5P-ALSO",
+            "TIER-B"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            3,
+            2,
+            2,
+            2,
+            2
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Dennis Schroder"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Dennis Schroder"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "ot": 1,
+              "out": [
+                "Dennis Schroder"
+              ]
+            },
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Dennis Schroder"
+              ]
+            },
+            {
+              "d": "2026-11-12",
+              "out": [
+                "Dennis Schroder"
+              ]
+            }
+          ],
+          "o": 1.53,
+          "opp": "CHI 11th most AST allowed · pace +1.0",
+          "p": "Moussa Diabate",
+          "pmx": 0.6563,
+          "s": "AST",
+          "st": "3",
+          "std": 1.5,
+          "t": "CHA",
+          "tier": "B"
+        },
+        {
+          "alt": 8.5,
+          "e": 4.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "OT-ADJ",
+            "MT+",
+            "C0.89",
+            "Z0.26",
+            "TMO",
+            "PIN-1.8",
+            "L5P-ALSO",
+            "TIER-B"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            12,
+            11,
+            9,
+            12,
+            13
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Norman Powell",
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-22",
+              "ot": 1,
+              "out": [
+                "Norman Powell",
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Caleb Wilson"
+              ]
+            }
+          ],
+          "o": 1.59,
+          "opp": "CHA 11th most PTS allowed · pace +1.0",
+          "p": "Isaac Okoro",
+          "pmx": 0.7737,
+          "s": "PTS",
+          "st": "3",
+          "std": 9.5,
+          "t": "CHI",
+          "tier": "B"
+        },
+        {
+          "alt": 6.5,
+          "e": -5.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.93",
+            "[OUT]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.74",
+            "Z0.71",
+            "TMO",
+            "PIN-6.0",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "78% (7/9)",
+          "l5": [
+            11,
+            22,
+            7,
+            9,
+            8
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Norman Powell"
+              ]
+            },
+            {
+              "d": "2026-11-22",
+              "ot": 1,
+              "out": [
+                "Norman Powell"
+              ]
+            },
+            null,
+            null,
+            null
+          ],
+          "o": 1.24,
+          "opp": "CHA 15th most AST allowed · pace +1.0",
+          "p": "Josh Giddey",
+          "pmx": 0.8648,
+          "s": "AST",
+          "st": "3",
+          "std": 8.5,
+          "t": "CHI",
+          "tier": "A"
+        },
+        {
+          "alt": 11.5,
+          "e": -1.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.96",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.71",
+            "Z0.90",
+            "TMO",
+            "PIN-0.7",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            15,
+            21,
+            9,
+            25,
+            23
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Norman Powell",
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-22",
+              "ot": 1,
+              "out": [
+                "Norman Powell",
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Caleb Wilson"
+              ]
+            }
+          ],
+          "o": 1.22,
+          "opp": "CHA 11th most PTS allowed · pace +1.0",
+          "p": "Matas Buzelis",
+          "pmx": 0.9325,
+          "s": "PTS",
+          "st": "4",
+          "std": 17.5,
+          "t": "CHI",
+          "tier": "A"
+        },
+        {
+          "alt": 5.5,
+          "e": 2.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.94",
+            "[ROLE?]",
+            "OT-ADJ",
+            "MT+",
+            "C0.58",
+            "Z1.02",
+            "TMO",
+            "PIN+0.9",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            12,
+            11,
+            9,
+            12,
+            13
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Norman Powell",
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-22",
+              "ot": 1,
+              "out": [
+                "Norman Powell",
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Caleb Wilson"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Caleb Wilson"
+              ]
+            }
+          ],
+          "o": 1.2,
+          "opp": "CHA 11th most PTS allowed · pace +1.0",
+          "p": "Isaac Okoro",
+          "pmx": 0.9278,
+          "s": "PTS",
+          "st": "4",
+          "std": 9.5,
+          "t": "CHI",
+          "tier": "A"
+        },
+        {
+          "alt": 9.5,
+          "e": -2.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "L5P",
+            "L5LOW10",
+            "[Std?]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.85",
+            "Z0.56",
+            "TMO",
+            "PIN-1.4",
+            "OPP-OUT:SC1/REB1",
+            "REB-OPP",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "60% (6/10)",
+          "l5": [
+            10,
+            15,
+            16,
+            12,
+            13
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-17",
+              "ot": 1
+            },
+            null,
+            null
+          ],
+          "o": 1.53,
+          "opp": "CHI 12th most REB allowed · pace +1.0",
+          "p": "Moussa Diabate",
+          "pmx": 0.6496,
+          "s": "REB",
+          "st": "2",
+          "std": 11.5,
+          "t": "CHA",
+          "tier": "C"
+        },
+        {
+          "alt": 8.5,
+          "e": -0.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:REB-OPPOUT",
+            "[Std?]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.76",
+            "Z0.89",
+            "TMO",
+            "PIN-2.6",
+            "OPP-OUT:SC1/REB1",
+            "REB-OPP",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            10,
+            15,
+            16,
+            12,
+            13
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-17",
+              "ot": 1
+            },
+            null,
+            null
+          ],
+          "o": 1.32,
+          "opp": "CHI 12th most REB allowed · pace +1.0",
+          "p": "Moussa Diabate",
+          "pmx": 0.7445,
+          "s": "REB",
+          "st": "3",
+          "std": 11.5,
+          "t": "CHA",
+          "tier": "A"
+        },
+        {
+          "alt": 2.5,
+          "e": -3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:REB-OPPOUT",
+            "[Std?]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "RET-ADJ",
+            "MT+",
+            "C0.59",
+            "Z0.67",
+            "TMO",
+            "OPP-OUT:SC1/REB1",
+            "REB-OPP",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 4,
+          "h": "70% (7/10)",
+          "l5": [
+            4,
+            1,
+            6,
+            8,
+            8
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-17",
+              "ot": 1
+            },
+            null,
+            null
+          ],
+          "o": 1.2,
+          "opp": "CHI 12th most REB allowed · pace +1.0",
+          "p": "Sion James",
+          "pmx": 0.7638,
+          "s": "REB",
+          "st": "4",
+          "std": 4.5,
+          "t": "CHA",
+          "tier": "A"
+        }
+      ],
+      "mkt": 218.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "mx": {
+        "exp_pace": 103.0,
+        "home_spread": -3.5,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.9,
+          "PTS": 111.2,
+          "REB": 42.9,
+          "pace": 102.0
+        },
+        "seed": {
+          "CHA": {
+            "conf": "E",
+            "rec": "4-12",
+            "seed": 13
+          },
+          "CHI": {
+            "conf": "E",
+            "rec": "5-12",
+            "seed": 12
+          }
+        },
+        "teams": {
+          "CHA": {
+            "allow100": {
+              "3PM": 14.1,
+              "AST": 26.1,
+              "PTS": 112.2,
+              "REB": 41.9
+            },
+            "allow_rk": {
+              "3PM": 2,
+              "AST": 15,
+              "PTS": 11,
+              "REB": 26
+            },
+            "out": [],
+            "pace": 100.0,
+            "rk": {
+              "ast": 30,
+              "blk": 19,
+              "dreb": 19,
+              "fg3_pct": 30,
+              "fg3a": 1,
+              "fg3m": 10,
+              "fg_pct": 30,
+              "ft_pct": 2,
+              "fta": 30,
+              "net": 28,
+              "opp_fg3_pct": 30,
+              "opp_fg_pct": 23,
+              "oppg": 9,
+              "oreb": 1,
+              "pace": 29,
+              "pf": 8,
+              "ppg": 30,
+              "reb": 4,
+              "stl": 27,
+              "tov": 30,
+              "ts_pct": 30
+            },
+            "v": {
+              "ast": 22.0,
+              "ats": "6-10-0",
+              "ats_away": "3-5-0",
+              "ats_home": "3-5-0",
+              "ats_l10": "3-7-0",
+              "away": "1-7",
+              "blk": 4.6,
+              "dreb": 31.3,
+              "fg3_pct": 31.8,
+              "fg3a": 45.4,
+              "fg3m": 14.4,
+              "fg_pct": 40.4,
+              "ft_pct": 81.9,
+              "fta": 18.7,
+              "gp": 16,
+              "home": "3-5",
+              "l10": "1-9",
+              "net": -10.2,
+              "opp_fg3_pct": 39.9,
+              "opp_fg_pct": 47.4,
+              "oppg": 110.9,
+              "oreb": 15.2,
+              "ou": "7-9-0",
+              "ou_l10": "7-3-0",
+              "pace": 98.8,
+              "pf": 20.9,
+              "ppg": 100.6,
+              "reb": 46.5,
+              "rec": "4-12",
+              "stl": 7.1,
+              "tov": 18.9,
+              "ts_pct": 52.4
+            }
+          },
+          "CHI": {
+            "allow100": {
+              "3PM": 12.7,
+              "AST": 26.4,
+              "PTS": 113.5,
+              "REB": 43.1
+            },
+            "allow_rk": {
+              "3PM": 23,
+              "AST": 11,
+              "PTS": 5,
+              "REB": 12
+            },
+            "out": [
+              {
+                "min": 30.0,
+                "name": "Norman Powell",
+                "roles": [
+                  "SC1"
+                ]
+              },
+              {
+                "min": 26.8,
+                "name": "Jalen Smith",
+                "roles": [
+                  "REB1"
+                ]
+              }
+            ],
+            "pace": 105.0,
+            "rk": {
+              "ast": 4,
+              "blk": 6,
+              "dreb": 21,
+              "fg3_pct": 28,
+              "fg3a": 6,
+              "fg3m": 14,
+              "fg_pct": 19,
+              "ft_pct": 20,
+              "fta": 8,
+              "net": 23,
+              "opp_fg3_pct": 21,
+              "opp_fg_pct": 26,
+              "oppg": 30,
+              "oreb": 11,
+              "pace": 1,
+              "pf": 26,
+              "ppg": 7,
+              "reb": 15,
+              "stl": 12,
+              "tov": 24,
+              "ts_pct": 16
+            },
+            "v": {
+              "ast": 28.6,
+              "ats": "10-7-0",
+              "ats_away": "4-5-0",
+              "ats_home": "6-2-0",
+              "ats_l10": "7-3-0",
+              "away": "3-6",
+              "blk": 5.4,
+              "dreb": 31.1,
+              "fg3_pct": 33.4,
+              "fg3a": 42.1,
+              "fg3m": 14.1,
+              "fg_pct": 45.6,
+              "ft_pct": 76.9,
+              "fta": 25.9,
+              "gp": 17,
+              "home": "2-6",
+              "l10": "4-6",
+              "net": -6.6,
+              "opp_fg3_pct": 36.1,
+              "opp_fg_pct": 48.1,
+              "oppg": 123.6,
+              "oreb": 12.5,
+              "ou": "7-10-0",
+              "ou_l10": "5-5-0",
+              "pace": 106.7,
+              "pf": 23.3,
+              "ppg": 116.9,
+              "reb": 43.6,
+              "rec": "5-12",
+              "stl": 8.3,
+              "tov": 16.7,
+              "ts_pct": 57.1
+            }
+          }
+        },
+        "win": {
+          "away": 39.0,
+          "home": 61.0,
+          "src": "market"
+        }
+      },
+      "out": {
+        "CHA": [
+          "Dennis Schroder (Schroder (hamstring) is out for Wednesday's game the Bulls.)",
+          "Grayson Allen (Allen (concussion) has been ruled out for Wednesday's game against Chicago.)",
+          "Kon Knueppel (Knueppel (hamstring) was diagnosed with a left hamstring strain Sunday and will be re-evaluated in four weeks.)",
+          "Ryan Kalkbrenner (Kalkbrenner (hip) has been ruled out for Wednesday's matchup with Chicago.)"
+        ],
+        "CHI": [
+          "Caleb Wilson (Wilson (hand) is expected to miss four to six weeks, Shams Charania of ESPN reports.)",
+          "Jalen Smith (Smith (illness) is listed as out for Wednesday's game against Charlotte.)",
+          "Norman Powell (Powell has been diagnosed with a mild right hamstring strain and will be re-evaluated later this week.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "CHA": [
+          "Sion James (James is probable for Wednesday's game against the Bulls due to general soreness.)"
+        ],
+        "CHI": []
+      },
+      "tip": "11:00"
     }
   ],
-  "generated": "2026-11-25T20:30:04Z",
+  "generated": "2026-11-25T22:30:03Z",
   "totals": [
     [
       "MIA@PHI",
       null,
       238.5
+    ],
+    [
+      "CHI@CHA",
+      null,
+      218.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
