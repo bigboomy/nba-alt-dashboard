@@ -5037,9 +5037,2527 @@
         "OKC": []
       },
       "tip": "11:30"
+    },
+    {
+      "abs": {
+        "BKN": [],
+        "MIL": []
+      },
+      "b2b": [],
+      "box5": {
+        "Brayden Burries": {
+          "gp": 18,
+          "l5": {
+            "ast": 3.2,
+            "blk": 0.4,
+            "fg3": 2.0,
+            "fg3a": 4.6,
+            "fg_pct": 51.7,
+            "fga": 11.6,
+            "fgm": 6.0,
+            "fta": 4.4,
+            "ftm": 3.4,
+            "min": 27.4,
+            "pts": 17.4,
+            "reb": 7.2,
+            "stl": 1.8,
+            "to": 2.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.5,
+            "blk": 0.2,
+            "fg3": 1.2,
+            "fg3a": 3.7,
+            "fg_pct": 45.5,
+            "fga": 8.7,
+            "fgm": 3.9,
+            "fta": 3.2,
+            "ftm": 2.4,
+            "min": 23.1,
+            "pts": 11.4,
+            "reb": 5.7,
+            "stl": 0.9,
+            "to": 1.4
+          },
+          "tg": 5
+        },
+        "Danny Wolf": {
+          "gp": 11,
+          "l5": {
+            "ast": 2.0,
+            "blk": 0.4,
+            "fg3": 2.6,
+            "fg3a": 4.4,
+            "fg_pct": 48.6,
+            "fga": 7.4,
+            "fgm": 3.6,
+            "fta": 1.6,
+            "ftm": 1.0,
+            "min": 22.6,
+            "pts": 10.8,
+            "reb": 4.8,
+            "stl": 0.2,
+            "to": 1.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.1,
+            "blk": 0.4,
+            "fg3": 2.2,
+            "fg3a": 4.2,
+            "fg_pct": 46.8,
+            "fga": 7.0,
+            "fgm": 3.3,
+            "fta": 2.3,
+            "ftm": 1.5,
+            "min": 23.2,
+            "pts": 10.3,
+            "reb": 5.5,
+            "stl": 0.3,
+            "to": 1.5
+          },
+          "tg": 5
+        },
+        "Day'Ron Sharpe": {
+          "gp": 16,
+          "l5": {
+            "ast": 4.0,
+            "blk": 0.4,
+            "fg3": 0.0,
+            "fg3a": 0.8,
+            "fg_pct": 57.9,
+            "fga": 7.6,
+            "fgm": 4.4,
+            "fta": 2.0,
+            "ftm": 1.4,
+            "min": 25.4,
+            "pts": 10.2,
+            "reb": 8.2,
+            "stl": 1.0,
+            "to": 1.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 4.1,
+            "blk": 1.1,
+            "fg3": 0.3,
+            "fg3a": 1.1,
+            "fg_pct": 54.5,
+            "fga": 6.2,
+            "fgm": 3.4,
+            "fta": 2.4,
+            "ftm": 1.8,
+            "min": 23.9,
+            "pts": 8.8,
+            "reb": 7.2,
+            "stl": 0.8,
+            "to": 1.8
+          },
+          "tg": 5
+        },
+        "Julius Randle": {
+          "gp": 16,
+          "l5": {
+            "ast": 4.0,
+            "blk": 0.2,
+            "fg3": 2.2,
+            "fg3a": 5.0,
+            "fg_pct": 56.1,
+            "fga": 16.4,
+            "fgm": 9.2,
+            "fta": 6.2,
+            "ftm": 5.0,
+            "min": 33.2,
+            "pts": 25.6,
+            "reb": 4.6,
+            "stl": 1.8,
+            "to": 3.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 4.7,
+            "blk": 0.2,
+            "fg3": 1.6,
+            "fg3a": 4.6,
+            "fg_pct": 48.1,
+            "fga": 15.1,
+            "fgm": 7.2,
+            "fta": 6.8,
+            "ftm": 5.4,
+            "min": 33.1,
+            "pts": 21.6,
+            "reb": 5.9,
+            "stl": 1.1,
+            "to": 3.6
+          },
+          "tg": 5
+        },
+        "Kyle Kuzma": {
+          "gp": 17,
+          "l5": {
+            "ast": 1.8,
+            "blk": 0.2,
+            "fg3": 2.2,
+            "fg3a": 5.5,
+            "fg_pct": 44.8,
+            "fga": 14.5,
+            "fgm": 6.5,
+            "fta": 3.8,
+            "ftm": 2.2,
+            "min": 29.2,
+            "pts": 17.5,
+            "reb": 5.2,
+            "stl": 0.5,
+            "to": 1.2
+          },
+          "n": 4,
+          "season": {
+            "ast": 2.4,
+            "blk": 0.3,
+            "fg3": 1.7,
+            "fg3a": 5.1,
+            "fg_pct": 44.9,
+            "fga": 10.4,
+            "fgm": 4.6,
+            "fta": 2.7,
+            "ftm": 1.6,
+            "min": 27.8,
+            "pts": 12.6,
+            "reb": 5.2,
+            "stl": 0.9,
+            "to": 1.7
+          },
+          "tg": 5
+        }
+      },
+      "cov": {
+        "players": [
+          14,
+          15
+        ],
+        "skipped": [
+          "Day'Ron Sharpe PTS (no rung priced 1.40+ at or below std)",
+          "Day'Ron Sharpe REB (no rung priced 1.40+ at or below std)",
+          "Day'Ron Sharpe AST (no rung priced 1.40+ at or below std)",
+          "Egor Demin AST (no rung priced 1.40+ at or below std)",
+          "Kyle Kuzma AST (no rung priced 1.40+ at or below std)"
+        ],
+        "stats": [
+          35,
+          40
+        ]
+      },
+      "ctx": "Out TOP3: Nolan Traore (BKN); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 14 of 15 players (35 of 40 player-stats); skipped: Day'Ron Sharpe PTS (no rung priced 1.40+ at or below std), Day'Ron Sharpe REB (no rung priced 1.40+ at or below std), Day'Ron Sharpe AST (no rung priced 1.40+ at or below std), Egor Demin AST (no rung priced 1.40+ at or below std), Kyle Kuzma AST (no rung priced 1.40+ at or below std)",
+      "cx": {
+        "Brayden Burries|AST|2.5|lean": {
+          "best_book": "next2go",
+          "best_price": 1.57,
+          "mm_min": 27.32,
+          "mm_mu": 3.404,
+          "n_books": 6,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6551,
+          "p_pin": "",
+          "p_wowy": 0.6551,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 3.404
+        },
+        "Brayden Burries|PTS|12.5|lean": {
+          "best_book": "neds",
+          "best_price": 1.88,
+          "mm_min": 27.32,
+          "mm_mu": 13.991,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.537,
+          "p_pin": 0.5102,
+          "p_wowy": 0.537,
+          "pin_edge_pp": -2.5,
+          "pin_line": 12.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 13.991
+        },
+        "Danny Wolf|PTS|5.5|MM90": {
+          "best_book": "ladbrokes",
+          "best_price": 1.22,
+          "mm_min": 25.75,
+          "mm_mu": 12.166,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9061,
+          "p_pin": 0.8246,
+          "p_wowy": 0.8386,
+          "pin_edge_pp": 0.5,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 10.471
+        },
+        "Danny Wolf|PTS|9.5|lean": {
+          "best_book": "next2go",
+          "best_price": 1.88,
+          "mm_min": 25.75,
+          "mm_mu": 12.166,
+          "n_books": 13,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6506,
+          "p_pin": 0.5,
+          "p_wowy": 0.5239,
+          "pin_edge_pp": -3.5,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 10.471
+        },
+        "Day'Ron Sharpe|AST|2.5|MM90": {
+          "best_book": "bet365",
+          "best_price": 1.26,
+          "mm_min": 27.93,
+          "mm_mu": 6.682,
+          "n_books": 6,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9236,
+          "p_pin": "",
+          "p_wowy": 0.8727,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 5.751
+        },
+        "Julius Randle|AST|3.5|WIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.33,
+          "mm_min": 36.65,
+          "mm_mu": 5.127,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7213,
+          "p_pin": 0.6946,
+          "p_wowy": 0.6164,
+          "pin_edge_pp": -5.7,
+          "pin_line": 4.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 4.413
+        },
+        "Julius Randle|PTS|15.5|MM90": {
+          "best_book": "tabtouch",
+          "best_price": 1.22,
+          "mm_min": 36.65,
+          "mm_mu": 26.823,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9561,
+          "p_pin": 0.8207,
+          "p_wowy": 0.879,
+          "pin_edge_pp": -1.3,
+          "pin_line": 21.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 23.087
+        },
+        "Kyle Kuzma|AST|1.5|WIN": {
+          "best_book": "tab",
+          "best_price": 1.32,
+          "mm_min": 29.28,
+          "mm_mu": 2.07,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.5827,
+          "p_pin": "",
+          "p_wowy": 0.5827,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 2.07
+        },
+        "Kyle Kuzma|PTS|11.5|L5P": {
+          "best_book": "ladbrokes",
+          "best_price": 1.5,
+          "mm_min": 29.28,
+          "mm_mu": 15.284,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6851,
+          "p_pin": 0.6595,
+          "p_wowy": 0.6851,
+          "pin_edge_pp": -0.7,
+          "pin_line": 13.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 15.284
+        }
+      },
+      "engine": "nba-session v3.42-p4",
+      "id": "BKN@MIL",
+      "leans": [
+        {
+          "alt": 9.5,
+          "e": 4.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "CAP",
+            "[ROLE?]",
+            "MU+4%",
+            "C0.88",
+            "Z0.29",
+            "TMO",
+            "PIN-3.5",
+            "BK-sportsbet",
+            "TIER-B"
+          ],
+          "gs": 3,
+          "h": "80% (8/10)",
+          "l5": [
+            11,
+            20,
+            6,
+            3,
+            14
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-14",
+              "out": [
+                "Michael Porter Jr."
+              ]
+            }
+          ],
+          "o": 1.87,
+          "opp": "MIL 1st most PTS allowed · pace +0.6",
+          "p": "Danny Wolf",
+          "pmx": 0.6053,
+          "s": "PTS",
+          "st": "3",
+          "std": 9.5,
+          "t": "BKN",
+          "tier": "B"
+        },
+        {
+          "alt": 12.5,
+          "e": 3.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "MU+3%",
+            "C0.90",
+            "Z0.19",
+            "PIN-2.5",
+            "RET2:Rollins",
+            "BK-ladbrokes",
+            "L5P-ALSO",
+            "TIER-B"
+          ],
+          "gs": 3,
+          "h": "70% (7/10)",
+          "l5": [
+            14,
+            26,
+            14,
+            20,
+            13
+          ],
+          "o": 1.87,
+          "opp": "BKN 4th most PTS allowed · pace +0.6",
+          "p": "Brayden Burries",
+          "pmx": 0.5045,
+          "s": "PTS",
+          "st": "3",
+          "std": 12.5,
+          "t": "MIL",
+          "tier": "B"
+        },
+        {
+          "alt": 2.5,
+          "e": 3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[Std?]",
+            "MU+3%",
+            "C0.74",
+            "Z0.55",
+            "BK-ladbrokes",
+            "TIER-C"
+          ],
+          "gs": 3,
+          "h": "80% (8/10)",
+          "l5": [
+            4,
+            4,
+            3,
+            1,
+            4
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Ryan Rollins"
+              ]
+            },
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Ryan Rollins"
+              ]
+            }
+          ],
+          "o": 1.48,
+          "opp": "BKN 8th most AST allowed · pace +0.6",
+          "p": "Brayden Burries",
+          "pmx": 0.6171,
+          "s": "AST",
+          "st": "4",
+          "std": 3.5,
+          "t": "MIL",
+          "tier": "C"
+        },
+        {
+          "alt": 5.5,
+          "e": 2.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.91",
+            "[ROLE?]",
+            "MU+4%",
+            "C0.51",
+            "Z1.14",
+            "TMO",
+            "PIN+0.5",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 3,
+          "h": "90% (9/10)",
+          "l5": [
+            11,
+            20,
+            6,
+            3,
+            14
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-14",
+              "out": [
+                "Michael Porter Jr."
+              ]
+            }
+          ],
+          "o": 1.22,
+          "opp": "MIL 1st most PTS allowed · pace +0.6",
+          "p": "Danny Wolf",
+          "pmx": 0.8592,
+          "s": "PTS",
+          "st": "5",
+          "std": 9.5,
+          "t": "BKN",
+          "tier": "A"
+        },
+        {
+          "alt": 15.5,
+          "e": 0.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.96",
+            "[ROLE?]",
+            "MU+4%",
+            "C0.68",
+            "Z1.10",
+            "TMO",
+            "PIN-1.3",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            29,
+            27,
+            17,
+            33,
+            22
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Nolan Traore"
+              ]
+            },
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-14",
+              "out": [
+                "Michael Porter Jr."
+              ]
+            }
+          ],
+          "o": 1.2,
+          "opp": "MIL 1st most PTS allowed · pace +0.6",
+          "p": "Julius Randle",
+          "pmx": 0.9271,
+          "s": "PTS",
+          "st": "5",
+          "std": 21.5,
+          "t": "BKN",
+          "tier": "A"
+        },
+        {
+          "alt": 2.5,
+          "e": -0.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.92",
+            "[Std?]",
+            "[ROLE?]",
+            "C0.44",
+            "Z0.92",
+            "TMO",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            7,
+            2,
+            1,
+            5,
+            5
+          ],
+          "o": 1.2,
+          "opp": "MIL 10th most AST allowed · pace +0.6",
+          "p": "Day'Ron Sharpe",
+          "pmx": 0.8868,
+          "s": "AST",
+          "st": "5",
+          "std": 1.5,
+          "t": "BKN",
+          "tier": "A"
+        },
+        {
+          "alt": 11.5,
+          "e": 0.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "L5P",
+            "L5LOW12",
+            "MU+3%",
+            "C0.76",
+            "Z0.46",
+            "PIN-0.7",
+            "RET2:Rollins",
+            "TIER-C"
+          ],
+          "gs": 4,
+          "h": "70% (7/10)",
+          "l5": [
+            18,
+            12,
+            null,
+            26,
+            14
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-19",
+              "dnp": 1
+            },
+            null,
+            null
+          ],
+          "o": 1.5,
+          "opp": "BKN 4th most PTS allowed · pace +0.6",
+          "p": "Kyle Kuzma",
+          "pmx": 0.6647,
+          "s": "PTS",
+          "st": "4",
+          "std": 13.5,
+          "t": "MIL",
+          "tier": "C"
+        },
+        {
+          "alt": 3.5,
+          "e": -3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "[ROLE?]",
+            "C0.80",
+            "Z0.45",
+            "TMO",
+            "PIN-5.7",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            4,
+            6,
+            4,
+            1,
+            5
+          ],
+          "o": 1.33,
+          "opp": "MIL 10th most AST allowed · pace +0.6",
+          "p": "Julius Randle",
+          "pmx": 0.7035,
+          "s": "AST",
+          "st": "4",
+          "std": 4.5,
+          "t": "BKN",
+          "tier": "A"
+        },
+        {
+          "alt": 1.5,
+          "e": -4.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "[Std?]",
+            "MU+3%",
+            "C0.74",
+            "Z0.41",
+            "TIER-A"
+          ],
+          "gs": 4,
+          "h": "60% (6/10)",
+          "l5": [
+            3,
+            1,
+            null,
+            1,
+            2
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-19",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Ryan Rollins"
+              ]
+            },
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Ryan Rollins"
+              ]
+            }
+          ],
+          "o": 1.31,
+          "opp": "BKN 8th most AST allowed · pace +0.6",
+          "p": "Kyle Kuzma",
+          "pmx": 0.5734,
+          "s": "AST",
+          "st": "4",
+          "std": 1.5,
+          "t": "MIL",
+          "tier": "A"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 102.6,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.9,
+          "PTS": 111.2,
+          "REB": 42.9,
+          "pace": 102.0
+        },
+        "seed": {
+          "BKN": {
+            "conf": "E",
+            "rec": "3-13",
+            "seed": 14
+          },
+          "MIL": {
+            "conf": "E",
+            "rec": "2-16",
+            "seed": 15
+          }
+        },
+        "teams": {
+          "BKN": {
+            "allow100": {
+              "3PM": 13.9,
+              "AST": 26.6,
+              "PTS": 114.3,
+              "REB": 41.7
+            },
+            "allow_rk": {
+              "3PM": 4,
+              "AST": 8,
+              "PTS": 4,
+              "REB": 28
+            },
+            "out": [],
+            "pace": 102.3,
+            "rk": {
+              "ast": 23,
+              "blk": 19,
+              "dreb": 26,
+              "fg3_pct": 7,
+              "fg3a": 12,
+              "fg3m": 9,
+              "fg_pct": 22,
+              "ft_pct": 23,
+              "fta": 5,
+              "net": 27,
+              "opp_fg3_pct": 26,
+              "opp_fg_pct": 27,
+              "oppg": 27,
+              "oreb": 22,
+              "pace": 8,
+              "pf": 30,
+              "ppg": 21,
+              "reb": 29,
+              "stl": 12,
+              "tov": 29,
+              "ts_pct": 11
+            },
+            "v": {
+              "ast": 24.8,
+              "ats": "8-8-0",
+              "ats_away": "6-3-0",
+              "ats_home": "2-5-0",
+              "ats_l10": "5-5-0",
+              "away": "2-7",
+              "blk": 4.6,
+              "dreb": 29.6,
+              "fg3_pct": 36.8,
+              "fg3a": 39.6,
+              "fg3m": 14.6,
+              "fg_pct": 45.3,
+              "ft_pct": 75.9,
+              "fta": 27.5,
+              "gp": 16,
+              "home": "1-6",
+              "l10": "2-8",
+              "net": -9.1,
+              "opp_fg3_pct": 37.6,
+              "opp_fg_pct": 48.4,
+              "oppg": 120.2,
+              "oreb": 11.1,
+              "ou": "10-6-0",
+              "ou_l10": "7-3-0",
+              "pace": 102.5,
+              "pf": 25.6,
+              "ppg": 111.2,
+              "reb": 40.6,
+              "rec": "3-13",
+              "stl": 8.3,
+              "tov": 17.7,
+              "ts_pct": 58.1
+            }
+          },
+          "MIL": {
+            "allow100": {
+              "3PM": 13.9,
+              "AST": 26.5,
+              "PTS": 114.8,
+              "REB": 44.6
+            },
+            "allow_rk": {
+              "3PM": 5,
+              "AST": 10,
+              "PTS": 1,
+              "REB": 1
+            },
+            "out": [],
+            "pace": 102.3,
+            "rk": {
+              "ast": 25,
+              "blk": 15,
+              "dreb": 17,
+              "fg3_pct": 17,
+              "fg3a": 5,
+              "fg3m": 4,
+              "fg_pct": 29,
+              "ft_pct": 25,
+              "fta": 22,
+              "net": 29,
+              "opp_fg3_pct": 19,
+              "opp_fg_pct": 18,
+              "oppg": 28,
+              "oreb": 6,
+              "pace": 8,
+              "pf": 27,
+              "ppg": 25,
+              "reb": 13,
+              "stl": 27,
+              "tov": 22,
+              "ts_pct": 28
+            },
+            "v": {
+              "ast": 24.6,
+              "ats": "9-9-0",
+              "ats_away": "6-3-0",
+              "ats_home": "3-6-0",
+              "ats_l10": "6-4-0",
+              "away": "1-8",
+              "blk": 4.8,
+              "dreb": 31.5,
+              "fg3_pct": 35.1,
+              "fg3a": 42.8,
+              "fg3m": 15.0,
+              "fg_pct": 43.7,
+              "ft_pct": 75.7,
+              "fta": 22.4,
+              "gp": 18,
+              "home": "1-8",
+              "l10": "1-9",
+              "net": -11.4,
+              "opp_fg3_pct": 35.9,
+              "opp_fg_pct": 46.7,
+              "oppg": 121.1,
+              "oreb": 13.2,
+              "ou": "10-8-0",
+              "ou_l10": "5-5-0",
+              "pace": 102.5,
+              "pf": 23.5,
+              "ppg": 109.7,
+              "reb": 44.7,
+              "rec": "2-16",
+              "stl": 7.1,
+              "tov": 16.4,
+              "ts_pct": 55.5
+            }
+          }
+        },
+        "win": {
+          "away": 49.1,
+          "home": 50.9,
+          "src": "model"
+        }
+      },
+      "out": {
+        "BKN": [
+          "Nolan Traore (Traore will be re-evaluated in approximately 8-10 weeks due to a right hamstring strain, Michael Scotto of HoopsHype.com reports.)"
+        ],
+        "MIL": []
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "BKN": [],
+        "MIL": []
+      },
+      "tip": "12:00"
+    },
+    {
+      "abs": {
+        "LAC": [],
+        "MEM": [
+          {
+            "min": 27.6,
+            "name": "Cameron Boozer",
+            "roles": [
+              "SC2",
+              "REB1"
+            ]
+          }
+        ]
+      },
+      "b2b": [],
+      "box5": {
+        "Brook Lopez": {
+          "gp": 16,
+          "l5": {
+            "ast": 3.0,
+            "blk": 0.6,
+            "fg3": 2.4,
+            "fg3a": 5.4,
+            "fg_pct": 51.9,
+            "fga": 10.8,
+            "fgm": 5.6,
+            "fta": 2.2,
+            "ftm": 1.8,
+            "min": 25.0,
+            "pts": 15.4,
+            "reb": 4.8,
+            "stl": 0.6,
+            "to": 2.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.8,
+            "blk": 0.8,
+            "fg3": 1.8,
+            "fg3a": 4.1,
+            "fg_pct": 54.8,
+            "fga": 10.5,
+            "fgm": 5.8,
+            "fta": 2.4,
+            "ftm": 1.7,
+            "min": 24.4,
+            "pts": 14.9,
+            "reb": 5.2,
+            "stl": 0.5,
+            "to": 1.3
+          },
+          "tg": 5
+        },
+        "Cam Spencer": {
+          "gp": 18,
+          "l5": {
+            "ast": 7.4,
+            "blk": 0.2,
+            "fg3": 2.0,
+            "fg3a": 4.2,
+            "fg_pct": 56.8,
+            "fga": 8.8,
+            "fgm": 5.0,
+            "fta": 4.2,
+            "ftm": 4.0,
+            "min": 27.8,
+            "pts": 16.0,
+            "reb": 3.0,
+            "stl": 0.6,
+            "to": 1.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 5.7,
+            "blk": 0.1,
+            "fg3": 2.0,
+            "fg3a": 3.7,
+            "fg_pct": 55.9,
+            "fga": 7.1,
+            "fgm": 3.9,
+            "fta": 2.0,
+            "ftm": 1.9,
+            "min": 22.8,
+            "pts": 11.8,
+            "reb": 3.0,
+            "stl": 0.8,
+            "to": 1.4
+          },
+          "tg": 5
+        },
+        "Cedric Coward": {
+          "gp": 17,
+          "l5": {
+            "ast": 4.0,
+            "blk": 0.4,
+            "fg3": 3.0,
+            "fg3a": 6.4,
+            "fg_pct": 51.5,
+            "fga": 13.2,
+            "fgm": 6.8,
+            "fta": 3.4,
+            "ftm": 2.6,
+            "min": 29.0,
+            "pts": 19.2,
+            "reb": 6.2,
+            "stl": 1.8,
+            "to": 2.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 3.4,
+            "blk": 0.4,
+            "fg3": 2.5,
+            "fg3a": 5.5,
+            "fg_pct": 47.4,
+            "fga": 11.5,
+            "fgm": 5.5,
+            "fta": 2.4,
+            "ftm": 1.9,
+            "min": 28.9,
+            "pts": 15.4,
+            "reb": 8.1,
+            "stl": 1.6,
+            "to": 1.8
+          },
+          "tg": 5
+        },
+        "Darius Garland": {
+          "gp": 16,
+          "l5": {
+            "ast": 5.8,
+            "blk": 0.8,
+            "fg3": 2.8,
+            "fg3a": 7.8,
+            "fg_pct": 46.9,
+            "fga": 16.2,
+            "fgm": 7.6,
+            "fta": 4.8,
+            "ftm": 4.4,
+            "min": 33.2,
+            "pts": 22.4,
+            "reb": 2.2,
+            "stl": 0.8,
+            "to": 2.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 6.6,
+            "blk": 0.3,
+            "fg3": 2.6,
+            "fg3a": 7.1,
+            "fg_pct": 46.8,
+            "fga": 15.6,
+            "fgm": 7.3,
+            "fta": 4.7,
+            "ftm": 4.1,
+            "min": 33.1,
+            "pts": 21.2,
+            "reb": 2.1,
+            "stl": 0.6,
+            "to": 4.1
+          },
+          "tg": 5
+        },
+        "Jaylen Wells": {
+          "gp": 18,
+          "l5": {
+            "ast": 1.0,
+            "blk": 0.2,
+            "fg3": 1.8,
+            "fg3a": 3.2,
+            "fg_pct": 52.8,
+            "fga": 7.2,
+            "fgm": 3.8,
+            "fta": 0.8,
+            "ftm": 0.8,
+            "min": 24.4,
+            "pts": 10.2,
+            "reb": 3.6,
+            "stl": 0.4,
+            "to": 0.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.2,
+            "blk": 0.1,
+            "fg3": 2.0,
+            "fg3a": 4.7,
+            "fg_pct": 49.6,
+            "fga": 7.7,
+            "fgm": 3.8,
+            "fta": 1.7,
+            "ftm": 1.4,
+            "min": 26.3,
+            "pts": 11.1,
+            "reb": 3.1,
+            "stl": 0.8,
+            "to": 0.7
+          },
+          "tg": 5
+        },
+        "Max Strus": {
+          "gp": 10,
+          "l5": {
+            "ast": 2.8,
+            "blk": 0.0,
+            "fg3": 2.4,
+            "fg3a": 5.2,
+            "fg_pct": 44.1,
+            "fga": 6.8,
+            "fgm": 3.0,
+            "fta": 1.2,
+            "ftm": 1.2,
+            "min": 26.6,
+            "pts": 9.6,
+            "reb": 3.2,
+            "stl": 0.8,
+            "to": 1.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 3.3,
+            "blk": 0.0,
+            "fg3": 2.1,
+            "fg3a": 5.8,
+            "fg_pct": 37.7,
+            "fga": 7.7,
+            "fgm": 2.9,
+            "fta": 1.2,
+            "ftm": 1.1,
+            "min": 24.3,
+            "pts": 9.0,
+            "reb": 3.4,
+            "stl": 1.0,
+            "to": 1.0
+          },
+          "tg": 5
+        },
+        "Rui Hachimura": {
+          "gp": 14,
+          "l5": {
+            "ast": 1.4,
+            "blk": 0.4,
+            "fg3": 2.4,
+            "fg3a": 4.0,
+            "fg_pct": 58.0,
+            "fga": 10.0,
+            "fgm": 5.8,
+            "fta": 2.8,
+            "ftm": 1.8,
+            "min": 27.8,
+            "pts": 15.8,
+            "reb": 5.0,
+            "stl": 0.4,
+            "to": 1.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.6,
+            "blk": 0.2,
+            "fg3": 2.2,
+            "fg3a": 5.4,
+            "fg_pct": 43.6,
+            "fga": 11.8,
+            "fgm": 5.1,
+            "fta": 2.7,
+            "ftm": 1.9,
+            "min": 29.1,
+            "pts": 14.4,
+            "reb": 5.9,
+            "stl": 0.9,
+            "to": 1.6
+          },
+          "tg": 5
+        },
+        "Ty Jerome": {
+          "gp": 13,
+          "l5": {
+            "ast": 4.5,
+            "blk": 0.0,
+            "fg3": 5.0,
+            "fg3a": 10.5,
+            "fg_pct": 44.7,
+            "fga": 19.0,
+            "fgm": 8.5,
+            "fta": 1.5,
+            "ftm": 1.5,
+            "min": 28.0,
+            "pts": 23.5,
+            "reb": 4.0,
+            "stl": 2.0,
+            "to": 5.0
+          },
+          "n": 2,
+          "season": {
+            "ast": 5.2,
+            "blk": 0.2,
+            "fg3": 2.9,
+            "fg3a": 7.6,
+            "fg_pct": 47.9,
+            "fga": 18.5,
+            "fgm": 8.8,
+            "fta": 4.9,
+            "ftm": 4.5,
+            "min": 30.2,
+            "pts": 25.1,
+            "reb": 3.5,
+            "stl": 0.9,
+            "to": 2.8
+          },
+          "tg": 5
+        }
+      },
+      "cov": {
+        "players": [
+          14,
+          15
+        ],
+        "skipped": [
+          "Brandon Ingram PTS (Role Unclear)",
+          "Brandon Ingram REB (Role Unclear)",
+          "Brandon Ingram AST (Role Unclear)"
+        ],
+        "stats": [
+          30,
+          33
+        ]
+      },
+      "ctx": "Out TOP3: Cameron Boozer (MEM); Returning: none; Depleted: MEM (3 rotation out); missed last game: none. Coverage: evaluated 14 of 15 players (30 of 33 player-stats); skipped: Brandon Ingram PTS (Role Unclear), Brandon Ingram REB (Role Unclear), Brandon Ingram AST (Role Unclear)",
+      "cx": {
+        "Brook Lopez|PTS|7.5|MM90": {
+          "best_book": "tabtouch",
+          "best_price": 1.25,
+          "mm_min": 25.19,
+          "mm_mu": 15.781,
+          "n_books": 5,
+          "opp_lift": 0.074,
+          "opp_out": "SC2/REB1:Cameron Boozer",
+          "p_mm": 0.9096,
+          "p_pin": 0.8081,
+          "p_wowy": 0.9096,
+          "pin_edge_pp": 0.2,
+          "pin_line": 12.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 15.781
+        },
+        "Cam Spencer|PTS|5.5|HR80": {
+          "best_book": "ladbrokes",
+          "best_price": 1.22,
+          "mm_min": 32.8,
+          "mm_mu": 19.064,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9803,
+          "p_pin": 0.8343,
+          "p_wowy": 0.9577,
+          "pin_edge_pp": 1.5,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.162,
+          "wowy_keys": "Cameron Boozer",
+          "wowy_mu": 16.563
+        },
+        "Cam Spencer|PTS|6.5|WIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.32,
+          "mm_min": 32.8,
+          "mm_mu": 19.064,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9667,
+          "p_pin": 0.7618,
+          "p_wowy": 0.9331,
+          "pin_edge_pp": 0.4,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.162,
+          "wowy_keys": "Cameron Boozer",
+          "wowy_mu": 16.563
+        },
+        "Cam Spencer|PTS|8.5|L5P": {
+          "best_book": "pointsbet",
+          "best_price": 1.63,
+          "mm_min": 32.8,
+          "mm_mu": 19.064,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9238,
+          "p_pin": 0.5981,
+          "p_wowy": 0.8641,
+          "pin_edge_pp": -1.5,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.162,
+          "wowy_keys": "Cameron Boozer",
+          "wowy_mu": 16.563
+        },
+        "Cedric Coward|AST|3.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 2.2,
+          "mm_min": 34.84,
+          "mm_mu": 4.912,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6871,
+          "p_pin": 0.4348,
+          "p_wowy": 0.4454,
+          "pin_edge_pp": -2.0,
+          "pin_line": 3.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 0.935,
+          "wowy_keys": "Cameron Boozer",
+          "wowy_mu": 3.479
+        },
+        "Cedric Coward|PTS|11.5|MM90": {
+          "best_book": "ladbrokes",
+          "best_price": 1.22,
+          "mm_min": 34.84,
+          "mm_mu": 20.71,
+          "n_books": 6,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9221,
+          "p_pin": 0.8203,
+          "p_wowy": 0.8267,
+          "pin_edge_pp": 0.1,
+          "pin_line": 16.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.119,
+          "wowy_keys": "Cameron Boozer",
+          "wowy_mu": 17.554
+        },
+        "Cedric Coward|PTS|15.5|L5P": {
+          "best_book": "pointsbet",
+          "best_price": 1.65,
+          "mm_min": 34.84,
+          "mm_mu": 20.71,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7607,
+          "p_pin": 0.5885,
+          "p_wowy": 0.5913,
+          "pin_edge_pp": -1.8,
+          "pin_line": 16.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.119,
+          "wowy_keys": "Cameron Boozer",
+          "wowy_mu": 17.554
+        },
+        "Darius Garland|AST|4.5|WIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.25,
+          "mm_min": 33.17,
+          "mm_mu": 6.469,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "SC2/REB1:Cameron Boozer",
+          "p_mm": 0.754,
+          "p_pin": 0.7453,
+          "p_wowy": 0.754,
+          "pin_edge_pp": -5.5,
+          "pin_line": 6.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 6.469
+        },
+        "Darius Garland|PTS|13.5|MM90": {
+          "best_book": "tabtouch",
+          "best_price": 1.22,
+          "mm_min": 33.17,
+          "mm_mu": 21.246,
+          "n_books": 5,
+          "opp_lift": 0.074,
+          "opp_out": "SC2/REB1:Cameron Boozer",
+          "p_mm": 0.9213,
+          "p_pin": 0.846,
+          "p_wowy": 0.9213,
+          "pin_edge_pp": 2.0,
+          "pin_line": 18.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 21.246
+        },
+        "Jaylen Wells|PTS|5.5|MM90": {
+          "best_book": "tabtouch",
+          "best_price": 1.22,
+          "mm_min": 30.65,
+          "mm_mu": 12.869,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.931,
+          "p_pin": 0.8424,
+          "p_wowy": 0.8601,
+          "pin_edge_pp": 0.9,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.128,
+          "wowy_keys": "Cameron Boozer",
+          "wowy_mu": 10.782
+        },
+        "Max Strus|AST|1.5|lean": {
+          "best_book": "ladbrokes",
+          "best_price": 1.6,
+          "mm_min": 25.59,
+          "mm_mu": 3.256,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "SC2/REB1:Cameron Boozer",
+          "p_mm": 0.8261,
+          "p_pin": "",
+          "p_wowy": 0.8261,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 3.256
+        },
+        "Rui Hachimura|PTS|12.5|lean": {
+          "best_book": "ladbrokes",
+          "best_price": 1.83,
+          "mm_min": 28.02,
+          "mm_mu": 15.332,
+          "n_books": 3,
+          "opp_lift": 0.074,
+          "opp_out": "SC2/REB1:Cameron Boozer",
+          "p_mm": 0.655,
+          "p_pin": 0.5436,
+          "p_wowy": 0.655,
+          "pin_edge_pp": -0.3,
+          "pin_line": 13.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 15.332
+        },
+        "Ty Jerome|PTS|17.5|MM90": {
+          "best_book": "pointsbet",
+          "best_price": 1.27,
+          "mm_min": 35.62,
+          "mm_mu": 29.238,
+          "n_books": 6,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9397,
+          "p_pin": 0.7974,
+          "p_wowy": 0.742,
+          "pin_edge_pp": 1.0,
+          "pin_line": 23.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.008,
+          "wowy_keys": "Cameron Boozer",
+          "wowy_mu": 22.426
+        }
+      },
+      "engine": "nba-session v3.42-p4",
+      "id": "LAC@MEM",
+      "leans": [
+        {
+          "alt": 12.5,
+          "e": 6.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "OT-ADJ",
+            "C0.81",
+            "Z0.49",
+            "PIN-0.3",
+            "OPP-OUT:SC2/REB1",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            19,
+            19,
+            17,
+            20,
+            4
+          ],
+          "o": 1.83,
+          "opp": "MEM 10th fewest PTS allowed · pace +0.1",
+          "p": "Rui Hachimura",
+          "pmx": 0.6325,
+          "s": "PTS",
+          "st": "3",
+          "std": 12.5,
+          "t": "LAC",
+          "tier": "C"
+        },
+        {
+          "alt": 3.5,
+          "e": 4.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "CAP",
+            "[Std?]",
+            "[ROLE?]",
+            "MU+3%",
+            "RET-ADJ",
+            "C0.95",
+            "Z0.11",
+            "TMO",
+            "PIN-2.0",
+            "RET2:Jerome/Edey",
+            "AVOID",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "70% (7/10)",
+          "l5": [
+            3,
+            2,
+            4,
+            5,
+            6
+          ],
+          "l5x": [
+            null,
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Javon Small"
+              ]
+            },
+            null,
+            null,
+            null
+          ],
+          "o": 2.2,
+          "opp": "LAC 5th most AST allowed · pace +0.1",
+          "p": "Cedric Coward",
+          "pmx": 0.6705,
+          "s": "AST",
+          "st": "1",
+          "std": 3.5,
+          "t": "MEM",
+          "tier": "C"
+        },
+        {
+          "alt": 1.5,
+          "e": 4.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "MISS",
+            "[Std?]",
+            "MU-3%",
+            "OT-ADJ",
+            "MT+",
+            "C0.49",
+            "Z1.29",
+            "OPP-OUT:SC2/REB1",
+            "RU",
+            "AVOID",
+            "BK-ladbrokes",
+            "TIER-C"
+          ],
+          "gs": 2,
+          "h": "90% (9/10)",
+          "l5": [
+            2,
+            3,
+            4,
+            1,
+            4
+          ],
+          "o": 1.6,
+          "opp": "MEM 5th fewest AST allowed · pace +0.1",
+          "p": "Max Strus",
+          "pmx": 0.7906,
+          "s": "AST",
+          "st": "4",
+          "std": 1.5,
+          "t": "LAC",
+          "tier": "C"
+        },
+        {
+          "alt": 5.5,
+          "e": 5.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "HR80",
+            "[ROLE?]",
+            "RET-ADJ",
+            "MT+",
+            "C0.41",
+            "Z1.27",
+            "TMO",
+            "PIN+1.5",
+            "RET2:Jerome",
+            "BK-ladbrokes",
+            "MM90-ALSO",
+            "PMM0.98",
+            "TIER-C"
+          ],
+          "gs": 3,
+          "h": "100% (10/10)",
+          "l5": [
+            24,
+            9,
+            9,
+            26,
+            12
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Ty Jerome"
+              ]
+            }
+          ],
+          "o": 1.22,
+          "opp": "LAC 6th most PTS allowed · pace +0.1",
+          "p": "Cam Spencer",
+          "pmx": 0.9528,
+          "s": "PTS",
+          "st": "4",
+          "std": 9.5,
+          "t": "MEM",
+          "tier": "C"
+        },
+        {
+          "alt": 17.5,
+          "e": -1.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.94",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.79",
+            "Z0.62",
+            "TMO",
+            "PIN+1.0",
+            "TIER-A"
+          ],
+          "gs": 2,
+          "h": "70% (7/10)",
+          "l5": [
+            29,
+            18,
+            null,
+            null,
+            null
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-18",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-16",
+              "dnp": 1
+            }
+          ],
+          "o": 1.27,
+          "opp": "LAC 6th most PTS allowed · pace +0.1",
+          "p": "Ty Jerome",
+          "pmx": 0.9078,
+          "s": "PTS",
+          "st": "3",
+          "std": 23.5,
+          "t": "MEM",
+          "tier": "A"
+        },
+        {
+          "alt": 7.5,
+          "e": -0.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.91",
+            "OT-ADJ",
+            "C0.47",
+            "Z1.06",
+            "PIN+0.2",
+            "OPP-OUT:SC2/REB1",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            3,
+            21,
+            23,
+            23,
+            7
+          ],
+          "o": 1.24,
+          "opp": "MEM 10th fewest PTS allowed · pace +0.1",
+          "p": "Brook Lopez",
+          "pmx": 0.8586,
+          "s": "PTS",
+          "st": "5",
+          "std": 11.5,
+          "t": "LAC",
+          "tier": "A"
+        },
+        {
+          "alt": 11.5,
+          "e": -0.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.92",
+            "[ROLE?]",
+            "RET-ADJ",
+            "C0.74",
+            "Z0.70",
+            "TMO",
+            "PIN+0.1",
+            "RET2:Jerome/Edey",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            16,
+            23,
+            19,
+            20,
+            18
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Ty Jerome"
+              ]
+            }
+          ],
+          "o": 1.22,
+          "opp": "LAC 6th most PTS allowed · pace +0.1",
+          "p": "Cedric Coward",
+          "pmx": 0.8964,
+          "s": "PTS",
+          "st": "4",
+          "std": 16.5,
+          "t": "MEM",
+          "tier": "A"
+        },
+        {
+          "alt": 13.5,
+          "e": 3.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.92",
+            "OT-ADJ",
+            "C0.64",
+            "Z1.64",
+            "PIN+2.0",
+            "OPP-OUT:SC2/REB1",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            26,
+            16,
+            23,
+            20,
+            27
+          ],
+          "o": 1.21,
+          "opp": "MEM 10th fewest PTS allowed · pace +0.1",
+          "p": "Darius Garland",
+          "pmx": 0.8854,
+          "s": "PTS",
+          "st": "5",
+          "std": 19.5,
+          "t": "LAC",
+          "tier": "A"
+        },
+        {
+          "alt": 5.5,
+          "e": -0.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "MM90",
+            "PMM0.93",
+            "[OUT]",
+            "[ROLE?]",
+            "RET-ADJ",
+            "C0.56",
+            "Z0.81",
+            "TMO",
+            "PIN+0.9",
+            "RET2:Edey",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "78% (7/9)",
+          "l5": [
+            8,
+            8,
+            22,
+            5,
+            8
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Ty Jerome"
+              ]
+            }
+          ],
+          "o": 1.2,
+          "opp": "LAC 6th most PTS allowed · pace +0.1",
+          "p": "Jaylen Wells",
+          "pmx": 0.8857,
+          "s": "PTS",
+          "st": "4",
+          "std": 9.5,
+          "t": "MEM",
+          "tier": "A"
+        },
+        {
+          "alt": 15.5,
+          "e": -1.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "L5P",
+            "L5LOW16",
+            "[ROLE?]",
+            "RET-ADJ",
+            "C1.00",
+            "Z0.01",
+            "TMO",
+            "PIN-1.8",
+            "RET2:Jerome/Edey",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "60% (6/10)",
+          "l5": [
+            16,
+            23,
+            19,
+            20,
+            18
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Ty Jerome"
+              ]
+            }
+          ],
+          "o": 1.65,
+          "opp": "LAC 6th most PTS allowed · pace +0.1",
+          "p": "Cedric Coward",
+          "pmx": 0.7294,
+          "s": "PTS",
+          "st": "2",
+          "std": 16.5,
+          "t": "MEM",
+          "tier": "C"
+        },
+        {
+          "alt": 8.5,
+          "e": 1.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "L5P",
+            "L5LOW9",
+            "[ROLE?]",
+            "RET-ADJ",
+            "MT+",
+            "C0.63",
+            "Z0.79",
+            "TMO",
+            "PIN-1.5",
+            "RET2:Jerome",
+            "TIER-C"
+          ],
+          "gs": 3,
+          "h": "70% (7/10)",
+          "l5": [
+            24,
+            9,
+            9,
+            26,
+            12
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Ty Jerome"
+              ]
+            }
+          ],
+          "o": 1.63,
+          "opp": "LAC 6th most PTS allowed · pace +0.1",
+          "p": "Cam Spencer",
+          "pmx": 0.8752,
+          "s": "PTS",
+          "st": "2",
+          "std": 9.5,
+          "t": "MEM",
+          "tier": "C"
+        },
+        {
+          "alt": 6.5,
+          "e": 6.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:ALL|minutes mixture >= 90%|+",
+            "[ROLE?]",
+            "RET-ADJ",
+            "MT+",
+            "C0.48",
+            "Z1.11",
+            "TMO",
+            "PIN+0.4",
+            "RET2:Jerome",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 3,
+          "h": "100% (10/10)",
+          "l5": [
+            24,
+            9,
+            9,
+            26,
+            12
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Cameron Boozer"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Ty Jerome"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Ty Jerome"
+              ]
+            }
+          ],
+          "o": 1.32,
+          "opp": "LAC 6th most PTS allowed · pace +0.1",
+          "p": "Cam Spencer",
+          "pmx": 0.9314,
+          "s": "PTS",
+          "st": "4",
+          "std": 9.5,
+          "t": "MEM",
+          "tier": "A"
+        },
+        {
+          "alt": 4.5,
+          "e": -1.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "MU-3%",
+            "OT-ADJ",
+            "C0.70",
+            "Z0.98",
+            "PIN-5.5",
+            "OPP-OUT:SC2/REB1",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            8,
+            2,
+            5,
+            7,
+            7
+          ],
+          "o": 1.25,
+          "opp": "MEM 5th fewest AST allowed · pace +0.1",
+          "p": "Darius Garland",
+          "pmx": 0.7318,
+          "s": "AST",
+          "st": "4",
+          "std": 6.5,
+          "t": "LAC",
+          "tier": "A"
+        }
+      ],
+      "mkt": null,
+      "mkt_o": null,
+      "mkt_u": null,
+      "mx": {
+        "exp_pace": 102.1,
+        "home_spread": null,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.9,
+          "PTS": 111.2,
+          "REB": 42.9,
+          "pace": 102.0
+        },
+        "seed": {
+          "LAC": {
+            "conf": "W",
+            "rec": "4-12",
+            "seed": 13
+          },
+          "MEM": {
+            "conf": "W",
+            "rec": "13-5",
+            "seed": 4
+          }
+        },
+        "teams": {
+          "LAC": {
+            "allow100": {
+              "3PM": 13.1,
+              "AST": 26.7,
+              "PTS": 113.0,
+              "REB": 43.0
+            },
+            "allow_rk": {
+              "3PM": 17,
+              "AST": 5,
+              "PTS": 6,
+              "REB": 15
+            },
+            "out": [],
+            "pace": 102.0,
+            "rk": {
+              "ast": 18,
+              "blk": 19,
+              "dreb": 29,
+              "fg3_pct": 2,
+              "fg3a": 14,
+              "fg3m": 10,
+              "fg_pct": 16,
+              "ft_pct": 11,
+              "fta": 18,
+              "net": 24,
+              "opp_fg3_pct": 26,
+              "opp_fg_pct": 30,
+              "oppg": 24,
+              "oreb": 28,
+              "pace": 12,
+              "pf": 17,
+              "ppg": 23,
+              "reb": 30,
+              "stl": 7,
+              "tov": 28,
+              "ts_pct": 9
+            },
+            "v": {
+              "ast": 26.4,
+              "ats": "9-7-0",
+              "ats_away": "4-4-0",
+              "ats_home": "5-3-0",
+              "ats_l10": "6-4-0",
+              "away": "0-8",
+              "blk": 4.6,
+              "dreb": 29.2,
+              "fg3_pct": 38.1,
+              "fg3a": 37.8,
+              "fg3m": 14.4,
+              "fg_pct": 46.0,
+              "ft_pct": 79.4,
+              "fta": 23.4,
+              "gp": 16,
+              "home": "4-4",
+              "l10": "3-7",
+              "net": -6.8,
+              "opp_fg3_pct": 37.6,
+              "opp_fg_pct": 49.0,
+              "oppg": 117.5,
+              "oreb": 10.2,
+              "ou": "10-6-0",
+              "ou_l10": "7-3-0",
+              "pace": 102.1,
+              "pf": 21.8,
+              "ppg": 110.7,
+              "reb": 39.5,
+              "rec": "4-12",
+              "stl": 9.1,
+              "tov": 17.2,
+              "ts_pct": 58.4
+            }
+          },
+          "MEM": {
+            "allow100": {
+              "3PM": 12.6,
+              "AST": 25.0,
+              "PTS": 110.5,
+              "REB": 41.5
+            },
+            "allow_rk": {
+              "3PM": 24,
+              "AST": 26,
+              "PTS": 21,
+              "REB": 29
+            },
+            "out": [
+              {
+                "min": 27.6,
+                "name": "Cameron Boozer",
+                "roles": [
+                  "SC2",
+                  "REB1"
+                ]
+              }
+            ],
+            "pace": 102.1,
+            "rk": {
+              "ast": 6,
+              "blk": 15,
+              "dreb": 6,
+              "fg3_pct": 1,
+              "fg3a": 13,
+              "fg3m": 3,
+              "fg_pct": 4,
+              "ft_pct": 1,
+              "fta": 17,
+              "net": 4,
+              "opp_fg3_pct": 4,
+              "opp_fg_pct": 9,
+              "oppg": 10,
+              "oreb": 12,
+              "pace": 12,
+              "pf": 24,
+              "ppg": 2,
+              "reb": 7,
+              "stl": 22,
+              "tov": 19,
+              "ts_pct": 2
+            },
+            "v": {
+              "ast": 28.0,
+              "ats": "13-5-0",
+              "ats_away": "9-1-0",
+              "ats_home": "4-4-0",
+              "ats_l10": "7-3-0",
+              "away": "9-1",
+              "blk": 4.8,
+              "dreb": 33.2,
+              "fg3_pct": 39.0,
+              "fg3a": 38.7,
+              "fg3m": 15.1,
+              "fg_pct": 48.0,
+              "ft_pct": 85.4,
+              "fta": 23.6,
+              "gp": 18,
+              "home": "4-4",
+              "l10": "7-3",
+              "net": 8.9,
+              "opp_fg3_pct": 33.3,
+              "opp_fg_pct": 45.4,
+              "oppg": 111.4,
+              "oreb": 12.3,
+              "ou": "10-8-0",
+              "ou_l10": "7-3-0",
+              "pace": 102.1,
+              "pf": 22.8,
+              "ppg": 120.3,
+              "reb": 45.5,
+              "rec": "13-5",
+              "stl": 7.3,
+              "tov": 16.1,
+              "ts_pct": 60.8
+            }
+          }
+        },
+        "win": {
+          "away": 17.0,
+          "home": 83.0,
+          "src": "model"
+        }
+      },
+      "out": {
+        "LAC": [
+          "Bradley Beal (Beal (knee) will not be ready for the start of the regular season, NBA writer Justin Russo reports.)",
+          "Jordan Miller (Miller underwent surgery Wednesday to repair a torn left rotator cuff and will be re-evaluated in six months, per Law Murray of The Athletic.)"
+        ],
+        "MEM": [
+          "Cameron Boozer (Boozer (ankle) will be re-evaluated in four weeks, Brett Siegel of ClutchPoints.com reports.)",
+          "GG Jackson (Jackson underwent a procedure Wednesday to repair a broken fifth metatarsal in his left foot. He is expected to recover fully and will be re-evaluated in approximately three months.)",
+          "Jerami Grant (Grant was diagnosed with a grade 1 left calf strain and will be re-evaluated in two weeks.)",
+          "Richie Saunders (Saunders signed a two-way contract with the Grizzlies on Saturday, Shams Charania of ESPN reports.)",
+          "Scotty Pippen Jr. (Pippen (back) is out for Wednesday's game against the Clippers.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "LAC": [],
+        "MEM": []
+      },
+      "tip": "12:00"
     }
   ],
-  "generated": "2026-11-25T23:05:03Z",
+  "generated": "2026-11-25T23:30:03Z",
   "totals": [
     [
       "MIA@PHI",
@@ -5058,6 +7576,16 @@
     ],
     [
       "MIN@OKC",
+      null,
+      null
+    ],
+    [
+      "BKN@MIL",
+      null,
+      null
+    ],
+    [
+      "LAC@MEM",
       null,
       null
     ]
