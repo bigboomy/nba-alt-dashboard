@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T22:30:03Z",
+ "generated": "2026-11-25T23:05:03Z",
  "date": "2026-11-25",
  "teams": {
   "MIA": {
@@ -45,6 +45,50 @@
     "Nic Claxton"
    ],
    "at": "2026-11-25T22:30:03Z"
+  },
+  "CLE": {
+   "confirmed": false,
+   "starters": [
+    "Donovan Mitchell",
+    "Sam Merrill",
+    "James Harden",
+    "Peyton Watson",
+    "Jarrett Allen"
+   ],
+   "at": "2026-11-25T23:05:03Z"
+  },
+  "NYK": {
+   "confirmed": false,
+   "starters": [
+    "Landry Shamet",
+    "Mikal Bridges",
+    "Jalen Brunson",
+    "Josh Hart",
+    "Karl-Anthony Towns"
+   ],
+   "at": "2026-11-25T23:05:03Z"
+  },
+  "MIN": {
+   "confirmed": false,
+   "starters": [
+    "Ayo Dosunmu",
+    "Jonathan Kuminga",
+    "LaMelo Ball",
+    "Jaden McDaniels",
+    "Rudy Gobert"
+   ],
+   "at": "2026-11-25T23:05:03Z"
+  },
+  "OKC": {
+   "confirmed": false,
+   "starters": [
+    "Jared McCain",
+    "Ajay Mitchell",
+    "Shai Gilgeous-Alexander",
+    "Micah Peavy",
+    "Isaiah Hartenstein"
+   ],
+   "at": "2026-11-25T23:05:03Z"
   }
  },
  "items": {
