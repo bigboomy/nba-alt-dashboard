@@ -2,6 +2,11 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
     {
+      "date": "2026-11-25",
+      "title": "Window decisions: bench-points block on, starter window swapped",
+      "detail": "Points overs on bench players (5 or fewer starts in the last 10) are now blocked: 21-11 live against a 77.9% break-even. The confirmed-starter window is replaced by AST regular starter, because lineups are only known after the run. The new assists soft-matchup and rebounds L10 blocks are recorded but not applied until they have a live record."
+    },
+    {
       "date": "2026-11-24",
       "version": "nba-session v3.42-p4",
       "component": "engine",
