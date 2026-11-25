@@ -1,93 +1,29 @@
 {
- "generated": "2026-11-25T02:45:02Z",
- "date": "2026-11-24",
+ "generated": "2026-11-25T20:30:04Z",
+ "date": "2026-11-25",
  "teams": {
-  "DET": {
-   "confirmed": true,
+  "MIA": {
+   "confirmed": false,
    "starters": [
-    "Daniss Jenkins",
-    "Kevin Huerter",
-    "Cade Cunningham",
-    "Ausar Thompson",
-    "John Collins"
+    "Klay Thompson",
+    "Pelle Larsson",
+    "Davion Mitchell",
+    "Giannis Antetokounmpo",
+    "Bam Adebayo"
    ],
-   "at": "2026-11-24T23:40:02Z"
+   "at": "2026-11-25T20:30:04Z"
   },
-  "ORL": {
-   "confirmed": true,
+  "PHI": {
+   "confirmed": false,
    "starters": [
-    "Desmond Bane",
-    "Anthony Black",
-    "Jalen Suggs",
-    "Franz Wagner",
-    "Wendell Carter Jr."
+    "VJ Edgecombe",
+    "Jaylen Brown",
+    "Tyrese Maxey",
+    "LeBron James",
+    "Jabari Walker"
    ],
-   "at": "2026-11-24T23:40:02Z"
-  },
-  "BOS": {
-   "confirmed": true,
-   "starters": [
-    "Sam Hauser",
-    "Jayson Tatum",
-    "Derrick White",
-    "Paul George",
-    "Neemias Queta"
-   ],
-   "at": "2026-11-25T00:45:02Z"
-  },
-  "WAS": {
-   "confirmed": true,
-   "starters": [
-    "Kyshawn George",
-    "AJ Dybantsa",
-    "Trae Young",
-    "Anthony Davis",
-    "Alex Sarr"
-   ],
-   "at": "2026-11-25T00:40:02Z"
-  },
-  "DAL": {
-   "confirmed": true,
-   "starters": [
-    "Cooper Flagg",
-    "Caleb Martin",
-    "Kyrie Irving",
-    "Zaccharie Risacher",
-    "Daniel Gafford"
-   ],
-   "at": "2026-11-25T02:45:02Z"
-  },
-  "DEN": {
-   "confirmed": true,
-   "starters": [
-    "Christian Braun",
-    "Cameron Johnson",
-    "Jamal Murray",
-    "Aaron Gordon",
-    "Nikola Jokić"
-   ],
-   "at": "2026-11-25T02:45:02Z"
+   "at": "2026-11-25T20:30:04Z"
   }
  },
- "items": {
-  "Jayson Tatum|BOS": 1,
-  "Sam Hauser|BOS": 1,
-  "Trae Young|WAS": 1,
-  "AJ Dybantsa|WAS": 1,
-  "Alexandre Sarr|WAS": 1,
-  "Kyshawn George|WAS": 1,
-  "Anthony Davis|WAS": 1,
-  "P.J. Washington|DAL": 0,
-  "Naji Marshall|DAL": 0,
-  "Cooper Flagg|DAL": 1,
-  "Kyrie Irving|DAL": 1,
-  "Nikola Jokic|DEN": 1,
-  "Paul Reed|DET": 0,
-  "Desmond Bane|ORL": 1,
-  "Wendell Carter Jr.|ORL": 1,
-  "Jalen Suggs|ORL": 1,
-  "Franz Wagner|ORL": 1,
-  "Tristan da Silva|ORL": 0,
-  "Anthony Black|ORL": 1
- }
+ "items": {}
 }
