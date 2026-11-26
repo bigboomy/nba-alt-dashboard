@@ -1,40 +1,6 @@
 {
- "generated": "2026-11-24T23:45:02Z",
+ "generated": "2026-11-26T01:45:04Z",
  "out": [
-  {
-   "kind": "in",
-   "date": "2026-11-23",
-   "game": "CLE@CHI",
-   "id": "4683747",
-   "player": "Jaylon Tyson",
-   "team": "CLE",
-   "status": "",
-   "utc": "2026-11-24T00:40:02Z",
-   "mins_to_tip": 19
-  },
-  {
-   "kind": "in",
-   "date": "2026-11-23",
-   "game": "POR@PHI",
-   "id": "5105637",
-   "player": "Adem Bona",
-   "team": "PHI",
-   "status": "",
-   "utc": "2026-11-23T23:20:02Z",
-   "mins_to_tip": 39
-  },
-  {
-   "kind": "out",
-   "date": "2026-11-23",
-   "game": "POR@PHI",
-   "id": "3059318",
-   "player": "Joel Embiid",
-   "espn_name": "Joel Embiid",
-   "team": "PHI",
-   "status": "Out",
-   "utc": "2026-11-23T23:05:02Z",
-   "mins_to_tip": 54
-  },
   {
    "kind": "out",
    "date": "2026-11-24",
@@ -46,6 +12,18 @@
    "status": "Out",
    "utc": "2026-11-24T23:45:02Z",
    "mins_to_tip": 14
+  },
+  {
+   "kind": "out",
+   "date": "2026-11-25",
+   "game": "SAC@GSW",
+   "id": "4397040",
+   "player": "Brandon Williams",
+   "espn_name": "Brandon Williams",
+   "team": "GSW",
+   "status": "Out",
+   "utc": "2026-11-26T01:45:04Z",
+   "mins_to_tip": 74
   }
  ]
 }
