@@ -10351,6 +10351,27 @@
           "wowy_keys": "",
           "wowy_mu": 2.496
         },
+        "Devin Vassell|REB|3.5|LSR": {
+          "best_book": "tabtouch",
+          "best_price": 1.7,
+          "mm_min": 35.2,
+          "mm_mu": 4.615,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.67,
+          "p_pin": "",
+          "p_wowy": 0.5706,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 4.048
+        },
         "Donovan Clingan|PTS|7.5|WIN": {
           "best_book": "pointsbet",
           "best_price": 1.33,
@@ -10414,6 +10435,27 @@
           "wowy_keys": "",
           "wowy_mu": 4.677
         },
+        "Stephon Castle|AST|5.5|LSR": {
+          "best_book": "unibet",
+          "best_price": 1.38,
+          "mm_min": 36.3,
+          "mm_mu": 8.733,
+          "n_books": 9,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8545,
+          "p_pin": 0.7316,
+          "p_wowy": 0.7176,
+          "pin_edge_pp": -4.4,
+          "pin_line": 7.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 7.254
+        },
         "Toumani Camara|PTS|7.5|WIN": {
           "best_book": "next2go",
           "best_price": 1.35,
@@ -10434,6 +10476,48 @@
           "wowy_L": 1.0,
           "wowy_keys": "",
           "wowy_mu": 10.244
+        },
+        "Victor Wembanyama|PTS|23.5|LSR": {
+          "best_book": "unibet",
+          "best_price": 1.29,
+          "mm_min": 34.7,
+          "mm_mu": 37.565,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9156,
+          "p_pin": 0.7625,
+          "p_wowy": 0.7724,
+          "pin_edge_pp": -2.5,
+          "pin_line": 29.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 31.204
+        },
+        "Victor Wembanyama|PTS|25.5|LSR": {
+          "best_book": "pointsbet",
+          "best_price": 1.42,
+          "mm_min": 34.7,
+          "mm_mu": 37.565,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8737,
+          "p_pin": 0.6764,
+          "p_wowy": 0.6973,
+          "pin_edge_pp": -2.8,
+          "pin_line": 29.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 31.204
         }
       },
       "engine": "nba-session v3.42-p4",
@@ -10848,6 +10932,254 @@
           "std": 2.5,
           "t": "SAS",
           "tier": "A"
+        },
+        {
+          "alt": 25.5,
+          "e": 3.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-LEAN",
+            "[OUT]",
+            "[ROLE?]",
+            "DNP-LAST",
+            "C0.85",
+            "Z0.45",
+            "TMO",
+            "PIN-2.8",
+            "TIER-B"
+          ],
+          "gs": 4,
+          "h": "89% (8/9)",
+          "l5": [
+            null,
+            50,
+            32,
+            25,
+            26
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Dylan Harper"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Dylan Harper"
+              ]
+            },
+            null,
+            null
+          ],
+          "o": 1.42,
+          "opp": "POR 8th fewest PTS allowed · pace -0.4",
+          "p": "Victor Wembanyama",
+          "pmx": 0.8349,
+          "s": "PTS",
+          "st": "4",
+          "std": 28.5,
+          "t": "SAS",
+          "tier": "B"
+        },
+        {
+          "alt": 23.5,
+          "e": 0.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.92",
+            "[OUT]",
+            "[ROLE?]",
+            "DNP-LAST",
+            "C0.79",
+            "Z0.66",
+            "TMO",
+            "PIN-2.5",
+            "TIER-A"
+          ],
+          "gs": 4,
+          "h": "89% (8/9)",
+          "l5": [
+            null,
+            50,
+            32,
+            25,
+            26
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Dylan Harper"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Dylan Harper"
+              ]
+            },
+            null,
+            null
+          ],
+          "o": 1.27,
+          "opp": "POR 8th fewest PTS allowed · pace -0.4",
+          "p": "Victor Wembanyama",
+          "pmx": 0.8808,
+          "s": "PTS",
+          "st": "4",
+          "std": 28.5,
+          "t": "SAS",
+          "tier": "A"
+        },
+        {
+          "alt": 3.5,
+          "e": -3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-L5P",
+            "L5LOW4",
+            "[Std?]",
+            "[ROLE?]",
+            "REB-ANC",
+            "MT+",
+            "C0.91",
+            "Z0.18",
+            "TMO",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "60% (6/10)",
+          "l5": [
+            6,
+            4,
+            4,
+            5,
+            6
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Victor Wembanyama",
+                "Dylan Harper"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Dylan Harper"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Dylan Harper"
+              ]
+            },
+            null,
+            null
+          ],
+          "o": 1.67,
+          "opp": "POR 4th fewest REB allowed · pace -0.4",
+          "p": "Devin Vassell",
+          "pmx": 0.6522,
+          "s": "REB",
+          "st": "3",
+          "std": 3.5,
+          "t": "SAS",
+          "tier": "C"
+        },
+        {
+          "alt": 5.5,
+          "e": -7.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "[ROLE?]",
+            "MU-6%",
+            "MT+",
+            "C0.80",
+            "Z0.55",
+            "TMO",
+            "PIN-4.4",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "60% (6/10)",
+          "l5": [
+            11,
+            6,
+            12,
+            7,
+            9
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "De'Aaron Fox",
+                "Dylan Harper"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Dylan Harper"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Dylan Harper"
+              ]
+            },
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "De'Aaron Fox"
+              ]
+            }
+          ],
+          "o": 1.29,
+          "opp": "POR 2nd fewest AST allowed · pace -0.4",
+          "p": "Stephon Castle",
+          "pmx": 0.8278,
+          "s": "AST",
+          "st": "4",
+          "std": 7.5,
+          "t": "SAS",
+          "tier": "A"
+        }
+      ],
+      "lsr": [
+        {
+          "n": 4,
+          "out": [
+            "De'Aaron Fox"
+          ],
+          "run": "20261126T023003Z_lsr_SAS-POR",
+          "utc": "2026-11-26T02:30:03Z"
         }
       ],
       "mkt": 227.5,
