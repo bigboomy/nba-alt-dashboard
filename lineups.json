@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T01:30:04Z",
+ "generated": "2026-11-26T02:25:03Z",
  "date": "2026-11-25",
  "teams": {
   "MIA": {
@@ -192,13 +192,13 @@
   "SAS": {
    "confirmed": false,
    "starters": [
-    "Stephon Castle",
-    "Julian Champagnie",
-    "De'Aaron Fox",
     "Devin Vassell",
+    "Julian Champagnie",
+    "Stephon Castle",
+    "Harrison Barnes",
     "Victor Wembanyama"
    ],
-   "at": "2026-11-26T01:30:04Z"
+   "at": "2026-11-26T02:25:03Z"
   }
  },
  "items": {
