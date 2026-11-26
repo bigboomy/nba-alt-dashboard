@@ -31,8 +31,8 @@ h1{font-size:1.9rem;font-weight:700;margin:0;line-height:1.1}
 /* 21 Nov (Mitch): original 8-bit robot mascot, also the app icon */
 .brand{display:flex;align-items:center;gap:8px;min-width:0}.mascot{flex:none;image-rendering:pixelated;width:40px;height:40px}
 @media (max-width:420px){.mascot{width:32px;height:32px}.brand{gap:6px}.brand h1{font-size:27px}}
-.thm{flex:none;font:600 13px/1 var(--body,inherit);padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;min-height:32px}.thm:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-@media (max-width:420px){.thm{padding:7px 9px;min-width:34px}.thm .tl{display:none}}
+.thm{flex:none;font:600 13px/1 var(--body,inherit);padding:7px 11px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;min-height:44px;min-width:44px}.thm:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:420px){.thm{padding:7px 9px;min-width:44px}.thm .tl{display:none}}
 .sub{color:var(--muted);font-size:.85rem;margin:2px 0 14px}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px;text-align:center}
@@ -192,7 +192,7 @@ tr.allrow td{font-weight:700;border-top:2px solid var(--line)}
 .pos{color:var(--good)}.neg{color:var(--warn)}
 body{overflow-x:hidden}
 
-h2.sec{font-size:1.5rem;margin:22px 0 8px}
+h2.sec{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 details.fold{border:1px solid var(--line);border-radius:12px;background:var(--card);margin:14px 0;padding:0 12px}
 details.fold>summary{cursor:pointer;list-style:none;padding:12px 0;font-weight:600;display:flex;justify-content:space-between;align-items:center;gap:8px}
 details.fold>summary::-webkit-details-marker{display:none}
@@ -449,7 +449,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .blr .blk{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center}
 .blr .c3{grid-column:2;grid-row:1/3;cursor:inherit}
 .blr:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.tab.tipd{opacity:.5}.tab.tipd[aria-pressed="true"]{opacity:1}.best .ntip{margin:8px 0 6px;font-size:.85rem;color:var(--muted)}.best .ntip b{color:var(--text);font-weight:600}.tsoon{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--warn);border-radius:999px;color:var(--warn);font-size:11px;font-weight:600;line-height:17px;white-space:nowrap;vertical-align:1px}.best details.stf{margin-top:8px}.best details.stf .pls{opacity:.85}details.stg{margin:14px 0 4px;border-top:1px solid var(--line)}details.stg>summary{cursor:pointer;list-style:none;padding:12px 6px;min-height:24px;display:flex;justify-content:space-between;align-items:center;font-size:.95rem;color:var(--text)}details.stg>summary span{color:var(--muted)}details.stg>summary b{color:var(--text)}details.stg>summary::-webkit-details-marker{display:none}details.stg>summary::after{content:"";width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s;flex:none;margin:0 4px}details.stg[open]>summary::after{transform:rotate(45deg)}#tabs[hidden],.sheet[hidden],.shbg[hidden]{display:none}.tbar{display:flex;gap:4px;margin:6px 0 14px;padding:4px;border:1px solid var(--line);border-radius:14px;background:var(--card)}.tbar button{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 6px;border:0;border-radius:10px;background:none;color:var(--muted);font:600 .9rem/1 var(--body);cursor:pointer}.tbar svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}.tbar button[aria-current="page"]{background:var(--accent);color:var(--bg)}.tbar button:focus-visible,.fbtn:focus-visible,.fchip:focus-visible,.opt:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.wrap[data-tab="tonight"] .pane:not([data-pane="tonight"]),.wrap[data-tab="results"] .pane:not([data-pane="results"]),.wrap[data-tab="ahead"] .pane:not([data-pane="ahead"]),.wrap[data-tab="record"] .pane:not([data-pane="record"]){display:none}.pane>h2.sec:first-child{margin-top:4px}@media (max-width:899px){.tbar{position:fixed;left:0;right:0;bottom:0;z-index:40;margin:0;gap:0;border:0;border-top:1px solid var(--line);border-radius:0;padding:2px max(6px,env(safe-area-inset-right,0px)) calc(2px + env(safe-area-inset-bottom,0px)) max(6px,env(safe-area-inset-left,0px));box-shadow:0 -2px 10px rgba(18,35,63,.06)}.tbar button{flex-direction:column;gap:3px;min-height:54px;font-size:.72rem;border-radius:0}.tbar button[aria-current="page"]{background:none;color:var(--accent)}.tbar button[aria-current="page"] svg{stroke-width:2.3}.wrap{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}.jb{bottom:calc(74px + env(safe-area-inset-bottom,0px))}.ctoast{bottom:calc(130px + env(safe-area-inset-bottom,0px))}}@media (min-width:900px){.tbar{position:sticky;top:8px;z-index:20;max-width:760px;margin:6px auto 18px}.pane{max-width:760px;margin-left:auto;margin-right:auto}.pane[data-pane="record"]{max-width:1000px}}.gfold{margin-top:6px}.blr .bfm{grid-column:1/-1;font-size:12px;line-height:1.35;color:var(--muted)}.blr .bfm b{color:var(--text);font-weight:600}.frow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 10px}.fbtn{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:0 13px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--text);font:600 .85rem/1 var(--body);cursor:pointer}.fbtn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round}.fbtn b{min-width:18px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--bg);font-size:11px;line-height:18px;text-align:center}.fchip{display:inline-flex;align-items:center;gap:2px;min-height:38px;padding:0 4px 0 12px;border:0;border-radius:999px;background:var(--chip);color:var(--text);font:500 .85rem/1 var(--body);cursor:pointer}.fchip span{padding:0 6px;font-size:1.05rem;color:var(--muted)}.shbg{position:fixed;inset:0;z-index:50;background:rgba(10,14,20,.45)}.sheet{position:fixed;left:0;right:0;bottom:0;z-index:51;max-height:85vh;overflow:auto;overscroll-behavior:contain;background:var(--card);color:var(--text);border-radius:16px 16px 0 0;padding:0 16px calc(16px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 24px rgba(0,0,0,.22)}@media (min-width:900px){.sheet{left:50%;right:auto;width:520px;transform:translateX(-50%)}}.shh{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;padding:12px 0 6px;background:var(--card)}.shh h2{margin:0;font-size:1.15rem}.shx{min-height:44px;padding:0 18px;border:0;border-radius:10px;background:var(--accent);color:var(--bg);font:600 .9rem/1 var(--body);cursor:pointer}.shg h3{margin:14px 0 8px;font-size:.8rem;font-weight:600;color:var(--muted)}.opts{display:flex;flex-wrap:wrap;gap:6px}.opt{min-height:40px;padding:0 13px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--text);font:500 .88rem/1 var(--body);cursor:pointer}.opt[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}.shot{display:flex;align-items:flex-start;gap:10px;margin-top:16px;font-size:.95rem;cursor:pointer}.shot input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--accent);flex:none}.shot small{display:block;margin-top:3px;font-size:.78rem;color:var(--muted)}.shclr{width:100%;min-height:44px;margin-top:16px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--text);font:600 .9rem/1 var(--body);cursor:pointer}
+.tab.tipd{opacity:.5}.tab.tipd[aria-pressed="true"]{opacity:1}.best .ntip{margin:8px 0 6px;font-size:.85rem;color:var(--muted)}.best .ntip b{color:var(--text);font-weight:600}.tsoon{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--warn);border-radius:999px;color:var(--warn);font-size:11px;font-weight:600;line-height:17px;white-space:nowrap;vertical-align:1px}.best details.stf{margin-top:8px}.best details.stf .pls{opacity:.85}details.stg{margin:14px 0 4px;border-top:1px solid var(--line)}details.stg>summary{cursor:pointer;list-style:none;padding:12px 6px;min-height:24px;display:flex;justify-content:space-between;align-items:center;font-size:.95rem;color:var(--text)}details.stg>summary span{color:var(--muted)}details.stg>summary b{color:var(--text)}details.stg>summary::-webkit-details-marker{display:none}details.stg>summary::after{content:"";width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s;flex:none;margin:0 4px}details.stg[open]>summary::after{transform:rotate(45deg)}#tabs[hidden],.sheet[hidden],.shbg[hidden]{display:none}.tbar{display:flex;gap:4px;margin:6px 0 14px;padding:4px;border:1px solid var(--line);border-radius:14px;background:var(--card)}.tbar button{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 6px;border:0;border-radius:10px;background:none;color:var(--muted);font:600 .9rem/1 var(--body);cursor:pointer}.tbar svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}.tbar button[aria-current="page"]{background:var(--accent);color:var(--bg)}.tbar button:focus-visible,.fbtn:focus-visible,.fchip:focus-visible,.opt:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.wrap[data-tab="tonight"] .pane:not([data-pane="tonight"]),.wrap[data-tab="results"] .pane:not([data-pane="results"]),.wrap[data-tab="ahead"] .pane:not([data-pane="ahead"]),.wrap[data-tab="record"] .pane:not([data-pane="record"]){display:none}.pane>h2.sec:first-child{margin-top:4px}@media (max-width:899px){.tbar{position:fixed;left:0;right:0;bottom:0;z-index:40;margin:0;gap:0;border:0;border-top:1px solid var(--line);border-radius:0;padding:2px max(6px,env(safe-area-inset-right,0px)) calc(2px + env(safe-area-inset-bottom,0px)) max(6px,env(safe-area-inset-left,0px));box-shadow:0 -2px 10px rgba(18,35,63,.06)}.tbar button{flex-direction:column;gap:3px;min-height:54px;font-size:.72rem;border-radius:0}.tbar button[aria-current="page"]{background:none;color:var(--accent)}.tbar button[aria-current="page"] svg{stroke-width:2.3}.wrap{padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}.jb{bottom:calc(74px + env(safe-area-inset-bottom,0px))}.ctoast{bottom:calc(130px + env(safe-area-inset-bottom,0px))}}@media (min-width:900px){.tbar{position:sticky;top:8px;z-index:20;max-width:760px;margin:6px auto 18px}.pane{max-width:760px;margin-left:auto;margin-right:auto}.pane[data-pane="record"]{max-width:1000px}}.gfold{margin-top:6px}.wrap:not([data-tab="tonight"])>.lockbar{display:none}#tierDet>[hidden]{display:none}.gab{margin:6px 0 2px;font-size:.82rem;color:var(--muted)}.gab b{color:var(--text);font-weight:600}.gab>span{color:var(--warn)}.rgh{margin:22px 0 8px;font-size:1.05rem}.tcard .rgh{margin-top:4px}.tcap{margin:0 0 8px}.tcl{border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}.tcr{display:grid;grid-template-columns:minmax(0,1fr) 16px;grid-template-areas:'n g' 'v g' 's g';row-gap:2px;column-gap:8px;align-items:center;width:100%;min-height:44px;padding:11px 14px;border:0;border-top:1px solid var(--line);background:none;color:inherit;font:inherit;text-align:left;cursor:pointer}.tcr:first-child{border-top:0}.tcr:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}.tcr[aria-expanded="true"]{background:var(--chip)}.tcn{grid-area:n;font-weight:600}.tcv{grid-area:v;font-size:.86rem;font-variant-numeric:tabular-nums}.tcv b{font-weight:600}.tcs{grid-area:s;font-size:.8rem;color:var(--muted)}.tcs.pos,.tcs.neg{font-weight:600}.tcr .go{grid-area:g;width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s}.tcr[aria-expanded="true"] .go{transform:rotate(45deg)}#tierDet{margin-top:10px}#tierDet th,#tierDet td:not(:first-child){white-space:nowrap}@media (min-width:900px){.tcr{grid-template-columns:150px minmax(0,1fr) minmax(0,1.3fr) 16px;grid-template-areas:'n v s g'}}.blr .bfm{grid-column:1/-1;font-size:12px;line-height:1.35;color:var(--muted)}.blr .bfm b{color:var(--text);font-weight:600}.frow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 10px}.fbtn{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 13px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--text);font:600 .85rem/1 var(--body);cursor:pointer}.fbtn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linejoin:round}.fbtn b{min-width:18px;padding:0 5px;border-radius:999px;background:var(--accent);color:var(--bg);font-size:11px;line-height:18px;text-align:center}.fchip{display:inline-flex;align-items:center;gap:2px;min-height:44px;padding:0 4px 0 12px;border:0;border-radius:999px;background:var(--chip);color:var(--text);font:500 .85rem/1 var(--body);cursor:pointer}.fchip span{padding:0 6px;font-size:1.05rem;color:var(--muted)}.shbg{position:fixed;inset:0;z-index:50;background:rgba(10,14,20,.45)}.sheet{position:fixed;left:0;right:0;bottom:0;z-index:51;max-height:85vh;overflow:auto;overscroll-behavior:contain;background:var(--card);color:var(--text);border-radius:16px 16px 0 0;padding:0 16px calc(16px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 24px rgba(0,0,0,.22)}@media (min-width:900px){.sheet{left:50%;right:auto;width:520px;transform:translateX(-50%)}}.shh{position:sticky;top:0;display:flex;align-items:center;justify-content:space-between;padding:12px 0 6px;background:var(--card)}.shh h2{margin:0;font-size:1.15rem}.shx{min-height:44px;padding:0 18px;border:0;border-radius:10px;background:var(--accent);color:var(--bg);font:600 .9rem/1 var(--body);cursor:pointer}.shg h3{margin:14px 0 8px;font-size:.8rem;font-weight:600;color:var(--muted)}.opts{display:flex;flex-wrap:wrap;gap:6px}.opt{min-height:40px;padding:0 13px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--text);font:500 .88rem/1 var(--body);cursor:pointer}.opt[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}.shot{display:flex;align-items:flex-start;gap:10px;margin-top:16px;font-size:.95rem;cursor:pointer}.shot input{width:20px;height:20px;margin:1px 0 0;accent-color:var(--accent);flex:none}.shot small{display:block;margin-top:3px;font-size:.78rem;color:var(--muted)}.shclr{width:100%;min-height:44px;margin-top:16px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--text);font:600 .9rem/1 var(--body);cursor:pointer}
 </style>
 <script>
 /* Light/dark toggle (Mitch 21 Nov: "I want the dashboard to be light for me"). Saved per device in localStorage;
@@ -484,7 +484,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
     <div id="tnTop"></div>
     <div class="tabs" id="tabs" role="group" aria-label="Filter by game" hidden></div>
     <section class="best" id="best" aria-label="Tonight's leans" hidden></section>
-    <details class="fold gfold" id="gamesFold"><summary><span id="gfS">Games and picks <span class="meta">cards, matchups, Took it / Pass</span></span></summary>
+    <details class="fold gfold" id="gamesFold"><summary><span id="gfS">Games</span></summary>
     <div id="games"></div>
     </details>
     <button type="button" class="jb" id="jb" hidden>Back to best leans</button>
@@ -507,26 +507,30 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 
   <section class="pane" data-pane="record" id="paneRecord" aria-label="Record">
     <h2 class="sec">Record</h2>
-    <details class="fold" id="projFold"><summary><span>Projected totals <span class="meta">interest only, not a bet</span></span></summary>
-    <div class="ts"><table id="totals" style="min-width:0;border:0"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table></div>
-    </details>
-
   <div id="moreRec">
+  <section class="tcard" id="tierCard" aria-label="Tiers on test"></section>
+  <div id="tierDet">
+  <div id="leansSec" data-tsec hidden></div>
+  <div id="hrSec" data-tsec hidden></div>
+  <div id="mmSec" data-tsec hidden></div>
+  <div id="l5Sec" data-tsec hidden></div>
+  <div id="foSec" data-tsec hidden></div>
+  <div id="wtSec" data-tsec hidden></div>
+  <div id="pinSec" data-tsec hidden></div>
+  <div id="lsSec" data-tsec hidden></div>
+  <div id="olSec" data-tsec hidden></div>
+  </div>
+  <h3 class="rgh">Picks</h3>
+  <section id="rec" aria-label="Picks record"><p class="load">Loading record…</p></section>
+  <div id="results"></div>
+  <h3 class="rgh">Diagnostics</h3>
   <div id="autopsySec"></div>
   <div id="codeSec"></div>
-  <section id="rec" aria-label="Record"><p class="load">Loading record…</p></section>
-  <div id="results"></div>
-  <div id="totalsSec"></div>
-  <div id="leansSec"></div>
-  <div id="hrSec"></div>
-  <div id="pinSec"></div>
-  <div id="mmSec"></div>
-  <div id="l5Sec"></div>
-  <div id="foSec"></div>
-  <div id="wtSec"></div>
-  <div id="olSec"></div>
-  <div id="lsSec"></div>
   <div id="winSec"></div>
+  <div id="totalsSec"></div>
+  <details class="fold" id="projFold"><summary><span>Projected totals <span class="meta">interest only, not a bet</span></span></summary>
+    <div class="ts"><table id="totals" style="min-width:0;border:0"><thead><tr><th>Game</th><th>Proj</th><th>Mkt</th><th>Gap</th></tr></thead><tbody></tbody></table></div>
+    </details>
   </div>
 
   <details class="fold" id="guide"><summary><span>Guide <span class="meta">codes, how to read it, what changed</span></span></summary>
@@ -633,6 +637,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
   <div class="lockbar" id="lockbar" hidden></div>
   <p class="foot"><b>Not betting advice.</b> Hit rate is not profit; prices move and players sit. Past results do not predict future ones. Only bet what you can afford to lose. If gambling is a problem for you or someone you know, contact your local support service (Australia: 1800 858 858, gamblinghelponline.org.au).</p>
   <p class="foot" id="src" style="margin-top:0"></p>
+  <p class="foot" id="bkl" style="margin-top:0"></p>
 </div>
 
 <script>
@@ -920,7 +925,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   function resultsHtml(all,asOf){
     var day=all.filter(function(r){return r.date===asOf});
-    var h='<details class="fold"><summary><span>Latest results <span class="meta">'+fdateY(asOf)+'</span></span></summary><div class="rl">';
+    var h='<details class="fold"><summary><span>Latest picks <span class="meta">'+fdateY(asOf)+'</span></span></summary><div class="rl">';
     if(!day.length) h+='<div class="none">No rows.</div>';
     day.forEach(function(r){
       var pc=r.result==='W'?'W':r.result==='L'?'L':r.result==='VOID'?'V':r.result==='PUSH'?'P':'';
@@ -950,7 +955,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var rg=winRange(asOf),rows=CORE.inRange(VR,rg),allw=CORE.inRange(ROWS,rg);
     var vseg=CHOICES_OK?'<div class="seg" role="group" aria-label="View">'+[['model','Model'],['mine','My bets'],['nopass','Model − passes']].map(function(x){return '<button type="button" class="tab" data-v="'+x[0]+'" aria-pressed="'+(RVIEW===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>':'';
     var seg='<div class="seg" role="group" aria-label="Window">'+[['7d','7d'],['30d','30d'],['season','Season']].map(function(x){return '<button type="button" class="tab" data-w="'+x[0]+'" aria-pressed="'+(WIN===x[0])+'">'+x[1]+'</button>'}).join('')+'</div>';
-    var h='<details class="fold" id="recFold"'+(REC_OPEN?' open':'')+'><summary><span>Record <span class="meta">'+fdate(rg.from)+' → '+fdate(rg.to)+(RVIEW!=='model'&&CHOICES_OK?' · '+(RVIEW==='mine'?'my bets':'minus passes'):'')+'</span></span></summary>'+vseg+seg+
+    var h='<details class="fold" id="recFold"'+(REC_OPEN?' open':'')+'><summary><span>Picks record <span class="meta">'+fdate(rg.from)+' → '+fdate(rg.to)+(RVIEW!=='model'&&CHOICES_OK?' · '+(RVIEW==='mine'?'my bets':'minus passes'):'')+'</span></span></summary>'+vseg+seg+
       '<p class="range">'+fdateY(rg.from)+' → '+fdateY(rg.to)+' · as of latest settled day</p>'+
       '<h3>By odds band</h3>'+bandTable(rows)+shadowBlock(rows)+'<p class="cap">Green: hit rate above break-even; red: below. Intensity scales with the gap (capped at 15 pp); grey when n&lt;10.</p>'+
       '<h3>By stat</h3>'+stTable(rows)+
@@ -1135,13 +1140,20 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
      (leans as 0u tiles); everyone else sits in the collapsed Leans fold. Tap a tile for its detail. */
   var TSEL={};
   function kindTag(p){var k=cxKind(p);return k==='pick'?'PICK':k==='lean'?'LEAN':k}
-  function tmOut(g,p){
-    if(!p.f.some(function(f){return f==='TMO'||/^TM-OUT:/.test(f)||f==='[ROLE?]'})) return '';
+  function tmFlag(p){return p.f.some(function(f){return f==='TMO'||/^TM-OUT:/.test(f)||f==='[ROLE?]'})}
+  function tmNames(g,p){
     var m=String(g.ctx||'').match(/Out TOP3: ([^;]*)/),names=[];
     if(m) m[1].split(', ').forEach(function(x){var r=x.match(/^(.+) \((\w+)\)$/);if(r&&r[2]===p.t&&r[1]!==p.p)names.push(r[1])});
     if(!names.length&&g.abs&&g.abs[p.t]) g.abs[p.t].forEach(function(o){if(o.name!==p.p)names.push(o.name)});
-    return names.length?'<span class="tmo">⚠ '+esc(names.join(', '))+' out</span>':'<span class="tmo">⚠ Key teammate out</span>';
+    return names}
+  /* Critique 27 Nov: named absences show once in the game header (gameAbs); a player only gets the chip when no name is known. */
+  function tmOut(g,p){
+    if(!tmFlag(p)) return '';
+    return tmNames(g,p).length?'':'<span class="tmo">⚠ Key teammate out</span>';
   }
+  function gameAbs(g){var ab={},ord=[];
+    g.picks.concat(g.leans).forEach(function(p){if(!tmFlag(p))return;tmNames(g,p).forEach(function(n){if(!ab[p.t]){ab[p.t]=[];ord.push(p.t)}if(ab[p.t].indexOf(n)<0)ab[p.t].push(n)})});
+    return ord.length?'<p class="gab"><span aria-hidden="true">⚠</span> '+ord.map(function(t){return '<b>'+esc(t)+'</b> without '+esc(ab[t].join(', '))}).join(' \u00b7 ')+'</p>':''}
   /* Back tonight (Mitch 21 Nov): a top-3 teammate who missed 70%+ of his sample games plays tonight (RET), so the
      usage he soaked up may go back. Names from data.json game.ret[team] (from 21 Nov runs). */
   function tmBack(g,p){
@@ -1277,7 +1289,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   var KEYDONE=false;   /* last-5 key shows once per render (reset in games()) */
   function ringKey(list){var has=(list||[]).some(function(b){return b.l5&&b.l5.length});
     if(!has||KEYDONE) return '';KEYDONE=true;
-    return '<div class="rkey"><span>Last 5, oldest \u2192 newest: <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)">under</em><em class="ko">key mate out</em><em class="ot">OT</em><em class="m">\u2013 did not play</em></span></div>'}
+    return '<div class="rkey" aria-label="Last 5 games, oldest to newest"><span>Last 5 \u2192 <em style="background:var(--o5);color:var(--o5t)">over</em><em style="background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1px var(--line)">under</em><em class="ko">key mate out</em><em class="ot">OT</em><em class="m">\u2013 did not play</em></span></div>'}
   function l10Of(b){var kn=hitKN(b.h);return kn?'<span class="l10" aria-label="cleared '+kn[0]+' of last '+kn[1]+'"><i>L'+kn[1]+'</i> '+kn[0]+'/'+kn[1]+'</span>':''}
   function bid(g,b){return g.id+'|'+b.p+'|'+b.s+'|'+b.alt}
   function betLabel(b,gid){var r=hitP(b),kn=hitKN(b.h),x=resFor(b);
@@ -1395,18 +1407,13 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     HOU:'#CE1141',IND:'#002D62',LAC:'#C8102E',LAL:'#552583',MEM:'#5D76A9',MIA:'#98002E',MIL:'#00471B',MIN:'#0C2340',NOP:'#0C2340',NYK:'#F58426',
     OKC:'#007AC1',ORL:'#0077C0',PHI:'#006BB6',PHX:'#1D1160',POR:'#E03A3E',SAC:'#5A2D81',SAS:'#8A8D8F',TOR:'#CE1141',UTA:'#002B5C',WAS:'#002B5C'};
   function gameHtml(g,gi){
-    var np=g.picks.length,nl=g.leans.length,nh=g.leans.filter(function(p){return p.f.indexOf('HR80')>=0||p.f.indexOf('HR85')>=0}).length,
-        npn=g.leans.filter(function(p){return p.f.indexOf('PIN')>=0}).length,
-        nmm=g.leans.filter(function(p){return p.f.indexOf('MM90')>=0}).length,
-        nl5=g.leans.filter(function(p){return p.f.indexOf('L5P')>=0}).length,nfo=g.leans.filter(function(p){return p.f.indexOf('FO')>=0}).length,nwt=g.leans.filter(function(p){return p.f.indexOf('WIN')>=0}).length,
-        nol=g.leans.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length,
-        nls=g.leans.filter(function(p){return p.f.indexOf('LSR')>=0}).length;
+    var np=g.picks.length,nol=g.leans.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length;
     var gl=g.picks.concat(g.leans).filter(function(b){return b.f.indexOf('OUTLIFT')<0}),gd=0,gw={pw:0,pl:0,lw:0,ll:0};
     gl.forEach(function(b){var x=resFor(b);if(!x)return;gd++;var k=(b.lean?'l':'p')+(x.result==='W'?'w':x.result==='L'?'l':'');if(gw[k]!==undefined)gw[k]++});
     var allDone=g.picks.concat(g.leans).every(function(b){return resFor(b)});
     var tpTxt=!gl.length&&allDone&&g.leans.length?'Final':gl.length&&gd===gl.length?'Final'+(np?' · picks '+gw.pw+'-'+gw.pl:'')+(gl.length>np?' · leans '+gw.lw+'-'+gw.ll:''):'tip '+esc(g.tip);
-    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp'+(tpTxt.charAt(0)==='F'?' fin':'')+'">'+tpTxt+'</span><span class="ct" style="flex-basis:100%">'+np+' pick'+(np===1?'':'s')+' · '+(nl-nol)+' lean'+(nl-nol===1?'':'s')+(nh+nmm+nl5+nfo+nwt+npn+nls?' <span class="mu">(incl. '+[[nh,'HR80'],[nmm,'MM90'],[nl5,'L5P'],[nfo,'FO'],[nwt,'WIN'],[npn,'PIN'],[nls,'LSR']].filter(function(x){return x[0]}).map(function(x){return x[0]+' '+x[1]}).join(', ')+')</span>':'')+
-      (nol?' <span class="mu">· '+nol+' killed OUTLIFT, record only</span>':'')+'</span></div>'+(function(x){return x?'<div class="gsd">'+x+'</div>':''})(seedLine(g.id,g.mx));
+    var head='<div class="gh2"><h2>'+esc(g.id)+'</h2><span class="tp'+(tpTxt.charAt(0)==='F'?' fin':'')+'">'+tpTxt+'</span><span class="ct" style="flex-basis:100%">'+(np?np+' pick'+(np===1?'':'s'):'No picks')+
+      (nol?' <span class="mu">· '+nol+' killed OUTLIFT, record only</span>':'')+'</span></div>'+(function(x){return x?'<div class="gsd">'+x+'</div>':''})(seedLine(g.id,g.mx))+gameAbs(g);
     /* Late return (Mitch 23 Nov): a player OUT at the run is back in. These bets were built with him out. */
     var rt=RETS[g.id]||[];
     if(rt.length) head+='<p class="lret" role="note"><b>Late return:</b> '+rt.map(function(o){return esc(o.player)+' ('+esc(o.team)+')'}).join(', ')+
@@ -1418,7 +1425,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var np2=0;rest.forEach(function(p,i,a){if(a.findIndex(function(q){return q.p===p.p})===i)np2++});
     var tbl=body?'<div class="pls">'+body+'</div>':(lb?'':'<div class="none">No pick or lean for this game.</div>');
     /* Leans collapsed under the picks (Mitch, 10 Nov): title "near-misses, tracked not bet". */
-    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+(function(){var k=rest.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length;return (rest.length-k)+(k?' + '+k+' killed':'')})()+' · '+np2+' player'+(np2===1?'':'s')+')</b> · tracked, not bet · best first</span></summary>'+
+    var lf=lb?'<details class="lf" data-g="'+esc(g.id)+'"'+(LOPEN[g.id]?' open':'')+'><summary><span><b>Leans ('+(function(){var k=rest.filter(function(p){return p.f.indexOf('OUTLIFT')>=0}).length;return (rest.length-k)+(k?' + '+k+' killed':'')})()+' · '+np2+' player'+(np2===1?'':'s')+')</b> · 0u, not bet</span></summary>'+
       '<div class="pls">'+(body?'':ringKey(rest))+lb+'</div></details>':'';
     var cur=MXV[g.id]==='mx'||MXV[g.id]==='info'?'mx':'bets';
     var views=[['bets',np?'Bets':'Leans'],['mx','Matchup']];
@@ -1503,7 +1510,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   function blRow(x){var b=x.b,t=tileFace(x.g,b),tm=tipIn(x.g),soon=tm>0&&tm<=SOON;
     return '<button class="blr" type="button" aria-label="'+t.aria+(soon?', tips soon':'')+', open in its game" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'">'+
-      '<span class="bln"><strong>'+esc(b.p)+'</strong>'+sbHtml([b])+'<span class="bg">'+esc(x.g.id)+'</span>'+(soon?'<span class="tsoon">tips soon</span>':'')+'</span>'+
+      '<span class="bln"><strong>'+esc(b.p)+'</strong>'+(stState([b])==='on'?'':sbHtml([b]))+'<span class="bg">'+esc(x.g.id)+'</span>'+(soon?'<span class="tsoon">tips soon</span>':'')+'</span>'+
       '<span class="blk">'+stPill(b.s)+l5Html(b)+'</span><span class="'+t.cls+'"'+t.sty+' aria-hidden="true">'+t.inner+'</span>'+formLine(b)+'</button>'}
   function bestJump(box){
     Array.prototype.forEach.call(box.querySelectorAll('[data-jump]'),function(el){el.onclick=function(){
@@ -1515,8 +1522,6 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function coreLeans(box,L){
     L=L.filter(fpass);var nf=fCount();
     function by(t){return L.filter(function(x){return x.b.tier===t}).sort(function(a,b){return a.b.o-b.b.o||b.h-a.h})}
-    function rec(list,sen){var w=0,l=0;list.forEach(function(x){var r=resFor(x.b);if(r){if(r.result==='W')w++;else if(r.result==='L')l++}});return w+l?(sen?' Tier '+cur+' tonight '+w+'-'+l+'.':' \u00b7 tonight '+w+'-'+l):''}
-    function h30(t){var x=tierHit(t);return x?'30-day hit '+x.hit.toFixed(0)+'% (n '+x.n+')':''}
     /* Mitch 24 Nov: tiers "exposed like a filter at the top", A by default, one tier at a time, shortest price first, no cap.
        The choice lives for this page load only, so a fresh load is always A. */
     /* Critique 25 Nov (Mitch "run them all"): top 5 then Show all; tier names on the buttons; a blunt line on a 0-pick night;
@@ -1528,12 +1533,11 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       gone=sp?list.filter(function(x){return hasTipped(x.g)}).sort(function(a,b){return (a.g.tip<b.g.tip?-1:a.g.tip>b.g.tip?1:0)||a.b.o-b.b.o}):[],
       shown=LALLV?live:live.slice(0,LCAP);
     var ng=sp?G.filter(function(g){return !hasTipped(g)}).sort(function(a,b){return tipIn(a)-tipIn(b)})[0]:null;
-    function sofar(l){var w=0,k=0;l.forEach(function(x){var r=resFor(x.b);if(r){if(r.result==='W')w++;else if(r.result==='L')k++}});return w+k?' \u00b7 '+w+'\u2013'+k+' so far':' \u00b7 in play'}
+    function sofar(l){var w=0,k=0;l.forEach(function(x){var r=resFor(x.b);if(r){if(r.result==='W')w++;else if(r.result==='L')k++}});return w+k?' \u00b7 '+w+'-'+k+' so far':' \u00b7 in play'}
     var seg='<div class="tseg" role="group" aria-label="Lean tier">'+['A','B','C'].map(function(t){var x=tierHit(t);
       return '<button type="button" class="tab" data-tier="'+t+'" aria-pressed="'+(cur===t)+'" aria-label="Tier '+t+', '+TN[t]+', '+left(T[t]).length+(sp?' leans still to tip':' leans')+(x?', '+x.hit.toFixed(0)+'% hit over 30 days':'')+'"><span class="tnm"><b>'+t+'</b> '+TN[t]+'</span><span class="tsh">'+left(T[t]).length+(sp?' left':'')+(x?' \u00b7 '+x.hit.toFixed(0)+'%':'')+'</span></button>'}).join('')+'</div>';
-    var h30t=h30(cur);
     var h=(np?'':'<p class="nob"><b>No bets tonight.</b> Nothing cleared every gate. The leans below are tracked at 0u, not staked.</p>')+
-      '<h2>Leans</h2><p class="bsub">'+TD[cur]+' Shortest price first. Tap one to see it in its game.'+(h30t?' '+h30t.charAt(0).toUpperCase()+h30t.slice(1)+'.':'')+esc(rec(list,1))+'</p>'+
+      '<h2>Leans</h2><p class="bsub">'+TD[cur]+'</p>'+
       (ng?'<p class="ntip">Next tip <b>'+esc(ng.tip)+' '+esc(ng.id)+'</b> \u00b7 '+G.filter(hasTipped).length+' of '+G.length+' games started</p>':'')+seg+frow()+
       (live.length?'<div class="pls">'+ringKey(list.map(function(x){return x.b}))+shown.map(blRow).join('')+'</div>'+
         (live.length>LCAP?'<button type="button" class="cmore" id="lAll" aria-expanded="'+LALLV+'">'+(LALLV?'Show top '+LCAP:'Show all '+live.length+' tier '+cur+' leans'+(sp?' still to tip':''))+'</button>':'')
@@ -1575,7 +1579,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     upWire();
     var gf=$('gamesFold'),gnp=G.reduce(function(a,g){return a+g.picks.length},0);
     if(gf){if(GOPEN===null&&(gnp||$('best').hidden))gf.open=true;
-      $('gfS').innerHTML='Games and picks'+(G.length?' ('+G.length+')':'')+' <span class="meta">'+(gnp?gnp+' pick'+(gnp===1?'':'s')+' \u00b7 ':'')+'cards, matchups, Took it / Pass</span>'}
+      $('gfS').innerHTML='Games'+(G.length?' ('+G.length+')':'')+(gnp?' <span class="meta">'+gnp+' pick'+(gnp===1?'':'s')+'</span>':'')}
     placeStatus();
     var sg=$('stGames');if(sg)sg.addEventListener('toggle',function(){STGOPEN=this.open});
     Array.prototype.forEach.call($('games').querySelectorAll('details.lf'),function(d){d.addEventListener('toggle',function(){LOPEN[d.getAttribute('data-g')]=d.open})});
@@ -1606,9 +1610,10 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var gen=data.generated?new Date(data.generated):null,genOk=gen&&!isNaN(gen.getTime());
     /* v3.32 (22 Nov): every item takes the best price across Pointsbet, Ladbrokes and Sportsbet, so data.book no longer names the one book */
     var ev=/v(\d+)\.(\d+)/.exec(D.engine||''),bk=ev&&(+ev[1]>3||(+ev[1]===3&&+ev[2]>=32))?'best of Pointsbet, Ladbrokes, Sportsbet':D.book;
-    var parts=[D.date,D.tz,bk].filter(Boolean);
-    if(genOk&&!D.cleared)parts.push('picks posted '+gen.toLocaleString([],{dateStyle:'medium',timeStyle:'short'}));
+    var parts=[D.date];
+    if(genOk&&!D.cleared)parts.push('picks posted '+gen.toLocaleTimeString([],{hour:'numeric',minute:'2-digit'}));
     $('sub').textContent=parts.join(' · ');
+    var bkl=$('bkl');if(bkl)bkl.textContent=[D.tz?'Times: '+D.tz:'',bk?'Prices: '+bk:''].filter(Boolean).join(' · ');
     runStatus();
     var gtxt=G.length+(todaySched()&&slateIso()===melNow().iso?'/'+Math.max(todaySched().length,G.length):'');
     /* 0-pick day (critique 20 Nov): one line instead of three tiles of zeros, so tonight's best leans sit higher. */
@@ -1647,7 +1652,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     [ROWS||[],L].forEach(function(a){var d=CORE.asOfDate(a);if(d&&(end===null||d>end))end=d});
     function win(a,days){var rg=end?CORE.windowRange(end,days):null;return rg?a.filter(function(r){return r.date>=rg.from&&r.date<=rg.to}):[]}
     function line(lab,a){return '<div class="w"><i>'+lab+'</i><span>'+(a.n?a.w+'-'+a.l+' · '+pct(a.hit)+' · <span class="'+(a.u>=0?'pos':'neg')+'">'+u(a.u)+'</span>':'no settled bets')+'</span></div>'}
-    function add(k,label,a3,a7){rows.push({k:k,t:label,h:line('Last 3 days',a3)+line('Last 7 days',a7)})}
+    /* Critique 27 Nov: one line when both windows hold the same bets (a tier under 3 days old), one muted line when neither has any. */
+    function add(k,label,a3,a7){rows.push({k:k,t:label,h:!a7.n?'<div class="w"><i>Last 7 days</i><span>no settled bets</span></div>':
+      a3.n===a7.n&&a3.w===a7.w?line('Last 3 and 7 days',a7):line('Last 3 days',a3)+line('Last 7 days',a7)})}
     function pk(a){var x=CORE.summarize(a);return {n:x.n,w:x.w,l:x.l,hit:x.hit,u:x.units}}
     /* Mitch 24 Nov: "an all scorecard, then have it broken down ... leans above the picks, because they just simply happen
        more often". All = picks plus every 0u item: hits only (no break-even, pp or ROI). Rolling 3 days = the last 3 slate
@@ -1656,7 +1663,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     if(allR.length){
       var ds=[];allR.forEach(function(r){if(ds.indexOf(r.date)<0)ds.push(r.date)});ds.sort().reverse();
       var d0=ds[0],d3=ds.slice(0,3);
-      function hx(a){var w=a.filter(function(r){return r.result==='W'}).length;return w+' of '+a.length+' \u00B7 '+(a.length?Math.round(100*w/a.length):0)+'%'}
+      function hx(a){var w=a.filter(function(r){return r.result==='W'}).length;return w+'-'+(a.length-w)+' \u00B7 '+(a.length?Math.round(100*w/a.length):0)+'%'}
       var t0=allR.filter(function(r){return r.date===d0}),t3=allR.filter(function(r){return d3.indexOf(r.date)>=0});
       rows.push({k:'',all:1,t:'All bets <span class="bsub">picks and leans</span>',h:'<div class="w ba"><i>'+esc(fdate(d0))+'</i><span>'+hx(t0)+'</span></div><div class="w ba"><i>Last 3 slate days</i><span>'+hx(t3)+'</span></div>'});
     }
@@ -1741,7 +1748,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     } else {
       var R=resTally();cls='info done';
       var lead=np?ng+' game'+(ng===1?'':'s')+' analysed, '+np+' pick'+(np===1?'':'s')+'.':'0 picks from '+ng+' game'+(ng===1?'':'s')+'; nothing cleared every gate, which can be a normal day.';
-      if(R.n&&R.done===R.n){msg='<b>Tonight\'s results are in.</b> '+lead+' '+(np?'Picks '+R.pw+'-'+R.pl+' · all leans ':'All leans ')+R.lw+'-'+R.ll+' (tracked at 0u).'}
+      if(R.n&&R.done===R.n){msg='<b>Tonight\'s results are in.</b> '+lead+(np?' Picks '+R.pw+'-'+R.pl+'.':'')}
       else if(R.done){cls='info live';msg='<b>Results coming in.</b> '+lead+' '+R.done+' of '+R.n+' settled so far.'}
       else msg='<b>Tonight\'s picks are set.</b> '+lead+' Results settle around '+hm(RUNS.resolve+3)+'.';
     }
@@ -2463,8 +2470,9 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function formLine(b){
     var F=formAll();if(!F)return '';var k=kindOf(b.f),x=F[k],hot=isHot(k);
     function part(w,n){return n?w+' of '+n+' ('+Math.round(100*w/n)+'%)':'none settled'}
-    return '<span class="bfm'+(hot?' hot':'')+'">'+(hot?'\ud83d\udd25 ':'')+'<b>'+esc(kindName(k))+'</b> \u00b7 7 days '+(x?part(x.w7,x.n7):'none settled')+
-      ' \u00b7 30 days '+(x?part(x.w30,x.n30):'none settled')+'</span>'}
+    /* Critique 27 Nov: one window when both hold the same rungs, so a new type doesn't print the same count twice. */
+    var body=!x||!x.n30?'none settled in 30 days':x.n7===x.n30&&x.w7===x.w30?'30 days '+part(x.w30,x.n30):'7 days '+part(x.w7,x.n7)+' \u00b7 30 days '+part(x.w30,x.n30);
+    return '<span class="bfm'+(hot?' hot':'')+'">'+(hot?'\ud83d\udd25 ':'')+'<b>'+esc(kindName(k))+'</b> \u00b7 '+body+'</span>'}
   function fpass(x){var k=kindOf(x.b.f);return (sel==='ALL'||x.g.id===sel)&&(!FL.s||x.b.s===FL.s)&&(!FL.k||k===FL.k)&&(!FL.hot||isHot(k))}
   function fCount(){return (sel!=='ALL'?1:0)+(FL.s?1:0)+(FL.k?1:0)+(FL.hot?1:0)}
   function frow(){
@@ -2475,6 +2483,37 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function fApply(){uiSave();if(D){tabs();games()}}
   function fClear(w){if(w==='g'||w==='all')sel='ALL';if(w==='s'||w==='all')FL.s='';if(w==='k'||w==='all')FL.k='';if(w==='hot'||w==='all')FL.hot=false;fApply();
     var o=$('fOpen');if(o&&w!=='all')o.focus()}
+  /* Critique 27 Nov (Mitch chose "one tier scorecard"): Record opens on one list of every 0u tier, its settled
+     count, hit against break-even, and the verdict line its own section already writes. A row opens that tier's
+     full breakdown under the card; one at a time. Display only: the verdicts stay where they are computed. */
+  var TCUR=null;
+  function tierRows(){return [['leansSec','Plain leans',typeof LEANS!=='undefined'?LEANS:null],['hrSec','HR80',typeof HRS!=='undefined'?HRS:null],
+    ['mmSec','MM90',typeof MMS!=='undefined'?MMS:null],['l5Sec','L5P',typeof L5S!=='undefined'?L5S:null],['foSec','FO',typeof FOS!=='undefined'?FOS:null],
+    ['wtSec','WIN',typeof WTS!=='undefined'?WTS:null],['pinSec','PIN',typeof PINS!=='undefined'?PINS:null],['lsSec','Late-scratch re-run',typeof LSS!=='undefined'?LSS:null],
+    ['olSec','OUTLIFT',typeof OLS!=='undefined'?OLS:null]]}
+  function showTier(id,tog){var on=tog&&TCUR===id?null:id;TCUR=on;
+    Array.prototype.forEach.call(document.querySelectorAll('#tierDet>[data-tsec]'),function(x){x.hidden=x.id!==on;var f=x.querySelector('details.fold');if(f&&x.id===on)f.open=true});
+    Array.prototype.forEach.call(document.querySelectorAll('#tierCard [data-tc]'),function(b){b.setAttribute('aria-expanded',String(b.getAttribute('data-tc')===on))})}
+  function renderCard(){
+    var box=$('tierCard');if(!box)return;
+    var rs=tierRows().filter(function(r){return r[2]&&$(r[0])&&$(r[0]).innerHTML});
+    if(!rs.length){box.innerHTML=LEANFAIL?'':'<h3 class="rgh">Tiers on test</h3><p class="load">Loading…</p>';return}
+    box.innerHTML='<h3 class="rgh">Tiers on test</h3><p class="cap tcap">All tracked at 0u. Tap a tier for its full breakdown.</p><div class="tcl">'+rs.map(function(r){
+      var s=leanSum(r[2]),cp=$(r[0]).querySelector('.cap'),cb=cp&&cp.querySelector('b'),v=cb?cb.textContent.replace(/\s+$/,''):'';
+      /* first sentence only; KILLED keeps just its date; FO and WIN are tested in the Windows scorecard */
+      v=/^KILLED/.test(v)?v.split(':')[0]:v.split(/\.\s/)[0].replace(/\.$/,'');
+      if(v&&v.indexOf(':')<0&&cp&&/Windows scorecard/.test(cp.textContent))v+=' · its test is in the Windows scorecard';
+      var
+        vc=/^(CONFIRM)/.test(v)?' pos':/^(KILL|REJECT)/i.test(v)?' neg':'';
+      return '<button type="button" class="tcr" data-tc="'+r[0]+'" aria-controls="'+r[0]+'" aria-expanded="'+(TCUR===r[0])+'">'+
+        '<span class="tcn">'+esc(r[1])+'</span>'+
+        '<span class="tcv">'+(s.n?'<b>'+s.hit.toFixed(0)+'%</b> hit \u00b7 needs '+s.impl.toFixed(0)+'% \u00b7 <span class="'+(s.gap>=0?'pos':'neg')+'">'+sg(s.gap,1)+' pts</span>':'no settled bets')+'</span>'+
+        '<span class="tcs'+vc+'">'+(v?esc(v):s.n+' settled')+'</span><span class="go" aria-hidden="true"></span></button>'}).join('')+'</div>';
+    Array.prototype.forEach.call(box.querySelectorAll('[data-tc]'),function(b){b.onclick=function(){var id=b.getAttribute('data-tc');showTier(id,true);
+      if(TCUR===id){var t=$(id);if(t)t.scrollIntoView({block:'start',behavior:'smooth'})}}});
+  }
+  (function(){var td=document.getElementById('tierDet'),tm=null;if(!td||!window.MutationObserver)return;
+    new MutationObserver(function(){clearTimeout(tm);tm=setTimeout(renderCard,60)}).observe(td,{childList:true,subtree:true})})();
   function curTab(){var w=document.querySelector('.wrap');return (w&&w.getAttribute('data-tab'))||'tonight'}
   function setTab(t,user){
     if(TABS.indexOf(t)<0)t='tonight';var w=document.querySelector('.wrap');if(!w)return;var ch=w.getAttribute('data-tab')!==t;
@@ -2488,6 +2527,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
      the legend button, deep links), so no old jump has to know about tabs. */
   (function(){var siv=Element.prototype.scrollIntoView;Element.prototype.scrollIntoView=function(){
     var p=this.closest&&this.closest('.pane');if(p&&p.getAttribute('data-pane')!==curTab())setTab(p.getAttribute('data-pane'),false);
+    var ts=this.closest&&this.closest('[data-tsec]');if(ts&&ts.hidden)showTier(ts.id,false);
     for(var d=this.parentElement;d;d=d.parentElement)if(d.tagName==='DETAILS'&&!d.open)d.open=true;
     return siv.apply(this,arguments)}})();
   function hashGo(){var h=location.hash.slice(1);if(!h)return;var el=document.getElementById(h);if(!el)return;
