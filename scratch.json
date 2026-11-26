@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T01:45:04Z",
+ "generated": "2026-11-26T02:30:03Z",
  "out": [
   {
    "kind": "out",
@@ -24,6 +24,18 @@
    "status": "Out",
    "utc": "2026-11-26T01:45:04Z",
    "mins_to_tip": 74
+  },
+  {
+   "kind": "out",
+   "date": "2026-11-25",
+   "game": "SAS@POR",
+   "id": "4066259",
+   "player": "De'Aaron Fox",
+   "espn_name": "De'Aaron Fox",
+   "team": "SAS",
+   "status": "Out",
+   "utc": "2026-11-26T02:30:03Z",
+   "mins_to_tip": 29
   }
  ]
 }
