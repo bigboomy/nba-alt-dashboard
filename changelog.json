@@ -5,6 +5,14 @@
       "date": "2026-11-27",
       "version": "dashboard",
       "component": "dashboard",
+      "title": "Tonight hover menu",
+      "change": "A round button appears at the bottom right of Tonight once the tier buttons scroll out of view, or after a lean jumps into its game. It opens a small menu: tier A/B/C with how many leans are left in each, Filter (with the active-filter count), What the codes mean (the legend opens over the page instead of switching to Record), and Back to top with the next tip time. It shows 'Back to best leans' after a jump and returns to the lean you came from. It replaces the old floating Back to best leans button. Escape or a tap outside closes it, and focus returns to the button. Tonight only.",
+      "why": "Mitch 27 Nov asked what belongs on a hover menu and chose these four items. Halfway down a long list, the tier buttons, Filter and the legend were a scroll or a tab switch away. Display only."
+    },
+    {
+      "date": "2026-11-27",
+      "version": "dashboard",
+      "component": "dashboard",
       "title": "Polish, clarify and layout passes",
       "change": "Polish: the stylesheet's 34 font sizes snap to one scale (11, 12, 13, 14, 15, 17px plus display sizes), text selection, focus rings, scrollbars and table numerals use the page's colours, pointer hover states on rows and buttons, and the theme toggle uses drawn sun and moon icons. Clarify: the scoreboard stops calling leans bets ('All picks and leans', 'Flat 1u each', 'none settled'), '(0u)' moves from every tier row to the 'Leans by tier, all 0u' heading, the Record scorecard gap is in pp like the tables, and the no-bets line and the Only hot explanation are shorter. Layout: on desktop, jumps (scorecard rows, scoreboard rows, Back to best leans, deep links) land below the sticky tab bar; lean tiles sit next to their player instead of 440px away; scoreboard values sit beside their labels; header, tabs, content and footer share one column (Record wider). Filter moves onto the Leans heading row, so the first lean sits about 30px higher on a phone. Record groups are tight inside and spaced between, the game card's absences line aligns with the matchup line, empty stat strips no longer leave a gap on Results, and an empty Ahead tab shows its message as a card.",
       "why": "Mitch 27 Nov asked for the polish, clarify and layout passes to be run properly after the noise clean-up. Display only: it changes no tier, stake, sort or verdict."
