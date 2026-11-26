@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T00:40:03Z",
+ "generated": "2026-11-26T01:05:03Z",
  "date": "2026-11-25",
  "teams": {
   "MIA": {
@@ -135,7 +135,7 @@
    "at": "2026-11-26T00:35:03Z"
   },
   "HOU": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Amen Thompson",
     "Kevin Durant",
@@ -143,10 +143,10 @@
     "Jabari Smith Jr.",
     "Alperen Sengun"
    ],
-   "at": "2026-11-26T00:00:03Z"
+   "at": "2026-11-26T01:05:03Z"
   },
   "PHX": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Jalen Green",
     "Dillon Brooks",
@@ -154,7 +154,7 @@
     "Miles Bridges",
     "Oso Ighodaro"
    ],
-   "at": "2026-11-26T00:00:03Z"
+   "at": "2026-11-26T01:05:03Z"
   }
  },
  "items": {
@@ -198,6 +198,15 @@
   "Jaden McDaniels|MIN": 1,
   "Isaiah Hartenstein|OKC": 1,
   "Jared McCain|OKC": 0,
-  "Ajay Mitchell|OKC": 1
+  "Ajay Mitchell|OKC": 1,
+  "Marcus Smart|HOU": 0,
+  "Kevin Durant|HOU": 1,
+  "Alperen Sengun|HOU": 1,
+  "Devin Booker|PHX": 1,
+  "Miles Bridges|PHX": 1,
+  "Collin Gillespie|PHX": 0,
+  "Jalen Green|PHX": 1,
+  "Oso Ighodaro|PHX": 1,
+  "Khaman Maluach|PHX": 0
  }
 }
