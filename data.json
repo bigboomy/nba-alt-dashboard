@@ -9106,9 +9106,1955 @@
         "PHX": []
       },
       "tip": "12:30"
+    },
+    {
+      "abs": {
+        "GSW": [],
+        "SAC": [
+          {
+            "min": 33.4,
+            "name": "Zach LaVine",
+            "roles": [
+              "SC2"
+            ]
+          }
+        ]
+      },
+      "b2b": [],
+      "box5": {
+        "Darius Acuff Jr.": {
+          "gp": 17,
+          "l5": {
+            "ast": 7.2,
+            "blk": 0.4,
+            "fg3": 2.6,
+            "fg3a": 8.6,
+            "fg_pct": 38.3,
+            "fga": 21.4,
+            "fgm": 8.2,
+            "fta": 4.6,
+            "ftm": 3.6,
+            "min": 35.4,
+            "pts": 22.6,
+            "reb": 2.4,
+            "stl": 0.2,
+            "to": 3.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 7.2,
+            "blk": 0.2,
+            "fg3": 2.9,
+            "fg3a": 9.2,
+            "fg_pct": 40.3,
+            "fga": 22.2,
+            "fgm": 8.9,
+            "fta": 4.5,
+            "ftm": 3.8,
+            "min": 36.6,
+            "pts": 24.6,
+            "reb": 3.4,
+            "stl": 0.8,
+            "to": 3.7
+          },
+          "tg": 5
+        },
+        "Domantas Sabonis": {
+          "gp": 16,
+          "l5": {
+            "ast": 4.8,
+            "blk": 0.2,
+            "fg3": 0.2,
+            "fg3a": 1.0,
+            "fg_pct": 62.2,
+            "fga": 9.0,
+            "fgm": 5.6,
+            "fta": 4.0,
+            "ftm": 3.2,
+            "min": 30.6,
+            "pts": 14.6,
+            "reb": 14.2,
+            "stl": 0.2,
+            "to": 3.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 5.5,
+            "blk": 0.1,
+            "fg3": 0.2,
+            "fg3a": 0.8,
+            "fg_pct": 63.9,
+            "fga": 9.0,
+            "fgm": 5.8,
+            "fta": 3.7,
+            "ftm": 2.8,
+            "min": 33.2,
+            "pts": 14.5,
+            "reb": 13.5,
+            "stl": 0.6,
+            "to": 3.1
+          },
+          "tg": 5
+        },
+        "Draymond Green": {
+          "gp": 14,
+          "l5": {
+            "ast": 3.2,
+            "blk": 0.8,
+            "fg3": 1.0,
+            "fg3a": 2.5,
+            "fg_pct": 43.8,
+            "fga": 4.0,
+            "fgm": 1.8,
+            "fta": 0.0,
+            "ftm": 0.0,
+            "min": 22.8,
+            "pts": 4.5,
+            "reb": 4.5,
+            "stl": 0.8,
+            "to": 1.5
+          },
+          "n": 4,
+          "season": {
+            "ast": 6.3,
+            "blk": 0.9,
+            "fg3": 0.5,
+            "fg3a": 1.5,
+            "fg_pct": 41.7,
+            "fga": 3.4,
+            "fgm": 1.4,
+            "fta": 0.4,
+            "ftm": 0.2,
+            "min": 25.7,
+            "pts": 3.6,
+            "reb": 4.8,
+            "stl": 0.9,
+            "to": 2.5
+          },
+          "tg": 5
+        },
+        "Keegan Murray": {
+          "gp": 10,
+          "l5": {
+            "ast": 1.6,
+            "blk": 0.4,
+            "fg3": 1.2,
+            "fg3a": 4.6,
+            "fg_pct": 47.3,
+            "fga": 11.0,
+            "fgm": 5.2,
+            "fta": 0.8,
+            "ftm": 0.4,
+            "min": 34.2,
+            "pts": 12.0,
+            "reb": 5.8,
+            "stl": 0.6,
+            "to": 1.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.6,
+            "blk": 0.7,
+            "fg3": 1.0,
+            "fg3a": 4.2,
+            "fg_pct": 42.9,
+            "fga": 10.5,
+            "fgm": 4.5,
+            "fta": 1.4,
+            "ftm": 1.1,
+            "min": 31.2,
+            "pts": 11.1,
+            "reb": 4.5,
+            "stl": 0.9,
+            "to": 1.2
+          },
+          "tg": 5
+        },
+        "Yaxel Lendeborg": {
+          "gp": 17,
+          "l5": {
+            "ast": 3.6,
+            "blk": 1.0,
+            "fg3": 0.8,
+            "fg3a": 4.4,
+            "fg_pct": 30.8,
+            "fga": 15.6,
+            "fgm": 4.8,
+            "fta": 3.6,
+            "ftm": 3.0,
+            "min": 30.8,
+            "pts": 13.4,
+            "reb": 7.2,
+            "stl": 0.8,
+            "to": 2.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 3.6,
+            "blk": 0.8,
+            "fg3": 1.9,
+            "fg3a": 5.3,
+            "fg_pct": 45.2,
+            "fga": 14.6,
+            "fgm": 6.6,
+            "fta": 5.4,
+            "ftm": 4.1,
+            "min": 31.7,
+            "pts": 19.2,
+            "reb": 7.4,
+            "stl": 1.0,
+            "to": 3.1
+          },
+          "tg": 5
+        }
+      },
+      "cov": {
+        "players": [
+          12,
+          12
+        ],
+        "skipped": [],
+        "stats": [
+          31,
+          31
+        ]
+      },
+      "ctx": "Out TOP3: Zach LaVine (SAC), Stephen Curry (GSW); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 12 of 12 players (31 of 31 player-stats); skipped: none",
+      "cx": {
+        "Darius Acuff Jr.|AST|5.5|FO": {
+          "best_book": "pointsbet",
+          "best_price": 1.33,
+          "mm_min": 40.83,
+          "mm_mu": 9.503,
+          "n_books": 10,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8916,
+          "p_pin": 0.7207,
+          "p_wowy": 0.7392,
+          "pin_edge_pp": -3.1,
+          "pin_line": 6.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 0.988,
+          "wowy_keys": "Zach LaVine",
+          "wowy_mu": 7.542
+        },
+        "Domantas Sabonis|AST|3.5|FO": {
+          "best_book": "dabble",
+          "best_price": 1.3,
+          "mm_min": 34.95,
+          "mm_mu": 5.738,
+          "n_books": 10,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7292,
+          "p_pin": 0.7183,
+          "p_wowy": 0.5534,
+          "pin_edge_pp": -5.7,
+          "pin_line": 5.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 0.938,
+          "wowy_keys": "Zach LaVine",
+          "wowy_mu": 4.323
+        },
+        "Domantas Sabonis|REB|11.5|L5P": {
+          "best_book": "unibet",
+          "best_price": 1.54,
+          "mm_min": 34.95,
+          "mm_mu": 13.986,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6734,
+          "p_pin": 0.6207,
+          "p_wowy": 0.5183,
+          "pin_edge_pp": -3.3,
+          "pin_line": 12.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.01,
+          "wowy_keys": "Zach LaVine",
+          "wowy_mu": 12.105
+        },
+        "Domantas Sabonis|REB|9.5|FO": {
+          "best_book": "bet365",
+          "best_price": 1.23,
+          "mm_min": 34.95,
+          "mm_mu": 13.986,
+          "n_books": 13,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8203,
+          "p_pin": 0.7849,
+          "p_wowy": 0.6971,
+          "pin_edge_pp": -3.5,
+          "pin_line": 12.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.01,
+          "wowy_keys": "Zach LaVine",
+          "wowy_mu": 12.105
+        },
+        "Draymond Green|AST|3.5|WIN": {
+          "best_book": "palmerbet",
+          "best_price": 1.34,
+          "mm_min": 23.99,
+          "mm_mu": 5.805,
+          "n_books": 10,
+          "opp_lift": 0.0,
+          "opp_out": "SC2:Zach LaVine",
+          "p_mm": 0.7823,
+          "p_pin": 0.6821,
+          "p_wowy": 0.7823,
+          "pin_edge_pp": -8.1,
+          "pin_line": 4.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 5.805
+        },
+        "Keegan Murray|REB|3.5|FO": {
+          "best_book": "tab",
+          "best_price": 1.3,
+          "mm_min": 37.55,
+          "mm_mu": 5.383,
+          "n_books": 10,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6921,
+          "p_pin": 0.7148,
+          "p_wowy": 0.5183,
+          "pin_edge_pp": -6.6,
+          "pin_line": 5.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 0.884,
+          "wowy_keys": "Zach LaVine",
+          "wowy_mu": 4.078
+        },
+        "Yaxel Lendeborg|REB|6.5|lean": {
+          "best_book": "sportsbet",
+          "best_price": 1.72,
+          "mm_min": 30.09,
+          "mm_mu": 7.199,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "SC2:Zach LaVine",
+          "p_mm": 0.5795,
+          "p_pin": 0.5509,
+          "p_wowy": 0.5795,
+          "pin_edge_pp": -3.1,
+          "pin_line": 7.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 7.199
+        }
+      },
+      "engine": "nba-session v3.42-p4",
+      "id": "SAC@GSW",
+      "leans": [
+        {
+          "alt": 6.5,
+          "e": 3.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[Std?]",
+            "[ROLE?]",
+            "REB-ANC",
+            "OT-ADJ",
+            "C0.88",
+            "Z0.55",
+            "TMO",
+            "PIN-3.1",
+            "OPP-OUT:SC2",
+            "BK-sportsbet",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            8,
+            8,
+            5,
+            8,
+            7
+          ],
+          "o": 1.72,
+          "opp": "SAC 14th most REB allowed · pace -0.8",
+          "p": "Yaxel Lendeborg",
+          "pmx": 0.5591,
+          "s": "REB",
+          "st": "3",
+          "std": 6.5,
+          "t": "GSW",
+          "tier": "C"
+        },
+        {
+          "alt": 11.5,
+          "e": 1.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "L5P",
+            "L5LOW12",
+            "[ROLE?]",
+            "DOG7",
+            "C0.93",
+            "Z0.18",
+            "TMO",
+            "PIN-3.3",
+            "RET2:Achiuwa",
+            "FO:LaVine",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            12,
+            17,
+            16,
+            13,
+            13
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Precious Achiuwa"
+              ]
+            },
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Precious Achiuwa"
+              ]
+            }
+          ],
+          "o": 1.53,
+          "opp": "GSW 13th fewest REB allowed · pace -0.8",
+          "p": "Domantas Sabonis",
+          "pmx": 0.6467,
+          "s": "REB",
+          "st": "4",
+          "std": 12.5,
+          "t": "SAC",
+          "tier": "C"
+        },
+        {
+          "alt": 9.5,
+          "e": -3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "FO",
+            "[ROLE?]",
+            "DOG7",
+            "C0.77",
+            "Z0.61",
+            "TMO",
+            "PIN-3.5",
+            "RET2:Achiuwa",
+            "FO:LaVine",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            12,
+            17,
+            16,
+            13,
+            13
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Precious Achiuwa"
+              ]
+            },
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Precious Achiuwa"
+              ]
+            }
+          ],
+          "o": 1.22,
+          "opp": "GSW 13th fewest REB allowed · pace -0.8",
+          "p": "Domantas Sabonis",
+          "pmx": 0.7905,
+          "s": "REB",
+          "st": "4",
+          "std": 12.5,
+          "t": "SAC",
+          "tier": "A"
+        },
+        {
+          "alt": 5.5,
+          "e": 1.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "FO",
+            "[Std?]",
+            "[ROLE?]",
+            "DOG7",
+            "RET-ADJ",
+            "C0.69",
+            "Z0.94",
+            "TMO",
+            "PIN-3.1",
+            "FO:LaVine",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            4,
+            8,
+            12,
+            6,
+            6
+          ],
+          "o": 1.33,
+          "opp": "GSW 4th most AST allowed · pace -0.8",
+          "p": "Darius Acuff Jr.",
+          "pmx": 0.867,
+          "s": "AST",
+          "st": "4",
+          "std": 7.5,
+          "t": "SAC",
+          "tier": "A"
+        },
+        {
+          "alt": 3.5,
+          "e": -10.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "[Std?]",
+            "[ROLE?]",
+            "OT-ADJ",
+            "C0.59",
+            "Z0.69",
+            "TMO",
+            "PIN-8.1",
+            "OPP-OUT:SC2",
+            "TIER-A"
+          ],
+          "gs": 4,
+          "h": "60% (6/10)",
+          "l5": [
+            3,
+            null,
+            2,
+            5,
+            3
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-22",
+              "out": [
+                "Stephen Curry"
+              ]
+            },
+            {
+              "d": "2026-11-19",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Stephen Curry"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "Stephen Curry"
+              ]
+            },
+            {
+              "d": "2026-11-13",
+              "out": [
+                "Stephen Curry"
+              ]
+            }
+          ],
+          "o": 1.31,
+          "opp": "SAC 14th most AST allowed · pace -0.8",
+          "p": "Draymond Green",
+          "pmx": 0.7353,
+          "s": "AST",
+          "st": "4",
+          "std": 4.5,
+          "t": "GSW",
+          "tier": "A"
+        },
+        {
+          "alt": 3.5,
+          "e": -3.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "FO",
+            "[Std?]",
+            "[ROLE?]",
+            "DOG7",
+            "C0.74",
+            "Z0.49",
+            "TMO",
+            "PIN-5.7",
+            "FO:LaVine",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            8,
+            4,
+            1,
+            8,
+            3
+          ],
+          "o": 1.29,
+          "opp": "GSW 4th most AST allowed · pace -0.8",
+          "p": "Domantas Sabonis",
+          "pmx": 0.7141,
+          "s": "AST",
+          "st": "4",
+          "std": 4.5,
+          "t": "SAC",
+          "tier": "A"
+        },
+        {
+          "alt": 3.5,
+          "e": -12.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "FO",
+            "[Std?]",
+            "[ROLE?]",
+            "DOG7",
+            "MT+",
+            "C0.78",
+            "Z0.27",
+            "TMO",
+            "PIN-6.6",
+            "RET1:Mogbo",
+            "RET2:Achiuwa",
+            "FO:LaVine",
+            "AVOID",
+            "BK-sportsbet",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "50% (5/10)",
+          "l5": [
+            2,
+            12,
+            7,
+            7,
+            1
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Precious Achiuwa"
+              ]
+            },
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Precious Achiuwa"
+              ]
+            }
+          ],
+          "o": 1.28,
+          "opp": "GSW 13th fewest REB allowed · pace -0.8",
+          "p": "Keegan Murray",
+          "pmx": 0.6778,
+          "s": "REB",
+          "st": "4",
+          "std": 5.5,
+          "t": "SAC",
+          "tier": "C"
+        }
+      ],
+      "mkt": 214.5,
+      "mkt_o": 1.8,
+      "mkt_u": 1.87,
+      "mx": {
+        "exp_pace": 101.2,
+        "home_spread": -8.5,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.9,
+          "PTS": 111.2,
+          "REB": 42.9,
+          "pace": 102.0
+        },
+        "seed": {
+          "GSW": {
+            "conf": "W",
+            "rec": "9-8",
+            "seed": 11
+          },
+          "SAC": {
+            "conf": "W",
+            "rec": "2-15",
+            "seed": 15
+          }
+        },
+        "teams": {
+          "GSW": {
+            "allow100": {
+              "3PM": 13.2,
+              "AST": 26.8,
+              "PTS": 110.9,
+              "REB": 42.9
+            },
+            "allow_rk": {
+              "3PM": 15,
+              "AST": 4,
+              "PTS": 18,
+              "REB": 18
+            },
+            "out": [],
+            "pace": 101.3,
+            "rk": {
+              "ast": 12,
+              "blk": 6,
+              "dreb": 24,
+              "fg3_pct": 13,
+              "fg3a": 7,
+              "fg3m": 6,
+              "fg_pct": 26,
+              "ft_pct": 5,
+              "fta": 14,
+              "net": 19,
+              "opp_fg3_pct": 12,
+              "opp_fg_pct": 13,
+              "oppg": 13,
+              "oreb": 5,
+              "pace": 23,
+              "pf": 14,
+              "ppg": 21,
+              "reb": 14,
+              "stl": 10,
+              "tov": 25,
+              "ts_pct": 15
+            },
+            "v": {
+              "ast": 27.1,
+              "ats": "9-8-0",
+              "ats_away": "3-6-0",
+              "ats_home": "6-2-0",
+              "ats_l10": "4-6-0",
+              "away": "2-7",
+              "blk": 5.4,
+              "dreb": 30.8,
+              "fg3_pct": 36.1,
+              "fg3a": 41.1,
+              "fg3m": 14.8,
+              "fg_pct": 44.4,
+              "ft_pct": 80.7,
+              "fta": 24.4,
+              "gp": 17,
+              "home": "7-1",
+              "l10": "5-5",
+              "net": -0.8,
+              "opp_fg3_pct": 34.9,
+              "opp_fg_pct": 46.0,
+              "oppg": 112.1,
+              "oreb": 13.3,
+              "ou": "7-10-0",
+              "ou_l10": "3-7-0",
+              "pace": 100.9,
+              "pf": 21.6,
+              "ppg": 111.2,
+              "reb": 44.1,
+              "rec": "9-8",
+              "stl": 8.5,
+              "tov": 16.8,
+              "ts_pct": 57.3
+            }
+          },
+          "SAC": {
+            "allow100": {
+              "3PM": 13.4,
+              "AST": 26.2,
+              "PTS": 114.6,
+              "REB": 43.0
+            },
+            "allow_rk": {
+              "3PM": 12,
+              "AST": 14,
+              "PTS": 2,
+              "REB": 14
+            },
+            "out": [
+              {
+                "min": 33.4,
+                "name": "Zach LaVine",
+                "roles": [
+                  "SC2"
+                ]
+              }
+            ],
+            "pace": 101.9,
+            "rk": {
+              "ast": 21,
+              "blk": 30,
+              "dreb": 25,
+              "fg3_pct": 23,
+              "fg3a": 21,
+              "fg3m": 23,
+              "fg_pct": 20,
+              "ft_pct": 22,
+              "fta": 26,
+              "net": 30,
+              "opp_fg3_pct": 15,
+              "opp_fg_pct": 27,
+              "oppg": 25,
+              "oreb": 26,
+              "pace": 17,
+              "pf": 22,
+              "ppg": 29,
+              "reb": 26,
+              "stl": 22,
+              "tov": 26,
+              "ts_pct": 25
+            },
+            "v": {
+              "ast": 25.4,
+              "ats": "6-11-0",
+              "ats_away": "2-4-0",
+              "ats_home": "4-7-0",
+              "ats_l10": "4-6-0",
+              "away": "1-5",
+              "blk": 3.5,
+              "dreb": 30.5,
+              "fg3_pct": 33.8,
+              "fg3a": 35.7,
+              "fg3m": 12.1,
+              "fg_pct": 45.5,
+              "ft_pct": 76.4,
+              "fta": 21.5,
+              "gp": 17,
+              "home": "1-10",
+              "l10": "1-9",
+              "net": -12.5,
+              "opp_fg3_pct": 35.5,
+              "opp_fg_pct": 48.4,
+              "oppg": 119.4,
+              "oreb": 10.5,
+              "ou": "9-8-0",
+              "ou_l10": "4-6-0",
+              "pace": 101.8,
+              "pf": 22.5,
+              "ppg": 106.8,
+              "reb": 41.0,
+              "rec": "2-15",
+              "stl": 7.3,
+              "tov": 17.1,
+              "ts_pct": 55.9
+            }
+          }
+        },
+        "win": {
+          "away": 24.8,
+          "home": 75.2,
+          "src": "market"
+        }
+      },
+      "out": {
+        "GSW": [
+          "Jimmy Butler III (Butler (knee) could return sometime between January and February as he continues recovering from a torn right ACL, Anthony Slater of ESPN reports.)",
+          "Kristaps Porzingis (Porzingis announced on his social media that he's stepping away from basketball.)",
+          "Moses Moody (Moody (knee) is progressing toward a potential return between December and January after rupturing his left patellar tendon in March, Anthony Slater of ESPN reports.)",
+          "Stephen Curry (Curry has been diagnosed with an oblique abdominal tear and will be re-evaluated in two weeks, Shams Charania of ESPN reports.)"
+        ],
+        "SAC": [
+          "Ben Simmons (Simmons underwent successful surgery Tuesday to repair a torn right Achilles tendon, James Ham of ESPN 1320 Sacramento reports.)",
+          "Maxime Raynaud (Raynaud (knee) was recalled from the G League's Stockton Kings on Wednesday, Marc J. Spears of ESPN.com reports.)",
+          "Zach LaVine (LaVine (knee) is listed as out for Wednesday's game versus the Warriors.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "GSW": [],
+        "SAC": []
+      },
+      "tip": "14:00"
+    },
+    {
+      "abs": {
+        "POR": [],
+        "SAS": []
+      },
+      "b2b": [],
+      "box5": {
+        "Damian Lillard": {
+          "gp": 17,
+          "l5": {
+            "ast": 3.4,
+            "blk": 0.4,
+            "fg3": 2.8,
+            "fg3a": 9.2,
+            "fg_pct": 34.9,
+            "fga": 16.6,
+            "fgm": 5.8,
+            "fta": 6.0,
+            "ftm": 5.6,
+            "min": 30.4,
+            "pts": 20.0,
+            "reb": 3.4,
+            "stl": 0.4,
+            "to": 1.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 4.1,
+            "blk": 0.2,
+            "fg3": 3.0,
+            "fg3a": 8.9,
+            "fg_pct": 39.4,
+            "fga": 14.8,
+            "fgm": 5.8,
+            "fta": 6.4,
+            "ftm": 5.8,
+            "min": 29.8,
+            "pts": 20.4,
+            "reb": 3.2,
+            "stl": 0.6,
+            "to": 2.1
+          },
+          "tg": 5
+        },
+        "Deni Avdija": {
+          "gp": 15,
+          "l5": {
+            "ast": 5.3,
+            "blk": 1.0,
+            "fg3": 3.3,
+            "fg3a": 5.0,
+            "fg_pct": 58.8,
+            "fga": 17.0,
+            "fgm": 10.0,
+            "fta": 5.3,
+            "ftm": 2.7,
+            "min": 32.0,
+            "pts": 26.0,
+            "reb": 6.7,
+            "stl": 0.7,
+            "to": 4.0
+          },
+          "n": 3,
+          "season": {
+            "ast": 6.1,
+            "blk": 0.5,
+            "fg3": 2.3,
+            "fg3a": 5.5,
+            "fg_pct": 51.9,
+            "fga": 15.8,
+            "fgm": 8.2,
+            "fta": 8.2,
+            "ftm": 5.7,
+            "min": 32.6,
+            "pts": 24.3,
+            "reb": 6.2,
+            "stl": 1.0,
+            "to": 3.3
+          },
+          "tg": 5
+        },
+        "Devin Vassell": {
+          "gp": 16,
+          "l5": {
+            "ast": 2.6,
+            "blk": 0.6,
+            "fg3": 1.8,
+            "fg3a": 5.6,
+            "fg_pct": 38.2,
+            "fga": 11.0,
+            "fgm": 4.2,
+            "fta": 2.0,
+            "ftm": 1.6,
+            "min": 32.0,
+            "pts": 11.8,
+            "reb": 5.0,
+            "stl": 1.6,
+            "to": 0.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.9,
+            "blk": 0.4,
+            "fg3": 1.6,
+            "fg3a": 4.8,
+            "fg_pct": 40.1,
+            "fga": 9.8,
+            "fgm": 3.9,
+            "fta": 2.4,
+            "ftm": 2.1,
+            "min": 30.3,
+            "pts": 11.6,
+            "reb": 4.1,
+            "stl": 1.6,
+            "to": 0.8
+          },
+          "tg": 5
+        },
+        "Donovan Clingan": {
+          "gp": 17,
+          "l5": {
+            "ast": 3.4,
+            "blk": 2.0,
+            "fg3": 0.8,
+            "fg3a": 2.2,
+            "fg_pct": 67.4,
+            "fga": 8.6,
+            "fgm": 5.8,
+            "fta": 2.0,
+            "ftm": 0.8,
+            "min": 28.0,
+            "pts": 13.2,
+            "reb": 13.2,
+            "stl": 0.8,
+            "to": 1.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.1,
+            "blk": 2.1,
+            "fg3": 1.0,
+            "fg3a": 2.4,
+            "fg_pct": 59.4,
+            "fga": 8.1,
+            "fgm": 4.8,
+            "fta": 1.8,
+            "ftm": 1.0,
+            "min": 26.2,
+            "pts": 11.6,
+            "reb": 11.3,
+            "stl": 0.6,
+            "to": 1.4
+          },
+          "tg": 5
+        },
+        "Jrue Holiday": {
+          "gp": 17,
+          "l5": {
+            "ast": 5.6,
+            "blk": 0.2,
+            "fg3": 2.8,
+            "fg3a": 5.8,
+            "fg_pct": 46.3,
+            "fga": 13.4,
+            "fgm": 6.2,
+            "fta": 2.6,
+            "ftm": 2.0,
+            "min": 29.2,
+            "pts": 17.2,
+            "reb": 4.4,
+            "stl": 2.0,
+            "to": 2.2
+          },
+          "n": 5,
+          "season": {
+            "ast": 4.5,
+            "blk": 0.2,
+            "fg3": 2.5,
+            "fg3a": 5.6,
+            "fg_pct": 47.6,
+            "fga": 10.0,
+            "fgm": 4.8,
+            "fta": 2.4,
+            "ftm": 2.1,
+            "min": 27.1,
+            "pts": 14.1,
+            "reb": 3.7,
+            "stl": 1.3,
+            "to": 1.9
+          },
+          "tg": 5
+        },
+        "Toumani Camara": {
+          "gp": 17,
+          "l5": {
+            "ast": 1.6,
+            "blk": 1.0,
+            "fg3": 1.6,
+            "fg3a": 7.2,
+            "fg_pct": 27.3,
+            "fga": 11.0,
+            "fgm": 3.0,
+            "fta": 0.8,
+            "ftm": 0.8,
+            "min": 32.0,
+            "pts": 8.4,
+            "reb": 4.8,
+            "stl": 0.8,
+            "to": 1.6
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.5,
+            "blk": 0.6,
+            "fg3": 2.5,
+            "fg3a": 6.7,
+            "fg_pct": 43.2,
+            "fga": 9.5,
+            "fgm": 4.1,
+            "fta": 1.3,
+            "ftm": 1.1,
+            "min": 29.9,
+            "pts": 11.8,
+            "reb": 3.8,
+            "stl": 0.8,
+            "to": 1.3
+          },
+          "tg": 5
+        }
+      },
+      "cov": {
+        "players": [
+          13,
+          13
+        ],
+        "skipped": [],
+        "stats": [
+          33,
+          33
+        ]
+      },
+      "ctx": "Out TOP3: Dylan Harper (SAS), Ja Morant (POR); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 13 of 13 players (33 of 33 player-stats); skipped: none",
+      "cx": {
+        "Damian Lillard|PTS|15.5|WIN": {
+          "best_book": "tabtouch",
+          "best_price": 1.3,
+          "mm_min": 30.16,
+          "mm_mu": 19.573,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7234,
+          "p_pin": 0.7683,
+          "p_wowy": 0.7234,
+          "pin_edge_pp": -1.9,
+          "pin_line": 20.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 19.573
+        },
+        "Deni Avdija|PTS|17.5|WIN": {
+          "best_book": "tabtouch",
+          "best_price": 1.26,
+          "mm_min": 33.24,
+          "mm_mu": 24.268,
+          "n_books": 4,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8471,
+          "p_pin": 0.7767,
+          "p_wowy": 0.8471,
+          "pin_edge_pp": -2.3,
+          "pin_line": 22.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 24.268
+        },
+        "Deni Avdija|PTS|19.5|lean": {
+          "best_book": "bet365",
+          "best_price": 1.45,
+          "mm_min": 33.24,
+          "mm_mu": 24.268,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7529,
+          "p_pin": 0.6792,
+          "p_wowy": 0.7529,
+          "pin_edge_pp": -1.0,
+          "pin_line": 22.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 24.268
+        },
+        "Devin Vassell|AST|1.5|WIN": {
+          "best_book": "tab",
+          "best_price": 1.26,
+          "mm_min": 30.88,
+          "mm_mu": 2.496,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7052,
+          "p_pin": "",
+          "p_wowy": 0.7052,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 2.496
+        },
+        "Donovan Clingan|PTS|7.5|WIN": {
+          "best_book": "pointsbet",
+          "best_price": 1.33,
+          "mm_min": 27.72,
+          "mm_mu": 11.274,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7577,
+          "p_pin": "",
+          "p_wowy": 0.7577,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 11.274
+        },
+        "Donovan Clingan|REB|10.5|lean": {
+          "best_book": "pointsbet",
+          "best_price": 1.74,
+          "mm_min": 27.72,
+          "mm_mu": 11.577,
+          "n_books": 3,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.5971,
+          "p_pin": 0.5592,
+          "p_wowy": 0.5971,
+          "pin_edge_pp": -1.5,
+          "pin_line": 11.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 11.577
+        },
+        "Jrue Holiday|AST|4.5|lean": {
+          "best_book": "sportsbet",
+          "best_price": 1.96,
+          "mm_min": 28.68,
+          "mm_mu": 4.677,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.4867,
+          "p_pin": 0.4719,
+          "p_wowy": 0.4867,
+          "pin_edge_pp": -3.8,
+          "pin_line": 4.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 4.677
+        },
+        "Toumani Camara|PTS|7.5|WIN": {
+          "best_book": "next2go",
+          "best_price": 1.35,
+          "mm_min": 31.8,
+          "mm_mu": 10.244,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.68,
+          "p_pin": 0.7356,
+          "p_wowy": 0.68,
+          "pin_edge_pp": -2.8,
+          "pin_line": 10.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 10.244
+        }
+      },
+      "engine": "nba-session v3.42-p4",
+      "id": "SAS@POR",
+      "leans": [
+        {
+          "alt": 19.5,
+          "e": 4.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[ROLE?]",
+            "MU-4%",
+            "C0.80",
+            "Z0.93",
+            "TMO",
+            "PIN-1.0",
+            "BK-sportsbet",
+            "TIER-C"
+          ],
+          "gs": 3,
+          "h": "90% (9/10)",
+          "l5": [
+            31,
+            20,
+            null,
+            null,
+            27
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-19",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-17",
+              "dnp": 1
+            },
+            null
+          ],
+          "o": 1.45,
+          "opp": "SAS 3rd fewest PTS allowed · pace -0.4",
+          "p": "Deni Avdija",
+          "pmx": 0.7118,
+          "s": "PTS",
+          "st": "4",
+          "std": 22.5,
+          "t": "POR",
+          "tier": "C"
+        },
+        {
+          "alt": 10.5,
+          "e": 4.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "CUSH",
+            "[ROLE?]",
+            "REB-ANC",
+            "C0.92",
+            "Z0.29",
+            "TMO",
+            "PIN-1.5",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            18,
+            13,
+            13,
+            12,
+            10
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Robert Williams III",
+                "Deni Avdija"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            null
+          ],
+          "o": 1.74,
+          "opp": "SAS 11th fewest REB allowed · pace -0.4",
+          "p": "Donovan Clingan",
+          "pmx": 0.5412,
+          "s": "REB",
+          "st": "3",
+          "std": 11.5,
+          "t": "POR",
+          "tier": "C"
+        },
+        {
+          "alt": 4.5,
+          "e": 3.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "[ROLE?]",
+            "C0.99",
+            "Z0.02",
+            "TMO",
+            "PIN-3.8",
+            "RET2:Avdija",
+            "AVOID",
+            "BK-sportsbet",
+            "TIER-C"
+          ],
+          "gs": 0,
+          "h": "70% (7/10)",
+          "l5": [
+            5,
+            7,
+            7,
+            6,
+            3
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            null
+          ],
+          "o": 1.96,
+          "opp": "SAS 6th fewest AST allowed · pace -0.4",
+          "p": "Jrue Holiday",
+          "pmx": 0.4757,
+          "s": "AST",
+          "st": "2",
+          "std": 4.5,
+          "t": "POR",
+          "tier": "C"
+        },
+        {
+          "alt": 17.5,
+          "e": 0.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:PTS-TOUGH",
+            "[ROLE?]",
+            "MU-4%",
+            "C0.72",
+            "Z1.32",
+            "TMO",
+            "PIN-2.3",
+            "TIER-A"
+          ],
+          "gs": 3,
+          "h": "90% (9/10)",
+          "l5": [
+            31,
+            20,
+            null,
+            null,
+            27
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-19",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-17",
+              "dnp": 1
+            },
+            null
+          ],
+          "o": 1.25,
+          "opp": "SAS 3rd fewest PTS allowed · pace -0.4",
+          "p": "Deni Avdija",
+          "pmx": 0.8049,
+          "s": "PTS",
+          "st": "5",
+          "std": 22.5,
+          "t": "POR",
+          "tier": "A"
+        },
+        {
+          "alt": 15.5,
+          "e": -3.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:PTS-TOUGH",
+            "[ROLE?]",
+            "MU-4%",
+            "C0.80",
+            "Z0.62",
+            "TMO",
+            "PIN-1.9",
+            "RET2:Avdija",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "70% (7/10)",
+          "l5": [
+            18,
+            15,
+            33,
+            25,
+            9
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            null
+          ],
+          "o": 1.27,
+          "opp": "SAS 3rd fewest PTS allowed · pace -0.4",
+          "p": "Damian Lillard",
+          "pmx": 0.6918,
+          "s": "PTS",
+          "st": "4",
+          "std": 20.5,
+          "t": "POR",
+          "tier": "A"
+        },
+        {
+          "alt": 7.5,
+          "e": -3.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:PTS-TOUGH",
+            "[ROLE?]",
+            "MU-4%",
+            "C0.68",
+            "Z0.65",
+            "TMO",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "60% (6/10)",
+          "l5": [
+            15,
+            22,
+            7,
+            12,
+            10
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            null
+          ],
+          "o": 1.33,
+          "opp": "SAS 3rd fewest PTS allowed · pace -0.4",
+          "p": "Donovan Clingan",
+          "pmx": 0.705,
+          "s": "PTS",
+          "st": "4",
+          "std": 10.5,
+          "t": "POR",
+          "tier": "A"
+        },
+        {
+          "alt": 7.5,
+          "e": -6.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:PTS-TOUGH",
+            "[ROLE?]",
+            "MU-4%",
+            "C0.74",
+            "Z0.49",
+            "TMO",
+            "PIN-2.8",
+            "RET2:Avdija",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "60% (6/10)",
+          "l5": [
+            5,
+            6,
+            18,
+            10,
+            3
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-19",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Deni Avdija"
+              ]
+            },
+            null
+          ],
+          "o": 1.31,
+          "opp": "SAS 3rd fewest PTS allowed · pace -0.4",
+          "p": "Toumani Camara",
+          "pmx": 0.662,
+          "s": "PTS",
+          "st": "4",
+          "std": 10.5,
+          "t": "POR",
+          "tier": "A"
+        },
+        {
+          "alt": 1.5,
+          "e": -0.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "[Std?]",
+            "[ROLE?]",
+            "MU-6%",
+            "MT+",
+            "C0.64",
+            "Z0.76",
+            "TMO",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            2,
+            2,
+            4,
+            4,
+            1
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "De'Aaron Fox"
+              ]
+            },
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "De'Aaron Fox"
+              ]
+            }
+          ],
+          "o": 1.24,
+          "opp": "POR 2nd fewest AST allowed · pace -0.4",
+          "p": "Devin Vassell",
+          "pmx": 0.6931,
+          "s": "AST",
+          "st": "5",
+          "std": 2.5,
+          "t": "SAS",
+          "tier": "A"
+        }
+      ],
+      "mkt": 227.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "mx": {
+        "exp_pace": 101.6,
+        "home_spread": 3.5,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.9,
+          "PTS": 111.2,
+          "REB": 42.9,
+          "pace": 102.0
+        },
+        "seed": {
+          "POR": {
+            "conf": "W",
+            "rec": "11-6",
+            "seed": 6
+          },
+          "SAS": {
+            "conf": "W",
+            "rec": "15-3",
+            "seed": 1
+          }
+        },
+        "teams": {
+          "POR": {
+            "allow100": {
+              "3PM": 12.6,
+              "AST": 24.3,
+              "PTS": 109.9,
+              "REB": 41.8
+            },
+            "allow_rk": {
+              "3PM": 26,
+              "AST": 29,
+              "PTS": 23,
+              "REB": 27
+            },
+            "out": [],
+            "pace": 102.0,
+            "rk": {
+              "ast": 22,
+              "blk": 6,
+              "dreb": 6,
+              "fg3_pct": 11,
+              "fg3a": 4,
+              "fg3m": 2,
+              "fg_pct": 14,
+              "ft_pct": 16,
+              "fta": 4,
+              "net": 7,
+              "opp_fg3_pct": 9,
+              "opp_fg_pct": 7,
+              "oppg": 8,
+              "oreb": 14,
+              "pace": 12,
+              "pf": 17,
+              "ppg": 8,
+              "reb": 12,
+              "stl": 26,
+              "tov": 20,
+              "ts_pct": 4
+            },
+            "v": {
+              "ast": 25.1,
+              "ats": "11-6-0",
+              "ats_away": "8-4-0",
+              "ats_home": "3-2-0",
+              "ats_l10": "6-4-0",
+              "away": "8-4",
+              "blk": 5.4,
+              "dreb": 33.2,
+              "fg3_pct": 36.4,
+              "fg3a": 43.0,
+              "fg3m": 15.6,
+              "fg_pct": 46.3,
+              "ft_pct": 77.4,
+              "fta": 28.1,
+              "gp": 17,
+              "home": "3-2",
+              "l10": "5-5",
+              "net": 6.5,
+              "opp_fg3_pct": 34.0,
+              "opp_fg_pct": 44.2,
+              "oppg": 110.4,
+              "oreb": 11.9,
+              "ou": "7-10-0",
+              "ou_l10": "4-6-0",
+              "pace": 102.1,
+              "pf": 21.8,
+              "ppg": 116.8,
+              "reb": 45.1,
+              "rec": "11-6",
+              "stl": 7.2,
+              "tov": 16.3,
+              "ts_pct": 59.5
+            }
+          },
+          "SAS": {
+            "allow100": {
+              "3PM": 12.6,
+              "AST": 25.3,
+              "PTS": 107.7,
+              "REB": 42.8
+            },
+            "allow_rk": {
+              "3PM": 25,
+              "AST": 25,
+              "PTS": 28,
+              "REB": 20
+            },
+            "out": [],
+            "pace": 101.5,
+            "rk": {
+              "ast": 3,
+              "blk": 1,
+              "dreb": 1,
+              "fg3_pct": 25,
+              "fg3a": 17,
+              "fg3m": 22,
+              "fg_pct": 12,
+              "ft_pct": 4,
+              "fta": 12,
+              "net": 1,
+              "opp_fg3_pct": 23,
+              "opp_fg_pct": 6,
+              "oppg": 3,
+              "oreb": 7,
+              "pace": 22,
+              "pf": 1,
+              "ppg": 6,
+              "reb": 1,
+              "stl": 14,
+              "tov": 2,
+              "ts_pct": 14
+            },
+            "v": {
+              "ast": 28.7,
+              "ats": "8-10-0",
+              "ats_away": "4-4-0",
+              "ats_home": "4-6-0",
+              "ats_l10": "5-5-0",
+              "away": "8-0",
+              "blk": 6.6,
+              "dreb": 34.9,
+              "fg3_pct": 33.7,
+              "fg3a": 37.4,
+              "fg3m": 12.6,
+              "fg_pct": 46.5,
+              "ft_pct": 81.2,
+              "fta": 24.8,
+              "gp": 18,
+              "home": "7-3",
+              "l10": "9-1",
+              "net": 12.2,
+              "opp_fg3_pct": 36.3,
+              "opp_fg_pct": 44.0,
+              "oppg": 105.4,
+              "oreb": 13.1,
+              "ou": "6-12-0",
+              "ou_l10": "4-6-0",
+              "pace": 101.3,
+              "pf": 18.6,
+              "ppg": 117.6,
+              "reb": 48.0,
+              "rec": "15-3",
+              "stl": 8.2,
+              "tov": 12.8,
+              "ts_pct": 57.6
+            }
+          }
+        },
+        "win": {
+          "away": 61.0,
+          "home": 39.0,
+          "src": "market"
+        }
+      },
+      "out": {
+        "POR": [
+          "Chris Youngblood (Youngblood (heel) has been ruled out for Saturday's game against the Knicks.)",
+          "Ja Morant (Head coach Micah Nori said Morant met with a doctor in Los Angeles, who gave him a positive outlook on his recovery from the hamstring injury. While Nori declined to update Morant's timetable, he added Morant \"may not be out for as long as we thought,\" Trail Blazers Insider Sean Highkin reports.)",
+          "Shaedon Sharpe (Sharpe suffered a torn meniscus in his knee and is expected to miss six months, per Shams Charania of ESPN.)",
+          "Vit Krejci (Krejci underwent surgery on his fractured left ankle Wednesday and will be re-evaluated in eight weeks, Brett Siegel of ClutchPoints.com reports.)"
+        ],
+        "SAS": [
+          "Dylan Harper (Harper (hip) is expected to miss two to three weeks, Brett Siegel of ClutchPoints.com reports.)",
+          "Jayden Quaintance (Quaintance has been around the team but has not yet been cleared for basketball activities, Matt Guzman of SI.com reports.)",
+          "Tobias Harris (Harris (calf) is likely to be sidelined until early December, per Jeff Garcia of KENS 5 San Antonio.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "POR": [],
+        "SAS": [
+          "De'Aaron Fox (Fox (shin) is questionable to play Wednesday's game against the Trail Blazers.)",
+          "Victor Wembanyama (Wembanyama (back) is questionable for Wednesday's game in Portland.)"
+        ]
+      },
+      "tip": "14:00"
     }
   ],
-  "generated": "2026-11-26T00:00:03Z",
+  "generated": "2026-11-26T01:30:04Z",
   "totals": [
     [
       "MIA@PHI",
@@ -9144,6 +11090,16 @@
       "PHX@HOU",
       null,
       222.5
+    ],
+    [
+      "SAC@GSW",
+      null,
+      214.5
+    ],
+    [
+      "SAS@POR",
+      null,
+      227.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
