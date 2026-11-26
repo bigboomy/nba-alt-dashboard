@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-26",
+      "version": "nba-session v3.43-p4",
+      "component": "engine",
+      "title": "RET1 block now covers bench players only",
+      "change": "When a rotation teammate returns, overs are blocked only for players with 1 or fewer starts in their last 10. Starters keep the RET1 tag but are logged normally. Also approved: REB L10 <= 70% and AST opponent key player out window blocks.",
+      "why": "Mitch 26 Nov: since 24 Nov starters went 65-7 on blocked RET1 overs and bench players 10-6 (-15pp under price). The kill switch keeps measuring tagged starters."
+    },
+    {
+      "date": "2026-11-26",
       "version": "dashboard",
       "component": "dashboard",
       "title": "Started games move out of the way",
