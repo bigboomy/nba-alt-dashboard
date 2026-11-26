@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T00:05:03Z",
+ "generated": "2026-11-26T00:10:03Z",
  "date": "2026-11-25",
  "teams": {
   "MIA": {
@@ -58,18 +58,18 @@
    "at": "2026-11-26T00:05:03Z"
   },
   "NYK": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Landry Shamet",
-    "Mikal Bridges",
     "Jalen Brunson",
+    "Mikal Bridges",
+    "Landry Shamet",
     "Josh Hart",
     "Karl-Anthony Towns"
    ],
-   "at": "2026-11-25T23:05:03Z"
+   "at": "2026-11-26T00:10:03Z"
   },
   "MIN": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Ayo Dosunmu",
     "Jonathan Kuminga",
@@ -77,18 +77,18 @@
     "Jaden McDaniels",
     "Rudy Gobert"
    ],
-   "at": "2026-11-25T23:05:03Z"
+   "at": "2026-11-26T00:10:03Z"
   },
   "OKC": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Jared McCain",
+    "Bennett Stirtz",
     "Ajay Mitchell",
     "Shai Gilgeous-Alexander",
     "Micah Peavy",
     "Isaiah Hartenstein"
    ],
-   "at": "2026-11-25T23:05:03Z"
+   "at": "2026-11-26T00:10:03Z"
   },
   "BKN": {
    "confirmed": false,
@@ -169,6 +169,9 @@
   "Peyton Watson|CLE": 1,
   "Tyrese Proctor|CLE": 0,
   "Meleek Thomas|CLE": 0,
+  "Karl-Anthony Towns|NYK": 1,
+  "Mikal Bridges|NYK": 1,
+  "Jalen Brunson|NYK": 1,
   "Giannis Antetokounmpo|MIA": 1,
   "Bam Adebayo|MIA": 1,
   "Davion Mitchell|MIA": 1,
@@ -177,6 +180,11 @@
   "LeBron James|PHI": 1,
   "Jaylen Brown|PHI": 1,
   "Tyrese Maxey|PHI": 1,
-  "VJ Edgecombe|PHI": 1
+  "VJ Edgecombe|PHI": 1,
+  "Ayo Dosunmu|MIN": 1,
+  "Jaden McDaniels|MIN": 1,
+  "Isaiah Hartenstein|OKC": 1,
+  "Jared McCain|OKC": 0,
+  "Ajay Mitchell|OKC": 1
  }
 }
