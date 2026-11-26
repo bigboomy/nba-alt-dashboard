@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T00:35:03Z",
+ "generated": "2026-11-26T00:40:03Z",
  "date": "2026-11-25",
  "teams": {
   "MIA": {
@@ -91,18 +91,18 @@
    "at": "2026-11-26T00:10:03Z"
   },
   "BKN": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Michael Porter Jr.",
     "Danny Wolf",
+    "Michael Porter Jr.",
     "Mikel Brown Jr.",
     "Julius Randle",
     "Day'Ron Sharpe"
    ],
-   "at": "2026-11-25T23:30:03Z"
+   "at": "2026-11-26T00:40:03Z"
   },
   "MIL": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Tyler Herro",
     "Jaime Jaquez Jr.",
@@ -110,7 +110,7 @@
     "Kyle Kuzma",
     "Myles Turner"
    ],
-   "at": "2026-11-25T23:30:03Z"
+   "at": "2026-11-26T00:40:03Z"
   },
   "LAC": {
    "confirmed": true,
@@ -158,6 +158,11 @@
   }
  },
  "items": {
+  "Julius Randle|BKN": 1,
+  "Day'Ron Sharpe|BKN": 1,
+  "Danny Wolf|BKN": 1,
+  "Kyle Kuzma|MIL": 1,
+  "Brayden Burries|MIL": 0,
   "Moussa Diabate|CHA": 1,
   "Sion James|CHA": 1,
   "Isaac Okoro|CHI": 1,
