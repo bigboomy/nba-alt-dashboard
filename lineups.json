@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T00:00:03Z",
+ "generated": "2026-11-26T00:05:03Z",
  "date": "2026-11-25",
  "teams": {
   "MIA": {
@@ -47,7 +47,7 @@
    "at": "2026-11-25T23:45:03Z"
   },
   "CLE": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Donovan Mitchell",
     "Sam Merrill",
@@ -55,7 +55,7 @@
     "Peyton Watson",
     "Jarrett Allen"
    ],
-   "at": "2026-11-25T23:05:03Z"
+   "at": "2026-11-26T00:05:03Z"
   },
   "NYK": {
    "confirmed": false,
@@ -163,6 +163,12 @@
   "Isaac Okoro|CHI": 1,
   "Matas Buzelis|CHI": 1,
   "Josh Giddey|CHI": 1,
+  "Donovan Mitchell|CLE": 1,
+  "James Harden|CLE": 1,
+  "Jarrett Allen|CLE": 1,
+  "Peyton Watson|CLE": 1,
+  "Tyrese Proctor|CLE": 0,
+  "Meleek Thomas|CLE": 0,
   "Giannis Antetokounmpo|MIA": 1,
   "Bam Adebayo|MIA": 1,
   "Davion Mitchell|MIA": 1,
