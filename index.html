@@ -449,6 +449,7 @@ details.cds>summary::before,.scn>summary::before,details.cds[open]>summary::befo
 .blr .blk{display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center}
 .blr .c3{grid-column:2;grid-row:1/3;cursor:inherit}
 .blr:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tab.tipd{opacity:.5}.tab.tipd[aria-pressed="true"]{opacity:1}.best .ntip{margin:8px 0 6px;font-size:.85rem;color:var(--muted)}.best .ntip b{color:var(--text);font-weight:600}.tsoon{display:inline-block;margin-left:8px;padding:0 7px;border:1px solid var(--warn);border-radius:999px;color:var(--warn);font-size:11px;font-weight:600;line-height:17px;white-space:nowrap;vertical-align:1px}.best details.stf{margin-top:8px}.best details.stf .pls{opacity:.85}details.stg{margin:14px 0 4px;border-top:1px solid var(--line)}details.stg>summary{cursor:pointer;list-style:none;padding:12px 6px;min-height:24px;display:flex;justify-content:space-between;align-items:center;font-size:.95rem;color:var(--text)}details.stg>summary span{color:var(--muted)}details.stg>summary b{color:var(--text)}details.stg>summary::-webkit-details-marker{display:none}details.stg>summary::after{content:"";width:7px;height:7px;border-right:2px solid var(--muted);border-bottom:2px solid var(--muted);transform:rotate(-45deg);transition:transform .15s;flex:none;margin:0 4px}details.stg[open]>summary::after{transform:rotate(45deg)}
 </style>
 <script>
 /* Light/dark toggle (Mitch 21 Nov: "I want the dashboard to be light for me"). Saved per device in localStorage;
@@ -999,7 +1000,8 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   }
   function tabs(){
     var ids=['ALL'].concat(G.map(function(g){return g.id}));
-    $('tabs').innerHTML=ids.map(function(id){return '<button class="tab" data-id="'+esc(id)+'" aria-pressed="'+(id===sel)+'">'+(id==='ALL'?'All games':esc(id))+'</button>'}).join('');
+    var sp=splitOn(),tg={};G.forEach(function(g){if(sp&&hasTipped(g))tg[g.id]=1});
+    $('tabs').innerHTML=ids.map(function(id){return '<button class="tab'+(tg[id]?' tipd':'')+'" data-id="'+esc(id)+'" aria-pressed="'+(id===sel)+'"'+(tg[id]?' aria-label="'+esc(id)+', started"':'')+'>'+(id==='ALL'?'All games':esc(id))+'</button>'}).join('');
     Array.prototype.forEach.call($('tabs').children,function(b){b.onclick=function(){sel=b.getAttribute('data-id');tabs();games()}});
   }
   function cxKind(p){return !p.lean?'pick':p.f.indexOf('LSR')>=0?'LSR':p.f.indexOf('HR80')>=0?'HR80':p.f.indexOf('MM90')>=0?'MM90':p.f.indexOf('L5P')>=0?'L5P':p.f.indexOf('FO')>=0?'FO':p.f.indexOf('WIN')>=0?'WIN':p.f.indexOf('HR85')>=0?'HR85':p.f.indexOf('PIN')>=0?'PIN':p.f.indexOf('OUTLIFT')>=0?'OUTLIFT':'lean'}
@@ -1475,7 +1477,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   /* v3.41 lean tiers (Mitch approved 24 Nov, pipeline a759778): every lean carries tier A|B|C. Core = tier A, shortest
      price first, top 20 then "show all"; B and C sit in a collapsed More leans fold with counts and 30-day hit %.
      30-day hit from tiers.json (stats per kind, pooled by tier) or, until it exists, from the Sheet's leans tab. */
-  var TJ=null,LTIER='A',LALLV=false,LCAP=5;
+  var TJ=null,LTIER='A',LALLV=false,LCAP=5,STOPEN=false,STGOPEN=false,TIPSIG='',SOON=30;
   function loadTiers(){fetch('tiers.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()})
     .then(function(j){if(j&&j.stats&&typeof j.stats==='object'){TJ=j;if(D)games()}}).catch(function(){})}
   function tierHit(t){
@@ -1486,15 +1488,15 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     var mx=rows.reduce(function(a,r){return r.date>a?r.date:a},''),lo=addDays(mx,-29);rows=rows.filter(function(r){return r.date>=lo});
     var ww=rows.filter(function(r){return r.result==='W'}).length;return rows.length?{n:rows.length,hit:100*ww/rows.length}:null;
   }
-  function blRow(x){var b=x.b,t=tileFace(x.g,b);
-    return '<button class="blr" type="button" aria-label="'+t.aria+', open in its game" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'">'+
-      '<span class="bln"><strong>'+esc(b.p)+'</strong>'+sbHtml([b])+'<span class="bg">'+esc(x.g.id)+'</span></span>'+
+  function blRow(x){var b=x.b,t=tileFace(x.g,b),tm=tipIn(x.g),soon=tm>0&&tm<=SOON;
+    return '<button class="blr" type="button" aria-label="'+t.aria+(soon?', tips soon':'')+', open in its game" data-jump="'+esc(bid(x.g,b))+'" data-g="'+esc(x.g.id)+'">'+
+      '<span class="bln"><strong>'+esc(b.p)+'</strong>'+sbHtml([b])+'<span class="bg">'+esc(x.g.id)+'</span>'+(soon?'<span class="tsoon">tips soon</span>':'')+'</span>'+
       '<span class="blk">'+stPill(b.s)+l5Html(b)+'</span><span class="'+t.cls+'"'+t.sty+' aria-hidden="true">'+t.inner+'</span></button>'}
   function bestJump(box){
     Array.prototype.forEach.call(box.querySelectorAll('[data-jump]'),function(el){el.onclick=function(){
       LOPEN[el.getAttribute('data-g')]=true;MXV[el.getAttribute('data-g')]='bets';games();
       var t=null;Array.prototype.forEach.call($('games').querySelectorAll('.c3[data-bid]'),function(x){if(x.getAttribute('data-bid')===el.getAttribute('data-jump'))t=x});
-      if(t){if(t.getAttribute('aria-expanded')!=='true')t.click();t.scrollIntoView({block:'center',behavior:'smooth'});t.focus({preventScroll:true});
+      if(t){var dd=t.closest&&t.closest('details.stg');if(dd&&!dd.open){dd.open=true;STGOPEN=true}if(t.getAttribute('aria-expanded')!=='true')t.click();t.scrollIntoView({block:'center',behavior:'smooth'});t.focus({preventScroll:true});
         var jb=$('jb');JBFROM=el.getAttribute('data-jump');jb.hidden=false;JBAT=Date.now()}}});
   }
   function coreLeans(box,L){
@@ -1507,18 +1509,26 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
        the tonight record names its tier so it reconciles with the banner's all-leans count. */
     var T={A:by('A'),B:by('B'),C:by('C')},cur=T[LTIER]?LTIER:'A',list=T[cur],TN={A:'strong',B:'middling',C:'weak'},
       TD={A:'Tier A: lean types hitting 70%+ over the last 30 days.',B:'Tier B: lean types in between, or too few results to judge.',C:'Tier C: lean types losing to their prices over the last 30 days.'};
-    var np=G.reduce(function(a,g){return a+g.picks.length},0),shown=LALLV?list:list.slice(0,LCAP);
+    var np=G.reduce(function(a,g){return a+g.picks.length},0),sp=splitOn(),
+      left=function(l){return sp?l.filter(function(x){return !hasTipped(x.g)}):l},live=left(list),
+      gone=sp?list.filter(function(x){return hasTipped(x.g)}).sort(function(a,b){return (a.g.tip<b.g.tip?-1:a.g.tip>b.g.tip?1:0)||a.b.o-b.b.o}):[],
+      shown=LALLV?live:live.slice(0,LCAP);
+    var ng=sp?G.filter(function(g){return !hasTipped(g)}).sort(function(a,b){return tipIn(a)-tipIn(b)})[0]:null;
+    function sofar(l){var w=0,k=0;l.forEach(function(x){var r=resFor(x.b);if(r){if(r.result==='W')w++;else if(r.result==='L')k++}});return w+k?' \u00b7 '+w+'\u2013'+k+' so far':' \u00b7 in play'}
     var seg='<div class="tseg" role="group" aria-label="Lean tier">'+['A','B','C'].map(function(t){var x=tierHit(t);
-      return '<button type="button" class="tab" data-tier="'+t+'" aria-pressed="'+(cur===t)+'" aria-label="Tier '+t+', '+TN[t]+', '+T[t].length+' leans'+(x?', '+x.hit.toFixed(0)+'% hit over 30 days':'')+'"><span class="tnm"><b>'+t+'</b> '+TN[t]+'</span><span class="tsh">'+T[t].length+(x?' \u00b7 '+x.hit.toFixed(0)+'%':'')+'</span></button>'}).join('')+'</div>';
+      return '<button type="button" class="tab" data-tier="'+t+'" aria-pressed="'+(cur===t)+'" aria-label="Tier '+t+', '+TN[t]+', '+left(T[t]).length+(sp?' leans still to tip':' leans')+(x?', '+x.hit.toFixed(0)+'% hit over 30 days':'')+'"><span class="tnm"><b>'+t+'</b> '+TN[t]+'</span><span class="tsh">'+left(T[t]).length+(sp?' left':'')+(x?' \u00b7 '+x.hit.toFixed(0)+'%':'')+'</span></button>'}).join('')+'</div>';
     var h30t=h30(cur);
     var h=(np?'':'<p class="nob"><b>No bets tonight.</b> Nothing cleared every gate. The leans below are tracked at 0u, not staked.</p>')+
-      '<h2>Leans</h2><p class="bsub">'+TD[cur]+' Shortest price first. Tap one to see it in its game.'+(h30t?' '+h30t.charAt(0).toUpperCase()+h30t.slice(1)+'.':'')+esc(rec(list,1))+'</p>'+seg+
-      (list.length?'<div class="pls">'+ringKey(list.map(function(x){return x.b}))+shown.map(blRow).join('')+'</div>'+
-        (list.length>LCAP?'<button type="button" class="cmore" id="lAll" aria-expanded="'+LALLV+'">'+(LALLV?'Show top '+LCAP:'Show all '+list.length+' tier '+cur+' leans')+'</button>':'')
-        :'<div class="none">No tier '+cur+' leans tonight.</div>')+
+      '<h2>Leans</h2><p class="bsub">'+TD[cur]+' Shortest price first. Tap one to see it in its game.'+(h30t?' '+h30t.charAt(0).toUpperCase()+h30t.slice(1)+'.':'')+esc(rec(list,1))+'</p>'+
+      (ng?'<p class="ntip">Next tip <b>'+esc(ng.tip)+' '+esc(ng.id)+'</b> \u00b7 '+G.filter(hasTipped).length+' of '+G.length+' games started</p>':'')+seg+
+      (live.length?'<div class="pls">'+ringKey(list.map(function(x){return x.b}))+shown.map(blRow).join('')+'</div>'+
+        (live.length>LCAP?'<button type="button" class="cmore" id="lAll" aria-expanded="'+LALLV+'">'+(LALLV?'Show top '+LCAP:'Show all '+live.length+' tier '+cur+' leans'+(sp?' still to tip':''))+'</button>':'')
+        :'<div class="none">'+(gone.length?'No tier '+cur+' leans left to tip.':'No tier '+cur+' leans tonight.')+'</div>')+
+      (gone.length?'<details class="lf stf" id="stLeans"'+(STOPEN?' open':'')+'><summary><span><b>Started ('+gone.length+')</b>'+sofar(gone)+'</span></summary><div class="pls">'+gone.map(blRow).join('')+'</div></details>':'')+
       '<button type="button" class="cdl-go" id="codesGo">What the codes mean</button>';
     box.innerHTML=h;box.hidden=false;
     Array.prototype.forEach.call(box.querySelectorAll('[data-tier]'),function(b){b.onclick=function(){LTIER=b.getAttribute('data-tier');LALLV=false;bestLeans()}});
+    var sl=$('stLeans');if(sl)sl.addEventListener('toggle',function(){STOPEN=this.open});
     var la=$('lAll');if(la)la.onclick=function(){LALLV=!LALLV;bestLeans();if(!LALLV)box.scrollIntoView({block:'start',behavior:'smooth'})};
     $('codesGo').onclick=function(){var gd=$('guide'),lg=$('legend');if(gd)gd.open=true;if(lg){lg.open=true;lg.scrollIntoView({block:'start',behavior:'smooth'})}};
     bestJump(box);
@@ -1538,13 +1548,15 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
     box.hidden=false;bestJump(box);
   }
   function games(){
-    KEYDONE=false;bestLeans();
-    var html='';
-    G.forEach(function(g,gi){if(sel!=='ALL'&&g.id!==sel)return;try{html+=gameHtml(g,gi)}catch(e){}});
+    KEYDONE=false;TIPSIG=tipSig();bestLeans();
+    var html='',sp=sel==='ALL'&&splitOn(),gh='';
+    G.forEach(function(g,gi){if(sel!=='ALL'&&g.id!==sel)return;var x='';try{x=gameHtml(g,gi)}catch(e){}if(sp&&hasTipped(g))gh+=x;else html+=x});
+    if(gh)html+='<details class="stg" id="stGames"'+(STGOPEN?' open':'')+'><summary><span><b>Started games ('+G.filter(hasTipped).length+')</b> \u00b7 locked at tip</span></summary>'+gh+'</details>';
     if(sel==='ALL') html+=pendHtml();
     if(!html&&D&&D.cleared){var ts=todaySched();html='<div class="game"><div class="none">'+(ts&&!ts.length?'No NBA games today.':'No games analysed yet today.')+'</div></div>'}
     if(sel==='ALL') html+=upHtml();
     $('games').innerHTML=html;upWire();
+    var sg=$('stGames');if(sg)sg.addEventListener('toggle',function(){STGOPEN=this.open});
     Array.prototype.forEach.call($('games').querySelectorAll('details.lf'),function(d){d.addEventListener('toggle',function(){LOPEN[d.getAttribute('data-g')]=d.open})});
     Array.prototype.forEach.call($('games').querySelectorAll('[data-ch]'),function(b){b.onclick=function(){setChoice(b)}});
     Array.prototype.forEach.call($('games').querySelectorAll('[data-mxv]'),function(b){b.onclick=function(){MXV[b.getAttribute('data-mxg')]=b.getAttribute('data-mxv');games()}});
@@ -1783,7 +1795,7 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
       var rows=CORE.normRows(CORE.parseCSV(t));if(rows.length){ROWS=rows;FETCHED=new Date();foot();renderRecord();if(D){games();runStatus()}}
     }).catch(function(){});
   }
-  setInterval(function(){if(D)runStatus();healthBanner()},60000);
+  setInterval(function(){if(D){runStatus();if(tipSig()!==TIPSIG){tabs();games()}}healthBanner()},60000);
   document.addEventListener('visibilitychange',function(){if(!document.hidden&&D){var n=melNow();if(n.min>=RUNS.first)reloadData()}});
   /* ---------- next slate line ----------
      P4 server (ENGINE_DECISIONS D9): every game is analysed by the first 5-min tick (02:00–15:00) with tip−90 ≤ tick ≤ tip−30,
@@ -2339,6 +2351,13 @@ var CORE={shadow:shadow,parseCSV:parseCSV,normRows:normRows,summarize:summarize,
   function ctoast(t,undo){var e=$('ctoast');if(!e)return;e.textContent=t;
     if(undo){var u=document.createElement('button');u.type='button';u.className='cun';u.textContent='Undo';u.onclick=function(){e.hidden=true;clearTimeout(CTT);undo()};e.appendChild(u)}
     e.hidden=false;clearTimeout(CTT);CTT=setTimeout(function(){e.hidden=true},undo?6000:3500)}
+  /* Mitch 26 Nov: while a slate is part-way through, started games leave the leans list (and the game list) for a
+     collapsed Started fold, and the top 5 refills from games still to tip. Off before the first tip and after the
+     last, so the night's results read as one list. Started = scheduled tip on the Melbourne clock, as for the locks. */
+  function tipIn(g){var iso=slateIso(),n=melNow();if(!iso||iso<n.iso)return -1e9;if(iso>n.iso)return 1e9;
+    var m=/^(\d{1,2}):(\d{2})/.exec(g.tip||'');return m?(+m[1])*60+(+m[2])-n.min:1e9}
+  function splitOn(){if(!G.length)return false;var t=G.filter(hasTipped).length;return t>0&&t<G.length}
+  function tipSig(){return G.map(function(g){var m=tipIn(g);return m<=0?2:m<=SOON?1:0}).join('')}
   function hasTipped(g){
     var iso=slateIso(),n=melNow();if(!iso)return true;if(iso<n.iso)return true;if(iso>n.iso)return false;
     var m=/^(\d{1,2}):(\d{2})/.exec(g.tip||'');return m?n.min>=(+m[1])*60+(+m[2]):false;

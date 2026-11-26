@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
     {
+      "date": "2026-11-26",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "Started games move out of the way",
+      "change": "While a slate is part-way through, leans from games that have tipped leave the leans list and sit in a collapsed 'Started (n)' fold that shows the W-L so far. The top 5 refills from games still to tip, and the tier buttons count what's left. A 'Next tip' line shows the next game and how many have started. Leans whose game tips within 30 minutes get a 'tips soon' tag. In All games, started game cards (picks included) move into a collapsed 'Started games' fold, and their filter tabs go grey. Before the first tip and after the last, everything shows as one list as before. Started means the scheduled tip on the Melbourne clock, the same check that locks Took it / Pass. The page re-checks every minute.",
+      "why": "Mitch 26 Nov: once a game starts its leans can't be bet, so the list should show what's still bettable first."
+    },
+    {
       "date": "2026-11-25",
       "version": "dashboard",
       "component": "dashboard",
