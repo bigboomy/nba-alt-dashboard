@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-26",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "Tonight-first tabs, filters and recent form per lean type",
+      "change": "The page shows one section at a time: Tonight, Results, Ahead and Record, with a bar at the bottom on phones and at the top on wide screens. Tonight holds the leans (No bets box, tier buttons, top 5, Started fold, Next tip) plus a collapsed Games and picks fold, which opens itself on a night with picks. Results has the status line, today's W-L and the scoreboard. Ahead has the next-games line, Still to come and Matchups ahead. Record has projected totals, the full record, autopsy, hit rate by code, every tier and the guide. A Filter button opens a sheet with tier, game, stat, lean type and Only hot. Active filters show as removable chips, and the old game tabs are gone. Each lean shows its type's recent form, e.g. 'FO · 7 days 9 of 11 (82%) · 30 days 24 of 34 (71%)'. That is W/L from the leans tab, rolling to the latest settled slate. 🔥 shows only when 7 days has 8+ settled and beats 30 days by 10pp+. Deep links, scoreboard rows and code links switch to the right tab. The tab and filters are remembered on this device. The tier still starts on A every load.",
+      "why": "Mitch 26 Nov: most nights he only uses tonight's leans and tiers, the page had about 25 folds on one scroll, and a hot run like FO 4 for 4 was invisible. Display only: it changes no tier, stake or sort."
+    },
+    {
+      "date": "2026-11-26",
       "version": "nba-session v3.43-p4",
       "component": "engine",
       "title": "RET1 block now covers bench players only",
