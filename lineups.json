@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T02:25:03Z",
+ "generated": "2026-11-26T02:40:03Z",
  "date": "2026-11-25",
  "teams": {
   "MIA": {
@@ -157,7 +157,7 @@
    "at": "2026-11-26T01:05:03Z"
   },
   "GSW": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Brandin Podziemski",
     "Yaxel Lendeborg",
@@ -165,32 +165,32 @@
     "Draymond Green",
     "Charles Bassey"
    ],
-   "at": "2026-11-26T01:30:04Z"
+   "at": "2026-11-26T02:40:03Z"
   },
   "SAC": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Malik Monk",
-    "De'Andre Hunter",
-    "Darius Acuff Jr.",
+    "Emanuel Sharp",
     "Keegan Murray",
+    "Darius Acuff Jr.",
+    "De'Andre Hunter",
     "Domantas Sabonis"
    ],
-   "at": "2026-11-26T01:30:04Z"
+   "at": "2026-11-26T02:40:03Z"
   },
   "POR": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Sidy Cissoko",
+    "Deni Avdija",
     "Toumani Camara",
     "Damian Lillard",
-    "Deni Avdija",
+    "Sidy Cissoko",
     "Donovan Clingan"
    ],
-   "at": "2026-11-26T01:30:04Z"
+   "at": "2026-11-26T02:40:03Z"
   },
   "SAS": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Devin Vassell",
     "Julian Champagnie",
@@ -198,7 +198,7 @@
     "Harrison Barnes",
     "Victor Wembanyama"
    ],
-   "at": "2026-11-26T02:25:03Z"
+   "at": "2026-11-26T02:40:03Z"
   }
  },
  "items": {
@@ -251,6 +251,17 @@
   "Collin Gillespie|PHX": 0,
   "Jalen Green|PHX": 1,
   "Oso Ighodaro|PHX": 1,
-  "Khaman Maluach|PHX": 0
+  "Khaman Maluach|PHX": 0,
+  "Yaxel Lendeborg|GSW": 1,
+  "Draymond Green|GSW": 1,
+  "Domantas Sabonis|SAC": 1,
+  "Keegan Murray|SAC": 1,
+  "Darius Acuff Jr.|SAC": 1,
+  "Jrue Holiday|POR": 0,
+  "Toumani Camara|POR": 1,
+  "Deni Avdija|POR": 1,
+  "Donovan Clingan|POR": 1,
+  "Damian Lillard|POR": 1,
+  "Devin Vassell|SAS": 1
  }
 }
