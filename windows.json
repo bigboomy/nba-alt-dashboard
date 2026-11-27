@@ -426,6 +426,11 @@
      "n": 4,
      "w": 4,
      "l": 0
+    },
+    "ALL|bench player (gs <= 1)|-": {
+     "n": 2,
+     "w": 2,
+     "l": 0
     }
    },
    "alone": {
@@ -486,15 +491,20 @@
      "n": 4,
      "w": 4,
      "l": 0
+    },
+    "ALL|bench player (gs <= 1)|-": {
+     "n": 1,
+     "w": 1,
+     "l": 0
     }
    },
    "alone": {
-    "n": 22,
-    "w": 18,
+    "n": 21,
+    "w": 17,
     "l": 4,
     "tg": 9,
-    "be": 79.5,
-    "p_beat": 0.441
+    "be": 79.7,
+    "p_beat": 0.41
    }
   },
   "REB|underdog by 7+|+": {
@@ -546,15 +556,20 @@
      "n": 6,
      "w": 4,
      "l": 2
+    },
+    "ALL|bench player (gs <= 1)|-": {
+     "n": 1,
+     "w": 1,
+     "l": 0
     }
    },
    "alone": {
-    "n": 17,
-    "w": 16,
+    "n": 16,
+    "w": 15,
     "l": 1,
     "tg": 7,
-    "be": 80.2,
-    "p_beat": 0.699
+    "be": 80.3,
+    "p_beat": 0.69
    }
   },
   "ALL|minutes mixture >= 90%|+": {
@@ -617,14 +632,19 @@
      "w": 1,
      "l": 0
     },
-    "AST|soft matchup (env >= 1.03)|-": {
+    "AST|regular starter (gs >= 4)|+": {
      "n": 2,
      "w": 2,
      "l": 0
     },
-    "AST|regular starter (gs >= 4)|+": {
+    "AST|minutes model >= 90%|+": {
      "n": 2,
      "w": 2,
+     "l": 0
+    },
+    "ALL|bench player (gs <= 1)|-": {
+     "n": 3,
+     "w": 3,
      "l": 0
     }
    },
@@ -684,15 +704,20 @@
      "n": 4,
      "w": 4,
      "l": 0
+    },
+    "ALL|bench player (gs <= 1)|-": {
+     "n": 18,
+     "w": 13,
+     "l": 5
     }
    },
    "alone": {
-    "n": 44,
-    "w": 28,
-    "l": 16,
-    "tg": 30,
-    "be": 77.7,
-    "p_beat": 0.97
+    "n": 30,
+    "w": 19,
+    "l": 11,
+    "tg": 19,
+    "be": 77.6,
+    "p_beat": 0.936
    },
    "promote": "ready"
   },
@@ -741,6 +766,11 @@
     "AST|regular starter (gs >= 4)|+": {
      "n": 2,
      "w": 2,
+     "l": 0
+    },
+    "AST|opponent key player out|-": {
+     "n": 1,
+     "w": 1,
      "l": 0
     }
    },
@@ -813,9 +843,10 @@
   "REB|L10 rate <= 70%|-": {
    "launched": "2026-11-25",
    "notified": [
-    "pending"
+    "pending",
+    "promote"
    ],
-   "mode": "pending",
+   "mode": "action",
    "rec": {
     "n": 36,
     "tg": 22,
@@ -856,16 +887,22 @@
      "n": 6,
      "w": 4,
      "l": 2
+    },
+    "ALL|bench player (gs <= 1)|-": {
+     "n": 3,
+     "w": 1,
+     "l": 2
     }
    },
    "alone": {
-    "n": 26,
-    "w": 17,
-    "l": 9,
+    "n": 23,
+    "w": 16,
+    "l": 7,
     "tg": 14,
     "be": 78.0,
-    "p_beat": 0.896
-   }
+    "p_beat": 0.831
+   },
+   "promote": "ready"
   },
   "AST|regular starter (gs >= 4)|+": {
    "launched": "2026-11-25",
@@ -912,22 +949,208 @@
      "w": 2,
      "l": 0
     },
-    "AST|soft matchup (env >= 1.03)|-": {
-     "n": 6,
-     "w": 6,
+    "AST|minutes model >= 90%|+": {
+     "n": 5,
+     "w": 5,
+     "l": 0
+    },
+    "AST|opponent key player out|-": {
+     "n": 7,
+     "w": 5,
+     "l": 2
+    }
+   },
+   "alone": {
+    "n": 27,
+    "w": 23,
+    "l": 4,
+    "tg": 15,
+    "be": 77.7,
+    "p_beat": 0.675
+   }
+  },
+  "AST|minutes model >= 90%|+": {
+   "launched": "2026-11-26",
+   "notified": [],
+   "mode": "action",
+   "rec": {
+    "n": 5,
+    "tg": 4,
+    "w": 5,
+    "l": 0,
+    "hit": 100.0,
+    "be": 79.5,
+    "gap": 20.5,
+    "u": 1.29,
+    "p_above": 0.687
+   },
+   "rest": {
+    "n": 28,
+    "tg": 14,
+    "w": 23,
+    "l": 5,
+    "hit": 82.1,
+    "be": 78.1,
+    "gap": 4.0,
+    "u": 1.54,
+    "p_above": 0.543
+   },
+   "p_beat": 0.687,
+   "direction": "add",
+   "text": "Short 90.5 v 80.2, diff +11.9 [+2.5..+19.8], last 7 +18.1 (21/20 tg); all rungs agree +9.6 [+4.0..+15.3], last 7 +10.6 (46/38 tg). Assists track role and minutes more than shot variance, and the market prices off averages. It's only AST: PTS -2.0 and REB -10.6 (steady-).",
+   "stat": "AST",
+   "cond": "minutes model >= 90%",
+   "sign": "+",
+   "sweep": true,
+   "counterfactual_gap": 16.5,
+   "overlap": {
+    "ALL|minutes mixture >= 90%|+": {
+     "n": 2,
+     "w": 2,
+     "l": 0
+    },
+    "AST|regular starter (gs >= 4)|+": {
+     "n": 5,
+     "w": 5,
      "l": 0
     }
    },
    "alone": {
-    "n": 32,
-    "w": 26,
-    "l": 6,
+    "n": 0,
+    "w": 0,
+    "l": 0
+   }
+  },
+  "ALL|bench player (gs <= 1)|-": {
+   "launched": "2026-11-26",
+   "notified": [
+    "pending"
+   ],
+   "mode": "pending",
+   "rec": {
+    "n": 26,
+    "tg": 15,
+    "w": 18,
+    "l": 8,
+    "hit": 69.2,
+    "be": 78.3,
+    "gap": -9.1,
+    "u": -3.02,
+    "p_above": 0.153
+   },
+   "rest": {
+    "n": 154,
     "tg": 18,
-    "be": 78.0,
-    "p_beat": 0.54
+    "w": 120,
+    "l": 34,
+    "hit": 77.9,
+    "be": 78.7,
+    "gap": -0.8,
+    "u": -1.35,
+    "p_above": 0.385
+   },
+   "p_beat": 0.847,
+   "direction": "block",
+   "text": "Short 68.2 v 78.5, diff -7.3 [-12.5..-1.4], last 7 -9.3 (85/37 tg); all rungs agree -4.4, and REB -9.0, AST -5.6 and LU0 (gap -7.8, P 0.093) all point the same way. This extends the approved PTS bench block (34-16, counterfactual -8.4) to REB/AST: bench minutes get cut in blowouts and on returns.",
+   "stat": "ALL",
+   "cond": "bench player (gs <= 1)",
+   "sign": "-",
+   "sweep": true,
+   "counterfactual_gap": -8.3,
+   "overlap": {
+    "PTS-TOUGH": {
+     "n": 2,
+     "w": 2,
+     "l": 0
+    },
+    "REB-OPPOUT": {
+     "n": 1,
+     "w": 1,
+     "l": 0
+    },
+    "REB|underdog by 7+|+": {
+     "n": 1,
+     "w": 1,
+     "l": 0
+    },
+    "ALL|minutes mixture >= 90%|+": {
+     "n": 3,
+     "w": 3,
+     "l": 0
+    },
+    "PTS|bench player (gs <= 1)|-": {
+     "n": 18,
+     "w": 13,
+     "l": 5
+    },
+    "REB|L10 rate <= 70%|-": {
+     "n": 3,
+     "w": 1,
+     "l": 2
+    }
+   },
+   "alone": {
+    "n": 3,
+    "w": 2,
+    "l": 1,
+    "tg": 3,
+    "be": 79.3,
+    "p_beat": 0.812
+   }
+  },
+  "AST|opponent key player out|-": {
+   "launched": "2026-11-26",
+   "notified": [],
+   "mode": "action",
+   "rec": {
+    "n": 7,
+    "tg": 4,
+    "w": 5,
+    "l": 2,
+    "hit": 71.4,
+    "be": 78.3,
+    "gap": -6.8,
+    "u": -0.6,
+    "p_above": 0.258
+   },
+   "rest": {
+    "n": 26,
+    "tg": 12,
+    "w": 23,
+    "l": 3,
+    "hit": 88.5,
+    "be": 78.3,
+    "gap": 10.1,
+    "u": 3.43,
+    "p_above": 0.714
+   },
+   "p_beat": 0.742,
+   "direction": "block",
+   "text": "All rungs 61.7 v 66.1, diff -4.2 [-8.2..+0.1], last 7 -8.3 on 240 (34 tg); short agrees -4.9, last 7 -9.2. The market reacts to visible opponent news, and a weakened opponent means more lopsided games with fewer starter minutes for assists. The OPP-OUT watch row is -4.2 gap, P 0.288.",
+   "stat": "AST",
+   "cond": "opponent key player out",
+   "sign": "-",
+   "sweep": true,
+   "counterfactual_gap": -16.9,
+   "overlap": {
+    "AST|perfect L10 (10/10)|-": {
+     "n": 1,
+     "w": 1,
+     "l": 0
+    },
+    "AST|regular starter (gs >= 4)|+": {
+     "n": 7,
+     "w": 5,
+     "l": 2
+    }
+   },
+   "alone": {
+    "n": 0,
+    "w": 0,
+    "l": 0
    }
   }
  },
- "updated": "2026-11-26T07:08:06Z",
+ "updated": "2026-11-27T07:07:49Z",
  "since": "2026-11-24"
 }
