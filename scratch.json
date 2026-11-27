@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T23:10:03Z",
+ "generated": "2026-11-27T23:40:03Z",
  "out": [
   {
    "kind": "out",
@@ -12,6 +12,18 @@
    "status": "Out",
    "utc": "2026-11-27T23:10:03Z",
    "mins_to_tip": 79
+  },
+  {
+   "kind": "out",
+   "date": "2026-11-27",
+   "game": "PHI@IND",
+   "id": "3912848",
+   "player": "Dean Wade",
+   "espn_name": "Dean Wade",
+   "team": "PHI",
+   "status": "Out",
+   "utc": "2026-11-27T23:40:03Z",
+   "mins_to_tip": 49
   }
  ]
 }
