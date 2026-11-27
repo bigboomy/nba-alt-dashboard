@@ -1,9 +1,9 @@
 {
- "generated": "2026-11-26T02:40:03Z",
- "date": "2026-11-25",
+ "generated": "2026-11-27T22:30:03Z",
+ "date": "2026-11-27",
  "teams": {
   "MIA": {
-   "confirmed": true,
+   "confirmed": false,
    "starters": [
     "Klay Thompson",
     "Pelle Larsson",
@@ -11,257 +11,19 @@
     "Giannis Antetokounmpo",
     "Bam Adebayo"
    ],
-   "at": "2026-11-25T21:40:03Z"
-  },
-  "PHI": {
-   "confirmed": true,
-   "starters": [
-    "VJ Edgecombe",
-    "Jaylen Brown",
-    "Tyrese Maxey",
-    "LeBron James",
-    "Jabari Walker"
-   ],
-   "at": "2026-11-25T21:40:03Z"
-  },
-  "CHA": {
-   "confirmed": true,
-   "starters": [
-    "Brandon Miller",
-    "Sion James",
-    "Coby White",
-    "Naz Reid",
-    "Moussa Diabaté"
-   ],
-   "at": "2026-11-25T23:45:03Z"
-  },
-  "CHI": {
-   "confirmed": true,
-   "starters": [
-    "Buddy Hield",
-    "Matas Buzelis",
-    "Josh Giddey",
-    "Isaac Okoro",
-    "Nic Claxton"
-   ],
-   "at": "2026-11-25T23:45:03Z"
-  },
-  "CLE": {
-   "confirmed": true,
-   "starters": [
-    "Donovan Mitchell",
-    "Sam Merrill",
-    "James Harden",
-    "Peyton Watson",
-    "Jarrett Allen"
-   ],
-   "at": "2026-11-26T00:05:03Z"
+   "at": "2026-11-27T22:30:03Z"
   },
   "NYK": {
-   "confirmed": true,
+   "confirmed": false,
    "starters": [
-    "Jalen Brunson",
     "Mikal Bridges",
     "Landry Shamet",
+    "Jalen Brunson",
     "Josh Hart",
     "Karl-Anthony Towns"
    ],
-   "at": "2026-11-26T00:10:03Z"
-  },
-  "MIN": {
-   "confirmed": true,
-   "starters": [
-    "Ayo Dosunmu",
-    "Jonathan Kuminga",
-    "LaMelo Ball",
-    "Jaden McDaniels",
-    "Rudy Gobert"
-   ],
-   "at": "2026-11-26T00:10:03Z"
-  },
-  "OKC": {
-   "confirmed": true,
-   "starters": [
-    "Bennett Stirtz",
-    "Ajay Mitchell",
-    "Shai Gilgeous-Alexander",
-    "Micah Peavy",
-    "Isaiah Hartenstein"
-   ],
-   "at": "2026-11-26T00:10:03Z"
-  },
-  "BKN": {
-   "confirmed": true,
-   "starters": [
-    "Danny Wolf",
-    "Michael Porter Jr.",
-    "Mikel Brown Jr.",
-    "Julius Randle",
-    "Day'Ron Sharpe"
-   ],
-   "at": "2026-11-26T00:40:03Z"
-  },
-  "MIL": {
-   "confirmed": true,
-   "starters": [
-    "Tyler Herro",
-    "Jaime Jaquez Jr.",
-    "Ryan Rollins",
-    "Kyle Kuzma",
-    "Myles Turner"
-   ],
-   "at": "2026-11-26T00:40:03Z"
-  },
-  "LAC": {
-   "confirmed": true,
-   "starters": [
-    "Derrick Jones Jr.",
-    "Brandon Ingram",
-    "Darius Garland",
-    "Rui Hachimura",
-    "Brook Lopez"
-   ],
-   "at": "2026-11-26T00:35:03Z"
-  },
-  "MEM": {
-   "confirmed": true,
-   "starters": [
-    "Cedric Coward",
-    "Jaylen Wells",
-    "Ty Jerome",
-    "Kris Murray",
-    "Zach Edey"
-   ],
-   "at": "2026-11-26T00:35:03Z"
-  },
-  "HOU": {
-   "confirmed": true,
-   "starters": [
-    "Amen Thompson",
-    "Kevin Durant",
-    "Fred VanVleet",
-    "Jabari Smith Jr.",
-    "Alperen Sengun"
-   ],
-   "at": "2026-11-26T01:05:03Z"
-  },
-  "PHX": {
-   "confirmed": true,
-   "starters": [
-    "Jalen Green",
-    "Dillon Brooks",
-    "Devin Booker",
-    "Miles Bridges",
-    "Oso Ighodaro"
-   ],
-   "at": "2026-11-26T01:05:03Z"
-  },
-  "GSW": {
-   "confirmed": true,
-   "starters": [
-    "Brandin Podziemski",
-    "Yaxel Lendeborg",
-    "De'Anthony Melton",
-    "Draymond Green",
-    "Charles Bassey"
-   ],
-   "at": "2026-11-26T02:40:03Z"
-  },
-  "SAC": {
-   "confirmed": true,
-   "starters": [
-    "Emanuel Sharp",
-    "Keegan Murray",
-    "Darius Acuff Jr.",
-    "De'Andre Hunter",
-    "Domantas Sabonis"
-   ],
-   "at": "2026-11-26T02:40:03Z"
-  },
-  "POR": {
-   "confirmed": true,
-   "starters": [
-    "Deni Avdija",
-    "Toumani Camara",
-    "Damian Lillard",
-    "Sidy Cissoko",
-    "Donovan Clingan"
-   ],
-   "at": "2026-11-26T02:40:03Z"
-  },
-  "SAS": {
-   "confirmed": true,
-   "starters": [
-    "Devin Vassell",
-    "Julian Champagnie",
-    "Stephon Castle",
-    "Harrison Barnes",
-    "Victor Wembanyama"
-   ],
-   "at": "2026-11-26T02:40:03Z"
+   "at": "2026-11-27T22:30:03Z"
   }
  },
- "items": {
-  "Julius Randle|BKN": 1,
-  "Day'Ron Sharpe|BKN": 1,
-  "Danny Wolf|BKN": 1,
-  "Kyle Kuzma|MIL": 1,
-  "Brayden Burries|MIL": 0,
-  "Moussa Diabate|CHA": 1,
-  "Sion James|CHA": 1,
-  "Isaac Okoro|CHI": 1,
-  "Matas Buzelis|CHI": 1,
-  "Josh Giddey|CHI": 1,
-  "Donovan Mitchell|CLE": 1,
-  "James Harden|CLE": 1,
-  "Jarrett Allen|CLE": 1,
-  "Peyton Watson|CLE": 1,
-  "Tyrese Proctor|CLE": 0,
-  "Meleek Thomas|CLE": 0,
-  "Karl-Anthony Towns|NYK": 1,
-  "Mikal Bridges|NYK": 1,
-  "Jalen Brunson|NYK": 1,
-  "Brook Lopez|LAC": 1,
-  "Max Strus|LAC": 0,
-  "Rui Hachimura|LAC": 1,
-  "Darius Garland|LAC": 1,
-  "Ty Jerome|MEM": 1,
-  "Cam Spencer|MEM": 0,
-  "Cedric Coward|MEM": 1,
-  "Jaylen Wells|MEM": 1,
-  "Giannis Antetokounmpo|MIA": 1,
-  "Bam Adebayo|MIA": 1,
-  "Davion Mitchell|MIA": 1,
-  "Pelle Larsson|MIA": 1,
-  "Klay Thompson|MIA": 1,
-  "LeBron James|PHI": 1,
-  "Jaylen Brown|PHI": 1,
-  "Tyrese Maxey|PHI": 1,
-  "VJ Edgecombe|PHI": 1,
-  "Ayo Dosunmu|MIN": 1,
-  "Jaden McDaniels|MIN": 1,
-  "Isaiah Hartenstein|OKC": 1,
-  "Jared McCain|OKC": 0,
-  "Ajay Mitchell|OKC": 1,
-  "Marcus Smart|HOU": 0,
-  "Kevin Durant|HOU": 1,
-  "Alperen Sengun|HOU": 1,
-  "Devin Booker|PHX": 1,
-  "Miles Bridges|PHX": 1,
-  "Collin Gillespie|PHX": 0,
-  "Jalen Green|PHX": 1,
-  "Oso Ighodaro|PHX": 1,
-  "Khaman Maluach|PHX": 0,
-  "Yaxel Lendeborg|GSW": 1,
-  "Draymond Green|GSW": 1,
-  "Domantas Sabonis|SAC": 1,
-  "Keegan Murray|SAC": 1,
-  "Darius Acuff Jr.|SAC": 1,
-  "Jrue Holiday|POR": 0,
-  "Toumani Camara|POR": 1,
-  "Deni Avdija|POR": 1,
-  "Donovan Clingan|POR": 1,
-  "Damian Lillard|POR": 1,
-  "Devin Vassell|SAS": 1
- }
+ "items": {}
 }
