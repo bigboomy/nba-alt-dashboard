@@ -1,28 +1,28 @@
 {
- "generated": "2026-11-27T23:35:03Z",
+ "generated": "2026-11-27T23:40:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Klay Thompson",
-    "Pelle Larsson",
     "Davion Mitchell",
     "Giannis Antetokounmpo",
+    "Klay Thompson",
+    "Pelle Larsson",
     "Bam Adebayo"
    ],
-   "at": "2026-11-27T22:30:03Z"
+   "at": "2026-11-27T23:40:03Z"
   },
   "NYK": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
+    "Jalen Brunson",
     "Mikal Bridges",
     "Landry Shamet",
-    "Jalen Brunson",
     "Josh Hart",
     "Karl-Anthony Towns"
    ],
-   "at": "2026-11-27T22:30:03Z"
+   "at": "2026-11-27T23:40:03Z"
   },
   "BKN": {
    "confirmed": false,
@@ -113,5 +113,14 @@
    "at": "2026-11-27T23:35:03Z"
   }
  },
- "items": {}
+ "items": {
+  "Giannis Antetokounmpo|MIA": 1,
+  "Bam Adebayo|MIA": 1,
+  "Davion Mitchell|MIA": 1,
+  "Pelle Larsson|MIA": 1,
+  "Klay Thompson|MIA": 1,
+  "Karl-Anthony Towns|NYK": 1,
+  "Mikal Bridges|NYK": 1,
+  "Jalen Brunson|NYK": 1
+ }
 }
