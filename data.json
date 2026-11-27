@@ -4842,6 +4842,27 @@
           "wowy_keys": "Jaylen Brown",
           "wowy_mu": 7.058
         },
+        "Pascal Siakam|PTS|17.5|LSR": {
+          "best_book": "ladbrokes",
+          "best_price": 1.24,
+          "mm_min": 35.43,
+          "mm_mu": 27.159,
+          "n_books": 5,
+          "opp_lift": 0.074,
+          "opp_out": "SC2:Jaylen Brown",
+          "p_mm": 0.9436,
+          "p_pin": 0.7833,
+          "p_wowy": 0.8755,
+          "pin_edge_pp": -2.3,
+          "pin_line": 23.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 24.399
+        },
         "Pascal Siakam|PTS|19.5|lean": {
           "best_book": "bet365",
           "best_price": 1.43,
@@ -5542,6 +5563,70 @@
           "std": 2.5,
           "t": "IND",
           "tier": "A"
+        },
+        {
+          "alt": 17.5,
+          "e": 3.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.94",
+            "[ROLE?]",
+            "C0.72",
+            "Z1.63",
+            "TMO",
+            "PIN-2.3",
+            "OPP-OUT:SC2",
+            "RET2:Nembhard",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "100% (10/10)",
+          "l5": [
+            20,
+            25,
+            21,
+            24,
+            31
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Andrew Nembhard"
+              ]
+            },
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Andrew Nembhard"
+              ]
+            }
+          ],
+          "o": 1.24,
+          "opp": "PHI 14th fewest PTS allowed · pace +0.3",
+          "p": "Pascal Siakam",
+          "pmx": 0.9053,
+          "s": "PTS",
+          "st": "5",
+          "std": 22.5,
+          "t": "IND",
+          "tier": "A"
+        }
+      ],
+      "lsr": [
+        {
+          "n": 1,
+          "out": [
+            "T.J. McConnell"
+          ],
+          "run": "20261127T231003Z_lsr_PHI-IND",
+          "utc": "2026-11-27T23:10:03Z"
         }
       ],
       "mkt": 229.5,
