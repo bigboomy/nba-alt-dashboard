@@ -1,165 +1,165 @@
 {
-  "generated": "2026-11-25T07:07:03Z",
+  "generated": "2026-11-27T07:07:02Z",
   "games": [
     {
       "away": "Miami Heat",
-      "home": "Philadelphia 76ers",
-      "tip_utc": "2026-11-25T22:00:00Z",
+      "home": "New York Knicks",
+      "tip_utc": "2026-11-28T00:00:00Z",
       "mx": {
         "teams": {
           "MIA": {
             "v": {
-              "gp": 16,
-              "rec": "10-6",
+              "gp": 17,
+              "rec": "10-7",
               "home": "6-3",
-              "away": "4-3",
+              "away": "4-4",
               "l10": "8-2",
-              "ppg": 120.7,
-              "oppg": 119.4,
-              "fg_pct": 47.7,
+              "ppg": 119.7,
+              "oppg": 118.9,
+              "fg_pct": 47.5,
               "opp_fg_pct": 47.6,
-              "fg3_pct": 35.4,
-              "fg3m": 14.4,
-              "fg3a": 40.6,
-              "opp_fg3_pct": 38.3,
-              "ft_pct": 74.9,
-              "fta": 28.9,
-              "ts_pct": 59.5,
-              "ast": 29.6,
-              "stl": 8.0,
+              "fg3_pct": 35.0,
+              "fg3m": 14.0,
+              "fg3a": 40.0,
+              "opp_fg3_pct": 38.4,
+              "ft_pct": 74.6,
+              "fta": 28.8,
+              "ts_pct": 59.1,
+              "ast": 29.3,
+              "stl": 7.8,
               "reb": 42.6,
-              "oreb": 10.7,
+              "oreb": 10.8,
               "dreb": 31.9,
               "tov": 14.4,
-              "blk": 5.8,
-              "pf": 21.2,
-              "pace": 105.0,
-              "net": 1.2,
-              "ats": "6-10-0",
+              "blk": 5.6,
+              "pf": 20.8,
+              "pace": 104.5,
+              "net": 0.8,
+              "ats": "6-11-0",
               "ats_home": "5-4-0",
-              "ats_away": "1-6-0",
+              "ats_away": "1-7-0",
               "ats_l10": "4-6-0",
-              "ou": "9-7-0",
-              "ou_l10": "6-4-0"
+              "ou": "9-8-0",
+              "ou_l10": "5-5-0"
             },
             "rk": {
-              "ppg": 1,
+              "ppg": 2,
               "oppg": 25,
               "fg_pct": 6,
               "opp_fg_pct": 24,
-              "fg3_pct": 14,
-              "fg3m": 10,
-              "fg3a": 9,
+              "fg3_pct": 17,
+              "fg3m": 13,
+              "fg3a": 10,
               "opp_fg3_pct": 28,
               "ft_pct": 27,
               "fta": 3,
-              "ts_pct": 4,
+              "ts_pct": 5,
               "ast": 2,
-              "stl": 16,
+              "stl": 18,
               "reb": 21,
-              "oreb": 24,
+              "oreb": 23,
               "dreb": 12,
               "tov": 11,
-              "blk": 2,
-              "pf": 10,
-              "pace": 3,
+              "blk": 4,
+              "pf": 8,
+              "pace": 4,
               "net": 14
             },
-            "pace": 103.8,
+            "pace": 103.5,
             "allow100": {
-              "PTS": 112.7,
-              "REB": 42.9,
-              "AST": 26.7,
+              "PTS": 112.8,
+              "REB": 43.0,
+              "AST": 26.8,
               "3PM": 14.0
             },
             "allow_rk": {
               "PTS": 7,
               "REB": 19,
-              "AST": 7,
+              "AST": 5,
               "3PM": 3
             },
             "out": []
           },
-          "PHI": {
+          "NYK": {
             "v": {
               "gp": 18,
-              "rec": "14-4",
+              "rec": "12-6",
               "home": "7-3",
-              "away": "7-1",
-              "l10": "7-3",
-              "ppg": 115.3,
-              "oppg": 113.4,
-              "fg_pct": 46.7,
-              "opp_fg_pct": 46.8,
-              "fg3_pct": 34.9,
-              "fg3m": 11.9,
-              "fg3a": 34.1,
-              "opp_fg3_pct": 35.4,
-              "ft_pct": 80.3,
-              "fta": 27.1,
-              "ts_pct": 58.0,
-              "ast": 26.6,
-              "stl": 7.9,
-              "reb": 42.2,
-              "oreb": 9.9,
-              "dreb": 32.3,
-              "tov": 11.9,
-              "blk": 4.3,
-              "pf": 20.2,
-              "pace": 101.4,
-              "net": 1.8,
+              "away": "5-3",
+              "l10": "8-2",
+              "ppg": 109.6,
+              "oppg": 103.2,
+              "fg_pct": 44.5,
+              "opp_fg_pct": 43.5,
+              "fg3_pct": 37.4,
+              "fg3m": 14.9,
+              "fg3a": 40.0,
+              "opp_fg3_pct": 33.8,
+              "ft_pct": 80.2,
+              "fta": 20.2,
+              "ts_pct": 56.5,
+              "ast": 27.1,
+              "stl": 7.1,
+              "reb": 46.7,
+              "oreb": 12.9,
+              "dreb": 33.7,
+              "tov": 14.6,
+              "blk": 4.6,
+              "pf": 21.2,
+              "pace": 98.3,
+              "net": 6.4,
               "ats": "9-9-0",
-              "ats_home": "4-6-0",
-              "ats_away": "5-3-0",
-              "ats_l10": "4-6-0",
-              "ou": "10-8-0",
-              "ou_l10": "8-2-0"
+              "ats_home": "6-4-0",
+              "ats_away": "3-5-0",
+              "ats_l10": "7-3-0",
+              "ou": "6-12-0",
+              "ou_l10": "4-6-0"
             },
             "rk": {
-              "ppg": 12,
-              "oppg": 16,
-              "fg_pct": 10,
-              "opp_fg_pct": 19,
-              "fg3_pct": 19,
-              "fg3m": 25,
-              "fg3a": 25,
-              "opp_fg3_pct": 13,
+              "ppg": 25,
+              "oppg": 2,
+              "fg_pct": 27,
+              "opp_fg_pct": 4,
+              "fg3_pct": 4,
+              "fg3m": 4,
+              "fg3a": 10,
+              "opp_fg3_pct": 10,
               "ft_pct": 7,
-              "fta": 6,
-              "ts_pct": 13,
-              "ast": 17,
-              "stl": 17,
-              "reb": 23,
-              "oreb": 29,
-              "dreb": 10,
-              "tov": 1,
-              "blk": 26,
-              "pf": 6,
-              "pace": 21,
-              "net": 12
+              "fta": 29,
+              "ts_pct": 23,
+              "ast": 13,
+              "stl": 27,
+              "reb": 3,
+              "oreb": 9,
+              "dreb": 5,
+              "tov": 13,
+              "blk": 19,
+              "pf": 10,
+              "pace": 30,
+              "net": 7
             },
-            "pace": 101.6,
+            "pace": 99.6,
             "allow100": {
-              "PTS": 111.6,
-              "REB": 43.9,
-              "AST": 25.8,
-              "3PM": 13.0
+              "PTS": 108.0,
+              "REB": 42.2,
+              "AST": 25.1,
+              "3PM": 13.1
             },
             "allow_rk": {
-              "PTS": 15,
-              "REB": 4,
-              "AST": 17,
-              "3PM": 18
+              "PTS": 27,
+              "REB": 23,
+              "AST": 25,
+              "3PM": 16
             },
             "out": []
           }
         },
-        "exp_pace": 103.4,
+        "exp_pace": 101.2,
         "home_spread": null,
         "lg": {
-          "pace": 102.0,
+          "pace": 101.9,
           "PTS": 111.2,
-          "REB": 42.9,
+          "REB": 43.0,
           "AST": 25.9,
           "3PM": 13.2
         },
@@ -167,461 +167,39 @@
           "MIA": {
             "conf": "E",
             "seed": 6,
-            "rec": "10-6"
+            "rec": "10-7"
           },
-          "PHI": {
+          "NYK": {
             "conf": "E",
-            "seed": 1,
-            "rec": "14-4"
+            "seed": 3,
+            "rec": "12-6"
           }
         },
         "win": {
-          "home": 57.7,
-          "away": 42.3,
+          "home": 67.3,
+          "away": 32.7,
           "src": "model"
         }
       },
       "inj": {
         "MIA": [
           {
+            "name": "Andrew Wiggins",
+            "status": "Day-To-Day"
+          },
+          {
             "name": "Giannis Antetokounmpo",
             "status": "Day-To-Day"
           }
         ],
-        "PHI": [
-          {
-            "name": "Ariel Hukporti",
-            "status": "Out"
-          },
-          {
-            "name": "Joel Embiid",
-            "status": "Day-To-Day"
-          }
-        ]
-      }
-    },
-    {
-      "away": "Chicago Bulls",
-      "home": "Charlotte Hornets",
-      "tip_utc": "2026-11-26T00:00:00Z",
-      "mx": {
-        "teams": {
-          "CHI": {
-            "v": {
-              "gp": 17,
-              "rec": "5-12",
-              "home": "2-6",
-              "away": "3-6",
-              "l10": "4-6",
-              "ppg": 116.9,
-              "oppg": 123.6,
-              "fg_pct": 45.6,
-              "opp_fg_pct": 48.1,
-              "fg3_pct": 33.4,
-              "fg3m": 14.1,
-              "fg3a": 42.1,
-              "opp_fg3_pct": 36.1,
-              "ft_pct": 76.9,
-              "fta": 25.9,
-              "ts_pct": 57.1,
-              "ast": 28.6,
-              "stl": 8.3,
-              "reb": 43.6,
-              "oreb": 12.5,
-              "dreb": 31.1,
-              "tov": 16.7,
-              "blk": 5.4,
-              "pf": 23.3,
-              "pace": 106.7,
-              "net": -6.6,
-              "ats": "10-7-0",
-              "ats_home": "6-2-0",
-              "ats_away": "4-5-0",
-              "ats_l10": "7-3-0",
-              "ou": "7-10-0",
-              "ou_l10": "5-5-0"
-            },
-            "rk": {
-              "ppg": 7,
-              "oppg": 30,
-              "fg_pct": 19,
-              "opp_fg_pct": 26,
-              "fg3_pct": 28,
-              "fg3m": 14,
-              "fg3a": 6,
-              "opp_fg3_pct": 21,
-              "ft_pct": 20,
-              "fta": 8,
-              "ts_pct": 16,
-              "ast": 4,
-              "stl": 12,
-              "reb": 15,
-              "oreb": 11,
-              "dreb": 21,
-              "tov": 24,
-              "blk": 6,
-              "pf": 26,
-              "pace": 1,
-              "net": 23
-            },
-            "pace": 105.0,
-            "allow100": {
-              "PTS": 113.5,
-              "REB": 43.1,
-              "AST": 26.4,
-              "3PM": 12.7
-            },
-            "allow_rk": {
-              "PTS": 5,
-              "REB": 12,
-              "AST": 11,
-              "3PM": 23
-            },
-            "out": []
-          },
-          "CHA": {
-            "v": {
-              "gp": 16,
-              "rec": "4-12",
-              "home": "3-5",
-              "away": "1-7",
-              "l10": "1-9",
-              "ppg": 100.6,
-              "oppg": 110.9,
-              "fg_pct": 40.4,
-              "opp_fg_pct": 47.4,
-              "fg3_pct": 31.8,
-              "fg3m": 14.4,
-              "fg3a": 45.4,
-              "opp_fg3_pct": 39.9,
-              "ft_pct": 81.9,
-              "fta": 18.7,
-              "ts_pct": 52.4,
-              "ast": 22.0,
-              "stl": 7.1,
-              "reb": 46.5,
-              "oreb": 15.2,
-              "dreb": 31.3,
-              "tov": 18.9,
-              "blk": 4.6,
-              "pf": 20.9,
-              "pace": 98.8,
-              "net": -10.2,
-              "ats": "6-10-0",
-              "ats_home": "3-5-0",
-              "ats_away": "3-5-0",
-              "ats_l10": "3-7-0",
-              "ou": "7-9-0",
-              "ou_l10": "7-3-0"
-            },
-            "rk": {
-              "ppg": 30,
-              "oppg": 9,
-              "fg_pct": 30,
-              "opp_fg_pct": 23,
-              "fg3_pct": 30,
-              "fg3m": 10,
-              "fg3a": 1,
-              "opp_fg3_pct": 30,
-              "ft_pct": 2,
-              "fta": 30,
-              "ts_pct": 30,
-              "ast": 30,
-              "stl": 27,
-              "reb": 4,
-              "oreb": 1,
-              "dreb": 19,
-              "tov": 30,
-              "blk": 19,
-              "pf": 8,
-              "pace": 29,
-              "net": 28
-            },
-            "pace": 100.0,
-            "allow100": {
-              "PTS": 112.2,
-              "REB": 41.9,
-              "AST": 26.1,
-              "3PM": 14.1
-            },
-            "allow_rk": {
-              "PTS": 11,
-              "REB": 26,
-              "AST": 15,
-              "3PM": 2
-            },
-            "out": []
-          }
-        },
-        "exp_pace": 103.0,
-        "home_spread": null,
-        "lg": {
-          "pace": 102.0,
-          "PTS": 111.2,
-          "REB": 42.9,
-          "AST": 25.9,
-          "3PM": 13.2
-        },
-        "seed": {
-          "CHI": {
-            "conf": "E",
-            "seed": 12,
-            "rec": "5-12"
-          },
-          "CHA": {
-            "conf": "E",
-            "seed": 13,
-            "rec": "4-12"
-          }
-        },
-        "win": {
-          "home": 49.6,
-          "away": 50.4,
-          "src": "model"
-        }
-      },
-      "inj": {
-        "CHI": [
-          {
-            "name": "Caleb Wilson",
-            "status": "Out"
-          },
-          {
-            "name": "Jalen Smith",
-            "status": "Day-To-Day"
-          },
-          {
-            "name": "Norman Powell",
-            "status": "Out"
-          }
-        ],
-        "CHA": [
-          {
-            "name": "Dennis Schroder",
-            "status": "Out"
-          },
-          {
-            "name": "Grayson Allen",
-            "status": "Out"
-          },
-          {
-            "name": "Kon Knueppel",
-            "status": "Out"
-          },
-          {
-            "name": "Ryan Kalkbrenner",
-            "status": "Day-To-Day"
-          },
-          {
-            "name": "Sion James",
-            "status": "Day-To-Day"
-          }
-        ]
-      }
-    },
-    {
-      "away": "Cleveland Cavaliers",
-      "home": "New York Knicks",
-      "tip_utc": "2026-11-26T00:30:00Z",
-      "mx": {
-        "teams": {
-          "CLE": {
-            "v": {
-              "gp": 18,
-              "rec": "9-9",
-              "home": "7-3",
-              "away": "2-6",
-              "l10": "5-5",
-              "ppg": 118.2,
-              "oppg": 116.8,
-              "fg_pct": 47.4,
-              "opp_fg_pct": 45.6,
-              "fg3_pct": 36.6,
-              "fg3m": 14.9,
-              "fg3a": 40.7,
-              "opp_fg3_pct": 35.7,
-              "ft_pct": 77.6,
-              "fta": 24.1,
-              "ts_pct": 59.2,
-              "ast": 27.1,
-              "stl": 7.4,
-              "reb": 45.5,
-              "oreb": 11.3,
-              "dreb": 34.2,
-              "tov": 13.9,
-              "blk": 5.3,
-              "pf": 21.7,
-              "pace": 102.8,
-              "net": 1.4,
-              "ats": "7-11-0",
-              "ats_home": "5-5-0",
-              "ats_away": "2-6-0",
-              "ats_l10": "5-5-0",
-              "ou": "10-8-0",
-              "ou_l10": "6-4-0"
-            },
-            "rk": {
-              "ppg": 4,
-              "oppg": 23,
-              "fg_pct": 7,
-              "opp_fg_pct": 11,
-              "fg3_pct": 9,
-              "fg3m": 5,
-              "fg3a": 8,
-              "opp_fg3_pct": 18,
-              "ft_pct": 15,
-              "fta": 15,
-              "ts_pct": 7,
-              "ast": 12,
-              "stl": 20,
-              "reb": 7,
-              "oreb": 19,
-              "dreb": 3,
-              "tov": 5,
-              "blk": 11,
-              "pf": 15,
-              "pace": 7,
-              "net": 13
-            },
-            "pace": 102.5,
-            "allow100": {
-              "PTS": 112.4,
-              "REB": 42.9,
-              "AST": 26.8,
-              "3PM": 13.6
-            },
-            "allow_rk": {
-              "PTS": 9,
-              "REB": 17,
-              "AST": 3,
-              "3PM": 9
-            },
-            "out": []
-          },
-          "NYK": {
-            "v": {
-              "gp": 17,
-              "rec": "11-6",
-              "home": "6-3",
-              "away": "5-3",
-              "l10": "8-2",
-              "ppg": 108.9,
-              "oppg": 103.2,
-              "fg_pct": 44.1,
-              "opp_fg_pct": 43.6,
-              "fg3_pct": 36.9,
-              "fg3m": 14.8,
-              "fg3a": 40.2,
-              "opp_fg3_pct": 34.3,
-              "ft_pct": 80.2,
-              "fta": 20.5,
-              "ts_pct": 56.1,
-              "ast": 26.7,
-              "stl": 7.1,
-              "reb": 46.9,
-              "oreb": 12.9,
-              "dreb": 34.0,
-              "tov": 14.8,
-              "blk": 4.5,
-              "pf": 21.1,
-              "pace": 98.3,
-              "net": 5.7,
-              "ats": "8-9-0",
-              "ats_home": "5-4-0",
-              "ats_away": "3-5-0",
-              "ats_l10": "7-3-0",
-              "ou": "5-12-0",
-              "ou_l10": "4-6-0"
-            },
-            "rk": {
-              "ppg": 26,
-              "oppg": 2,
-              "fg_pct": 28,
-              "opp_fg_pct": 4,
-              "fg3_pct": 6,
-              "fg3m": 6,
-              "fg3a": 10,
-              "opp_fg3_pct": 10,
-              "ft_pct": 8,
-              "fta": 28,
-              "ts_pct": 24,
-              "ast": 15,
-              "stl": 27,
-              "reb": 3,
-              "oreb": 9,
-              "dreb": 5,
-              "tov": 14,
-              "blk": 24,
-              "pf": 9,
-              "pace": 30,
-              "net": 8
-            },
-            "pace": 99.7,
-            "allow100": {
-              "PTS": 108.2,
-              "REB": 42.2,
-              "AST": 25.3,
-              "3PM": 13.2
-            },
-            "allow_rk": {
-              "PTS": 27,
-              "REB": 22,
-              "AST": 24,
-              "3PM": 16
-            },
-            "out": []
-          }
-        },
-        "exp_pace": 100.2,
-        "home_spread": null,
-        "lg": {
-          "pace": 102.0,
-          "PTS": 111.2,
-          "REB": 42.9,
-          "AST": 25.9,
-          "3PM": 13.2
-        },
-        "seed": {
-          "CLE": {
-            "conf": "E",
-            "seed": 7,
-            "rec": "9-9"
-          },
-          "NYK": {
-            "conf": "E",
-            "seed": 3,
-            "rec": "11-6"
-          }
-        },
-        "win": {
-          "home": 64.6,
-          "away": 35.4,
-          "src": "model"
-        }
-      },
-      "inj": {
-        "CLE": [
-          {
-            "name": "Evan Mobley",
-            "status": "Out"
-          },
-          {
-            "name": "Nae'Qwan Tomlin",
-            "status": "Out"
-          }
-        ],
         "NYK": [
+          {
+            "name": "Andre Drummond",
+            "status": "Day-To-Day"
+          },
           {
             "name": "Jordan Clarkson",
             "status": "Out"
-          },
-          {
-            "name": "Josh Hart",
-            "status": "Day-To-Day"
-          },
-          {
-            "name": "Karl-Anthony Towns",
-            "status": "Day-To-Day"
           },
           {
             "name": "Miles McBride",
@@ -635,302 +213,75 @@
       }
     },
     {
-      "away": "Minnesota Timberwolves",
-      "home": "Oklahoma City Thunder",
-      "tip_utc": "2026-11-26T00:30:00Z",
-      "mx": {
-        "teams": {
-          "MIN": {
-            "v": {
-              "gp": 18,
-              "rec": "13-5",
-              "home": "9-3",
-              "away": "4-2",
-              "l10": "8-2",
-              "ppg": 116.4,
-              "oppg": 105.8,
-              "fg_pct": 48.0,
-              "opp_fg_pct": 43.4,
-              "fg3_pct": 37.5,
-              "fg3m": 14.1,
-              "fg3a": 37.4,
-              "opp_fg3_pct": 33.7,
-              "ft_pct": 69.8,
-              "fta": 25.0,
-              "ts_pct": 58.5,
-              "ast": 25.6,
-              "stl": 9.0,
-              "reb": 47.0,
-              "oreb": 12.3,
-              "dreb": 34.7,
-              "tov": 16.3,
-              "blk": 5.3,
-              "pf": 21.3,
-              "pace": 103.4,
-              "net": 10.6,
-              "ats": "14-4-0",
-              "ats_home": "8-4-0",
-              "ats_away": "6-0-0",
-              "ats_l10": "7-3-0",
-              "ou": "7-11-0",
-              "ou_l10": "3-7-0"
-            },
-            "rk": {
-              "ppg": 10,
-              "oppg": 4,
-              "fg_pct": 4,
-              "opp_fg_pct": 3,
-              "fg3_pct": 4,
-              "fg3m": 14,
-              "fg3a": 17,
-              "opp_fg3_pct": 6,
-              "ft_pct": 30,
-              "fta": 11,
-              "ts_pct": 8,
-              "ast": 20,
-              "stl": 8,
-              "reb": 2,
-              "oreb": 12,
-              "dreb": 2,
-              "tov": 20,
-              "blk": 11,
-              "pf": 13,
-              "pace": 5,
-              "net": 2
-            },
-            "pace": 102.9,
-            "allow100": {
-              "PTS": 106.3,
-              "REB": 41.9,
-              "AST": 24.7,
-              "3PM": 12.4
-            },
-            "allow_rk": {
-              "PTS": 30,
-              "REB": 25,
-              "AST": 27,
-              "3PM": 29
-            },
-            "out": []
-          },
-          "OKC": {
-            "v": {
-              "gp": 18,
-              "rec": "10-8",
-              "home": "6-1",
-              "away": "4-7",
-              "l10": "4-6",
-              "ppg": 113.4,
-              "oppg": 110.2,
-              "fg_pct": 46.4,
-              "opp_fg_pct": 43.1,
-              "fg3_pct": 35.2,
-              "fg3m": 11.4,
-              "fg3a": 32.3,
-              "opp_fg3_pct": 35.4,
-              "ft_pct": 79.4,
-              "fta": 21.8,
-              "ts_pct": 56.2,
-              "ast": 23.3,
-              "stl": 7.9,
-              "reb": 45.6,
-              "oreb": 11.3,
-              "dreb": 34.2,
-              "tov": 12.8,
-              "blk": 5.2,
-              "pf": 19.0,
-              "pace": 102.0,
-              "net": 3.2,
-              "ats": "8-10-0",
-              "ats_home": "4-3-0",
-              "ats_away": "4-7-0",
-              "ats_l10": "3-7-0",
-              "ou": "10-8-0",
-              "ou_l10": "8-2-0"
-            },
-            "rk": {
-              "ppg": 15,
-              "oppg": 6,
-              "fg_pct": 13,
-              "opp_fg_pct": 2,
-              "fg3_pct": 16,
-              "fg3m": 27,
-              "fg3a": 28,
-              "opp_fg3_pct": 13,
-              "ft_pct": 11,
-              "fta": 23,
-              "ts_pct": 23,
-              "ast": 29,
-              "stl": 17,
-              "reb": 6,
-              "oreb": 19,
-              "dreb": 3,
-              "tov": 2,
-              "blk": 14,
-              "pf": 2,
-              "pace": 16,
-              "net": 10
-            },
-            "pace": 102.0,
-            "allow100": {
-              "PTS": 109.7,
-              "REB": 43.6,
-              "AST": 25.5,
-              "3PM": 14.2
-            },
-            "allow_rk": {
-              "PTS": 24,
-              "REB": 8,
-              "AST": 20,
-              "3PM": 1
-            },
-            "out": []
-          }
-        },
-        "exp_pace": 102.9,
-        "home_spread": null,
-        "lg": {
-          "pace": 102.0,
-          "PTS": 111.2,
-          "REB": 42.9,
-          "AST": 25.9,
-          "3PM": 13.2
-        },
-        "seed": {
-          "MIN": {
-            "conf": "W",
-            "seed": 3,
-            "rec": "13-5"
-          },
-          "OKC": {
-            "conf": "W",
-            "seed": 10,
-            "rec": "10-8"
-          }
-        },
-        "win": {
-          "home": 41.3,
-          "away": 58.7,
-          "src": "model"
-        }
-      },
-      "inj": {
-        "MIN": [
-          {
-            "name": "Anthony Edwards",
-            "status": "Out"
-          },
-          {
-            "name": "Donte DiVincenzo",
-            "status": "Out"
-          },
-          {
-            "name": "Jaylen Clark",
-            "status": "Out"
-          }
-        ],
-        "OKC": [
-          {
-            "name": "Aday Mara",
-            "status": "Out"
-          },
-          {
-            "name": "Cason Wallace",
-            "status": "Out"
-          },
-          {
-            "name": "Chet Holmgren",
-            "status": "Out"
-          },
-          {
-            "name": "Jalen Williams",
-            "status": "Out"
-          },
-          {
-            "name": "Jaylin Williams",
-            "status": "Out"
-          },
-          {
-            "name": "Nikola Topic",
-            "status": "Out"
-          },
-          {
-            "name": "Thomas Sorber",
-            "status": "Out"
-          }
-        ]
-      }
-    },
-    {
       "away": "Brooklyn Nets",
-      "home": "Milwaukee Bucks",
-      "tip_utc": "2026-11-26T01:00:00Z",
+      "home": "Toronto Raptors",
+      "tip_utc": "2026-11-28T00:30:00Z",
       "mx": {
         "teams": {
           "BKN": {
             "v": {
-              "gp": 16,
-              "rec": "3-13",
+              "gp": 17,
+              "rec": "4-13",
               "home": "1-6",
-              "away": "2-7",
-              "l10": "2-8",
-              "ppg": 111.2,
-              "oppg": 120.2,
-              "fg_pct": 45.3,
-              "opp_fg_pct": 48.4,
-              "fg3_pct": 36.8,
-              "fg3m": 14.6,
-              "fg3a": 39.6,
-              "opp_fg3_pct": 37.6,
-              "ft_pct": 75.9,
-              "fta": 27.5,
-              "ts_pct": 58.1,
-              "ast": 24.8,
-              "stl": 8.3,
-              "reb": 40.6,
-              "oreb": 11.1,
-              "dreb": 29.6,
-              "tov": 17.7,
-              "blk": 4.6,
-              "pf": 25.6,
-              "pace": 102.5,
-              "net": -9.1,
-              "ats": "8-8-0",
+              "away": "3-7",
+              "l10": "3-7",
+              "ppg": 110.8,
+              "oppg": 118.9,
+              "fg_pct": 45.1,
+              "opp_fg_pct": 48.0,
+              "fg3_pct": 36.2,
+              "fg3m": 14.3,
+              "fg3a": 39.5,
+              "opp_fg3_pct": 36.7,
+              "ft_pct": 76.0,
+              "fta": 27.4,
+              "ts_pct": 57.7,
+              "ast": 24.7,
+              "stl": 8.4,
+              "reb": 41.3,
+              "oreb": 11.3,
+              "dreb": 30.0,
+              "tov": 17.4,
+              "blk": 4.5,
+              "pf": 25.1,
+              "pace": 102.3,
+              "net": -8.1,
+              "ats": "9-8-0",
               "ats_home": "2-5-0",
-              "ats_away": "6-3-0",
+              "ats_away": "7-3-0",
               "ats_l10": "5-5-0",
-              "ou": "10-6-0",
+              "ou": "10-7-0",
               "ou_l10": "7-3-0"
             },
             "rk": {
-              "ppg": 21,
-              "oppg": 27,
-              "fg_pct": 22,
+              "ppg": 22,
+              "oppg": 25,
+              "fg_pct": 23,
               "opp_fg_pct": 27,
-              "fg3_pct": 7,
+              "fg3_pct": 10,
               "fg3m": 9,
               "fg3a": 12,
-              "opp_fg3_pct": 26,
-              "ft_pct": 23,
+              "opp_fg3_pct": 24,
+              "ft_pct": 24,
               "fta": 5,
-              "ts_pct": 11,
-              "ast": 23,
+              "ts_pct": 13,
+              "ast": 24,
               "stl": 12,
-              "reb": 29,
-              "oreb": 22,
+              "reb": 25,
+              "oreb": 20,
               "dreb": 26,
               "tov": 29,
-              "blk": 19,
+              "blk": 22,
               "pf": 30,
-              "pace": 8,
+              "pace": 9,
               "net": 27
             },
-            "pace": 102.3,
+            "pace": 102.1,
             "allow100": {
-              "PTS": 114.3,
-              "REB": 41.7,
+              "PTS": 113.8,
+              "REB": 41.8,
               "AST": 26.6,
-              "3PM": 13.9
+              "3PM": 13.8
             },
             "allow_rk": {
               "PTS": 4,
@@ -940,266 +291,493 @@
             },
             "out": []
           },
-          "MIL": {
+          "TOR": {
             "v": {
-              "gp": 18,
-              "rec": "2-16",
-              "home": "1-8",
-              "away": "1-8",
-              "l10": "1-9",
-              "ppg": 109.7,
-              "oppg": 121.1,
-              "fg_pct": 43.7,
-              "opp_fg_pct": 46.7,
-              "fg3_pct": 35.1,
-              "fg3m": 15.0,
-              "fg3a": 42.8,
-              "opp_fg3_pct": 35.9,
-              "ft_pct": 75.7,
-              "fta": 22.4,
-              "ts_pct": 55.5,
-              "ast": 24.6,
-              "stl": 7.1,
-              "reb": 44.7,
-              "oreb": 13.2,
-              "dreb": 31.5,
-              "tov": 16.4,
-              "blk": 4.8,
-              "pf": 23.5,
-              "pace": 102.5,
-              "net": -11.4,
-              "ats": "9-9-0",
+              "gp": 17,
+              "rec": "6-11",
+              "home": "2-7",
+              "away": "4-4",
+              "l10": "2-8",
+              "ppg": 111.5,
+              "oppg": 111.6,
+              "fg_pct": 45.7,
+              "opp_fg_pct": 47.7,
+              "fg3_pct": 33.8,
+              "fg3m": 12.0,
+              "fg3a": 35.5,
+              "opp_fg3_pct": 37.3,
+              "ft_pct": 71.4,
+              "fta": 23.9,
+              "ts_pct": 55.4,
+              "ast": 27.8,
+              "stl": 9.5,
+              "reb": 40.8,
+              "oreb": 13.1,
+              "dreb": 27.6,
+              "tov": 13.5,
+              "blk": 4.5,
+              "pf": 24.6,
+              "pace": 100.5,
+              "net": -0.1,
+              "ats": "7-10-0",
               "ats_home": "3-6-0",
-              "ats_away": "6-3-0",
-              "ats_l10": "6-4-0",
-              "ou": "10-8-0",
-              "ou_l10": "5-5-0"
+              "ats_away": "4-4-0",
+              "ats_l10": "3-7-0",
+              "ou": "8-9-0",
+              "ou_l10": "4-6-0"
             },
             "rk": {
-              "ppg": 25,
-              "oppg": 28,
-              "fg_pct": 29,
-              "opp_fg_pct": 18,
-              "fg3_pct": 17,
-              "fg3m": 4,
-              "fg3a": 5,
-              "opp_fg3_pct": 19,
-              "ft_pct": 25,
-              "fta": 22,
+              "ppg": 21,
+              "oppg": 11,
+              "fg_pct": 18,
+              "opp_fg_pct": 25,
+              "fg3_pct": 23,
+              "fg3m": 24,
+              "fg3a": 22,
+              "opp_fg3_pct": 26,
+              "ft_pct": 29,
+              "fta": 15,
               "ts_pct": 28,
-              "ast": 25,
-              "stl": 27,
-              "reb": 13,
-              "oreb": 6,
-              "dreb": 17,
-              "tov": 22,
-              "blk": 15,
-              "pf": 27,
-              "pace": 8,
-              "net": 29
+              "ast": 6,
+              "stl": 4,
+              "reb": 28,
+              "oreb": 8,
+              "dreb": 30,
+              "tov": 4,
+              "blk": 22,
+              "pf": 29,
+              "pace": 25,
+              "net": 18
             },
-            "pace": 102.3,
+            "pace": 101.0,
             "allow100": {
-              "PTS": 114.8,
-              "REB": 44.6,
-              "AST": 26.5,
-              "3PM": 13.9
+              "PTS": 111.5,
+              "REB": 42.7,
+              "AST": 25.5,
+              "3PM": 12.9
             },
             "allow_rk": {
-              "PTS": 1,
-              "REB": 1,
-              "AST": 10,
-              "3PM": 5
+              "PTS": 16,
+              "REB": 21,
+              "AST": 20,
+              "3PM": 21
             },
             "out": []
           }
         },
-        "exp_pace": 102.6,
+        "exp_pace": 101.3,
         "home_spread": null,
         "lg": {
-          "pace": 102.0,
+          "pace": 101.9,
           "PTS": 111.2,
-          "REB": 42.9,
+          "REB": 43.0,
           "AST": 25.9,
           "3PM": 13.2
         },
         "seed": {
           "BKN": {
             "conf": "E",
-            "seed": 14,
-            "rec": "3-13"
+            "seed": 13,
+            "rec": "4-13"
           },
-          "MIL": {
+          "TOR": {
             "conf": "E",
-            "seed": 15,
-            "rec": "2-16"
+            "seed": 10,
+            "rec": "6-11"
           }
         },
         "win": {
-          "home": 50.9,
-          "away": 49.1,
+          "home": 71.3,
+          "away": 28.7,
           "src": "model"
         }
       },
       "inj": {
         "BKN": [
           {
+            "name": "Moritz Wagner",
+            "status": "Out"
+          },
+          {
             "name": "Nolan Traore",
             "status": "Out"
           }
         ],
-        "MIL": []
+        "TOR": [
+          {
+            "name": "Alijah Martin",
+            "status": "Day-To-Day"
+          },
+          {
+            "name": "Kawhi Leonard",
+            "status": "Out"
+          },
+          {
+            "name": "Nate Bittle",
+            "status": "Out"
+          },
+          {
+            "name": "RJ Barrett",
+            "status": "Out"
+          }
+        ]
       }
     },
     {
-      "away": "Los Angeles Clippers",
-      "home": "Memphis Grizzlies",
-      "tip_utc": "2026-11-26T01:00:00Z",
+      "away": "Milwaukee Bucks",
+      "home": "Detroit Pistons",
+      "tip_utc": "2026-11-28T00:30:00Z",
       "mx": {
         "teams": {
-          "LAC": {
+          "MIL": {
             "v": {
-              "gp": 16,
-              "rec": "4-12",
-              "home": "4-4",
-              "away": "0-8",
-              "l10": "3-7",
-              "ppg": 110.7,
-              "oppg": 117.5,
-              "fg_pct": 46.0,
-              "opp_fg_pct": 49.0,
-              "fg3_pct": 38.1,
-              "fg3m": 14.4,
-              "fg3a": 37.8,
-              "opp_fg3_pct": 37.6,
-              "ft_pct": 79.4,
-              "fta": 23.4,
-              "ts_pct": 58.4,
-              "ast": 26.4,
-              "stl": 9.1,
-              "reb": 39.5,
-              "oreb": 10.2,
-              "dreb": 29.2,
-              "tov": 17.2,
-              "blk": 4.6,
-              "pf": 21.8,
-              "pace": 102.1,
-              "net": -6.8,
-              "ats": "9-7-0",
-              "ats_home": "5-3-0",
-              "ats_away": "4-4-0",
+              "gp": 19,
+              "rec": "2-17",
+              "home": "1-9",
+              "away": "1-8",
+              "l10": "1-9",
+              "ppg": 109.1,
+              "oppg": 120.2,
+              "fg_pct": 43.6,
+              "opp_fg_pct": 46.4,
+              "fg3_pct": 34.5,
+              "fg3m": 14.8,
+              "fg3a": 42.8,
+              "opp_fg3_pct": 35.4,
+              "ft_pct": 75.2,
+              "fta": 22.1,
+              "ts_pct": 55.2,
+              "ast": 24.7,
+              "stl": 7.1,
+              "reb": 44.6,
+              "oreb": 13.2,
+              "dreb": 31.5,
+              "tov": 16.4,
+              "blk": 4.8,
+              "pf": 23.4,
+              "pace": 102.3,
+              "net": -11.2,
+              "ats": "9-10-0",
+              "ats_home": "3-7-0",
+              "ats_away": "6-3-0",
               "ats_l10": "6-4-0",
-              "ou": "10-6-0",
-              "ou_l10": "7-3-0"
+              "ou": "10-9-0",
+              "ou_l10": "5-5-0"
             },
             "rk": {
-              "ppg": 23,
-              "oppg": 24,
-              "fg_pct": 16,
-              "opp_fg_pct": 30,
-              "fg3_pct": 2,
-              "fg3m": 10,
-              "fg3a": 14,
-              "opp_fg3_pct": 26,
-              "ft_pct": 11,
-              "fta": 18,
-              "ts_pct": 9,
-              "ast": 18,
-              "stl": 7,
-              "reb": 30,
-              "oreb": 28,
-              "dreb": 29,
-              "tov": 28,
-              "blk": 19,
-              "pf": 17,
-              "pace": 12,
-              "net": 24
+              "ppg": 26,
+              "oppg": 28,
+              "fg_pct": 29,
+              "opp_fg_pct": 17,
+              "fg3_pct": 19,
+              "fg3m": 6,
+              "fg3a": 5,
+              "opp_fg3_pct": 14,
+              "ft_pct": 26,
+              "fta": 23,
+              "ts_pct": 29,
+              "ast": 24,
+              "stl": 27,
+              "reb": 13,
+              "oreb": 5,
+              "dreb": 17,
+              "tov": 22,
+              "blk": 16,
+              "pf": 27,
+              "pace": 9,
+              "net": 29
             },
-            "pace": 102.0,
+            "pace": 102.2,
             "allow100": {
-              "PTS": 113.0,
-              "REB": 43.0,
-              "AST": 26.7,
-              "3PM": 13.1
+              "PTS": 114.5,
+              "REB": 44.9,
+              "AST": 26.4,
+              "3PM": 13.8
             },
             "allow_rk": {
-              "PTS": 6,
-              "REB": 15,
-              "AST": 5,
-              "3PM": 17
+              "PTS": 2,
+              "REB": 1,
+              "AST": 11,
+              "3PM": 6
             },
             "out": []
           },
-          "MEM": {
+          "DET": {
             "v": {
-              "gp": 18,
-              "rec": "13-5",
-              "home": "4-4",
-              "away": "9-1",
-              "l10": "7-3",
-              "ppg": 120.3,
-              "oppg": 111.4,
-              "fg_pct": 48.0,
-              "opp_fg_pct": 45.4,
-              "fg3_pct": 39.0,
-              "fg3m": 15.1,
-              "fg3a": 38.7,
-              "opp_fg3_pct": 33.3,
-              "ft_pct": 85.4,
-              "fta": 23.6,
-              "ts_pct": 60.8,
-              "ast": 28.0,
-              "stl": 7.3,
-              "reb": 45.5,
-              "oreb": 12.3,
-              "dreb": 33.2,
-              "tov": 16.1,
-              "blk": 4.8,
-              "pf": 22.8,
-              "pace": 102.1,
-              "net": 8.9,
-              "ats": "13-5-0",
-              "ats_home": "4-4-0",
-              "ats_away": "9-1-0",
-              "ats_l10": "7-3-0",
-              "ou": "10-8-0",
-              "ou_l10": "7-3-0"
+              "gp": 17,
+              "rec": "11-6",
+              "home": "3-3",
+              "away": "8-3",
+              "l10": "5-5",
+              "ppg": 112.8,
+              "oppg": 107.2,
+              "fg_pct": 46.7,
+              "opp_fg_pct": 43.9,
+              "fg3_pct": 37.2,
+              "fg3m": 13.1,
+              "fg3a": 35.3,
+              "opp_fg3_pct": 32.6,
+              "ft_pct": 79.6,
+              "fta": 23.4,
+              "ts_pct": 58.2,
+              "ast": 27.6,
+              "stl": 9.5,
+              "reb": 43.1,
+              "oreb": 11.4,
+              "dreb": 31.6,
+              "tov": 14.3,
+              "blk": 5.8,
+              "pf": 22.5,
+              "pace": 100.7,
+              "net": 5.6,
+              "ats": "10-7-0",
+              "ats_home": "3-3-0",
+              "ats_away": "7-4-0",
+              "ats_l10": "4-6-0",
+              "ou": "8-9-0",
+              "ou_l10": "5-5-0"
             },
             "rk": {
-              "ppg": 2,
-              "oppg": 10,
-              "fg_pct": 4,
-              "opp_fg_pct": 9,
-              "fg3_pct": 1,
-              "fg3m": 3,
-              "fg3a": 13,
-              "opp_fg3_pct": 4,
-              "ft_pct": 1,
-              "fta": 17,
-              "ts_pct": 2,
-              "ast": 6,
-              "stl": 22,
-              "reb": 7,
-              "oreb": 12,
-              "dreb": 6,
-              "tov": 19,
-              "blk": 15,
-              "pf": 24,
-              "pace": 12,
-              "net": 4
+              "ppg": 16,
+              "oppg": 5,
+              "fg_pct": 10,
+              "opp_fg_pct": 6,
+              "fg3_pct": 5,
+              "fg3m": 18,
+              "fg3a": 23,
+              "opp_fg3_pct": 2,
+              "ft_pct": 10,
+              "fta": 18,
+              "ts_pct": 9,
+              "ast": 9,
+              "stl": 4,
+              "reb": 17,
+              "oreb": 18,
+              "dreb": 14,
+              "tov": 10,
+              "blk": 2,
+              "pf": 23,
+              "pace": 24,
+              "net": 9
             },
-            "pace": 102.1,
+            "pace": 101.1,
             "allow100": {
-              "PTS": 110.5,
-              "REB": 41.5,
-              "AST": 25.0,
-              "3PM": 12.6
+              "PTS": 108.2,
+              "REB": 43.9,
+              "AST": 24.6,
+              "3PM": 12.4
             },
             "allow_rk": {
-              "PTS": 21,
-              "REB": 29,
-              "AST": 26,
-              "3PM": 24
+              "PTS": 26,
+              "REB": 6,
+              "AST": 27,
+              "3PM": 28
+            },
+            "out": []
+          }
+        },
+        "exp_pace": 101.4,
+        "home_spread": null,
+        "lg": {
+          "pace": 101.9,
+          "PTS": 111.2,
+          "REB": 43.0,
+          "AST": 25.9,
+          "3PM": 13.2
+        },
+        "seed": {
+          "MIL": {
+            "conf": "E",
+            "seed": 15,
+            "rec": "2-17"
+          },
+          "DET": {
+            "conf": "E",
+            "seed": 4,
+            "rec": "11-6"
+          }
+        },
+        "win": {
+          "home": 84.8,
+          "away": 15.2,
+          "src": "model"
+        }
+      },
+      "inj": {
+        "MIL": [],
+        "DET": [
+          {
+            "name": "Cade Cunningham",
+            "status": "Out"
+          },
+          {
+            "name": "Duncan Robinson",
+            "status": "Out"
+          },
+          {
+            "name": "Ebuka Okorie",
+            "status": "Out"
+          },
+          {
+            "name": "Jalen Duren",
+            "status": "Out"
+          },
+          {
+            "name": "Taurean Prince",
+            "status": "Out"
+          }
+        ]
+      }
+    },
+    {
+      "away": "Philadelphia 76ers",
+      "home": "Indiana Pacers",
+      "tip_utc": "2026-11-28T00:30:00Z",
+      "mx": {
+        "teams": {
+          "PHI": {
+            "v": {
+              "gp": 19,
+              "rec": "15-4",
+              "home": "8-3",
+              "away": "7-1",
+              "l10": "7-3",
+              "ppg": 115.1,
+              "oppg": 112.9,
+              "fg_pct": 46.7,
+              "opp_fg_pct": 46.7,
+              "fg3_pct": 35.2,
+              "fg3m": 12.0,
+              "fg3a": 34.1,
+              "opp_fg3_pct": 35.0,
+              "ft_pct": 80.2,
+              "fta": 26.5,
+              "ts_pct": 58.0,
+              "ast": 26.7,
+              "stl": 7.9,
+              "reb": 42.3,
+              "oreb": 10.0,
+              "dreb": 32.3,
+              "tov": 11.9,
+              "blk": 4.3,
+              "pf": 20.2,
+              "pace": 101.2,
+              "net": 2.1,
+              "ats": "10-9-0",
+              "ats_home": "5-6-0",
+              "ats_away": "5-3-0",
+              "ats_l10": "4-6-0",
+              "ou": "10-9-0",
+              "ou_l10": "8-2-0"
+            },
+            "rk": {
+              "ppg": 12,
+              "oppg": 16,
+              "fg_pct": 10,
+              "opp_fg_pct": 19,
+              "fg3_pct": 15,
+              "fg3m": 24,
+              "fg3a": 25,
+              "opp_fg3_pct": 13,
+              "ft_pct": 7,
+              "fta": 6,
+              "ts_pct": 10,
+              "ast": 15,
+              "stl": 16,
+              "reb": 22,
+              "oreb": 29,
+              "dreb": 10,
+              "tov": 1,
+              "blk": 26,
+              "pf": 6,
+              "pace": 22,
+              "net": 12
+            },
+            "pace": 101.4,
+            "allow100": {
+              "PTS": 111.4,
+              "REB": 44.0,
+              "AST": 25.8,
+              "3PM": 12.9
+            },
+            "allow_rk": {
+              "PTS": 17,
+              "REB": 5,
+              "AST": 17,
+              "3PM": 19
+            },
+            "out": []
+          },
+          "IND": {
+            "v": {
+              "gp": 18,
+              "rec": "6-12",
+              "home": "3-6",
+              "away": "3-6",
+              "l10": "4-6",
+              "ppg": 112.4,
+              "oppg": 115.7,
+              "fg_pct": 46.9,
+              "opp_fg_pct": 46.0,
+              "fg3_pct": 33.3,
+              "fg3m": 11.7,
+              "fg3a": 35.2,
+              "opp_fg3_pct": 37.3,
+              "ft_pct": 77.0,
+              "fta": 23.4,
+              "ts_pct": 57.1,
+              "ast": 27.7,
+              "stl": 7.3,
+              "reb": 42.7,
+              "oreb": 9.9,
+              "dreb": 32.8,
+              "tov": 13.9,
+              "blk": 4.7,
+              "pf": 20.1,
+              "pace": 103.0,
+              "net": -3.3,
+              "ats": "10-8-0",
+              "ats_home": "5-4-0",
+              "ats_away": "5-4-0",
+              "ats_l10": "6-4-0",
+              "ou": "8-10-0",
+              "ou_l10": "5-5-0"
+            },
+            "rk": {
+              "ppg": 18,
+              "oppg": 21,
+              "fg_pct": 9,
+              "opp_fg_pct": 13,
+              "fg3_pct": 29,
+              "fg3m": 26,
+              "fg3a": 24,
+              "opp_fg3_pct": 26,
+              "ft_pct": 18,
+              "fta": 18,
+              "ts_pct": 17,
+              "ast": 7,
+              "stl": 23,
+              "reb": 20,
+              "oreb": 30,
+              "dreb": 9,
+              "tov": 5,
+              "blk": 18,
+              "pf": 5,
+              "pace": 6,
+              "net": 20
+            },
+            "pace": 102.6,
+            "allow100": {
+              "PTS": 111.5,
+              "REB": 44.1,
+              "AST": 25.7,
+              "3PM": 13.7
+            },
+            "allow_rk": {
+              "PTS": 15,
+              "REB": 3,
+              "AST": 18,
+              "3PM": 7
             },
             "out": []
           }
@@ -1207,41 +785,461 @@
         "exp_pace": 102.1,
         "home_spread": null,
         "lg": {
-          "pace": 102.0,
+          "pace": 101.9,
           "PTS": 111.2,
-          "REB": 42.9,
+          "REB": 43.0,
           "AST": 25.9,
           "3PM": 13.2
         },
         "seed": {
-          "LAC": {
-            "conf": "W",
-            "seed": 13,
-            "rec": "4-12"
+          "PHI": {
+            "conf": "E",
+            "seed": 1,
+            "rec": "15-4"
           },
-          "MEM": {
-            "conf": "W",
-            "seed": 4,
-            "rec": "13-5"
+          "IND": {
+            "conf": "E",
+            "seed": 11,
+            "rec": "6-12"
           }
         },
         "win": {
-          "home": 83.0,
-          "away": 17.0,
+          "home": 45.2,
+          "away": 54.8,
           "src": "model"
         }
       },
       "inj": {
-        "LAC": [
+        "PHI": [
           {
-            "name": "Bradley Beal",
+            "name": "Ariel Hukporti",
             "status": "Out"
           },
           {
-            "name": "Jordan Miller",
+            "name": "Jaylen Brown",
+            "status": "Out"
+          },
+          {
+            "name": "Joel Embiid",
+            "status": "Day-To-Day"
+          }
+        ],
+        "IND": [
+          {
+            "name": "Ben Sheppard",
+            "status": "Out"
+          },
+          {
+            "name": "Kelly Oubre Jr.",
+            "status": "Day-To-Day"
+          },
+          {
+            "name": "Larry Nance Jr.",
+            "status": "Day-To-Day"
+          },
+          {
+            "name": "T.J. McConnell",
+            "status": "Day-To-Day"
+          },
+          {
+            "name": "Tyrese Haliburton",
+            "status": "Out"
+          }
+        ]
+      }
+    },
+    {
+      "away": "Atlanta Hawks",
+      "home": "Boston Celtics",
+      "tip_utc": "2026-11-28T01:00:00Z",
+      "mx": {
+        "teams": {
+          "ATL": {
+            "v": {
+              "gp": 17,
+              "rec": "11-6",
+              "home": "5-3",
+              "away": "6-3",
+              "l10": "8-2",
+              "ppg": 116.7,
+              "oppg": 113.6,
+              "fg_pct": 44.9,
+              "opp_fg_pct": 47.3,
+              "fg3_pct": 34.2,
+              "fg3m": 14.8,
+              "fg3a": 43.3,
+              "opp_fg3_pct": 33.4,
+              "ft_pct": 76.8,
+              "fta": 20.5,
+              "ts_pct": 55.6,
+              "ast": 30.3,
+              "stl": 10.5,
+              "reb": 45.7,
+              "oreb": 14.1,
+              "dreb": 31.6,
+              "tov": 15.1,
+              "blk": 3.8,
+              "pf": 21.2,
+              "pace": 105.6,
+              "net": 3.1,
+              "ats": "7-10-0",
+              "ats_home": "3-5-0",
+              "ats_away": "4-5-0",
+              "ats_l10": "4-6-0",
+              "ou": "8-9-0",
+              "ou_l10": "4-6-0"
+            },
+            "rk": {
+              "ppg": 8,
+              "oppg": 17,
+              "fg_pct": 25,
+              "opp_fg_pct": 22,
+              "fg3_pct": 22,
+              "fg3m": 6,
+              "fg3a": 4,
+              "opp_fg3_pct": 5,
+              "ft_pct": 21,
+              "fta": 28,
+              "ts_pct": 27,
+              "ast": 1,
+              "stl": 2,
+              "reb": 5,
+              "oreb": 2,
+              "dreb": 14,
+              "tov": 15,
+              "blk": 29,
+              "pf": 10,
+              "pace": 2,
+              "net": 10
+            },
+            "pace": 104.2,
+            "allow100": {
+              "PTS": 109.6,
+              "REB": 43.4,
+              "AST": 26.2,
+              "3PM": 12.3
+            },
+            "allow_rk": {
+              "PTS": 25,
+              "REB": 9,
+              "AST": 14,
+              "3PM": 29
+            },
+            "out": []
+          },
+          "BOS": {
+            "v": {
+              "gp": 18,
+              "rec": "12-6",
+              "home": "6-1",
+              "away": "6-5",
+              "l10": "6-4",
+              "ppg": 112.3,
+              "oppg": 102.9,
+              "fg_pct": 44.3,
+              "opp_fg_pct": 42.3,
+              "fg3_pct": 36.2,
+              "fg3m": 16.4,
+              "fg3a": 45.3,
+              "opp_fg3_pct": 33.1,
+              "ft_pct": 75.8,
+              "fta": 21.8,
+              "ts_pct": 56.6,
+              "ast": 26.7,
+              "stl": 8.5,
+              "reb": 45.2,
+              "oreb": 13.9,
+              "dreb": 31.3,
+              "tov": 14.1,
+              "blk": 4.6,
+              "pf": 21.9,
+              "pace": 99.0,
+              "net": 9.4,
+              "ats": "9-9-0",
+              "ats_home": "3-4-0",
+              "ats_away": "6-5-0",
+              "ats_l10": "6-4-0",
+              "ou": "6-12-0",
+              "ou_l10": "4-6-0"
+            },
+            "rk": {
+              "ppg": 19,
+              "oppg": 1,
+              "fg_pct": 28,
+              "opp_fg_pct": 1,
+              "fg3_pct": 10,
+              "fg3m": 1,
+              "fg3a": 1,
+              "opp_fg3_pct": 4,
+              "ft_pct": 25,
+              "fta": 24,
+              "ts_pct": 20,
+              "ast": 15,
+              "stl": 10,
+              "reb": 10,
+              "oreb": 3,
+              "dreb": 19,
+              "tov": 9,
+              "blk": 19,
+              "pf": 19,
+              "pace": 28,
+              "net": 3
+            },
+            "pace": 100.0,
+            "allow100": {
+              "PTS": 107.5,
+              "REB": 43.9,
+              "AST": 25.5,
+              "3PM": 13.4
+            },
+            "allow_rk": {
+              "PTS": 29,
+              "REB": 7,
+              "AST": 22,
+              "3PM": 12
+            },
+            "out": []
+          }
+        },
+        "exp_pace": 102.3,
+        "home_spread": null,
+        "lg": {
+          "pace": 101.9,
+          "PTS": 111.2,
+          "REB": 43.0,
+          "AST": 25.9,
+          "3PM": 13.2
+        },
+        "seed": {
+          "ATL": {
+            "conf": "E",
+            "seed": 5,
+            "rec": "11-6"
+          },
+          "BOS": {
+            "conf": "E",
+            "seed": 2,
+            "rec": "12-6"
+          }
+        },
+        "win": {
+          "home": 68.7,
+          "away": 31.3,
+          "src": "model"
+        }
+      },
+      "inj": {
+        "ATL": [
+          {
+            "name": "Asa Newell",
+            "status": "Out"
+          },
+          {
+            "name": "CJ McCollum",
+            "status": "Out"
+          },
+          {
+            "name": "Henri Veesaar",
+            "status": "Out"
+          },
+          {
+            "name": "Jock Landale",
+            "status": "Out"
+          },
+          {
+            "name": "Mouhamed Gueye",
             "status": "Out"
           }
         ],
+        "BOS": [
+          {
+            "name": "Mitchell Robinson",
+            "status": "Out"
+          }
+        ]
+      }
+    },
+    {
+      "away": "Memphis Grizzlies",
+      "home": "Minnesota Timberwolves",
+      "tip_utc": "2026-11-28T01:30:00Z",
+      "mx": {
+        "teams": {
+          "MEM": {
+            "v": {
+              "gp": 19,
+              "rec": "14-5",
+              "home": "5-4",
+              "away": "9-1",
+              "l10": "8-2",
+              "ppg": 120.1,
+              "oppg": 110.7,
+              "fg_pct": 48.1,
+              "opp_fg_pct": 45.0,
+              "fg3_pct": 38.3,
+              "fg3m": 14.9,
+              "fg3a": 38.9,
+              "opp_fg3_pct": 32.8,
+              "ft_pct": 85.4,
+              "fta": 23.1,
+              "ts_pct": 60.6,
+              "ast": 27.7,
+              "stl": 7.4,
+              "reb": 45.4,
+              "oreb": 12.2,
+              "dreb": 33.3,
+              "tov": 15.6,
+              "blk": 4.9,
+              "pf": 22.8,
+              "pace": 101.9,
+              "net": 9.4,
+              "ats": "14-5-0",
+              "ats_home": "5-4-0",
+              "ats_away": "9-1-0",
+              "ats_l10": "8-2-0",
+              "ou": "10-9-0",
+              "ou_l10": "6-4-0"
+            },
+            "rk": {
+              "ppg": 1,
+              "oppg": 10,
+              "fg_pct": 4,
+              "opp_fg_pct": 8,
+              "fg3_pct": 1,
+              "fg3m": 4,
+              "fg3a": 13,
+              "opp_fg3_pct": 3,
+              "ft_pct": 1,
+              "fta": 20,
+              "ts_pct": 2,
+              "ast": 7,
+              "stl": 20,
+              "reb": 7,
+              "oreb": 13,
+              "dreb": 7,
+              "tov": 17,
+              "blk": 15,
+              "pf": 24,
+              "pace": 15,
+              "net": 3
+            },
+            "pace": 101.9,
+            "allow100": {
+              "PTS": 110.2,
+              "REB": 41.8,
+              "AST": 24.9,
+              "3PM": 12.4
+            },
+            "allow_rk": {
+              "PTS": 22,
+              "REB": 29,
+              "AST": 26,
+              "3PM": 27
+            },
+            "out": []
+          },
+          "MIN": {
+            "v": {
+              "gp": 19,
+              "rec": "14-5",
+              "home": "9-3",
+              "away": "5-2",
+              "l10": "8-2",
+              "ppg": 116.2,
+              "oppg": 105.8,
+              "fg_pct": 47.9,
+              "opp_fg_pct": 43.4,
+              "fg3_pct": 37.9,
+              "fg3m": 14.2,
+              "fg3a": 37.5,
+              "opp_fg3_pct": 33.7,
+              "ft_pct": 69.6,
+              "fta": 24.9,
+              "ts_pct": 58.5,
+              "ast": 25.6,
+              "stl": 8.8,
+              "reb": 47.2,
+              "oreb": 12.3,
+              "dreb": 34.8,
+              "tov": 16.2,
+              "blk": 5.4,
+              "pf": 21.2,
+              "pace": 103.3,
+              "net": 10.4,
+              "ats": "15-4-0",
+              "ats_home": "8-4-0",
+              "ats_away": "7-0-0",
+              "ats_l10": "7-3-0",
+              "ou": "7-12-0",
+              "ou_l10": "2-8-0"
+            },
+            "rk": {
+              "ppg": 10,
+              "oppg": 3,
+              "fg_pct": 5,
+              "opp_fg_pct": 3,
+              "fg3_pct": 2,
+              "fg3m": 10,
+              "fg3a": 16,
+              "opp_fg3_pct": 6,
+              "ft_pct": 30,
+              "fta": 12,
+              "ts_pct": 8,
+              "ast": 21,
+              "stl": 7,
+              "reb": 2,
+              "oreb": 11,
+              "dreb": 2,
+              "tov": 21,
+              "blk": 7,
+              "pf": 10,
+              "pace": 5,
+              "net": 2
+            },
+            "pace": 102.8,
+            "allow100": {
+              "PTS": 106.3,
+              "REB": 41.9,
+              "AST": 24.6,
+              "3PM": 12.3
+            },
+            "allow_rk": {
+              "PTS": 30,
+              "REB": 27,
+              "AST": 28,
+              "3PM": 30
+            },
+            "out": []
+          }
+        },
+        "exp_pace": 102.8,
+        "home_spread": null,
+        "lg": {
+          "pace": 101.9,
+          "PTS": 111.2,
+          "REB": 43.0,
+          "AST": 25.9,
+          "3PM": 13.2
+        },
+        "seed": {
+          "MEM": {
+            "conf": "W",
+            "seed": 4,
+            "rec": "14-5"
+          },
+          "MIN": {
+            "conf": "W",
+            "seed": 3,
+            "rec": "14-5"
+          }
+        },
+        "win": {
+          "home": 58.4,
+          "away": 41.6,
+          "src": "model"
+        }
+      },
+      "inj": {
         "MEM": [
           {
             "name": "Cameron Boozer",
@@ -1250,6 +1248,10 @@
           {
             "name": "GG Jackson",
             "status": "Out"
+          },
+          {
+            "name": "Isaiah Stewart",
+            "status": "Day-To-Day"
           },
           {
             "name": "Jerami Grant",
@@ -1262,396 +1264,623 @@
           {
             "name": "Scotty Pippen Jr.",
             "status": "Out"
+          },
+          {
+            "name": "Zach Edey",
+            "status": "Day-To-Day"
+          }
+        ],
+        "MIN": [
+          {
+            "name": "Anthony Edwards",
+            "status": "Out"
+          },
+          {
+            "name": "Donte DiVincenzo",
+            "status": "Out"
+          },
+          {
+            "name": "Jaylen Clark",
+            "status": "Out"
+          },
+          {
+            "name": "LaMelo Ball",
+            "status": "Day-To-Day"
           }
         ]
       }
     },
     {
-      "away": "Phoenix Suns",
-      "home": "Houston Rockets",
-      "tip_utc": "2026-11-26T01:30:00Z",
+      "away": "Dallas Mavericks",
+      "home": "Phoenix Suns",
+      "tip_utc": "2026-11-28T02:00:00Z",
       "mx": {
         "teams": {
+          "DAL": {
+            "v": {
+              "gp": 18,
+              "rec": "11-7",
+              "home": "7-2",
+              "away": "4-5",
+              "l10": "7-3",
+              "ppg": 112.8,
+              "oppg": 111.8,
+              "fg_pct": 46.3,
+              "opp_fg_pct": 46.2,
+              "fg3_pct": 34.4,
+              "fg3m": 13.0,
+              "fg3a": 37.8,
+              "opp_fg3_pct": 33.7,
+              "ft_pct": 77.2,
+              "fta": 22.9,
+              "ts_pct": 57.1,
+              "ast": 27.0,
+              "stl": 9.4,
+              "reb": 43.5,
+              "oreb": 12.6,
+              "dreb": 30.9,
+              "tov": 15.5,
+              "blk": 5.3,
+              "pf": 21.2,
+              "pace": 101.8,
+              "net": 1.0,
+              "ats": "10-8-0",
+              "ats_home": "6-3-0",
+              "ats_away": "4-5-0",
+              "ats_l10": "5-5-0",
+              "ou": "7-11-0",
+              "ou_l10": "5-5-0"
+            },
+            "rk": {
+              "ppg": 16,
+              "oppg": 12,
+              "fg_pct": 12,
+              "opp_fg_pct": 16,
+              "fg3_pct": 20,
+              "fg3m": 19,
+              "fg3a": 14,
+              "opp_fg3_pct": 6,
+              "ft_pct": 16,
+              "fta": 21,
+              "ts_pct": 17,
+              "ast": 14,
+              "stl": 6,
+              "reb": 15,
+              "oreb": 10,
+              "dreb": 22,
+              "tov": 16,
+              "blk": 12,
+              "pf": 10,
+              "pace": 17,
+              "net": 13
+            },
+            "pace": 101.8,
+            "allow100": {
+              "PTS": 110.5,
+              "REB": 43.3,
+              "AST": 26.4,
+              "3PM": 13.0
+            },
+            "allow_rk": {
+              "PTS": 19,
+              "REB": 11,
+              "AST": 12,
+              "3PM": 18
+            },
+            "out": []
+          },
           "PHX": {
             "v": {
-              "gp": 16,
-              "rec": "9-7",
+              "gp": 17,
+              "rec": "9-8",
               "home": "5-4",
-              "away": "4-3",
-              "l10": "8-2",
-              "ppg": 114.4,
-              "oppg": 115.0,
-              "fg_pct": 47.4,
-              "opp_fg_pct": 46.4,
-              "fg3_pct": 36.7,
-              "fg3m": 13.7,
-              "fg3a": 37.2,
-              "opp_fg3_pct": 36.1,
-              "ft_pct": 75.6,
-              "fta": 21.8,
-              "ts_pct": 58.1,
-              "ast": 27.6,
+              "away": "4-4",
+              "l10": "7-3",
+              "ppg": 113.8,
+              "oppg": 115.1,
+              "fg_pct": 47.1,
+              "opp_fg_pct": 46.5,
+              "fg3_pct": 35.7,
+              "fg3m": 13.2,
+              "fg3a": 36.9,
+              "opp_fg3_pct": 35.9,
+              "ft_pct": 76.1,
+              "fta": 22.2,
+              "ts_pct": 57.7,
+              "ast": 27.4,
               "stl": 8.1,
-              "reb": 40.9,
-              "oreb": 11.2,
-              "dreb": 29.6,
-              "tov": 14.1,
-              "blk": 4.0,
-              "pf": 21.7,
-              "pace": 101.8,
-              "net": -0.6,
-              "ats": "7-9-0",
+              "reb": 40.7,
+              "oreb": 11.4,
+              "dreb": 29.4,
+              "tov": 13.9,
+              "blk": 3.9,
+              "pf": 21.8,
+              "pace": 101.7,
+              "net": -1.2,
+              "ats": "7-10-0",
               "ats_home": "3-6-0",
-              "ats_away": "4-3-0",
-              "ats_l10": "7-3-0",
-              "ou": "9-7-0",
+              "ats_away": "4-4-0",
+              "ats_l10": "6-4-0",
+              "ou": "9-8-0",
               "ou_l10": "4-6-0"
             },
             "rk": {
               "ppg": 14,
               "oppg": 18,
               "fg_pct": 7,
-              "opp_fg_pct": 16,
-              "fg3_pct": 8,
+              "opp_fg_pct": 18,
+              "fg3_pct": 13,
               "fg3m": 17,
-              "fg3a": 19,
-              "opp_fg3_pct": 21,
-              "ft_pct": 26,
-              "fta": 23,
-              "ts_pct": 11,
-              "ast": 9,
-              "stl": 15,
-              "reb": 27,
-              "oreb": 21,
-              "dreb": 26,
-              "tov": 8,
+              "fg3a": 20,
+              "opp_fg3_pct": 18,
+              "ft_pct": 23,
+              "fta": 22,
+              "ts_pct": 13,
+              "ast": 11,
+              "stl": 13,
+              "reb": 29,
+              "oreb": 18,
+              "dreb": 28,
+              "tov": 5,
               "blk": 28,
-              "pf": 15,
-              "pace": 17,
-              "net": 18
+              "pf": 18,
+              "pace": 19,
+              "net": 19
             },
-            "pace": 101.9,
+            "pace": 101.7,
             "allow100": {
-              "PTS": 111.8,
-              "REB": 43.8,
-              "AST": 25.5,
-              "3PM": 13.3
+              "PTS": 112.0,
+              "REB": 44.1,
+              "AST": 25.6,
+              "3PM": 13.2
             },
             "allow_rk": {
-              "PTS": 13,
-              "REB": 7,
-              "AST": 22,
+              "PTS": 12,
+              "REB": 4,
+              "AST": 19,
               "3PM": 14
-            },
-            "out": []
-          },
-          "HOU": {
-            "v": {
-              "gp": 18,
-              "rec": "13-5",
-              "home": "8-1",
-              "away": "5-4",
-              "l10": "6-4",
-              "ppg": 118.1,
-              "oppg": 110.2,
-              "fg_pct": 48.7,
-              "opp_fg_pct": 46.4,
-              "fg3_pct": 38.0,
-              "fg3m": 12.8,
-              "fg3a": 33.8,
-              "opp_fg3_pct": 32.9,
-              "ft_pct": 79.6,
-              "fta": 25.3,
-              "ts_pct": 59.9,
-              "ast": 28.2,
-              "stl": 7.3,
-              "reb": 45.3,
-              "oreb": 13.6,
-              "dreb": 31.8,
-              "tov": 14.6,
-              "blk": 5.5,
-              "pf": 19.8,
-              "pace": 99.8,
-              "net": 7.9,
-              "ats": "11-7-0",
-              "ats_home": "6-3-0",
-              "ats_away": "5-4-0",
-              "ats_l10": "4-6-0",
-              "ou": "11-7-0",
-              "ou_l10": "6-4-0"
-            },
-            "rk": {
-              "ppg": 5,
-              "oppg": 6,
-              "fg_pct": 1,
-              "opp_fg_pct": 16,
-              "fg3_pct": 3,
-              "fg3m": 20,
-              "fg3a": 26,
-              "opp_fg3_pct": 2,
-              "ft_pct": 9,
-              "fta": 10,
-              "ts_pct": 3,
-              "ast": 5,
-              "stl": 22,
-              "reb": 9,
-              "oreb": 4,
-              "dreb": 13,
-              "tov": 12,
-              "blk": 5,
-              "pf": 4,
-              "pace": 27,
-              "net": 5
-            },
-            "pace": 100.6,
-            "allow100": {
-              "PTS": 110.6,
-              "REB": 40.9,
-              "AST": 25.4,
-              "3PM": 12.9
-            },
-            "allow_rk": {
-              "PTS": 19,
-              "REB": 30,
-              "AST": 23,
-              "3PM": 22
             },
             "out": []
           }
         },
-        "exp_pace": 100.5,
+        "exp_pace": 101.7,
         "home_spread": null,
         "lg": {
-          "pace": 102.0,
+          "pace": 101.9,
           "PTS": 111.2,
-          "REB": 42.9,
+          "REB": 43.0,
           "AST": 25.9,
           "3PM": 13.2
         },
         "seed": {
+          "DAL": {
+            "conf": "W",
+            "seed": 8,
+            "rec": "11-7"
+          },
           "PHX": {
             "conf": "W",
-            "seed": 9,
-            "rec": "9-7"
-          },
-          "HOU": {
-            "conf": "W",
-            "seed": 5,
-            "rec": "13-5"
+            "seed": 10,
+            "rec": "9-8"
           }
         },
         "win": {
-          "home": 72.4,
-          "away": 27.6,
+          "home": 51.9,
+          "away": 48.1,
           "src": "model"
         }
       },
       "inj": {
+        "DAL": [
+          {
+            "name": "Dereck Lively II",
+            "status": "Out"
+          },
+          {
+            "name": "Sergio de Larrea",
+            "status": "Out"
+          },
+          {
+            "name": "Tarik Biberovic",
+            "status": "Out"
+          },
+          {
+            "name": "Tobi Lawal",
+            "status": "Out"
+          }
+        ],
         "PHX": [
           {
             "name": "Mark Williams",
             "status": "Out"
           }
-        ],
-        "HOU": []
+        ]
       }
     },
     {
-      "away": "Sacramento Kings",
-      "home": "Golden State Warriors",
-      "tip_utc": "2026-11-26T03:00:00Z",
+      "away": "Denver Nuggets",
+      "home": "Utah Jazz",
+      "tip_utc": "2026-11-28T02:30:00Z",
       "mx": {
         "teams": {
-          "SAC": {
+          "DEN": {
             "v": {
-              "gp": 17,
-              "rec": "2-15",
-              "home": "1-10",
-              "away": "1-5",
-              "l10": "1-9",
-              "ppg": 106.8,
-              "oppg": 119.4,
-              "fg_pct": 45.5,
-              "opp_fg_pct": 48.4,
-              "fg3_pct": 33.8,
-              "fg3m": 12.1,
-              "fg3a": 35.7,
-              "opp_fg3_pct": 35.5,
-              "ft_pct": 76.4,
-              "fta": 21.5,
-              "ts_pct": 55.9,
-              "ast": 25.4,
-              "stl": 7.3,
-              "reb": 41.0,
+              "gp": 16,
+              "rec": "10-6",
+              "home": "4-4",
+              "away": "6-2",
+              "l10": "7-3",
+              "ppg": 116.0,
+              "oppg": 115.5,
+              "fg_pct": 48.5,
+              "opp_fg_pct": 46.9,
+              "fg3_pct": 35.0,
+              "fg3m": 11.1,
+              "fg3a": 31.6,
+              "opp_fg3_pct": 36.0,
+              "ft_pct": 81.5,
+              "fta": 26.3,
+              "ts_pct": 59.4,
+              "ast": 27.3,
+              "stl": 8.6,
+              "reb": 41.9,
               "oreb": 10.5,
-              "dreb": 30.5,
-              "tov": 17.1,
-              "blk": 3.5,
-              "pf": 22.5,
-              "pace": 101.8,
-              "net": -12.5,
-              "ats": "6-11-0",
-              "ats_home": "4-7-0",
-              "ats_away": "2-4-0",
-              "ats_l10": "4-6-0",
-              "ou": "9-8-0",
+              "dreb": 31.4,
+              "tov": 13.9,
+              "blk": 4.6,
+              "pf": 19.5,
+              "pace": 101.5,
+              "net": 0.5,
+              "ats": "7-9-0",
+              "ats_home": "3-5-0",
+              "ats_away": "4-4-0",
+              "ats_l10": "5-5-0",
+              "ou": "7-9-0",
               "ou_l10": "4-6-0"
             },
             "rk": {
-              "ppg": 29,
-              "oppg": 25,
-              "fg_pct": 20,
-              "opp_fg_pct": 27,
-              "fg3_pct": 23,
-              "fg3m": 23,
-              "fg3a": 21,
-              "opp_fg3_pct": 15,
-              "ft_pct": 22,
-              "fta": 26,
-              "ts_pct": 25,
-              "ast": 21,
-              "stl": 22,
-              "reb": 26,
-              "oreb": 26,
-              "dreb": 25,
-              "tov": 26,
-              "blk": 30,
-              "pf": 22,
-              "pace": 17,
-              "net": 30
+              "ppg": 11,
+              "oppg": 20,
+              "fg_pct": 3,
+              "opp_fg_pct": 20,
+              "fg3_pct": 17,
+              "fg3m": 28,
+              "fg3a": 29,
+              "opp_fg3_pct": 20,
+              "ft_pct": 3,
+              "fta": 7,
+              "ts_pct": 4,
+              "ast": 12,
+              "stl": 8,
+              "reb": 24,
+              "oreb": 27,
+              "dreb": 18,
+              "tov": 5,
+              "blk": 19,
+              "pf": 3,
+              "pace": 20,
+              "net": 15
             },
-            "pace": 101.9,
+            "pace": 101.7,
             "allow100": {
-              "PTS": 114.6,
-              "REB": 43.0,
-              "AST": 26.2,
-              "3PM": 13.4
+              "PTS": 112.3,
+              "REB": 43.1,
+              "AST": 27.0,
+              "3PM": 13.6
             },
             "allow_rk": {
-              "PTS": 2,
-              "REB": 14,
-              "AST": 14,
-              "3PM": 12
+              "PTS": 11,
+              "REB": 13,
+              "AST": 3,
+              "3PM": 10
             },
             "out": []
           },
+          "UTA": {
+            "v": {
+              "gp": 19,
+              "rec": "3-16",
+              "home": "1-9",
+              "away": "2-7",
+              "l10": "2-8",
+              "ppg": 107.8,
+              "oppg": 115.4,
+              "fg_pct": 44.7,
+              "opp_fg_pct": 45.0,
+              "fg3_pct": 34.3,
+              "fg3m": 12.7,
+              "fg3a": 37.2,
+              "opp_fg3_pct": 34.4,
+              "ft_pct": 74.5,
+              "fta": 24.5,
+              "ts_pct": 55.8,
+              "ast": 24.8,
+              "stl": 6.9,
+              "reb": 45.2,
+              "oreb": 11.9,
+              "dreb": 33.2,
+              "tov": 17.1,
+              "blk": 5.4,
+              "pf": 23.0,
+              "pace": 102.3,
+              "net": -7.5,
+              "ats": "7-12-0",
+              "ats_home": "4-6-0",
+              "ats_away": "3-6-0",
+              "ats_l10": "6-4-0",
+              "ou": "7-12-0",
+              "ou_l10": "4-6-0"
+            },
+            "rk": {
+              "ppg": 27,
+              "oppg": 19,
+              "fg_pct": 26,
+              "opp_fg_pct": 8,
+              "fg3_pct": 21,
+              "fg3m": 21,
+              "fg3a": 19,
+              "opp_fg3_pct": 11,
+              "ft_pct": 28,
+              "fta": 13,
+              "ts_pct": 26,
+              "ast": 23,
+              "stl": 30,
+              "reb": 10,
+              "oreb": 15,
+              "dreb": 8,
+              "tov": 27,
+              "blk": 7,
+              "pf": 25,
+              "pace": 9,
+              "net": 24
+            },
+            "pace": 102.2,
+            "allow100": {
+              "PTS": 111.8,
+              "REB": 43.2,
+              "AST": 24.3,
+              "3PM": 12.5
+            },
+            "allow_rk": {
+              "PTS": 13,
+              "REB": 12,
+              "AST": 29,
+              "3PM": 25
+            },
+            "out": []
+          }
+        },
+        "exp_pace": 102.0,
+        "home_spread": null,
+        "lg": {
+          "pace": 101.9,
+          "PTS": 111.2,
+          "REB": 43.0,
+          "AST": 25.9,
+          "3PM": 13.2
+        },
+        "seed": {
+          "DEN": {
+            "conf": "W",
+            "seed": 7,
+            "rec": "10-6"
+          },
+          "UTA": {
+            "conf": "W",
+            "seed": 14,
+            "rec": "3-16"
+          }
+        },
+        "win": {
+          "home": 39.8,
+          "away": 60.2,
+          "src": "model"
+        }
+      },
+      "inj": {
+        "DEN": [],
+        "UTA": [
+          {
+            "name": "Jaren Jackson Jr.",
+            "status": "Out"
+          },
+          {
+            "name": "Jaxson Hayes",
+            "status": "Day-To-Day"
+          },
+          {
+            "name": "Jusuf Nurkic",
+            "status": "Out"
+          },
+          {
+            "name": "Lauri Markkanen",
+            "status": "Out"
+          }
+        ]
+      }
+    },
+    {
+      "away": "Golden State Warriors",
+      "home": "Portland Trail Blazers",
+      "tip_utc": "2026-11-28T02:30:00Z",
+      "mx": {
+        "teams": {
           "GSW": {
             "v": {
-              "gp": 17,
-              "rec": "9-8",
-              "home": "7-1",
+              "gp": 18,
+              "rec": "10-8",
+              "home": "8-1",
               "away": "2-7",
               "l10": "5-5",
-              "ppg": 111.2,
-              "oppg": 112.1,
-              "fg_pct": 44.4,
-              "opp_fg_pct": 46.0,
-              "fg3_pct": 36.1,
-              "fg3m": 14.8,
-              "fg3a": 41.1,
+              "ppg": 112.2,
+              "oppg": 111.9,
+              "fg_pct": 45.0,
+              "opp_fg_pct": 46.1,
+              "fg3_pct": 36.6,
+              "fg3m": 15.1,
+              "fg3a": 41.3,
               "opp_fg3_pct": 34.9,
               "ft_pct": 80.7,
-              "fta": 24.4,
-              "ts_pct": 57.3,
-              "ast": 27.1,
+              "fta": 23.8,
+              "ts_pct": 57.8,
+              "ast": 27.6,
               "stl": 8.5,
-              "reb": 44.1,
-              "oreb": 13.3,
-              "dreb": 30.8,
-              "tov": 16.8,
-              "blk": 5.4,
-              "pf": 21.6,
-              "pace": 100.9,
-              "net": -0.8,
-              "ats": "9-8-0",
-              "ats_home": "6-2-0",
+              "reb": 43.9,
+              "oreb": 13.2,
+              "dreb": 30.7,
+              "tov": 16.7,
+              "blk": 5.5,
+              "pf": 21.7,
+              "pace": 101.0,
+              "net": 0.3,
+              "ats": "10-8-0",
+              "ats_home": "7-2-0",
               "ats_away": "3-6-0",
               "ats_l10": "4-6-0",
-              "ou": "7-10-0",
+              "ou": "8-10-0",
               "ou_l10": "3-7-0"
             },
             "rk": {
-              "ppg": 21,
+              "ppg": 20,
               "oppg": 13,
-              "fg_pct": 26,
-              "opp_fg_pct": 13,
-              "fg3_pct": 13,
-              "fg3m": 6,
+              "fg_pct": 24,
+              "opp_fg_pct": 14,
+              "fg3_pct": 7,
+              "fg3m": 3,
               "fg3a": 7,
               "opp_fg3_pct": 12,
               "ft_pct": 5,
-              "fta": 14,
-              "ts_pct": 15,
-              "ast": 12,
+              "fta": 16,
+              "ts_pct": 12,
+              "ast": 9,
               "stl": 10,
               "reb": 14,
               "oreb": 5,
               "dreb": 24,
               "tov": 25,
               "blk": 6,
-              "pf": 14,
+              "pf": 16,
               "pace": 23,
-              "net": 19
+              "net": 17
             },
             "pace": 101.3,
             "allow100": {
-              "PTS": 110.9,
-              "REB": 42.9,
-              "AST": 26.8,
+              "PTS": 110.7,
+              "REB": 42.8,
+              "AST": 26.9,
               "3PM": 13.2
             },
             "allow_rk": {
               "PTS": 18,
-              "REB": 18,
+              "REB": 20,
               "AST": 4,
               "3PM": 15
             },
             "out": []
+          },
+          "POR": {
+            "v": {
+              "gp": 18,
+              "rec": "12-6",
+              "home": "4-2",
+              "away": "8-4",
+              "l10": "6-4",
+              "ppg": 116.8,
+              "oppg": 110.4,
+              "fg_pct": 45.8,
+              "opp_fg_pct": 44.2,
+              "fg3_pct": 36.5,
+              "fg3m": 15.8,
+              "fg3a": 43.4,
+              "opp_fg3_pct": 33.7,
+              "ft_pct": 77.2,
+              "fta": 28.3,
+              "ts_pct": 59.1,
+              "ast": 25.3,
+              "stl": 7.2,
+              "reb": 45.4,
+              "oreb": 12.0,
+              "dreb": 33.4,
+              "tov": 15.8,
+              "blk": 5.3,
+              "pf": 21.7,
+              "pace": 102.1,
+              "net": 6.4,
+              "ats": "12-6-0",
+              "ats_home": "4-2-0",
+              "ats_away": "8-4-0",
+              "ats_l10": "7-3-0",
+              "ou": "8-10-0",
+              "ou_l10": "4-6-0"
+            },
+            "rk": {
+              "ppg": 7,
+              "oppg": 7,
+              "fg_pct": 16,
+              "opp_fg_pct": 7,
+              "fg3_pct": 9,
+              "fg3m": 2,
+              "fg3a": 3,
+              "opp_fg3_pct": 6,
+              "ft_pct": 16,
+              "fta": 4,
+              "ts_pct": 5,
+              "ast": 22,
+              "stl": 24,
+              "reb": 7,
+              "oreb": 14,
+              "dreb": 6,
+              "tov": 18,
+              "blk": 12,
+              "pf": 16,
+              "pace": 12,
+              "net": 7
+            },
+            "pace": 102.0,
+            "allow100": {
+              "PTS": 109.8,
+              "REB": 42.2,
+              "AST": 24.2,
+              "3PM": 12.5
+            },
+            "allow_rk": {
+              "PTS": 23,
+              "REB": 22,
+              "AST": 30,
+              "3PM": 26
+            },
+            "out": []
           }
         },
-        "exp_pace": 101.2,
+        "exp_pace": 101.4,
         "home_spread": null,
         "lg": {
-          "pace": 102.0,
+          "pace": 101.9,
           "PTS": 111.2,
-          "REB": 42.9,
+          "REB": 43.0,
           "AST": 25.9,
           "3PM": 13.2
         },
         "seed": {
-          "SAC": {
-            "conf": "W",
-            "seed": 15,
-            "rec": "2-15"
-          },
           "GSW": {
             "conf": "W",
-            "seed": 11,
-            "rec": "9-8"
+            "seed": 9,
+            "rec": "10-8"
+          },
+          "POR": {
+            "conf": "W",
+            "seed": 6,
+            "rec": "12-6"
           }
         },
         "win": {
-          "home": 77.3,
-          "away": 22.7,
+          "home": 68.2,
+          "away": 31.8,
           "src": "model"
         }
       },
       "inj": {
-        "SAC": [
-          {
-            "name": "Ben Simmons",
-            "status": "Out"
-          },
-          {
-            "name": "Maxime Raynaud",
-            "status": "Out"
-          }
-        ],
         "GSW": [
-          {
-            "name": "Brandon Williams",
-            "status": "Out"
-          },
           {
             "name": "Jimmy Butler III",
             "status": "Out"
@@ -1667,215 +1896,6 @@
           {
             "name": "Stephen Curry",
             "status": "Out"
-          },
-          {
-            "name": "Yaxel Lendeborg",
-            "status": "Day-To-Day"
-          }
-        ]
-      }
-    },
-    {
-      "away": "San Antonio Spurs",
-      "home": "Portland Trail Blazers",
-      "tip_utc": "2026-11-26T03:00:00Z",
-      "mx": {
-        "teams": {
-          "SAS": {
-            "v": {
-              "gp": 18,
-              "rec": "15-3",
-              "home": "7-3",
-              "away": "8-0",
-              "l10": "9-1",
-              "ppg": 117.6,
-              "oppg": 105.4,
-              "fg_pct": 46.5,
-              "opp_fg_pct": 44.0,
-              "fg3_pct": 33.7,
-              "fg3m": 12.6,
-              "fg3a": 37.4,
-              "opp_fg3_pct": 36.3,
-              "ft_pct": 81.2,
-              "fta": 24.8,
-              "ts_pct": 57.6,
-              "ast": 28.7,
-              "stl": 8.2,
-              "reb": 48.0,
-              "oreb": 13.1,
-              "dreb": 34.9,
-              "tov": 12.8,
-              "blk": 6.6,
-              "pf": 18.6,
-              "pace": 101.3,
-              "net": 12.2,
-              "ats": "8-10-0",
-              "ats_home": "4-6-0",
-              "ats_away": "4-4-0",
-              "ats_l10": "5-5-0",
-              "ou": "6-12-0",
-              "ou_l10": "4-6-0"
-            },
-            "rk": {
-              "ppg": 6,
-              "oppg": 3,
-              "fg_pct": 12,
-              "opp_fg_pct": 6,
-              "fg3_pct": 25,
-              "fg3m": 22,
-              "fg3a": 17,
-              "opp_fg3_pct": 23,
-              "ft_pct": 4,
-              "fta": 12,
-              "ts_pct": 14,
-              "ast": 3,
-              "stl": 14,
-              "reb": 1,
-              "oreb": 7,
-              "dreb": 1,
-              "tov": 2,
-              "blk": 1,
-              "pf": 1,
-              "pace": 22,
-              "net": 1
-            },
-            "pace": 101.5,
-            "allow100": {
-              "PTS": 107.7,
-              "REB": 42.8,
-              "AST": 25.3,
-              "3PM": 12.6
-            },
-            "allow_rk": {
-              "PTS": 28,
-              "REB": 20,
-              "AST": 25,
-              "3PM": 25
-            },
-            "out": []
-          },
-          "POR": {
-            "v": {
-              "gp": 17,
-              "rec": "11-6",
-              "home": "3-2",
-              "away": "8-4",
-              "l10": "5-5",
-              "ppg": 116.8,
-              "oppg": 110.4,
-              "fg_pct": 46.3,
-              "opp_fg_pct": 44.2,
-              "fg3_pct": 36.4,
-              "fg3m": 15.6,
-              "fg3a": 43.0,
-              "opp_fg3_pct": 34.0,
-              "ft_pct": 77.4,
-              "fta": 28.1,
-              "ts_pct": 59.5,
-              "ast": 25.1,
-              "stl": 7.2,
-              "reb": 45.1,
-              "oreb": 11.9,
-              "dreb": 33.2,
-              "tov": 16.3,
-              "blk": 5.4,
-              "pf": 21.8,
-              "pace": 102.1,
-              "net": 6.5,
-              "ats": "11-6-0",
-              "ats_home": "3-2-0",
-              "ats_away": "8-4-0",
-              "ats_l10": "6-4-0",
-              "ou": "7-10-0",
-              "ou_l10": "4-6-0"
-            },
-            "rk": {
-              "ppg": 8,
-              "oppg": 8,
-              "fg_pct": 14,
-              "opp_fg_pct": 7,
-              "fg3_pct": 11,
-              "fg3m": 2,
-              "fg3a": 4,
-              "opp_fg3_pct": 9,
-              "ft_pct": 16,
-              "fta": 4,
-              "ts_pct": 4,
-              "ast": 22,
-              "stl": 26,
-              "reb": 12,
-              "oreb": 14,
-              "dreb": 6,
-              "tov": 20,
-              "blk": 6,
-              "pf": 17,
-              "pace": 12,
-              "net": 7
-            },
-            "pace": 102.0,
-            "allow100": {
-              "PTS": 109.9,
-              "REB": 41.8,
-              "AST": 24.3,
-              "3PM": 12.6
-            },
-            "allow_rk": {
-              "PTS": 23,
-              "REB": 27,
-              "AST": 29,
-              "3PM": 26
-            },
-            "out": []
-          }
-        },
-        "exp_pace": 101.6,
-        "home_spread": null,
-        "lg": {
-          "pace": 102.0,
-          "PTS": 111.2,
-          "REB": 42.9,
-          "AST": 25.9,
-          "3PM": 13.2
-        },
-        "seed": {
-          "SAS": {
-            "conf": "W",
-            "seed": 1,
-            "rec": "15-3"
-          },
-          "POR": {
-            "conf": "W",
-            "seed": 6,
-            "rec": "11-6"
-          }
-        },
-        "win": {
-          "home": 44.4,
-          "away": 55.6,
-          "src": "model"
-        }
-      },
-      "inj": {
-        "SAS": [
-          {
-            "name": "De'Aaron Fox",
-            "status": "Day-To-Day"
-          },
-          {
-            "name": "Dylan Harper",
-            "status": "Out"
-          },
-          {
-            "name": "Jayden Quaintance",
-            "status": "Out"
-          },
-          {
-            "name": "Tobias Harris",
-            "status": "Out"
-          },
-          {
-            "name": "Victor Wembanyama",
-            "status": "Day-To-Day"
           }
         ],
         "POR": [
@@ -1893,6 +1913,424 @@
           },
           {
             "name": "Vit Krejci",
+            "status": "Out"
+          }
+        ]
+      }
+    },
+    {
+      "away": "Los Angeles Lakers",
+      "home": "San Antonio Spurs",
+      "tip_utc": "2026-11-28T02:30:00Z",
+      "mx": {
+        "teams": {
+          "LAL": {
+            "v": {
+              "gp": 18,
+              "rec": "15-3",
+              "home": "8-2",
+              "away": "7-1",
+              "l10": "9-1",
+              "ppg": 119.4,
+              "oppg": 112.7,
+              "fg_pct": 48.6,
+              "opp_fg_pct": 45.4,
+              "fg3_pct": 36.6,
+              "fg3m": 13.8,
+              "fg3a": 37.8,
+              "opp_fg3_pct": 35.6,
+              "ft_pct": 78.6,
+              "fta": 29.8,
+              "ts_pct": 61.2,
+              "ast": 24.5,
+              "stl": 10.6,
+              "reb": 41.3,
+              "oreb": 11.9,
+              "dreb": 29.4,
+              "tov": 16.4,
+              "blk": 5.8,
+              "pf": 22.4,
+              "pace": 102.5,
+              "net": 6.7,
+              "ats": "11-7-0",
+              "ats_home": "5-5-0",
+              "ats_away": "6-2-0",
+              "ats_l10": "6-4-0",
+              "ou": "11-7-0",
+              "ou_l10": "6-4-0"
+            },
+            "rk": {
+              "ppg": 3,
+              "oppg": 15,
+              "fg_pct": 2,
+              "opp_fg_pct": 10,
+              "fg3_pct": 7,
+              "fg3m": 16,
+              "fg3a": 14,
+              "opp_fg3_pct": 15,
+              "ft_pct": 12,
+              "fta": 2,
+              "ts_pct": 1,
+              "ast": 26,
+              "stl": 1,
+              "reb": 25,
+              "oreb": 15,
+              "dreb": 28,
+              "tov": 22,
+              "blk": 2,
+              "pf": 22,
+              "pace": 7,
+              "net": 6
+            },
+            "pace": 102.3,
+            "allow100": {
+              "PTS": 110.3,
+              "REB": 42.0,
+              "AST": 26.1,
+              "3PM": 13.7
+            },
+            "allow_rk": {
+              "PTS": 21,
+              "REB": 25,
+              "AST": 16,
+              "3PM": 9
+            },
+            "out": []
+          },
+          "SAS": {
+            "v": {
+              "gp": 19,
+              "rec": "15-4",
+              "home": "7-3",
+              "away": "8-1",
+              "l10": "8-2",
+              "ppg": 117.3,
+              "oppg": 106.0,
+              "fg_pct": 46.3,
+              "opp_fg_pct": 43.8,
+              "fg3_pct": 33.4,
+              "fg3m": 12.5,
+              "fg3a": 37.3,
+              "opp_fg3_pct": 36.4,
+              "ft_pct": 81.1,
+              "fta": 25.0,
+              "ts_pct": 57.4,
+              "ast": 28.3,
+              "stl": 8.0,
+              "reb": 48.4,
+              "oreb": 13.2,
+              "dreb": 35.2,
+              "tov": 12.9,
+              "blk": 6.5,
+              "pf": 18.6,
+              "pace": 101.3,
+              "net": 11.3,
+              "ats": "8-11-0",
+              "ats_home": "4-6-0",
+              "ats_away": "4-5-0",
+              "ats_l10": "5-5-0",
+              "ou": "7-12-0",
+              "ou_l10": "4-6-0"
+            },
+            "rk": {
+              "ppg": 6,
+              "oppg": 4,
+              "fg_pct": 12,
+              "opp_fg_pct": 5,
+              "fg3_pct": 28,
+              "fg3m": 22,
+              "fg3a": 17,
+              "opp_fg3_pct": 23,
+              "ft_pct": 4,
+              "fta": 11,
+              "ts_pct": 15,
+              "ast": 4,
+              "stl": 15,
+              "reb": 1,
+              "oreb": 5,
+              "dreb": 1,
+              "tov": 3,
+              "blk": 1,
+              "pf": 1,
+              "pace": 21,
+              "net": 1
+            },
+            "pace": 101.5,
+            "allow100": {
+              "PTS": 107.9,
+              "REB": 43.0,
+              "AST": 25.4,
+              "3PM": 12.8
+            },
+            "allow_rk": {
+              "PTS": 28,
+              "REB": 16,
+              "AST": 24,
+              "3PM": 22
+            },
+            "out": []
+          }
+        },
+        "exp_pace": 101.9,
+        "home_spread": null,
+        "lg": {
+          "pace": 101.9,
+          "PTS": 111.2,
+          "REB": 43.0,
+          "AST": 25.9,
+          "3PM": 13.2
+        },
+        "seed": {
+          "LAL": {
+            "conf": "W",
+            "seed": 1,
+            "rec": "15-3"
+          },
+          "SAS": {
+            "conf": "W",
+            "seed": 2,
+            "rec": "15-4"
+          }
+        },
+        "win": {
+          "home": 65.8,
+          "away": 34.2,
+          "src": "model"
+        }
+      },
+      "inj": {
+        "LAL": [
+          {
+            "name": "Austin Reaves",
+            "status": "Out"
+          }
+        ],
+        "SAS": [
+          {
+            "name": "De'Aaron Fox",
+            "status": "Day-To-Day"
+          },
+          {
+            "name": "Dylan Harper",
+            "status": "Out"
+          },
+          {
+            "name": "Jayden Quaintance",
+            "status": "Out"
+          },
+          {
+            "name": "Tobias Harris",
+            "status": "Out"
+          }
+        ]
+      }
+    },
+    {
+      "away": "New Orleans Pelicans",
+      "home": "Los Angeles Clippers",
+      "tip_utc": "2026-11-28T02:30:00Z",
+      "mx": {
+        "teams": {
+          "NOP": {
+            "v": {
+              "gp": 19,
+              "rec": "5-14",
+              "home": "4-8",
+              "away": "1-6",
+              "l10": "1-9",
+              "ppg": 114.5,
+              "oppg": 122.5,
+              "fg_pct": 45.5,
+              "opp_fg_pct": 48.6,
+              "fg3_pct": 33.7,
+              "fg3m": 10.2,
+              "fg3a": 30.3,
+              "opp_fg3_pct": 35.6,
+              "ft_pct": 80.6,
+              "fta": 30.3,
+              "ts_pct": 56.6,
+              "ast": 23.6,
+              "stl": 9.6,
+              "reb": 42.8,
+              "oreb": 11.7,
+              "dreb": 31.1,
+              "tov": 15.8,
+              "blk": 4.8,
+              "pf": 23.6,
+              "pace": 104.9,
+              "net": -8.0,
+              "ats": "9-10-0",
+              "ats_home": "5-7-0",
+              "ats_away": "4-3-0",
+              "ats_l10": "3-7-0",
+              "ou": "12-7-0",
+              "ou_l10": "6-4-0"
+            },
+            "rk": {
+              "ppg": 13,
+              "oppg": 29,
+              "fg_pct": 21,
+              "opp_fg_pct": 28,
+              "fg3_pct": 26,
+              "fg3m": 30,
+              "fg3a": 30,
+              "opp_fg3_pct": 15,
+              "ft_pct": 6,
+              "fta": 1,
+              "ts_pct": 20,
+              "ast": 28,
+              "stl": 3,
+              "reb": 19,
+              "oreb": 17,
+              "dreb": 21,
+              "tov": 18,
+              "blk": 16,
+              "pf": 28,
+              "pace": 3,
+              "net": 26
+            },
+            "pace": 103.9,
+            "allow100": {
+              "PTS": 114.5,
+              "REB": 43.0,
+              "AST": 26.7,
+              "3PM": 13.3
+            },
+            "allow_rk": {
+              "PTS": 3,
+              "REB": 17,
+              "AST": 6,
+              "3PM": 13
+            },
+            "out": []
+          },
+          "LAC": {
+            "v": {
+              "gp": 17,
+              "rec": "4-13",
+              "home": "4-4",
+              "away": "0-9",
+              "l10": "3-7",
+              "ppg": 109.9,
+              "oppg": 117.4,
+              "fg_pct": 45.6,
+              "opp_fg_pct": 49.0,
+              "fg3_pct": 37.2,
+              "fg3m": 13.9,
+              "fg3a": 37.3,
+              "opp_fg3_pct": 36.8,
+              "ft_pct": 80.1,
+              "fta": 23.6,
+              "ts_pct": 57.9,
+              "ast": 26.1,
+              "stl": 8.6,
+              "reb": 40.0,
+              "oreb": 10.4,
+              "dreb": 29.6,
+              "tov": 16.9,
+              "blk": 4.5,
+              "pf": 21.5,
+              "pace": 101.8,
+              "net": -7.5,
+              "ats": "9-8-0",
+              "ats_home": "5-3-0",
+              "ats_away": "4-5-0",
+              "ats_l10": "6-4-0",
+              "ou": "10-7-0",
+              "ou_l10": "6-4-0"
+            },
+            "rk": {
+              "ppg": 24,
+              "oppg": 24,
+              "fg_pct": 19,
+              "opp_fg_pct": 30,
+              "fg3_pct": 5,
+              "fg3m": 15,
+              "fg3a": 17,
+              "opp_fg3_pct": 25,
+              "ft_pct": 9,
+              "fta": 17,
+              "ts_pct": 11,
+              "ast": 19,
+              "stl": 8,
+              "reb": 30,
+              "oreb": 28,
+              "dreb": 27,
+              "tov": 26,
+              "blk": 22,
+              "pf": 14,
+              "pace": 17,
+              "net": 24
+            },
+            "pace": 101.8,
+            "allow100": {
+              "PTS": 113.1,
+              "REB": 43.1,
+              "AST": 26.6,
+              "3PM": 13.0
+            },
+            "allow_rk": {
+              "PTS": 6,
+              "REB": 14,
+              "AST": 7,
+              "3PM": 17
+            },
+            "out": []
+          }
+        },
+        "exp_pace": 103.9,
+        "home_spread": null,
+        "lg": {
+          "pace": 101.9,
+          "PTS": 111.2,
+          "REB": 43.0,
+          "AST": 25.9,
+          "3PM": 13.2
+        },
+        "seed": {
+          "NOP": {
+            "conf": "W",
+            "seed": 12,
+            "rec": "5-14"
+          },
+          "LAC": {
+            "conf": "W",
+            "seed": 13,
+            "rec": "4-13"
+          }
+        },
+        "win": {
+          "home": 58.0,
+          "away": 42.0,
+          "src": "model"
+        }
+      },
+      "inj": {
+        "NOP": [
+          {
+            "name": "Bennedict Mathurin",
+            "status": "Out"
+          },
+          {
+            "name": "Dejounte Murray",
+            "status": "Out"
+          },
+          {
+            "name": "Julian Reese",
+            "status": "Day-To-Day"
+          },
+          {
+            "name": "Trendon Watford",
+            "status": "Out"
+          }
+        ],
+        "LAC": [
+          {
+            "name": "Bradley Beal",
+            "status": "Out"
+          },
+          {
+            "name": "Jordan Miller",
             "status": "Out"
           }
         ]
