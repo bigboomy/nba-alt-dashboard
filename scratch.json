@@ -1,41 +1,17 @@
 {
- "generated": "2026-11-26T02:30:03Z",
+ "generated": "2026-11-27T23:10:03Z",
  "out": [
   {
    "kind": "out",
-   "date": "2026-11-24",
-   "game": "DET@ORL",
-   "id": "4432166",
-   "player": "Cade Cunningham",
-   "espn_name": "Cade Cunningham",
-   "team": "DET",
+   "date": "2026-11-27",
+   "game": "PHI@IND",
+   "id": "2530530",
+   "player": "T.J. McConnell",
+   "espn_name": "T.J. McConnell",
+   "team": "IND",
    "status": "Out",
-   "utc": "2026-11-24T23:45:02Z",
-   "mins_to_tip": 14
-  },
-  {
-   "kind": "out",
-   "date": "2026-11-25",
-   "game": "SAC@GSW",
-   "id": "4397040",
-   "player": "Brandon Williams",
-   "espn_name": "Brandon Williams",
-   "team": "GSW",
-   "status": "Out",
-   "utc": "2026-11-26T01:45:04Z",
-   "mins_to_tip": 74
-  },
-  {
-   "kind": "out",
-   "date": "2026-11-25",
-   "game": "SAS@POR",
-   "id": "4066259",
-   "player": "De'Aaron Fox",
-   "espn_name": "De'Aaron Fox",
-   "team": "SAS",
-   "status": "Out",
-   "utc": "2026-11-26T02:30:03Z",
-   "mins_to_tip": 29
+   "utc": "2026-11-27T23:10:03Z",
+   "mins_to_tip": 79
   }
  ]
 }
