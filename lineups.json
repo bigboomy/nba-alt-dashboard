@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T23:05:03Z",
+ "generated": "2026-11-27T23:35:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
@@ -89,6 +89,28 @@
     "Joel Embiid"
    ],
    "at": "2026-11-27T23:05:03Z"
+  },
+  "ATL": {
+   "confirmed": false,
+   "starters": [
+    "Nickeil Alexander-Walker",
+    "Dyson Daniels",
+    "Kingston Flemings",
+    "Jalen Johnson",
+    "Onyeka Okongwu"
+   ],
+   "at": "2026-11-27T23:35:03Z"
+  },
+  "BOS": {
+   "confirmed": false,
+   "starters": [
+    "Jordan Walsh",
+    "Jayson Tatum",
+    "Derrick White",
+    "Paul George",
+    "Neemias Queta"
+   ],
+   "at": "2026-11-27T23:35:03Z"
   }
  },
  "items": {}
