@@ -4737,6 +4737,27 @@
           "wowy_keys": "Jaylen Brown",
           "wowy_mu": 5.04
         },
+        "Joel Embiid|REB|5.5|LSR": {
+          "best_book": "tabtouch",
+          "best_price": 1.22,
+          "mm_min": 37.56,
+          "mm_mu": 10.815,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9072,
+          "p_pin": 0.7816,
+          "p_wowy": 0.8576,
+          "pin_edge_pp": -5.2,
+          "pin_line": 8.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.072,
+          "wowy_keys": "Jaylen Brown",
+          "wowy_mu": 9.742
+        },
         "Kelly Oubre Jr.|PTS|12.5|L5P": {
           "best_book": "ladbrokes",
           "best_price": 1.98,
@@ -4779,6 +4800,27 @@
           "wowy_keys": "",
           "wowy_mu": 13.996
         },
+        "Kelly Oubre Jr.|PTS|8.5|LSR": {
+          "best_book": "ladbrokes",
+          "best_price": 1.28,
+          "mm_min": 27.75,
+          "mm_mu": 15.578,
+          "n_books": 3,
+          "opp_lift": 0.074,
+          "opp_out": "SC2:Jaylen Brown",
+          "p_mm": 0.9096,
+          "p_pin": 0.7642,
+          "p_wowy": 0.8528,
+          "pin_edge_pp": -1.7,
+          "pin_line": 11.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 13.996
+        },
         "Kelly Oubre Jr.|PTS|9.5|lean": {
           "best_book": "playup",
           "best_price": 1.44,
@@ -4800,6 +4842,27 @@
           "wowy_keys": "",
           "wowy_mu": 13.996
         },
+        "Kelly Oubre Jr.|REB|3.5|LSR": {
+          "best_book": "betr",
+          "best_price": 1.91,
+          "mm_min": 27.75,
+          "mm_mu": 4.316,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "SC2:Jaylen Brown",
+          "p_mm": 0.6121,
+          "p_pin": "",
+          "p_wowy": 0.5552,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 4.0
+        },
         "LeBron James|AST|4.5|WIN": {
           "best_book": "ladbrokes",
           "best_price": 1.2,
@@ -4820,6 +4883,27 @@
           "wowy_L": 0.999,
           "wowy_keys": "Jaylen Brown",
           "wowy_mu": 7.034
+        },
+        "LeBron James|PTS|13.5|LSR": {
+          "best_book": "",
+          "best_price": "",
+          "mm_min": 38.56,
+          "mm_mu": 23.233,
+          "n_books": 0,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9219,
+          "p_pin": 0.7851,
+          "p_wowy": 0.8403,
+          "pin_edge_pp": -0.9,
+          "pin_line": 18.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.137,
+          "wowy_keys": "Jaylen Brown",
+          "wowy_mu": 20.277
         },
         "LeBron James|REB|4.5|MM90": {
           "best_book": "ladbrokes",
@@ -4904,6 +4988,69 @@
           "wowy_L": 0.923,
           "wowy_keys": "Jaylen Brown",
           "wowy_mu": 5.572
+        },
+        "Tyrese Maxey|AST|5.5|LSR": {
+          "best_book": "betr",
+          "best_price": 2.0,
+          "mm_min": 41.48,
+          "mm_mu": 7.763,
+          "n_books": 13,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7861,
+          "p_pin": 0.4878,
+          "p_wowy": 0.4834,
+          "pin_edge_pp": -2.8,
+          "pin_line": 5.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 0.923,
+          "wowy_keys": "Jaylen Brown",
+          "wowy_mu": 5.572
+        },
+        "Tyrese Maxey|PTS|19.5|LSR": {
+          "best_book": "tabtouch",
+          "best_price": 1.29,
+          "mm_min": 41.48,
+          "mm_mu": 29.585,
+          "n_books": 13,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9349,
+          "p_pin": 0.7863,
+          "p_wowy": 0.6744,
+          "pin_edge_pp": -1.4,
+          "pin_line": 25.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 0.981,
+          "wowy_keys": "Jaylen Brown",
+          "wowy_mu": 22.568
+        },
+        "VJ Edgecombe|AST|2.5|LSR": {
+          "best_book": "betr",
+          "best_price": 1.26,
+          "mm_min": 42.0,
+          "mm_mu": 6.819,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9514,
+          "p_pin": 0.7351,
+          "p_wowy": 0.8988,
+          "pin_edge_pp": -8.5,
+          "pin_line": 3.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.061,
+          "wowy_keys": "Jaylen Brown",
+          "wowy_mu": 5.676
         },
         "VJ Edgecombe|AST|3.5|lean": {
           "best_book": "betdeluxe",
@@ -5617,6 +5764,389 @@
           "std": 22.5,
           "t": "IND",
           "tier": "A"
+        },
+        {
+          "alt": 5.5,
+          "e": 4.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-LEAN",
+            "[ROLE?]",
+            "RET-ADJ",
+            "C0.92",
+            "Z0.32",
+            "TMO",
+            "PIN-2.8",
+            "FO:Wade/Brown",
+            "BK-ladbrokes",
+            "TIER-B"
+          ],
+          "gs": 4,
+          "h": "70% (7/10)",
+          "l5": [
+            6,
+            5,
+            4,
+            null,
+            9
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-18",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "LeBron James"
+              ]
+            }
+          ],
+          "o": 1.94,
+          "opp": "IND 13th fewest AST allowed · pace +0.3",
+          "p": "Tyrese Maxey",
+          "pmx": 0.7581,
+          "s": "AST",
+          "st": "3",
+          "std": 5.5,
+          "t": "PHI",
+          "tier": "B"
+        },
+        {
+          "alt": 8.5,
+          "e": 1.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.91",
+            "[ROLE?]",
+            "RET-ADJ",
+            "C0.62",
+            "Z1.08",
+            "TMO",
+            "PIN-1.7",
+            "OPP-OUT:SC2",
+            "RET2:Nembhard",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            20,
+            15,
+            17,
+            17,
+            16
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Andrew Nembhard"
+              ]
+            },
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Andrew Nembhard"
+              ]
+            }
+          ],
+          "o": 1.28,
+          "opp": "PHI 14th fewest PTS allowed · pace +0.3",
+          "p": "Kelly Oubre Jr.",
+          "pmx": 0.8488,
+          "s": "PTS",
+          "st": "4",
+          "std": 12.5,
+          "t": "IND",
+          "tier": "A"
+        },
+        {
+          "alt": 13.5,
+          "e": -0.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.92",
+            "[ROLE?]",
+            "RET-ADJ",
+            "C0.77",
+            "Z0.71",
+            "TMO",
+            "PIN-0.9",
+            "RET1:Embiid",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 4,
+          "h": "80% (8/10)",
+          "l5": [
+            25,
+            23,
+            21,
+            22,
+            null
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Jaylen Brown"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Tyrese Maxey",
+                "Jaylen Brown"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "dnp": 1
+            }
+          ],
+          "o": 1.26,
+          "opp": "IND 15th most PTS allowed · pace +0.3",
+          "p": "LeBron James",
+          "pmx": 0.8939,
+          "s": "PTS",
+          "st": "4",
+          "std": 18.5,
+          "t": "PHI",
+          "tier": "A"
+        },
+        {
+          "alt": 19.5,
+          "e": -3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.93",
+            "[ROLE?]",
+            "RET-ADJ",
+            "C0.86",
+            "Z0.71",
+            "TMO",
+            "PIN-1.4",
+            "RET1:Embiid",
+            "FO:Wade/Brown",
+            "BK-sportsbet",
+            "TIER-A"
+          ],
+          "gs": 4,
+          "h": "70% (7/10)",
+          "l5": [
+            30,
+            22,
+            17,
+            null,
+            24
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-25",
+              "out": [
+                "Joel Embiid"
+              ]
+            },
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Joel Embiid"
+              ]
+            },
+            {
+              "d": "2026-11-21",
+              "out": [
+                "Jaylen Brown"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "dnp": 1
+            },
+            null
+          ],
+          "o": 1.25,
+          "opp": "IND 15th most PTS allowed · pace +0.3",
+          "p": "Tyrese Maxey",
+          "pmx": 0.8939,
+          "s": "PTS",
+          "st": "4",
+          "std": 25.5,
+          "t": "PHI",
+          "tier": "A"
+        },
+        {
+          "alt": 2.5,
+          "e": -4.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.95",
+            "[Std?]",
+            "[ROLE?]",
+            "RET-ADJ",
+            "MT+",
+            "C0.48",
+            "Z1.38",
+            "TMO",
+            "PIN-8.5",
+            "RET1:Embiid",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            5,
+            7,
+            6,
+            6,
+            4
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Tyrese Maxey"
+              ]
+            },
+            {
+              "d": "2026-11-16",
+              "out": [
+                "LeBron James"
+              ]
+            }
+          ],
+          "o": 1.22,
+          "opp": "IND 13th fewest AST allowed · pace +0.3",
+          "p": "VJ Edgecombe",
+          "pmx": 0.9396,
+          "s": "AST",
+          "st": "4",
+          "std": 3.5,
+          "t": "PHI",
+          "tier": "A"
+        },
+        {
+          "alt": 5.5,
+          "e": -2.2,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.91",
+            "[Std?]",
+            "[ROLE?]",
+            "REB-ANC",
+            "DNP-LAST",
+            "RET-ADJ",
+            "MT+",
+            "C0.62",
+            "Z0.81",
+            "TMO",
+            "PIN-5.2",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 3,
+          "h": "90% (9/10)",
+          "l5": [
+            null,
+            null,
+            17,
+            6,
+            5
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-25",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-23",
+              "dnp": 1
+            },
+            null,
+            null,
+            {
+              "d": "2026-11-16",
+              "out": [
+                "LeBron James"
+              ]
+            }
+          ],
+          "o": 1.2,
+          "opp": "IND 3rd most REB allowed · pace +0.3",
+          "p": "Joel Embiid",
+          "pmx": 0.8872,
+          "s": "REB",
+          "st": "5",
+          "std": 8.5,
+          "t": "PHI",
+          "tier": "A"
+        },
+        {
+          "alt": 3.5,
+          "e": -2.1,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-L5P",
+            "L5LOW4",
+            "[ROLE?]",
+            "RET-ADJ",
+            "C0.89",
+            "Z0.25",
+            "TMO",
+            "OPP-OUT:SC2",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "70% (7/10)",
+          "l5": [
+            4,
+            5,
+            6,
+            4,
+            4
+          ],
+          "o": 1.87,
+          "opp": "PHI 5th most REB allowed · pace +0.3",
+          "p": "Kelly Oubre Jr.",
+          "pmx": 0.5751,
+          "s": "REB",
+          "st": "2",
+          "std": 3.5,
+          "t": "IND",
+          "tier": "C"
         }
       ],
       "lsr": [
@@ -5627,6 +6157,14 @@
           ],
           "run": "20261127T231003Z_lsr_PHI-IND",
           "utc": "2026-11-27T23:10:03Z"
+        },
+        {
+          "n": 7,
+          "out": [
+            "Dean Wade"
+          ],
+          "run": "20261127T234003Z_lsr_PHI-IND",
+          "utc": "2026-11-27T23:40:03Z"
         }
       ],
       "mkt": 229.5,
