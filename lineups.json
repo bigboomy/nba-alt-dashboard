@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T00:40:03Z",
+ "generated": "2026-11-28T01:05:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
@@ -113,7 +113,7 @@
    "at": "2026-11-28T00:40:03Z"
   },
   "MEM": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Cedric Coward",
     "Jaylen Wells",
@@ -121,29 +121,29 @@
     "Kris Murray",
     "Zach Edey"
    ],
-   "at": "2026-11-28T00:00:03Z"
+   "at": "2026-11-28T01:05:03Z"
   },
   "MIN": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Terrence Shannon Jr",
-    "Jonathan Kuminga",
-    "Ayo Dosunmu",
     "Jaden McDaniels",
+    "Ayo Dosunmu",
+    "Jonathan Kuminga",
     "Rudy Gobert"
    ],
-   "at": "2026-11-28T00:00:03Z"
+   "at": "2026-11-28T01:05:03Z"
   },
   "DAL": {
    "confirmed": false,
    "starters": [
     "Caleb Martin",
     "Cooper Flagg",
-    "Kyrie Irving",
+    "Walter Clayton Jr.",
     "P.J. Washington",
     "Daniel Gafford"
    ],
-   "at": "2026-11-28T00:30:03Z"
+   "at": "2026-11-28T01:05:03Z"
   },
   "PHX": {
    "confirmed": false,
@@ -172,6 +172,15 @@
   "Danny Wolf|BKN": 1,
   "Egor Demin|BKN": 0,
   "Immanuel Quickley|TOR": 1,
+  "Ty Jerome|MEM": 1,
+  "Cam Spencer|MEM": 0,
+  "Zach Edey|MEM": 1,
+  "Cedric Coward|MEM": 1,
+  "Jaylen Wells|MEM": 1,
+  "Rudy Gobert|MIN": 1,
+  "Jaden McDaniels|MIN": 1,
+  "Jonathan Kuminga|MIN": 1,
+  "Bones Hyland|MIN": 0,
   "Giannis Antetokounmpo|MIA": 1,
   "Bam Adebayo|MIA": 1,
   "Davion Mitchell|MIA": 1,
