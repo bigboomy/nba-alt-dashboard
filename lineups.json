@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T00:30:03Z",
+ "generated": "2026-11-28T00:40:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
@@ -91,7 +91,7 @@
    "at": "2026-11-28T00:05:03Z"
   },
   "ATL": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Nickeil Alexander-Walker",
     "Dyson Daniels",
@@ -99,18 +99,18 @@
     "Jalen Johnson",
     "Onyeka Okongwu"
    ],
-   "at": "2026-11-27T23:35:03Z"
+   "at": "2026-11-28T00:40:03Z"
   },
   "BOS": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Jordan Walsh",
-    "Jayson Tatum",
-    "Derrick White",
+    "Hugo González",
     "Paul George",
+    "Derrick White",
+    "Jayson Tatum",
     "Neemias Queta"
    ],
-   "at": "2026-11-27T23:35:03Z"
+   "at": "2026-11-28T00:40:03Z"
   },
   "MEM": {
    "confirmed": false,
@@ -158,6 +158,14 @@
   }
  },
  "items": {
+  "Nickeil Alexander-Walker|ATL": 1,
+  "Luguentz Dort|ATL": 0,
+  "Aaron Wiggins|ATL": 0,
+  "Onyeka Okongwu|ATL": 1,
+  "Jalen Johnson|ATL": 1,
+  "Dyson Daniels|ATL": 1,
+  "Kingston Flemings|ATL": 1,
+  "Jayson Tatum|BOS": 1,
   "Michael Porter Jr.|BKN": 1,
   "Day'Ron Sharpe|BKN": 1,
   "Mikel Brown Jr.|BKN": 1,
