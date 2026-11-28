@@ -1,6 +1,18 @@
 {
- "generated": "2026-11-28T00:20:03Z",
+ "generated": "2026-11-28T00:50:03Z",
  "out": [
+  {
+   "kind": "out",
+   "date": "2026-11-27",
+   "game": "DAL@PHX",
+   "id": "6442",
+   "player": "Kyrie Irving",
+   "espn_name": "Kyrie Irving",
+   "team": "DAL",
+   "status": "Out",
+   "utc": "2026-11-28T00:50:03Z",
+   "mins_to_tip": 69
+  },
   {
    "kind": "out",
    "date": "2026-11-27",
