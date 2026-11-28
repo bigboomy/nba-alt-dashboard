@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T02:15:03Z",
+ "generated": "2026-11-28T02:20:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
@@ -201,15 +201,15 @@
    "at": "2026-11-28T02:05:03Z"
   },
   "LAL": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Austin Reaves",
     "Matisse Thybulle",
     "Luka Dončić",
-    "Ziaire Williams",
+    "Jake LaRavia",
     "Walker Kessler"
    ],
-   "at": "2026-11-28T01:10:03Z"
+   "at": "2026-11-28T02:20:03Z"
   },
   "SAS": {
    "confirmed": true,
@@ -278,6 +278,11 @@
   "Scoot Henderson|POR": 0,
   "Sidy Cissoko|POR": 1,
   "Donovan Clingan|POR": 1,
+  "Luka Doncic|LAL": 1,
+  "Austin Reaves|LAL": 1,
+  "Quentin Grimes|LAL": 0,
+  "Walker Kessler|LAL": 1,
+  "Ziaire Williams|LAL": 0,
   "Devin Vassell|SAS": 1,
   "Stephon Castle|SAS": 1,
   "Victor Wembanyama|SAS": 1,
