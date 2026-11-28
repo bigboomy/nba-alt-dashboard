@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T01:05:03Z",
+ "generated": "2026-11-28T01:10:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
@@ -155,6 +155,94 @@
     "Oso Ighodaro"
    ],
    "at": "2026-11-28T00:30:03Z"
+  },
+  "DEN": {
+   "confirmed": false,
+   "starters": [
+    "Christian Braun",
+    "Cameron Johnson",
+    "Jamal Murray",
+    "Aaron Gordon",
+    "Nikola Jokić"
+   ],
+   "at": "2026-11-28T01:10:03Z"
+  },
+  "UTA": {
+   "confirmed": false,
+   "starters": [
+    "Darryn Peterson",
+    "Josh Green",
+    "Keyonte George",
+    "Ace Bailey",
+    "Jaxson Hayes"
+   ],
+   "at": "2026-11-28T01:10:03Z"
+  },
+  "GSW": {
+   "confirmed": false,
+   "starters": [
+    "Brandin Podziemski",
+    "Yaxel Lendeborg",
+    "De'Anthony Melton",
+    "Draymond Green",
+    "Charles Bassey"
+   ],
+   "at": "2026-11-28T01:10:03Z"
+  },
+  "POR": {
+   "confirmed": false,
+   "starters": [
+    "Sidy Cissoko",
+    "Toumani Camara",
+    "Jrue Holiday",
+    "Deni Avdija",
+    "Donovan Clingan"
+   ],
+   "at": "2026-11-28T01:10:03Z"
+  },
+  "LAL": {
+   "confirmed": false,
+   "starters": [
+    "Austin Reaves",
+    "Matisse Thybulle",
+    "Luka Dončić",
+    "Ziaire Williams",
+    "Walker Kessler"
+   ],
+   "at": "2026-11-28T01:10:03Z"
+  },
+  "SAS": {
+   "confirmed": false,
+   "starters": [
+    "Dylan Harper",
+    "Stephon Castle",
+    "De'Aaron Fox",
+    "Devin Vassell",
+    "Victor Wembanyama"
+   ],
+   "at": "2026-11-28T01:10:03Z"
+  },
+  "LAC": {
+   "confirmed": false,
+   "starters": [
+    "Brandon Ingram",
+    "Derrick Jones Jr.",
+    "Darius Garland",
+    "Rui Hachimura",
+    "Brook Lopez"
+   ],
+   "at": "2026-11-28T01:10:03Z"
+  },
+  "NOP": {
+   "confirmed": false,
+   "starters": [
+    "Herbert Jones",
+    "Trey Murphy III",
+    "Jeremiah Fears",
+    "Zion Williamson",
+    "Yves Missi"
+   ],
+   "at": "2026-11-28T01:10:03Z"
   }
  },
  "items": {
