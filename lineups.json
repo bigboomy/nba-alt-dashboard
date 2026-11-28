@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T02:10:03Z",
+ "generated": "2026-11-28T02:15:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
@@ -212,7 +212,7 @@
    "at": "2026-11-28T01:10:03Z"
   },
   "SAS": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Devin Vassell",
     "Stephon Castle",
@@ -220,7 +220,7 @@
     "Julian Champagnie",
     "Victor Wembanyama"
    ],
-   "at": "2026-11-28T02:10:03Z"
+   "at": "2026-11-28T02:15:03Z"
   },
   "LAC": {
    "confirmed": true,
@@ -278,6 +278,9 @@
   "Scoot Henderson|POR": 0,
   "Sidy Cissoko|POR": 1,
   "Donovan Clingan|POR": 1,
+  "Devin Vassell|SAS": 1,
+  "Stephon Castle|SAS": 1,
+  "Victor Wembanyama|SAS": 1,
   "Ty Jerome|MEM": 1,
   "Cam Spencer|MEM": 0,
   "Zach Edey|MEM": 1,
