@@ -8502,6 +8502,27 @@
       },
       "ctx": "Out TOP3: Cameron Boozer (MEM), Anthony Edwards (MIN); Returning: none; Depleted: MEM (3 rotation out); missed last game: none. Coverage: evaluated 11 of 12 players (25 of 26 player-stats); skipped: Shannon Jr. PTS (no ESPN match)",
       "cx": {
+        "Ayo Dosunmu|PTS|13.5|LSR": {
+          "best_book": "tabtouch",
+          "best_price": 1.21,
+          "mm_min": 38.83,
+          "mm_mu": 24.129,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.919,
+          "p_pin": 0.8266,
+          "p_wowy": 0.8045,
+          "pin_edge_pp": -0.7,
+          "pin_line": 19.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.02,
+          "wowy_keys": "LaMelo Ball",
+          "wowy_mu": 20.015
+        },
         "Bones Hyland|AST|2.5|FO": {
           "best_book": "ladbrokes",
           "best_price": 1.26,
@@ -9885,6 +9906,53 @@
           "std": 2.5,
           "t": "MIN",
           "tier": "A"
+        },
+        {
+          "alt": 13.5,
+          "e": -1.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.92",
+            "[ROLE?]",
+            "C0.70",
+            "Z0.76",
+            "TMO",
+            "PIN-0.7",
+            "FO:Ball",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            16,
+            23,
+            19,
+            6,
+            30
+          ],
+          "o": 1.2,
+          "opp": "MEM 9th fewest PTS allowed · pace +0.9",
+          "p": "Ayo Dosunmu",
+          "pmx": 0.8932,
+          "s": "PTS",
+          "st": "5",
+          "std": 19.5,
+          "t": "MIN",
+          "tier": "A"
+        }
+      ],
+      "lsr": [
+        {
+          "n": 1,
+          "out": [
+            "Isaiah Stewart"
+          ],
+          "run": "20261128T002003Z_lsr_MEM-MIN",
+          "utc": "2026-11-28T00:20:03Z"
         }
       ],
       "mkt": 220.5,
