@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T00:05:03Z",
+ "generated": "2026-11-28T00:10:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
@@ -25,26 +25,26 @@
    "at": "2026-11-27T23:40:03Z"
   },
   "BKN": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Michael Porter Jr.",
     "Danny Wolf",
-    "Egor Dëmin",
+    "Michael Porter Jr.",
+    "Mikel Brown Jr.",
     "Julius Randle",
     "Day'Ron Sharpe"
    ],
-   "at": "2026-11-27T23:05:03Z"
+   "at": "2026-11-28T00:10:03Z"
   },
   "TOR": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Ja'Kobe Walter",
-    "Allen Graves",
-    "Immanuel Quickley",
     "Scottie Barnes",
-    "Collin Murray-Boyles"
+    "Immanuel Quickley",
+    "Allen Graves",
+    "Jakob Poeltl"
    ],
-   "at": "2026-11-27T23:05:03Z"
+   "at": "2026-11-28T00:10:03Z"
   },
   "DET": {
    "confirmed": false,
@@ -136,6 +136,12 @@
   }
  },
  "items": {
+  "Michael Porter Jr.|BKN": 1,
+  "Day'Ron Sharpe|BKN": 1,
+  "Mikel Brown Jr.|BKN": 1,
+  "Danny Wolf|BKN": 1,
+  "Egor Demin|BKN": 0,
+  "Immanuel Quickley|TOR": 1,
   "Giannis Antetokounmpo|MIA": 1,
   "Bam Adebayo|MIA": 1,
   "Davion Mitchell|MIA": 1,
