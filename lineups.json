@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T00:00:03Z",
+ "generated": "2026-11-28T00:05:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
@@ -69,7 +69,7 @@
    "at": "2026-11-27T23:05:03Z"
   },
   "IND": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Kelly Oubre Jr.",
     "Aaron Nesmith",
@@ -77,18 +77,18 @@
     "Pascal Siakam",
     "Ivica Zubac"
    ],
-   "at": "2026-11-27T23:05:03Z"
+   "at": "2026-11-28T00:05:03Z"
   },
   "PHI": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "VJ Edgecombe",
-    "Kentavious Caldwell-Pope",
+    "Dominick Barlow",
     "Tyrese Maxey",
     "LeBron James",
     "Joel Embiid"
    ],
-   "at": "2026-11-27T23:05:03Z"
+   "at": "2026-11-28T00:05:03Z"
   },
   "ATL": {
    "confirmed": false,
@@ -143,6 +143,13 @@
   "Klay Thompson|MIA": 1,
   "Karl-Anthony Towns|NYK": 1,
   "Mikal Bridges|NYK": 1,
-  "Jalen Brunson|NYK": 1
+  "Jalen Brunson|NYK": 1,
+  "Kelly Oubre Jr.|IND": 1,
+  "Pascal Siakam|IND": 1,
+  "Andrew Nembhard|IND": 1,
+  "LeBron James|PHI": 1,
+  "Dean Wade|PHI": 0,
+  "Tyrese Maxey|PHI": 1,
+  "VJ Edgecombe|PHI": 1
  }
 }
