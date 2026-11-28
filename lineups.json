@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T02:05:03Z",
+ "generated": "2026-11-28T02:10:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
@@ -157,7 +157,7 @@
    "at": "2026-11-28T01:35:03Z"
   },
   "DEN": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Christian Braun",
     "Cameron Johnson",
@@ -165,18 +165,18 @@
     "Aaron Gordon",
     "Nikola Jokić"
    ],
-   "at": "2026-11-28T01:10:03Z"
+   "at": "2026-11-28T02:10:03Z"
   },
   "UTA": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Darryn Peterson",
     "Josh Green",
     "Keyonte George",
     "Ace Bailey",
-    "Jaxson Hayes"
+    "Jusuf Nurkić"
    ],
-   "at": "2026-11-28T01:10:03Z"
+   "at": "2026-11-28T02:10:03Z"
   },
   "GSW": {
    "confirmed": true,
@@ -214,27 +214,27 @@
   "SAS": {
    "confirmed": false,
    "starters": [
-    "Dylan Harper",
+    "Devin Vassell",
     "Stephon Castle",
     "De'Aaron Fox",
-    "Devin Vassell",
+    "Julian Champagnie",
     "Victor Wembanyama"
    ],
-   "at": "2026-11-28T01:10:03Z"
+   "at": "2026-11-28T02:10:03Z"
   },
   "LAC": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
-    "Brandon Ingram",
     "Derrick Jones Jr.",
+    "Brandon Ingram",
     "Darius Garland",
     "Rui Hachimura",
     "Brook Lopez"
    ],
-   "at": "2026-11-28T01:10:03Z"
+   "at": "2026-11-28T02:10:03Z"
   },
   "NOP": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Herbert Jones",
     "Trey Murphy III",
@@ -242,7 +242,7 @@
     "Zion Williamson",
     "Yves Missi"
    ],
-   "at": "2026-11-28T01:10:03Z"
+   "at": "2026-11-28T02:10:03Z"
   }
  },
  "items": {
@@ -265,6 +265,11 @@
   "Kyrie Irving|DAL": 0,
   "Miles Bridges|PHX": 1,
   "Oso Ighodaro|PHX": 1,
+  "Jaxson Hayes|UTA": 0,
+  "Keyonte George|UTA": 1,
+  "Ace Bailey|UTA": 1,
+  "Darryn Peterson|UTA": 1,
+  "Brice Sensabaugh|UTA": 0,
   "Brandin Podziemski|GSW": 1,
   "Yaxel Lendeborg|GSW": 1,
   "Jrue Holiday|POR": 1,
@@ -299,6 +304,13 @@
   "Jaime Jaquez Jr.|MIL": 1,
   "Ryan Rollins|MIL": 1,
   "Brayden Burries|MIL": 0,
+  "Kris Dunn|LAC": 0,
+  "Brook Lopez|LAC": 1,
+  "Keaton Wagler|LAC": 0,
+  "Herbert Jones|NOP": 1,
+  "Zion Williamson|NOP": 1,
+  "Saddiq Bey|NOP": 0,
+  "Derik Queen|NOP": 0,
   "Kelly Oubre Jr.|IND": 1,
   "Pascal Siakam|IND": 1,
   "Andrew Nembhard|IND": 1,
