@@ -3,6 +3,14 @@
  "changes": [
     {
       "date": "2026-11-28",
+      "version": "dashboard",
+      "component": "dashboard",
+      "title": "Best 3 combos display",
+      "change": "Reads combos.json (pipeline v3.44). A game card shows a dashed 'Best 3 same game' block under its leans when that game has a ticket: three legs (player, line as N+, stat, price), the combined price, and Open, Frozen, Won, Lost or Void, with a tick or cross per leg once settled. Tonight shows one 'Best 3 across games' ticket under the leans list, with each leg's game and tip and a note that it can change until its first leg tips. Record gets a 'Best 3 combos' section after the tiers: 'Best 3 same game x of y' and 'Across games x of y' with %, and a Recent tickets fold. Everything is labelled 0u, tracked only, and styled quieter than the leans. A missing combos.json, or one for another date, shows nothing.",
+      "why": "NBA P4 brief 28 Nov, Mitch approved v3.44 directly. Backtest SGM 43.8% and across games 41.5% against tier-A singles 73.5%, hence the quiet styling. Display only."
+    },
+    {
+      "date": "2026-11-28",
       "version": "v3.44",
       "component": "nba-pipeline",
       "title": "Best 3 combos: per-game SGM and across games, 0u tracked",
