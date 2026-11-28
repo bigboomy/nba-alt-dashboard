@@ -2,6 +2,14 @@
  "note": "Newest first. One entry per change to a skill or scheduled task. Written by whoever ships the change (Analyst for strategy, Architect for plumbing). Keep each field to one sentence.",
  "changes": [
     {
+      "date": "2026-11-28",
+      "version": "v3.44",
+      "component": "nba-pipeline",
+      "title": "Best 3 combos: per-game SGM and across games, 0u tracked",
+      "change": "Each slate run builds a Best 3 from tier-A leans (three players per game, or the best leg from three untipped games), shortest price first with legs at $1.25 or less (else $1.35), freezes it at first tip, settles it from the leans tab (void legs drop out), logs it once to the combos Sheet tab, publishes combos.json and adds a Best 3 record line to the results message.",
+      "why": "Mitch asked for it on 28 Nov for attention and the record; the critic's backtest (6-28 Nov) shows no edge (SGM 43.8% ROI -18%, across games 41.5% ROI -25%, against A singles 73.5% ROI -7%), so it stays 0u."
+    },
+    {
       "date": "2026-11-27",
       "version": "dashboard",
       "component": "dashboard",
