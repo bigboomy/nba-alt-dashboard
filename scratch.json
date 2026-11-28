@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T00:50:03Z",
+ "generated": "2026-11-28T01:25:03Z",
  "out": [
   {
    "kind": "out",
@@ -24,6 +24,17 @@
    "status": "Out",
    "utc": "2026-11-28T00:20:03Z",
    "mins_to_tip": 69
+  },
+  {
+   "kind": "in",
+   "date": "2026-11-27",
+   "game": "NOP@LAC",
+   "id": "4431675",
+   "player": "Trendon Watford",
+   "team": "NOP",
+   "status": "",
+   "utc": "2026-11-28T01:25:03Z",
+   "mins_to_tip": 64
   },
   {
    "kind": "out",
