@@ -10167,9 +10167,884 @@
         "MIN": []
       },
       "tip": "12:30"
+    },
+    {
+      "abs": {
+        "DAL": [],
+        "PHX": []
+      },
+      "b2b": [],
+      "box5": {
+        "Caleb Martin": {
+          "gp": 14,
+          "l5": {
+            "ast": 3.8,
+            "blk": 0.4,
+            "fg3": 2.4,
+            "fg3a": 4.2,
+            "fg_pct": 50.0,
+            "fga": 6.8,
+            "fgm": 3.4,
+            "fta": 0.0,
+            "ftm": 0.0,
+            "min": 26.6,
+            "pts": 9.2,
+            "reb": 4.8,
+            "stl": 2.6,
+            "to": 1.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.6,
+            "blk": 0.1,
+            "fg3": 1.4,
+            "fg3a": 2.6,
+            "fg_pct": 52.2,
+            "fga": 4.8,
+            "fgm": 2.5,
+            "fta": 0.3,
+            "ftm": 0.3,
+            "min": 22.6,
+            "pts": 6.6,
+            "reb": 3.6,
+            "stl": 1.4,
+            "to": 0.7
+          },
+          "tg": 5
+        },
+        "Cooper Flagg": {
+          "gp": 17,
+          "l5": {
+            "ast": 7.4,
+            "blk": 0.4,
+            "fg3": 2.4,
+            "fg3a": 5.6,
+            "fg_pct": 47.5,
+            "fga": 16.0,
+            "fgm": 7.6,
+            "fta": 9.0,
+            "ftm": 7.2,
+            "min": 31.8,
+            "pts": 24.8,
+            "reb": 4.6,
+            "stl": 1.2,
+            "to": 3.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 6.7,
+            "blk": 0.6,
+            "fg3": 1.6,
+            "fg3a": 4.9,
+            "fg_pct": 47.8,
+            "fga": 17.1,
+            "fgm": 8.2,
+            "fta": 7.5,
+            "ftm": 6.4,
+            "min": 33.3,
+            "pts": 24.3,
+            "reb": 6.3,
+            "stl": 1.8,
+            "to": 3.1
+          },
+          "tg": 5
+        },
+        "Kyrie Irving": {
+          "gp": 15,
+          "l5": {
+            "ast": 5.8,
+            "blk": 0.2,
+            "fg3": 2.2,
+            "fg3a": 8.2,
+            "fg_pct": 36.6,
+            "fga": 17.8,
+            "fgm": 6.5,
+            "fta": 2.2,
+            "ftm": 2.0,
+            "min": 31.2,
+            "pts": 17.2,
+            "reb": 4.5,
+            "stl": 1.0,
+            "to": 0.8
+          },
+          "n": 4,
+          "season": {
+            "ast": 4.7,
+            "blk": 0.4,
+            "fg3": 3.2,
+            "fg3a": 8.7,
+            "fg_pct": 44.4,
+            "fga": 17.4,
+            "fgm": 7.7,
+            "fta": 3.0,
+            "ftm": 2.6,
+            "min": 30.9,
+            "pts": 21.3,
+            "reb": 3.7,
+            "stl": 1.2,
+            "to": 1.5
+          },
+          "tg": 5
+        },
+        "Miles Bridges": {
+          "gp": 17,
+          "l5": {
+            "ast": 4.0,
+            "blk": 0.6,
+            "fg3": 1.2,
+            "fg3a": 4.6,
+            "fg_pct": 49.0,
+            "fga": 10.2,
+            "fgm": 5.0,
+            "fta": 2.0,
+            "ftm": 1.4,
+            "min": 28.6,
+            "pts": 12.6,
+            "reb": 8.4,
+            "stl": 1.2,
+            "to": 1.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 3.4,
+            "blk": 0.6,
+            "fg3": 1.6,
+            "fg3a": 5.3,
+            "fg_pct": 46.4,
+            "fga": 11.4,
+            "fgm": 5.3,
+            "fta": 2.2,
+            "ftm": 1.8,
+            "min": 29.1,
+            "pts": 14.0,
+            "reb": 7.4,
+            "stl": 1.1,
+            "to": 0.7
+          },
+          "tg": 5
+        },
+        "Oso Ighodaro": {
+          "gp": 15,
+          "l5": {
+            "ast": 2.2,
+            "blk": 0.8,
+            "fg3": 0.0,
+            "fg3a": 0.0,
+            "fg_pct": 65.2,
+            "fga": 4.6,
+            "fgm": 3.0,
+            "fta": 4.0,
+            "ftm": 1.6,
+            "min": 26.2,
+            "pts": 7.6,
+            "reb": 5.6,
+            "stl": 1.6,
+            "to": 0.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 3.1,
+            "blk": 0.8,
+            "fg3": 0.0,
+            "fg3a": 0.0,
+            "fg_pct": 60.3,
+            "fga": 4.5,
+            "fgm": 2.7,
+            "fta": 2.3,
+            "ftm": 0.9,
+            "min": 23.2,
+            "pts": 6.4,
+            "reb": 5.1,
+            "stl": 0.6,
+            "to": 1.5
+          },
+          "tg": 5
+        }
+      },
+      "cov": {
+        "players": [
+          14,
+          14
+        ],
+        "skipped": [],
+        "stats": [
+          36,
+          36
+        ]
+      },
+      "ctx": "Out TOP3: none; Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 14 of 14 players (36 of 36 player-stats); skipped: none",
+      "cx": {
+        "Caleb Martin|AST|1.5|WIN": {
+          "best_book": "tab",
+          "best_price": 1.3,
+          "mm_min": 25.4,
+          "mm_mu": 3.388,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8069,
+          "p_pin": "",
+          "p_wowy": 0.8069,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 3.388
+        },
+        "Caleb Martin|AST|2.5|L5P": {
+          "best_book": "tabtouch",
+          "best_price": 1.81,
+          "mm_min": 25.4,
+          "mm_mu": 3.388,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6168,
+          "p_pin": "",
+          "p_wowy": 0.6168,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 3.388
+        },
+        "Cooper Flagg|AST|4.5|WIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.24,
+          "mm_min": 32.04,
+          "mm_mu": 7.047,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7693,
+          "p_pin": 0.7316,
+          "p_wowy": 0.7693,
+          "pin_edge_pp": -7.5,
+          "pin_line": 6.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 7.047
+        },
+        "Kyrie Irving|AST|3.5|lean": {
+          "best_book": "ladbrokes",
+          "best_price": 1.42,
+          "mm_min": 32.24,
+          "mm_mu": 4.601,
+          "n_books": 9,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6534,
+          "p_pin": 0.6622,
+          "p_wowy": 0.6534,
+          "pin_edge_pp": -4.2,
+          "pin_line": 4.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 4.601
+        },
+        "Miles Bridges|AST|1.5|WIN": {
+          "best_book": "pointsbet",
+          "best_price": 1.24,
+          "mm_min": 27.31,
+          "mm_mu": 3.655,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8511,
+          "p_pin": "",
+          "p_wowy": 0.8511,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 3.655
+        },
+        "Miles Bridges|REB|5.5|L5P": {
+          "best_book": "ladbrokes",
+          "best_price": 1.52,
+          "mm_min": 27.31,
+          "mm_mu": 7.325,
+          "n_books": 11,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7258,
+          "p_pin": 0.5962,
+          "p_wowy": 0.7258,
+          "pin_edge_pp": -6.2,
+          "pin_line": 6.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 7.325
+        },
+        "Oso Ighodaro|AST|1.5|WIN": {
+          "best_book": "tab",
+          "best_price": 1.25,
+          "mm_min": 24.91,
+          "mm_mu": 2.991,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.787,
+          "p_pin": "",
+          "p_wowy": 0.787,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 2.991
+        }
+      },
+      "engine": "nba-session v3.43-p4",
+      "id": "DAL@PHX",
+      "leans": [
+        {
+          "alt": 3.5,
+          "e": 3.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "C0.77",
+            "Z0.71",
+            "PIN-4.2",
+            "RET2:Washington",
+            "AVOID",
+            "BK-ladbrokes",
+            "TIER-C"
+          ],
+          "gs": 4,
+          "h": "90% (9/10)",
+          "l5": [
+            6,
+            8,
+            4,
+            5,
+            null
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-15",
+              "dnp": 1
+            }
+          ],
+          "o": 1.42,
+          "opp": "PHX 12th fewest AST allowed · pace -0.2",
+          "p": "Kyrie Irving",
+          "pmx": 0.6362,
+          "s": "AST",
+          "st": "4",
+          "std": 4.5,
+          "t": "DAL",
+          "tier": "C"
+        },
+        {
+          "alt": 2.5,
+          "e": -1.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "L5P",
+            "L5LOW3",
+            "[Std?]",
+            "RET-ADJ",
+            "MT+",
+            "C0.79",
+            "Z0.40",
+            "TMO-Q",
+            "BK-ladbrokes",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "70% (7/10)",
+          "l5": [
+            4,
+            4,
+            3,
+            3,
+            5
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Kyrie Irving"
+              ]
+            }
+          ],
+          "o": 1.77,
+          "opp": "PHX 12th fewest AST allowed · pace -0.2",
+          "p": "Caleb Martin",
+          "pmx": 0.5864,
+          "s": "AST",
+          "st": "2",
+          "std": 2.5,
+          "t": "DAL",
+          "tier": "C"
+        },
+        {
+          "alt": 5.5,
+          "e": -3.6,
+          "f": [
+            "LEAN",
+            "U0",
+            "L5P",
+            "L5LOW6",
+            "OT-ADJ",
+            "MT+",
+            "C0.78",
+            "Z0.61",
+            "PIN-6.2",
+            "BK-ladbrokes",
+            "TIER-C"
+          ],
+          "gs": 5,
+          "h": "70% (7/10)",
+          "l5": [
+            8,
+            11,
+            9,
+            6,
+            8
+          ],
+          "l5x": [
+            null,
+            {
+              "d": "2026-11-23",
+              "ot": 1
+            },
+            null,
+            null,
+            null
+          ],
+          "o": 1.52,
+          "opp": "DAL 11th most REB allowed · pace -0.2",
+          "p": "Miles Bridges",
+          "pmx": 0.6687,
+          "s": "REB",
+          "st": "3",
+          "std": 6.5,
+          "t": "PHX",
+          "tier": "C"
+        },
+        {
+          "alt": 4.5,
+          "e": -5.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "RET-ADJ",
+            "C0.63",
+            "Z0.88",
+            "TMO-Q",
+            "PIN-7.5",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            12,
+            4,
+            8,
+            9,
+            4
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Kyrie Irving"
+              ]
+            }
+          ],
+          "o": 1.24,
+          "opp": "PHX 12th fewest AST allowed · pace -0.2",
+          "p": "Cooper Flagg",
+          "pmx": 0.7493,
+          "s": "AST",
+          "st": "4",
+          "std": 6.5,
+          "t": "DAL",
+          "tier": "A"
+        },
+        {
+          "alt": 1.5,
+          "e": 2.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "[Std?]",
+            "RET-ADJ",
+            "MT+",
+            "C0.48",
+            "Z1.02",
+            "TMO-Q",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            4,
+            4,
+            3,
+            3,
+            5
+          ],
+          "l5x": [
+            null,
+            null,
+            null,
+            null,
+            {
+              "d": "2026-11-15",
+              "out": [
+                "Kyrie Irving"
+              ]
+            }
+          ],
+          "o": 1.24,
+          "opp": "PHX 12th fewest AST allowed · pace -0.2",
+          "p": "Caleb Martin",
+          "pmx": 0.7748,
+          "s": "AST",
+          "st": "5",
+          "std": 2.5,
+          "t": "DAL",
+          "tier": "A"
+        },
+        {
+          "alt": 1.5,
+          "e": 2.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "OT-ADJ",
+            "MT+",
+            "C0.43",
+            "Z1.01",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            4,
+            5,
+            4,
+            5,
+            2
+          ],
+          "l5x": [
+            null,
+            {
+              "d": "2026-11-23",
+              "ot": 1
+            },
+            null,
+            null,
+            null
+          ],
+          "o": 1.24,
+          "opp": "DAL 12th most AST allowed · pace -0.2",
+          "p": "Miles Bridges",
+          "pmx": 0.818,
+          "s": "AST",
+          "st": "5",
+          "std": 2.5,
+          "t": "PHX",
+          "tier": "A"
+        },
+        {
+          "alt": 1.5,
+          "e": 2.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "[Std?]",
+            "OT-ADJ",
+            "MT+",
+            "C0.52",
+            "Z0.80",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            2,
+            1,
+            3,
+            2,
+            3
+          ],
+          "l5x": [
+            null,
+            {
+              "d": "2026-11-23",
+              "ot": 1
+            },
+            null,
+            null,
+            null
+          ],
+          "o": 1.22,
+          "opp": "DAL 12th most AST allowed · pace -0.2",
+          "p": "Oso Ighodaro",
+          "pmx": 0.7533,
+          "s": "AST",
+          "st": "5",
+          "std": 2.5,
+          "t": "PHX",
+          "tier": "A"
+        }
+      ],
+      "mkt": 226.5,
+      "mkt_o": 1.87,
+      "mkt_u": 1.8,
+      "mx": {
+        "exp_pace": 101.7,
+        "home_spread": -3.5,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.9,
+          "PTS": 111.2,
+          "REB": 43.0,
+          "pace": 101.9
+        },
+        "seed": {
+          "DAL": {
+            "conf": "W",
+            "rec": "11-7",
+            "seed": 8
+          },
+          "PHX": {
+            "conf": "W",
+            "rec": "9-8",
+            "seed": 10
+          }
+        },
+        "teams": {
+          "DAL": {
+            "allow100": {
+              "3PM": 13.0,
+              "AST": 26.4,
+              "PTS": 110.5,
+              "REB": 43.3
+            },
+            "allow_rk": {
+              "3PM": 18,
+              "AST": 12,
+              "PTS": 19,
+              "REB": 11
+            },
+            "out": [],
+            "pace": 101.8,
+            "rk": {
+              "ast": 14,
+              "blk": 12,
+              "dreb": 22,
+              "fg3_pct": 20,
+              "fg3a": 14,
+              "fg3m": 19,
+              "fg_pct": 12,
+              "ft_pct": 16,
+              "fta": 21,
+              "net": 13,
+              "opp_fg3_pct": 6,
+              "opp_fg_pct": 16,
+              "oppg": 12,
+              "oreb": 10,
+              "pace": 17,
+              "pf": 10,
+              "ppg": 16,
+              "reb": 15,
+              "stl": 6,
+              "tov": 16,
+              "ts_pct": 17
+            },
+            "v": {
+              "ast": 27.0,
+              "ats": "10-8-0",
+              "ats_away": "4-5-0",
+              "ats_home": "6-3-0",
+              "ats_l10": "5-5-0",
+              "away": "4-5",
+              "blk": 5.3,
+              "dreb": 30.9,
+              "fg3_pct": 34.4,
+              "fg3a": 37.8,
+              "fg3m": 13.0,
+              "fg_pct": 46.3,
+              "ft_pct": 77.2,
+              "fta": 22.9,
+              "gp": 18,
+              "home": "7-2",
+              "l10": "7-3",
+              "net": 1.0,
+              "opp_fg3_pct": 33.7,
+              "opp_fg_pct": 46.2,
+              "oppg": 111.8,
+              "oreb": 12.6,
+              "ou": "7-11-0",
+              "ou_l10": "5-5-0",
+              "pace": 101.8,
+              "pf": 21.2,
+              "ppg": 112.8,
+              "reb": 43.5,
+              "rec": "11-7",
+              "stl": 9.4,
+              "tov": 15.5,
+              "ts_pct": 57.1
+            }
+          },
+          "PHX": {
+            "allow100": {
+              "3PM": 13.2,
+              "AST": 25.6,
+              "PTS": 112.0,
+              "REB": 44.1
+            },
+            "allow_rk": {
+              "3PM": 14,
+              "AST": 19,
+              "PTS": 12,
+              "REB": 4
+            },
+            "out": [],
+            "pace": 101.7,
+            "rk": {
+              "ast": 11,
+              "blk": 28,
+              "dreb": 28,
+              "fg3_pct": 13,
+              "fg3a": 20,
+              "fg3m": 17,
+              "fg_pct": 7,
+              "ft_pct": 23,
+              "fta": 22,
+              "net": 19,
+              "opp_fg3_pct": 18,
+              "opp_fg_pct": 18,
+              "oppg": 18,
+              "oreb": 18,
+              "pace": 19,
+              "pf": 18,
+              "ppg": 14,
+              "reb": 29,
+              "stl": 13,
+              "tov": 5,
+              "ts_pct": 13
+            },
+            "v": {
+              "ast": 27.4,
+              "ats": "7-10-0",
+              "ats_away": "4-4-0",
+              "ats_home": "3-6-0",
+              "ats_l10": "6-4-0",
+              "away": "4-4",
+              "blk": 3.9,
+              "dreb": 29.4,
+              "fg3_pct": 35.7,
+              "fg3a": 36.9,
+              "fg3m": 13.2,
+              "fg_pct": 47.1,
+              "ft_pct": 76.1,
+              "fta": 22.2,
+              "gp": 17,
+              "home": "5-4",
+              "l10": "7-3",
+              "net": -1.2,
+              "opp_fg3_pct": 35.9,
+              "opp_fg_pct": 46.5,
+              "oppg": 115.1,
+              "oreb": 11.4,
+              "ou": "9-8-0",
+              "ou_l10": "4-6-0",
+              "pace": 101.7,
+              "pf": 21.8,
+              "ppg": 113.8,
+              "reb": 40.7,
+              "rec": "9-8",
+              "stl": 8.1,
+              "tov": 13.9,
+              "ts_pct": 57.7
+            }
+          }
+        },
+        "win": {
+          "away": 39.0,
+          "home": 61.0,
+          "src": "market"
+        }
+      },
+      "out": {
+        "DAL": [
+          "Dereck Lively II (Lively (foot) is out for Friday's game against the Suns.)",
+          "Sergio de Larrea (De Larrea (knee) is out for Friday's game against the Suns.)",
+          "Tarik Biberovic (Biberovic (heel) is out for Friday's game against the Suns.)",
+          "Tobi Lawal (Lawal (groin) is out for Friday's game against the Suns.)"
+        ],
+        "PHX": [
+          "Mark Williams (Williams underwent surgery Thursday to repair a torn labrum in his left shoulder and will miss an extended period of time, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "DAL": [
+          "Kyrie Irving (Irving (knee) is listed as questionable for Friday's game against the Suns due to left knee injury management.)"
+        ],
+        "PHX": []
+      },
+      "tip": "13:00"
     }
   ],
-  "generated": "2026-11-28T00:00:03Z",
+  "generated": "2026-11-28T00:30:03Z",
   "totals": [
     [
       "MIA@NYK",
@@ -10200,6 +11075,11 @@
       "MEM@MIN",
       null,
       220.5
+    ],
+    [
+      "DAL@PHX",
+      null,
+      226.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
