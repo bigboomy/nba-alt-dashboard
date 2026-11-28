@@ -11523,1270 +11523,6 @@
     },
     {
       "abs": {
-        "DEN": [],
-        "UTA": []
-      },
-      "b2b": [],
-      "box5": {
-        "Ace Bailey": {
-          "gp": 19,
-          "l5": {
-            "ast": 2.2,
-            "blk": 0.4,
-            "fg3": 1.4,
-            "fg3a": 5.4,
-            "fg_pct": 40.6,
-            "fga": 12.8,
-            "fgm": 5.2,
-            "fta": 1.6,
-            "ftm": 1.2,
-            "min": 28.0,
-            "pts": 13.0,
-            "reb": 5.2,
-            "stl": 1.8,
-            "to": 2.4
-          },
-          "n": 5,
-          "season": {
-            "ast": 2.1,
-            "blk": 1.0,
-            "fg3": 1.5,
-            "fg3a": 5.7,
-            "fg_pct": 45.0,
-            "fga": 12.1,
-            "fgm": 5.4,
-            "fta": 1.2,
-            "ftm": 0.9,
-            "min": 30.4,
-            "pts": 13.3,
-            "reb": 6.2,
-            "stl": 0.9,
-            "to": 1.9
-          },
-          "tg": 5
-        },
-        "Brice Sensabaugh": {
-          "gp": 19,
-          "l5": {
-            "ast": 2.2,
-            "blk": 0.4,
-            "fg3": 3.0,
-            "fg3a": 5.2,
-            "fg_pct": 58.9,
-            "fga": 11.2,
-            "fgm": 6.6,
-            "fta": 0.6,
-            "ftm": 0.2,
-            "min": 21.8,
-            "pts": 16.4,
-            "reb": 4.8,
-            "stl": 0.4,
-            "to": 2.0
-          },
-          "n": 5,
-          "season": {
-            "ast": 1.6,
-            "blk": 0.3,
-            "fg3": 1.8,
-            "fg3a": 4.2,
-            "fg_pct": 46.9,
-            "fga": 8.4,
-            "fgm": 3.9,
-            "fta": 1.1,
-            "ftm": 0.8,
-            "min": 18.2,
-            "pts": 10.5,
-            "reb": 3.6,
-            "stl": 0.4,
-            "to": 1.6
-          },
-          "tg": 5
-        },
-        "Darryn Peterson": {
-          "gp": 19,
-          "l5": {
-            "ast": 4.6,
-            "blk": 0.2,
-            "fg3": 0.6,
-            "fg3a": 4.6,
-            "fg_pct": 38.6,
-            "fga": 11.4,
-            "fgm": 4.4,
-            "fta": 4.6,
-            "ftm": 3.2,
-            "min": 27.2,
-            "pts": 12.6,
-            "reb": 5.0,
-            "stl": 0.8,
-            "to": 2.4
-          },
-          "n": 5,
-          "season": {
-            "ast": 4.0,
-            "blk": 0.6,
-            "fg3": 1.8,
-            "fg3a": 5.9,
-            "fg_pct": 40.1,
-            "fga": 14.1,
-            "fgm": 5.6,
-            "fta": 3.5,
-            "ftm": 2.8,
-            "min": 30.3,
-            "pts": 15.9,
-            "reb": 4.5,
-            "stl": 1.1,
-            "to": 1.9
-          },
-          "tg": 5
-        },
-        "Jaxson Hayes": {
-          "gp": 15,
-          "l5": {
-            "ast": 1.0,
-            "blk": 0.7,
-            "fg3": 0.0,
-            "fg3a": 0.0,
-            "fg_pct": 66.7,
-            "fga": 6.0,
-            "fgm": 4.0,
-            "fta": 4.7,
-            "ftm": 2.7,
-            "min": 21.7,
-            "pts": 10.7,
-            "reb": 8.0,
-            "stl": 0.7,
-            "to": 1.3
-          },
-          "n": 3,
-          "season": {
-            "ast": 1.5,
-            "blk": 1.2,
-            "fg3": 0.0,
-            "fg3a": 0.1,
-            "fg_pct": 64.6,
-            "fga": 5.5,
-            "fgm": 3.5,
-            "fta": 3.0,
-            "ftm": 2.1,
-            "min": 23.5,
-            "pts": 9.2,
-            "reb": 6.4,
-            "stl": 0.9,
-            "to": 1.3
-          },
-          "tg": 5
-        },
-        "Keyonte George": {
-          "gp": 18,
-          "l5": {
-            "ast": 7.2,
-            "blk": 0.4,
-            "fg3": 2.6,
-            "fg3a": 7.6,
-            "fg_pct": 44.3,
-            "fga": 14.0,
-            "fgm": 6.2,
-            "fta": 6.6,
-            "ftm": 5.6,
-            "min": 33.8,
-            "pts": 20.6,
-            "reb": 2.8,
-            "stl": 0.8,
-            "to": 2.8
-          },
-          "n": 5,
-          "season": {
-            "ast": 6.8,
-            "blk": 0.2,
-            "fg3": 2.1,
-            "fg3a": 6.6,
-            "fg_pct": 42.7,
-            "fga": 15.2,
-            "fgm": 6.5,
-            "fta": 6.4,
-            "ftm": 5.3,
-            "min": 33.1,
-            "pts": 20.4,
-            "reb": 4.0,
-            "stl": 0.8,
-            "to": 3.4
-          },
-          "tg": 5
-        }
-      },
-      "cov": {
-        "players": [
-          11,
-          13
-        ],
-        "skipped": [
-          "DeMar DeRozan PTS (no rung priced 1.40+ at or below std)",
-          "Jusuf Nurkic PTS (ruled OUT)",
-          "Jusuf Nurkic REB (ruled OUT)",
-          "Jusuf Nurkic AST (ruled OUT)"
-        ],
-        "stats": [
-          29,
-          33
-        ]
-      },
-      "ctx": "Out TOP3: Lauri Markkanen (UTA), Jaren Jackson Jr. (UTA); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 11 of 13 players (29 of 33 player-stats); skipped: DeMar DeRozan PTS (no rung priced 1.40+ at or below std), Jusuf Nurkic PTS (ruled OUT), Jusuf Nurkic REB (ruled OUT), Jusuf Nurkic AST (ruled OUT)",
-      "cx": {
-        "Ace Bailey|PTS|11.5|WIN": {
-          "best_book": "pointsbet",
-          "best_price": 1.33,
-          "mm_min": 27.91,
-          "mm_mu": 12.601,
-          "n_books": 7,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.5383,
-          "p_pin": 0.725,
-          "p_wowy": 0.5383,
-          "pin_edge_pp": -2.7,
-          "pin_line": 15.5,
-          "v_score": "",
-          "v_text": "",
-          "verdict": "",
-          "verdict_ver": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 12.601
-        },
-        "Brice Sensabaugh|REB|2.5|lean": {
-          "best_book": "sportsbet",
-          "best_price": 1.8,
-          "mm_min": 21.72,
-          "mm_mu": 4.463,
-          "n_books": 8,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.8153,
-          "p_pin": "",
-          "p_wowy": 0.8153,
-          "pin_edge_pp": "",
-          "pin_line": "",
-          "v_score": "",
-          "v_text": "",
-          "verdict": "",
-          "verdict_ver": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 4.463
-        },
-        "Darryn Peterson|AST|2.5|WIN": {
-          "best_book": "ladbrokes",
-          "best_price": 1.28,
-          "mm_min": 27.44,
-          "mm_mu": 3.905,
-          "n_books": 7,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.7259,
-          "p_pin": 0.7514,
-          "p_wowy": 0.7259,
-          "pin_edge_pp": -3.0,
-          "pin_line": 3.5,
-          "v_score": "",
-          "v_text": "",
-          "verdict": "",
-          "verdict_ver": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 3.905
-        },
-        "Darryn Peterson|PTS|11.5|WIN": {
-          "best_book": "ladbrokes",
-          "best_price": 1.22,
-          "mm_min": 27.44,
-          "mm_mu": 16.44,
-          "n_books": 7,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.7994,
-          "p_pin": 0.8143,
-          "p_wowy": 0.7994,
-          "pin_edge_pp": -0.5,
-          "pin_line": 16.5,
-          "v_score": "",
-          "v_text": "",
-          "verdict": "",
-          "verdict_ver": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 16.44
-        },
-        "Darryn Peterson|REB|2.5|WIN": {
-          "best_book": "ladbrokes",
-          "best_price": 1.2,
-          "mm_min": 27.44,
-          "mm_mu": 4.671,
-          "n_books": 6,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.8196,
-          "p_pin": 0.7645,
-          "p_wowy": 0.8196,
-          "pin_edge_pp": -6.9,
-          "pin_line": 4.5,
-          "v_score": "",
-          "v_text": "",
-          "verdict": "",
-          "verdict_ver": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 4.671
-        },
-        "Jaxson Hayes|PTS|5.5|WIN": {
-          "best_book": "ladbrokes",
-          "best_price": 1.3,
-          "mm_min": 21.88,
-          "mm_mu": 9.706,
-          "n_books": 5,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.7795,
-          "p_pin": 0.7532,
-          "p_wowy": 0.7795,
-          "pin_edge_pp": -1.6,
-          "pin_line": 9.5,
-          "v_score": "",
-          "v_text": "",
-          "verdict": "",
-          "verdict_ver": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 9.706
-        },
-        "Jaxson Hayes|REB|3.5|WIN": {
-          "best_book": "pointsbet",
-          "best_price": 1.29,
-          "mm_min": 21.88,
-          "mm_mu": 6.156,
-          "n_books": 12,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.8327,
-          "p_pin": 0.7214,
-          "p_wowy": 0.8327,
-          "pin_edge_pp": -5.4,
-          "pin_line": 5.5,
-          "v_score": "",
-          "v_text": "",
-          "verdict": "",
-          "verdict_ver": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 6.156
-        },
-        "Keyonte George|AST|5.5|WIN": {
-          "best_book": "playup",
-          "best_price": 1.35,
-          "mm_min": 32.54,
-          "mm_mu": 7.573,
-          "n_books": 12,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.7424,
-          "p_pin": 0.683,
-          "p_wowy": 0.7424,
-          "pin_edge_pp": -6.9,
-          "pin_line": 6.5,
-          "v_score": "",
-          "v_text": "",
-          "verdict": "",
-          "verdict_ver": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 7.573
-        },
-        "Keyonte George|AST|6.5|lean": {
-          "best_book": "betr",
-          "best_price": 1.69,
-          "mm_min": 32.54,
-          "mm_mu": 7.573,
-          "n_books": 6,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.6135,
-          "p_pin": 0.5629,
-          "p_wowy": 0.6135,
-          "pin_edge_pp": -3.6,
-          "pin_line": 6.5,
-          "v_score": "",
-          "v_text": "",
-          "verdict": "",
-          "verdict_ver": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 7.573
-        },
-        "Keyonte George|PTS|15.5|WIN": {
-          "best_book": "ladbrokes",
-          "best_price": 1.28,
-          "mm_min": 32.54,
-          "mm_mu": 17.945,
-          "n_books": 5,
-          "opp_lift": 0.0,
-          "opp_out": "",
-          "p_mm": 0.6273,
-          "p_pin": 0.74,
-          "p_wowy": 0.6273,
-          "pin_edge_pp": -4.1,
-          "pin_line": 21.5,
-          "v_score": "",
-          "v_text": "",
-          "verdict": "",
-          "verdict_ver": "",
-          "wowy_L": 1.0,
-          "wowy_keys": "",
-          "wowy_mu": 17.945
-        }
-      },
-      "engine": "nba-session v3.43-p4",
-      "id": "DEN@UTA",
-      "leans": [
-        {
-          "alt": 2.5,
-          "e": 5.7,
-          "f": [
-            "LEAN",
-            "U0",
-            "THIN",
-            "[ROLE?]",
-            "DOG7",
-            "C0.56",
-            "Z0.74",
-            "TMO",
-            "RET1:Hayes",
-            "AVOID",
-            "BK-sportsbet",
-            "L5P-ALSO",
-            "TIER-C"
-          ],
-          "gs": 0,
-          "h": "100% (10/10)",
-          "l5": [
-            4,
-            3,
-            3,
-            3,
-            11
-          ],
-          "l5x": [
-            {
-              "d": "2026-11-23",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-22",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-20",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-18",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-17",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            }
-          ],
-          "o": 1.8,
-          "opp": "DEN 13th most REB allowed · pace +0.1",
-          "p": "Brice Sensabaugh",
-          "pmx": 0.7714,
-          "s": "REB",
-          "st": "3",
-          "std": 2.5,
-          "t": "UTA",
-          "tier": "C"
-        },
-        {
-          "alt": 6.5,
-          "e": 4.3,
-          "f": [
-            "LEAN",
-            "U0",
-            "[Std?]",
-            "[ROLE?]",
-            "MU+4%",
-            "DOG7",
-            "C0.83",
-            "Z0.53",
-            "TMO",
-            "PIN-3.6",
-            "TIER-B"
-          ],
-          "gs": 5,
-          "h": "80% (8/10)",
-          "l5": [
-            2,
-            7,
-            6,
-            10,
-            11
-          ],
-          "l5x": [
-            null,
-            null,
-            {
-              "d": "2026-11-20",
-              "out": [
-                "Isaiah Collier"
-              ]
-            },
-            null,
-            {
-              "d": "2026-11-17",
-              "out": [
-                "Isaiah Collier"
-              ]
-            }
-          ],
-          "o": 1.67,
-          "opp": "DEN 3rd most AST allowed · pace +0.1",
-          "p": "Keyonte George",
-          "pmx": 0.592,
-          "s": "AST",
-          "st": "3",
-          "std": 6.5,
-          "t": "UTA",
-          "tier": "B"
-        },
-        {
-          "alt": 15.5,
-          "e": -10.9,
-          "f": [
-            "LEAN",
-            "U0",
-            "WIN",
-            "WIN:ALL|underdog by 7+|+",
-            "[OUT]",
-            "[ROLE?]",
-            "DOG7",
-            "C0.85",
-            "Z0.43",
-            "TMO",
-            "PIN-4.1",
-            "MAIN-U+4.2",
-            "BK-ladbrokes",
-            "TIER-A"
-          ],
-          "gs": 5,
-          "h": "44% (4/9)",
-          "l5": [
-            14,
-            15,
-            14,
-            30,
-            30
-          ],
-          "l5x": [
-            {
-              "d": "2026-11-23",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-22",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-20",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-18",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-17",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            }
-          ],
-          "o": 1.28,
-          "opp": "DEN 11th most PTS allowed · pace +0.1",
-          "p": "Keyonte George",
-          "pmx": 0.6015,
-          "s": "PTS",
-          "st": "4",
-          "std": 20.5,
-          "t": "UTA",
-          "tier": "A"
-        },
-        {
-          "alt": 11.5,
-          "e": -5.8,
-          "f": [
-            "LEAN",
-            "U0",
-            "WIN",
-            "WIN:ALL|underdog by 7+|+",
-            "[ROLE?]",
-            "DOG7",
-            "MT-",
-            "C0.84",
-            "Z0.35",
-            "TMO",
-            "PIN-2.7",
-            "TIER-A"
-          ],
-          "gs": 5,
-          "h": "60% (6/10)",
-          "l5": [
-            18,
-            16,
-            7,
-            19,
-            5
-          ],
-          "l5x": [
-            {
-              "d": "2026-11-23",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-22",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-20",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-18",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-17",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            }
-          ],
-          "o": 1.33,
-          "opp": "DEN 11th most PTS allowed · pace +0.1",
-          "p": "Ace Bailey",
-          "pmx": 0.5221,
-          "s": "PTS",
-          "st": "4",
-          "std": 15.5,
-          "t": "UTA",
-          "tier": "A"
-        },
-        {
-          "alt": 11.5,
-          "e": -0.9,
-          "f": [
-            "LEAN",
-            "U0",
-            "WIN",
-            "WIN:ALL|underdog by 7+|+",
-            "[ROLE?]",
-            "DOG7",
-            "MT-",
-            "C0.63",
-            "Z0.91",
-            "TMO",
-            "PIN-0.5",
-            "BK-ladbrokes",
-            "TIER-A"
-          ],
-          "gs": 5,
-          "h": "80% (8/10)",
-          "l5": [
-            13,
-            6,
-            20,
-            11,
-            13
-          ],
-          "l5x": [
-            {
-              "d": "2026-11-23",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-22",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-20",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-18",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-17",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            }
-          ],
-          "o": 1.22,
-          "opp": "DEN 11th most PTS allowed · pace +0.1",
-          "p": "Darryn Peterson",
-          "pmx": 0.7693,
-          "s": "PTS",
-          "st": "5",
-          "std": 16.5,
-          "t": "UTA",
-          "tier": "A"
-        },
-        {
-          "alt": 5.5,
-          "e": -1.5,
-          "f": [
-            "LEAN",
-            "U0",
-            "WIN",
-            "WIN:AST|regular starter (gs >= 4)|+",
-            "WIN:ALL|underdog by 7+|+",
-            "[Std?]",
-            "[ROLE?]",
-            "MU+4%",
-            "DOG7",
-            "C0.70",
-            "Z0.92",
-            "TMO",
-            "PIN-6.9",
-            "TIER-A"
-          ],
-          "gs": 5,
-          "h": "90% (9/10)",
-          "l5": [
-            2,
-            7,
-            6,
-            10,
-            11
-          ],
-          "l5x": [
-            null,
-            null,
-            {
-              "d": "2026-11-20",
-              "out": [
-                "Isaiah Collier"
-              ]
-            },
-            null,
-            {
-              "d": "2026-11-17",
-              "out": [
-                "Isaiah Collier"
-              ]
-            }
-          ],
-          "o": 1.33,
-          "opp": "DEN 3rd most AST allowed · pace +0.1",
-          "p": "Keyonte George",
-          "pmx": 0.7178,
-          "s": "AST",
-          "st": "4",
-          "std": 6.5,
-          "t": "UTA",
-          "tier": "A"
-        },
-        {
-          "alt": 5.5,
-          "e": -0.4,
-          "f": [
-            "LEAN",
-            "U0",
-            "WIN",
-            "WIN:ALL|underdog by 7+|+",
-            "[ROLE?]",
-            "DOG7",
-            "OT-ADJ",
-            "C0.56",
-            "Z0.81",
-            "TMO",
-            "PIN-1.6",
-            "BK-ladbrokes",
-            "TIER-A"
-          ],
-          "gs": 2,
-          "h": "80% (8/10)",
-          "l5": [
-            null,
-            8,
-            18,
-            6,
-            null
-          ],
-          "l5x": [
-            {
-              "d": "2026-11-23",
-              "dnp": 1
-            },
-            {
-              "d": "2026-11-22",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-20",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-18",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-17",
-              "dnp": 1
-            }
-          ],
-          "o": 1.3,
-          "opp": "DEN 11th most PTS allowed · pace +0.1",
-          "p": "Jaxson Hayes",
-          "pmx": 0.7373,
-          "s": "PTS",
-          "st": "4",
-          "std": 8.5,
-          "t": "UTA",
-          "tier": "A"
-        },
-        {
-          "alt": 3.5,
-          "e": -3.4,
-          "f": [
-            "LEAN",
-            "U0",
-            "WIN",
-            "WIN:REB|underdog by 7+|+",
-            "WIN:ALL|underdog by 7+|+",
-            "[ROLE?]",
-            "DOG7",
-            "OT-ADJ",
-            "C0.56",
-            "Z0.87",
-            "TMO",
-            "PIN-5.4",
-            "TIER-A"
-          ],
-          "gs": 2,
-          "h": "80% (8/10)",
-          "l5": [
-            null,
-            3,
-            14,
-            7,
-            null
-          ],
-          "l5x": [
-            {
-              "d": "2026-11-23",
-              "dnp": 1
-            },
-            {
-              "d": "2026-11-22",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-20",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-18",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-17",
-              "dnp": 1
-            }
-          ],
-          "o": 1.29,
-          "opp": "DEN 13th most REB allowed · pace +0.1",
-          "p": "Jaxson Hayes",
-          "pmx": 0.7837,
-          "s": "REB",
-          "st": "4",
-          "std": 5.5,
-          "t": "UTA",
-          "tier": "A"
-        },
-        {
-          "alt": 2.5,
-          "e": -1.8,
-          "f": [
-            "LEAN",
-            "U0",
-            "WIN",
-            "WIN:AST|regular starter (gs >= 4)|+",
-            "WIN:ALL|underdog by 7+|+",
-            "[Std?]",
-            "[ROLE?]",
-            "MU+4%",
-            "DOG7",
-            "MT-",
-            "C0.58",
-            "Z0.97",
-            "TMO",
-            "PIN-3.0",
-            "BK-ladbrokes",
-            "TIER-A"
-          ],
-          "gs": 5,
-          "h": "80% (8/10)",
-          "l5": [
-            5,
-            5,
-            8,
-            3,
-            2
-          ],
-          "l5x": [
-            null,
-            null,
-            {
-              "d": "2026-11-20",
-              "out": [
-                "Isaiah Collier"
-              ]
-            },
-            null,
-            {
-              "d": "2026-11-17",
-              "out": [
-                "Isaiah Collier"
-              ]
-            }
-          ],
-          "o": 1.28,
-          "opp": "DEN 3rd most AST allowed · pace +0.1",
-          "p": "Darryn Peterson",
-          "pmx": 0.7099,
-          "s": "AST",
-          "st": "4",
-          "std": 3.5,
-          "t": "UTA",
-          "tier": "A"
-        },
-        {
-          "alt": 2.5,
-          "e": -3.5,
-          "f": [
-            "LEAN",
-            "U0",
-            "WIN",
-            "WIN:REB|underdog by 7+|+",
-            "WIN:ALL|underdog by 7+|+",
-            "[ROLE?]",
-            "DOG7",
-            "MT-",
-            "C0.48",
-            "Z1.10",
-            "TMO",
-            "PIN-6.9",
-            "BK-ladbrokes",
-            "TIER-A"
-          ],
-          "gs": 5,
-          "h": "90% (9/10)",
-          "l5": [
-            6,
-            3,
-            10,
-            1,
-            5
-          ],
-          "l5x": [
-            {
-              "d": "2026-11-23",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-22",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-20",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-18",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            },
-            {
-              "d": "2026-11-17",
-              "out": [
-                "Lauri Markkanen"
-              ]
-            }
-          ],
-          "o": 1.2,
-          "opp": "DEN 13th most REB allowed · pace +0.1",
-          "p": "Darryn Peterson",
-          "pmx": 0.8031,
-          "s": "REB",
-          "st": "4",
-          "std": 4.5,
-          "t": "UTA",
-          "tier": "A"
-        }
-      ],
-      "mkt": 232.5,
-      "mkt_o": 1.9,
-      "mkt_u": 1.9,
-      "mx": {
-        "exp_pace": 102.0,
-        "home_spread": 9.5,
-        "lg": {
-          "3PM": 13.2,
-          "AST": 25.9,
-          "PTS": 111.2,
-          "REB": 43.0,
-          "pace": 101.9
-        },
-        "seed": {
-          "DEN": {
-            "conf": "W",
-            "rec": "10-6",
-            "seed": 7
-          },
-          "UTA": {
-            "conf": "W",
-            "rec": "3-16",
-            "seed": 14
-          }
-        },
-        "teams": {
-          "DEN": {
-            "allow100": {
-              "3PM": 13.6,
-              "AST": 27.0,
-              "PTS": 112.3,
-              "REB": 43.1
-            },
-            "allow_rk": {
-              "3PM": 10,
-              "AST": 3,
-              "PTS": 11,
-              "REB": 13
-            },
-            "out": [],
-            "pace": 101.7,
-            "rk": {
-              "ast": 12,
-              "blk": 19,
-              "dreb": 18,
-              "fg3_pct": 17,
-              "fg3a": 29,
-              "fg3m": 28,
-              "fg_pct": 3,
-              "ft_pct": 3,
-              "fta": 7,
-              "net": 15,
-              "opp_fg3_pct": 20,
-              "opp_fg_pct": 20,
-              "oppg": 20,
-              "oreb": 27,
-              "pace": 20,
-              "pf": 3,
-              "ppg": 11,
-              "reb": 24,
-              "stl": 8,
-              "tov": 5,
-              "ts_pct": 4
-            },
-            "v": {
-              "ast": 27.3,
-              "ats": "7-9-0",
-              "ats_away": "4-4-0",
-              "ats_home": "3-5-0",
-              "ats_l10": "5-5-0",
-              "away": "6-2",
-              "blk": 4.6,
-              "dreb": 31.4,
-              "fg3_pct": 35.0,
-              "fg3a": 31.6,
-              "fg3m": 11.1,
-              "fg_pct": 48.5,
-              "ft_pct": 81.5,
-              "fta": 26.3,
-              "gp": 16,
-              "home": "4-4",
-              "l10": "7-3",
-              "net": 0.5,
-              "opp_fg3_pct": 36.0,
-              "opp_fg_pct": 46.9,
-              "oppg": 115.5,
-              "oreb": 10.5,
-              "ou": "7-9-0",
-              "ou_l10": "4-6-0",
-              "pace": 101.5,
-              "pf": 19.5,
-              "ppg": 116.0,
-              "reb": 41.9,
-              "rec": "10-6",
-              "stl": 8.6,
-              "tov": 13.9,
-              "ts_pct": 59.4
-            }
-          },
-          "UTA": {
-            "allow100": {
-              "3PM": 12.5,
-              "AST": 24.3,
-              "PTS": 111.8,
-              "REB": 43.2
-            },
-            "allow_rk": {
-              "3PM": 25,
-              "AST": 29,
-              "PTS": 13,
-              "REB": 12
-            },
-            "out": [],
-            "pace": 102.2,
-            "rk": {
-              "ast": 23,
-              "blk": 7,
-              "dreb": 8,
-              "fg3_pct": 21,
-              "fg3a": 19,
-              "fg3m": 21,
-              "fg_pct": 26,
-              "ft_pct": 28,
-              "fta": 13,
-              "net": 24,
-              "opp_fg3_pct": 11,
-              "opp_fg_pct": 8,
-              "oppg": 19,
-              "oreb": 15,
-              "pace": 9,
-              "pf": 25,
-              "ppg": 27,
-              "reb": 10,
-              "stl": 30,
-              "tov": 27,
-              "ts_pct": 26
-            },
-            "v": {
-              "ast": 24.8,
-              "ats": "7-12-0",
-              "ats_away": "3-6-0",
-              "ats_home": "4-6-0",
-              "ats_l10": "6-4-0",
-              "away": "2-7",
-              "blk": 5.4,
-              "dreb": 33.2,
-              "fg3_pct": 34.3,
-              "fg3a": 37.2,
-              "fg3m": 12.7,
-              "fg_pct": 44.7,
-              "ft_pct": 74.5,
-              "fta": 24.5,
-              "gp": 19,
-              "home": "1-9",
-              "l10": "2-8",
-              "net": -7.5,
-              "opp_fg3_pct": 34.4,
-              "opp_fg_pct": 45.0,
-              "oppg": 115.4,
-              "oreb": 11.9,
-              "ou": "7-12-0",
-              "ou_l10": "4-6-0",
-              "pace": 102.3,
-              "pf": 23.0,
-              "ppg": 107.8,
-              "reb": 45.2,
-              "rec": "3-16",
-              "stl": 6.9,
-              "tov": 17.1,
-              "ts_pct": 55.8
-            }
-          }
-        },
-        "win": {
-          "away": 77.6,
-          "home": 22.4,
-          "src": "market"
-        }
-      },
-      "out": {
-        "DEN": [],
-        "UTA": [
-          "Jaren Jackson Jr. (Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.)",
-          "Jusuf Nurkic (Nurkic (foot) is questionable for Friday's game against the Nuggets.)",
-          "Lauri Markkanen (Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.)"
-        ]
-      },
-      "picks": [],
-      "proj": null,
-      "q": {
-        "DEN": [],
-        "UTA": [
-          "Jaxson Hayes (Hayes (knee) is questionable for Friday's game against the Nuggets.)",
-          "Mo Bamba (Bamba (illness) is listed as questionable for Friday's game against the Nuggets, according to the Jazz's injury report.)"
-        ]
-      },
-      "tip": "13:30"
-    },
-    {
-      "abs": {
         "GSW": [],
         "POR": [
           {
@@ -17032,6 +15768,1457 @@
         ]
       },
       "tip": "13:30"
+    },
+    {
+      "abs": {
+        "DEN": [],
+        "UTA": []
+      },
+      "b2b": [],
+      "box5": {
+        "Ace Bailey": {
+          "gp": 19,
+          "l5": {
+            "ast": 2.2,
+            "blk": 0.4,
+            "fg3": 1.4,
+            "fg3a": 5.4,
+            "fg_pct": 40.6,
+            "fga": 12.8,
+            "fgm": 5.2,
+            "fta": 1.6,
+            "ftm": 1.2,
+            "min": 28.0,
+            "pts": 13.0,
+            "reb": 5.2,
+            "stl": 1.8,
+            "to": 2.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 2.1,
+            "blk": 1.0,
+            "fg3": 1.5,
+            "fg3a": 5.7,
+            "fg_pct": 45.0,
+            "fga": 12.1,
+            "fgm": 5.4,
+            "fta": 1.2,
+            "ftm": 0.9,
+            "min": 30.4,
+            "pts": 13.3,
+            "reb": 6.2,
+            "stl": 0.9,
+            "to": 1.9
+          },
+          "tg": 5
+        },
+        "Brice Sensabaugh": {
+          "gp": 19,
+          "l5": {
+            "ast": 2.2,
+            "blk": 0.4,
+            "fg3": 3.0,
+            "fg3a": 5.2,
+            "fg_pct": 58.9,
+            "fga": 11.2,
+            "fgm": 6.6,
+            "fta": 0.6,
+            "ftm": 0.2,
+            "min": 21.8,
+            "pts": 16.4,
+            "reb": 4.8,
+            "stl": 0.4,
+            "to": 2.0
+          },
+          "n": 5,
+          "season": {
+            "ast": 1.6,
+            "blk": 0.3,
+            "fg3": 1.8,
+            "fg3a": 4.2,
+            "fg_pct": 46.9,
+            "fga": 8.4,
+            "fgm": 3.9,
+            "fta": 1.1,
+            "ftm": 0.8,
+            "min": 18.2,
+            "pts": 10.5,
+            "reb": 3.6,
+            "stl": 0.4,
+            "to": 1.6
+          },
+          "tg": 5
+        },
+        "Darryn Peterson": {
+          "gp": 19,
+          "l5": {
+            "ast": 4.6,
+            "blk": 0.2,
+            "fg3": 0.6,
+            "fg3a": 4.6,
+            "fg_pct": 38.6,
+            "fga": 11.4,
+            "fgm": 4.4,
+            "fta": 4.6,
+            "ftm": 3.2,
+            "min": 27.2,
+            "pts": 12.6,
+            "reb": 5.0,
+            "stl": 0.8,
+            "to": 2.4
+          },
+          "n": 5,
+          "season": {
+            "ast": 4.0,
+            "blk": 0.6,
+            "fg3": 1.8,
+            "fg3a": 5.9,
+            "fg_pct": 40.1,
+            "fga": 14.1,
+            "fgm": 5.6,
+            "fta": 3.5,
+            "ftm": 2.8,
+            "min": 30.3,
+            "pts": 15.9,
+            "reb": 4.5,
+            "stl": 1.1,
+            "to": 1.9
+          },
+          "tg": 5
+        },
+        "Jaxson Hayes": {
+          "gp": 15,
+          "l5": {
+            "ast": 1.0,
+            "blk": 0.7,
+            "fg3": 0.0,
+            "fg3a": 0.0,
+            "fg_pct": 66.7,
+            "fga": 6.0,
+            "fgm": 4.0,
+            "fta": 4.7,
+            "ftm": 2.7,
+            "min": 21.7,
+            "pts": 10.7,
+            "reb": 8.0,
+            "stl": 0.7,
+            "to": 1.3
+          },
+          "n": 3,
+          "season": {
+            "ast": 1.5,
+            "blk": 1.2,
+            "fg3": 0.0,
+            "fg3a": 0.1,
+            "fg_pct": 64.6,
+            "fga": 5.5,
+            "fgm": 3.5,
+            "fta": 3.0,
+            "ftm": 2.1,
+            "min": 23.5,
+            "pts": 9.2,
+            "reb": 6.4,
+            "stl": 0.9,
+            "to": 1.3
+          },
+          "tg": 5
+        },
+        "Keyonte George": {
+          "gp": 18,
+          "l5": {
+            "ast": 7.2,
+            "blk": 0.4,
+            "fg3": 2.6,
+            "fg3a": 7.6,
+            "fg_pct": 44.3,
+            "fga": 14.0,
+            "fgm": 6.2,
+            "fta": 6.6,
+            "ftm": 5.6,
+            "min": 33.8,
+            "pts": 20.6,
+            "reb": 2.8,
+            "stl": 0.8,
+            "to": 2.8
+          },
+          "n": 5,
+          "season": {
+            "ast": 6.8,
+            "blk": 0.2,
+            "fg3": 2.1,
+            "fg3a": 6.6,
+            "fg_pct": 42.7,
+            "fga": 15.2,
+            "fgm": 6.5,
+            "fta": 6.4,
+            "ftm": 5.3,
+            "min": 33.1,
+            "pts": 20.4,
+            "reb": 4.0,
+            "stl": 0.8,
+            "to": 3.4
+          },
+          "tg": 5
+        }
+      },
+      "cov": {
+        "players": [
+          11,
+          13
+        ],
+        "skipped": [
+          "DeMar DeRozan PTS (no rung priced 1.40+ at or below std)",
+          "Jusuf Nurkic PTS (ruled OUT)",
+          "Jusuf Nurkic REB (ruled OUT)",
+          "Jusuf Nurkic AST (ruled OUT)"
+        ],
+        "stats": [
+          29,
+          33
+        ]
+      },
+      "ctx": "Out TOP3: Lauri Markkanen (UTA), Jaren Jackson Jr. (UTA); Returning: none; Depleted: none; missed last game: none. Coverage: evaluated 11 of 13 players (29 of 33 player-stats); skipped: DeMar DeRozan PTS (no rung priced 1.40+ at or below std), Jusuf Nurkic PTS (ruled OUT), Jusuf Nurkic REB (ruled OUT), Jusuf Nurkic AST (ruled OUT)",
+      "cx": {
+        "Ace Bailey|PTS|11.5|WIN": {
+          "best_book": "pointsbet",
+          "best_price": 1.33,
+          "mm_min": 27.91,
+          "mm_mu": 12.601,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.5383,
+          "p_pin": 0.725,
+          "p_wowy": 0.5383,
+          "pin_edge_pp": -2.7,
+          "pin_line": 15.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 12.601
+        },
+        "Brice Sensabaugh|REB|2.5|lean": {
+          "best_book": "sportsbet",
+          "best_price": 1.8,
+          "mm_min": 21.72,
+          "mm_mu": 4.463,
+          "n_books": 8,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8153,
+          "p_pin": "",
+          "p_wowy": 0.8153,
+          "pin_edge_pp": "",
+          "pin_line": "",
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 4.463
+        },
+        "Darryn Peterson|AST|2.5|WIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.28,
+          "mm_min": 27.44,
+          "mm_mu": 3.905,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7259,
+          "p_pin": 0.7514,
+          "p_wowy": 0.7259,
+          "pin_edge_pp": -3.0,
+          "pin_line": 3.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 3.905
+        },
+        "Darryn Peterson|PTS|11.5|WIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.22,
+          "mm_min": 27.44,
+          "mm_mu": 16.44,
+          "n_books": 7,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7994,
+          "p_pin": 0.8143,
+          "p_wowy": 0.7994,
+          "pin_edge_pp": -0.5,
+          "pin_line": 16.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 16.44
+        },
+        "Darryn Peterson|REB|2.5|WIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.2,
+          "mm_min": 27.44,
+          "mm_mu": 4.671,
+          "n_books": 6,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8196,
+          "p_pin": 0.7645,
+          "p_wowy": 0.8196,
+          "pin_edge_pp": -6.9,
+          "pin_line": 4.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 4.671
+        },
+        "Jaxson Hayes|PTS|4.5|LSR": {
+          "best_book": "goldbet",
+          "best_price": 1.22,
+          "mm_min": 24.64,
+          "mm_mu": 11.48,
+          "n_books": 9,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.9082,
+          "p_pin": 0.8335,
+          "p_wowy": 0.8404,
+          "pin_edge_pp": 1.4,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 9.706
+        },
+        "Jaxson Hayes|PTS|5.5|WIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.3,
+          "mm_min": 21.88,
+          "mm_mu": 9.706,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7795,
+          "p_pin": 0.7532,
+          "p_wowy": 0.7795,
+          "pin_edge_pp": -1.6,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 9.706
+        },
+        "Jaxson Hayes|PTS|7.5|LSR": {
+          "best_book": "sportsbet",
+          "best_price": 1.76,
+          "mm_min": 24.64,
+          "mm_mu": 11.48,
+          "n_books": 6,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7279,
+          "p_pin": 0.574,
+          "p_wowy": 0.6089,
+          "pin_edge_pp": 0.6,
+          "pin_line": 9.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 9.706
+        },
+        "Jaxson Hayes|REB|3.5|WIN": {
+          "best_book": "pointsbet",
+          "best_price": 1.29,
+          "mm_min": 21.88,
+          "mm_mu": 6.156,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.8327,
+          "p_pin": 0.7214,
+          "p_wowy": 0.8327,
+          "pin_edge_pp": -5.4,
+          "pin_line": 5.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 6.156
+        },
+        "Keyonte George|AST|5.5|WIN": {
+          "best_book": "playup",
+          "best_price": 1.35,
+          "mm_min": 32.54,
+          "mm_mu": 7.573,
+          "n_books": 12,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.7424,
+          "p_pin": 0.683,
+          "p_wowy": 0.7424,
+          "pin_edge_pp": -6.9,
+          "pin_line": 6.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 7.573
+        },
+        "Keyonte George|AST|6.5|lean": {
+          "best_book": "betr",
+          "best_price": 1.69,
+          "mm_min": 32.54,
+          "mm_mu": 7.573,
+          "n_books": 6,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6135,
+          "p_pin": 0.5629,
+          "p_wowy": 0.6135,
+          "pin_edge_pp": -3.6,
+          "pin_line": 6.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 7.573
+        },
+        "Keyonte George|PTS|15.5|WIN": {
+          "best_book": "ladbrokes",
+          "best_price": 1.28,
+          "mm_min": 32.54,
+          "mm_mu": 17.945,
+          "n_books": 5,
+          "opp_lift": 0.0,
+          "opp_out": "",
+          "p_mm": 0.6273,
+          "p_pin": 0.74,
+          "p_wowy": 0.6273,
+          "pin_edge_pp": -4.1,
+          "pin_line": 21.5,
+          "v_score": "",
+          "v_text": "",
+          "verdict": "",
+          "verdict_ver": "",
+          "wowy_L": 1.0,
+          "wowy_keys": "",
+          "wowy_mu": 17.945
+        }
+      },
+      "engine": "nba-session v3.43-p4",
+      "id": "DEN@UTA",
+      "leans": [
+        {
+          "alt": 2.5,
+          "e": 5.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "THIN",
+            "[ROLE?]",
+            "DOG7",
+            "C0.56",
+            "Z0.74",
+            "TMO",
+            "RET1:Hayes",
+            "AVOID",
+            "BK-sportsbet",
+            "L5P-ALSO",
+            "TIER-C"
+          ],
+          "gs": 0,
+          "h": "100% (10/10)",
+          "l5": [
+            4,
+            3,
+            3,
+            3,
+            11
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-22",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            }
+          ],
+          "o": 1.8,
+          "opp": "DEN 13th most REB allowed · pace +0.1",
+          "p": "Brice Sensabaugh",
+          "pmx": 0.7714,
+          "s": "REB",
+          "st": "3",
+          "std": 2.5,
+          "t": "UTA",
+          "tier": "C"
+        },
+        {
+          "alt": 6.5,
+          "e": 4.3,
+          "f": [
+            "LEAN",
+            "U0",
+            "[Std?]",
+            "[ROLE?]",
+            "MU+4%",
+            "DOG7",
+            "C0.83",
+            "Z0.53",
+            "TMO",
+            "PIN-3.6",
+            "TIER-B"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            2,
+            7,
+            6,
+            10,
+            11
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Isaiah Collier"
+              ]
+            },
+            null,
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Isaiah Collier"
+              ]
+            }
+          ],
+          "o": 1.67,
+          "opp": "DEN 3rd most AST allowed · pace +0.1",
+          "p": "Keyonte George",
+          "pmx": 0.592,
+          "s": "AST",
+          "st": "3",
+          "std": 6.5,
+          "t": "UTA",
+          "tier": "B"
+        },
+        {
+          "alt": 15.5,
+          "e": -10.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:ALL|underdog by 7+|+",
+            "[OUT]",
+            "[ROLE?]",
+            "DOG7",
+            "C0.85",
+            "Z0.43",
+            "TMO",
+            "PIN-4.1",
+            "MAIN-U+4.2",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "44% (4/9)",
+          "l5": [
+            14,
+            15,
+            14,
+            30,
+            30
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-22",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            }
+          ],
+          "o": 1.28,
+          "opp": "DEN 11th most PTS allowed · pace +0.1",
+          "p": "Keyonte George",
+          "pmx": 0.6015,
+          "s": "PTS",
+          "st": "4",
+          "std": 20.5,
+          "t": "UTA",
+          "tier": "A"
+        },
+        {
+          "alt": 11.5,
+          "e": -5.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:ALL|underdog by 7+|+",
+            "[ROLE?]",
+            "DOG7",
+            "MT-",
+            "C0.84",
+            "Z0.35",
+            "TMO",
+            "PIN-2.7",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "60% (6/10)",
+          "l5": [
+            18,
+            16,
+            7,
+            19,
+            5
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-22",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            }
+          ],
+          "o": 1.33,
+          "opp": "DEN 11th most PTS allowed · pace +0.1",
+          "p": "Ace Bailey",
+          "pmx": 0.5221,
+          "s": "PTS",
+          "st": "4",
+          "std": 15.5,
+          "t": "UTA",
+          "tier": "A"
+        },
+        {
+          "alt": 11.5,
+          "e": -0.9,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:ALL|underdog by 7+|+",
+            "[ROLE?]",
+            "DOG7",
+            "MT-",
+            "C0.63",
+            "Z0.91",
+            "TMO",
+            "PIN-0.5",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            13,
+            6,
+            20,
+            11,
+            13
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-22",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            }
+          ],
+          "o": 1.22,
+          "opp": "DEN 11th most PTS allowed · pace +0.1",
+          "p": "Darryn Peterson",
+          "pmx": 0.7693,
+          "s": "PTS",
+          "st": "5",
+          "std": 16.5,
+          "t": "UTA",
+          "tier": "A"
+        },
+        {
+          "alt": 5.5,
+          "e": -1.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "WIN:ALL|underdog by 7+|+",
+            "[Std?]",
+            "[ROLE?]",
+            "MU+4%",
+            "DOG7",
+            "C0.70",
+            "Z0.92",
+            "TMO",
+            "PIN-6.9",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            2,
+            7,
+            6,
+            10,
+            11
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Isaiah Collier"
+              ]
+            },
+            null,
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Isaiah Collier"
+              ]
+            }
+          ],
+          "o": 1.33,
+          "opp": "DEN 3rd most AST allowed · pace +0.1",
+          "p": "Keyonte George",
+          "pmx": 0.7178,
+          "s": "AST",
+          "st": "4",
+          "std": 6.5,
+          "t": "UTA",
+          "tier": "A"
+        },
+        {
+          "alt": 5.5,
+          "e": -0.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:ALL|underdog by 7+|+",
+            "[ROLE?]",
+            "DOG7",
+            "OT-ADJ",
+            "C0.56",
+            "Z0.81",
+            "TMO",
+            "PIN-1.6",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 2,
+          "h": "80% (8/10)",
+          "l5": [
+            null,
+            8,
+            18,
+            6,
+            null
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-22",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "dnp": 1
+            }
+          ],
+          "o": 1.3,
+          "opp": "DEN 11th most PTS allowed · pace +0.1",
+          "p": "Jaxson Hayes",
+          "pmx": 0.7373,
+          "s": "PTS",
+          "st": "4",
+          "std": 8.5,
+          "t": "UTA",
+          "tier": "A"
+        },
+        {
+          "alt": 3.5,
+          "e": -3.4,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:REB|underdog by 7+|+",
+            "WIN:ALL|underdog by 7+|+",
+            "[ROLE?]",
+            "DOG7",
+            "OT-ADJ",
+            "C0.56",
+            "Z0.87",
+            "TMO",
+            "PIN-5.4",
+            "TIER-A"
+          ],
+          "gs": 2,
+          "h": "80% (8/10)",
+          "l5": [
+            null,
+            3,
+            14,
+            7,
+            null
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-22",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "dnp": 1
+            }
+          ],
+          "o": 1.29,
+          "opp": "DEN 13th most REB allowed · pace +0.1",
+          "p": "Jaxson Hayes",
+          "pmx": 0.7837,
+          "s": "REB",
+          "st": "4",
+          "std": 5.5,
+          "t": "UTA",
+          "tier": "A"
+        },
+        {
+          "alt": 2.5,
+          "e": -1.8,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:AST|regular starter (gs >= 4)|+",
+            "WIN:ALL|underdog by 7+|+",
+            "[Std?]",
+            "[ROLE?]",
+            "MU+4%",
+            "DOG7",
+            "MT-",
+            "C0.58",
+            "Z0.97",
+            "TMO",
+            "PIN-3.0",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "80% (8/10)",
+          "l5": [
+            5,
+            5,
+            8,
+            3,
+            2
+          ],
+          "l5x": [
+            null,
+            null,
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Isaiah Collier"
+              ]
+            },
+            null,
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Isaiah Collier"
+              ]
+            }
+          ],
+          "o": 1.28,
+          "opp": "DEN 3rd most AST allowed · pace +0.1",
+          "p": "Darryn Peterson",
+          "pmx": 0.7099,
+          "s": "AST",
+          "st": "4",
+          "std": 3.5,
+          "t": "UTA",
+          "tier": "A"
+        },
+        {
+          "alt": 2.5,
+          "e": -3.5,
+          "f": [
+            "LEAN",
+            "U0",
+            "WIN",
+            "WIN:REB|underdog by 7+|+",
+            "WIN:ALL|underdog by 7+|+",
+            "[ROLE?]",
+            "DOG7",
+            "MT-",
+            "C0.48",
+            "Z1.10",
+            "TMO",
+            "PIN-6.9",
+            "BK-ladbrokes",
+            "TIER-A"
+          ],
+          "gs": 5,
+          "h": "90% (9/10)",
+          "l5": [
+            6,
+            3,
+            10,
+            1,
+            5
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-22",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            }
+          ],
+          "o": 1.2,
+          "opp": "DEN 13th most REB allowed · pace +0.1",
+          "p": "Darryn Peterson",
+          "pmx": 0.8031,
+          "s": "REB",
+          "st": "4",
+          "std": 4.5,
+          "t": "UTA",
+          "tier": "A"
+        },
+        {
+          "alt": 7.5,
+          "e": 3.7,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-LEAN",
+            "CUSH",
+            "[ROLE?]",
+            "DOG7",
+            "OT-ADJ",
+            "C0.76",
+            "Z0.44",
+            "TMO",
+            "PIN+0.6",
+            "FO:Bamba",
+            "BK-sportsbet",
+            "TIER-C"
+          ],
+          "gs": 2,
+          "h": "70% (7/10)",
+          "l5": [
+            null,
+            8,
+            18,
+            6,
+            null
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-22",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "dnp": 1
+            }
+          ],
+          "o": 1.76,
+          "opp": "DEN 11th most PTS allowed · pace +0.1",
+          "p": "Jaxson Hayes",
+          "pmx": 0.6847,
+          "s": "PTS",
+          "st": "2",
+          "std": 8.5,
+          "t": "UTA",
+          "tier": "C"
+        },
+        {
+          "alt": 4.5,
+          "e": 3.0,
+          "f": [
+            "LEAN",
+            "U0",
+            "LSR",
+            "LSR-MM90",
+            "PMM0.91",
+            "[ROLE?]",
+            "DOG7",
+            "OT-ADJ",
+            "C0.45",
+            "Z1.00",
+            "TMO",
+            "PIN+1.4",
+            "FO:Bamba",
+            "BK-sportsbet",
+            "TIER-A"
+          ],
+          "gs": 2,
+          "h": "90% (9/10)",
+          "l5": [
+            null,
+            8,
+            18,
+            6,
+            null
+          ],
+          "l5x": [
+            {
+              "d": "2026-11-23",
+              "dnp": 1
+            },
+            {
+              "d": "2026-11-22",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-20",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-18",
+              "out": [
+                "Lauri Markkanen"
+              ]
+            },
+            {
+              "d": "2026-11-17",
+              "dnp": 1
+            }
+          ],
+          "o": 1.22,
+          "opp": "DEN 11th most PTS allowed · pace +0.1",
+          "p": "Jaxson Hayes",
+          "pmx": 0.869,
+          "s": "PTS",
+          "st": "4",
+          "std": 8.5,
+          "t": "UTA",
+          "tier": "A"
+        }
+      ],
+      "lsr": [
+        {
+          "n": 2,
+          "out": [
+            "Mo Bamba",
+            "Jusuf Nurkic (back)"
+          ],
+          "run": "20261128T014003Z_lsr_DEN-UTA",
+          "utc": "2026-11-28T01:40:03Z"
+        }
+      ],
+      "mkt": 232.5,
+      "mkt_o": 1.9,
+      "mkt_u": 1.9,
+      "mx": {
+        "exp_pace": 102.0,
+        "home_spread": 9.5,
+        "lg": {
+          "3PM": 13.2,
+          "AST": 25.9,
+          "PTS": 111.2,
+          "REB": 43.0,
+          "pace": 101.9
+        },
+        "seed": {
+          "DEN": {
+            "conf": "W",
+            "rec": "10-6",
+            "seed": 7
+          },
+          "UTA": {
+            "conf": "W",
+            "rec": "3-16",
+            "seed": 14
+          }
+        },
+        "teams": {
+          "DEN": {
+            "allow100": {
+              "3PM": 13.6,
+              "AST": 27.0,
+              "PTS": 112.3,
+              "REB": 43.1
+            },
+            "allow_rk": {
+              "3PM": 10,
+              "AST": 3,
+              "PTS": 11,
+              "REB": 13
+            },
+            "out": [],
+            "pace": 101.7,
+            "rk": {
+              "ast": 12,
+              "blk": 19,
+              "dreb": 18,
+              "fg3_pct": 17,
+              "fg3a": 29,
+              "fg3m": 28,
+              "fg_pct": 3,
+              "ft_pct": 3,
+              "fta": 7,
+              "net": 15,
+              "opp_fg3_pct": 20,
+              "opp_fg_pct": 20,
+              "oppg": 20,
+              "oreb": 27,
+              "pace": 20,
+              "pf": 3,
+              "ppg": 11,
+              "reb": 24,
+              "stl": 8,
+              "tov": 5,
+              "ts_pct": 4
+            },
+            "v": {
+              "ast": 27.3,
+              "ats": "7-9-0",
+              "ats_away": "4-4-0",
+              "ats_home": "3-5-0",
+              "ats_l10": "5-5-0",
+              "away": "6-2",
+              "blk": 4.6,
+              "dreb": 31.4,
+              "fg3_pct": 35.0,
+              "fg3a": 31.6,
+              "fg3m": 11.1,
+              "fg_pct": 48.5,
+              "ft_pct": 81.5,
+              "fta": 26.3,
+              "gp": 16,
+              "home": "4-4",
+              "l10": "7-3",
+              "net": 0.5,
+              "opp_fg3_pct": 36.0,
+              "opp_fg_pct": 46.9,
+              "oppg": 115.5,
+              "oreb": 10.5,
+              "ou": "7-9-0",
+              "ou_l10": "4-6-0",
+              "pace": 101.5,
+              "pf": 19.5,
+              "ppg": 116.0,
+              "reb": 41.9,
+              "rec": "10-6",
+              "stl": 8.6,
+              "tov": 13.9,
+              "ts_pct": 59.4
+            }
+          },
+          "UTA": {
+            "allow100": {
+              "3PM": 12.5,
+              "AST": 24.3,
+              "PTS": 111.8,
+              "REB": 43.2
+            },
+            "allow_rk": {
+              "3PM": 25,
+              "AST": 29,
+              "PTS": 13,
+              "REB": 12
+            },
+            "out": [],
+            "pace": 102.2,
+            "rk": {
+              "ast": 23,
+              "blk": 7,
+              "dreb": 8,
+              "fg3_pct": 21,
+              "fg3a": 19,
+              "fg3m": 21,
+              "fg_pct": 26,
+              "ft_pct": 28,
+              "fta": 13,
+              "net": 24,
+              "opp_fg3_pct": 11,
+              "opp_fg_pct": 8,
+              "oppg": 19,
+              "oreb": 15,
+              "pace": 9,
+              "pf": 25,
+              "ppg": 27,
+              "reb": 10,
+              "stl": 30,
+              "tov": 27,
+              "ts_pct": 26
+            },
+            "v": {
+              "ast": 24.8,
+              "ats": "7-12-0",
+              "ats_away": "3-6-0",
+              "ats_home": "4-6-0",
+              "ats_l10": "6-4-0",
+              "away": "2-7",
+              "blk": 5.4,
+              "dreb": 33.2,
+              "fg3_pct": 34.3,
+              "fg3a": 37.2,
+              "fg3m": 12.7,
+              "fg_pct": 44.7,
+              "ft_pct": 74.5,
+              "fta": 24.5,
+              "gp": 19,
+              "home": "1-9",
+              "l10": "2-8",
+              "net": -7.5,
+              "opp_fg3_pct": 34.4,
+              "opp_fg_pct": 45.0,
+              "oppg": 115.4,
+              "oreb": 11.9,
+              "ou": "7-12-0",
+              "ou_l10": "4-6-0",
+              "pace": 102.3,
+              "pf": 23.0,
+              "ppg": 107.8,
+              "reb": 45.2,
+              "rec": "3-16",
+              "stl": 6.9,
+              "tov": 17.1,
+              "ts_pct": 55.8
+            }
+          }
+        },
+        "win": {
+          "away": 77.6,
+          "home": 22.4,
+          "src": "market"
+        }
+      },
+      "out": {
+        "DEN": [],
+        "UTA": [
+          "Jaren Jackson Jr. (Jackson has been diagnosed with a torn MCL in his right knee and will be sidelined for 6-to-8 weeks, per Shams Charania of ESPN.)",
+          "Jusuf Nurkic (Nurkic (foot) is questionable for Friday's game against the Nuggets.)",
+          "Lauri Markkanen (Markkanen has been diagnosed with a non-displaced fracture in his right hand and will be sidelined for at least one month, Shams Charania of ESPN reports.)"
+        ]
+      },
+      "picks": [],
+      "proj": null,
+      "q": {
+        "DEN": [],
+        "UTA": [
+          "Jaxson Hayes (Hayes (knee) is questionable for Friday's game against the Nuggets.)",
+          "Mo Bamba (Bamba (illness) is listed as questionable for Friday's game against the Nuggets, according to the Jazz's injury report.)"
+        ]
+      },
+      "tip": "13:30"
     }
   ],
   "generated": "2026-11-28T01:10:03Z",
@@ -17072,11 +17259,6 @@
       226.5
     ],
     [
-      "DEN@UTA",
-      null,
-      232.5
-    ],
-    [
       "GSW@POR",
       null,
       216.5
@@ -17090,6 +17272,11 @@
       "NOP@LAC",
       null,
       229.5
+    ],
+    [
+      "DEN@UTA",
+      null,
+      232.5
     ]
   ],
   "tz": "Melbourne time (AEDT)"
