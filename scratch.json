@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T01:25:03Z",
+ "generated": "2026-11-28T01:40:03Z",
  "out": [
   {
    "kind": "out",
@@ -12,6 +12,29 @@
    "status": "Out",
    "utc": "2026-11-28T00:50:03Z",
    "mins_to_tip": 69
+  },
+  {
+   "kind": "in",
+   "date": "2026-11-27",
+   "game": "DEN@UTA",
+   "id": "3102530",
+   "player": "Jusuf Nurkic",
+   "team": "UTA",
+   "status": "",
+   "utc": "2026-11-28T01:40:03Z",
+   "mins_to_tip": 49
+  },
+  {
+   "kind": "out",
+   "date": "2026-11-27",
+   "game": "DEN@UTA",
+   "id": "4277919",
+   "player": "Mo Bamba",
+   "espn_name": "Mo Bamba",
+   "team": "UTA",
+   "status": "Out",
+   "utc": "2026-11-28T01:40:03Z",
+   "mins_to_tip": 49
   },
   {
    "kind": "out",
