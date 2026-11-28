@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T00:10:03Z",
+ "generated": "2026-11-28T00:15:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
@@ -47,7 +47,7 @@
    "at": "2026-11-28T00:10:03Z"
   },
   "DET": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Isaiah Joe",
     "Kevin Huerter",
@@ -55,18 +55,18 @@
     "Ausar Thompson",
     "John Collins"
    ],
-   "at": "2026-11-27T23:05:03Z"
+   "at": "2026-11-28T00:15:03Z"
   },
   "MIL": {
-   "confirmed": false,
+   "confirmed": true,
    "starters": [
     "Tyler Herro",
-    "Jaime Jaquez Jr.",
-    "Ryan Rollins",
     "Kyle Kuzma",
+    "Ryan Rollins",
+    "Jaime Jaquez Jr.",
     "Myles Turner"
    ],
-   "at": "2026-11-27T23:05:03Z"
+   "at": "2026-11-28T00:15:03Z"
   },
   "IND": {
    "confirmed": true,
@@ -150,6 +150,15 @@
   "Karl-Anthony Towns|NYK": 1,
   "Mikal Bridges|NYK": 1,
   "Jalen Brunson|NYK": 1,
+  "John Collins|DET": 1,
+  "Paul Reed|DET": 0,
+  "Ausar Thompson|DET": 1,
+  "Daniss Jenkins|DET": 1,
+  "Myles Turner|MIL": 1,
+  "Kyle Kuzma|MIL": 1,
+  "Jaime Jaquez Jr.|MIL": 1,
+  "Ryan Rollins|MIL": 1,
+  "Brayden Burries|MIL": 0,
   "Kelly Oubre Jr.|IND": 1,
   "Pascal Siakam|IND": 1,
   "Andrew Nembhard|IND": 1,
