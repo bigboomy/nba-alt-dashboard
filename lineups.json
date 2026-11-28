@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T23:40:03Z",
+ "generated": "2026-11-28T00:00:03Z",
  "date": "2026-11-27",
  "teams": {
   "MIA": {
@@ -111,6 +111,28 @@
     "Neemias Queta"
    ],
    "at": "2026-11-27T23:35:03Z"
+  },
+  "MEM": {
+   "confirmed": false,
+   "starters": [
+    "Cedric Coward",
+    "Jaylen Wells",
+    "Ty Jerome",
+    "Kris Murray",
+    "Zach Edey"
+   ],
+   "at": "2026-11-28T00:00:03Z"
+  },
+  "MIN": {
+   "confirmed": false,
+   "starters": [
+    "Terrence Shannon Jr",
+    "Jonathan Kuminga",
+    "Ayo Dosunmu",
+    "Jaden McDaniels",
+    "Rudy Gobert"
+   ],
+   "at": "2026-11-28T00:00:03Z"
   }
  },
  "items": {
